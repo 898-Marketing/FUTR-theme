@@ -1,0 +1,42 @@
+{% comment %}
+  Accepts:
+    - quick_view_product {Object} The product object
+    - link_type {String} The link type (general, desktop, mobile)
+    - button_classes {String} The button classes
+
+  Usage:
+    {% render 'quick-view-modal', quick_view_product: product, link_type: 'desktop' %}
+{% endcomment %}
+
+{% capture quick_view_link %}
+  {% if link_type == 'desktop' %}
+    <a aria-label="{{ 'products.general.view_options_for_product' | t: product: quick_view_product.title }}" data-modal-button class="btn quick-add-button-variants quick-add-button-variants-desktop dynamic-section-button--grid-item--{{ section_id }}" tabindex="0" href="{{ quick_view_product.url | within: collection }}" data-product-card-link>{% render 'theme-icon', icon: 'eye', iconSize: 22 %}</a>
+  {% elsif link_type == 'mobile' %}
+    <a aria-label="{{ 'products.general.view_options_for_product' | t: product: quick_view_product.title }}" data-modal-button class="btn quick-add-button-variants quick-add-button-variants-mobile dynamic-section-button--grid-item--{{ section_id }}" tabindex="0" href="{{ quick_view_product.url | within: collection }}" data-product-card-link>{% render 'theme-icon', icon: 'eye', iconSize: 22 %}</a>
+  {% endif %}
+{% endcapture %}
+
+<safe-load-scripts class="hidden">
+  <script src="{{ 'theme-modal-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="theme-modal"></script>
+</safe-load-scripts>
+
+<theme-modal data-is-quick-view data-focus-on-close="false" data-fetch-section data-product-url="{{ quick_view_product.url }}?variant={{ quick_view_product.selected_or_first_available_variant.id }}" data-content-selector="[data-quick-view-product]" data-section-id="{{ section.id }}">
+  {{ quick_view_link }}
+
+  <template data-theme-modal-content>
+    <div 
+      data-modal-content 
+      class="theme-modal-content popup-shadow"
+    >
+      {% comment %} Close icon {% endcomment %}
+      <button type="button" data-close class="button-unstyled icon-fallback-text standalone-icon--wrapper" aria-label="{{ 'general.accessibility.dismiss.close' | t }}">
+        <span class="fallback-text">{{ 'general.accessibility.dismiss.close' | t }}</span>
+        {% render 'theme-icon', icon: 'close', iconSize: 20 %}
+      </button>
+
+      <div class="theme-modal--inner">
+        {% comment %} Modal Content {% endcomment %}
+      </div>
+    </div>
+  </template>
+</theme-modal>

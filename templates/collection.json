@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.collection-wrapper.wrapper",
+  "sections": {
+    "collection-header-spotlight": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumbs": false,
+        "show_title": true,
+        "show_description": true,
+        "show_image_desktop": false,
+        "min_height_desktop": "original",
+        "content_position": "left",
+        "caption_width_desktop": 50,
+        "show_image_mobile": false,
+        "min_height_mobile": "original",
+        "content_position_mobile": "center",
+        "enable_parallax": false,
+        "enable_fade": false,
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "colors": "white",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#ffffff",
+        "image_overlay_opacity": 0
+      }
+    },
+    "product-grid": {
+      "type": "template--collection",
+      "settings": {
+        "products-per-page": 6,
+        "desktop-products-per-row": 3,
+        "mobile-products-per-row": "2",
+        "pagination_options": "pagination_load_more",
+        "desktop_position": "sidebar",
+        "enable_sorting": true,
+        "enable_filtering": true,
+        "enable_collection_title": true,
+        "enable_collection_description": true,
+        "show_swatch_filter_labels": true
+      }
+    },
+    "image_with_text_overlay_hJLNM8": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "250px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "text_adverts_ER8Rr8": {
+      "type": "text-adverts",
+      "blocks": {
+        "text_YYXCVm": {
+          "type": "text",
+          "settings": {
+            "heading": "Free shipping",
+            "subheading": "Shout about your unique selling points",
+            "link": ""
+          }
+        },
+        "text_ipg9Ve": {
+          "type": "text",
+          "settings": {
+            "heading": "Hassle free returns",
+            "subheading": "Shout about your unique selling points",
+            "link": ""
+          }
+        },
+        "text_UBRHKL": {
+          "type": "text",
+          "settings": {
+            "heading": "eco friendly packaging",
+            "subheading": "Shout about your unique selling points",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_YYXCVm",
+        "text_ipg9Ve",
+        "text_UBRHKL"
+      ],
+      "settings": {
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "colors": "light"
+      }
+    },
+    "image_with_text_overlay_EC4zqE": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "250px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "collection-header-spotlight",
+    "product-grid",
+    "image_with_text_overlay_hJLNM8",
+    "text_adverts_ER8Rr8",
+    "image_with_text_overlay_EC4zqE"
+  ]
+}

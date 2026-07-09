@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "blog_header_JWDizj": {
+      "type": "blog-header",
+      "settings": {
+        "heading_font_size": 35,
+        "section_padding_top": 60,
+        "section_padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "template--blog",
+      "settings": {
+        "show_image": true,
+        "show_tags": true,
+        "blog_show_date": true,
+        "show_author_name": true,
+        "show_excerpt": true,
+        "show_read_more": true,
+        "heading_font": "heading",
+        "heading_font_size": 28,
+        "alignment": "left",
+        "show_sidebar": true,
+        "show_sidebar_newsletter": true,
+        "newsletter_heading": "<h4>Join our mailing list</h4>",
+        "newsletter_description": "<p>Get priority access to events and exclusive offers</p>",
+        "newsletter_color_scheme": "white",
+        "show_recent_posts": true,
+        "show_popular_articles_image": true,
+        "image_aspect_ratio": "original",
+        "show_sidebar_dates": true,
+        "popular_article_1": "",
+        "popular_article_2": "",
+        "sidebar_image_shape": "original",
+        "blog-sidebar-link": "",
+        "blog-sidebar-description": "",
+        "show_blog_tags": true,
+        "show_social_icons": true,
+        "posts_to_show": 8,
+        "posts_per_row": 2
+      }
+    },
+    "image_with_text_overlay_HmQgDE": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "text_YyjeCt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>JOIN THE</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "heading_6XVQEe": {
+          "type": "heading",
+          "settings": {
+            "title": "Pastel revolution",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_G8xiCB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’re looking for movers, shakers and moment-makers of every kind to kick it as a Gerry’s Rep. If you’re up for good times, free merch, first-taste exclusives, event guestlists, unique referral codes and of COURSE… a good flow of Gerry’s, hit us up.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_nnP6yp": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "/",
+            "first_button_label": "Contact us",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "underlined",
+            "override_button_colors": true,
+            "buttons_background": "#ffffff",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_YyjeCt",
+        "heading_6XVQEe",
+        "text_G8xiCB",
+        "button_nnP6yp"
+      ],
+      "settings": {
+        "height_desktop": "550px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "newsletter_7yjWEg": {
+      "type": "newsletter",
+      "settings": {
+        "newsletter_heading": "",
+        "newsletter_description": "<h5>Need more news?</h5><p></p><h1>Sign up here!</h1>",
+        "textAlignment": "left",
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "colors": "white"
+      }
+    }
+  },
+  "order": [
+    "blog_header_JWDizj",
+    "main",
+    "image_with_text_overlay_HmQgDE",
+    "newsletter_7yjWEg"
+  ]
+}

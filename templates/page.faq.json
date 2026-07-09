@@ -1,0 +1,189 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "accordion_zAqnQz": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_y6rkwG": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Do you ship overseas?",
+            "open_by_default": false,
+            "text": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_JrfmwK": {
+          "type": "tab_content",
+          "settings": {
+            "question": "How long will it take to get my order?",
+            "open_by_default": false,
+            "text": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_MrNYJY": {
+          "type": "tab_content",
+          "settings": {
+            "question": "What shipping carriers do you use?",
+            "open_by_default": false,
+            "text": "<p>We use all major carriers, and local courier partners. You’ll be asked to select a delivery method during checkout.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_nVhmVA": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I return my product?",
+            "open_by_default": false,
+            "text": "<p>We always aim for make sure our customers love our products, but if you do need to return an order, we’re happy to help. Just email us directly and we’ll take you through the process.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_M6tU48": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I get my product personalized?",
+            "open_by_default": false,
+            "text": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_GFKheR": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Can I sign up to your newsletter?",
+            "open_by_default": false,
+            "text": "<p>Yes! Just enter your email here, and you’ll be added to our subscription list. You’ll be sent updates, exclusive offers, and much more.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_aNqhmL": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Are these Q&As real?",
+            "open_by_default": false,
+            "text": "<p>No. This is demonstration content, designed to showcase how these page could look with your own content.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_y6rkwG",
+        "tab_content_JrfmwK",
+        "tab_content_MrNYJY",
+        "tab_content_nVhmVA",
+        "tab_content_M6tU48",
+        "tab_content_GFKheR",
+        "tab_content_aNqhmL"
+      ],
+      "settings": {
+        "title": "Frequently asked questions",
+        "description": "",
+        "faq_icon": "plus_minus",
+        "section_width": "narrow",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "image_with_text_overlay_HLRnUL": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "testimonials_bh3YGH": {
+      "type": "testimonials",
+      "blocks": {
+        "text_eDyctf": {
+          "type": "text",
+          "settings": {
+            "stars": 5,
+            "testimonial_text": "<p>The best cookies I've ever tasted! Delivery was super fast too, I'll definitely be ordering again!</p>",
+            "customer_name": "Sara, Nottingham",
+            "link": ""
+          }
+        },
+        "text_qcxg9n": {
+          "type": "text",
+          "settings": {
+            "stars": 5,
+            "testimonial_text": "<p>Can't recommend these cookies enough. I couldn't believe they were vegan when I tried them, they're so tasty!</p>",
+            "customer_name": "Steve, Dorking",
+            "link": ""
+          }
+        },
+        "text_WiLKUe": {
+          "type": "text",
+          "settings": {
+            "stars": 5,
+            "testimonial_text": "<p>Crunch On is my new guilty pleasure... but without the guilt!</p>",
+            "customer_name": "Amia, Belfast",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_eDyctf",
+        "text_qcxg9n",
+        "text_WiLKUe"
+      ],
+      "settings": {
+        "title": "",
+        "description": "<h5>Need more convincing?</h5><p></p><h1>Read our rave reviews</h1>",
+        "circle_images": true,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "featured_collection_pPDxXJ": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "description": "<h5>Go on...</h5><p></p><h1>Treat yourself</h1>",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "show_view_all": false,
+        "buttons_style": "filled",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "layout_style": "grid",
+        "products_to_show": 8,
+        "grid-desktop": 4,
+        "grid-mobile": "2",
+        "colors": "white"
+      }
+    }
+  },
+  "order": [
+    "accordion_zAqnQz",
+    "image_with_text_overlay_HLRnUL",
+    "testimonials_bh3YGH",
+    "featured_collection_pPDxXJ"
+  ]
+}

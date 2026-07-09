@@ -1,0 +1,22 @@
+{% if content != blank %}
+  <div class="collapsible-tab collapsible-tab--product js{% if open_by_default %} open{% endif %}" data-open-by-default="{{ open_by_default }}">
+    <collapsible-button data-block-id="{{ block_id }}" tabindex="0">
+      <div class="summary" style="--inline-icon-size: 14px;">
+        {% assign icon = 'arrow-right' %}
+        {% render 'text-with-icon', icon: icon, text: heading, text_classes: heading_classes %}
+      </div>
+    </collapsible-button>
+
+    <div class="collapsible-content">
+      <div class="content rte">
+        <div class="text-link-animated richtext-block">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <safe-load-scripts class="hidden">
+    <script src="{{ 'collapsible-button-component.js' | asset_url }}" type="module" defer="defer" data-flow-load-key="component-collapsible-button"></script>
+  </safe-load-scripts>
+{% endif %}

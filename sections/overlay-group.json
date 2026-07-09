@@ -1,0 +1,81 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.overlay",
+  "name": "Overlay",
+  "sections": {
+    "offers-drawer": {
+      "type": "offers-drawer",
+      "blocks": {
+        "offer-1": {
+          "type": "offer",
+          "settings": {
+            "image_position": "above",
+            "title": "Go oooonnn, give us a try...",
+            "description": "<p>We get it, got to test the 'waters'. <br/>Grab a sample pack - usually $24.99 <strong><br/>Just $22.49</strong></p>",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "link": "/",
+            "button_label": "If you insist!"
+          }
+        },
+        "offer-0": {
+          "type": "offer",
+          "settings": {
+            "image_position": "above",
+            "title": "Party time!",
+            "description": "<p>4x 10 packs delivered to your door for $79.99 every month and save $20. Urm... Bargin.</p>",
+            "discount_code": "",
+            "show_countdown": false,
+            "end_date": "",
+            "end_time": "",
+            "show_timer_labels": true,
+            "timer_expiry_action": "leave_at_zero",
+            "link": "/",
+            "button_label": "Let's party"
+          }
+        }
+      },
+      "block_order": [
+        "offer-1",
+        "offer-0"
+      ],
+      "settings": {
+        "show_icon": true,
+        "title": "Hot right now!",
+        "description": "",
+        "override_heading_font_size": false,
+        "heading_font_size": 24,
+        "empty_message": "There are currently no active offers, but check back soon for new deals!",
+        "suggested_collections": [],
+        "buttons_style": "filled"
+      }
+    },
+    "sticky-offers-button": {
+      "type": "sticky-offers-button",
+      "settings": {
+        "show_offers_drawer_button": true,
+        "offers_drawer_button_label": "Latest offers",
+        "hide_on_mobile": false,
+        "show_social_icons": false,
+        "background_color": "#ed3441",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "offers-drawer",
+    "sticky-offers-button"
+  ]
+}

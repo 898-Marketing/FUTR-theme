@@ -1,0 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-form": {
+      "type": "template--product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_font": "h1",
+            "margin_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_font": "h3",
+            "shipping_policy": false,
+            "tax_included": false,
+            "margin_bottom": 20
+          }
+        },
+        "a7717974-ed85-4cde-80ef-4751178acf57": {
+          "type": "text-with-icon",
+          "settings": {
+            "icon": "clock",
+            "text": "Instant email delivery",
+            "link": "",
+            "override_text_and_icon_size": false,
+            "text_and_icon_size": 20,
+            "margin_bottom": 8,
+            "text_color": "#242424"
+          }
+        },
+        "3dee115e-1389-46ac-8cd5-1583cfd9f4dc": {
+          "type": "text-with-icon",
+          "settings": {
+            "icon": "wallet",
+            "text": "Secure checkout",
+            "link": "",
+            "override_text_and_icon_size": false,
+            "text_and_icon_size": 20,
+            "margin_bottom": 30,
+            "text_color": "#242424"
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "variant_style": "swatches",
+            "hide_out_of_stock_variants": false,
+            "thumbnail_changes_variant": false,
+            "size_guide_label": "Size guide",
+            "size_guide_page": "",
+            "size_option_name": "Size",
+            "size_guide_override_heading_font_size": false,
+            "size_guide_heading_font_size": 24,
+            "margin_bottom": 30
+          }
+        },
+        "text_field_KKFGBk": {
+          "type": "text_field",
+          "settings": {
+            "title": "Add a note",
+            "text_field_hint": "",
+            "text_field_required": false,
+            "text_field_size": "single",
+            "text_field_character_limit": "",
+            "margin_bottom": 30
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_smart_checkout": true,
+            "enable_gift_card_recipient_form": true,
+            "margin_bottom": 30,
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "a55b9011-1b1a-4353-9d97-7bdcd60949f2": {
+          "type": "product-description",
+          "settings": {
+            "collapsible_tab": true,
+            "heading": "Description",
+            "open_by_default": false,
+            "margin_bottom": 0
+          }
+        },
+        "b3864090-4f25-4db2-bddb-c549e9472be6": {
+          "type": "collapsible-tab",
+          "settings": {
+            "heading": "Shipping",
+            "open_by_default": false,
+            "text": "<p>Share some information about your product</p>",
+            "page": "",
+            "margin_bottom": 30
+          }
+        },
+        "4fdb087c-4728-4785-b270-a71a092b7898": {
+          "type": "social_sharing",
+          "settings": {
+            "margin_bottom": 30
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "a7717974-ed85-4cde-80ef-4751178acf57",
+        "3dee115e-1389-46ac-8cd5-1583cfd9f4dc",
+        "options",
+        "text_field_KKFGBk",
+        "buy_buttons",
+        "a55b9011-1b1a-4353-9d97-7bdcd60949f2",
+        "b3864090-4f25-4db2-bddb-c549e9472be6",
+        "4fdb087c-4728-4785-b270-a71a092b7898"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "enable_sticky_add_to_cart": true,
+        "media_position": "right",
+        "image_size": "large",
+        "image_shape": "original",
+        "show_only_variant_media": false,
+        "image-display": "paginated",
+        "thumbnail_position": "left",
+        "image_display_mobile": "paginated",
+        "enable_video_loop": true,
+        "enable_autoplay": false,
+        "show_video_controls": false,
+        "override_form_labels_size": false,
+        "labels_font_size": 20,
+        "app_margin_bottom": 20,
+        "product_form_bg_override": false,
+        "product_form_bg": "#e4ebf1"
+      }
+    },
+    "template_product_recommendations_VaQh6c": {
+      "type": "template--product--recommendations",
+      "settings": {
+        "title": "You may also like",
+        "description": "",
+        "section_header_alignment": "center",
+        "layout_style": "slider",
+        "products_to_show": 8,
+        "grid-desktop": 4,
+        "grid-mobile": "2",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false,
+        "colors": "light",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "template_product_recently_viewed_wGY7WF": {
+      "type": "template--product--recently-viewed",
+      "settings": {
+        "title": "Recently viewed products",
+        "description": "",
+        "section_header_alignment": "center",
+        "layout_style": "slider",
+        "products_to_show": 8,
+        "grid-desktop": 4,
+        "grid-mobile": "2",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false,
+        "colors": "light",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "template_product_recommendations_VaQh6c",
+    "template_product_recently_viewed_wGY7WF"
+  ]
+}

@@ -1,0 +1,83 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer-main": {
+      "type": "footer-main",
+      "blocks": {
+        "image_ME7VQR": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": "/",
+            "override_border_radius": false
+          }
+        },
+        "social": {
+          "type": "social",
+          "settings": {
+            "social_title": "Get connected"
+          }
+        },
+        "text_JetjzD": {
+          "type": "text",
+          "settings": {
+            "title": "Drink social. Drink Sweet",
+            "richtext": "<p>Fun. Fresh. Fizzy as. Blending sparkling spring water with an alcoholic twist, we’re always best served with friends.</p>"
+          }
+        },
+        "5c637888-418b-4cc8-baea-a83083df2e8c": {
+          "type": "menu",
+          "settings": {
+            "menu_title": "Links",
+            "footer_linklist": "footer-menu-2"
+          }
+        }
+      },
+      "block_order": [
+        "image_ME7VQR",
+        "social",
+        "text_JetjzD",
+        "5c637888-418b-4cc8-baea-a83083df2e8c"
+      ],
+      "settings": {
+        "alignment": "left",
+        "alignment_mobile": "center",
+        "heading_font_size": 16,
+        "color_scheme": "accent",
+        "show_newsletter": false,
+        "newsletter_title": "Newsletter",
+        "footer_newsletter_description": "",
+        "buttons_style": "filled",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "footer-bottom": {
+      "type": "footer-bottom",
+      "settings": {
+        "show_methods_of_payment": true,
+        "footer_text": "",
+        "show_currency_selector": true,
+        "show_country_name": false,
+        "show_country_flag": true,
+        "show_locale_selector": true,
+        "color_scheme": "accent"
+      }
+    }
+  },
+  "order": [
+    "footer-main",
+    "footer-bottom"
+  ]
+}

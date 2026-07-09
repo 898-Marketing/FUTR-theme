@@ -1,0 +1,202 @@
+{%- if section.blocks.size > 0 -%}
+
+  {%- liquid
+    assign social_icons = false
+    if settings.sm_facebook_link != blank or settings.sm_x_link != blank or settings.sm_youtube_link != blank or settings.sm_flickr_link != blank or settings.sm_pinterest_link != blank or settings.sm_instagram_link != blank or settings.sm_tumblr_link != blank or settings.sm_pinterest_link != blank or settings.sm_youtube_link != blank or settings.sm_vimeo_link != blank or settings.sm_flickr_link != blank or settings.sm_snapchat_link != blank or settings.sm_houzz_link != blank or settings.sm_linkedin_link != blank or settings.sm_tiktok_link != blank
+      assign social_icons = true
+    endif
+
+    assign enable_social_icons = false
+    if section.settings.desktop_social_icons and social_icons
+      assign enable_social_icons = true
+    endif
+
+    assign announcement_bar_text = false
+    for block in section.blocks
+      if block.settings.announcement_text != blank
+        assign announcement_bar_text = true
+      endif
+    endfor
+
+    assign announcement_bar_layout = ''
+    if enable_social_icons and announcement_bar_text
+      assign announcement_bar_layout = 'announcements_and_icons'
+    elsif enable_social_icons == false and announcement_bar_text
+      assign announcement_bar_layout = 'announcements_only'
+    elsif enable_social_icons and announcement_bar_text == false
+      assign announcement_bar_layout = 'announcements_icons_only'
+    endif
+  -%}
+
+  {{ 'announcement-bar-section.min.css' | asset_url | stylesheet_tag }}
+
+  <div class="announcement_bar" data-wetheme-section-type="announcement-bar" data-wetheme-section-id="{{ section.id }}" data-social-media-enabled="{{ enable_social_icons }}" style="background-color: {{ section.settings.announcement_bg_color }}; color: {{ section.settings.announcement_text_color }}; --announcement-bg: {{ section.settings.announcement_bg_color }}; --announcement-text: {{ section.settings.announcement_text_color }};">
+    
+    {% if section.blocks.size > 1 %}
+      <safe-load-scripts class="hidden">
+        <script src="{{ 'announcement-bar-slider-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="announcement-bar-slider"></script>
+      </safe-load-scripts>
+    {% endif %}
+
+      <div class="announcement-bar__social-icons">
+        {% if enable_social_icons %}
+          {% render 'social-icons', icon_wrapper_classes: 'icon-no-padding', icon_classes: 'fa-2x' %}
+        {% endif %}
+      </div>
+
+    <announcement-bar-slider data-section-id="{{ section.id }}" data-autoplay-speed="{{ section.settings.autoplay_speed | times: 1000 }}">
+      <div class="announcement-bar__content">
+        {% if section.blocks.size > 1 %}
+          <button class="swiper-button--prev" aria-label="{{ 'sections.slideshow.previous_slide' | t }}">
+            {% render 'theme-icon', icon: 'arrow-left', iconSize: 16 %}
+          </button>
+        {% endif %}
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide" data-announcement-block-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+                <div class="announcement_wrapper text-link-animated">
+                  {% if block.settings.announcement_text != blank %}
+                    <span class="announcement_text">{{ block.settings.announcement_text }}</span>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% if section.blocks.size > 1 %}
+          <button class="swiper-button--next" aria-label="{{ 'sections.slideshow.next_slide' | t }}">
+            {% render 'theme-icon', icon: 'arrow-right', iconSize: 16 %}
+          </button>
+        {% endif %}
+      </div>
+    </announcement-bar-slider>
+
+    <div class="announcement-bar__localization-selectors">
+      {% render 'localization-form', show_locale_selector: section.settings.show_locale_selector, show_currency_selector: section.settings.show_currency_selector, show_country_name: section.settings.show_country_name, show_country_flag: section.settings.show_country_flag %}
+    </div>
+
+  </div>
+  
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "desktop_social_icons",
+      "label": "t:sections.announcement-bar.settings.desktop_social_icons.label",
+      "info": "t:all.To_choose_which_icons_to_display_go_to_Theme_settings__Social_media_",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "t:sections.announcement-bar.settings.autoplay_speed.label",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "t:all.Color"
+    },
+    {
+      "type": "color",
+      "id": "announcement_bg_color",
+      "label": "t:all.Background",
+      "default": "#1F1F1F"
+    },
+    {
+      "type": "color",
+      "id": "announcement_text_color",
+      "label": "t:all.Text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:all.Country_region_selector_desktop",
+      "info": "t:all.To_add_a_country_region_go_to_your_market_settings__admin_settings_markets"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "t:all.Enable_country_region_selector",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_name",
+      "label": "t:all.Show_country_name",
+      "default": false,
+      "visible_if": "{{ section.settings.show_currency_selector }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_flag",
+      "label": "t:all.Show_country_flag",
+      "default": true,
+      "visible_if": "{{ section.settings.show_currency_selector }}"
+    },
+    {
+      "type": "header",
+      "content": "t:all.Language_selector_desktop",
+      "info": "t:all.To_add_a_language_go_to_your_language_settings__admin_settings_languages"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "t:all.Enable_language_selector",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "announcement_text",
+          "label": "t:all.Text",
+          "default": "Announce something here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.announcement-bar.presets.name",
+      "blocks": [
+        {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "Announce something here"
+          }
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "Promote a collection"
+          }
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "Sale now on"
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "groups": [
+      "header"
+    ]
+  }
+}
+{% endschema %}

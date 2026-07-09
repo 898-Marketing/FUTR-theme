@@ -1,0 +1,208 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "animated_text_Vqazxt": {
+      "type": "animated-text",
+      "blocks": {
+        "text_static_4tXtft": {
+          "type": "text_static",
+          "settings": {
+            "text_static": "<p>We're all about</p>",
+            "max_width_desktop": 100,
+            "max_width_mobile": 100,
+            "text_color": "#ffffff"
+          }
+        },
+        "text_dynamic_jaaUgT": {
+          "type": "text_dynamic",
+          "settings": {
+            "text_dynamic": "the good times!, quality!, the bubbles!, fun!, flavour!, friends!",
+            "animation_timing": 1600,
+            "rotation_interval": 3700,
+            "text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "text_static_4tXtft",
+        "text_dynamic_jaaUgT"
+      ],
+      "settings": {
+        "height_desktop": "s",
+        "text_position_desktop": "left",
+        "text_size_desktop": 60,
+        "height_mobile": "s",
+        "text_position_mobile": "left",
+        "text_size_mobile": 22,
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "colors": "dark"
+      }
+    },
+    "rich_text_Hjpa6d": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8QVLE7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our story",
+            "heading--text-size": 30,
+            "heading_bottom_spacing": 20
+          }
+        },
+        "richtext_4YaFct": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Born in NZ but made in the UK, we’re the purveyor of good times with good people. Our seltzers were created to bring mates together. Get the fun going. At Gerry’s, we’re all about making life feel that little bit… lighter.</p>",
+            "text_size": 14,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_8QVLE7",
+        "richtext_4YaFct"
+      ],
+      "settings": {
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
+        "text_alignment_mobile": "center",
+        "section_padding_top": 80,
+        "section_padding_bottom": 80,
+        "colors": "white"
+      }
+    },
+    "image_with_text_Fnph7t": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_eh97gK": {
+          "type": "heading",
+          "settings": {
+            "title": "Good Times Guaranteed",
+            "heading_bottom_spacing": 15
+          }
+        },
+        "text_XLwjg3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Life’s too short to turn down good times with friends. Maybe that’s why we all need a Gerry’s. You might have heard that us Kiwis are quite good at going with the flow. So we’ve made a low calorie hard seltzer to make kicking back with a cold one the easiest decision of your day. No arm twisting. No drama. Just crack open a can, grab some company and get the convo going. Because when we drink, we drink social.</p>",
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_eh97gK",
+        "text_XLwjg3"
+      ],
+      "settings": {
+        "layout": "left",
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "colors": "light"
+      }
+    },
+    "featured_collection_3xWQpK": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Our drinks",
+        "description": "<p>From that pastel can to the irresistible flavours, our premium hard seltzers sparkle on every level. Low cal, gluten free and vegan, they’re the healthier option for those who love life as much as partying. And did we mention, they taste great too?</p><p><br/>100% made in the UK, Gerry’s simply blends real fruit flavours, sparkling spring water and premium quality spirits – just all natural ingredients, and no funny fizzness.</p>",
+        "section_header_alignment": "center",
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false,
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "show_view_all": false,
+        "button_position": "below_products",
+        "button_alignment": "center",
+        "buttons_style": "filled",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "layout_style": "slider",
+        "products_to_show": 8,
+        "grid-desktop": 3,
+        "grid-mobile": "1",
+        "colors": "white"
+      }
+    },
+    "newsletter_Tn4KYP": {
+      "type": "newsletter",
+      "settings": {
+        "newsletter_heading": "Keep in touch",
+        "newsletter_description": "",
+        "textAlignment": "left",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "text_adverts_cyBtVM": {
+      "type": "text-adverts",
+      "blocks": {
+        "text_CM79gV": {
+          "type": "text",
+          "settings": {
+            "heading": "Bursting with goodness",
+            "subheading": "100% vegan and delicious",
+            "link": ""
+          }
+        },
+        "text_6rNba9": {
+          "type": "text",
+          "settings": {
+            "heading": "Eco friendly packaging",
+            "subheading": "Help us save the environment, one cookie at a time!",
+            "link": ""
+          }
+        },
+        "text_aaWpDJ": {
+          "type": "text",
+          "settings": {
+            "heading": "Sustainably sourced ingredients",
+            "subheading": "We're Fair Trade certified",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_CM79gV",
+        "text_6rNba9",
+        "text_aaWpDJ"
+      ],
+      "settings": {
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "colors": "light"
+      }
+    }
+  },
+  "order": [
+    "animated_text_Vqazxt",
+    "rich_text_Hjpa6d",
+    "image_with_text_Fnph7t",
+    "featured_collection_3xWQpK",
+    "newsletter_Tn4KYP",
+    "text_adverts_cyBtVM"
+  ]
+}

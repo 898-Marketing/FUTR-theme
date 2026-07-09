@@ -1,0 +1,129 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.collection-wrapper",
+  "sections": {
+    "image_with_text_overlay_4XedRp": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "text_9Mt648": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FIND THE PERFECT DRINK FOR A SUMMER'S DAY</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "heading_kKz6xX": {
+          "type": "heading",
+          "settings": {
+            "title": "SEARCH SWEET",
+            "font_size_desktop": 50,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        }
+      },
+      "block_order": [
+        "text_9Mt648",
+        "heading_kKz6xX"
+      ],
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#FFFFFF",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "main": {
+      "type": "template--search",
+      "settings": {
+        "desktop_position": "topbar",
+        "enable_sorting": true,
+        "enable_filtering": true,
+        "show_swatch_filter_labels": true,
+        "desktop-results-per-row": 4,
+        "mobile-results-per-row": "2"
+      }
+    },
+    "collection_list_zyckUp": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_NkDdJe": {
+          "type": "featured_collection",
+          "settings": {
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_font_color": "#FFFFFF"
+          }
+        },
+        "featured_collection_tJmMQD": {
+          "type": "featured_collection",
+          "settings": {
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_font_color": "#FFFFFF"
+          }
+        },
+        "featured_collection_RDk933": {
+          "type": "featured_collection",
+          "settings": {
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_font_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_NkDdJe",
+        "featured_collection_tJmMQD",
+        "featured_collection_RDk933"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "items-per-row": 3,
+        "content-position": "below-image",
+        "buttons_style": "filled",
+        "override_button_colors": false,
+        "button_background_color": "#E68819",
+        "button_text_color": "#ffffff",
+        "section-width": "full",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "remove-spacing": false,
+        "colors": "light"
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_4XedRp",
+    "main",
+    "collection_list_zyckUp"
+  ]
+}

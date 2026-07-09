@@ -1,0 +1,530 @@
+{{ 'focused-product-gallery-section.min.css' | asset_url | stylesheet_tag }}
+
+<safe-load-scripts class="hidden">
+  <script src="{{ 'focused-product-gallery-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="focused-product-gallery"></script>
+</safe-load-scripts>
+
+{% liquid 
+  assign header_width_class = ''
+  unless section.settings.section_width == 'content'
+    assign header_width_class = 'wrapper-spacing--h'
+  endunless
+%}
+
+<div
+  class="focused-product-gallery wrapper-spacing--v{% if section.settings.section_width == 'content' %} wrapper-spacing--h{% endif %} color-scheme--{{ section.settings.colors }}{% if request.visual_preview_mode %} section-preview{% else %} show-on-scroll{% endif %}"
+  data-wetheme-section-type="focused-product-gallery"
+  data-wetheme-section-id="{{ section.id }}"
+  style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px;"
+>
+  <div {% if section.settings.section_width == 'content' %}class="width--content"{% endif %}>
+    {% render 'dynamic-section-header', section_title: section.settings.title, section_description: section.settings.description, alignment: section.settings.section_header_alignment, wrapper_classes: header_width_class %}
+    
+    {% assign navigation_id = 'navigation--' | append: section.id %}
+    
+    {% if section.settings.override_button_colors %}
+      {% render 'button-color-overrides',
+        id: navigation_id,
+        style: 'filled',
+        text_color: section.settings.button_color,
+        background_color: section.settings.button_background_color
+      %}
+      {% render 'button-color-overrides',
+        id: section.id,
+        style: section.settings.button_style,
+        text_color: section.settings.button_color,
+        background_color: section.settings.button_background_color
+      %}
+    {% endif %}
+    
+    <focused-product-gallery
+      data-section-id="{{ section.id }}"
+      data-grid-slider-wrapper
+      data-grid-spacing-desktop="{{ settings.grid_spacing }}"
+      data-products-per-row-desktop="{{ section.settings.products_per_row_desktop }}"
+      data-grid-spacing-mobile="{{ settings.grid_spacing | at_most: 10 | times: 0.75 }}"
+    >
+      <!-- navigation -->
+      <div class="swiper-btn--wrapper small-hide swiper-btn-layout__{{ section.settings.hover_navigation_desktop }}">
+        <div class="swiper-button--prev btn dynamic-section-button--{{ navigation_id }}">
+          {% render 'theme-icon', icon: 'arrow-left', iconSize: 16 %}
+        </div>
+        <div class="swiper-button--next btn dynamic-section-button--{{ navigation_id }}">
+          {% render 'theme-icon', icon: 'arrow-right', iconSize: 16 %}
+        </div>
+      </div>
+      
+      {%- liquid
+        assign block_count = section.blocks.size
+        assign loop_count = 1
+        
+        if section.settings.products_per_row_desktop == '5'
+          if block_count == 1
+            assign loop_count = 6
+          elsif block_count == 2
+            assign loop_count = 3
+          elsif block_count == 3 or block_count == 4 or block_count == 5
+            assign loop_count = 2
+          endif
+        else
+          if block_count == 1
+            assign loop_count = 4
+          elsif block_count == 2 or block_count == 3 or block_count == 4
+            assign loop_count = 2
+          endif
+        endif
+      -%}
+      
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% for loop_iteration in (1..loop_count) %}
+            {% for block in section.blocks %}
+              {% assign svg_index = forloop.index | minus: 1 | modulo: 6 | plus: 1 %}
+              {% assign svg_index = 'product-' | append: svg_index %}
+              <div class="swiper-slide" data-block-index="{{ forloop.index0 }}" {% if loop_iteration == 1 %}{{ block.shopify_attributes }}{% if forloop.first %} data-active{% endif %}{% if forloop.index == 2 %} data-next{% endif %}{% endif %}{% if block_count == 1 and loop_iteration == 2 %} data-next{% endif %}{% if loop_iteration == loop_count and forloop.last %} data-prev{% endif %}>
+                <div class="focused-product-gallery__item">
+                  <div class="focused-product-gallery__image focused-product-gallery__image--{{ section.settings.image_shape }}{% unless section.settings.image_shape == 'circle' %} block-radius-clip{% endunless %}">
+                    {% if block.settings.product != blank %}
+                      {% if block.settings.product.featured_image %}
+                        {% render 'responsive-image', image: block.settings.product.featured_image, allow_stretch: true %}
+                      {% else %}
+                        {%- liquid
+                          assign placeholder_classes = 'icon icon--placeholder'
+                          unless section.settings.image_shape == 'circle'
+                            assign placeholder_classes = placeholder_classes | append: ' block-radius'
+                          endunless
+                        -%}
+                        {{ svg_index | placeholder_svg_tag: placeholder_classes }}
+                      {% endif %}
+                      {%- liquid
+                        assign second_image = block.settings.focus_image | default: block.settings.product.media[1]
+                      -%}
+                      {% if second_image %}
+                        <div class="focused-product-gallery__image-second">
+                          {% render 'responsive-image', image: second_image, allow_stretch: true %}
+                        </div>
+                      {% endif %}
+                    {% else %}
+                      {%- liquid
+                        assign placeholder_classes = 'icon icon--placeholder'
+                        unless section.settings.image_shape == 'circle'
+                          assign placeholder_classes = placeholder_classes | append: ' block-radius'
+                        endunless
+                      -%}
+                      {{ svg_index | placeholder_svg_tag: placeholder_classes }}
+                      <div class="focused-product-gallery__image-second">
+                        {% if block.settings.focus_image %}
+                          {% render 'responsive-image', image: block.settings.focus_image, allow_stretch: true %}
+                        {% else %}
+                          {{ svg_index | placeholder_svg_tag: placeholder_classes }}
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                  <div class="focused-product-gallery__content">
+                    {%- liquid
+                      assign subheading_text = ''
+                      assign heading_text = ''
+                      assign text_content = ''
+                      assign button_url = ''
+                      
+                      if block.settings.product != blank
+                        if section.settings.show_vendor
+                          assign subheading_text = block.settings.product.vendor
+                        endif
+                        assign heading_text = block.settings.product.title
+                        if block.settings.description != blank
+                          assign text_content = block.settings.description
+                        else
+                          assign text_content = block.settings.product.description | strip_html | truncatewords: 10
+                        endif
+                        assign button_url = block.settings.product.url
+                      else
+                        if section.settings.show_vendor
+                          assign subheading_text = 'homepage.onboarding.product_vendor' | t
+                        endif
+                        assign heading_text = 'general.onboarding.product' | t
+                        if block.settings.description != blank
+                          assign text_content = block.settings.description
+                        else
+                          assign text_content = 'sections.focused_product_gallery.onboarding' | t
+                        endif
+                        assign button_url = ''
+                      endif
+                    -%}
+
+                    {% assign animation_order = 5 %}
+                    {% if subheading_text != blank %}
+                      <div class="focused-product-gallery__subheading" data-animate data-animate-order="{{ animation_order }}">{{ subheading_text }}</div>
+                      {% assign animation_order = animation_order | plus: 1 %}
+                    {% endif %}
+                    {% if heading_text != blank %}
+                      <h3 class="h4 focused-product-gallery__heading" data-animate data-animate-order="{{ animation_order }}">{{ heading_text }}</h3>
+                      {% assign animation_order = animation_order | plus: 1 %}
+                    {% endif %}
+                    {% if section.settings.show_price %}
+                      <div class="focused-product-gallery__price" data-animate data-animate-order="{{ animation_order }}">
+                        {% if block.settings.product != blank %}
+                          {%- liquid
+                            assign login_to_order = false
+                    
+                            if settings.login_to_order and customer == blank
+                              for tag in block.settings.product.tags
+                                assign formatted_tag = tag | downcase | replace: ' ', ''
+                                if formatted_tag == 'b2b' or formatted_tag == 'wholesale'
+                                  assign login_to_order = true
+                                  break
+                                endif
+                              endfor
+                            endif
+                          -%}
+                          {% unless login_to_order %}
+                            {% render 'product-grid-item-price', price_product: block.settings.product %}
+                          {% endunless %}
+                        {% else %}
+                          <span class="money">
+                            {% if settings.show_currency_code %}
+                              {{ 1999 | money_with_currency }}
+                            {% else %}
+                              {{ 1999 | money }}
+                            {% endif %}
+                          </span>
+                        {% endif %}
+                      </div>
+                      {% assign animation_order = animation_order | plus: 1 %}
+                    {% endif %}
+                    {% if text_content != blank and section.settings.show_description %}
+                      <div class="focused-product-gallery__text richtext-block text-link-animated" data-animate data-animate-order="{{ animation_order }}">{{ text_content }}</div>
+                      {% assign animation_order = animation_order | plus: 1 %}
+                    {% endif %}
+                    {% if block.settings.button_label != blank %}
+                      <div class="focused-product-gallery__button" data-animate data-animate-order="{{ animation_order }}">
+                        {% render 'dynamic-section-button',
+                          id: section.id,
+                          link: button_url,
+                          label: block.settings.button_label,
+                          style: section.settings.button_style
+                        %}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endfor %}
+        </div>
+
+        <!-- Mobile navigation -->
+        <div class="focused-product-gallery__navigation-arrows large-hide">
+          <div class="focused-product-gallery__arrow-prev">
+            {% render 'theme-icon', icon: 'arrow-left', iconSize: 16, iconColor: 'currentColor' %}
+          </div>
+          <div class="focused-product-gallery__arrow-next">
+            {% render 'theme-icon', icon: 'arrow-right', iconSize: 16, iconColor: 'currentColor' %}
+          </div>
+        </div>
+      </div>
+    </focused-product-gallery>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.focused-product-gallery.name",
+  "class": "section--focused-product-gallery",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:all.Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:all.Heading",
+      "default": "Focused product gallery"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:all.Description"
+    },
+    {
+      "type": "text_alignment",
+      "id": "section_header_alignment",
+      "label": "t:all.Alignment",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:all.Image"
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "label": "t:all.Shape",
+      "default": "natural",
+      "options": [
+        {
+          "value": "natural",
+          "label": "t:all.Original"
+        },
+        {
+          "value": "square",
+          "label": "t:all.Square"
+        },
+        {
+          "value": "tall",
+          "label": "t:all.Tall"
+        },
+        {
+          "value": "wide",
+          "label": "t:all.Wide"
+        },
+        {
+          "value": "circle",
+          "label": "t:all.Circle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.focused-product-gallery.settings.product_info_header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "t:all.Show_vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "t:all.Show_price",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "t:all.Show_description",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:all.slides"
+    },
+    {
+      "type": "radio",
+      "id": "hover_navigation_desktop",
+      "label": "t:settings_schema.Product_card.settings.hover_navigation_desktop.label",
+      "options": [
+        {
+          "value": "left-and-right",
+          "label": "t:settings_schema.Product_card.settings.hover_navigation_desktop.options.left_and_right"
+        },
+        {
+          "value": "right",
+          "label": "t:settings_schema.Product_card.settings.hover_navigation_desktop.options.right"
+        },
+        {
+          "value": "above",
+          "label": "t:settings_schema.Product_card.settings.hover_navigation_desktop.options.above"
+        }
+      ],
+      "default": "left-and-right"
+    },
+    {
+      "type": "header",
+      "content": "t:all.Buttons"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "t:all.button_style",
+      "default": "filled",
+      "options": [
+        {
+          "value": "filled",
+          "label": "t:all.Filled"
+        },
+        {
+          "value": "outlined",
+          "label": "t:all.Outlined"
+        },
+        {
+          "value": "underlined",
+          "label": "t:all.underlined"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "override_button_colors",
+      "label": "t:all.Button_color_override",
+      "default": false,
+      "info": "t:all.Button_color_override_info"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "t:all.Primary_color",
+      "default": "#E68819",
+      "visible_if": "{{ section.settings.override_button_colors }}"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "t:all.Secondary_color",
+      "default": "#FFFFFF",
+      "info": "t:all.Secondary_button_color_info",
+      "visible_if": "{{ section.settings.override_button_colors }}"
+    },
+    {
+      "type": "header",
+      "content": "t:all.Layout"
+    },
+    {
+      "type": "select",
+      "id": "products_per_row_desktop",
+      "label": "t:all.Products_per_row_on_desktop",
+      "default": "5",
+      "options": [
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:all.Width",
+      "default": "full",
+      "options": [
+        {
+          "value": "content",
+          "label": "t:all.Content_width"
+        },
+        {
+          "value": "full",
+          "label": "t:all.Full_width"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "t:all.Spacing_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "t:all.px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "t:all.Spacing_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "t:all.px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "t:all.Color"
+    },
+    {
+      "type": "select",
+      "id": "colors",
+      "label": "t:all.Color_scheme",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "t:all.Default"
+        },
+        {
+          "value": "light",
+          "label": "t:all.First"
+        },
+        {
+          "value": "accent",
+          "label": "t:all.Second"
+        },
+        {
+          "value": "dark",
+          "label": "t:all.Third"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "t:all.Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "t:all.Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "focus_image",
+          "label": "t:sections.focused-product-gallery.blocks.product.settings.focus_image.label",
+          "info": "t:sections.focused-product-gallery.blocks.product.settings.focus_image.info"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "t:all.Description",
+          "info": "t:sections.focused-product-gallery.blocks.product.settings.description.info",
+          "visible_if": "{{ section.settings.show_description }}"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:all.Button_label",
+          "default": "Shop now"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.focused-product-gallery.name",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
+  }
+}
+{% endschema %}

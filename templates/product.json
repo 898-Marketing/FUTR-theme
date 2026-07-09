@@ -1,0 +1,263 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-form": {
+      "type": "template--product",
+      "blocks": {
+        "star_rating_rQeKEe": {
+          "type": "star_rating",
+          "settings": {
+            "show_rating_as": "count",
+            "star_size": 20,
+            "show_product_rating_if_no_reviews": false,
+            "no_reviews_label": "No reviews",
+            "margin_bottom": 10
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_font": "h1",
+            "margin_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_font": "h3",
+            "shipping_policy": false,
+            "tax_included": false,
+            "margin_bottom": 20
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "variant_style": "swatches",
+            "hide_out_of_stock_variants": false,
+            "thumbnail_changes_variant": false,
+            "size_guide_label": "Size guide",
+            "size_guide_page": "",
+            "size_option_name": "Size",
+            "margin_bottom": 30
+          }
+        },
+        "2f3ddc8d-6514-403d-a884-88c9a0294300": {
+          "type": "stock-level-indicator",
+          "settings": {
+            "stock-range": 20,
+            "stock-level-notice": "always",
+            "show-stock-count": false,
+            "in-stock-message": "Ready to ship",
+            "low-stock-message": "Selling fast",
+            "out-of-stock-message": "Back in soon",
+            "preorder-message": "Preorder today",
+            "stock-level-indicator-style": "classic",
+            "bar-indicator-color": "standard",
+            "stock_indicator_animation": true,
+            "margin_bottom": 10
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_smart_checkout": true,
+            "enable_gift_card_recipient_form": true,
+            "margin_bottom": 40,
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "image_offer_HXEU9f": {
+          "type": "image-offer",
+          "settings": {
+            "link": "",
+            "hover_border_color": "",
+            "margin_bottom": 30
+          }
+        },
+        "product_description_WznApN": {
+          "type": "product-description",
+          "settings": {
+            "collapsible_tab": false,
+            "heading": "Description",
+            "open_by_default": false,
+            "margin_bottom": 30
+          }
+        },
+        "cross_sells_8cj8KY": {
+          "type": "cross-sells",
+          "settings": {
+            "title": "Don't forget these...",
+            "cross_sell_product_3": "",
+            "collapsible_tab": false,
+            "open_by_default": false,
+            "margin_bottom": 30
+          }
+        },
+        "4fdb087c-4728-4785-b270-a71a092b7898": {
+          "type": "social_sharing",
+          "settings": {
+            "margin_bottom": 30
+          }
+        }
+      },
+      "block_order": [
+        "star_rating_rQeKEe",
+        "title",
+        "price",
+        "options",
+        "2f3ddc8d-6514-403d-a884-88c9a0294300",
+        "buy_buttons",
+        "image_offer_HXEU9f",
+        "product_description_WznApN",
+        "cross_sells_8cj8KY",
+        "4fdb087c-4728-4785-b270-a71a092b7898"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "media_position": "right",
+        "image_size": "large",
+        "image_shape": "original",
+        "image-display": "paginated",
+        "thumbnail_position": "below",
+        "image_display_mobile": "paginated",
+        "enable_video_loop": true,
+        "enable_autoplay": false,
+        "show_video_controls": false,
+        "app_margin_bottom": 20
+      }
+    },
+    "product-description": {
+      "type": "template--product--description",
+      "blocks": {
+        "collapsible-tab-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Our story",
+            "open_by_default": false,
+            "text": "<p>Born in NZ but made in the UK, we’re the purveyor of good times with good people. Our seltzers were created to bring mates together. Get the fun going. At Gerry’s, we’re all about making life feel that little bit… lighter.</p>",
+            "page": ""
+          }
+        },
+        "collapsible-tab-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Our purpose",
+            "open_by_default": false,
+            "text": "<p>We don’t just like feeling good.<br>We like doing good too, with stuff like this:</p><p><strong>EMPOWERING PEOPLE</strong><br>Life’s no party without people. They’re the true spirit of our brand, so we listen to them. From customers and employees to the wider community, we’re constantly learning from those around us – and work to build relationships that last.<br><br><br><strong>GOOD CLEAN FUN</strong><br>Our products are low cal, all natural, gluten free and vegan… because at Gerry’s we’re committed to championing both physical and mental health. Who said you can’t be in it for a good time AND a long time?<br><br><br><strong>FUTURE FOCUSED</strong><br>We’re doing our part to protect the world we live in. We’re environmentally focused, using recyclable packaging and sustainable supply chains. And we’re always searching for ways to do better.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_kKrBTK": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Our drinks",
+            "open_by_default": false,
+            "text": "<p>From that pastel can to the irresistible flavours, our premium hard seltzers sparkle on every level. Low cal, gluten free and vegan, they’re the healthier option for those who love life as much as partying. And did we mention, they taste great too?</p><p><br>100% made in the UK, Gerry’s simply blends real fruit flavours, sparkling spring water and premium quality spirits – just all natural ingredients, and no funny fizzness.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible-tab-1",
+        "collapsible-tab-2",
+        "collapsible_tab_kKrBTK"
+      ],
+      "settings": {
+        "open_close_icon": "plus_minus",
+        "section_width": "content",
+        "section_padding_top": 0,
+        "section_padding_bottom": 60,
+        "colors": "white",
+        "enable_readmore": false
+      }
+    },
+    "image_with_text_overlay_JH64Gc": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_kBiaM6": {
+          "type": "heading",
+          "settings": {
+            "title": "CANS DELIVERED STRAIGHT TO YOUR DOOR",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "image_hKe79K": {
+          "type": "image",
+          "settings": {
+            "image_link": "",
+            "image_bottom_spacing": 5
+          }
+        },
+        "image_T98fAi": {
+          "type": "image",
+          "settings": {
+            "image_link": "",
+            "image_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_kBiaM6",
+        "image_hKe79K",
+        "image_T98fAi"
+      ],
+      "settings": {
+        "height_desktop": "650px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 35,
+        "height_mobile": "400px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#292929",
+        "caption_bg_color": "#ffffff",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "featured_collection_gi6QWq": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "description": "<h5>Can't decide?</h5><h5></h5><h1>MIX AND MATCH!</h1>",
+        "collection": "",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "show_view_all": false,
+        "buttons_style": "filled",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "layout_style": "grid",
+        "products_to_show": 3,
+        "grid-desktop": 3,
+        "grid-mobile": "2",
+        "colors": "white"
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "product-description",
+    "image_with_text_overlay_JH64Gc",
+    "featured_collection_gi6QWq"
+  ]
+}

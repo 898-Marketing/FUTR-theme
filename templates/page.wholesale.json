@@ -1,0 +1,464 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_QUfiNB": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_YedVUM": {
+          "type": "heading",
+          "settings": {
+            "title": "Image with text overlay",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 10
+          }
+        },
+        "text_fpFB7M": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_YedVUM",
+        "text_fpFB7M"
+      ],
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "250px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "image_overlay_opacity": 0
+      }
+    },
+    "1647348352214a3e9b": {
+      "type": "rich-text",
+      "blocks": {
+        "1e6f01b7-7fdd-491f-b245-e675baab55bb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Heading",
+            "heading--text-size": 30
+          }
+        },
+        "500b6487-80ec-4183-ae41-6e173a203c11": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Use this text block to show store announcements, advertise products and collections, or simply welcome visitors to your store.</p>",
+            "text_size": 14
+          }
+        }
+      },
+      "block_order": [
+        "1e6f01b7-7fdd-491f-b245-e675baab55bb",
+        "500b6487-80ec-4183-ae41-6e173a203c11"
+      ],
+      "settings": {
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
+        "text_alignment_mobile": "center",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "6c58d946-d9b9-4b20-8744-6848874cbdd0": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "template--14795085709382__6c58d946-d9b9-4b20-8744-6848874cbdd0-1686927686819342c0-0": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "template--14795085709382__6c58d946-d9b9-4b20-8744-6848874cbdd0-1686927686819342c0-1": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "9b4fe509-622e-4579-91e0-b56b67f264bf": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "0b7817fa-c670-4ba6-98df-5098e9a56558": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14795085709382__6c58d946-d9b9-4b20-8744-6848874cbdd0-1686927686819342c0-0",
+        "template--14795085709382__6c58d946-d9b9-4b20-8744-6848874cbdd0-1686927686819342c0-1",
+        "9b4fe509-622e-4579-91e0-b56b67f264bf",
+        "0b7817fa-c670-4ba6-98df-5098e9a56558"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "columns_per_row": 4,
+        "vertical_alignment": "top",
+        "text_alignment": "center",
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "colors": "accent"
+      }
+    },
+    "67969726-9b7c-48e9-89ed-f29bd1fd2cdd": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "template--16327181074597__fed23e3c-31d1-4ca1-b46b-62907ffde198-image_and_text-1": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "template--16327181074597__fed23e3c-31d1-4ca1-b46b-62907ffde198-image_and_text-2": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "d263d2ac-df94-4c5f-b5b8-a11fd8e04c81": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "75698843-43ba-46f2-aec6-17e59148f467": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16327181074597__fed23e3c-31d1-4ca1-b46b-62907ffde198-image_and_text-1",
+        "template--16327181074597__fed23e3c-31d1-4ca1-b46b-62907ffde198-image_and_text-2",
+        "d263d2ac-df94-4c5f-b5b8-a11fd8e04c81",
+        "75698843-43ba-46f2-aec6-17e59148f467"
+      ],
+      "settings": {
+        "title": "Info columns",
+        "description": "<p>Emphasise your messaging</p>",
+        "columns_per_row": 3,
+        "vertical_alignment": "top",
+        "text_alignment": "left",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "light"
+      }
+    },
+    "d7ae61fb-952c-4654-a622-c9b102e1476b": {
+      "type": "contact-form",
+      "blocks": {
+        "template--14754116010054__d7ae61fb-952c-4654-a622-c9b102e1476b-16788945317184afd8-0": {
+          "type": "name_input",
+          "settings": {
+            "required": true,
+            "input_width": "full"
+          }
+        },
+        "template--14754116010054__d7ae61fb-952c-4654-a622-c9b102e1476b-16788945317184afd8-1": {
+          "type": "email_input",
+          "settings": {
+            "required": true,
+            "input_width": "partial"
+          }
+        },
+        "template--14754116010054__d7ae61fb-952c-4654-a622-c9b102e1476b-16788945317184afd8-2": {
+          "type": "tel_input",
+          "settings": {
+            "required": false,
+            "input_width": "partial"
+          }
+        },
+        "2dfd1a2d-7b82-4b21-a474-28bd336c7b43": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "Company name",
+            "required": true,
+            "input_width": "partial"
+          }
+        },
+        "79b0de8f-96b5-4bfd-b6a3-01d813459a70": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "Company website",
+            "required": false,
+            "input_width": "partial"
+          }
+        },
+        "85d41ec4-f9fb-40ff-9f72-8283026272c5": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "Business address",
+            "required": false,
+            "input_width": "full"
+          }
+        },
+        "cad8ce4d-430a-49bd-8111-36326ef9cfb0": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "Business details: Type of business (Retailer, distributor, etc.)",
+            "required": false,
+            "input_width": "full"
+          }
+        },
+        "6d98405e-4c05-444d-92ba-5ac74ff2dc64": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "Product Interest: Specific products of Interest and estimated order quantity",
+            "required": false,
+            "input_width": "full"
+          }
+        },
+        "18feaa42-a0e5-4d78-bc7c-1a45b0db481f": {
+          "type": "custom_input",
+          "settings": {
+            "placeholder": "Distribution channels: Target market or customer base",
+            "required": false,
+            "input_width": "full"
+          }
+        },
+        "template--14754116010054__d7ae61fb-952c-4654-a622-c9b102e1476b-16788945317184afd8-3": {
+          "type": "message_input",
+          "settings": {
+            "required": true,
+            "input_width": "full"
+          }
+        }
+      },
+      "block_order": [
+        "template--14754116010054__d7ae61fb-952c-4654-a622-c9b102e1476b-16788945317184afd8-0",
+        "template--14754116010054__d7ae61fb-952c-4654-a622-c9b102e1476b-16788945317184afd8-1",
+        "template--14754116010054__d7ae61fb-952c-4654-a622-c9b102e1476b-16788945317184afd8-2",
+        "2dfd1a2d-7b82-4b21-a474-28bd336c7b43",
+        "79b0de8f-96b5-4bfd-b6a3-01d813459a70",
+        "85d41ec4-f9fb-40ff-9f72-8283026272c5",
+        "cad8ce4d-430a-49bd-8111-36326ef9cfb0",
+        "6d98405e-4c05-444d-92ba-5ac74ff2dc64",
+        "18feaa42-a0e5-4d78-bc7c-1a45b0db481f",
+        "template--14754116010054__d7ae61fb-952c-4654-a622-c9b102e1476b-16788945317184afd8-3"
+      ],
+      "settings": {
+        "title": "Contact us",
+        "description": "<p>Have a question, or want a product recommendation? Get in touch.</p>",
+        "form_width": "narrow",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_color_scheme": "white"
+      }
+    },
+    "scrolling_banner_rVUVpf": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "image_e3U9pR": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 152,
+            "height_mobile": 152,
+            "link": ""
+          }
+        },
+        "image_WtMj3C": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 152,
+            "height_mobile": 152,
+            "link": ""
+          }
+        },
+        "image_AppepX": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 152,
+            "height_mobile": 152,
+            "link": ""
+          }
+        },
+        "image_9EXpfz": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 152,
+            "height_mobile": 152,
+            "link": ""
+          }
+        },
+        "image_kfGCEg": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 152,
+            "height_mobile": 152,
+            "link": ""
+          }
+        },
+        "image_yDiVcn": {
+          "type": "image",
+          "settings": {
+            "height_desktop": 152,
+            "height_mobile": 152,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_e3U9pR",
+        "image_WtMj3C",
+        "image_AppepX",
+        "image_9EXpfz",
+        "image_kfGCEg",
+        "image_yDiVcn"
+      ],
+      "settings": {
+        "show_fade": false,
+        "borders": false,
+        "animation_direction": "normal",
+        "animation_speed": 65,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "space_between_blocks_desktop": 80,
+        "space_between_blocks_mobile": 65,
+        "rotate": "0",
+        "color_scheme": "light"
+      }
+    },
+    "image_with_text_overlay_jXiD3c": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_tUYWeP": {
+          "type": "heading",
+          "settings": {
+            "title": "Image with text overlay",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_nUY8fV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "text_with_icon_aaWx3x": {
+          "type": "text_with_icon",
+          "settings": {
+            "icon": "map-pin",
+            "text": "Highlight a feature",
+            "link": "",
+            "text_with_icon_bottom_spacing": 5
+          }
+        },
+        "text_with_icon_cRq8Bj": {
+          "type": "text_with_icon",
+          "settings": {
+            "icon": "map-pin",
+            "text": "Highlight a feature",
+            "link": "",
+            "text_with_icon_bottom_spacing": 20
+          }
+        },
+        "button_96EwNC": {
+          "type": "button",
+          "settings": {
+            "first_button_label": "Shop now",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "buttons_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_tUYWeP",
+        "text_nUY8fV",
+        "text_with_icon_aaWx3x",
+        "text_with_icon_cRq8Bj",
+        "button_96EwNC"
+      ],
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "left",
+        "text_alignment_desktop": "left",
+        "caption_width_desktop": 75,
+        "height_mobile": "300px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "left",
+        "section_link": "",
+        "animation_style": "none",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#242424",
+        "caption_bg_color": "#FFFFFF",
+        "image_overlay_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_QUfiNB",
+    "1647348352214a3e9b",
+    "6c58d946-d9b9-4b20-8744-6848874cbdd0",
+    "67969726-9b7c-48e9-89ed-f29bd1fd2cdd",
+    "d7ae61fb-952c-4654-a622-c9b102e1476b",
+    "scrolling_banner_rVUVpf",
+    "image_with_text_overlay_jXiD3c"
+  ]
+}

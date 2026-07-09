@@ -1,0 +1,478 @@
+{{ 'animated-counter-section.min.css' | asset_url | stylesheet_tag }}
+
+{% unless section.settings.animation_style == 'none' %}
+  <safe-load-scripts class="hidden">
+    <script src="{{ 'animated-counter-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="animated-counter"></script>
+  </safe-load-scripts>
+{% endunless %}
+
+{% assign sequence_delay = 1000 %}
+
+<div
+	class="animated-counter wrapper-spacing--v wrapper-spacing--h color-scheme--{{ section.settings.colors }}{% if request.visual_preview_mode %} section-preview shown-on-scroll{% else %} show-on-scroll{% endif %}"
+  data-wetheme-section-type="animated-counter"
+	data-wetheme-section-id="{{ section.id }}"
+  style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px; --number-size-mobile: {{ section.settings.number_size_mobile }}px; --number-size-desktop: {{ section.settings.number_size_desktop }}px;"
+>
+  <div class="width--content">
+    {% render 'dynamic-section-header', section_title: section.settings.title, section_description: section.settings.description, alignment: section.settings.section_header_alignment %}
+    
+    {% if section.blocks.size > 0 %}
+      <div class="animated-counter__blocks animated-counter__blocks--{{ section.settings.text_alignment }}">
+        {% for block in section.blocks %}
+          <div
+            class="animated-counter__block{% if section.settings.animation_style == 'sequence' and forloop.first == false %} is-hidden{% endif %}"
+            {% unless section.settings.animation_style == 'sequence' %}
+              data-animate
+            {% endunless %}
+            data-animate-order="{{ forloop.index }}"
+            {% if section.settings.animation_style == 'sequence' %}
+              style="--animation-delay-increment: {{ sequence_delay }}ms;"
+            {% endif %}
+            {{ block.shopify_attributes }}
+        >
+            
+            {% comment %} Icon {% endcomment %}
+            {% liquid
+              assign icon = block.settings.icon
+              if block.settings.custom_icon != blank
+                assign icon = block.settings.custom_icon
+              endif
+            %}
+            
+            {% if icon != 'none' and icon != blank %}
+              <div class="animated-counter__icon">
+                {% if block.settings.custom_icon != blank %}
+                  {% render 'responsive-image', image: block.settings.custom_icon, allow_stretch: true %}
+                {% else %}
+                  {% render 'theme-icon', icon: icon %}
+                {% endif %}
+              </div>
+            {% endif %}
+            
+            {% comment %} Number {% endcomment %}
+            {% if block.settings.number != blank %}
+              {% if section.settings.animation_style == 'none' %}
+                <div class="animated-counter__number-static">
+                  <h2 class="animated-counter__number">{{ block.settings.number }}</h2>
+                </div>
+              {% else %}
+                <animated-counter
+                  data-target="{{ block.settings.number }}"
+                  data-animation-style="{{ section.settings.animation_style }}"
+                  {% if section.settings.animation_style == 'sequence' %}
+                    data-delay="{{ forloop.index0 | times: sequence_delay }}"
+                  {% endif %}
+                >
+                  <h2 class="animated-counter__number" data-number>{{ block.settings.number }}</h2>
+                </animated-counter>
+              {% endif %}
+            {% endif %}
+            
+            {% comment %} Label {% endcomment %}
+            {% if block.settings.label != blank %}
+              <div class="animated-counter__label rte richtext-block text-link-animated">{{ block.settings.label }}</div>
+            {% endif %}
+            
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.animated-counter.name",
+  "class": "section--animated-counter",
+  "max_blocks": 4,
+  "settings": [
+   {
+      "type": "header",
+      "content": "t:all.Heading"
+   },
+   {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:all.Heading",
+      "default": "Animated counter"
+   },
+   {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:all.Description"
+   },
+   {
+      "type": "text_alignment",
+      "id": "section_header_alignment",
+      "label": "t:all.Alignment",
+      "default": "center"
+    },
+   {
+      "type": "header",
+      "content": "t:all.Content"
+   },
+   {
+      "type": "select",
+      "id": "animation_style",
+      "label": "t:all.Animation_style",
+      "default": "slow",
+      "options": [
+         {
+            "value": "fast",
+            "label": "t:sections.animated-counter.settings.animation_style.fast_stop"
+         },
+         {
+            "value": "slow",
+            "label": "t:sections.animated-counter.settings.animation_style.slow_stop"
+         },
+         {
+            "value": "sequence",
+            "label": "t:sections.animated-counter.settings.animation_style.sequence"
+         },
+         {
+            "value": "none",
+            "label": "t:all.None"
+         }
+      ]
+   },
+   {
+      "type": "range",
+      "id": "number_size_desktop",
+      "label": "t:sections.animated-counter.settings.number_size_desktop",
+      "min": 12,
+      "max": 112,
+      "unit": "t:all.px",
+      "default": 40
+   },
+   {
+      "type": "range",
+      "id": "number_size_mobile",
+      "label": "t:sections.animated-counter.settings.number_size_mobile",
+      "min": 12,
+      "max": 112,
+      "unit": "t:all.px",
+      "default": 50
+   },
+   {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:all.Text_alignment",
+      "default": "center"
+   },
+   {
+      "type": "header",
+      "content": "t:all.Layout"
+   },
+   {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "t:all.Spacing_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "t:all.px",
+      "default": 60
+   },
+   {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "t:all.Spacing_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "t:all.px",
+      "default": 60
+   },
+   {
+      "type": "header",
+      "content": "t:all.Color"
+   },
+   {
+      "type": "select",
+      "id": "colors",
+      "label": "t:all.Color_scheme",
+      "default": "white",
+      "options": [
+         {
+            "value": "white",
+            "label": "t:all.Default"
+         },
+         {
+            "value": "light",
+            "label": "t:all.First"
+         },
+         {
+            "value": "accent",
+            "label": "t:all.Second"
+         },
+         {
+            "value": "dark",
+            "label": "t:all.Third"
+         }
+      ]
+   }
+   ],
+   "blocks": [
+     {
+       "type": "number",
+       "name": "t:sections.animated-counter.blocks.number.name",
+       "settings": [
+         {
+           "type": "select",
+           "id": "icon",
+           "label": "t:all.Icon",
+           "default": "none",
+           "options": [
+             {
+               "value": "none",
+               "label": "t:all.None"
+             },
+             {
+               "value": "arrow-right-circle",
+               "label": "t:all.Arrow_circle"
+             },
+             {
+               "value": "book",
+               "label": "t:all.Book"
+             },
+             {
+               "value": "cake",
+               "label": "t:all.Cake"
+             },
+             {
+               "value": "car",
+               "label": "t:all.Car"
+             },
+             {
+               "value": "multi-bubble",
+               "label": "t:all.Chat"
+             },
+             {
+               "value": "chat",
+               "label": "t:all.Chat_bubble"
+             },
+             {
+               "value": "chat-smile",
+               "label": "t:all.Chat_bubble_with_smile"
+             },
+             {
+               "value": "check-circle",
+               "label": "t:all.Check_circle"
+             },
+             {
+               "value": "clock",
+               "label": "t:all.Clock"
+             },
+             {
+               "value": "xmark-circle",
+               "label": "t:all.Cross"
+             },
+             {
+               "value": "crown",
+               "label": "t:all.Crown"
+             },
+             {
+               "value": "cup",
+               "label": "t:all.Cup"
+             },
+             {
+               "value": "service",
+               "label": "t:all.Customer_service"
+             },
+             {
+               "value": "delivery-truck",
+               "label": "t:all.Delivery"
+             },
+             {
+               "value": "leaf",
+               "label": "t:all.Eco"
+             },
+             {
+               "value": "mail",
+               "label": "t:all.Email"
+             },
+             {
+               "value": "exchange",
+               "label": "t:all.Exchange"
+             },
+             {
+               "value": "fire-flame",
+               "label": "t:all.Fire"
+             },
+             {
+               "value": "flag",
+               "label": "t:all.Flag"
+             },
+             {
+               "value": "gift",
+               "label": "t:all.Gift"
+             },
+             {
+               "value": "globe",
+               "label": "t:all.Globe"
+             },
+             {
+               "value": "handbag",
+               "label": "t:all.Handbag"
+             },
+             {
+               "value": "heart",
+               "label": "t:all.Heart"
+             },
+             {
+               "value": "help-circle",
+               "label": "t:all.Help_circle"
+             },
+             {
+               "value": "home-smile",
+               "label": "t:all.Home_with_smile"
+             },
+             {
+               "value": "info",
+               "label": "t:all.Info"
+             },
+             {
+               "value": "map-pin",
+               "label": "t:all.Map_pin"
+             },
+             {
+               "value": "measuring_tape",
+               "label": "t:all.Measuring_tape"
+             },
+             {
+               "value": "moon",
+               "label": "t:all.Moon"
+             },
+             {
+               "value": "phone",
+               "label": "t:all.Phone"
+             },
+             {
+               "value": "plus-circle",
+               "label": "t:all.Plus_circle"
+             },
+             {
+               "value": "price-tag",
+               "label": "t:all.Price_tag"
+             },
+             {
+               "value": "question-answer",
+               "label": "t:all.Question_and_answer"
+             },
+             {
+               "value": "quote",
+               "label": "t:all.Quote"
+             },
+             {
+               "value": "recycle",
+               "label": "t:all.Recycle"
+             },
+             {
+               "value": "restaurant",
+               "label": "t:all.Restaurant"
+             },
+             {
+               "value": "emoji",
+               "label": "t:all.Smiley"
+             },
+             {
+               "value": "sparks",
+               "label": "t:all.Sparks"
+             },
+             {
+               "value": "star",
+               "label": "t:all.Star"
+             },
+             {
+               "value": "store",
+               "label": "t:all.Store"
+             },
+             {
+               "value": "sun",
+               "label": "t:all.Sun"
+             },
+             {
+               "value": "takeaway",
+               "label": "t:all.Takeaway"
+             },
+             {
+               "value": "trophy",
+               "label": "t:all.Trophy"
+             },
+             {
+               "value": "truck",
+               "label": "t:all.Truck"
+             },
+             {
+               "value": "umbrella",
+               "label": "t:all.Umbrella"
+             },
+             {
+               "value": "wallet",
+               "label": "t:all.Wallet"
+             },
+             {
+               "value": "warning-circle",
+               "label": "t:all.Warning_circle"
+             }
+           ]
+         },
+         {
+           "type": "image_picker",
+           "id": "custom_icon",
+           "label": "t:all.Custom_icon",
+           "info": "t:all.Aspect_ratio_of_1_1_recommended"
+         },
+         {
+           "type": "text",
+           "id": "number",
+           "label": "t:all.Number",
+           "default": "2,500+"
+         },
+         {
+           "type": "richtext",
+           "id": "label",
+           "label": "t:all.Label",
+           "default": "<p>5 star reviews</p>"
+         }
+       ]
+     }
+   ],
+   "presets": [
+     {
+       "name": "t:sections.animated-counter.name",
+       "blocks": [
+         {
+           "type": "number",
+           "settings": {
+            "icon": "star"
+           }
+         },
+         {
+           "type": "number",
+           "settings": {
+              "icon": "trophy",
+             "number": "9",
+             "label": "<p>Industry awards</p>"
+           }
+         },
+         {
+           "type": "number",
+           "settings": {
+              "icon": "globe",
+             "number": "95%",
+             "label": "<p>Recycled packaging</p>"
+           }
+         }
+       ]
+     }
+   ],
+  "disabled_on": {
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
+  }
+}
+{% endschema %}

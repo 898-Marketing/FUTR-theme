@@ -1,0 +1,690 @@
+{{ 'image-with-text-section.min.css' | asset_url | stylesheet_tag }}
+
+{% case section.settings.colors %}
+  {% when 'white' %}
+    {%- assign color_scheme = 'color-scheme--white' -%}
+  {% when 'light' %}
+    {%- assign color_scheme = 'color-scheme--light' -%}
+  {% when 'accent' %}
+    {%- assign color_scheme = 'color-scheme--accent' -%}
+  {% when 'dark' %}
+    {%- assign color_scheme = 'color-scheme--dark' -%}
+{% endcase %}
+
+{% assign animation_offset = 2 %}
+{% assign animation_order = 1 %}
+
+<div
+  class="wrapper-spacing--v{% if section.settings.section-width == 'content' %} wrapper-spacing--h{% endif %} {{ color_scheme }} image-with-text__container{% unless section.settings.text_overlapping_image %} feature-row--no-overlapping{% else %} feature-row--overlapping{% endunless %}"
+  data-wetheme-section-type="image--image-with-text" 
+  data-wetheme-section-id="{{ section.id }}"
+  style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px;"
+>
+
+  {% capture image_layout %}
+    <div class="grid__item homepage-content--image homepage-content--{{ section.id }}{% if section.settings.text_overlapping_image %} overlapping-text{% else %} large--one-half{% endif %}{% if settings.animations_enabled %} kb-enabled{% endif %}{% if section.settings.section-width == 'content' %} block-radius{% endif %}">
+      <div>
+        {% if section.settings.image != blank %}
+          <div id="image-with-text--{{ section.id }}" class="img">
+            {% render 'responsive-image', image: section.settings.image, sizes: '100vw', allow_stretch: true %}
+          </div>
+        {% else %}
+          <div id="image-with-text--{{ section.id }}" class="placeholder-background img">
+            {% if section.settings.text_overlapping_image %}
+              {{ 'collection-4' | placeholder_svg_tag: 'icon icon--placeholder icon--placeholder--subdued-desktop' }}
+            {% else %}
+              {{ 'collection-4' | placeholder_svg_tag: 'icon icon--placeholder' }}
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endcapture %}
+
+  {% if section.settings.section-width == 'content' %}
+    <div class="width--content">
+  {% endif %}
+
+    <div class="homepage-indiv-section-wrapper homepage-featured-content-wrapper feature-row__text--{{ section.settings.layout }} feature-row__text-alignment--{{ section.settings.text_alignment }} feature-row__text-alignment-mobile--{{ section.settings.text_alignment_mobile }}">
+      {{ image_layout }}
+
+      <div class="feature_row__image_wrapper{% if section.settings.text_overlapping_image %} homepage-featured-content-box{% else %} large--one-half{% endif %}">
+        {% if section.blocks.size > 0 %}
+
+          {% unless section.settings.text_overlapping_image %}
+            <div class="no-overlap-content-box">
+          {% endunless %}
+
+            <div class="homepage-featured-content-box-inner{% if request.visual_preview_mode %} section-preview{% else %} show-on-scroll{% endif %}">
+
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'heading' %}
+                    {% if block.settings.title != blank %}
+                      <div class="sitewide--title-wrapper" style="margin-bottom: {{ block.settings.heading_bottom_spacing }}px;" data-animate data-animate-order="{{ animation_order | plus: animation_offset }}" {{ block.shopify_attributes }}>
+                        <h2 class="homepage-sections--title" style="margin-bottom: 0;">{{ block.settings.title | escape }}</h2>
+                      </div>
+                      {% assign animation_order = animation_order | plus: 1 %}
+                    {% endif %}
+
+                  {% when 'text' %}
+                    {% if block.settings.text != blank %}
+                      <div class="rte featured-row__subtext textarea text-link-animated richtext-block" style="margin-bottom: {{ block.settings.text_bottom_spacing }}px;" data-animate data-animate-order="{{ animation_order | plus: animation_offset }}" {{ block.shopify_attributes }}>
+                        {{ block.settings.text }}
+                      </div>
+                      {% assign animation_order = animation_order | plus: 1 %}
+                    {% endif %}
+
+                  {% when 'text_with_icon' %}
+                    {% liquid
+                      assign icon = block.settings.icon
+                      assign custom_icon = false
+                      if block.settings.custom_icon
+                        assign icon = block.settings.custom_icon
+                        assign custom_icon = true
+                      endif
+                    %}
+
+                    {% capture block_attr %}
+                      style="margin-bottom: {{ block.settings.text_with_icon_bottom_spacing }}px;"
+                      data-animate
+                      data-animate-order="{{ animation_order | plus: animation_offset }}"
+                    {% endcapture %}
+
+                    {%- if icon != 'none' or  block.settings.text != blank -%}
+                      {% render 'text-with-icon', icon: icon,
+                        block_attributes: block.shopify_attributes,
+                        attributes: block_attr,
+                        custom_icon: custom_icon,
+                        text: block.settings.text,
+                        link: block.settings.link,
+                        classes: 'image-with-text__icon-block'
+                      %}
+                      {% assign animation_order = animation_order | plus: 1 %}
+                    {%- endif -%}
+
+                  {% when 'button' %}
+                    {% if block.settings.button_label != blank %}
+                      {% if block.settings.override_button_colors %}
+                        {% render 'button-color-overrides',
+                          id: block.id,
+                          style: block.settings.buttons_style,
+                          text_color: block.settings.button_text_color,
+                          background_color: block.settings.button_background_color
+                        %}
+                      {% endif %}
+
+                      {% capture button_attr %}
+                        data-animate
+                        data-animate-order="{{ animation_order | plus: animation_offset }}"
+                        style="margin-bottom: {{ block.settings.button_bottom_spacing }}px;"
+                      {% endcapture %}
+                      
+                      {% render 'dynamic-section-button',
+                        id: block.id,
+                        link: block.settings.button_link,
+                        label: block.settings.button_label,
+                        style: block.settings.buttons_style,
+                        div_classes: 'clearfix',
+                        a_classes: 'homepage-featured-box-btn',
+                        attributes: button_attr,
+                        block_attributes: block.shopify_attributes
+                      %}
+                      {% assign animation_order = animation_order | plus: 1 %}
+                    {% endif %}
+                {% endcase %}
+              {% endfor %}
+
+            </div>
+
+          {% unless section.settings.text_overlapping_image %}
+            </div>
+          {% endunless %}
+        {% endif %}
+      </div>
+    </div>
+
+  {% if section.settings.section-width == 'content' %}
+    </div>
+  {% endif %}
+
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.image--image-with-text.name",
+  "class": "image-with-text-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:all.Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:all.Image",
+      "info": "t:sections.image--image-with-text.settings.image.info"
+    },
+    {
+      "type": "radio",
+      "id": "layout",
+      "label": "t:all.image_position_desktop",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:all.Left"
+        },
+        {
+          "value": "right",
+          "label": "t:all.Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:all.Content"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "t:all.Alignment_desktop",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:all.Left"
+        },
+        {
+          "value": "center",
+          "label": "t:all.Centered"
+        },
+        {
+          "value": "right",
+          "label": "t:all.Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_alignment_mobile",
+      "label": "t:all.Alignment_mobile",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:all.Left"
+        },
+        {
+          "value": "center",
+          "label": "t:all.Centered"
+        },
+        {
+          "value": "right",
+          "label": "t:all.Right"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "text_overlapping_image",
+      "label": "t:sections.image--image-with-text.settings.text_overlapping_image.label",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:all.Layout"
+    },
+    {
+      "type": "select",
+      "id": "section-width",
+      "label": "t:all.Width",
+      "default": "full",
+      "options": [
+        {
+          "value": "content",
+          "label": "t:all.Content_width"
+        },
+        {
+          "value": "full",
+          "label": "t:all.Full_width"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "t:all.Spacing_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "t:all.px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "t:all.Spacing_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "t:all.px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:all.Color"
+    },
+    {
+      "type": "select",
+      "id": "colors",
+      "label": "t:all.Color_scheme",
+      "default": "light",
+      "options": [
+        {
+          "value": "white",
+          "label": "t:all.Default"
+        },
+        {
+          "value": "light",
+          "label": "t:all.First"
+        },
+        {
+          "value": "accent",
+          "label": "t:all.Second"
+        },
+        {
+          "value": "dark",
+          "label": "t:all.Third"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:all.Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:all.Heading",
+          "default": "Image with text"
+        },
+        {
+          "type": "header",
+          "content": "t:all.Layout"
+        },
+        {
+          "type": "range",
+          "id": "heading_bottom_spacing",
+          "label": "t:all.bottom_spacing",
+          "min": 0,
+          "max": 40,
+          "unit": "t:all.px",
+          "default": 15
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:all.Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:all.Text",
+          "default": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+        },
+        {
+          "type": "header",
+          "content": "t:all.Layout"
+        },
+        {
+          "type": "range",
+          "id": "text_bottom_spacing",
+          "label": "t:all.bottom_spacing",
+          "min": 0,
+          "max": 40,
+          "unit": "t:all.px",
+          "default": 20
+        }
+      ]
+    },
+    {
+      "type": "text_with_icon",
+      "name": "t:all.Text_with_icon",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "t:all.Icon",
+          "default": "star",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:all.None"
+            },
+            {
+              "value": "arrow-right-circle",
+              "label": "t:all.Arrow_circle"
+            },
+            {
+              "value": "book",
+              "label": "t:all.Book"
+            },
+            {
+              "value": "cake",
+              "label": "t:all.Cake"
+            },
+            {
+              "value": "car",
+              "label": "t:all.Car"
+            },
+            {
+              "value": "multi-bubble",
+              "label": "t:all.Chat"
+            },
+            {
+              "value": "chat",
+              "label": "t:all.Chat_bubble"
+            },
+            {
+              "value": "chat-smile",
+              "label": "t:all.Chat_bubble_with_smile"
+            },
+            {
+              "value": "check-circle",
+              "label": "t:all.Check_circle"
+            },
+            {
+              "value": "clock",
+              "label": "t:all.Clock"
+            },
+            {
+              "value": "xmark-circle",
+              "label": "t:all.Cross"
+            },
+            {
+              "value": "crown",
+              "label": "t:all.Crown"
+            },
+            {
+              "value": "cup",
+              "label": "t:all.Cup"
+            },
+            {
+              "value": "service",
+              "label": "t:all.Customer_service"
+            },
+            {
+              "value": "delivery-truck",
+              "label": "t:all.Delivery"
+            },
+            {
+              "value": "leaf",
+              "label": "t:all.Eco"
+            },
+            {
+              "value": "mail",
+              "label": "t:all.Email"
+            },
+            {
+              "value": "exchange",
+              "label": "t:all.Exchange"
+            },
+            {
+              "value": "fire-flame",
+              "label": "t:all.Fire"
+            },
+            {
+              "value": "flag",
+              "label": "t:all.Flag"
+            },
+            {
+              "value": "gift",
+              "label": "t:all.Gift"
+            },
+            {
+              "value": "globe",
+              "label": "t:all.Globe"
+            },
+            {
+              "value": "handbag",
+              "label": "t:all.Handbag"
+            },
+            {
+              "value": "heart",
+              "label": "t:all.Heart"
+            },
+            {
+              "value": "help-circle",
+              "label": "t:all.Help_circle"
+            },
+            {
+              "value": "home-smile",
+              "label": "t:all.Home_with_smile"
+            },
+            {
+              "value": "info",
+              "label": "t:all.Info"
+            },
+            {
+              "value": "map-pin",
+              "label": "t:all.Map_pin"
+            },
+            {
+              "value": "measuring_tape",
+              "label": "t:all.Measuring_tape"
+            },
+            {
+              "value": "moon",
+              "label": "t:all.Moon"
+            },
+            {
+              "value": "phone",
+              "label": "t:all.Phone"
+            },
+            {
+              "value": "plus-circle",
+              "label": "t:all.Plus_circle"
+            },
+            {
+              "value": "price-tag",
+              "label": "t:all.Price_tag"
+            },
+            {
+              "value": "question-answer",
+              "label": "t:all.Question_and_answer"
+            },
+            {
+              "value": "quote",
+              "label": "t:all.Quote"
+            },
+            {
+              "value": "recycle",
+              "label": "t:all.Recycle"
+            },
+            {
+              "value": "restaurant",
+              "label": "t:all.Restaurant"
+            },
+            {
+              "value": "emoji",
+              "label": "t:all.Smiley"
+            },
+            {
+              "value": "sparks",
+              "label": "t:all.Sparks"
+            },
+            {
+              "value": "star",
+              "label": "t:all.Star"
+            },
+            {
+              "value": "store",
+              "label": "t:all.Store"
+            },
+            {
+              "value": "sun",
+              "label": "t:all.Sun"
+            },
+            {
+              "value": "takeaway",
+              "label": "t:all.Takeaway"
+            },
+            {
+              "value": "trophy",
+              "label": "t:all.Trophy"
+            },
+            {
+              "value": "truck",
+              "label": "t:all.Truck"
+            },
+            {
+              "value": "umbrella",
+              "label": "t:all.Umbrella"
+            },
+            {
+              "value": "wallet",
+              "label": "t:all.Wallet"
+            },
+            {
+              "value": "warning-circle",
+              "label": "t:all.Warning_circle"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "t:all.Custom_icon",
+          "info": "t:all.Aspect_ratio_of_1_1_recommended"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:all.Text",
+          "default": "Highlight a feature"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:all.Link",
+          "info": "t:all.Optional"
+        },
+        {
+          "type": "header",
+          "content": "t:all.Layout"
+        },
+        {
+          "type": "range",
+          "id": "text_with_icon_bottom_spacing",
+          "label": "t:all.bottom_spacing",
+          "min": 0,
+          "max": 40,
+          "unit": "t:all.px",
+          "default": 20
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:all.Button",
+      "settings": [
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:all.Button_link"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:all.Button_label",
+          "default": "Shop now"
+        },
+        {
+          "type": "select",
+          "id": "buttons_style",
+          "label": "t:all.button_style",
+          "default": "filled",
+          "options": [
+            {
+              "value": "filled",
+              "label": "t:all.Filled"
+            },
+            {
+              "value": "outlined",
+              "label": "t:all.Outlined"
+            },
+            {
+              "value": "underlined",
+              "label": "t:all.underlined"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "override_button_colors",
+          "label": "t:all.Button_color_override",
+          "default": false,
+          "info": "t:all.Button_color_override_info"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "t:all.Primary_color",
+          "default": "#E68819",
+          "visible_if": "{{ block.settings.override_button_colors }}"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "t:all.Secondary_color",
+          "default": "#ffffff",
+          "info": "t:all.Secondary_button_color_info",
+          "visible_if": "{{ block.settings.override_button_colors }}"
+        },
+        {
+          "type": "header",
+          "content": "t:all.Layout"
+        },
+        {
+          "type": "range",
+          "id": "button_bottom_spacing",
+          "label": "t:all.bottom_spacing",
+          "min": 0,
+          "max": 40,
+          "unit": "t:all.px",
+          "default": 20
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image--image-with-text.presets.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button",
+          "settings": {
+            "button_bottom_spacing": 0
+          }
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
+  }
+}
+{% endschema %}

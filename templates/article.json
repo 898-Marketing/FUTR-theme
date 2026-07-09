@@ -1,0 +1,204 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "template--article",
+      "blocks": {
+        "comments_hBkKVw": {
+          "type": "comments",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        "related_posts_Afq8Yq": {
+          "type": "related_posts",
+          "settings": {
+            "title": "Related posts",
+            "description": "",
+            "header_alignment": "left",
+            "show_image": true,
+            "image_shape": "natural",
+            "show_tags": false,
+            "show_date": true,
+            "show_author": false,
+            "show_reading_time": true,
+            "show_comment_count": false,
+            "show_excerpt": true,
+            "show_read_more": true,
+            "heading_font": "heading",
+            "heading_font_size": 28,
+            "alignment": "left",
+            "buttons_style": "underlined",
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_text_color": "#ffffff",
+            "layout_style_desktop": "slider",
+            "hover_navigation_desktop": "left-and-right",
+            "peek_desktop": true,
+            "images_per_row_desktop": 3,
+            "layout_style_mobile": "slider",
+            "navigation_mobile": "dots"
+          }
+        },
+        "next_previous_yw4xnb": {
+          "type": "next_previous",
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "show_reading_time": true,
+            "show_comment_count": false
+          }
+        }
+      },
+      "block_order": [
+        "comments_hBkKVw",
+        "related_posts_Afq8Yq",
+        "next_previous_yw4xnb"
+      ],
+      "settings": {
+        "show_image": true,
+        "height_desktop": "650px",
+        "text_position_desktop": "center",
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_color": "#ffffff",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 50,
+        "show_tags": true,
+        "show_date": true,
+        "show_author": false,
+        "show_reading_time": true,
+        "show_comment_count": false,
+        "show_sidebar": true,
+        "show_sidebar_newsletter": false,
+        "newsletter_heading": "<h4>Join our mailing list</h4>",
+        "newsletter_description": "<p>Get priority access to events and exclusive offers</p>",
+        "newsletter_color_scheme": "white",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "show_recent_posts": true,
+        "show_popular_articles_image": true,
+        "popular_articles_image_aspect_ratio": "original",
+        "blog_show_date": true,
+        "popular_article_1": "",
+        "popular_article_2": "",
+        "sidebar_image_shape": "original",
+        "blog-sidebar-link": "",
+        "article-sidebar-description": "",
+        "show_blog_tags": false,
+        "show_social_icons": true
+      }
+    },
+    "image_with_text_overlay_j7UnFK": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "text_z8UqeN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CAN'T PICK A FLAVOUR?</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "heading_jFwjmh": {
+          "type": "heading",
+          "settings": {
+            "title": "IMAGE WITH TEXT OVERLAY",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "button_hyQhLk": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "",
+            "first_button_label": "Shop now",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "underlined",
+            "override_button_colors": false,
+            "buttons_background": "#292929",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_z8UqeN",
+        "heading_jFwjmh",
+        "button_hyQhLk"
+      ],
+      "settings": {
+        "height_desktop": "original",
+        "text_position_desktop": "right",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 30,
+        "height_mobile": "100vh",
+        "text_position_mobile": "top_center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#292929",
+        "caption_bg_color": "#faf6d8",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "featured_product_LLfD3F": {
+      "type": "featured-product",
+      "settings": {
+        "title": "Give the gift of good times",
+        "description": "",
+        "section_header_alignment": "center",
+        "image-placement": "left",
+        "image_size": "medium",
+        "image_shape": "original",
+        "show_only_variant_media": false,
+        "image-display": "thumbnails",
+        "thumbnail_position": "below",
+        "image_display_mobile": "slider",
+        "enable_video_loop": false,
+        "enable_autoplay": false,
+        "show_video_controls": false,
+        "title_font": "h2",
+        "price_font": "h2",
+        "variant_style": "swatches",
+        "hide_out_of_stock_variants": false,
+        "show-giftwrap": false,
+        "show-vendor": false,
+        "show_product_description": true,
+        "show_quantity_selector": true,
+        "show_add_to_cart": true,
+        "show_smart_checkout": true,
+        "size_guide_label": "Size guide",
+        "size_guide_page": "",
+        "size_option_name": "Size",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "color_scheme": "white",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_j7UnFK",
+    "featured_product_LLfD3F"
+  ]
+}

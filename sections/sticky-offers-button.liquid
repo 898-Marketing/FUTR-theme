@@ -1,0 +1,94 @@
+{{ 'sticky-offers-button-section.min.css' | asset_url | stylesheet_tag }}
+
+<div
+  data-wetheme-section-type="sticky-offers-button"
+  data-wetheme-section-id="{{ section.id }}"
+>
+  <safe-load-scripts class="hidden">
+    <script src="{{ 'offers-drawer-button-component.js' | asset_url }}" type="module" defer="defer" data-flow-load-key="component-offers-drawer-button"></script>
+  </safe-load-scripts>
+
+  {% if section.settings.show_offers_drawer_button or section.settings.show_social_icons %}
+    <div class="sticky-offers-button{% if section.settings.hide_on_mobile %} sticky-offers-button--hide-on-mobile{% endif %}{% if settings.button_style == 'circle' %} sticky-offers-button--circle{% endif %}" style="background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};">
+      {% if section.settings.show_offers_drawer_button and section.settings.offers_drawer_button_label != blank %}
+        <offers-drawer-button>
+          <button
+            type="button"
+            data-offers-drawer-trigger
+            class="sticky-offers-button__offers-drawer-button"
+          >
+            {{ section.settings.offers_drawer_button_label }}
+          </button>
+        </offers-drawer-button>
+      {% endif %}
+      {% if section.settings.show_social_icons %}
+        <div class="sticky-offers-button__social-icons">
+          {% render 'social-icons', icon_wrapper_classes: 'icon-no-padding' %}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.sticky-offers-button.name",
+  "class": "section--sticky-offers-button",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.sticky-offers-button.settings.Offers_drawer_button"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.sticky-offers-button.settings.Offers_drawer_button_info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_offers_drawer_button",
+      "label": "t:sections.sticky-offers-button.settings.show_offers_drawer_button",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "offers_drawer_button_label",
+      "label": "t:all.Button_label",
+      "default": "Get 10% off",
+      "visible_if": "{{ section.settings.show_offers_drawer_button }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "t:sections.sticky-offers-button.settings.hide_on_mobile",
+      "default": false,
+      "visible_if": "{{ section.settings.show_offers_drawer_button }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.sticky-offers-button.settings.Social_media"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_icons",
+      "label": "t:sections.sticky-offers-button.settings.show_social_icons",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:all.Color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:all.Background_color",
+      "default": "#2E2E2E"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:all.Text_color",
+      "default": "#ffffff"
+    }
+  ]
+}
+{% endschema %}

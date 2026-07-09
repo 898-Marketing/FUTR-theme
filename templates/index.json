@@ -1,0 +1,935 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hqJamF": {
+      "type": "slideshow",
+      "blocks": {
+        "image_949qRb": {
+          "type": "image",
+          "settings": {
+            "title": "Powering Peak Performance",
+            "text": "",
+            "first_button_link": "/",
+            "first_button_label": "Show me everything!",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "button-background": "#99df90",
+            "button-text": "#ffffff",
+            "image": "shopify://shop_images/AdobeStock_375679514.jpg",
+            "text_position": "center_left",
+            "desktop-caption-heading-size": 60,
+            "desktop-caption-body-text-size": 24,
+            "mobile_text_position": "center_left",
+            "mobile-caption-heading-size": 36,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#242424",
+            "image_overlay_opacity": 35
+          }
+        },
+        "image_epUztE": {
+          "type": "image",
+          "settings": {
+            "title": "Powering Peak Performance",
+            "text": "",
+            "first_button_link": "/",
+            "first_button_label": "Show me everything!",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "button-background": "#99df90",
+            "button-text": "#ffffff",
+            "image": "shopify://shop_images/soccer.jpg",
+            "text_position": "center_left",
+            "desktop-caption-heading-size": 60,
+            "desktop-caption-body-text-size": 24,
+            "mobile_text_position": "center_left",
+            "mobile-caption-heading-size": 36,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#242424",
+            "image_overlay_opacity": 35
+          }
+        },
+        "image_kKCYPY": {
+          "type": "image",
+          "settings": {
+            "title": "Powering Peak Performance",
+            "text": "",
+            "first_button_link": "/",
+            "first_button_label": "Show me everything!",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "button-background": "#99df90",
+            "button-text": "#ffffff",
+            "image": "shopify://shop_images/shutterstock_716402275.jpg",
+            "text_position": "center_left",
+            "desktop-caption-heading-size": 60,
+            "desktop-caption-body-text-size": 24,
+            "mobile_text_position": "center_left",
+            "mobile-caption-heading-size": 36,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#242424",
+            "image_overlay_opacity": 35
+          }
+        }
+      },
+      "block_order": [
+        "image_949qRb",
+        "image_epUztE",
+        "image_kKCYPY"
+      ],
+      "settings": {
+        "desktop_height": "large",
+        "mobile_height": "large",
+        "slide_navigation_style": "none",
+        "slide_transition_delay": 5,
+        "section_width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "background_color": "#000000"
+      }
+    },
+    "animated_counter_BtXJA6": {
+      "type": "animated-counter",
+      "blocks": {
+        "number_n73PUN": {
+          "type": "number",
+          "settings": {
+            "icon": "star",
+            "number": "2,500+",
+            "label": "<p>5 star reviews</p>"
+          }
+        },
+        "number_xiDUrL": {
+          "type": "number",
+          "settings": {
+            "icon": "trophy",
+            "number": "9",
+            "label": "<p>Industry awards</p>"
+          }
+        },
+        "number_WY6PAa": {
+          "type": "number",
+          "settings": {
+            "icon": "globe",
+            "number": "99.5%",
+            "label": "<p>Recycled packaging</p>"
+          }
+        }
+      },
+      "block_order": [
+        "number_n73PUN",
+        "number_xiDUrL",
+        "number_WY6PAa"
+      ],
+      "name": "t:sections.animated-counter.name",
+      "settings": {
+        "title": "Future legends aren’t built in a moment.",
+        "description": "<p>They’re built in the early mornings, the extra innings, the tough losses, the big<br/>wins, and the practice nobody sees. </p><p>FUTR fuels the work behind the athlete with a complete system built for every<br/>phase of play. Every formula is tailored specifically to youth athletes —<br/>because the future isn’t waiting. It’s being shaped every time they show up.</p>",
+        "section_header_alignment": "center",
+        "animation_style": "slow",
+        "number_size_desktop": 64,
+        "number_size_mobile": 50,
+        "text_alignment": "center",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "accent"
+      }
+    },
+    "collection_list_GTB4rd": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Gckmwk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pregame",
+            "collection_img": "shopify://shop_images/pregame-collection.jpg",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_opacity": 60,
+            "overlay_font_color": "#ffffff"
+          }
+        },
+        "featured_collection_VbDbLj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gametime",
+            "collection_img": "shopify://shop_images/gametime-collection.jpg",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_opacity": 60,
+            "overlay_font_color": "#ffffff"
+          }
+        },
+        "featured_collection_a7tQhV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "recover",
+            "collection_img": "shopify://shop_images/recover-collection.jpg",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_opacity": 60,
+            "overlay_font_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Gckmwk",
+        "featured_collection_VbDbLj",
+        "featured_collection_a7tQhV"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_header_alignment": "center",
+        "items-per-row": 3,
+        "content-position": "below-image",
+        "image_shape": "natural",
+        "buttons_style": "filled",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "section-width": "content",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "remove-spacing": false,
+        "colors": "light"
+      }
+    },
+    "scrolling_banner_rthg3B": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "image_Qxqp3R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/recover-watermelon.png",
+            "height_desktop": 148,
+            "height_mobile": 100,
+            "link": ""
+          }
+        },
+        "image_gbfwdt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/recover-lemonade.png",
+            "height_desktop": 148,
+            "height_mobile": 100,
+            "link": ""
+          }
+        },
+        "image_h8696H": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gametime-tropical-punch-sticks.png",
+            "height_desktop": 148,
+            "height_mobile": 100,
+            "link": ""
+          }
+        },
+        "image_qHrgGD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pregame-fruit-punch-tub.png",
+            "height_desktop": 148,
+            "height_mobile": 100,
+            "link": ""
+          }
+        },
+        "image_et6Xre": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pregame-blue-razz-sticks.png",
+            "height_desktop": 148,
+            "height_mobile": 100,
+            "link": ""
+          }
+        },
+        "image_pHcazf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gametime-tropical-punch-tub.png",
+            "height_desktop": 148,
+            "height_mobile": 100,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Qxqp3R",
+        "image_gbfwdt",
+        "image_h8696H",
+        "image_qHrgGD",
+        "image_et6Xre",
+        "image_pHcazf"
+      ],
+      "settings": {
+        "title": "FUN. FRESH. FIZZY.",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_fade": false,
+        "borders": false,
+        "animation_direction": "normal",
+        "animation_speed": 60,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "space_between_blocks_desktop": 25,
+        "space_between_blocks_mobile": 0,
+        "rotate": "-5",
+        "override_border_radius": false,
+        "color_scheme": "light"
+      }
+    },
+    "featured_collection_RbHECB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_header_alignment": "center",
+        "collection": "all-products-homepage",
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false,
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "show_view_all": false,
+        "button_position": "below_products",
+        "button_alignment": "center",
+        "buttons_style": "filled",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "layout_style": "slider",
+        "products_to_show": 30,
+        "grid-desktop": 3,
+        "grid-mobile": "2",
+        "colors": "light"
+      }
+    },
+    "image_with_text_overlay_VDUzhn": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "text_CY7PA8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CAN'T DECIDE A FLAVOUR?</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 5
+          }
+        },
+        "heading_xbU9A3": {
+          "type": "heading",
+          "settings": {
+            "title": "TRY OUR TASTER PACK",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 15
+          }
+        },
+        "button_wBEeGV": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "/",
+            "first_button_label": "Why not!",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "buttons_background": "#e68819",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_CY7PA8",
+        "heading_xbU9A3",
+        "button_wBEeGV"
+      ],
+      "settings": {
+        "height_desktop": "original",
+        "text_position_desktop": "right",
+        "text_alignment_desktop": "left",
+        "caption_width_desktop": 63,
+        "height_mobile": "500px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#242424",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "rich_text_Fzgr6p": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_nCKRbM": {
+          "type": "richtext",
+          "settings": {
+            "text": "<h6>WE'RE HERE TO BRIGHTEN UP YOUR LIFE</h6>",
+            "text_size": 14,
+            "text_bottom_spacing": 10
+          }
+        },
+        "heading_bJC34d": {
+          "type": "heading",
+          "settings": {
+            "heading": "ONE SIP AT A TIME",
+            "heading--text-size": 30,
+            "heading_bottom_spacing": 20
+          }
+        },
+        "richtext_JJN7KX": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>This is the hard seltzer with good times guaranteed.⁠ ⁠ Blending sparkling spring water with an alcoholic twist, we're always best served with friends. We're for kicking back and letting loose. For setting vibes to chill to. Taste life, a little lighter. ⁠ ⁠ </p><p>Drink Social. Drink Gerry's.</p>",
+            "text_size": 14,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "richtext_nCKRbM",
+        "heading_bJC34d",
+        "richtext_JJN7KX"
+      ],
+      "settings": {
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
+        "text_alignment_mobile": "center",
+        "section_padding_top": 60,
+        "section_padding_bottom": 30,
+        "colors": "white"
+      }
+    },
+    "template_product_info_columns_DeaBpp": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "text_bqXNe4": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "text": "<p><strong>10 cans delivered every month!</strong></p><p>$22.49</p>",
+            "button_link": "/",
+            "button_text": "Starter Pack Subscription"
+          }
+        },
+        "text_Ref9B8": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "text": "<p><strong>20 cans delivered every month!</strong></p><p>$42.49</p>",
+            "button_link": "/",
+            "button_text": "Good Times Subscription"
+          }
+        },
+        "text_q9JGM8": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "text": "<p><strong>30 cans delivered every month!</strong></p><p>$59.99</p>",
+            "button_link": "/",
+            "button_text": "Cans Not Plans Subscription"
+          }
+        },
+        "text_YkepEg": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "text": "<p><strong>40 cans delivered every month!</strong></p><p>$79.99</p>",
+            "button_link": "/",
+            "button_text": "Drink Social Subscription"
+          }
+        }
+      },
+      "block_order": [
+        "text_bqXNe4",
+        "text_Ref9B8",
+        "text_q9JGM8",
+        "text_YkepEg"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_header_alignment": "center",
+        "maximum_width": 500,
+        "override_border_radius": false,
+        "buttons_style": "underlined",
+        "override_button_colors": true,
+        "button_background_color": "#d61f87",
+        "button_text_color": "#ffffff",
+        "hover_navigation_desktop": "left-and-right",
+        "columns_per_row": 4,
+        "vertical_alignment": "center",
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "slider_height_mobile": "adaptive",
+        "section_width": "content",
+        "section_padding_top": 0,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "image_with_text_overlay_qmXaFa": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_UiRkcP": {
+          "type": "heading",
+          "settings": {
+            "title": "Cans delivered straight to your door",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "image_9rJhCH": {
+          "type": "image",
+          "settings": {
+            "image_link": "",
+            "image_bottom_spacing": 5
+          }
+        },
+        "image_dzDgk7": {
+          "type": "image",
+          "settings": {
+            "image_link": "",
+            "image_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_UiRkcP",
+        "image_9rJhCH",
+        "image_dzDgk7"
+      ],
+      "settings": {
+        "height_desktop": "550px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 35,
+        "height_mobile": "400px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#292929",
+        "caption_bg_color": "#ffffff",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "blog_posts_qiEbXw": {
+      "type": "blog-posts",
+      "blocks": {
+        "blog_ePEF7g": {
+          "type": "blog",
+          "settings": {
+            "blog": ""
+          }
+        }
+      },
+      "block_order": [
+        "blog_ePEF7g"
+      ],
+      "settings": {
+        "title": "From the blog",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_image": true,
+        "image_shape": "natural",
+        "post_limit": 3,
+        "show_tags": false,
+        "blog_show_date": true,
+        "show_author": false,
+        "show_reading_time": true,
+        "show_comment_count": false,
+        "show_excerpt": true,
+        "show_read_more": true,
+        "heading_font": "heading",
+        "heading_font_size": 28,
+        "alignment": "left",
+        "buttons_style": "underlined",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "layout_style_desktop": "slider",
+        "hover_navigation_desktop": "left-and-right",
+        "peek_desktop": true,
+        "images_per_row_desktop": 3,
+        "layout_style_mobile": "slider",
+        "navigation_mobile": "dots",
+        "section_width": "content",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "image_with_text_overlay_3tx9wj": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "text_cTzGij": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>We've got the perfect drink for a summer's day</h4>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 10
+          }
+        },
+        "button_mMfyM3": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "",
+            "first_button_label": "Pssst! It's this one",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "underlined",
+            "override_button_colors": true,
+            "buttons_background": "#ffffff",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "text_cTzGij",
+        "button_mMfyM3"
+      ],
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "right",
+        "text_alignment_desktop": "right",
+        "caption_width_desktop": 57,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "featured_product_rhTQfC": {
+      "type": "featured-product",
+      "settings": {
+        "title": "Give the gift of good times",
+        "description": "",
+        "section_header_alignment": "center",
+        "featured_product": "gift",
+        "image-placement": "left",
+        "image_size": "medium",
+        "image_shape": "original",
+        "show_only_variant_media": false,
+        "image-display": "paginated",
+        "thumbnail_position": "below",
+        "image_display_mobile": "slider",
+        "enable_video_loop": false,
+        "enable_autoplay": false,
+        "show_video_controls": false,
+        "title_font": "h2",
+        "price_font": "h2",
+        "variant_style": "swatches",
+        "hide_out_of_stock_variants": false,
+        "show-giftwrap": false,
+        "show-vendor": false,
+        "show_product_description": true,
+        "show_quantity_selector": true,
+        "show_add_to_cart": true,
+        "show_smart_checkout": true,
+        "size_guide_label": "Size guide",
+        "size_guide_page": "",
+        "size_option_name": "Size",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "color_scheme": "white",
+        "product_form_bg_override": false,
+        "product_form_bg": "#e4ebf1",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "image_with_text_overlay_LN7YT6": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "text_LjJpGV": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Join the</h5>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "heading_JxPnX8": {
+          "type": "heading",
+          "settings": {
+            "title": "Pastel revolution",
+            "font_size_desktop": 40,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_FPBP8i": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’re looking for movers, shakers and moment-makers of every kind to kick it as one of our reps. If you’re up for good times, free  merch, first-taste exclusives, event guestlists,           unique referral codes and of COURSE… a good flow of Sweet, hit us up.</p><p></p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_TXC6Jn": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "/",
+            "first_button_label": "CONTACT US",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "underlined",
+            "override_button_colors": true,
+            "buttons_background": "#ffffff",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_LjJpGV",
+        "heading_JxPnX8",
+        "text_FPBP8i",
+        "button_TXC6Jn"
+      ],
+      "settings": {
+        "height_desktop": "550px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "400px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "newsletter_cQa4NW": {
+      "type": "newsletter",
+      "settings": {
+        "newsletter_heading": "",
+        "newsletter_description": "<h5>Need more fizz in your life?</h5><p></p><p></p><h1>SIGN UP HERE!</h1>",
+        "textAlignment": "left",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "text_adverts_wQDaFF": {
+      "type": "text-adverts",
+      "blocks": {
+        "text_WJbcc9": {
+          "type": "text",
+          "settings": {
+            "heading": "super fast delivery",
+            "subheading": "Available nationwide",
+            "link": ""
+          }
+        },
+        "text_VFBGjr": {
+          "type": "text",
+          "settings": {
+            "heading": "friendly customer team",
+            "subheading": "On hand to answer any queries",
+            "link": ""
+          }
+        },
+        "text_43VkxC": {
+          "type": "text",
+          "settings": {
+            "heading": "exclusive discounts",
+            "subheading": "When you sign up to our newsletter",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_WJbcc9",
+        "text_VFBGjr",
+        "text_43VkxC"
+      ],
+      "settings": {
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "colors": "light"
+      }
+    },
+    "quiz_nJMaMQ": {
+      "type": "quiz",
+      "blocks": {
+        "question_kE8P4h": {
+          "type": "question",
+          "settings": {
+            "question": "How would you describe your personal style?",
+            "option_1": "Minimal and modern",
+            "collection_1": "",
+            "product_list_1": [],
+            "tag_1": "",
+            "option_2": "Bold and expressive",
+            "collection_2": "",
+            "product_list_2": [],
+            "tag_2": "",
+            "option_3": "Classic and timeless",
+            "collection_3": "",
+            "product_list_3": [],
+            "tag_3": "",
+            "option_4": "Casual and relaxed",
+            "collection_4": "",
+            "product_list_4": [],
+            "tag_4": ""
+          }
+        },
+        "question_wmLWT6": {
+          "type": "question",
+          "settings": {
+            "question": "What do you usually look for when shopping?",
+            "option_1": "Everyday essentials",
+            "collection_1": "",
+            "product_list_1": [],
+            "tag_1": "",
+            "option_2": "Standout statement pieces",
+            "collection_2": "",
+            "product_list_2": [],
+            "tag_2": "",
+            "option_3": "Seasonal trends",
+            "collection_3": "",
+            "product_list_3": [],
+            "tag_3": "",
+            "option_4": "Comfortable must-haves",
+            "collection_4": "",
+            "product_list_4": [],
+            "tag_4": ""
+          }
+        },
+        "question_dewX3e": {
+          "type": "question",
+          "settings": {
+            "question": "Which color palette speaks to you most?",
+            "option_1": "Neutrals",
+            "collection_1": "",
+            "product_list_1": [],
+            "tag_1": "",
+            "option_2": "Earth tones",
+            "collection_2": "",
+            "product_list_2": [],
+            "tag_2": "",
+            "option_3": "Bold and bright",
+            "collection_3": "",
+            "product_list_3": [],
+            "tag_3": "",
+            "option_4": "Soft and pastel",
+            "collection_4": "",
+            "product_list_4": [],
+            "tag_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "question_kE8P4h",
+        "question_wmLWT6",
+        "question_dewX3e"
+      ],
+      "name": "t:sections.quiz.name",
+      "settings": {
+        "options_style": "text",
+        "image_aspect_ratio": "square",
+        "questions_text_color": "#242424",
+        "results_heading": "We think you'll love...",
+        "products_to_show": 3,
+        "button_label": "Discover more styles",
+        "button_link": "",
+        "heading": "Need inspiration?",
+        "text": "<p>Take the quiz to find styles we think you'll love.</p>",
+        "start_button_label": "Start",
+        "intro_text_color": "#242424",
+        "height_desktop": "450px",
+        "content_position_desktop": "center",
+        "height_mobile": "300px",
+        "content_position_mobile": "center",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "background_color": "#fff",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "slideshow_hqJamF",
+    "animated_counter_BtXJA6",
+    "collection_list_GTB4rd",
+    "scrolling_banner_rthg3B",
+    "featured_collection_RbHECB",
+    "image_with_text_overlay_VDUzhn",
+    "rich_text_Fzgr6p",
+    "template_product_info_columns_DeaBpp",
+    "image_with_text_overlay_qmXaFa",
+    "blog_posts_qiEbXw",
+    "image_with_text_overlay_3tx9wj",
+    "featured_product_rhTQfC",
+    "image_with_text_overlay_LN7YT6",
+    "newsletter_cQa4NW",
+    "text_adverts_wQDaFF",
+    "quiz_nJMaMQ"
+  ]
+}

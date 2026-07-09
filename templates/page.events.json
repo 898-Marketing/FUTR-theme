@@ -1,0 +1,409 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_aWMKRE": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_n9WraQ": {
+          "type": "heading",
+          "settings": {
+            "title": "Image with text overlay",
+            "font_size_desktop": 32,
+            "font_size_mobile": 32,
+            "heading_bottom_spacing": 10
+          }
+        },
+        "text_7r7LcV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_n9WraQ",
+        "text_7r7LcV"
+      ],
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 100,
+        "height_mobile": "250px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "1647348352214a3e9b": {
+      "type": "rich-text",
+      "blocks": {
+        "1e6f01b7-7fdd-491f-b245-e675baab55bb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rich text",
+            "heading--text-size": 30,
+            "heading_bottom_spacing": 20
+          }
+        },
+        "500b6487-80ec-4183-ae41-6e173a203c11": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Use this text block to show store announcements, advertise products and collections, or simply welcome visitors to your store.</p>",
+            "text_size": 14,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "1e6f01b7-7fdd-491f-b245-e675baab55bb",
+        "500b6487-80ec-4183-ae41-6e173a203c11"
+      ],
+      "settings": {
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
+        "text_alignment_mobile": "left",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "light"
+      }
+    },
+    "e1f3e31d-d803-42ad-942c-394f140ce563": {
+      "type": "events-calendar",
+      "blocks": {
+        "template--16436158759077__e1f3e31d-d803-42ad-942c-394f140ce563-event-1": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "day": 10,
+            "month": "Jan",
+            "tbc": false,
+            "day_time": "Saturday, 7:30pm",
+            "price": "20",
+            "event_heading": "Event heading",
+            "event_location": "Location",
+            "url": "",
+            "btn_text": ""
+          }
+        },
+        "8431aa95-e3df-48b1-b63b-a3c2e60f99f7": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "day": 15,
+            "month": "Feb",
+            "tbc": false,
+            "day_time": "Saturday, 7:30pm",
+            "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
+            "url": "",
+            "btn_text": ""
+          }
+        },
+        "ddc09979-3e88-4b80-b8d2-4990eb858e90": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "day": 12,
+            "month": "Apr",
+            "tbc": false,
+            "day_time": "Saturday, 7:30pm",
+            "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
+            "url": "",
+            "btn_text": ""
+          }
+        },
+        "ee730edf-caf8-44c1-a97f-8d4e356edc4f": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "day": 20,
+            "month": "May",
+            "tbc": false,
+            "day_time": "Saturday, 7:30pm",
+            "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
+            "url": "",
+            "btn_text": ""
+          }
+        },
+        "aec7f5fe-dc1d-4b0c-a943-b1ed05862932": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "day": 2,
+            "month": "Jun",
+            "tbc": false,
+            "day_time": "Saturday, 7:30pm",
+            "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
+            "url": "",
+            "btn_text": ""
+          }
+        },
+        "83da0994-9760-486e-9b86-c38329fb7ba2": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "day": 18,
+            "month": "Jul",
+            "tbc": false,
+            "day_time": "Saturday, 7:30pm",
+            "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
+            "url": "",
+            "btn_text": ""
+          }
+        },
+        "87dc3a0c-2cc2-4677-a8a7-ac064c0c5c7d": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "day": 20,
+            "month": "Sep",
+            "tbc": false,
+            "day_time": "Saturday, 7:30pm",
+            "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
+            "url": "",
+            "btn_text": ""
+          }
+        },
+        "cf9b7e9c-e433-4347-b138-2cba42ca0d36": {
+          "type": "event",
+          "settings": {
+            "grid_image_size": "square",
+            "day": 7,
+            "month": "Sep",
+            "tbc": false,
+            "day_time": "Saturday, 7:30pm",
+            "price": "",
+            "event_heading": "Event heading",
+            "event_location": "Location",
+            "url": "",
+            "btn_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16436158759077__e1f3e31d-d803-42ad-942c-394f140ce563-event-1",
+        "8431aa95-e3df-48b1-b63b-a3c2e60f99f7",
+        "ddc09979-3e88-4b80-b8d2-4990eb858e90",
+        "ee730edf-caf8-44c1-a97f-8d4e356edc4f",
+        "aec7f5fe-dc1d-4b0c-a943-b1ed05862932",
+        "83da0994-9760-486e-9b86-c38329fb7ba2",
+        "87dc3a0c-2cc2-4677-a8a7-ac064c0c5c7d",
+        "cf9b7e9c-e433-4347-b138-2cba42ca0d36"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_header_alignment": "center",
+        "layout": "grid",
+        "cards_per_row": 4,
+        "expand_card": false,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "buttons_style": "filled",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "colors": "white"
+      }
+    },
+    "6c58d946-d9b9-4b20-8744-6848874cbdd0": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "template--14795085709382__6c58d946-d9b9-4b20-8744-6848874cbdd0-1686927686819342c0-0": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "template--14795085709382__6c58d946-d9b9-4b20-8744-6848874cbdd0-1686927686819342c0-1": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "9b4fe509-622e-4579-91e0-b56b67f264bf": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "0b7817fa-c670-4ba6-98df-5098e9a56558": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "natural",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14795085709382__6c58d946-d9b9-4b20-8744-6848874cbdd0-1686927686819342c0-0",
+        "template--14795085709382__6c58d946-d9b9-4b20-8744-6848874cbdd0-1686927686819342c0-1",
+        "9b4fe509-622e-4579-91e0-b56b67f264bf",
+        "0b7817fa-c670-4ba6-98df-5098e9a56558"
+      ],
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_header_alignment": "center",
+        "maximum_width": 500,
+        "override_border_radius": false,
+        "buttons_style": "underlined",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "hover_navigation_desktop": "left-and-right",
+        "columns_per_row": 4,
+        "vertical_alignment": "top",
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "slider_height_mobile": "adaptive",
+        "section_width": "full",
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "colors": "accent"
+      }
+    },
+    "0f336889-d705-4af2-88c7-ac986a314097": {
+      "type": "video-hero",
+      "blocks": {
+        "heading_PE4eyM": {
+          "type": "heading",
+          "settings": {
+            "title": "Video hero",
+            "heading--text-size": 50,
+            "heading_bottom_spacing": 15
+          }
+        },
+        "button_Q9pi9D": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "button-background": "#e68819",
+            "button-text": "#ffffff",
+            "button_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_PE4eyM",
+        "button_Q9pi9D"
+      ],
+      "settings": {
+        "url": "",
+        "video_alt_text": "",
+        "desktopHeight": "450",
+        "mobileHeight": "250",
+        "textAlignment": "center",
+        "link": "",
+        "textShadow": true,
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "textColor": "#ffffff"
+      }
+    },
+    "rich_text_GUdEpq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kmR4Lj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rich text",
+            "heading--text-size": 30,
+            "heading_bottom_spacing": 20
+          }
+        },
+        "richtext_9DE6BV": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Use this text block to show store announcements, advertise products and collections, or simply welcome visitors to your store.</p>",
+            "text_size": 14,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_Vpc8Jn": {
+          "type": "button",
+          "settings": {
+            "button_link": "",
+            "button_text": "Button",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_text_color": "#ffffff",
+            "button_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_kmR4Lj",
+        "richtext_9DE6BV",
+        "button_Vpc8Jn"
+      ],
+      "settings": {
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
+        "text_alignment_mobile": "center",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "light"
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_aWMKRE",
+    "1647348352214a3e9b",
+    "e1f3e31d-d803-42ad-942c-394f140ce563",
+    "6c58d946-d9b9-4b20-8744-6848874cbdd0",
+    "0f336889-d705-4af2-88c7-ac986a314097",
+    "rich_text_GUdEpq"
+  ]
+}

@@ -336,7 +336,7 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "caption_bg_color": "#0000008c",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }
@@ -497,7 +497,7 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "caption_bg_color": "#0000008c",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }
@@ -593,7 +593,7 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "caption_bg_color": "#0000008c",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }
@@ -703,7 +703,7 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "caption_bg_color": "#0000008c",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }

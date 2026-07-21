@@ -14,7 +14,6 @@
   {{ 'photoswipe.min.css' | asset_url | stylesheet_tag: preload: true }}
   {{ 'theme.min.css' | asset_url | stylesheet_tag: preload: true }}
   {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
-  {{ 'futr-brand.css' | asset_url | stylesheet_tag: preload: true }}
 
   <!-- FUTR brand type (self-hosted Saira) -->
   <link rel="preload" as="font" href="{{ 'saira-var.woff2' | asset_url }}" type="font/woff2" crossorigin>
@@ -74,6 +73,7 @@
 
   <!-- CSS ================================================== -->
   {% render 'css-variables' %}
+  {{ 'futr-brand.css' | asset_url | stylesheet_tag: preload: true }}
   {% style %}
     *,
     *::before,

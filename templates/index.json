@@ -278,7 +278,7 @@
         "products_to_show": 30,
         "grid-desktop": 3,
         "grid-mobile": "2",
-        "colors": "light"
+        "colors": "dark"
       }
     },
     "image_with_text_overlay_VDUzhn": {
@@ -630,7 +630,7 @@
         "size_option_name": "Size",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "color_scheme": "white",
+        "color_scheme": "dark",
         "product_form_bg_override": false,
         "product_form_bg": "#e4ebf1",
         "override_button_colors": false,

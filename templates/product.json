@@ -73,7 +73,7 @@
             "enable_gift_card_recipient_form": true,
             "margin_bottom": 40,
             "override_button_colors": false,
-            "button_background_color": "#e68819",
+            "button_background_color": "#1f88d2",
             "button_text_color": "#ffffff"
           }
         },
@@ -227,10 +227,10 @@
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
-        "text_color": "#292929",
-        "caption_bg_color": "#ffffff",
-        "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
       }
     },
     "featured_collection_gi6QWq": {
@@ -240,7 +240,7 @@
         "description": "<h5>Can't decide?</h5><h5></h5><h1>MIX AND MATCH!</h1>",
         "collection": "",
         "override_button_colors": false,
-        "button_background_color": "#e68819",
+        "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff",
         "show_view_all": false,
         "buttons_style": "filled",

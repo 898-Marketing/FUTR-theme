@@ -23,7 +23,7 @@
             "second_button_label": "",
             "buttons_style": "filled",
             "override_button_colors": true,
-            "button-background": "#99df90",
+            "button-background": "#1f88d2",
             "button-text": "#ffffff",
             "image": "shopify://shop_images/gametime-collection.jpg",
             "text_position": "center_left",
@@ -33,7 +33,7 @@
             "mobile-caption-heading-size": 36,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
-            "image_overlay": "#242424",
+            "image_overlay": "#000000",
             "image_overlay_opacity": 35
           }
         }
@@ -156,7 +156,7 @@
         "image_shape": "natural",
         "buttons_style": "filled",
         "override_button_colors": false,
-        "button_background_color": "#e68819",
+        "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff",
         "section-width": "content",
         "section_padding_top": 60,
@@ -266,7 +266,7 @@
         "highlight_collapsible_tab": true,
         "highlight_button_borders": false,
         "override_button_colors": false,
-        "button_background_color": "#e68819",
+        "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff",
         "show_view_all": false,
         "button_position": "below_products",
@@ -335,10 +335,10 @@
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
-        "text_color": "#242424",
-        "caption_bg_color": "rgba(0,0,0,0)",
-        "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
       }
     },
     "rich_text_Fzgr6p": {
@@ -435,9 +435,9 @@
         "section_header_alignment": "center",
         "maximum_width": 500,
         "override_border_radius": false,
-        "buttons_style": "underlined",
+        "buttons_style": "filled",
         "override_button_colors": true,
-        "button_background_color": "#d61f87",
+        "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff",
         "hover_navigation_desktop": "left-and-right",
         "columns_per_row": 4,
@@ -496,10 +496,10 @@
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
-        "text_color": "#292929",
-        "caption_bg_color": "#ffffff",
-        "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
       }
     },
     "blog_posts_qiEbXw": {
@@ -534,7 +534,7 @@
         "alignment": "left",
         "buttons_style": "underlined",
         "override_button_colors": false,
-        "button_background_color": "#e68819",
+        "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff",
         "layout_style_desktop": "slider",
         "hover_navigation_desktop": "left-and-right",
@@ -593,9 +593,9 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0)",
-        "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
       }
     },
     "featured_product_rhTQfC": {
@@ -634,7 +634,7 @@
         "product_form_bg_override": false,
         "product_form_bg": "#e4ebf1",
         "override_button_colors": false,
-        "button_background_color": "#e68819",
+        "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff"
       }
     },
@@ -703,9 +703,9 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0)",
-        "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
       }
     },
     "newsletter_cQa4NW": {
@@ -837,7 +837,7 @@
       "settings": {
         "options_style": "text",
         "image_aspect_ratio": "square",
-        "questions_text_color": "#242424",
+        "questions_text_color": "#ffffff",
         "results_heading": "We think you'll love...",
         "products_to_show": 3,
         "button_label": "Discover more styles",
@@ -845,7 +845,7 @@
         "heading": "Need inspiration?",
         "text": "<p>Take the quiz to find styles we think you'll love.</p>",
         "start_button_label": "Start",
-        "intro_text_color": "#242424",
+        "intro_text_color": "#ffffff",
         "height_desktop": "450px",
         "content_position_desktop": "center",
         "height_mobile": "300px",
@@ -853,12 +853,12 @@
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
-        "background_color": "#fff",
+        "background_color": "#000000",
         "override_button_colors": false,
-        "button_background_color": "#e68819",
+        "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff",
-        "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
       }
     }
   },

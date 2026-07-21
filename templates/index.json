@@ -15,7 +15,7 @@
         "image_949qRb": {
           "type": "image",
           "settings": {
-            "title": "THE FUTR\nIS NOW.",
+            "title": "THE <span style=\"color: #1F88D2;\">FUTR</span>\nIS NOW.",
             "text": "Future legends aren't built in a moment. They're built in the early mornings, the extra innings, the tough losses, the big wins — and the practice nobody sees.",
             "first_button_link": "/",
             "first_button_label": "Shop the system",
@@ -28,13 +28,13 @@
             "image": "shopify://shop_images/gametime-collection.jpg",
             "text_position": "center_left",
             "desktop-caption-heading-size": 112,
-            "desktop-caption-body-text-size": 24,
+            "desktop-caption-body-text-size": 20,
             "mobile_text_position": "center_left",
             "mobile-caption-heading-size": 82,
             "mobile-caption-body-text-size": 15,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 35
+            "image_overlay_opacity": 61
           }
         }
       },

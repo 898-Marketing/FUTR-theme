@@ -15,23 +15,23 @@
         "image_949qRb": {
           "type": "image",
           "settings": {
-            "title": "Powering Peak Performance",
-            "text": "",
+            "title": "THE FUTR\nIS NOW.",
+            "text": "Future legends aren't built in a moment. They're built in the early mornings, the extra innings, the tough losses, the big wins — and the practice nobody sees.",
             "first_button_link": "/",
-            "first_button_label": "Show me everything!",
+            "first_button_label": "Shop the system",
             "second_button_link": "",
-            "second_button_label": "",
+            "second_button_label": "Find your phase",
             "buttons_style": "filled",
             "override_button_colors": true,
             "button-background": "#1f88d2",
             "button-text": "#ffffff",
             "image": "shopify://shop_images/gametime-collection.jpg",
             "text_position": "center_left",
-            "desktop-caption-heading-size": 60,
+            "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
             "mobile_text_position": "center_left",
-            "mobile-caption-heading-size": 36,
-            "mobile-caption-body-text-size": 16,
+            "mobile-caption-heading-size": 82,
+            "mobile-caption-body-text-size": 15,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
             "image_overlay_opacity": 35
@@ -40,6 +40,9 @@
       },
       "block_order": [
         "image_949qRb"
+      ],
+      "custom_css": [
+        "h2 {font-style: italic !important; line-height: 1em;}"
       ],
       "settings": {
         "desktop_height": "large",

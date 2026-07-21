@@ -41,6 +41,23 @@
         "default": "#242424"
       },
       {
+        "type": "header",
+        "content": "FUTR Brand"
+      },
+      {
+        "type": "color",
+        "id": "color_brand_blue",
+        "label": "Brand blue",
+        "default": "#1f88d2",
+        "info": "Used for CTAs, dividers, and the gradient seam — never as a large background fill."
+      },
+      {
+        "type": "color",
+        "id": "color_brand_blue_light",
+        "label": "Brand blue (light / hover)",
+        "default": "#4aa3e0"
+      },
+      {
         "type": "color",
         "id": "color_body_bg_secondary",
         "label": "t:settings_schema.Colors.settings.color_body_bg_secondary.label",

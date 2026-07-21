@@ -59,7 +59,7 @@
         "footer_newsletter_description": "",
         "buttons_style": "filled",
         "override_button_colors": false,
-        "button_background_color": "#e68819",
+        "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff"
       }
     },

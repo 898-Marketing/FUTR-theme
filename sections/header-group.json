@@ -35,7 +35,7 @@
       "settings": {
         "desktop_social_icons": true,
         "autoplay_speed": 5,
-        "announcement_bg_color": "#2c7bba",
+        "announcement_bg_color": "#1f88d2",
         "announcement_text_color": "#ffffff",
         "show_currency_selector": true,
         "show_country_name": false,

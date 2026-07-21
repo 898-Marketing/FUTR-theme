@@ -25,57 +25,7 @@
             "override_button_colors": true,
             "button-background": "#99df90",
             "button-text": "#ffffff",
-            "image": "shopify://shop_images/AdobeStock_375679514.jpg",
-            "text_position": "center_left",
-            "desktop-caption-heading-size": 60,
-            "desktop-caption-body-text-size": 24,
-            "mobile_text_position": "center_left",
-            "mobile-caption-heading-size": 36,
-            "mobile-caption-body-text-size": 16,
-            "caption-text": "#ffffff",
-            "image_overlay": "#242424",
-            "image_overlay_opacity": 35
-          }
-        },
-        "image_epUztE": {
-          "type": "image",
-          "settings": {
-            "title": "Powering Peak Performance",
-            "text": "",
-            "first_button_link": "/",
-            "first_button_label": "Show me everything!",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "filled",
-            "override_button_colors": true,
-            "button-background": "#99df90",
-            "button-text": "#ffffff",
-            "image": "shopify://shop_images/soccer.jpg",
-            "text_position": "center_left",
-            "desktop-caption-heading-size": 60,
-            "desktop-caption-body-text-size": 24,
-            "mobile_text_position": "center_left",
-            "mobile-caption-heading-size": 36,
-            "mobile-caption-body-text-size": 16,
-            "caption-text": "#ffffff",
-            "image_overlay": "#242424",
-            "image_overlay_opacity": 35
-          }
-        },
-        "image_kKCYPY": {
-          "type": "image",
-          "settings": {
-            "title": "Powering Peak Performance",
-            "text": "",
-            "first_button_link": "/",
-            "first_button_label": "Show me everything!",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "filled",
-            "override_button_colors": true,
-            "button-background": "#99df90",
-            "button-text": "#ffffff",
-            "image": "shopify://shop_images/shutterstock_716402275.jpg",
+            "image": "shopify://shop_images/gametime-collection.jpg",
             "text_position": "center_left",
             "desktop-caption-heading-size": 60,
             "desktop-caption-body-text-size": 24,
@@ -89,9 +39,7 @@
         }
       },
       "block_order": [
-        "image_949qRb",
-        "image_epUztE",
-        "image_kKCYPY"
+        "image_949qRb"
       ],
       "settings": {
         "desktop_height": "large",

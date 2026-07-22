@@ -1,0 +1,174 @@
+/* ============================================================
+   FUTR brand system — ported from the client-approved
+   password/coming-soon page (sections/password-page-hero.liquid
+   on the live "Coming Soon Dark Revised" theme).
+   Tokens: --futr-blue / --futr-blue-light (settings.color_brand_blue{,_light},
+   emitted in snippets/css-variables.liquid).
+   ============================================================ */
+
+/* ---- Typography: Saira everywhere, overriding the Shopify font_picker stack ---- */
+:root {
+  --header-font-stack: 'Saira', sans-serif;
+  --body-font-stack: 'Saira', sans-serif;
+  --button-font-stack: 'Saira', sans-serif;
+  --label-font-stack: 'Saira', sans-serif;
+  --navigation-font-stack: 'Saira', sans-serif;
+}
+
+/* ---- Motif 1: skewed CTA button (Add to Cart, checkout, quick-add, forms) ---- */
+.futr-cta {
+  transform: skewX(-10deg);
+  transition: background-color .2s ease;
+}
+
+.futr-cta > span,
+.futr-cta > * {
+  display: inline-block;
+  transform: skewX(10deg);
+}
+
+/* Applied directly to the confirmed, stable primary-CTA buttons site-wide —
+   no template edits needed, and the AJAX-cart JS hooks (type/id/data attrs)
+   these buttons rely on are left untouched. */
+.product--add-to-cart-button,
+.cart--button-checkout,
+.quick-add-button {
+  transform: skewX(-10deg);
+}
+
+.product--add-to-cart-button > span,
+.cart--button-checkout > span,
+.quick-add-button .quick-add-icon-wrapper {
+  display: inline-block;
+  transform: skewX(10deg);
+}
+
+/* Product media gallery gets the dashed inset frame */
+[data-product-media-wrapper] {
+  position: relative;
+}
+
+[data-product-media-wrapper]::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px dashed rgba(255, 255, 255, .18);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ---- Motif 2: star + line divider (see snippets/futr-divider.liquid) ---- */
+.futr-divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: min(74vw, 500px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.futr-divider__line--l {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--futr-blue));
+}
+
+.futr-divider__line--r {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--futr-blue), transparent);
+}
+
+.futr-divider__star {
+  flex: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .5);
+}
+
+/* ---- Motif 3: gradient seam bar (see snippets/futr-gradient-seam.liquid) ---- */
+.futr-seam {
+  height: 5px;
+  background: linear-gradient(90deg, var(--futr-blue) 0%, var(--futr-blue-light) 50%, var(--futr-blue) 100%);
+}
+
+/* Header/footer boundary seam applied directly via pseudo-element */
+.site-header,
+.overlay-header {
+  position: relative;
+}
+
+.site-header::after,
+.overlay-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--futr-blue) 0%, var(--futr-blue-light) 50%, var(--futr-blue) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.footer-main {
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(90deg, var(--futr-blue) 0%, var(--futr-blue-light) 50%, var(--futr-blue) 100%) 1;
+}
+
+/* ---- Motif 4: dashed inner frame on hero/image sections ---- */
+.futr-frame {
+  position: relative;
+}
+
+.futr-frame::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  border: 1px dashed rgba(255, 255, 255, .18);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ---- Motif 5: photo dark-gradient overlay treatment ---- */
+.futr-photo-overlay {
+  position: relative;
+}
+
+.futr-photo-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .5) 0%, rgba(20, 21, 23, .28) 22%, rgba(20, 21, 23, .3) 52%, rgba(15, 16, 18, .7) 80%, rgba(0, 0, 0, .92) 100%);
+}
+
+/* ---- Shared entrance/attention animations ---- */
+@keyframes futrRise {
+  0% { opacity: 0; transform: translateY(26px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes futrPulse {
+  0%, 100% { opacity: .5; }
+  50% { opacity: 1; }
+}
+
+@keyframes futrSweep {
+  0% { transform: translateX(-140%) skewX(-18deg); }
+  100% { transform: translateX(340%) skewX(-18deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .futr-rise,
+  [class*="futr-"] {
+    animation: none !important;
+  }
+}

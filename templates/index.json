@@ -57,37 +57,6 @@
     },
     "animated_counter_BtXJA6": {
       "type": "animated-counter",
-      "blocks": {
-        "number_n73PUN": {
-          "type": "number",
-          "settings": {
-            "icon": "star",
-            "number": "2,500+",
-            "label": "<p>5 star reviews</p>"
-          }
-        },
-        "number_xiDUrL": {
-          "type": "number",
-          "settings": {
-            "icon": "trophy",
-            "number": "9",
-            "label": "<p>Industry awards</p>"
-          }
-        },
-        "number_WY6PAa": {
-          "type": "number",
-          "settings": {
-            "icon": "globe",
-            "number": "99.5%",
-            "label": "<p>Recycled packaging</p>"
-          }
-        }
-      },
-      "block_order": [
-        "number_n73PUN",
-        "number_xiDUrL",
-        "number_WY6PAa"
-      ],
       "name": "t:sections.animated-counter.name",
       "settings": {
         "title": "<strong>Made for Youth. Made to Work.</strong>",
@@ -98,7 +67,7 @@
         "number_size_mobile": 50,
         "text_alignment": "center",
         "section_padding_top": 60,
-        "section_padding_bottom": 60,
+        "section_padding_bottom": 20,
         "colors": "accent"
       }
     },
@@ -151,7 +120,7 @@
         "featured_collection_a7tQhV"
       ],
       "settings": {
-        "title": "",
+        "title": "Meet The System",
         "description": "",
         "section_header_alignment": "center",
         "items-per-row": 3,
@@ -235,8 +204,8 @@
         "image_pHcazf"
       ],
       "settings": {
-        "title": "FUN. FRESH. FIZZY.",
-        "description": "",
+        "title": "<strong>The FUTR System</strong>",
+        "description": "<p>Every FUTR formula was built to work together as part of a system to fuel, hydrate, recharge and support the development of athletes.</p>",
         "section_header_alignment": "center",
         "show_fade": false,
         "borders": false,

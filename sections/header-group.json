@@ -17,19 +17,26 @@
         "announcement_atDn6X": {
           "type": "announcement",
           "settings": {
-            "announcement_text": "LET'S HAVE SOME FUN!"
+            "announcement_text": "FREE SHIPPING ON ORDERS $50+"
           }
         },
         "announcement": {
           "type": "announcement",
           "settings": {
-            "announcement_text": "JOIN THE SOCIAL CLUB FOR FREE DELIVERY"
+            "announcement_text": "SPECIALLY MADE FOR YOUTH SPORTS™"
+          }
+        },
+        "announcement_hFAMWh": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "THE FUTR IS NOW"
           }
         }
       },
       "block_order": [
         "announcement_atDn6X",
-        "announcement"
+        "announcement",
+        "announcement_hFAMWh"
       ],
       "custom_css": [],
       "settings": {

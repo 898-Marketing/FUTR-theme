@@ -37,12 +37,15 @@
             "size_guide_label": "Size guide",
             "size_guide_page": "",
             "size_option_name": "Size",
+            "size_guide_override_heading_font_size": false,
+            "size_guide_heading_font_size": 24,
             "margin_bottom": 30
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
+            "show_quantity_selector": true,
             "show_smart_checkout": true,
             "enable_gift_card_recipient_form": true,
             "margin_bottom": 30,
@@ -70,16 +73,127 @@
       ],
       "settings": {
         "enable_sticky": true,
-        "media_position": "right",
+        "enable_sticky_add_to_cart": true,
+        "media_position": "left",
         "image_size": "large",
         "image_shape": "original",
+        "show_only_variant_media": false,
         "image-display": "paginated",
         "thumbnail_position": "left",
         "image_display_mobile": "paginated",
         "enable_video_loop": true,
         "enable_autoplay": false,
         "show_video_controls": false,
-        "app_margin_bottom": 20
+        "override_form_labels_size": false,
+        "labels_font_size": 20,
+        "app_margin_bottom": 20,
+        "product_form_bg_override": false,
+        "product_form_bg": "#e4ebf1"
+      }
+    },
+    "image_with_text_overlay_Q7ExmH": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_Jerb6R": {
+          "type": "heading",
+          "settings": {
+            "title": "lorem",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_cRPmfU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_Jerb6R",
+        "text_cRPmfU"
+      ],
+      "name": "t:sections.image--image-with-text-overlay.presets.name",
+      "settings": {
+        "height_desktop": "original",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "accordion_with_image_cx6zdK": {
+      "type": "accordion-with-image",
+      "blocks": {
+        "accordion_mkNgHY": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "WHY DO ATHLETES NEED PREGAME?",
+            "open_by_default": false,
+            "text": "<p>Performance starts before the game.<br/><br/>PREGAME is the stimulant-free formula built specifically for<br/>youth athletes to support energy, focus, blood flow, hydration<br/>and mental clarity before training, practice, and competition.<br/>PREGAME helps prepare athletes to stay focused, process the<br/>game faster, and react confidently when every moment matters.</p>",
+            "page": ""
+          }
+        },
+        "accordion_WEMrJC": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "WHO SHOULD TAKE PREGAME?",
+            "open_by_default": false,
+            "text": "<p>PREGAME is made for athletes who want to get the most out of<br/>every practice, workout, game, and training session. It is for the<br/>athlete who wants to show up ready. It’s for the athlete who is<br/>looking for a noticeable, clean energy and clearer focus.</p>",
+            "page": ""
+          }
+        },
+        "accordion_P9xefX": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "WHEN IS THE BEST TIME TO TAKE PREGAME?",
+            "open_by_default": false,
+            "text": "<p>Take PREGAME 15–30 minutes before practice, training, or<br/>competition.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_mkNgHY",
+        "accordion_WEMrJC",
+        "accordion_P9xefX"
+      ],
+      "name": "t:sections.product--accordion-with-image.presets.name",
+      "settings": {
+        "section_title": "",
+        "section_description": "",
+        "section_header_alignment": "center",
+        "faq_icon": "plus_minus",
+        "image_max_width": 350,
+        "title": "",
+        "text": "",
+        "link": "",
+        "button_text": "",
+        "image_position_desktop": "right",
+        "image_position_mobile": "top",
+        "section_width": "content",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "image--background-color": "rgba(0,0,0,0)",
+        "image--text-color": "#333333",
+        "button_background_color": "#242424",
+        "button_text_color": "#ffffff",
+        "colors": "light"
       }
     },
     "product-description": {
@@ -132,12 +246,23 @@
       "settings": {
         "title": "You may also like",
         "description": "",
+        "section_header_alignment": "center",
         "layout_style": "slider",
         "products_to_show": 8,
         "grid-desktop": 4,
         "grid-mobile": "2",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false,
         "colors": "light",
         "override_button_colors": false,
         "button_background_color": "#e68819",
@@ -146,15 +271,27 @@
     },
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5": {
       "type": "template--product--recently-viewed",
+      "disabled": true,
       "settings": {
         "title": "Recently viewed products",
         "description": "",
+        "section_header_alignment": "center",
         "layout_style": "slider",
         "products_to_show": 8,
         "grid-desktop": 4,
         "grid-mobile": "2",
         "section_padding_top": 0,
         "section_padding_bottom": 60,
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false,
         "colors": "light",
         "override_button_colors": false,
         "button_background_color": "#e68819",
@@ -164,6 +301,8 @@
   },
   "order": [
     "product-form",
+    "image_with_text_overlay_Q7ExmH",
+    "accordion_with_image_cx6zdK",
     "product-description",
     "product-recommendations",
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5"

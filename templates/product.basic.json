@@ -410,7 +410,7 @@
         "dosage_row_33K9K3": {
           "type": "dosage_row",
           "settings": {
-            "age_range": "8-11 YRS",
+            "age_range": "",
             "weight_lb": "50-100 LB",
             "weight_kg": "22-45 KG",
             "serving_amount": "1/2 Serving",
@@ -478,7 +478,7 @@
         "background_overlay_color": "#000000",
         "background_overlay_opacity": 55,
         "heading_prefix": "How much",
-        "heading_highlight": "Pregame",
+        "heading_highlight": "{{ product.title }}",
         "heading_subtitle": "should my athlete take?",
         "color_heading": "#ffffff",
         "color_navy": "#0e1116",
@@ -490,7 +490,7 @@
         "feature_icon_size": 54,
         "age_column_label": "Age / Weight",
         "serving_icon": "shopify://shop_images/Icons-24.png",
-        "serving_column_label": "Pregame",
+        "serving_column_label": "{{ product.title }}",
         "serving_column_sublabel": "1 scoop / stick = 1 serving",
         "water_icon": "shopify://shop_images/Icons-29.png",
         "water_column_label": "Water",
@@ -498,68 +498,69 @@
         "footer_text_accent": ""
       }
     },
-    "collection_list_RDH8QX": {
-      "type": "collection-list",
+    "template_product_info_columns_TAWPjr": {
+      "type": "template--product--info-columns",
       "blocks": {
-        "featured_collection_eprRL9": {
-          "type": "featured_collection",
+        "image_and_text_p78Ek9": {
+          "type": "image_and_text",
           "settings": {
-            "collection": "",
-            "subheading": "Subheading",
-            "overlay-btn-text": "Shop now",
-            "show-gradient-overlay": false,
-            "overlay_color": "#242424",
-            "overlay_opacity": 60,
-            "overlay_font_color": "#FFFFFF"
+            "image": "shopify://shop_images/FUTR-Icons-PRE.png",
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Clean energy sharper focus, and steady endurance for a strong start and more confident performance.</p>",
+            "button_link": "",
+            "button_text": "SHOP NOW"
           }
         },
-        "featured_collection_rMDa6e": {
-          "type": "featured_collection",
+        "image_and_text_6hMhjG": {
+          "type": "image_and_text",
           "settings": {
-            "collection": "",
-            "subheading": "Subheading",
-            "overlay-btn-text": "Shop now",
-            "show-gradient-overlay": false,
-            "overlay_color": "#242424",
-            "overlay_opacity": 60,
-            "overlay_font_color": "#FFFFFF"
+            "image": "shopify://shop_images/FUTR-Icons-INTRA.png",
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Electrolytes, fuel, and hydration support to power working muscles and sustain performance through every quarter, inning, or event.</p>",
+            "button_link": "",
+            "button_text": "SHOP NOW"
           }
         },
-        "featured_collection_wVzErQ": {
-          "type": "featured_collection",
+        "image_and_text_yJG9P3": {
+          "type": "image_and_text",
           "settings": {
-            "collection": "",
-            "subheading": "Subheading",
-            "overlay-btn-text": "Shop now",
-            "show-gradient-overlay": false,
-            "overlay_color": "#242424",
-            "overlay_opacity": 60,
-            "overlay_font_color": "#FFFFFF"
+            "image": "shopify://shop_images/FUTR-Icons-DAILY.png",
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Everyday essentials to rebuild, recharge, and support revcovery, wellness and development.</p>",
+            "button_link": "",
+            "button_text": "SHOP NOW"
           }
         }
       },
       "block_order": [
-        "featured_collection_eprRL9",
-        "featured_collection_rMDa6e",
-        "featured_collection_wVzErQ"
+        "image_and_text_p78Ek9",
+        "image_and_text_6hMhjG",
+        "image_and_text_yJG9P3"
       ],
-      "name": "t:sections.collection--collection-list.presets.name",
+      "name": "t:sections.template--product--info-columns.presets.name",
       "settings": {
-        "title": "Featured Collections",
+        "title": "THE FUTR ATHLETE SYSTEM. <span style=\" color:#8fbf30;\">BUILT FOR EVERY PHASE OF PLAY.</span>",
         "description": "",
         "section_header_alignment": "center",
-        "items-per-row": 3,
-        "content-position": "overlay",
-        "image_shape": "natural",
-        "buttons_style": "filled",
+        "maximum_width": 500,
+        "override_border_radius": false,
+        "buttons_style": "underlined",
         "override_button_colors": false,
         "button_background_color": "#E68819",
         "button_text_color": "#ffffff",
-        "section-width": "full",
+        "hover_navigation_desktop": "left-and-right",
+        "columns_per_row": 3,
+        "vertical_alignment": "top",
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "slider_height_mobile": "adaptive",
+        "section_width": "full",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "remove-spacing": false,
-        "colors": "light"
+        "colors": "white"
       }
     },
     "image_with_text_overlay_dc7Fbw": {
@@ -611,37 +612,16 @@
     "accordion_fYz9RV": {
       "type": "accordion",
       "blocks": {
-        "tab_content_Aw9c7i": {
-          "type": "tab_content",
-          "settings": {
-            "question": "Place your question or heading here",
-            "open_by_default": false,
-            "text": "<p>Here you can place an explanation or answer to the question.</p>",
-            "page": ""
-          }
-        },
-        "tab_content_4q3VfX": {
-          "type": "tab_content",
-          "settings": {
-            "question": "Place your question or heading here",
-            "open_by_default": false,
-            "text": "<p>Here you can place an explanation or answer to the question.</p>",
-            "page": ""
-          }
-        },
         "tab_content_bdLkjk": {
           "type": "tab_content",
+          "repeater": "{{ product.metafields.custom.faqs.value }}",
           "settings": {
-            "question": "Place your question or heading here",
-            "open_by_default": false,
-            "text": "<p>Here you can place an explanation or answer to the question.</p>",
-            "page": ""
+            "question": "{{ block.repeater.question.value }}",
+            "text": "{{ block.repeater.answer | metafield_tag }}"
           }
         }
       },
       "block_order": [
-        "tab_content_Aw9c7i",
-        "tab_content_4q3VfX",
         "tab_content_bdLkjk"
       ],
       "name": "t:sections.accordion.presets.name",
@@ -666,7 +646,7 @@
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
     "ingredients_grid_yzP3LB",
     "dosage_table_VQ8Jg8",
-    "collection_list_RDH8QX",
+    "template_product_info_columns_TAWPjr",
     "image_with_text_overlay_dc7Fbw",
     "accordion_fYz9RV"
   ]

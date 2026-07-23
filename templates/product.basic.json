@@ -410,7 +410,7 @@
         "dosage_row_33K9K3": {
           "type": "dosage_row",
           "settings": {
-            "age_range": "",
+            "age_range": "8-11 YRS",
             "weight_lb": "50-100 LB",
             "weight_kg": "22-45 KG",
             "serving_amount": "1/2 Serving",

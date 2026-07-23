@@ -304,7 +304,7 @@
         "ingredient_FDDxKh": {
           "type": "ingredient",
           "settings": {
-            "category": "body",
+            "category": "energy",
             "category_label": "Body",
             "name": "L-Citrulline",
             "sub": "",

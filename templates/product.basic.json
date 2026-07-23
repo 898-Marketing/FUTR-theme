@@ -304,14 +304,14 @@
         "ingredient_FDDxKh": {
           "type": "ingredient",
           "settings": {
-            "category": "energy",
-            "category_label": "Body",
-            "name": "L-Citrulline",
+            "category": "body",
+            "category_label": "{{ product.metafields.custom.ingredients.value.category | metafield_text }}",
+            "name": "{{ product.metafields.custom.ingredients.value.name.value }}",
             "sub": "",
-            "dose": "2000",
-            "unit": "mg",
-            "description": "An amino acid naturally found in foods like watermelon.",
-            "why_it_helps": "Helps support healthy blood flow, stamina, and endurance during activity."
+            "dose": "{{ product.metafields.custom.ingredients.value.dose.value }}",
+            "unit": "{{ product.metafields.custom.ingredients.value.unit.value }}",
+            "description": "<p>{{ product.metafields.custom.ingredients.value.description | metafield_tag }}</p>",
+            "why_it_helps": "<p>{{ product.metafields.custom.ingredients.value.why_it_helps | metafield_tag }}</p>"
           }
         },
         "ingredient_gNG3ga": {
@@ -323,8 +323,8 @@
             "sub": "",
             "dose": "1000",
             "unit": "mg",
-            "description": "An amino acid produced by the body and found in foods like fish, meat, and even breast milk.",
-            "why_it_helps": "Supports hydration, electrolyte balance, and normal muscle function during activity."
+            "description": "<p>An amino acid produced by the body and found in foods like fish, meat, and even breast milk.</p>",
+            "why_it_helps": "<p>Supports hydration, electrolyte balance, and normal muscle function during activity.</p>"
           }
         },
         "ingredient_nh3i4w": {
@@ -336,8 +336,8 @@
             "sub": "Cognizin®",
             "dose": "250",
             "unit": "mg",
-            "description": "A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.",
-            "why_it_helps": "Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field."
+            "description": "<p>A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.</p>",
+            "why_it_helps": "<p>Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field.</p>"
           }
         },
         "ingredient_AhixFb": {
@@ -349,8 +349,8 @@
             "sub": "",
             "dose": "250",
             "unit": "mg",
-            "description": "An amino acid the body uses to help support focus and concentration.",
-            "why_it_helps": "Supports concentration, reaction time, and composure under stress, keeping youth athletes mentally sharp."
+            "description": "<p>An amino acid the body uses to help support focus and concentration.</p>",
+            "why_it_helps": "<p>Supports concentration, reaction time, and composure under stress, keeping youth athletes mentally sharp.</p>"
           }
         },
         "ingredient_iCKEC4": {
@@ -362,8 +362,8 @@
             "sub": "as Pyridoxine HCl",
             "dose": "1",
             "unit": "mg",
-            "description": "A water-soluble B vitamin that helps convert food into energy and supports normal nervous system function.",
-            "why_it_helps": "Helps support energy metabolism, focus, and normal muscle function."
+            "description": "<p>A water-soluble B vitamin that helps convert food into energy and supports normal nervous system function.</p>",
+            "why_it_helps": "<p>Helps support energy metabolism, focus, and normal muscle function.</p>"
           }
         },
         "ingredient_8H4jkY": {
@@ -375,8 +375,8 @@
             "sub": "as Methylcobalamin",
             "dose": "2",
             "unit": "mcg",
-            "description": "An essential B-vitamin needed for red blood cell formation and nervous system health.",
-            "why_it_helps": "Supports oxygen transport in the blood and energy metabolism."
+            "description": "<p>An essential B-vitamin needed for red blood cell formation and nervous system health.</p>",
+            "why_it_helps": "<p>Supports oxygen transport in the blood and energy metabolism.</p>"
           }
         }
       },
@@ -549,7 +549,7 @@
         "override_border_radius": false,
         "buttons_style": "underlined",
         "override_button_colors": false,
-        "button_background_color": "#E68819",
+        "button_background_color": "#e68819",
         "button_text_color": "#ffffff",
         "hover_navigation_desktop": "left-and-right",
         "columns_per_row": 3,
@@ -617,7 +617,9 @@
           "repeater": "{{ product.metafields.custom.faqs.value }}",
           "settings": {
             "question": "{{ block.repeater.question.value }}",
-            "text": "{{ block.repeater.answer | metafield_tag }}"
+            "open_by_default": false,
+            "text": "{{ block.repeater.answer | metafield_tag }}",
+            "page": ""
           }
         }
       },

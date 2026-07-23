@@ -63,7 +63,7 @@
     "announcement_text_spacing": 1,
     "grid_spacing": "15",
     "border_radius": "round",
-    "button_style": "circle",
+    "button_style": "square",
     "product_card_text_alignment": "left",
     "product-grid": "square",
     "hover-effect": false,

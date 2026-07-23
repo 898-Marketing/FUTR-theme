@@ -90,6 +90,7 @@
   .ing-dose span { font-size: 13px; font-weight: 800; color: var(--zing-faint); }
 
   .ing-is { font-size: 13.5px; line-height: 1.5; color: #3A3F46; margin: 14px 0 0; }
+  .ing-is p { margin: 0; }
 
   .ing-why {
     overflow: hidden; max-height: 0; opacity: 0; margin-top: 0;
@@ -101,7 +102,7 @@
     font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
     color: var(--cat); margin-bottom: 3px;
   }
-  .ing-why p { font-size: 13.5px; line-height: 1.5; color: #3A3F46; margin: 0; }
+  .ing-why-inner p { font-size: 13.5px; line-height: 1.5; color: #3A3F46; margin: 0; }
 
   .ing-toggle {
     display: flex; align-items: center; gap: 6px; margin-top: 14px;
@@ -146,11 +147,11 @@
             <div class="ing-dose"><b>{{ block.settings.dose }}</b><span>{{ block.settings.unit }}</span></div>
           </div>
           {%- if block.settings.description != blank -%}
-            <p class="ing-is">{{ block.settings.description }}</p>
+            <div class="ing-is">{{ block.settings.description }}</div>
           {%- endif -%}
           <div class="ing-why"><div class="ing-why-inner">
             <div class="ing-why-label">Why it helps</div>
-            <p>{{ block.settings.why_it_helps }}</p>
+            <div>{{ block.settings.why_it_helps }}</div>
           </div></div>
           <div class="ing-toggle">Why it helps +</div>
         </button>
@@ -246,8 +247,8 @@
         { "type": "text", "id": "sub", "label": "Subtitle (optional, e.g. brand name)" },
         { "type": "text", "id": "dose", "label": "Dose amount", "default": "0" },
         { "type": "text", "id": "unit", "label": "Dose unit", "default": "mg" },
-        { "type": "textarea", "id": "description", "label": "What it is" },
-        { "type": "textarea", "id": "why_it_helps", "label": "Why it helps" }
+        { "type": "richtext", "id": "description", "label": "What it is" },
+        { "type": "richtext", "id": "why_it_helps", "label": "Why it helps" }
       ]
     }
   ],
@@ -255,12 +256,12 @@
     {
       "name": "Ingredients Grid",
       "blocks": [
-        { "type": "ingredient", "settings": { "category": "body", "category_label": "Body", "name": "L-Citrulline", "dose": "2000", "unit": "mg", "description": "An amino acid naturally found in foods like watermelon.", "why_it_helps": "Helps support healthy blood flow, stamina, and endurance during activity." } },
-        { "type": "ingredient", "settings": { "category": "body", "category_label": "Body", "name": "Taurine", "dose": "1000", "unit": "mg", "description": "An amino acid produced by the body and found in foods like fish, meat, and even breast milk.", "why_it_helps": "Supports hydration, electrolyte balance, and normal muscle function during activity." } },
-        { "type": "ingredient", "settings": { "category": "mind", "category_label": "Mind", "name": "Citicoline", "sub": "Cognizin®", "dose": "250", "unit": "mg", "description": "A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.", "why_it_helps": "Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field." } },
-        { "type": "ingredient", "settings": { "category": "mind", "category_label": "Mind", "name": "L-Tyrosine", "dose": "250", "unit": "mg", "description": "An amino acid the body uses to help support focus and concentration.", "why_it_helps": "Supports concentration, reaction time, and composure under stress, keeping youth athletes mentally sharp." } },
-        { "type": "ingredient", "settings": { "category": "energy", "category_label": "Energy", "name": "Vitamin B6", "sub": "as Pyridoxine HCl", "dose": "1", "unit": "mg", "description": "A water-soluble B vitamin that helps convert food into energy and supports normal nervous system function.", "why_it_helps": "Helps support energy metabolism, focus, and normal muscle function." } },
-        { "type": "ingredient", "settings": { "category": "energy", "category_label": "Energy", "name": "Vitamin B12", "sub": "as Methylcobalamin", "dose": "2", "unit": "mcg", "description": "An essential B-vitamin needed for red blood cell formation and nervous system health.", "why_it_helps": "Supports oxygen transport in the blood and energy metabolism." } }
+        { "type": "ingredient", "settings": { "category": "body", "category_label": "Body", "name": "L-Citrulline", "dose": "2000", "unit": "mg", "description": "<p>An amino acid naturally found in foods like watermelon.</p>", "why_it_helps": "<p>Helps support healthy blood flow, stamina, and endurance during activity.</p>" } },
+        { "type": "ingredient", "settings": { "category": "body", "category_label": "Body", "name": "Taurine", "dose": "1000", "unit": "mg", "description": "<p>An amino acid produced by the body and found in foods like fish, meat, and even breast milk.</p>", "why_it_helps": "<p>Supports hydration, electrolyte balance, and normal muscle function during activity.</p>" } },
+        { "type": "ingredient", "settings": { "category": "mind", "category_label": "Mind", "name": "Citicoline", "sub": "Cognizin®", "dose": "250", "unit": "mg", "description": "<p>A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.</p>", "why_it_helps": "<p>Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field.</p>" } },
+        { "type": "ingredient", "settings": { "category": "mind", "category_label": "Mind", "name": "L-Tyrosine", "dose": "250", "unit": "mg", "description": "<p>An amino acid the body uses to help support focus and concentration.</p>", "why_it_helps": "<p>Supports concentration, reaction time, and composure under stress, keeping youth athletes mentally sharp.</p>" } },
+        { "type": "ingredient", "settings": { "category": "energy", "category_label": "Energy", "name": "Vitamin B6", "sub": "as Pyridoxine HCl", "dose": "1", "unit": "mg", "description": "<p>A water-soluble B vitamin that helps convert food into energy and supports normal nervous system function.</p>", "why_it_helps": "<p>Helps support energy metabolism, focus, and normal muscle function.</p>" } },
+        { "type": "ingredient", "settings": { "category": "energy", "category_label": "Energy", "name": "Vitamin B12", "sub": "as Methylcobalamin", "dose": "2", "unit": "mcg", "description": "<p>An essential B-vitamin needed for red blood cell formation and nervous system health.</p>", "why_it_helps": "<p>Supports oxygen transport in the blood and energy metabolism.</p>" } }
       ]
     }
   ]

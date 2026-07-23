@@ -297,6 +297,112 @@
         "button_background_color": "#e68819",
         "button_text_color": "#ffffff"
       }
+    },
+    "ingredients_grid_cVcBGa": {
+      "type": "ingredients-grid",
+      "blocks": {
+        "ingredient_87YeFN": {
+          "type": "ingredient",
+          "settings": {
+            "category": "body",
+            "category_label": "Body",
+            "name": "L-Citrulline",
+            "sub": "",
+            "dose": "2000",
+            "unit": "mg",
+            "description": "An amino acid naturally found in foods like watermelon.",
+            "why_it_helps": "Helps support healthy blood flow, stamina, and endurance during activity."
+          }
+        },
+        "ingredient_miTc8J": {
+          "type": "ingredient",
+          "settings": {
+            "category": "body",
+            "category_label": "Body",
+            "name": "Taurine",
+            "sub": "",
+            "dose": "1000",
+            "unit": "mg",
+            "description": "An amino acid produced by the body and found in foods like fish, meat, and even breast milk.",
+            "why_it_helps": "Supports hydration, electrolyte balance, and normal muscle function during activity."
+          }
+        },
+        "ingredient_9Jcbn4": {
+          "type": "ingredient",
+          "settings": {
+            "category": "mind",
+            "category_label": "Mind",
+            "name": "Citicoline",
+            "sub": "Cognizin®",
+            "dose": "250",
+            "unit": "mg",
+            "description": "A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.",
+            "why_it_helps": "Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field."
+          }
+        },
+        "ingredient_bbUmrD": {
+          "type": "ingredient",
+          "settings": {
+            "category": "mind",
+            "category_label": "Mind",
+            "name": "L-Tyrosine",
+            "sub": "",
+            "dose": "250",
+            "unit": "mg",
+            "description": "An amino acid the body uses to help support focus and concentration.",
+            "why_it_helps": "Supports concentration, reaction time, and composure under stress, keeping youth athletes mentally sharp."
+          }
+        },
+        "ingredient_M3NzqW": {
+          "type": "ingredient",
+          "settings": {
+            "category": "energy",
+            "category_label": "Energy",
+            "name": "Vitamin B6",
+            "sub": "as Pyridoxine HCl",
+            "dose": "1",
+            "unit": "mg",
+            "description": "A water-soluble B vitamin that helps convert food into energy and supports normal nervous system function.",
+            "why_it_helps": "Helps support energy metabolism, focus, and normal muscle function."
+          }
+        },
+        "ingredient_NDfKkf": {
+          "type": "ingredient",
+          "settings": {
+            "category": "body",
+            "category_label": "Energy",
+            "name": "Vitamin B12",
+            "sub": "as Methylcobalamin",
+            "dose": "2",
+            "unit": "mcg",
+            "description": "An essential B-vitamin needed for red blood cell formation and nervous system health.",
+            "why_it_helps": "Supports oxygen transport in the blood and energy metabolism."
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_87YeFN",
+        "ingredient_miTc8J",
+        "ingredient_9Jcbn4",
+        "ingredient_bbUmrD",
+        "ingredient_M3NzqW",
+        "ingredient_NDfKkf"
+      ],
+      "name": "Ingredients Grid",
+      "settings": {
+        "kicker": "What's inside",
+        "heading": "Built for body & mind",
+        "color_ink": "#0E1116",
+        "color_paper": "#F5F4EE",
+        "color_muted": "#5A5F66",
+        "color_faint": "#8A9099",
+        "color_body": "#8FBF2E",
+        "color_body_pill": "#DCF29A",
+        "color_mind": "#3E82E6",
+        "color_mind_pill": "#BAD4FF",
+        "color_energy": "#F0642A",
+        "color_energy_pill": "#FFCDA9"
+      }
     }
   },
   "order": [
@@ -305,6 +411,7 @@
     "accordion_with_image_cx6zdK",
     "product-description",
     "product-recommendations",
-    "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5"
+    "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
+    "ingredients_grid_cVcBGa"
   ]
 }

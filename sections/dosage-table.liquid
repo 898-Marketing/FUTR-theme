@@ -63,6 +63,11 @@
     margin: 4px 0 28px;
   }
 
+  @media (max-width: 640px) {
+    .dosage-table__heading { font-size: 26px; }
+    .dosage-table__subheading { font-size: 15px; margin-bottom: 20px; }
+  }
+
   .dosage-table__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1.3fr;
@@ -75,6 +80,7 @@
   }
 
   .dt-col-head {
+    min-width: 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -99,11 +105,12 @@
   .dt-col-head--water { background: var(--dt-water); }
 
   @media (max-width: 700px) {
-    .dt-col-head--serving,
-    .dt-col-head--water { display: none; }
+    .dt-col-head { flex-wrap: wrap; }
+    .dt-col-head__sub { flex-basis: 100%; }
   }
 
   .dt-row {
+    min-width: 0;
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr 1.3fr;
@@ -119,6 +126,7 @@
   }
 
   .dt-cell {
+    min-width: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -130,6 +138,7 @@
   .dt-cell--age .dt-age-weight { font-size: 13px; font-weight: 600; color: var(--dt-muted); text-transform: uppercase; }
 
   .dt-cell--inline { flex-direction: row; justify-content: flex-start; align-items: center; gap: 12px; }
+  .dt-cell--inline > div { min-width: 0; }
   .dt-cell--inline img { width: var(--dt-row-icon-size); height: var(--dt-row-icon-size); flex: none; object-fit: contain; }
   .dt-serving-amount { font-size: 18px; font-weight: 800; text-transform: uppercase; }
 
@@ -147,8 +156,10 @@
     background: var(--dt-navy);
     border-radius: 10px;
   }
+  @media (max-width: 640px) { .dosage-table__footer { gap: 16px; } }
 
   .dt-footer-lead {
+    min-width: 0;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -158,14 +169,17 @@
     text-transform: uppercase;
   }
   .dt-footer-lead img { width: var(--dt-footer-icon-size); height: var(--dt-footer-icon-size); flex: none; object-fit: contain; }
+  .dt-footer-lead > span { min-width: 0; }
   .dt-footer-lead .is-accent { color: var(--dt-accent); }
 
   .dt-feature {
+    min-width: 0;
     display: flex;
     align-items: center;
     gap: 10px;
     color: #fff;
   }
+  .dt-feature > div { min-width: 0; }
   .dt-feature img { width: var(--dt-feature-icon-size); height: var(--dt-feature-icon-size); flex: none; object-fit: contain; }
   .dt-feature__label { font-size: 13px; font-weight: 800; text-transform: uppercase; }
   .dt-feature__desc { font-size: 11px; font-weight: 600; text-transform: uppercase; opacity: .75; max-width: 160px; }

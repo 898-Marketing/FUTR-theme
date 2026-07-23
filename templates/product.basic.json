@@ -73,7 +73,7 @@
       ],
       "settings": {
         "enable_sticky": true,
-        "enable_sticky_add_to_cart": true,
+        "enable_sticky_add_to_cart": false,
         "media_position": "left",
         "image_size": "large",
         "image_shape": "original",
@@ -119,7 +119,7 @@
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
-        "height_desktop": "original",
+        "height_desktop": "450px",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 50,
@@ -480,7 +480,7 @@
         "heading_prefix": "How much",
         "heading_highlight": "Pregame",
         "heading_subtitle": "should my athlete take?",
-        "color_heading": "#FFFFFF",
+        "color_heading": "#ffffff",
         "color_navy": "#0e1116",
         "color_accent": "#8fbf2e",
         "color_water": "#1f88d2",
@@ -497,6 +497,164 @@
         "footer_text_white": "",
         "footer_text_accent": ""
       }
+    },
+    "collection_list_RDH8QX": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_eprRL9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "subheading": "Subheading",
+            "overlay-btn-text": "Shop now",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_opacity": 60,
+            "overlay_font_color": "#FFFFFF"
+          }
+        },
+        "featured_collection_rMDa6e": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "subheading": "Subheading",
+            "overlay-btn-text": "Shop now",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_opacity": 60,
+            "overlay_font_color": "#FFFFFF"
+          }
+        },
+        "featured_collection_wVzErQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "subheading": "Subheading",
+            "overlay-btn-text": "Shop now",
+            "show-gradient-overlay": false,
+            "overlay_color": "#242424",
+            "overlay_opacity": 60,
+            "overlay_font_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_eprRL9",
+        "featured_collection_rMDa6e",
+        "featured_collection_wVzErQ"
+      ],
+      "name": "t:sections.collection--collection-list.presets.name",
+      "settings": {
+        "title": "Featured Collections",
+        "description": "",
+        "section_header_alignment": "center",
+        "items-per-row": 3,
+        "content-position": "overlay",
+        "image_shape": "natural",
+        "buttons_style": "filled",
+        "override_button_colors": false,
+        "button_background_color": "#E68819",
+        "button_text_color": "#ffffff",
+        "section-width": "full",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "remove-spacing": false,
+        "colors": "light"
+      }
+    },
+    "image_with_text_overlay_dc7Fbw": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_dyAWir": {
+          "type": "heading",
+          "settings": {
+            "title": "lorem",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_PXf4Nj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_dyAWir",
+        "text_PXf4Nj"
+      ],
+      "name": "t:sections.image--image-with-text-overlay.presets.name",
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "accordion_fYz9RV": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_Aw9c7i": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "open_by_default": false,
+            "text": "<p>Here you can place an explanation or answer to the question.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_4q3VfX": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "open_by_default": false,
+            "text": "<p>Here you can place an explanation or answer to the question.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_bdLkjk": {
+          "type": "tab_content",
+          "settings": {
+            "question": "Place your question or heading here",
+            "open_by_default": false,
+            "text": "<p>Here you can place an explanation or answer to the question.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_Aw9c7i",
+        "tab_content_4q3VfX",
+        "tab_content_bdLkjk"
+      ],
+      "name": "t:sections.accordion.presets.name",
+      "settings": {
+        "title": "Pregame QA",
+        "description": "",
+        "section_header_alignment": "center",
+        "faq_icon": "plus_minus",
+        "section_width": "narrow",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
     }
   },
   "order": [
@@ -507,6 +665,9 @@
     "product-recommendations",
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
     "ingredients_grid_yzP3LB",
-    "dosage_table_VQ8Jg8"
+    "dosage_table_VQ8Jg8",
+    "collection_list_RDH8QX",
+    "image_with_text_overlay_dc7Fbw",
+    "accordion_fYz9RV"
   ]
 }

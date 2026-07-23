@@ -51,6 +51,7 @@
         "offer-1",
         "offer-0"
       ],
+      "disabled": true,
       "settings": {
         "show_icon": true,
         "title": "Hot right now!",
@@ -64,8 +65,9 @@
     },
     "sticky-offers-button": {
       "type": "sticky-offers-button",
+      "disabled": true,
       "settings": {
-        "show_offers_drawer_button": true,
+        "show_offers_drawer_button": false,
         "offers_drawer_button_label": "Latest offers",
         "hide_on_mobile": false,
         "show_social_icons": false,

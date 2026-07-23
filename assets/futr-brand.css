@@ -28,6 +28,7 @@
   z-index: 0;
   background-color: transparent !important;
   border-color: transparent !important;
+  border-radius: 0 !important;
 }
 
 .btn::before {
@@ -37,7 +38,7 @@
   z-index: -1;
   transform: skewX(-10deg);
   background: var(--futr-blue);
-  border-radius: inherit;
+  border-radius: 0;
 }
 
 /* Secondary/outlined buttons (e.g. "Update cart") keep the slant but stay

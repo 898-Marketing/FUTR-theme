@@ -21,9 +21,14 @@
    regardless of whether a given button's label happens to be wrapped in a
    <span>. This is what makes "every button" safe: text never touches the
    skew transform, so there's nothing that can render slanted/unreadable.
-   Works on <button>, <a>, and <input type="submit"> alike (button-type
-   inputs support ::before/::after in all current browsers). */
-.btn {
+   Note: <input type="submit">/<input type="button"> do NOT reliably support
+   ::before — any button using those tags needs converting to a real
+   <button> element first (done for the cart's "Update cart" button).
+   border-radius is forced to 0 because the theme's global button setting
+   is a fully-rounded pill — skewing a pill barely reads as skewed at all,
+   since there are no sharp corners for the angle to show on. */
+.btn,
+.button--primary {
   position: relative;
   z-index: 0;
   background-color: transparent !important;
@@ -31,7 +36,8 @@
   border-radius: 0 !important;
 }
 
-.btn::before {
+.btn::before,
+.button--primary::before {
   content: '';
   position: absolute;
   inset: 0;

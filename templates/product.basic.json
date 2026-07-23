@@ -119,10 +119,10 @@
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
-        "height_desktop": "original",
+        "height_desktop": "450px",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
-        "caption_width_desktop": 50,
+        "caption_width_desktop": 60,
         "height_mobile": "original",
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",
@@ -392,16 +392,16 @@
       "settings": {
         "kicker": "What's inside",
         "heading": "Built for body & mind",
-        "color_ink": "#0E1116",
-        "color_paper": "#F5F4EE",
-        "color_muted": "#5A5F66",
-        "color_faint": "#8A9099",
-        "color_body": "#8FBF2E",
-        "color_body_pill": "#DCF29A",
-        "color_mind": "#3E82E6",
-        "color_mind_pill": "#BAD4FF",
-        "color_energy": "#F0642A",
-        "color_energy_pill": "#FFCDA9"
+        "color_ink": "#0e1116",
+        "color_paper": "#f5f4ee",
+        "color_muted": "#5a5f66",
+        "color_faint": "#8a9099",
+        "color_body": "#8fbf2e",
+        "color_body_pill": "#dcf29a",
+        "color_mind": "#3e82e6",
+        "color_mind_pill": "#bad4ff",
+        "color_energy": "#f0642a",
+        "color_energy_pill": "#ffcda9"
       }
     }
   },

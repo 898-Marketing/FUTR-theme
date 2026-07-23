@@ -27,17 +27,20 @@
   transform: skewX(10deg);
 }
 
-/* Applied directly to the confirmed, stable primary-CTA buttons site-wide —
-   no template edits needed, and the AJAX-cart JS hooks (type/id/data attrs)
-   these buttons rely on are left untouched. */
-.product--add-to-cart-button,
-.cart--button-checkout,
-.quick-add-button {
+/* Primary CTA buttons site-wide — the theme's "filled" style buttons render
+   through snippets/dynamic-section-button.liquid as bare `.btn` (no
+   `.btn--secondary` or `.btn--underlined` suffix), so scoping on that
+   distinction reaches every primary CTA (Shop the system, newsletter submit,
+   view-all links, quiz button, etc.) without also skewing secondary/outlined
+   buttons, underlined text links, or icon-only round buttons. Add to Cart,
+   Checkout, and Quick-add share the same bare `.btn` class so this single
+   rule covers them too — AJAX-cart JS hooks (type/id/data attrs) are
+   untouched, only a wrapping <span> was added around their label text. */
+.btn:not(.btn--secondary):not(.round-icon-btn-lg):not(.mobile-facets__open) {
   transform: skewX(-10deg);
 }
 
-.product--add-to-cart-button > span,
-.cart--button-checkout > span,
+.btn:not(.btn--secondary):not(.round-icon-btn-lg):not(.mobile-facets__open) > span,
 .quick-add-button .quick-add-icon-wrapper {
   display: inline-block;
   transform: skewX(10deg);

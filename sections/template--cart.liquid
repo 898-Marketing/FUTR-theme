@@ -350,11 +350,11 @@
           {% assign animation_order = 2 %}
           {% if settings.empty_cart_collections != blank %}
             {% for empty_cart_collection in settings.empty_cart_collections %}
-              <a class="btn cart--empty-btn" href="{{ empty_cart_collection.url }}" data-animate data-animate-order="{{ animation_order | plus: 1 }}">{{ empty_cart_collection.title }}</a>
+              <a class="btn cart--empty-btn" href="{{ empty_cart_collection.url }}" data-animate data-animate-order="{{ animation_order | plus: 1 }}"><span>{{ empty_cart_collection.title }}</span></a>
               {% assign animation_order = animation_order | plus: 1 %}
             {% endfor %}
           {% else %}
-            <a href="{{ routes.all_products_collection_url }}" class="btn" data-animate data-animate-order="{{ animation_order | plus: 1 }}">{{ 'general.continue_shopping' | t }}</a>
+            <a href="{{ routes.all_products_collection_url }}" class="btn" data-animate data-animate-order="{{ animation_order | plus: 1 }}"><span>{{ 'general.continue_shopping' | t }}</span></a>
           {% endif %}
         </div>
       </div>

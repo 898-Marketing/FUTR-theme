@@ -57,7 +57,7 @@
         {% render 'theme-icon', icon: icon, iconSize: 14, iconClasses: 'btn--underlined-with-icon__icon' %}
       {% endif %}
 
-      {{ label }}
+      <span>{{ label }}</span>
     </a>
   {% else %}
     <button
@@ -79,7 +79,7 @@
           {% render 'theme-icon', icon: icon, iconSize: 14, iconClasses: 'btn--underlined-with-icon__icon' %}
         {% endif %}
 
-        {{ label }}
+        <span>{{ label }}</span>
       {% endif %}
     </button>
   {% endif %}

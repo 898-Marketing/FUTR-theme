@@ -133,30 +133,57 @@
   </header>
 
   <div class="zing-grid">
-    {%- for block in section.blocks -%}
-      {%- if block.type == 'ingredient' -%}
-        <button class="ing-card" data-cat="{{ block.settings.category }}" aria-expanded="false" {{ block.shopify_attributes }}>
+    {%- assign mf_ingredients = product.metafields.custom.ingredients.value -%}
+    {%- if mf_ingredients != blank -%}
+      {%- for ingredient in mf_ingredients -%}
+        {%- assign ing_category = ingredient.category.value | first | downcase -%}
+        <button class="ing-card" data-cat="{{ ing_category }}" aria-expanded="false">
           <div class="ing-top">
             <div>
-              <span class="ing-pill">{{ block.settings.category_label }}</span>
-              <h3 class="ing-name">{{ block.settings.name }}</h3>
-              {%- if block.settings.sub != blank -%}
-                <div class="ing-sub">{{ block.settings.sub }}</div>
+              <span class="ing-pill">{{ ing_category | capitalize }}</span>
+              <h3 class="ing-name">{{ ingredient.name.value }}</h3>
+              {%- if ingredient.subtitle.value != blank -%}
+                <div class="ing-sub">{{ ingredient.subtitle.value }}</div>
               {%- endif -%}
             </div>
-            <div class="ing-dose"><b>{{ block.settings.dose }}</b><span>{{ block.settings.unit }}</span></div>
+            <div class="ing-dose"><b>{{ ingredient.dose.value }}</b><span>{{ ingredient.unit.value }}</span></div>
           </div>
-          {%- if block.settings.description != blank -%}
-            <div class="ing-is">{{ block.settings.description }}</div>
+          {%- if ingredient.what_it_is.value != blank -%}
+            <div class="ing-is">{{ ingredient.what_it_is.value | newline_to_br }}</div>
           {%- endif -%}
           <div class="ing-why"><div class="ing-why-inner">
             <div class="ing-why-label">Why it helps</div>
-            <div>{{ block.settings.why_it_helps }}</div>
+            <div>{{ ingredient.why_it_help.value | newline_to_br }}</div>
           </div></div>
           <div class="ing-toggle">Why it helps +</div>
         </button>
-      {%- endif -%}
-    {%- endfor -%}
+      {%- endfor -%}
+    {%- else -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'ingredient' -%}
+          <button class="ing-card" data-cat="{{ block.settings.category }}" aria-expanded="false" {{ block.shopify_attributes }}>
+            <div class="ing-top">
+              <div>
+                <span class="ing-pill">{{ block.settings.category_label }}</span>
+                <h3 class="ing-name">{{ block.settings.name }}</h3>
+                {%- if block.settings.sub != blank -%}
+                  <div class="ing-sub">{{ block.settings.sub }}</div>
+                {%- endif -%}
+              </div>
+              <div class="ing-dose"><b>{{ block.settings.dose }}</b><span>{{ block.settings.unit }}</span></div>
+            </div>
+            {%- if block.settings.description != blank -%}
+              <div class="ing-is">{{ block.settings.description }}</div>
+            {%- endif -%}
+            <div class="ing-why"><div class="ing-why-inner">
+              <div class="ing-why-label">Why it helps</div>
+              <div>{{ block.settings.why_it_helps }}</div>
+            </div></div>
+            <div class="ing-toggle">Why it helps +</div>
+          </button>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
   </div>
 </section>
 

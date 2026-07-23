@@ -306,10 +306,10 @@
           "settings": {
             "category": "body",
             "category_label": "",
-            "name": "{{ product.metafields.custom.ingredients.value.name.value }}",
+            "name": "",
             "sub": "",
-            "dose": "{{ product.metafields.custom.ingredients.value.dose.value }}",
-            "unit": "{{ product.metafields.custom.ingredients.value.unit.value }}",
+            "dose": "",
+            "unit": "",
             "description": "",
             "why_it_helps": ""
           }

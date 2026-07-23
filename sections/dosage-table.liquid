@@ -11,6 +11,10 @@
     --dt-accent: {{ section.settings.color_accent }};
     --dt-water: {{ section.settings.color_water }};
     --dt-muted: #6b7280;
+    --dt-header-icon-size: {{ section.settings.header_icon_size }}px;
+    --dt-row-icon-size: {{ section.settings.row_icon_size }}px;
+    --dt-footer-icon-size: {{ section.settings.footer_icon_size }}px;
+    --dt-feature-icon-size: {{ section.settings.feature_icon_size }}px;
   }
 
   .dosage-table * { box-sizing: border-box; }
@@ -63,7 +67,7 @@
     text-transform: uppercase;
     letter-spacing: .02em;
   }
-  .dt-col-head img { width: 24px; height: 24px; flex: none; object-fit: contain; }
+  .dt-col-head img { width: var(--dt-header-icon-size); height: var(--dt-header-icon-size); flex: none; object-fit: contain; }
   .dt-col-head .dt-col-head__sub {
     display: block;
     font-size: 11px;
@@ -108,7 +112,7 @@
   .dt-cell--age .dt-age-weight { font-size: 13px; font-weight: 600; color: var(--dt-muted); text-transform: uppercase; }
 
   .dt-cell--inline { flex-direction: row; align-items: center; gap: 12px; }
-  .dt-cell--inline img { width: 26px; height: 26px; flex: none; object-fit: contain; }
+  .dt-cell--inline img { width: var(--dt-row-icon-size); height: var(--dt-row-icon-size); flex: none; object-fit: contain; }
   .dt-serving-amount { font-size: 18px; font-weight: 800; text-transform: uppercase; }
 
   .dt-water-amount { font-size: 18px; font-weight: 800; text-transform: uppercase; }
@@ -135,7 +139,7 @@
     font-size: 15px;
     text-transform: uppercase;
   }
-  .dt-footer-lead img { width: 30px; height: 30px; flex: none; object-fit: contain; }
+  .dt-footer-lead img { width: var(--dt-footer-icon-size); height: var(--dt-footer-icon-size); flex: none; object-fit: contain; }
   .dt-footer-lead .is-accent { color: var(--dt-accent); }
 
   .dt-feature {
@@ -144,7 +148,7 @@
     gap: 10px;
     color: #fff;
   }
-  .dt-feature img { width: 26px; height: 26px; flex: none; object-fit: contain; }
+  .dt-feature img { width: var(--dt-feature-icon-size); height: var(--dt-feature-icon-size); flex: none; object-fit: contain; }
   .dt-feature__label { font-size: 13px; font-weight: 800; text-transform: uppercase; }
   .dt-feature__desc { font-size: 11px; font-weight: 600; text-transform: uppercase; opacity: .75; max-width: 160px; }
 {%- endstyle -%}
@@ -162,7 +166,7 @@
     <div class="dt-col-head dt-col-head--age">{{ section.settings.age_column_label }}</div>
     <div class="dt-col-head dt-col-head--serving">
       {%- if section.settings.serving_icon != blank -%}
-        <img src="{{ section.settings.serving_icon | image_url: width: 48 }}" alt="" width="24" height="24" loading="lazy">
+        <img src="{{ section.settings.serving_icon | image_url: width: 160 }}" alt="" loading="lazy">
       {%- endif -%}
       <span>
         {{ section.settings.serving_column_label }}
@@ -173,7 +177,7 @@
     </div>
     <div class="dt-col-head dt-col-head--water">
       {%- if section.settings.water_icon != blank -%}
-        <img src="{{ section.settings.water_icon | image_url: width: 48 }}" alt="" width="24" height="24" loading="lazy">
+        <img src="{{ section.settings.water_icon | image_url: width: 160 }}" alt="" loading="lazy">
       {%- endif -%}
       <span>{{ section.settings.water_column_label }}</span>
     </div>
@@ -188,13 +192,13 @@
           </div>
           <div class="dt-cell dt-cell--inline">
             {%- if section.settings.serving_icon != blank -%}
-              <img src="{{ section.settings.serving_icon | image_url: width: 52 }}" alt="" width="26" height="26" loading="lazy">
+              <img src="{{ section.settings.serving_icon | image_url: width: 160 }}" alt="" loading="lazy">
             {%- endif -%}
             <span class="dt-serving-amount">{{ block.settings.serving_amount }}</span>
           </div>
           <div class="dt-cell dt-cell--inline">
             {%- if section.settings.water_icon != blank -%}
-              <img src="{{ section.settings.water_icon | image_url: width: 52 }}" alt="" width="26" height="26" loading="lazy">
+              <img src="{{ section.settings.water_icon | image_url: width: 160 }}" alt="" loading="lazy">
             {%- endif -%}
             <div>
               <div class="dt-water-amount">{{ block.settings.water_amount }}</div>
@@ -215,7 +219,7 @@
     {%- if section.settings.footer_text_white != blank or section.settings.footer_text_accent != blank -%}
       <div class="dt-footer-lead">
         {%- if section.settings.footer_icon != blank -%}
-          <img src="{{ section.settings.footer_icon | image_url: width: 60 }}" alt="" width="30" height="30" loading="lazy">
+          <img src="{{ section.settings.footer_icon | image_url: width: 160 }}" alt="" loading="lazy">
         {%- endif -%}
         <span>{{ section.settings.footer_text_white }} <span class="is-accent">{{ section.settings.footer_text_accent }}</span></span>
       </div>
@@ -225,7 +229,7 @@
       {%- if block.type == 'feature' -%}
         <div class="dt-feature" {{ block.shopify_attributes }}>
           {%- if block.settings.icon != blank -%}
-            <img src="{{ block.settings.icon | image_url: width: 52 }}" alt="" width="26" height="26" loading="lazy">
+            <img src="{{ block.settings.icon | image_url: width: 160 }}" alt="" loading="lazy">
           {%- endif -%}
           <div>
             <div class="dt-feature__label">{{ block.settings.label }}</div>
@@ -252,6 +256,12 @@
     { "type": "color", "id": "color_navy", "label": "Dark / navy", "default": "#0E1116" },
     { "type": "color", "id": "color_accent", "label": "Serving accent color", "default": "#8FBF2E" },
     { "type": "color", "id": "color_water", "label": "Water accent color", "default": "#1f88d2" },
+
+    { "type": "header", "content": "Icon sizes" },
+    { "type": "range", "id": "header_icon_size", "label": "Column header icon size", "min": 16, "max": 64, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "row_icon_size", "label": "Row icon size", "min": 16, "max": 64, "step": 2, "unit": "px", "default": 26 },
+    { "type": "range", "id": "footer_icon_size", "label": "Footer icon size", "min": 16, "max": 80, "step": 2, "unit": "px", "default": 30 },
+    { "type": "range", "id": "feature_icon_size", "label": "Feature icon size", "min": 16, "max": 64, "step": 2, "unit": "px", "default": 26 },
 
     { "type": "header", "content": "Column headers" },
     { "type": "text", "id": "age_column_label", "label": "Age/weight column label", "default": "Age / Weight" },

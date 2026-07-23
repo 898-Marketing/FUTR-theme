@@ -305,13 +305,13 @@
           "type": "ingredient",
           "settings": {
             "category": "body",
-            "category_label": "{{ product.metafields.custom.ingredients.value.category | metafield_text }}",
+            "category_label": "",
             "name": "{{ product.metafields.custom.ingredients.value.name.value }}",
             "sub": "",
             "dose": "{{ product.metafields.custom.ingredients.value.dose.value }}",
             "unit": "{{ product.metafields.custom.ingredients.value.unit.value }}",
-            "description": "<p>{{ product.metafields.custom.ingredients.value.description | metafield_tag }}</p>",
-            "why_it_helps": "<p>{{ product.metafields.custom.ingredients.value.why_it_helps | metafield_tag }}</p>"
+            "description": "",
+            "why_it_helps": ""
           }
         },
         "ingredient_gNG3ga": {

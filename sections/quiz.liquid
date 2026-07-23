@@ -124,9 +124,9 @@
         {% endif %}
         
         <quiz-modal data-focus-on-close="true" data-section-id="{{ section.id }}" data-background-color-override="{{ background_color }}" data-text-color-override="{{ text_color }}">
-          <button class="btn dynamic-section-button--{{ section.id }}" data-modal-button data-animate data-animate-order="{{ animation_order }}">
+          <button class="btn futr-cta dynamic-section-button--{{ section.id }}" data-modal-button data-animate data-animate-order="{{ animation_order }}">
             {% assign start = 'sections.quiz.start' | t %}
-            {{ section.settings.start_button_label | default: start }}
+            <span>{{ section.settings.start_button_label | default: start }}</span>
           </button>
           <template data-quiz-modal-content>
             <div
@@ -301,7 +301,7 @@
                         </div>
                         {% if section.settings.button_label != blank %}
                           <div class="quiz__results-button" data-animate data-animate-order="{{ section.settings.products_to_show | plus: animation_base | plus: 4 }}">
-                            <a href="{{ section.settings.button_link | default: '#' }}" class="btn dynamic-section-button--{{ section.id }}">{{ section.settings.button_label }}</a>
+                            <a href="{{ section.settings.button_link | default: '#' }}" class="btn futr-cta dynamic-section-button--{{ section.id }}"><span>{{ section.settings.button_label }}</span></a>
                           </div>
                         {% endif %}
                       </div>
@@ -330,7 +330,7 @@
                         {% endif %}
                         {% if section.settings.button_label != blank %}
                           <div class="quiz__results-button" data-animate data-animate-order="{{ section.settings.products_to_show | plus: animation_base | plus: 1 }}">
-                            <a href="{{ section.settings.button_link | default: '#' }}" class="btn dynamic-section-button--{{ section.id }}">{{ section.settings.button_label }}</a>
+                            <a href="{{ section.settings.button_link | default: '#' }}" class="btn futr-cta dynamic-section-button--{{ section.id }}"><span>{{ section.settings.button_label }}</span></a>
                           </div>
                         {% endif %}
                       </div>

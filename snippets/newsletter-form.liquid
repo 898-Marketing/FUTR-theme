@@ -40,7 +40,7 @@
 
 				<div id="newsletter-wrapper">
 					<input id="newsletter_text" type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form_section.newsletter_text' | t }}" name="contact[email]" class="input-group-field email" aria-label="{{ 'general.newsletter_form_section.newsletter_email' | t }}" autocorrect="off" autocapitalize="off" pattern=".+@.+\..+" title="{{ 'general.forms.email_must_be_formatted_as_an_email' | t }}">
-					<button id="newsletter_submit" type="submit" aria-label="{{ 'general.accessibility.contact_form.submit' | t }}" class="standalone-icon--wrapper btn futr-cta"><span>{% render 'theme-icon', icon: 'arrow-right', iconSize: 16 %}</span></button>
+					<button id="newsletter_submit" type="submit" aria-label="{{ 'general.accessibility.contact_form.submit' | t }}" class="standalone-icon--wrapper">{% render 'theme-icon', icon: 'arrow-right', iconSize: 16 %}</button>
 				</div>
 			{% endif %}
 		{% endform %}

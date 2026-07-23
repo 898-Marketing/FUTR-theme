@@ -317,8 +317,8 @@
             <div class="cart__shipping rte text-link-animated"><em>{{ taxes_shipping_checkout }}</em></div>
 
             <div class="btn-wrapper-default cart--checkout-default">
-              <button type="submit" name="update" class="btn btn--secondary update-cart cart--button-update btn--secondary" aria-label="{{ 'cart.general.update' | t }}">{{ 'cart.general.update' | t }}</button>
-              <button type="submit" name="checkout" aria-label="{{ 'cart.general.checkout' | t }}" class="btn futr-cta cart--button-checkout"><span>{{ 'cart.general.checkout' | t }}</span></button>
+              <input type="submit" name="update" class="btn btn--secondary update-cart cart--button-update btn--secondary" aria-label="{{ 'cart.general.update' | t }}" value="{{ 'cart.general.update' | t }}">
+              <button type="submit" name="checkout" aria-label="{{ 'cart.general.checkout' | t }}" class="btn cart--button-checkout"><span>{{ 'cart.general.checkout' | t }}</span></button>
             </div>
 
             {% if additional_checkout_buttons and settings.enable-additional-checkout-buttons %}
@@ -350,11 +350,11 @@
           {% assign animation_order = 2 %}
           {% if settings.empty_cart_collections != blank %}
             {% for empty_cart_collection in settings.empty_cart_collections %}
-              <a class="btn futr-cta cart--empty-btn" href="{{ empty_cart_collection.url }}" data-animate data-animate-order="{{ animation_order | plus: 1 }}"><span>{{ empty_cart_collection.title }}</span></a>
+              <a class="btn cart--empty-btn" href="{{ empty_cart_collection.url }}" data-animate data-animate-order="{{ animation_order | plus: 1 }}">{{ empty_cart_collection.title }}</a>
               {% assign animation_order = animation_order | plus: 1 %}
             {% endfor %}
           {% else %}
-            <a href="{{ routes.all_products_collection_url }}" class="btn futr-cta" data-animate data-animate-order="{{ animation_order | plus: 1 }}"><span>{{ 'general.continue_shopping' | t }}</span></a>
+            <a href="{{ routes.all_products_collection_url }}" class="btn" data-animate data-animate-order="{{ animation_order | plus: 1 }}">{{ 'general.continue_shopping' | t }}</a>
           {% endif %}
         </div>
       </div>

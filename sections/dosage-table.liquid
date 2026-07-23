@@ -104,16 +104,16 @@
   }
   @media (max-width: 700px) { .dt-cell { padding: 0; } }
 
-  .dt-cell--age .dt-age-range { font-size: 26px; font-weight: 900; letter-spacing: -.01em; }
-  .dt-cell--age .dt-age-weight { font-size: 13px; font-weight: 600; color: var(--dt-muted); }
+  .dt-cell--age .dt-age-range { font-size: 26px; font-weight: 900; letter-spacing: -.01em; text-transform: uppercase; }
+  .dt-cell--age .dt-age-weight { font-size: 13px; font-weight: 600; color: var(--dt-muted); text-transform: uppercase; }
 
   .dt-cell--inline { flex-direction: row; align-items: center; gap: 12px; }
   .dt-cell--inline img { width: 26px; height: 26px; flex: none; object-fit: contain; }
-  .dt-serving-amount { font-size: 18px; font-weight: 800; }
+  .dt-serving-amount { font-size: 18px; font-weight: 800; text-transform: uppercase; }
 
-  .dt-water-amount { font-size: 18px; font-weight: 800; }
-  .dt-water-instruction { font-size: 12px; font-weight: 600; color: var(--dt-muted); margin-top: 2px; }
-  .dt-water-instruction--accent { color: var(--dt-water); margin-top: 6px; }
+  .dt-water-amount { font-size: 18px; font-weight: 800; text-transform: uppercase; }
+  .dt-water-instruction { font-size: 12px; font-weight: 600; color: var(--dt-muted); margin-top: 2px; text-transform: uppercase; }
+  .dt-water-instruction--accent { color: var(--dt-water); margin-top: 6px; text-transform: uppercase; }
 
   .dosage-table__footer {
     display: flex;
@@ -146,7 +146,7 @@
   }
   .dt-feature img { width: 26px; height: 26px; flex: none; object-fit: contain; }
   .dt-feature__label { font-size: 13px; font-weight: 800; text-transform: uppercase; }
-  .dt-feature__desc { font-size: 11px; font-weight: 600; opacity: .75; max-width: 160px; }
+  .dt-feature__desc { font-size: 11px; font-weight: 600; text-transform: uppercase; opacity: .75; max-width: 160px; }
 {%- endstyle -%}
 
 <div class="dosage-table">
@@ -214,7 +214,9 @@
   <div class="dosage-table__footer">
     {%- if section.settings.footer_text_white != blank or section.settings.footer_text_accent != blank -%}
       <div class="dt-footer-lead">
-        {%- render 'theme-icon', icon: 'checkmark', iconSize: 20 -%}
+        {%- if section.settings.footer_icon != blank -%}
+          <img src="{{ section.settings.footer_icon | image_url: width: 60 }}" alt="" width="30" height="30" loading="lazy">
+        {%- endif -%}
         <span>{{ section.settings.footer_text_white }} <span class="is-accent">{{ section.settings.footer_text_accent }}</span></span>
       </div>
     {%- endif -%}
@@ -260,6 +262,7 @@
     { "type": "text", "id": "water_column_label", "label": "Water column label", "default": "Water" },
 
     { "type": "header", "content": "Footer bar" },
+    { "type": "image_picker", "id": "footer_icon", "label": "Footer icon" },
     { "type": "text", "id": "footer_text_white", "label": "Footer text (white)", "default": "The right fuel." },
     { "type": "text", "id": "footer_text_accent", "label": "Footer text (accent color)", "default": "At the right time." }
   ],

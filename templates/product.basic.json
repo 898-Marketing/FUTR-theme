@@ -480,6 +480,7 @@
         "heading_prefix": "How much",
         "heading_highlight": "Pregame",
         "heading_subtitle": "should my athlete take?",
+        "color_heading": "#FFFFFF",
         "color_navy": "#0e1116",
         "color_accent": "#8fbf2e",
         "color_water": "#1f88d2",

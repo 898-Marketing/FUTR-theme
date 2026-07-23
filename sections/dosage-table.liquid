@@ -10,6 +10,7 @@
     --dt-navy: {{ section.settings.color_navy }};
     --dt-accent: {{ section.settings.color_accent }};
     --dt-water: {{ section.settings.color_water }};
+    --dt-heading-color: {{ section.settings.color_heading }};
     --dt-muted: #6b7280;
     --dt-header-icon-size: {{ section.settings.header_icon_size }}px;
     --dt-row-icon-size: {{ section.settings.row_icon_size }}px;
@@ -45,6 +46,7 @@
   }
 
   .dosage-table__heading {
+    color: var(--dt-heading-color);
     font-size: 38px;
     font-weight: 900;
     font-style: italic;
@@ -56,6 +58,7 @@
   .dosage-table__heading .is-accent { color: var(--dt-accent); }
 
   .dosage-table__subheading {
+    color: var(--dt-heading-color);
     font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
@@ -294,6 +297,7 @@
     { "type": "text", "id": "heading_prefix", "label": "Heading (before product name)", "default": "How much" },
     { "type": "text", "id": "heading_highlight", "label": "Product name (highlighted)", "default": "Pregame" },
     { "type": "text", "id": "heading_subtitle", "label": "Subheading", "default": "should my athlete take?" },
+    { "type": "color", "id": "color_heading", "label": "Heading color", "default": "#0E1116", "info": "Controls the heading and subheading text color only — independent of the table's colors." },
 
     { "type": "header", "content": "Colors" },
     { "type": "color", "id": "color_navy", "label": "Dark / navy", "default": "#0E1116" },

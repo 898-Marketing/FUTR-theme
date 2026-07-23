@@ -392,16 +392,102 @@
       "settings": {
         "kicker": "What's inside",
         "heading": "Built for body & mind",
-        "color_ink": "#0E1116",
-        "color_paper": "#F5F4EE",
-        "color_muted": "#5A5F66",
-        "color_faint": "#8A9099",
-        "color_body": "#8FBF2E",
-        "color_body_pill": "#DCF29A",
-        "color_mind": "#3E82E6",
-        "color_mind_pill": "#BAD4FF",
-        "color_energy": "#F0642A",
-        "color_energy_pill": "#FFCDA9"
+        "color_ink": "#0e1116",
+        "color_paper": "#f5f4ee",
+        "color_muted": "#5a5f66",
+        "color_faint": "#8a9099",
+        "color_body": "#8fbf2e",
+        "color_body_pill": "#dcf29a",
+        "color_mind": "#3e82e6",
+        "color_mind_pill": "#bad4ff",
+        "color_energy": "#f0642a",
+        "color_energy_pill": "#ffcda9"
+      }
+    },
+    "dosage_table_VQ8Jg8": {
+      "type": "dosage-table",
+      "blocks": {
+        "dosage_row_33K9K3": {
+          "type": "dosage_row",
+          "settings": {
+            "age_range": "8-11 YRS",
+            "weight_lb": "50-100 LB",
+            "weight_kg": "22-45 KG",
+            "serving_amount": "1/2 Serving",
+            "water_amount": "4-6 oz Water",
+            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
+            "water_instruction_accent": ""
+          }
+        },
+        "dosage_row_bqDUiB": {
+          "type": "dosage_row",
+          "settings": {
+            "age_range": "12+ YRS",
+            "weight_lb": "100 LB+",
+            "weight_kg": "45 KG+",
+            "serving_amount": "1 Serving",
+            "water_amount": "6-8 oz Water",
+            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
+            "water_instruction_accent": "Can take a second serving later in the day."
+          }
+        },
+        "feature_CANHtt": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-30.png",
+            "label": "Hydration",
+            "description": "Supports fluid balance and performance"
+          }
+        },
+        "feature_G7ia9V": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-26.png",
+            "label": "Focus",
+            "description": "Supports mental clarity & reaction time"
+          }
+        },
+        "feature_YQcHz9": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-28.png",
+            "label": "Energy",
+            "description": "Helps fuel performance without stimulants"
+          }
+        },
+        "feature_H6Dr9f": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-25.png",
+            "label": "Performance",
+            "description": "Supports blood flow & endurance"
+          }
+        }
+      },
+      "block_order": [
+        "dosage_row_33K9K3",
+        "dosage_row_bqDUiB",
+        "feature_CANHtt",
+        "feature_G7ia9V",
+        "feature_YQcHz9",
+        "feature_H6Dr9f"
+      ],
+      "name": "Dosage Table",
+      "settings": {
+        "heading_prefix": "How much",
+        "heading_highlight": "Pregame",
+        "heading_subtitle": "should my athlete take?",
+        "color_navy": "#0E1116",
+        "color_accent": "#8FBF2E",
+        "color_water": "#1f88d2",
+        "age_column_label": "Age / Weight",
+        "serving_icon": "shopify://shop_images/Icons-24.png",
+        "serving_column_label": "Pregame",
+        "serving_column_sublabel": "1 scoop / stick = 1 serving",
+        "water_icon": "shopify://shop_images/Icons-29.png",
+        "water_column_label": "Water",
+        "footer_text_white": "",
+        "footer_text_accent": ""
       }
     }
   },
@@ -412,6 +498,7 @@
     "product-description",
     "product-recommendations",
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
-    "ingredients_grid_yzP3LB"
+    "ingredients_grid_yzP3LB",
+    "dosage_table_VQ8Jg8"
   ]
 }

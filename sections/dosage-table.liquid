@@ -1,0 +1,304 @@
+<!--
+  Dosage / serving guide table — editable per product.
+  Each row (age/weight, serving, water) and each footer feature is a block,
+  so a merchant can add this section to any product page and customize the
+  content, icons, and colors for that specific product.
+-->
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .dosage-table {
+    --dt-navy: {{ section.settings.color_navy }};
+    --dt-accent: {{ section.settings.color_accent }};
+    --dt-water: {{ section.settings.color_water }};
+    --dt-muted: #6b7280;
+  }
+
+  .dosage-table * { box-sizing: border-box; }
+  .dosage-table {
+    font-family: 'Archivo', system-ui, sans-serif;
+    color: var(--dt-navy);
+    background: #fff;
+    padding: 48px 40px;
+  }
+  @media (max-width: 640px) { .dosage-table { padding: 32px 20px; } }
+
+  .dosage-table__heading {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -.01em;
+    line-height: 1.02;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .dosage-table__heading .is-accent { color: var(--dt-accent); }
+
+  .dosage-table__subheading {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    margin: 4px 0 28px;
+  }
+
+  .dosage-table__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr;
+    border: 1px solid rgba(14, 17, 22, .08);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  @media (max-width: 700px) {
+    .dosage-table__grid { grid-template-columns: 1fr; }
+  }
+
+  .dt-col-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+  }
+  .dt-col-head img { width: 24px; height: 24px; flex: none; object-fit: contain; }
+  .dt-col-head .dt-col-head__sub {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+    opacity: .85;
+  }
+  .dt-col-head--age { background: var(--dt-navy); }
+  .dt-col-head--serving { background: var(--dt-accent); }
+  .dt-col-head--water { background: var(--dt-water); }
+
+  @media (max-width: 700px) {
+    .dt-col-head--serving,
+    .dt-col-head--water { display: none; }
+  }
+
+  .dt-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr;
+    border-top: 1px solid rgba(14, 17, 22, .08);
+  }
+  .dt-row:first-of-type { border-top: none; }
+  @media (max-width: 700px) {
+    .dt-row {
+      grid-template-columns: 1fr;
+      padding: 18px 20px;
+      row-gap: 10px;
+    }
+  }
+
+  .dt-cell {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media (max-width: 700px) { .dt-cell { padding: 0; } }
+
+  .dt-cell--age .dt-age-range { font-size: 26px; font-weight: 900; letter-spacing: -.01em; }
+  .dt-cell--age .dt-age-weight { font-size: 13px; font-weight: 600; color: var(--dt-muted); }
+
+  .dt-cell--inline { flex-direction: row; align-items: center; gap: 12px; }
+  .dt-cell--inline img { width: 26px; height: 26px; flex: none; object-fit: contain; }
+  .dt-serving-amount { font-size: 18px; font-weight: 800; }
+
+  .dt-water-amount { font-size: 18px; font-weight: 800; }
+  .dt-water-instruction { font-size: 12px; font-weight: 600; color: var(--dt-muted); margin-top: 2px; }
+  .dt-water-instruction--accent { color: var(--dt-water); margin-top: 6px; }
+
+  .dosage-table__footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 24px;
+    padding: 18px 24px;
+    background: var(--dt-navy);
+    border-radius: 10px;
+  }
+
+  .dt-footer-lead {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  .dt-footer-lead img { width: 30px; height: 30px; flex: none; object-fit: contain; }
+  .dt-footer-lead .is-accent { color: var(--dt-accent); }
+
+  .dt-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+  }
+  .dt-feature img { width: 26px; height: 26px; flex: none; object-fit: contain; }
+  .dt-feature__label { font-size: 13px; font-weight: 800; text-transform: uppercase; }
+  .dt-feature__desc { font-size: 11px; font-weight: 600; opacity: .75; max-width: 160px; }
+{%- endstyle -%}
+
+<div class="dosage-table">
+  <h2 class="dosage-table__heading">
+    {{ section.settings.heading_prefix }}
+    {%- if section.settings.heading_highlight != blank %} <span class="is-accent">{{ section.settings.heading_highlight }}</span>{% endif %}
+  </h2>
+  {%- if section.settings.heading_subtitle != blank -%}
+    <p class="dosage-table__subheading">{{ section.settings.heading_subtitle }}</p>
+  {%- endif -%}
+
+  <div class="dosage-table__grid">
+    <div class="dt-col-head dt-col-head--age">{{ section.settings.age_column_label }}</div>
+    <div class="dt-col-head dt-col-head--serving">
+      {%- if section.settings.serving_icon != blank -%}
+        <img src="{{ section.settings.serving_icon | image_url: width: 48 }}" alt="" width="24" height="24" loading="lazy">
+      {%- endif -%}
+      <span>
+        {{ section.settings.serving_column_label }}
+        {%- if section.settings.serving_column_sublabel != blank -%}
+          <span class="dt-col-head__sub">{{ section.settings.serving_column_sublabel }}</span>
+        {%- endif -%}
+      </span>
+    </div>
+    <div class="dt-col-head dt-col-head--water">
+      {%- if section.settings.water_icon != blank -%}
+        <img src="{{ section.settings.water_icon | image_url: width: 48 }}" alt="" width="24" height="24" loading="lazy">
+      {%- endif -%}
+      <span>{{ section.settings.water_column_label }}</span>
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'dosage_row' -%}
+        <div class="dt-row" {{ block.shopify_attributes }}>
+          <div class="dt-cell dt-cell--age">
+            <div class="dt-age-range">{{ block.settings.age_range }}</div>
+            {%- if block.settings.weight_lb != blank -%}<div class="dt-age-weight">{{ block.settings.weight_lb }}</div>{%- endif -%}
+            {%- if block.settings.weight_kg != blank -%}<div class="dt-age-weight">{{ block.settings.weight_kg }}</div>{%- endif -%}
+          </div>
+          <div class="dt-cell dt-cell--inline">
+            {%- if section.settings.serving_icon != blank -%}
+              <img src="{{ section.settings.serving_icon | image_url: width: 52 }}" alt="" width="26" height="26" loading="lazy">
+            {%- endif -%}
+            <span class="dt-serving-amount">{{ block.settings.serving_amount }}</span>
+          </div>
+          <div class="dt-cell dt-cell--inline">
+            {%- if section.settings.water_icon != blank -%}
+              <img src="{{ section.settings.water_icon | image_url: width: 52 }}" alt="" width="26" height="26" loading="lazy">
+            {%- endif -%}
+            <div>
+              <div class="dt-water-amount">{{ block.settings.water_amount }}</div>
+              {%- if block.settings.water_instruction != blank -%}
+                <div class="dt-water-instruction">{{ block.settings.water_instruction }}</div>
+              {%- endif -%}
+              {%- if block.settings.water_instruction_accent != blank -%}
+                <div class="dt-water-instruction dt-water-instruction--accent">{{ block.settings.water_instruction_accent }}</div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="dosage-table__footer">
+    {%- if section.settings.footer_text_white != blank or section.settings.footer_text_accent != blank -%}
+      <div class="dt-footer-lead">
+        {%- render 'theme-icon', icon: 'checkmark', iconSize: 20 -%}
+        <span>{{ section.settings.footer_text_white }} <span class="is-accent">{{ section.settings.footer_text_accent }}</span></span>
+      </div>
+    {%- endif -%}
+
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'feature' -%}
+        <div class="dt-feature" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon != blank -%}
+            <img src="{{ block.settings.icon | image_url: width: 52 }}" alt="" width="26" height="26" loading="lazy">
+          {%- endif -%}
+          <div>
+            <div class="dt-feature__label">{{ block.settings.label }}</div>
+            {%- if block.settings.description != blank -%}
+              <div class="dt-feature__desc">{{ block.settings.description }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Dosage Table",
+  "settings": [
+    { "type": "header", "content": "Heading" },
+    { "type": "text", "id": "heading_prefix", "label": "Heading (before product name)", "default": "How much" },
+    { "type": "text", "id": "heading_highlight", "label": "Product name (highlighted)", "default": "Pregame" },
+    { "type": "text", "id": "heading_subtitle", "label": "Subheading", "default": "should my athlete take?" },
+
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "color_navy", "label": "Dark / navy", "default": "#0E1116" },
+    { "type": "color", "id": "color_accent", "label": "Serving accent color", "default": "#8FBF2E" },
+    { "type": "color", "id": "color_water", "label": "Water accent color", "default": "#1f88d2" },
+
+    { "type": "header", "content": "Column headers" },
+    { "type": "text", "id": "age_column_label", "label": "Age/weight column label", "default": "Age / Weight" },
+    { "type": "image_picker", "id": "serving_icon", "label": "Serving icon", "info": "Used in the column header and in every row." },
+    { "type": "text", "id": "serving_column_label", "label": "Serving column label", "default": "Pregame" },
+    { "type": "text", "id": "serving_column_sublabel", "label": "Serving column sublabel", "default": "1 scoop / stick = 1 serving" },
+    { "type": "image_picker", "id": "water_icon", "label": "Water icon", "info": "Used in the column header and in every row." },
+    { "type": "text", "id": "water_column_label", "label": "Water column label", "default": "Water" },
+
+    { "type": "header", "content": "Footer bar" },
+    { "type": "text", "id": "footer_text_white", "label": "Footer text (white)", "default": "The right fuel." },
+    { "type": "text", "id": "footer_text_accent", "label": "Footer text (accent color)", "default": "At the right time." }
+  ],
+  "blocks": [
+    {
+      "type": "dosage_row",
+      "name": "Dosage row",
+      "settings": [
+        { "type": "text", "id": "age_range", "label": "Age range", "default": "8-11 YRS" },
+        { "type": "text", "id": "weight_lb", "label": "Weight (lb)", "default": "50-100 LB" },
+        { "type": "text", "id": "weight_kg", "label": "Weight (kg)", "default": "22-45 KG" },
+        { "type": "text", "id": "serving_amount", "label": "Serving amount", "default": "1/2 Serving" },
+        { "type": "text", "id": "water_amount", "label": "Water amount", "default": "4-6 oz Water" },
+        { "type": "text", "id": "water_instruction", "label": "Water instruction", "default": "Drink entire contents 15-30 mins prior to activity." },
+        { "type": "text", "id": "water_instruction_accent", "label": "Water instruction (accent, optional)", "info": "e.g. \"Can take a second serving later in the day.\"" }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Hydration" },
+        { "type": "text", "id": "description", "label": "Description", "default": "Supports fluid balance and performance" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dosage Table",
+      "blocks": [
+        { "type": "dosage_row", "settings": { "age_range": "8-11 YRS", "weight_lb": "50-100 LB", "weight_kg": "22-45 KG", "serving_amount": "1/2 Serving", "water_amount": "4-6 oz Water", "water_instruction": "Drink entire contents 15-30 mins prior to activity." } },
+        { "type": "dosage_row", "settings": { "age_range": "12+ YRS", "weight_lb": "100 LB+", "weight_kg": "45 KG+", "serving_amount": "1 Serving", "water_amount": "6-8 oz Water", "water_instruction": "Drink entire contents 15-30 mins prior to activity.", "water_instruction_accent": "Can take a second serving later in the day." } },
+        { "type": "feature", "settings": { "label": "Hydration", "description": "Supports fluid balance and performance" } },
+        { "type": "feature", "settings": { "label": "Focus", "description": "Supports mental clarity & reaction time" } },
+        { "type": "feature", "settings": { "label": "Energy", "description": "Helps fuel performance without stimulants" } },
+        { "type": "feature", "settings": { "label": "Performance", "description": "Supports blood flow & endurance" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

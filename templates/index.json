@@ -465,26 +465,10 @@
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
           }
-        },
-        "image_9rJhCH": {
-          "type": "image",
-          "settings": {
-            "image_link": "",
-            "image_bottom_spacing": 5
-          }
-        },
-        "image_dzDgk7": {
-          "type": "image",
-          "settings": {
-            "image_link": "",
-            "image_bottom_spacing": 20
-          }
         }
       },
       "block_order": [
-        "heading_UiRkcP",
-        "image_9rJhCH",
-        "image_dzDgk7"
+        "heading_UiRkcP"
       ],
       "settings": {
         "height_desktop": "550px",

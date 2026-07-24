@@ -1,0 +1,634 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-form": {
+      "type": "template--product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_font": "h2",
+            "margin_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_font": "h3",
+            "shipping_policy": false,
+            "tax_included": false,
+            "margin_bottom": 20
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "variant_style": "swatches",
+            "hide_out_of_stock_variants": false,
+            "thumbnail_changes_variant": false,
+            "size_guide_label": "Size guide",
+            "size_guide_page": "",
+            "size_option_name": "Size",
+            "size_guide_override_heading_font_size": false,
+            "size_guide_heading_font_size": 24,
+            "margin_bottom": 30
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_smart_checkout": true,
+            "enable_gift_card_recipient_form": true,
+            "margin_bottom": 30,
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "product_description_e48Ujx": {
+          "type": "product-description",
+          "settings": {
+            "collapsible_tab": false,
+            "heading": "Description",
+            "open_by_default": false,
+            "margin_bottom": 30
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "options",
+        "buy_buttons",
+        "product_description_e48Ujx"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "enable_sticky_add_to_cart": false,
+        "media_position": "left",
+        "image_size": "large",
+        "image_shape": "original",
+        "show_only_variant_media": false,
+        "image-display": "paginated",
+        "thumbnail_position": "left",
+        "image_display_mobile": "paginated",
+        "enable_video_loop": true,
+        "enable_autoplay": false,
+        "show_video_controls": false,
+        "override_form_labels_size": false,
+        "labels_font_size": 20,
+        "app_margin_bottom": 20,
+        "product_form_bg_override": false,
+        "product_form_bg": "#e4ebf1"
+      }
+    },
+    "image_with_text_overlay_Q7ExmH": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_Jerb6R": {
+          "type": "heading",
+          "settings": {
+            "title": "lorem",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_cRPmfU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_Jerb6R",
+        "text_cRPmfU"
+      ],
+      "name": "t:sections.image--image-with-text-overlay.presets.name",
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "accordion_with_image_cx6zdK": {
+      "type": "accordion-with-image",
+      "blocks": {
+        "accordion_mkNgHY": {
+          "type": "accordion",
+          "repeater": "{{ product.metafields.custom.the_why.value }}",
+          "settings": {
+            "accordion_header": "{{ block.repeater.question.value }}",
+            "text": "{{ block.repeater.answer | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_mkNgHY"
+      ],
+      "name": "t:sections.product--accordion-with-image.presets.name",
+      "settings": {
+        "section_title": "",
+        "section_description": "",
+        "section_header_alignment": "center",
+        "faq_icon": "plus_minus",
+        "image_max_width": 350,
+        "title": "",
+        "text": "",
+        "link": "",
+        "button_text": "",
+        "image_position_desktop": "right",
+        "image_position_mobile": "top",
+        "section_width": "content",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "image--background-color": "rgba(0,0,0,0)",
+        "image--text-color": "#333333",
+        "button_background_color": "#242424",
+        "button_text_color": "#ffffff",
+        "colors": "light"
+      }
+    },
+    "product-description": {
+      "type": "template--product--description",
+      "blocks": {
+        "product-description": {
+          "type": "product_description",
+          "settings": {
+            "collapsible_tab": true,
+            "title": "Description",
+            "open_by_default": false
+          }
+        },
+        "collapsible-tab-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Product details",
+            "open_by_default": false,
+            "text": "<p>Share some information about your product</p>",
+            "page": ""
+          }
+        },
+        "collapsible-tab-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "title": "Product details",
+            "open_by_default": false,
+            "text": "<p>Share some information about your product</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "product-description",
+        "collapsible-tab-1",
+        "collapsible-tab-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "open_close_icon": "plus_minus",
+        "section_width": "content",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white",
+        "enable_readmore": false
+      }
+    },
+    "product-recommendations": {
+      "type": "template--product--recommendations",
+      "settings": {
+        "title": "You may also like",
+        "description": "",
+        "section_header_alignment": "center",
+        "layout_style": "slider",
+        "products_to_show": 8,
+        "grid-desktop": 4,
+        "grid-mobile": "2",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false,
+        "colors": "light",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5": {
+      "type": "template--product--recently-viewed",
+      "disabled": true,
+      "settings": {
+        "title": "Recently viewed products",
+        "description": "",
+        "section_header_alignment": "center",
+        "layout_style": "slider",
+        "products_to_show": 8,
+        "grid-desktop": 4,
+        "grid-mobile": "2",
+        "section_padding_top": 0,
+        "section_padding_bottom": 60,
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false,
+        "colors": "light",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "ingredients_grid_yzP3LB": {
+      "type": "ingredients-grid",
+      "blocks": {
+        "ingredient_FDDxKh": {
+          "type": "ingredient",
+          "settings": {
+            "category": "body",
+            "category_label": "",
+            "name": "",
+            "sub": "",
+            "dose": "",
+            "unit": "",
+            "description": "",
+            "why_it_helps": ""
+          }
+        },
+        "ingredient_gNG3ga": {
+          "type": "ingredient",
+          "settings": {
+            "category": "body",
+            "category_label": "Body",
+            "name": "Taurine",
+            "sub": "",
+            "dose": "1000",
+            "unit": "mg",
+            "description": "<p>An amino acid produced by the body and found in foods like fish, meat, and even breast milk.</p>",
+            "why_it_helps": "<p>Supports hydration, electrolyte balance, and normal muscle function during activity.</p>"
+          }
+        },
+        "ingredient_nh3i4w": {
+          "type": "ingredient",
+          "settings": {
+            "category": "mind",
+            "category_label": "Mind",
+            "name": "Citicoline",
+            "sub": "Cognizin®",
+            "dose": "250",
+            "unit": "mg",
+            "description": "<p>A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.</p>",
+            "why_it_helps": "<p>Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field.</p>"
+          }
+        },
+        "ingredient_AhixFb": {
+          "type": "ingredient",
+          "settings": {
+            "category": "mind",
+            "category_label": "Mind",
+            "name": "L-Tyrosine",
+            "sub": "",
+            "dose": "250",
+            "unit": "mg",
+            "description": "<p>An amino acid the body uses to help support focus and concentration.</p>",
+            "why_it_helps": "<p>Supports concentration, reaction time, and composure under stress, keeping youth athletes mentally sharp.</p>"
+          }
+        },
+        "ingredient_iCKEC4": {
+          "type": "ingredient",
+          "settings": {
+            "category": "energy",
+            "category_label": "Energy",
+            "name": "Vitamin B6",
+            "sub": "as Pyridoxine HCl",
+            "dose": "1",
+            "unit": "mg",
+            "description": "<p>A water-soluble B vitamin that helps convert food into energy and supports normal nervous system function.</p>",
+            "why_it_helps": "<p>Helps support energy metabolism, focus, and normal muscle function.</p>"
+          }
+        },
+        "ingredient_8H4jkY": {
+          "type": "ingredient",
+          "settings": {
+            "category": "energy",
+            "category_label": "Energy",
+            "name": "Vitamin B12",
+            "sub": "as Methylcobalamin",
+            "dose": "2",
+            "unit": "mcg",
+            "description": "<p>An essential B-vitamin needed for red blood cell formation and nervous system health.</p>",
+            "why_it_helps": "<p>Supports oxygen transport in the blood and energy metabolism.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_FDDxKh",
+        "ingredient_gNG3ga",
+        "ingredient_nh3i4w",
+        "ingredient_AhixFb",
+        "ingredient_iCKEC4",
+        "ingredient_8H4jkY"
+      ],
+      "name": "Ingredients Grid",
+      "settings": {
+        "kicker": "What's inside",
+        "heading": "Built for body & mind",
+        "color_ink": "#0e1116",
+        "color_paper": "#f5f4ee",
+        "color_muted": "#5a5f66",
+        "color_faint": "#8a9099",
+        "color_body": "#8fbf2e",
+        "color_body_pill": "#dcf29a",
+        "color_mind": "#3e82e6",
+        "color_mind_pill": "#bad4ff",
+        "color_energy": "#f0642a",
+        "color_energy_pill": "#ffcda9"
+      }
+    },
+    "dosage_table_VQ8Jg8": {
+      "type": "dosage-table",
+      "blocks": {
+        "dosage_row_33K9K3": {
+          "type": "dosage_row",
+          "settings": {
+            "age_range": "8-11 YRS",
+            "weight_lb": "50-100 LB",
+            "weight_kg": "22-45 KG",
+            "serving_amount": "1/2 Serving",
+            "water_amount": "4-6 oz Water",
+            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
+            "water_instruction_accent": ""
+          }
+        },
+        "dosage_row_bqDUiB": {
+          "type": "dosage_row",
+          "settings": {
+            "age_range": "12+ YRS",
+            "weight_lb": "100 LB+",
+            "weight_kg": "45 KG+",
+            "serving_amount": "1 Serving",
+            "water_amount": "6-8 oz Water",
+            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
+            "water_instruction_accent": "Can take a second serving later in the day."
+          }
+        },
+        "feature_CANHtt": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-30.png",
+            "label": "Hydration",
+            "description": "Supports fluid balance and performance"
+          }
+        },
+        "feature_G7ia9V": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-26.png",
+            "label": "Focus",
+            "description": "Supports mental clarity & reaction time"
+          }
+        },
+        "feature_YQcHz9": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-28.png",
+            "label": "Energy",
+            "description": "Helps fuel performance without stimulants"
+          }
+        },
+        "feature_H6Dr9f": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-25.png",
+            "label": "Performance",
+            "description": "Supports blood flow & endurance"
+          }
+        }
+      },
+      "block_order": [
+        "dosage_row_33K9K3",
+        "dosage_row_bqDUiB",
+        "feature_CANHtt",
+        "feature_G7ia9V",
+        "feature_YQcHz9",
+        "feature_H6Dr9f"
+      ],
+      "name": "Dosage Table",
+      "settings": {
+        "background_image": "shopify://shop_images/recover-collection.jpg",
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 55,
+        "heading_prefix": "How much",
+        "heading_highlight": "{{ product.title }}",
+        "heading_subtitle": "should my athlete take?",
+        "color_heading": "#ffffff",
+        "color_navy": "#0e1116",
+        "color_accent": "#8fbf2e",
+        "color_water": "#1f88d2",
+        "header_icon_size": 54,
+        "row_icon_size": 54,
+        "footer_icon_size": 40,
+        "feature_icon_size": 54,
+        "age_column_label": "Age / Weight",
+        "serving_icon": "shopify://shop_images/Icons-24.png",
+        "serving_column_label": "{{ product.title }}",
+        "serving_column_sublabel": "1 scoop / stick = 1 serving",
+        "water_icon": "shopify://shop_images/Icons-29.png",
+        "water_column_label": "Water",
+        "footer_text_white": "",
+        "footer_text_accent": ""
+      }
+    },
+    "template_product_info_columns_TAWPjr": {
+      "type": "template--product--info-columns",
+      "blocks": {
+        "image_and_text_p78Ek9": {
+          "type": "image_and_text",
+          "settings": {
+            "image": "shopify://shop_images/FUTR-Icons-PRE.png",
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Clean energy sharper focus, and steady endurance for a strong start and more confident performance.</p>",
+            "button_link": "",
+            "button_text": "SHOP NOW"
+          }
+        },
+        "image_and_text_6hMhjG": {
+          "type": "image_and_text",
+          "settings": {
+            "image": "shopify://shop_images/FUTR-Icons-INTRA.png",
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Electrolytes, fuel, and hydration support to power working muscles and sustain performance through every quarter, inning, or event.</p>",
+            "button_link": "",
+            "button_text": "SHOP NOW"
+          }
+        },
+        "image_and_text_yJG9P3": {
+          "type": "image_and_text",
+          "settings": {
+            "image": "shopify://shop_images/FUTR-Icons-DAILY.png",
+            "grid_image_size": "square",
+            "heading": "",
+            "text": "<p>Everyday essentials to rebuild, recharge, and support revcovery, wellness and development.</p>",
+            "button_link": "",
+            "button_text": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "image_and_text_p78Ek9",
+        "image_and_text_6hMhjG",
+        "image_and_text_yJG9P3"
+      ],
+      "name": "t:sections.template--product--info-columns.presets.name",
+      "settings": {
+        "title": "THE FUTR ATHLETE SYSTEM. <span style=\" color:#8fbf30;\">BUILT FOR EVERY PHASE OF PLAY.</span>",
+        "description": "",
+        "section_header_alignment": "center",
+        "maximum_width": 500,
+        "override_border_radius": false,
+        "buttons_style": "underlined",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "hover_navigation_desktop": "left-and-right",
+        "columns_per_row": 3,
+        "vertical_alignment": "top",
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "slider_height_mobile": "adaptive",
+        "section_width": "full",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
+    "image_with_text_overlay_dc7Fbw": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_dyAWir": {
+          "type": "heading",
+          "settings": {
+            "title": "lorem",
+            "font_size_desktop": 28,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_PXf4Nj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_dyAWir",
+        "text_PXf4Nj"
+      ],
+      "name": "t:sections.image--image-with-text-overlay.presets.name",
+      "settings": {
+        "height_desktop": "450px",
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "accordion_fYz9RV": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_bdLkjk": {
+          "type": "tab_content",
+          "repeater": "{{ product.metafields.custom.faqs.value }}",
+          "settings": {
+            "question": "{{ block.repeater.question.value }}",
+            "open_by_default": false,
+            "text": "{{ block.repeater.answer | metafield_tag }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_bdLkjk"
+      ],
+      "name": "t:sections.accordion.presets.name",
+      "settings": {
+        "title": "Pregame QA",
+        "description": "",
+        "section_header_alignment": "center",
+        "faq_icon": "plus_minus",
+        "section_width": "narrow",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "image_with_text_overlay_Q7ExmH",
+    "accordion_with_image_cx6zdK",
+    "product-description",
+    "product-recommendations",
+    "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
+    "ingredients_grid_yzP3LB",
+    "dosage_table_VQ8Jg8",
+    "template_product_info_columns_TAWPjr",
+    "image_with_text_overlay_dc7Fbw",
+    "accordion_fYz9RV"
+  ]
+}

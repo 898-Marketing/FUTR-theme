@@ -1,0 +1,468 @@
+<!--
+  Dosage / serving guide table — 4-column variant (Age/Weight + 3 duration
+  tiers), for products like Gametime where serving size scales with activity
+  duration rather than a flat serving/water split. Each row is a block, same
+  editable-per-product pattern as sections/dosage-table.liquid.
+-->
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .dosage-table-4c {
+    --dt4-navy: {{ section.settings.color_navy }};
+    --dt4-tier1: {{ section.settings.color_tier1 }};
+    --dt4-tier2: {{ section.settings.color_tier2 }};
+    --dt4-tier3: {{ section.settings.color_tier3 }};
+    --dt4-heading-color: {{ section.settings.color_heading }};
+    --dt4-muted: #6b7280;
+    --dt4-header-icon-size: {{ section.settings.header_icon_size }}px;
+    --dt4-row-icon-size: {{ section.settings.row_icon_size }}px;
+    --dt4-footer-icon-size: {{ section.settings.footer_icon_size }}px;
+    --dt4-feature-icon-size: {{ section.settings.feature_icon_size }}px;
+  }
+
+  .dosage-table-4c * { box-sizing: border-box; }
+  .dosage-table-4c {
+    position: relative;
+    font-family: 'Archivo', system-ui, sans-serif;
+    color: var(--dt4-navy);
+    background: #fff;
+    padding: 48px 40px;
+    {%- if section.settings.background_image != blank -%}
+      background-image: url({{ section.settings.background_image | image_url: width: 2000 }});
+      background-size: cover;
+      background-position: center;
+    {%- endif -%}
+  }
+  @media (max-width: 640px) { .dosage-table-4c { padding: 32px 20px; } }
+
+  .dosage-table-4c__overlay {
+    position: absolute;
+    inset: 0;
+    background: {{ section.settings.background_overlay_color }};
+    opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};
+    pointer-events: none;
+  }
+
+  .dosage-table-4c__inner { position: relative; }
+
+  .dosage-table-4c__heading {
+    color: var(--dt4-heading-color);
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -.01em;
+    line-height: 1.02;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .dosage-table-4c__heading .is-accent { color: var(--dt4-tier1); }
+
+  .dosage-table-4c__subheading {
+    color: var(--dt4-heading-color);
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    margin: 4px 0 28px;
+  }
+  @media (max-width: 640px) {
+    .dosage-table-4c__heading { font-size: 24px; }
+    .dosage-table-4c__subheading { font-size: 15px; margin-bottom: 20px; }
+  }
+
+  .dt4-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr 1.1fr 1.2fr;
+    border: 1px solid rgba(14, 17, 22, .08);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  @media (max-width: 800px) {
+    .dt4-grid { grid-template-columns: 1fr; }
+  }
+
+  .dt4-col-head {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 16px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    line-height: 1.2;
+  }
+  .dt4-col-head img { width: var(--dt4-header-icon-size); height: var(--dt4-header-icon-size); flex: none; object-fit: contain; }
+  .dt4-col-head--age { background: var(--dt4-navy); }
+  .dt4-col-head--tier1 { background: var(--dt4-tier1); }
+  .dt4-col-head--tier2 { background: var(--dt4-tier2); }
+  .dt4-col-head--tier3 { background: var(--dt4-tier3); }
+  @media (max-width: 800px) { .dt4-col-head { flex-wrap: wrap; } }
+
+  .dt4-row {
+    min-width: 0;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr 1.1fr 1.2fr;
+    border-top: 1px solid rgba(14, 17, 22, .08);
+    background: #fff;
+  }
+  .dt4-row:first-of-type { border-top: none; }
+  @media (max-width: 800px) {
+    .dt4-row { grid-template-columns: 1fr; padding: 16px; row-gap: 12px; }
+  }
+
+  .dt4-cell {
+    min-width: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  @media (max-width: 800px) { .dt4-cell { padding: 0; } }
+
+  .dt4-age-range { font-size: 24px; font-weight: 900; letter-spacing: -.01em; text-transform: uppercase; }
+  .dt4-age-weight { font-size: 12px; font-weight: 600; color: var(--dt4-muted); text-transform: uppercase; }
+
+  .dt4-option { display: flex; align-items: flex-start; gap: 10px; }
+  .dt4-option__icons { display: flex; flex: none; gap: 2px; padding-top: 2px; }
+  .dt4-option__icons img { width: var(--dt4-row-icon-size); height: var(--dt4-row-icon-size); object-fit: contain; }
+  .dt4-option__icons img.is-outline { opacity: .35; }
+  .dt4-option__text { min-width: 0; }
+  .dt4-serving { font-size: 15px; font-weight: 800; text-transform: uppercase; }
+  .dt4-instruction { font-size: 11px; font-weight: 600; color: var(--dt4-muted); text-transform: uppercase; margin-top: 2px; }
+  .dt4-note { font-size: 10.5px; font-weight: 700; text-transform: uppercase; margin-top: 2px; }
+
+  .dosage-table-4c__footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 24px;
+    padding: 20px 24px;
+    background: var(--dt4-navy);
+    border-radius: 10px;
+  }
+  @media (max-width: 640px) { .dosage-table-4c__footer { gap: 16px; } }
+
+  .dt4-footer-lead {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+  }
+  .dt4-footer-lead__icon-wrap {
+    flex: none;
+    width: calc(var(--dt4-footer-icon-size) * 1.7);
+    height: calc(var(--dt4-footer-icon-size) * 1.7);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dt4-footer-lead__icon-wrap img { width: var(--dt4-footer-icon-size); height: var(--dt4-footer-icon-size); object-fit: contain; }
+  .dt4-footer-lead__text { min-width: 0; }
+  .dt4-footer-lead__heading { font-weight: 800; font-size: 15px; text-transform: uppercase; }
+  .dt4-footer-lead__heading .is-accent { color: var(--dt4-tier1); }
+  .dt4-footer-lead__sub { font-size: 12.5px; font-weight: 500; color: rgba(255, 255, 255, .7); margin-top: 4px; max-width: 320px; }
+
+  .dt4-feature { min-width: 0; display: flex; align-items: center; gap: 10px; color: #fff; }
+  .dt4-feature > div { min-width: 0; }
+  .dt4-feature__icon-wrap {
+    flex: none;
+    width: calc(var(--dt4-feature-icon-size) * 1.7);
+    height: calc(var(--dt4-feature-icon-size) * 1.7);
+    border-radius: 50%;
+    border: 2px solid var(--dt4-tier1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dt4-feature__icon-wrap img { width: var(--dt4-feature-icon-size); height: var(--dt4-feature-icon-size); object-fit: contain; }
+  .dt4-feature__label { font-size: 13px; font-weight: 800; text-transform: uppercase; }
+  .dt4-feature__desc { font-size: 11px; font-weight: 600; text-transform: uppercase; opacity: .75; max-width: 160px; }
+{%- endstyle -%}
+
+<div class="dosage-table-4c">
+  {%- if section.settings.background_image != blank -%}
+    <div class="dosage-table-4c__overlay"></div>
+  {%- endif -%}
+  <div class="dosage-table-4c__inner">
+    <h2 class="dosage-table-4c__heading">
+      {{ section.settings.heading_prefix }}
+      {%- if section.settings.heading_highlight != blank %} <span class="is-accent">{{ section.settings.heading_highlight }}</span>{% endif %}
+    </h2>
+    {%- if section.settings.heading_subtitle != blank -%}
+      <p class="dosage-table-4c__subheading">{{ section.settings.heading_subtitle }}</p>
+    {%- endif -%}
+
+    <div class="dt4-grid">
+      <div class="dt4-col-head dt4-col-head--age">{{ section.settings.age_column_label }}</div>
+      <div class="dt4-col-head dt4-col-head--tier1">
+        {%- if section.settings.tier1_header_icon != blank -%}
+          <img src="{{ section.settings.tier1_header_icon | image_url: width: 120 }}" alt="" loading="lazy">
+        {%- endif -%}
+        <span>{{ section.settings.tier1_label }}</span>
+      </div>
+      <div class="dt4-col-head dt4-col-head--tier2">
+        {%- if section.settings.tier2_header_icon != blank -%}
+          <img src="{{ section.settings.tier2_header_icon | image_url: width: 120 }}" alt="" loading="lazy">
+        {%- endif -%}
+        <span>{{ section.settings.tier2_label }}</span>
+      </div>
+      <div class="dt4-col-head dt4-col-head--tier3">
+        {%- if section.settings.tier3_header_icon != blank -%}
+          <img src="{{ section.settings.tier3_header_icon | image_url: width: 120 }}" alt="" loading="lazy">
+        {%- endif -%}
+        <span>{{ section.settings.tier3_label }}</span>
+      </div>
+
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'dosage_row' -%}
+          <div class="dt4-row" {{ block.shopify_attributes }}>
+            <div class="dt4-cell">
+              <div class="dt4-age-range">{{ block.settings.age_range }}</div>
+              {%- if block.settings.weight_lb != blank -%}
+                <div class="dt4-age-weight">{{ block.settings.weight_lb }}</div>
+              {%- endif -%}
+            </div>
+
+            <div class="dt4-cell">
+              <div class="dt4-option">
+                <div class="dt4-option__icons">
+                  {%- for i in (1..block.settings.tier1_filled) -%}
+                    {%- if section.settings.tier1_row_icon != blank -%}
+                      <img src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- for i in (1..block.settings.tier1_outline) -%}
+                    {%- if section.settings.tier1_row_icon != blank -%}
+                      <img class="is-outline" src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+                <div class="dt4-option__text">
+                  {%- if block.settings.tier1_serving != blank -%}<div class="dt4-serving">{{ block.settings.tier1_serving }}</div>{%- endif -%}
+                  {%- if block.settings.tier1_instruction != blank -%}<div class="dt4-instruction">{{ block.settings.tier1_instruction }}</div>{%- endif -%}
+                </div>
+              </div>
+              {%- if block.settings.tier1b_serving != blank -%}
+                <div class="dt4-option">
+                  <div class="dt4-option__icons">
+                    {%- for i in (1..block.settings.tier1b_filled) -%}
+                      {%- if section.settings.tier1_row_icon != blank -%}
+                        <img src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                      {%- endif -%}
+                    {%- endfor -%}
+                    {%- for i in (1..block.settings.tier1b_outline) -%}
+                      {%- if section.settings.tier1_row_icon != blank -%}
+                        <img class="is-outline" src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+                  <div class="dt4-option__text">
+                    <div class="dt4-serving">{{ block.settings.tier1b_serving }}</div>
+                    {%- if block.settings.tier1b_instruction != blank -%}<div class="dt4-instruction">{{ block.settings.tier1b_instruction }}</div>{%- endif -%}
+                    {%- if block.settings.tier1b_note != blank -%}<div class="dt4-note" style="color: var(--dt4-tier1);">{{ block.settings.tier1b_note }}</div>{%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+
+            <div class="dt4-cell">
+              <div class="dt4-option">
+                <div class="dt4-option__icons">
+                  {%- for i in (1..block.settings.tier2_filled) -%}
+                    {%- if section.settings.tier2_row_icon != blank -%}
+                      <img src="{{ section.settings.tier2_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- for i in (1..block.settings.tier2_outline) -%}
+                    {%- if section.settings.tier2_row_icon != blank -%}
+                      <img class="is-outline" src="{{ section.settings.tier2_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+                <div class="dt4-option__text">
+                  {%- if block.settings.tier2_serving != blank -%}<div class="dt4-serving">{{ block.settings.tier2_serving }}</div>{%- endif -%}
+                  {%- if block.settings.tier2_instruction != blank -%}<div class="dt4-instruction">{{ block.settings.tier2_instruction }}</div>{%- endif -%}
+                </div>
+              </div>
+            </div>
+
+            <div class="dt4-cell">
+              <div class="dt4-option">
+                <div class="dt4-option__icons">
+                  {%- for i in (1..block.settings.tier3_filled) -%}
+                    {%- if section.settings.tier3_row_icon != blank -%}
+                      <img src="{{ section.settings.tier3_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- for i in (1..block.settings.tier3_outline) -%}
+                    {%- if section.settings.tier3_row_icon != blank -%}
+                      <img class="is-outline" src="{{ section.settings.tier3_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+                <div class="dt4-option__text">
+                  {%- if block.settings.tier3_serving != blank -%}<div class="dt4-serving">{{ block.settings.tier3_serving }}</div>{%- endif -%}
+                  {%- if block.settings.tier3_instruction != blank -%}<div class="dt4-instruction">{{ block.settings.tier3_instruction }}</div>{%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="dosage-table-4c__footer">
+      {%- if section.settings.footer_text_white != blank -%}
+        <div class="dt4-footer-lead">
+          {%- if section.settings.footer_icon != blank -%}
+            <div class="dt4-footer-lead__icon-wrap">
+              <img src="{{ section.settings.footer_icon | image_url: width: 120 }}" alt="" loading="lazy">
+            </div>
+          {%- endif -%}
+          <div class="dt4-footer-lead__text">
+            <div class="dt4-footer-lead__heading">
+              {{ section.settings.footer_text_white }}
+              {%- if section.settings.footer_text_accent != blank %} <span class="is-accent">{{ section.settings.footer_text_accent }}</span>{% endif %}
+            </div>
+            {%- if section.settings.footer_subtext != blank -%}
+              <div class="dt4-footer-lead__sub">{{ section.settings.footer_subtext }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'feature' -%}
+          <div class="dt4-feature" {{ block.shopify_attributes }}>
+            {%- if block.settings.icon != blank -%}
+              <div class="dt4-feature__icon-wrap">
+                <img src="{{ block.settings.icon | image_url: width: 120 }}" alt="" loading="lazy">
+              </div>
+            {%- endif -%}
+            <div>
+              <div class="dt4-feature__label">{{ block.settings.label }}</div>
+              {%- if block.settings.description != blank -%}
+                <div class="dt4-feature__desc">{{ block.settings.description }}</div>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Dosage Table 4 Columns",
+  "settings": [
+    { "type": "header", "content": "Background" },
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "color", "id": "background_overlay_color", "label": "Overlay color", "default": "#ffffff" },
+    { "type": "range", "id": "background_overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 70 },
+
+    { "type": "header", "content": "Heading" },
+    { "type": "text", "id": "heading_prefix", "label": "Heading (before product name)", "default": "How much" },
+    { "type": "text", "id": "heading_highlight", "label": "Product name (highlighted)", "default": "Gametime" },
+    { "type": "text", "id": "heading_subtitle", "label": "Subheading", "default": "should my athlete take?" },
+    { "type": "color", "id": "color_heading", "label": "Heading color", "default": "#0E1116" },
+
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "color_navy", "label": "Dark / navy (age column + footer)", "default": "#0E1116" },
+    { "type": "color", "id": "color_tier1", "label": "Tier 1 accent (e.g. 30-60 min)", "default": "#8FBF2E" },
+    { "type": "color", "id": "color_tier2", "label": "Tier 2 accent (e.g. 60-90 min)", "default": "#1f88d2" },
+    { "type": "color", "id": "color_tier3", "label": "Tier 3 accent (e.g. 90+ min)", "default": "#F0642A" },
+
+    { "type": "header", "content": "Icon sizes" },
+    { "type": "range", "id": "header_icon_size", "label": "Column header icon size", "min": 12, "max": 48, "step": 2, "unit": "px", "default": 20 },
+    { "type": "range", "id": "row_icon_size", "label": "Row serving-icon size", "min": 16, "max": 48, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "footer_icon_size", "label": "Footer icon size", "min": 16, "max": 48, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "feature_icon_size", "label": "Feature icon size", "min": 16, "max": 48, "step": 2, "unit": "px", "default": 22 },
+
+    { "type": "header", "content": "Column headers" },
+    { "type": "text", "id": "age_column_label", "label": "Age/weight column label", "default": "Age / Weight" },
+    { "type": "image_picker", "id": "tier1_header_icon", "label": "Tier 1 header icon" },
+    { "type": "text", "id": "tier1_label", "label": "Tier 1 label", "default": "30-60 Min" },
+    { "type": "image_picker", "id": "tier2_header_icon", "label": "Tier 2 header icon" },
+    { "type": "text", "id": "tier2_label", "label": "Tier 2 label", "default": "60-90 Min" },
+    { "type": "image_picker", "id": "tier3_header_icon", "label": "Tier 3 header icon" },
+    { "type": "text", "id": "tier3_label", "label": "Tier 3 label", "default": "90+ Min or All Day Tournaments" },
+
+    { "type": "header", "content": "Row serving icons" },
+    { "type": "image_picker", "id": "tier1_row_icon", "label": "Tier 1 serving icon", "info": "Shown once per serving in each row. A second, dimmed copy represents a partial/optional serving." },
+    { "type": "image_picker", "id": "tier2_row_icon", "label": "Tier 2 serving icon" },
+    { "type": "image_picker", "id": "tier3_row_icon", "label": "Tier 3 serving icon" },
+
+    { "type": "header", "content": "Footer bar" },
+    { "type": "image_picker", "id": "footer_icon", "label": "Footer icon" },
+    { "type": "text", "id": "footer_text_white", "label": "Footer heading", "default": "Every athlete" },
+    { "type": "text", "id": "footer_text_accent", "label": "Footer heading (accent color, optional)", "default": "is different" },
+    { "type": "text", "id": "footer_subtext", "label": "Footer subtext", "default": "Adjust serving size based on your athlete's age, body size, sweat rate, intensity, climate and individual needs." }
+  ],
+  "blocks": [
+    {
+      "type": "dosage_row",
+      "name": "Dosage row",
+      "settings": [
+        { "type": "text", "id": "age_range", "label": "Age range", "default": "8-11 YRS" },
+        { "type": "text", "id": "weight_lb", "label": "Weight (lb)", "default": "50-100 LB" },
+
+        { "type": "header", "content": "Tier 1" },
+        { "type": "range", "id": "tier1_filled", "label": "Filled icons", "min": 0, "max": 4, "default": 1 },
+        { "type": "range", "id": "tier1_outline", "label": "Dimmed (partial) icons", "min": 0, "max": 4, "default": 0 },
+        { "type": "text", "id": "tier1_serving", "label": "Serving amount", "default": "1 Serving" },
+        { "type": "text", "id": "tier1_instruction", "label": "Instruction", "default": "In at least 20 oz water" },
+
+        { "type": "header", "content": "Tier 1 — second option (optional)", "info": "Use this for a row that needs a stacked alternative, e.g. a higher-intensity variant." },
+        { "type": "range", "id": "tier1b_filled", "label": "Filled icons", "min": 0, "max": 4, "default": 0 },
+        { "type": "range", "id": "tier1b_outline", "label": "Dimmed (partial) icons", "min": 0, "max": 4, "default": 0 },
+        { "type": "text", "id": "tier1b_serving", "label": "Serving amount" },
+        { "type": "text", "id": "tier1b_instruction", "label": "Instruction" },
+        { "type": "text", "id": "tier1b_note", "label": "Note", "info": "e.g. \"(Higher intensity or higher heat)\"" },
+
+        { "type": "header", "content": "Tier 2" },
+        { "type": "range", "id": "tier2_filled", "label": "Filled icons", "min": 0, "max": 4, "default": 1 },
+        { "type": "range", "id": "tier2_outline", "label": "Dimmed (partial) icons", "min": 0, "max": 4, "default": 0 },
+        { "type": "text", "id": "tier2_serving", "label": "Serving amount", "default": "1 Serving" },
+        { "type": "text", "id": "tier2_instruction", "label": "Instruction", "default": "In at least 20-30 oz water" },
+
+        { "type": "header", "content": "Tier 3" },
+        { "type": "range", "id": "tier3_filled", "label": "Filled icons", "min": 0, "max": 4, "default": 1 },
+        { "type": "range", "id": "tier3_outline", "label": "Dimmed (partial) icons", "min": 0, "max": 4, "default": 0 },
+        { "type": "text", "id": "tier3_serving", "label": "Serving amount", "default": "1 Serving" },
+        { "type": "text", "id": "tier3_instruction", "label": "Instruction", "default": "Throughout the day" }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Hydration" },
+        { "type": "text", "id": "description", "label": "Description", "default": "Electrolytes to replenish" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dosage Table 4 Columns",
+      "blocks": [
+        { "type": "dosage_row", "settings": { "age_range": "8-11 YRS", "weight_lb": "50-100 LB", "tier1_filled": 1, "tier1_serving": "1 Serving", "tier1_instruction": "In at least 20 oz water", "tier2_filled": 1, "tier2_outline": 1, "tier2_serving": "1-1.5 Servings", "tier2_instruction": "In at least 20-30 oz water", "tier3_filled": 1, "tier3_outline": 1, "tier3_serving": "1-2 Servings", "tier3_instruction": "Throughout the day" } },
+        { "type": "dosage_row", "settings": { "age_range": "12-14 YRS", "weight_lb": "100-140 LB", "tier1_filled": 1, "tier1_serving": "1 Serving", "tier1_instruction": "In at least 20 oz water", "tier1b_filled": 2, "tier1b_serving": "2 Servings", "tier1b_instruction": "In at least 36 oz water", "tier1b_note": "(Higher intensity or higher heat)", "tier2_filled": 2, "tier2_serving": "2 Servings", "tier2_instruction": "In at least 36 oz water", "tier3_filled": 2, "tier3_outline": 1, "tier3_serving": "2-3 Servings", "tier3_instruction": "Throughout the day" } },
+        { "type": "dosage_row", "settings": { "age_range": "15-17 YRS", "weight_lb": "125-200 LB", "tier1_filled": 2, "tier1_serving": "2 Servings", "tier1_instruction": "In at least 36 oz water", "tier2_filled": 2, "tier2_serving": "2 Servings", "tier2_instruction": "In at least 36 oz water", "tier3_filled": 4, "tier3_serving": "Up to 4 Servings", "tier3_instruction": "Throughout the day" } },
+        { "type": "feature", "settings": { "label": "Hydration", "description": "Electrolytes to replenish" } },
+        { "type": "feature", "settings": { "label": "Fuel", "description": "Carbs to support energy & endurance" } },
+        { "type": "feature", "settings": { "label": "Performance", "description": "Built to help kids perform their best" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

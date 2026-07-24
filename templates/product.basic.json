@@ -142,36 +142,15 @@
       "blocks": {
         "accordion_mkNgHY": {
           "type": "accordion",
+          "repeater": "{{ product.metafields.custom.the_why.value }}",
           "settings": {
-            "accordion_header": "WHY DO ATHLETES NEED PREGAME?",
-            "open_by_default": false,
-            "text": "<p>Performance starts before the game.<br/><br/>PREGAME is the stimulant-free formula built specifically for<br/>youth athletes to support energy, focus, blood flow, hydration<br/>and mental clarity before training, practice, and competition.<br/>PREGAME helps prepare athletes to stay focused, process the<br/>game faster, and react confidently when every moment matters.</p>",
-            "page": ""
-          }
-        },
-        "accordion_WEMrJC": {
-          "type": "accordion",
-          "settings": {
-            "accordion_header": "WHO SHOULD TAKE PREGAME?",
-            "open_by_default": false,
-            "text": "<p>PREGAME is made for athletes who want to get the most out of<br/>every practice, workout, game, and training session. It is for the<br/>athlete who wants to show up ready. It’s for the athlete who is<br/>looking for a noticeable, clean energy and clearer focus.</p>",
-            "page": ""
-          }
-        },
-        "accordion_P9xefX": {
-          "type": "accordion",
-          "settings": {
-            "accordion_header": "WHEN IS THE BEST TIME TO TAKE PREGAME?",
-            "open_by_default": false,
-            "text": "<p>Take PREGAME 15–30 minutes before practice, training, or<br/>competition.</p>",
-            "page": ""
+            "accordion_header": "{{ block.repeater.question.value }}",
+            "text": "{{ block.repeater.answer | metafield_tag }}"
           }
         }
       },
       "block_order": [
-        "accordion_mkNgHY",
-        "accordion_WEMrJC",
-        "accordion_P9xefX"
+        "accordion_mkNgHY"
       ],
       "name": "t:sections.product--accordion-with-image.presets.name",
       "settings": {

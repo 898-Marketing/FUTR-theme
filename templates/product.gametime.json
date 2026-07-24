@@ -145,7 +145,9 @@
           "repeater": "{{ product.metafields.custom.the_why.value }}",
           "settings": {
             "accordion_header": "{{ block.repeater.question.value }}",
-            "text": "{{ block.repeater.answer | metafield_tag }}"
+            "open_by_default": false,
+            "text": "{{ block.repeater.answer | metafield_tag }}",
+            "page": ""
           }
         }
       },
@@ -383,98 +385,135 @@
         "color_energy_pill": "#ffcda9"
       }
     },
-    "dosage_table_VQ8Jg8": {
-      "type": "dosage-table",
+    "dosage_table_4_columns_Pn3UBt": {
+      "type": "dosage-table-4-columns",
       "blocks": {
-        "dosage_row_33K9K3": {
+        "dosage_row_6446Nx": {
           "type": "dosage_row",
           "settings": {
             "age_range": "8-11 YRS",
             "weight_lb": "50-100 LB",
-            "weight_kg": "22-45 KG",
-            "serving_amount": "1/2 Serving",
-            "water_amount": "4-6 oz Water",
-            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
-            "water_instruction_accent": ""
+            "tier1_filled": 1,
+            "tier1_outline": 0,
+            "tier1_serving": "1 Serving",
+            "tier1_instruction": "In at least 20 oz water",
+            "tier1b_filled": 0,
+            "tier1b_outline": 0,
+            "tier1b_serving": "",
+            "tier1b_instruction": "",
+            "tier1b_note": "",
+            "tier2_filled": 1,
+            "tier2_outline": 1,
+            "tier2_serving": "1-1.5 Servings",
+            "tier2_instruction": "In at least 20-30 oz water",
+            "tier3_filled": 1,
+            "tier3_outline": 1,
+            "tier3_serving": "1-2 Servings",
+            "tier3_instruction": "Throughout the day"
           }
         },
-        "dosage_row_bqDUiB": {
+        "dosage_row_CLwkgN": {
           "type": "dosage_row",
           "settings": {
-            "age_range": "12+ YRS",
-            "weight_lb": "100 LB+",
-            "weight_kg": "45 KG+",
-            "serving_amount": "1 Serving",
-            "water_amount": "6-8 oz Water",
-            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
-            "water_instruction_accent": "Can take a second serving later in the day."
+            "age_range": "12-14 YRS",
+            "weight_lb": "100-140 LB",
+            "tier1_filled": 1,
+            "tier1_outline": 0,
+            "tier1_serving": "1 Serving",
+            "tier1_instruction": "In at least 20 oz water",
+            "tier1b_filled": 2,
+            "tier1b_outline": 0,
+            "tier1b_serving": "2 Servings",
+            "tier1b_instruction": "In at least 36 oz water",
+            "tier1b_note": "(Higher intensity or higher heat)",
+            "tier2_filled": 2,
+            "tier2_outline": 0,
+            "tier2_serving": "2 Servings",
+            "tier2_instruction": "In at least 36 oz water",
+            "tier3_filled": 2,
+            "tier3_outline": 1,
+            "tier3_serving": "2-3 Servings",
+            "tier3_instruction": "Throughout the day"
           }
         },
-        "feature_CANHtt": {
+        "dosage_row_LGngXi": {
+          "type": "dosage_row",
+          "settings": {
+            "age_range": "15-17 YRS",
+            "weight_lb": "125-200 LB",
+            "tier1_filled": 2,
+            "tier1_outline": 0,
+            "tier1_serving": "2 Servings",
+            "tier1_instruction": "In at least 36 oz water",
+            "tier1b_filled": 0,
+            "tier1b_outline": 0,
+            "tier1b_serving": "",
+            "tier1b_instruction": "",
+            "tier1b_note": "",
+            "tier2_filled": 2,
+            "tier2_outline": 0,
+            "tier2_serving": "2 Servings",
+            "tier2_instruction": "In at least 36 oz water",
+            "tier3_filled": 4,
+            "tier3_outline": 0,
+            "tier3_serving": "Up to 4 Servings",
+            "tier3_instruction": "Throughout the day"
+          }
+        },
+        "feature_KpTGK8": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/Icons-30.png",
             "label": "Hydration",
-            "description": "Supports fluid balance and performance"
+            "description": "Electrolytes to replenish"
           }
         },
-        "feature_G7ia9V": {
+        "feature_jbF6TK": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/Icons-26.png",
-            "label": "Focus",
-            "description": "Supports mental clarity & reaction time"
+            "label": "Fuel",
+            "description": "Carbs to support energy & endurance"
           }
         },
-        "feature_YQcHz9": {
+        "feature_dLFHKw": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/Icons-28.png",
-            "label": "Energy",
-            "description": "Helps fuel performance without stimulants"
-          }
-        },
-        "feature_H6Dr9f": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Icons-25.png",
             "label": "Performance",
-            "description": "Supports blood flow & endurance"
+            "description": "Built to help kids perform their best"
           }
         }
       },
       "block_order": [
-        "dosage_row_33K9K3",
-        "dosage_row_bqDUiB",
-        "feature_CANHtt",
-        "feature_G7ia9V",
-        "feature_YQcHz9",
-        "feature_H6Dr9f"
+        "dosage_row_6446Nx",
+        "dosage_row_CLwkgN",
+        "dosage_row_LGngXi",
+        "feature_KpTGK8",
+        "feature_jbF6TK",
+        "feature_dLFHKw"
       ],
-      "name": "Dosage Table",
+      "name": "Dosage Table 4 Columns",
       "settings": {
         "background_image": "shopify://shop_images/recover-collection.jpg",
         "background_overlay_color": "#000000",
-        "background_overlay_opacity": 55,
+        "background_overlay_opacity": 70,
         "heading_prefix": "How much",
-        "heading_highlight": "{{ product.title }}",
+        "heading_highlight": "Gametime",
         "heading_subtitle": "should my athlete take?",
-        "color_heading": "#ffffff",
-        "color_navy": "#0e1116",
-        "color_accent": "#8fbf2e",
-        "color_water": "#1f88d2",
-        "header_icon_size": 54,
-        "row_icon_size": 54,
-        "footer_icon_size": 40,
-        "feature_icon_size": 54,
+        "color_heading": "#FFFFFF",
+        "color_navy": "#0E1116",
+        "color_tier1": "#8FBF2E",
+        "color_tier2": "#1f88d2",
+        "color_tier3": "#F0642A",
+        "header_icon_size": 20,
+        "row_icon_size": 24,
+        "footer_icon_size": 24,
+        "feature_icon_size": 22,
         "age_column_label": "Age / Weight",
-        "serving_icon": "shopify://shop_images/Icons-24.png",
-        "serving_column_label": "{{ product.title }}",
-        "serving_column_sublabel": "1 scoop / stick = 1 serving",
-        "water_icon": "shopify://shop_images/Icons-29.png",
-        "water_column_label": "Water",
-        "footer_text_white": "",
-        "footer_text_accent": ""
+        "tier1_label": "30-60 Min",
+        "tier2_label": "60-90 Min",
+        "tier3_label": "90+ Min or All Day Tournaments",
+        "footer_text_white": "Every athlete",
+        "footer_text_accent": "is different",
+        "footer_subtext": "Adjust serving size based on your athlete's age, body size, sweat rate, intensity, climate and individual needs."
       }
     },
     "template_product_info_columns_TAWPjr": {
@@ -626,7 +665,7 @@
     "product-recommendations",
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
     "ingredients_grid_yzP3LB",
-    "dosage_table_VQ8Jg8",
+    "dosage_table_4_columns_Pn3UBt",
     "template_product_info_columns_TAWPjr",
     "image_with_text_overlay_dc7Fbw",
     "accordion_fYz9RV"

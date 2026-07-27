@@ -18,6 +18,7 @@
           "type": "image",
           "settings": {
             "title": "",
+            "image": "shopify://shop_images/FUTR_logo-03.png",
             "link": "/",
             "override_border_radius": false
           }
@@ -31,15 +32,15 @@
         "text_JetjzD": {
           "type": "text",
           "settings": {
-            "title": "Drink social. Drink Sweet",
-            "richtext": "<p>Fun. Fresh. Fizzy as. Blending sparkling spring water with an alcoholic twist, we’re always best served with friends.</p>"
+            "title": "",
+            "richtext": "<p><strong>We're not just fueling the next generation. We're redefining what youth performance looks like.</strong></p>"
           }
         },
-        "5c637888-418b-4cc8-baea-a83083df2e8c": {
+        "menu_6tNnxh": {
           "type": "menu",
           "settings": {
-            "menu_title": "Links",
-            "footer_linklist": "footer-menu-2"
+            "menu_title": "Quick links",
+            "footer_linklist": "footer"
           }
         }
       },
@@ -47,7 +48,7 @@
         "image_ME7VQR",
         "social",
         "text_JetjzD",
-        "5c637888-418b-4cc8-baea-a83083df2e8c"
+        "menu_6tNnxh"
       ],
       "settings": {
         "alignment": "left",

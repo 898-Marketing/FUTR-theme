@@ -153,6 +153,7 @@
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/FUTR-FlavorSplash-01.png",
         "layout": "left",
         "text_alignment": "left",
         "text_alignment_mobile": "center",
@@ -193,7 +194,7 @@
         "button_text": "",
         "image_position_desktop": "right",
         "image_position_mobile": "top",
-        "section_width": "content",
+        "section_width": "full-width",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
         "image--background-color": "rgba(0,0,0,0)",

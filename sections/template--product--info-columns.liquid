@@ -10,6 +10,34 @@
       text-align: {{ section.settings.text_alignment }};
     }
   }
+
+  /* Opt-in "boxed dark card" style — only applied when card_style_boxed is
+     turned on for this specific section instance, so other pages using
+     this same section type are unaffected. */
+  .section-{{ section.id }} .info-cols--card-boxed {
+    background: {{ section.settings.card_bg_color }};
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 {{ section.settings.card_glow_size }}px {{ section.settings.card_glow_color }};
+    padding-bottom: 24px;
+  }
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--image,
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--image > div {
+    max-width: 100% !important;
+  }
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--title,
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--text,
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--link--wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #ffffff;
+  }
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--title {
+    padding-top: 20px;
+  }
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--text {
+    color: rgba(255, 255, 255, .7);
+  }
 {% endstyle %}
 
 {% assign grid_item_id = 'grid-item--' | append: section.id %}
@@ -82,7 +110,7 @@
 				{% for block in section.blocks %}
 
 					<div
-            class="info-cols--{{ block.type }}-column grid__item swiper-slide info-block-{{ block.id }}" 
+            class="info-cols--{{ block.type }}-column grid__item swiper-slide info-block-{{ block.id }}{% if section.settings.card_style_boxed %} info-cols--card-boxed{% endif %}"
             {{ block.shopify_attributes }} 
             data-swiper-slide-index="{{ forloop.index0 }}"
             data-animate
@@ -556,6 +584,42 @@
           "label": "t:all.Third"
         }
       ]
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_style_boxed",
+      "label": "Boxed dark cards (inverted style)",
+      "info": "Wraps each column in a dark, rounded card with an outer glow instead of a drop shadow. Only affects this section instance.",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card background",
+      "default": "#0E1116",
+      "visible_if": "{{ section.settings.card_style_boxed }}"
+    },
+    {
+      "type": "color",
+      "id": "card_glow_color",
+      "label": "Glow color",
+      "default": "#1f88d2",
+      "visible_if": "{{ section.settings.card_style_boxed }}"
+    },
+    {
+      "type": "range",
+      "id": "card_glow_size",
+      "label": "Glow size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 40,
+      "visible_if": "{{ section.settings.card_style_boxed }}"
     }
   ],
   "blocks": [

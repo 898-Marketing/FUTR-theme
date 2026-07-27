@@ -565,9 +565,9 @@
         "image_and_text_VjVbP8"
       ],
       "custom_css": [
-        ".info-cols--title {font-size: 25px;}"
+        ".info-cols--title{font-size: 25px;}"
       ],
-      "name": "Info columns HOMEPAGE",
+      "name": "t:sections.template--product--info-columns.presets.name",
       "settings": {
         "title": "THE FUTR STANDARD",
         "description": "",
@@ -587,7 +587,11 @@
         "section_width": "full",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "colors": "white"
+        "colors": "white",
+        "card_style_boxed": true,
+        "card_bg_color": "#0E1116",
+        "card_glow_color": "#1f88d2",
+        "card_glow_size": 40
       }
     },
     "image_with_text_overlay_3tx9wj": {

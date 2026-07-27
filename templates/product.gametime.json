@@ -558,9 +558,9 @@
         "image_and_text_6hMhjG",
         "image_and_text_yJG9P3"
       ],
-      "name": "t:sections.template--product--info-columns.presets.name",
+      "name": "Info columns 3 types",
       "settings": {
-        "title": "THE FUTR ATHLETE SYSTEM. <span style=\" color:#8fbf30;\">BUILT FOR EVERY PHASE OF PLAY.</span>",
+        "title": "THE FUTR ATHLETE SYSTEM. BUILT FOR EVERY PHASE OF PLAY.",
         "description": "",
         "section_header_alignment": "center",
         "maximum_width": 500,

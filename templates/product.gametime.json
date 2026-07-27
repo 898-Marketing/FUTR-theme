@@ -77,7 +77,7 @@
         "media_position": "left",
         "image_size": "medium",
         "image_shape": "adapt_to_first_image",
-        "show_only_variant_media": true,
+        "show_only_variant_media": false,
         "image-display": "thumbnails",
         "thumbnail_position": "below",
         "image_display_mobile": "slider",
@@ -567,7 +567,7 @@
       "name": "Phase System Columns",
       "settings": {
         "section_bg_color": "#ffffff",
-        "heading_prefix": "The FUTR Athlete System. ",
+        "heading_prefix": "The FUTR Athlete System.",
         "heading_color": "#0e1116",
         "heading_accent": "Built for every phase of play.",
         "heading_accent_color": "#8fbf2e",

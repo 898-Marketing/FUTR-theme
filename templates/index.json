@@ -604,7 +604,7 @@
         "image_size": "medium",
         "image_shape": "original",
         "show_only_variant_media": false,
-        "image-display": "paginated",
+        "image-display": "thumbnails",
         "thumbnail_position": "below",
         "image_display_mobile": "slider",
         "enable_video_loop": false,

@@ -137,6 +137,32 @@
         "image_overlay_opacity": 0
       }
     },
+    "image_with_text_HH7NrL": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_TTLwfX": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>GAMETIME is built for the middle of the grind, when energy drops, sweat adds up, and the game keeps moving.</strong></p><p>Made for youth athletes, this formula includes the right carbohydrates to help provide quick energy, steady fuel, and the right hydration support.</p><p>GAMETIME also includes key electrolytes to replace fluids and minerals lost in sweat to balance hydration, support muscle function and ensure sustained endurance during training and competition.</p>",
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "text_TTLwfX"
+      ],
+      "name": "t:sections.image--image-with-text.presets.name",
+      "settings": {
+        "layout": "left",
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "text_overlapping_image": false,
+        "section-width": "content",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "colors": "accent"
+      }
+    },
     "accordion_with_image_cx6zdK": {
       "type": "accordion-with-image",
       "blocks": {
@@ -654,6 +680,7 @@
   "order": [
     "product-form",
     "image_with_text_overlay_Q7ExmH",
+    "image_with_text_HH7NrL",
     "accordion_with_image_cx6zdK",
     "product-description",
     "product-recommendations",

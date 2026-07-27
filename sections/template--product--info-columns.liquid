@@ -38,6 +38,20 @@
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--text {
     color: rgba(255, 255, 255, .7);
   }
+
+  /* Equal-height cards: stretch slides to match the tallest, then pin the
+     "Meet our team" link to the bottom of each card regardless of copy length. */
+  .section-{{ section.id }} .info-cols--slider .swiper-wrapper {
+    align-items: stretch;
+  }
+  .section-{{ section.id }} .swiper-slide.info-cols--card-boxed {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--link--wrapper {
+    margin-top: auto;
+  }
 {% endstyle %}
 
 {% assign grid_item_id = 'grid-item--' | append: section.id %}
@@ -73,7 +87,7 @@
   data-wetheme-section-type="template--product--info-columns"
 	data-wetheme-section-id="{{ section.id }}"
 	data-slides-per-row="{{ section.settings.columns_per_row }}"
-  data-grid-spacing="{{ settings.grid_spacing }}"
+  data-grid-spacing="{% if section.settings.card_gap > 0 %}{{ section.settings.card_gap }}{% else %}{{ settings.grid_spacing }}{% endif %}"
   data-slider-height-mobile="{{ section.settings.slider_height_mobile }}"
   style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px;"
 >
@@ -619,6 +633,18 @@
       "step": 2,
       "unit": "px",
       "default": 40,
+      "visible_if": "{{ section.settings.card_style_boxed }}"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Gap between cards",
+      "info": "Overrides the theme's global grid spacing for this section only. Leave at 0 to use the site-wide default.",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
       "visible_if": "{{ section.settings.card_style_boxed }}"
     }
   ],

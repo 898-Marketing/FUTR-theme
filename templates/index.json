@@ -650,57 +650,6 @@
         "colors": "light"
       }
     },
-    "image_with_text_overlay_3tx9wj": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "text_cTzGij": {
-          "type": "text",
-          "settings": {
-            "text": "<h4>best fuel to keep you in the game</h4>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 10
-          }
-        },
-        "button_mMfyM3": {
-          "type": "button",
-          "settings": {
-            "first_button_link": "",
-            "first_button_label": "",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "underlined",
-            "override_button_colors": true,
-            "buttons_background": "#ffffff",
-            "buttons_text": "#ffffff",
-            "buttons_bottom_spacing": 20
-          }
-        }
-      },
-      "block_order": [
-        "text_cTzGij",
-        "button_mMfyM3"
-      ],
-      "settings": {
-        "image_desktop": "shopify://shop_images/pregame-collection.jpg",
-        "height_desktop": "450px",
-        "text_position_desktop": "right",
-        "text_alignment_desktop": "right",
-        "caption_width_desktop": 57,
-        "height_mobile": "original",
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
-        "section_link": "",
-        "animation_style": "none",
-        "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "text_color": "#ffffff",
-        "caption_bg_color": "#0000008c",
-        "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
-      }
-    },
     "blog_posts_wefQCf": {
       "type": "blog-posts",
       "blocks": {
@@ -795,6 +744,57 @@
         "colors": "white"
       }
     },
+    "image_with_text_overlay_3tx9wj": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "text_cTzGij": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>best fuel to keep you in the game</h4>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 10
+          }
+        },
+        "button_mMfyM3": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "",
+            "first_button_label": "",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "underlined",
+            "override_button_colors": true,
+            "buttons_background": "#ffffff",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "text_cTzGij",
+        "button_mMfyM3"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/pregame-collection.jpg",
+        "height_desktop": "450px",
+        "text_position_desktop": "right",
+        "text_alignment_desktop": "right",
+        "caption_width_desktop": 57,
+        "height_mobile": "original",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "#0000008c",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
+      }
+    },
     "newsletter_cQa4NW": {
       "type": "newsletter",
       "settings": {
@@ -819,9 +819,9 @@
     "image_with_text_overlay_qmXaFa",
     "template_product_info_columns_YPyY6m",
     "accordion_with_image_MYP6GK",
-    "image_with_text_overlay_3tx9wj",
     "blog_posts_wefQCf",
     "testimonials_h6YnF3",
+    "image_with_text_overlay_3tx9wj",
     "newsletter_cQa4NW"
   ]
 }

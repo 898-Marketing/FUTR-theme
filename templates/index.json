@@ -619,46 +619,6 @@
         "image_overlay_opacity": 30
       }
     },
-    "featured_product_rhTQfC": {
-      "type": "featured-product",
-      "settings": {
-        "title": "Give the gift of good times",
-        "description": "",
-        "section_header_alignment": "center",
-        "featured_product": "gametime",
-        "image-placement": "left",
-        "image_size": "medium",
-        "image_shape": "original",
-        "show_only_variant_media": false,
-        "image-display": "thumbnails",
-        "thumbnail_position": "below",
-        "image_display_mobile": "slider",
-        "enable_video_loop": false,
-        "enable_autoplay": false,
-        "show_video_controls": false,
-        "title_font": "h2",
-        "price_font": "h2",
-        "variant_style": "swatches",
-        "hide_out_of_stock_variants": false,
-        "show-giftwrap": false,
-        "show-vendor": false,
-        "show_product_description": true,
-        "show_quantity_selector": true,
-        "show_add_to_cart": true,
-        "show_smart_checkout": true,
-        "size_guide_label": "Size guide",
-        "size_guide_page": "",
-        "size_option_name": "Size",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "color_scheme": "dark",
-        "product_form_bg_override": false,
-        "product_form_bg": "#e4ebf1",
-        "override_button_colors": false,
-        "button_background_color": "#1f88d2",
-        "button_text_color": "#ffffff"
-      }
-    },
     "image_with_text_overlay_LN7YT6": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -881,6 +841,53 @@
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }
+    },
+    "blog_posts_wefQCf": {
+      "type": "blog-posts",
+      "blocks": {
+        "blog_FmLVzA": {
+          "type": "blog",
+          "settings": {
+            "blog": "news"
+          }
+        }
+      },
+      "block_order": [
+        "blog_FmLVzA"
+      ],
+      "name": "t:sections.blog-posts.name",
+      "settings": {
+        "title": "From the blog",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_image": true,
+        "image_shape": "natural",
+        "post_limit": 4,
+        "show_tags": false,
+        "blog_show_date": true,
+        "show_author": false,
+        "show_reading_time": true,
+        "show_comment_count": false,
+        "show_excerpt": true,
+        "show_read_more": true,
+        "heading_font": "heading",
+        "heading_font_size": 28,
+        "alignment": "left",
+        "buttons_style": "underlined",
+        "override_button_colors": false,
+        "button_background_color": "#E68819",
+        "button_text_color": "#ffffff",
+        "layout_style_desktop": "slider",
+        "hover_navigation_desktop": "left-and-right",
+        "peek_desktop": true,
+        "images_per_row_desktop": 3,
+        "layout_style_mobile": "slider",
+        "navigation_mobile": "dots",
+        "section_width": "content",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
     }
   },
   "order": [
@@ -894,8 +901,8 @@
     "template_product_info_columns_DeaBpp",
     "image_with_text_overlay_qmXaFa",
     "template_product_info_columns_YPyY6m",
+    "blog_posts_wefQCf",
     "image_with_text_overlay_3tx9wj",
-    "featured_product_rhTQfC",
     "image_with_text_overlay_LN7YT6",
     "newsletter_cQa4NW",
     "text_adverts_wQDaFF",

@@ -64,10 +64,10 @@
         "section_header_alignment": "center",
         "animation_style": "slow",
         "number_size_desktop": 64,
-        "number_size_mobile": 50,
+        "number_size_mobile": 46,
         "text_alignment": "center",
         "section_padding_top": 60,
-        "section_padding_bottom": 60,
+        "section_padding_bottom": 5,
         "colors": "accent"
       }
     },
@@ -205,20 +205,20 @@
         "image_pHcazf"
       ],
       "settings": {
-        "title": "FUN. FRESH. FIZZY.",
+        "title": "",
         "description": "",
         "section_header_alignment": "center",
         "show_fade": false,
         "borders": false,
         "animation_direction": "normal",
         "animation_speed": 60,
-        "section_padding_top": 60,
+        "section_padding_top": 35,
         "section_padding_bottom": 60,
         "space_between_blocks_desktop": 25,
         "space_between_blocks_mobile": 0,
         "rotate": "-5",
         "override_border_radius": false,
-        "color_scheme": "light"
+        "color_scheme": "accent"
       }
     },
     "featured_collection_RbHECB": {

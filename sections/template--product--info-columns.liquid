@@ -52,6 +52,17 @@
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--link--wrapper {
     margin-top: auto;
   }
+
+  /* The swiper carousel container clips overflow on all sides by default
+     (needed so off-screen slides stay hidden horizontally while sliding).
+     That was also cutting off the glow's top/bottom on this boxed style, so
+     keep horizontal clipping only and give the glow room to breathe. */
+  {% if section.settings.card_style_boxed %}
+  .section-{{ section.id }} .info-cols--slider {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  {% endif %}
 {% endstyle %}
 
 {% assign grid_item_id = 'grid-item--' | append: section.id %}

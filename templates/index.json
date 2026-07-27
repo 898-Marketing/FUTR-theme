@@ -569,6 +569,53 @@
         "card_gap": 32
       }
     },
+    "blog_posts_wefQCf": {
+      "type": "blog-posts",
+      "blocks": {
+        "blog_FmLVzA": {
+          "type": "blog",
+          "settings": {
+            "blog": "news"
+          }
+        }
+      },
+      "block_order": [
+        "blog_FmLVzA"
+      ],
+      "name": "t:sections.blog-posts.name",
+      "settings": {
+        "title": "From the Sideline",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_image": true,
+        "image_shape": "square",
+        "post_limit": 5,
+        "show_tags": true,
+        "blog_show_date": false,
+        "show_author": false,
+        "show_reading_time": false,
+        "show_comment_count": false,
+        "show_excerpt": false,
+        "show_read_more": true,
+        "heading_font": "heading",
+        "heading_font_size": 15,
+        "alignment": "left",
+        "buttons_style": "underlined",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_text_color": "#ffffff",
+        "layout_style_desktop": "grid",
+        "hover_navigation_desktop": "left-and-right",
+        "peek_desktop": true,
+        "images_per_row_desktop": 5,
+        "layout_style_mobile": "slider",
+        "navigation_mobile": "dots",
+        "section_width": "full",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
     "image_with_text_overlay_3tx9wj": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -840,53 +887,6 @@
         "button_text_color": "#ffffff",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
-      }
-    },
-    "blog_posts_wefQCf": {
-      "type": "blog-posts",
-      "blocks": {
-        "blog_FmLVzA": {
-          "type": "blog",
-          "settings": {
-            "blog": "news"
-          }
-        }
-      },
-      "block_order": [
-        "blog_FmLVzA"
-      ],
-      "name": "t:sections.blog-posts.name",
-      "settings": {
-        "title": "From the blog",
-        "description": "",
-        "section_header_alignment": "center",
-        "show_image": true,
-        "image_shape": "natural",
-        "post_limit": 4,
-        "show_tags": false,
-        "blog_show_date": true,
-        "show_author": false,
-        "show_reading_time": true,
-        "show_comment_count": false,
-        "show_excerpt": true,
-        "show_read_more": true,
-        "heading_font": "heading",
-        "heading_font_size": 28,
-        "alignment": "left",
-        "buttons_style": "underlined",
-        "override_button_colors": false,
-        "button_background_color": "#E68819",
-        "button_text_color": "#ffffff",
-        "layout_style_desktop": "slider",
-        "hover_navigation_desktop": "left-and-right",
-        "peek_desktop": true,
-        "images_per_row_desktop": 3,
-        "layout_style_mobile": "slider",
-        "navigation_mobile": "dots",
-        "section_width": "content",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "colors": "white"
       }
     }
   },

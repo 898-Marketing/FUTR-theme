@@ -564,6 +564,9 @@
         "image_and_text_y37zVL",
         "image_and_text_VjVbP8"
       ],
+      "custom_css": [
+        ".info-cols--title{font-size: 25px;}"
+      ],
       "name": "t:sections.template--product--info-columns.presets.name",
       "settings": {
         "title": "THE FUTR STANDARD",

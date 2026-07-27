@@ -1,6 +1,33 @@
 {{ 'featured-collection-section.min.css' | asset_url | stylesheet_tag }}
 
-{% liquid 
+{%- style -%}
+  /* "Price on the right" layout — only applies within this section instance
+     (scoped by section id), so other pages using featured-collection are
+     unaffected unless they also turn this setting on. */
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout { display: flex; flex-wrap: wrap; }
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout .grid-view-item-image { flex: 0 0 100%; }
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout .product-grid--vendor,
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout .product-grid--title { order: 1; flex: 0 1 auto; }
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout .product-grid--price {
+    order: 1;
+    margin-left: auto;
+    text-align: right;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout .product-grid--blurb,
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout .product-grid--rating,
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout [class^="card-color-swatch"] { order: 2; flex: 0 0 100%; }
+
+  #shopify-section-{{ section.id }} .product-grid--blurb {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: rgba(var(--color-foreground), .7);
+    margin-top: 0.5rem;
+  }
+{%- endstyle -%}
+
+{% liquid
   assign wrapper_classes = ''
   assign featured_collection = section.settings.collection
 
@@ -228,7 +255,11 @@
                 highlight_alignment: section.settings.highlight_alignment,
                 highlight_font_size: section.settings.highlight_font_size,
                 highlight_collapsible_tab: section.settings.highlight_collapsible_tab,
-                highlight_button_borders: section.settings.highlight_button_borders
+                highlight_button_borders: section.settings.highlight_button_borders,
+                force_show_rating: section.settings.show_star_ratings,
+                show_blurb: section.settings.show_blurb,
+                blurb_word_limit: section.settings.blurb_word_limit,
+                price_layout: section.settings.price_on_right
               %}
             </div>
 
@@ -335,6 +366,41 @@
       "id": "collection",
       "type": "collection",
       "label": "t:all.Collection"
+    },
+    {
+      "type": "header",
+      "content": "Product card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_star_ratings",
+      "label": "Show star ratings",
+      "info": "Shows on every card in this section regardless of the global rating setting.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_blurb",
+      "label": "Show product blurb",
+      "info": "A short excerpt pulled from each product's description.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "blurb_word_limit",
+      "label": "Blurb length (words)",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "visible_if": "{{ section.settings.show_blurb }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "price_on_right",
+      "label": "Price on the right",
+      "info": "Aligns price to the right of the title instead of stacking below it.",
+      "default": false
     },
     {
       "type": "header",

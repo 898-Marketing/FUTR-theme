@@ -130,7 +130,7 @@
     data-animate-order-mobile="{{ animate_order_mobile }}"
   {% endif %}
 >
-  <div>
+  <div{% if price_layout == 'right' %} class="product-grid--price-right-layout"{% endif %}>
     <div class="grid-view-item-image">
 
       {%- liquid
@@ -369,6 +369,11 @@
       </div>
     {% endif %}
 
+    {% if show_blurb and product.description != blank %}
+      {% assign blurb_limit = blurb_word_limit | default: 20 %}
+      <div class="product-grid--blurb">{{ product.description | strip_html | truncatewords: blurb_limit }}</div>
+    {% endif %}
+
     {% liquid
       assign has_highlight_below_price = false
       if has_highlight and highlight_position == 'below_price'
@@ -380,7 +385,7 @@
       {{ highlight_html }}
     {% endif %}
 
-    {% if settings.show_product_rating %}
+    {% if settings.show_product_rating or force_show_rating %}
       {% render 'reviews-star-rating',
         rating_product: product,
         star_color: settings.star_rating_color,

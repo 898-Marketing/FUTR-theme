@@ -565,9 +565,9 @@
         "image_and_text_VjVbP8"
       ],
       "custom_css": [
-        ".info-cols--title{font-size: 25px;}"
+        ".info-cols--title {font-size: 25px;}"
       ],
-      "name": "t:sections.template--product--info-columns.presets.name",
+      "name": "Info columns HOMEPAGE",
       "settings": {
         "title": "THE FUTR STANDARD",
         "description": "",

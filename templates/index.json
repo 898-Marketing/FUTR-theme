@@ -559,7 +559,7 @@
         "text_alignment_mobile": "center",
         "slider_height_mobile": "adaptive",
         "section_width": "full",
-        "section_padding_top": 60,
+        "section_padding_top": 50,
         "section_padding_bottom": 60,
         "colors": "white",
         "card_style_boxed": true,

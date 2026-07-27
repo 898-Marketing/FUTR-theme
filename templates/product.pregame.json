@@ -39,7 +39,7 @@
             "size_option_name": "Size",
             "size_guide_override_heading_font_size": false,
             "size_guide_heading_font_size": 24,
-            "margin_bottom": 30
+            "margin_bottom": 23
           }
         },
         "buy_buttons": {
@@ -75,12 +75,12 @@
         "enable_sticky": true,
         "enable_sticky_add_to_cart": false,
         "media_position": "left",
-        "image_size": "large",
-        "image_shape": "original",
+        "image_size": "medium",
+        "image_shape": "adapt_to_first_image",
         "show_only_variant_media": false,
-        "image-display": "paginated",
-        "thumbnail_position": "left",
-        "image_display_mobile": "paginated",
+        "image-display": "thumbnails",
+        "thumbnail_position": "below",
+        "image_display_mobile": "slider",
         "enable_video_loop": true,
         "enable_autoplay": false,
         "show_video_controls": false,
@@ -530,10 +530,10 @@
       "name": "Phase System Columns",
       "settings": {
         "section_bg_color": "#ffffff",
-        "heading_prefix": "The FUTR Athlete System. ",
-        "heading_color": "#0E1116",
+        "heading_prefix": "The FUTR Athlete System.",
+        "heading_color": "#0e1116",
         "heading_accent": "Built for every phase of play.",
-        "heading_accent_color": "#8FBF2E",
+        "heading_accent_color": "#8fbf2e",
         "heading_size": 36,
         "badge_icon_size": 160
       }

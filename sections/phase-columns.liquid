@@ -6,6 +6,10 @@
   icon, paragraph, and up to 2 linkable product names below a divider.
 -->
 
+{%- liquid
+  assign heading_size_mobile = section.settings.heading_size | times: 0.73 | round
+-%}
+
 {%- style -%}
   #shopify-section-{{ section.id }} .phase-columns {
     background: {{ section.settings.section_bg_color }};
@@ -23,12 +27,12 @@
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: -.01em;
-    font-size: 26px;
+    font-size: {{ section.settings.heading_size }}px;
     line-height: 1.25;
   }
   .phase-columns__heading .is-prefix { color: {{ section.settings.heading_color }}; }
   .phase-columns__heading .is-accent { color: {{ section.settings.heading_accent_color }}; }
-  @media (max-width: 640px) { .phase-columns__heading { font-size: 19px; } }
+  @media (max-width: 640px) { .phase-columns__heading { font-size: {{ heading_size_mobile }}px; } }
 
   .phase-columns__grid {
     display: grid;
@@ -65,8 +69,8 @@
     padding: 20px 16px 4px;
   }
   .phase-col__badge img {
-    width: 96px;
-    height: 96px;
+    width: {{ section.settings.badge_icon_size }}px;
+    height: {{ section.settings.badge_icon_size }}px;
     object-fit: contain;
   }
   .phase-col__body {
@@ -160,7 +164,11 @@
     { "type": "text", "id": "heading_prefix", "label": "Heading (first color)", "default": "The FUTR Athlete System." },
     { "type": "color", "id": "heading_color", "label": "Heading color", "default": "#0E1116" },
     { "type": "text", "id": "heading_accent", "label": "Heading (accent color)", "default": "Built for every phase of play." },
-    { "type": "color", "id": "heading_accent_color", "label": "Heading accent color", "default": "#8FBF2E" }
+    { "type": "color", "id": "heading_accent_color", "label": "Heading accent color", "default": "#8FBF2E" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 16, "max": 48, "step": 1, "unit": "px", "default": 26 },
+
+    { "type": "header", "content": "Icons" },
+    { "type": "range", "id": "badge_icon_size", "label": "Badge icon size", "min": 40, "max": 160, "step": 4, "unit": "px", "default": 96 }
   ],
   "blocks": [
     {

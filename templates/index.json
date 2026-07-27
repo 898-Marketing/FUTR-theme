@@ -330,6 +330,7 @@
         "heading_xbU9A3",
         "button_wBEeGV"
       ],
+      "disabled": true,
       "settings": {
         "height_desktop": "original",
         "text_position_desktop": "right",
@@ -382,6 +383,7 @@
         "heading_bJC34d",
         "richtext_JJN7KX"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "narrow",
         "text_alignment_desktop": "center",
@@ -437,6 +439,7 @@
         "text_q9JGM8",
         "text_YkepEg"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "description": "",
@@ -596,7 +599,7 @@
         "title": "Give the gift of good times",
         "description": "",
         "section_header_alignment": "center",
-        "featured_product": "gift",
+        "featured_product": "gametime",
         "image-placement": "left",
         "image_size": "medium",
         "image_shape": "original",

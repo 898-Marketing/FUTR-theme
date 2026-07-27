@@ -369,9 +369,9 @@
       </div>
     {% endif %}
 
-    {% if show_blurb and product.description != blank %}
+    {% if show_blurb and product.metafields.custom.blurb.value != blank %}
       {% assign blurb_limit = blurb_word_limit | default: 20 %}
-      <div class="product-grid--blurb">{{ product.description | strip_html | truncatewords: blurb_limit }}</div>
+      <div class="product-grid--blurb">{{ product.metafields.custom.blurb.value | strip_html | truncatewords: blurb_limit }}</div>
     {% endif %}
 
     {% liquid

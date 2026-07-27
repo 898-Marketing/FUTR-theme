@@ -382,13 +382,14 @@
       "type": "checkbox",
       "id": "show_blurb",
       "label": "Show product blurb",
-      "info": "A short excerpt pulled from each product's description.",
+      "info": "Reads from each product's \"Blurb\" metafield (Settings > Metafields and metaobjects > Products) — set that up first and type a blurb on each product, not the product description.",
       "default": false
     },
     {
       "type": "range",
       "id": "blurb_word_limit",
-      "label": "Blurb length (words)",
+      "label": "Blurb length cap (words)",
+      "info": "Safety cap in case a blurb runs long — has no effect on shorter blurbs.",
       "min": 5,
       "max": 40,
       "step": 1,

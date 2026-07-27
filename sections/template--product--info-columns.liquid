@@ -14,11 +14,16 @@
   /* Opt-in "boxed dark card" style — only applied when card_style_boxed is
      turned on for this specific section instance, so other pages using
      this same section type are unaffected. */
+  {% assign glow_border_color = section.settings.card_glow_color | color_modify: 'alpha', 0.7 %}
+  {% assign glow_tight_color = section.settings.card_glow_color | color_modify: 'alpha', 0.95 %}
+  {% assign glow_soft_color = section.settings.card_glow_color | color_modify: 'alpha', 0.45 %}
   .section-{{ section.id }} .info-cols--card-boxed {
     background: {{ section.settings.card_bg_color }};
     border-radius: 12px;
+    border: 1px solid {{ glow_border_color }};
+    box-sizing: border-box;
     overflow: hidden;
-    box-shadow: 0 0 {{ section.settings.card_glow_size }}px {{ section.settings.card_glow_color }};
+    box-shadow: 0 0 6px {{ glow_tight_color }}, 0 0 {{ section.settings.card_glow_size }}px {{ glow_soft_color }};
     padding-bottom: 24px;
   }
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--image,

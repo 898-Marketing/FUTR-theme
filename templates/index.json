@@ -532,7 +532,7 @@
             "grid_image_size": "natural",
             "heading": "EXPERT-LED Formulas",
             "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
-            "button_link": "",
+            "button_link": "shopify://pages/contact",
             "button_text": "MEET OUR TEAM->"
           }
         },

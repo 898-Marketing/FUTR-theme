@@ -568,9 +568,11 @@
       "settings": {
         "section_bg_color": "#ffffff",
         "heading_prefix": "The FUTR Athlete System.",
-        "heading_color": "#0E1116",
+        "heading_color": "#0e1116",
         "heading_accent": "Built for every phase of play.",
-        "heading_accent_color": "#8FBF2E"
+        "heading_accent_color": "#8fbf2e",
+        "heading_size": 35,
+        "badge_icon_size": 160
       }
     },
     "image_with_text_overlay_dc7Fbw": {

@@ -130,7 +130,7 @@
     data-animate-order-mobile="{{ animate_order_mobile }}"
   {% endif %}
 >
-  <div{% if price_layout == 'right' %} class="product-grid--price-right-layout"{% endif %}>
+  <div{% if price_layout %} class="product-grid--price-right-layout"{% endif %}>
     <div class="grid-view-item-image">
 
       {%- liquid

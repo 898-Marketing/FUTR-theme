@@ -459,11 +459,7 @@
         "section_width": "content",
         "section_padding_top": 0,
         "section_padding_bottom": 60,
-        "colors": "white",
-        "card_style_boxed": false,
-        "card_bg_color": "#0e1116",
-        "card_glow_color": "#1f88d2",
-        "card_glow_size": 40
+        "colors": "white"
       }
     },
     "image_with_text_overlay_qmXaFa": {
@@ -532,7 +528,7 @@
         "image_and_text_Y93dfi": {
           "type": "image_and_text",
           "settings": {
-            "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.00.48_PM.png",
+            "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.04.13_PM.png",
             "grid_image_size": "natural",
             "heading": "EXPERT-LED Formulas",
             "text": "<p>Built by leaders in sports medicine, pediatrics, and nutrition — experts who understand what athletes need at every stage. They don't just know the research. They've helped shape it.</p>",
@@ -569,7 +565,7 @@
         "image_and_text_VjVbP8"
       ],
       "custom_css": [
-        ".info-cols--title {font-size: 25px;}"
+        ".info-cols--title{font-size: 25px;}"
       ],
       "name": "t:sections.template--product--info-columns.presets.name",
       "settings": {
@@ -593,9 +589,9 @@
         "section_padding_bottom": 60,
         "colors": "white",
         "card_style_boxed": true,
-        "card_bg_color": "#0e1116",
+        "card_bg_color": "#0E1116",
         "card_glow_color": "#1f88d2",
-        "card_glow_size": 40
+        "card_glow_size": 18
       }
     },
     "image_with_text_overlay_3tx9wj": {

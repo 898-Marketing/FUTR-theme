@@ -516,69 +516,61 @@
         "footer_subtext": "Adjust serving size based on your athlete's age, body size, sweat rate, intensity, climate and individual needs."
       }
     },
-    "template_product_info_columns_TAWPjr": {
-      "type": "template--product--info-columns",
+    "phase_columns_rLYjCq": {
+      "type": "phase-columns",
       "blocks": {
-        "image_and_text_p78Ek9": {
-          "type": "image_and_text",
+        "phase_pkWHkk": {
+          "type": "phase",
           "settings": {
-            "image": "shopify://shop_images/FUTR-Icons-PRE.png",
-            "grid_image_size": "square",
-            "heading": "",
-            "text": "<p>Clean energy sharper focus, and steady endurance for a strong start and more confident performance.</p>",
-            "button_link": "",
-            "button_text": "SHOP NOW"
+            "bar_color": "#8fbf2e",
+            "bar_text": "PRE",
+            "badge_icon": "shopify://shop_images/FUTR-Icons-PRE.png",
+            "text": "<p>Prime the body with clean energy, sharper focus, and endurance so athletes start strong and stay confident.</p>",
+            "link_1_text": "Pregame",
+            "link_1_url": "shopify://products/pregame",
+            "link_2_text": "",
+            "link_2_url": ""
           }
         },
-        "image_and_text_6hMhjG": {
-          "type": "image_and_text",
+        "phase_xaQbPE": {
+          "type": "phase",
           "settings": {
-            "image": "shopify://shop_images/FUTR-Icons-INTRA.png",
-            "grid_image_size": "square",
-            "heading": "",
-            "text": "<p>Electrolytes, fuel, and hydration support to power working muscles and sustain performance through every quarter, inning, or event.</p>",
-            "button_link": "",
-            "button_text": "SHOP NOW"
+            "bar_color": "#4b2e83",
+            "bar_text": "INTRA",
+            "badge_icon": "shopify://shop_images/FUTR-Icons-INTRA.png",
+            "text": "<p>Replenish electrolytes, fuel working muscles, and keep athletes going strong through every quarter, inning, or event.</p>",
+            "link_1_text": "Gametime",
+            "link_1_url": "shopify://products/gametime",
+            "link_2_text": "",
+            "link_2_url": ""
           }
         },
-        "image_and_text_yJG9P3": {
-          "type": "image_and_text",
+        "phase_UqJLNq": {
+          "type": "phase",
           "settings": {
-            "image": "shopify://shop_images/FUTR-Icons-DAILY.png",
-            "grid_image_size": "square",
-            "heading": "",
-            "text": "<p>Everyday essentials to rebuild, recharge, and support revcovery, wellness and development.</p>",
-            "button_link": "",
-            "button_text": "SHOP NOW"
+            "bar_color": "#f0642a",
+            "bar_text": "DAILY",
+            "badge_icon": "shopify://shop_images/FUTR-Icons-DAILY.png",
+            "text": "<p>Rebuild, recharge, and build a strong foundation with everyday essentials that support recovery, wellness, and development.</p>",
+            "link_1_text": "Recover+",
+            "link_1_url": "",
+            "link_2_text": "Creatine Gummies",
+            "link_2_url": ""
           }
         }
       },
       "block_order": [
-        "image_and_text_p78Ek9",
-        "image_and_text_6hMhjG",
-        "image_and_text_yJG9P3"
+        "phase_pkWHkk",
+        "phase_xaQbPE",
+        "phase_UqJLNq"
       ],
-      "name": "Info columns 3 types",
+      "name": "Phase System Columns",
       "settings": {
-        "title": "THE FUTR ATHLETE SYSTEM. BUILT FOR EVERY PHASE OF PLAY.",
-        "description": "",
-        "section_header_alignment": "center",
-        "maximum_width": 500,
-        "override_border_radius": false,
-        "buttons_style": "underlined",
-        "override_button_colors": false,
-        "button_background_color": "#e68819",
-        "button_text_color": "#ffffff",
-        "hover_navigation_desktop": "left-and-right",
-        "columns_per_row": 3,
-        "vertical_alignment": "top",
-        "text_alignment": "center",
-        "text_alignment_mobile": "center",
-        "slider_height_mobile": "adaptive",
-        "section_width": "full",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "colors": "white"
+        "section_bg_color": "#ffffff",
+        "heading_prefix": "The FUTR Athlete System.",
+        "heading_color": "#0E1116",
+        "heading_accent": "Built for every phase of play.",
+        "heading_accent_color": "#8FBF2E"
       }
     },
     "image_with_text_overlay_dc7Fbw": {
@@ -666,7 +658,7 @@
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
     "ingredients_grid_yzP3LB",
     "dosage_table_4_columns_Pn3UBt",
-    "template_product_info_columns_TAWPjr",
+    "phase_columns_rLYjCq",
     "image_with_text_overlay_dc7Fbw",
     "accordion_fYz9RV"
   ]

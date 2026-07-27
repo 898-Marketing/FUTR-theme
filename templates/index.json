@@ -616,13 +616,60 @@
         "colors": "dark"
       }
     },
+    "testimonials_h6YnF3": {
+      "type": "testimonials",
+      "blocks": {
+        "text_FEm9YW": {
+          "type": "text",
+          "settings": {
+            "stars": 5,
+            "testimonial_text": "<p>\"Show off incredible feedback from your customers\"</p>",
+            "customer_name": "John Smith",
+            "link": ""
+          }
+        },
+        "text_gfUnTV": {
+          "type": "text",
+          "settings": {
+            "stars": 5,
+            "testimonial_text": "<p>\"Show off incredible feedback from your customers\"</p>",
+            "customer_name": "John Smith",
+            "link": ""
+          }
+        },
+        "text_j4X9zq": {
+          "type": "text",
+          "settings": {
+            "stars": 5,
+            "testimonial_text": "<p>\"Show off incredible feedback from your customers\"</p>",
+            "customer_name": "John Smith",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_FEm9YW",
+        "text_gfUnTV",
+        "text_j4X9zq"
+      ],
+      "name": "t:sections.text--testimonials.presets.name",
+      "settings": {
+        "title": "Testimonials",
+        "description": "",
+        "section_header_alignment": "center",
+        "circle_images": true,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
+      }
+    },
     "image_with_text_overlay_3tx9wj": {
       "type": "image-with-text-overlay",
       "blocks": {
         "text_cTzGij": {
           "type": "text",
           "settings": {
-            "text": "<h4>We've got the perfect drink for a summer's day</h4>",
+            "text": "<h4>best fuel to keep you in the game</h4>",
             "font_size_desktop": 16,
             "font_size_mobile": 16,
             "text_bottom_spacing": 10
@@ -632,7 +679,7 @@
           "type": "button",
           "settings": {
             "first_button_link": "",
-            "first_button_label": "Pssst! It's this one",
+            "first_button_label": "",
             "second_button_link": "",
             "second_button_label": "",
             "buttons_style": "underlined",
@@ -666,227 +713,15 @@
         "image_overlay_opacity": 30
       }
     },
-    "image_with_text_overlay_LN7YT6": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "text_LjJpGV": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Join the</h5>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 20
-          }
-        },
-        "heading_JxPnX8": {
-          "type": "heading",
-          "settings": {
-            "title": "Pastel revolution",
-            "font_size_desktop": 40,
-            "font_size_mobile": 28,
-            "heading_bottom_spacing": 25
-          }
-        },
-        "text_FPBP8i": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We’re looking for movers, shakers and moment-makers of every kind to kick it as one of our reps. If you’re up for good times, free  merch, first-taste exclusives, event guestlists,           unique referral codes and of COURSE… a good flow of Sweet, hit us up.</p><p></p>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 20
-          }
-        },
-        "button_TXC6Jn": {
-          "type": "button",
-          "settings": {
-            "first_button_link": "/",
-            "first_button_label": "CONTACT US",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "underlined",
-            "override_button_colors": true,
-            "buttons_background": "#ffffff",
-            "buttons_text": "#ffffff",
-            "buttons_bottom_spacing": 0
-          }
-        }
-      },
-      "block_order": [
-        "text_LjJpGV",
-        "heading_JxPnX8",
-        "text_FPBP8i",
-        "button_TXC6Jn"
-      ],
-      "settings": {
-        "height_desktop": "550px",
-        "text_position_desktop": "center",
-        "text_alignment_desktop": "center",
-        "caption_width_desktop": 50,
-        "height_mobile": "400px",
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
-        "section_link": "",
-        "animation_style": "parallax",
-        "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "text_color": "#ffffff",
-        "caption_bg_color": "#0000008c",
-        "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
-      }
-    },
     "newsletter_cQa4NW": {
       "type": "newsletter",
       "settings": {
         "newsletter_heading": "",
-        "newsletter_description": "<h5>Need more fizz in your life?</h5><p></p><p></p><h1>SIGN UP HERE!</h1>",
+        "newsletter_description": "<h5>Be the first to know</h5><p></p><p></p><h1>SIGN UP HERE!</h1>",
         "textAlignment": "left",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "colors": "white"
-      }
-    },
-    "text_adverts_wQDaFF": {
-      "type": "text-adverts",
-      "blocks": {
-        "text_WJbcc9": {
-          "type": "text",
-          "settings": {
-            "heading": "super fast delivery",
-            "subheading": "Available nationwide",
-            "link": ""
-          }
-        },
-        "text_VFBGjr": {
-          "type": "text",
-          "settings": {
-            "heading": "friendly customer team",
-            "subheading": "On hand to answer any queries",
-            "link": ""
-          }
-        },
-        "text_43VkxC": {
-          "type": "text",
-          "settings": {
-            "heading": "exclusive discounts",
-            "subheading": "When you sign up to our newsletter",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_WJbcc9",
-        "text_VFBGjr",
-        "text_43VkxC"
-      ],
-      "settings": {
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "colors": "light"
-      }
-    },
-    "quiz_nJMaMQ": {
-      "type": "quiz",
-      "blocks": {
-        "question_kE8P4h": {
-          "type": "question",
-          "settings": {
-            "question": "How would you describe your personal style?",
-            "option_1": "Minimal and modern",
-            "collection_1": "",
-            "product_list_1": [],
-            "tag_1": "",
-            "option_2": "Bold and expressive",
-            "collection_2": "",
-            "product_list_2": [],
-            "tag_2": "",
-            "option_3": "Classic and timeless",
-            "collection_3": "",
-            "product_list_3": [],
-            "tag_3": "",
-            "option_4": "Casual and relaxed",
-            "collection_4": "",
-            "product_list_4": [],
-            "tag_4": ""
-          }
-        },
-        "question_wmLWT6": {
-          "type": "question",
-          "settings": {
-            "question": "What do you usually look for when shopping?",
-            "option_1": "Everyday essentials",
-            "collection_1": "",
-            "product_list_1": [],
-            "tag_1": "",
-            "option_2": "Standout statement pieces",
-            "collection_2": "",
-            "product_list_2": [],
-            "tag_2": "",
-            "option_3": "Seasonal trends",
-            "collection_3": "",
-            "product_list_3": [],
-            "tag_3": "",
-            "option_4": "Comfortable must-haves",
-            "collection_4": "",
-            "product_list_4": [],
-            "tag_4": ""
-          }
-        },
-        "question_dewX3e": {
-          "type": "question",
-          "settings": {
-            "question": "Which color palette speaks to you most?",
-            "option_1": "Neutrals",
-            "collection_1": "",
-            "product_list_1": [],
-            "tag_1": "",
-            "option_2": "Earth tones",
-            "collection_2": "",
-            "product_list_2": [],
-            "tag_2": "",
-            "option_3": "Bold and bright",
-            "collection_3": "",
-            "product_list_3": [],
-            "tag_3": "",
-            "option_4": "Soft and pastel",
-            "collection_4": "",
-            "product_list_4": [],
-            "tag_4": ""
-          }
-        }
-      },
-      "block_order": [
-        "question_kE8P4h",
-        "question_wmLWT6",
-        "question_dewX3e"
-      ],
-      "name": "t:sections.quiz.name",
-      "settings": {
-        "options_style": "text",
-        "image_aspect_ratio": "square",
-        "questions_text_color": "#ffffff",
-        "results_heading": "We think you'll love...",
-        "products_to_show": 3,
-        "button_label": "Discover more styles",
-        "button_link": "",
-        "heading": "Need inspiration?",
-        "text": "<p>Take the quiz to find styles we think you'll love.</p>",
-        "start_button_label": "Start",
-        "intro_text_color": "#ffffff",
-        "height_desktop": "450px",
-        "content_position_desktop": "center",
-        "height_mobile": "300px",
-        "content_position_mobile": "center",
-        "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "background_color": "#000000",
-        "override_button_colors": false,
-        "button_background_color": "#1f88d2",
-        "button_text_color": "#ffffff",
-        "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
+        "colors": "accent"
       }
     }
   },
@@ -902,10 +737,8 @@
     "image_with_text_overlay_qmXaFa",
     "template_product_info_columns_YPyY6m",
     "blog_posts_wefQCf",
+    "testimonials_h6YnF3",
     "image_with_text_overlay_3tx9wj",
-    "image_with_text_overlay_LN7YT6",
-    "newsletter_cQa4NW",
-    "text_adverts_wQDaFF",
-    "quiz_nJMaMQ"
+    "newsletter_cQa4NW"
   ]
 }

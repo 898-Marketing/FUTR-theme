@@ -1,0 +1,193 @@
+<!--
+  Phase System Columns — standalone section (not the stock "Info columns"
+  section, to avoid affecting the other pages that already use that one:
+  index.json, page.wholesale.json, page.events.json, product.gametime.json,
+  product.pregame.json). Each column is a block: colored header bar, badge
+  icon, paragraph, and up to 2 linkable product names below a divider.
+-->
+
+{%- style -%}
+  #shopify-section-{{ section.id }} .phase-columns {
+    background: {{ section.settings.section_bg_color }};
+    padding: 48px 40px;
+  }
+  @media (max-width: 640px) { #shopify-section-{{ section.id }} .phase-columns { padding: 32px 20px; } }
+
+  .phase-columns__heading-wrap {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .phase-columns__heading {
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -.01em;
+    font-size: 26px;
+    line-height: 1.25;
+  }
+  .phase-columns__heading .is-prefix { color: {{ section.settings.heading_color }}; }
+  .phase-columns__heading .is-accent { color: {{ section.settings.heading_accent_color }}; }
+  @media (max-width: 640px) { .phase-columns__heading { font-size: 19px; } }
+
+  .phase-columns__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  @media (max-width: 800px) { .phase-columns__grid { grid-template-columns: 1fr; } }
+
+  .phase-col {
+    background: #f5f5f5;
+    border: 1px solid rgba(14, 17, 22, .08);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .phase-col__bar {
+    background: var(--phase-col-color, #8FBF2E);
+    color: #fff;
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 16px;
+  }
+  .phase-col__badge {
+    display: flex;
+    justify-content: center;
+    padding: 20px 16px 4px;
+  }
+  .phase-col__badge img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+  }
+  .phase-col__body {
+    padding: 12px 24px 24px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .phase-col__text {
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #292929;
+  }
+  .phase-col__text p { margin: 0; }
+  .phase-col__divider {
+    border: none;
+    border-top: 1px solid rgba(14, 17, 22, .15);
+    margin: 16px 0 12px;
+  }
+  .phase-col__links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .phase-col__link {
+    font-family: 'Archivo', system-ui, sans-serif;
+    color: var(--phase-col-color, #8FBF2E);
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .phase-col__link:hover { text-decoration: underline; }
+{%- endstyle -%}
+
+<div class="phase-columns">
+  {%- if section.settings.heading_prefix != blank or section.settings.heading_accent != blank -%}
+    <div class="phase-columns__heading-wrap">
+      <h2 class="phase-columns__heading">
+        {%- if section.settings.heading_prefix != blank -%}<span class="is-prefix">{{ section.settings.heading_prefix }}</span>{%- endif -%}
+        {%- if section.settings.heading_accent != blank -%} <span class="is-accent">{{ section.settings.heading_accent }}</span>{%- endif -%}
+      </h2>
+    </div>
+  {%- endif -%}
+
+  <div class="phase-columns__grid">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'phase' -%}
+        <div class="phase-col" style="--phase-col-color: {{ block.settings.bar_color }};" {{ block.shopify_attributes }}>
+          {%- if block.settings.bar_text != blank -%}
+            <div class="phase-col__bar">{{ block.settings.bar_text }}</div>
+          {%- endif -%}
+          {%- if block.settings.badge_icon != blank -%}
+            <div class="phase-col__badge">
+              <img src="{{ block.settings.badge_icon | image_url: width: 200 }}" alt="" loading="lazy">
+            </div>
+          {%- endif -%}
+          <div class="phase-col__body">
+            {%- if block.settings.text != blank -%}
+              <div class="phase-col__text">{{ block.settings.text }}</div>
+            {%- endif -%}
+            {%- if block.settings.link_1_text != blank or block.settings.link_2_text != blank -%}
+              <hr class="phase-col__divider">
+              <div class="phase-col__links">
+                {%- if block.settings.link_1_text != blank -%}
+                  <a class="phase-col__link" href="{{ block.settings.link_1_url }}">&rsaquo; {{ block.settings.link_1_text }}</a>
+                {%- endif -%}
+                {%- if block.settings.link_2_text != blank -%}
+                  <a class="phase-col__link" href="{{ block.settings.link_2_url }}">&rsaquo; {{ block.settings.link_2_text }}</a>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Phase System Columns",
+  "settings": [
+    { "type": "color", "id": "section_bg_color", "label": "Section background", "default": "#ffffff" },
+    { "type": "header", "content": "Heading" },
+    { "type": "text", "id": "heading_prefix", "label": "Heading (first color)", "default": "The FUTR Athlete System." },
+    { "type": "color", "id": "heading_color", "label": "Heading color", "default": "#0E1116" },
+    { "type": "text", "id": "heading_accent", "label": "Heading (accent color)", "default": "Built for every phase of play." },
+    { "type": "color", "id": "heading_accent_color", "label": "Heading accent color", "default": "#8FBF2E" }
+  ],
+  "blocks": [
+    {
+      "type": "phase",
+      "name": "Phase column",
+      "settings": [
+        { "type": "color", "id": "bar_color", "label": "Bar / accent color", "default": "#8FBF2E" },
+        { "type": "text", "id": "bar_text", "label": "Bar label", "default": "PRE" },
+        { "type": "image_picker", "id": "badge_icon", "label": "Badge icon" },
+        { "type": "richtext", "id": "text", "label": "Description", "default": "<p>Describe this phase of play.</p>" },
+        { "type": "header", "content": "Linked product names" },
+        { "type": "text", "id": "link_1_text", "label": "Link 1 text", "default": "Pregame" },
+        { "type": "url", "id": "link_1_url", "label": "Link 1 URL" },
+        { "type": "text", "id": "link_2_text", "label": "Link 2 text (optional)" },
+        { "type": "url", "id": "link_2_url", "label": "Link 2 URL" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Phase System Columns",
+      "blocks": [
+        { "type": "phase", "settings": { "bar_color": "#8FBF2E", "bar_text": "PRE", "text": "<p>Prime the body with clean energy, sharper focus, and endurance so athletes start strong and stay confident.</p>", "link_1_text": "Pregame" } },
+        { "type": "phase", "settings": { "bar_color": "#4B2E83", "bar_text": "INTRA", "text": "<p>Replenish electrolytes, fuel working muscles, and keep athletes going strong through every quarter, inning, or event.</p>", "link_1_text": "Gametime" } },
+        { "type": "phase", "settings": { "bar_color": "#F0642A", "bar_text": "DAILY", "text": "<p>Rebuild, recharge, and build a strong foundation with everyday essentials that support recovery, wellness, and development.</p>", "link_1_text": "Recover+", "link_2_text": "Creatine Gummies" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

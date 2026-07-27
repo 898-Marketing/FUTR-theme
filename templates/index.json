@@ -525,24 +525,24 @@
     "template_product_info_columns_YPyY6m": {
       "type": "template--product--info-columns",
       "blocks": {
-        "image_and_text_KeyhpA": {
+        "image_and_text_Y93dfi": {
           "type": "image_and_text",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.04.13_PM.png",
             "grid_image_size": "natural",
             "heading": "EXPERT-LED Formulas",
-            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "text": "<p>Built by leaders in sports medicine, pediatrics, and nutrition — experts who understand what athletes need at every stage. They don't just know the research. They've helped shape it.</p>",
             "button_link": "shopify://pages/contact",
-            "button_text": "MEET OUR TEAM->"
+            "button_text": "MEET OUR TEAM"
           }
         },
-        "image_and_text_Y93dfi": {
+        "image_and_text_y37zVL": {
           "type": "image_and_text",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.01.11_PM.png",
             "grid_image_size": "natural",
             "heading": "BUILT FOR YOUTH",
-            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "text": "<p>These aren't watered-down adult formulas. Every product is built around what a developing athlete's body needs — the right nutrients, the right amounts, for the right stage of their game.</p>",
             "button_link": "",
             "button_text": ""
           }
@@ -553,15 +553,15 @@
             "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.01.59_PM.png",
             "grid_image_size": "natural",
             "heading": "TESTED AT EVERY LEVEL",
-            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "text": "<p>Individual ingredients are verified, finished formulas are third-party tested, and labels are checked for accuracy. Parents can trust what's on the label — and athletes can just play.</p>",
             "button_link": "",
             "button_text": ""
           }
         }
       },
       "block_order": [
-        "image_and_text_KeyhpA",
         "image_and_text_Y93dfi",
+        "image_and_text_y37zVL",
         "image_and_text_VjVbP8"
       ],
       "name": "t:sections.template--product--info-columns.presets.name",

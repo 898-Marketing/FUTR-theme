@@ -4,7 +4,7 @@
   /* "Price on the right" layout — only applies within this section instance
      (scoped by section id), so other pages using featured-collection are
      unaffected unless they also turn this setting on. */
-  #shopify-section-{{ section.id }} .product-grid--price-right-layout { display: flex; flex-wrap: wrap; }
+  #shopify-section-{{ section.id }} .product-grid--price-right-layout { display: flex; flex-wrap: wrap; align-items: baseline; }
   #shopify-section-{{ section.id }} .product-grid--price-right-layout .grid-view-item-image { flex: 0 0 100%; }
   #shopify-section-{{ section.id }} .product-grid--price-right-layout .product-grid--vendor,
   #shopify-section-{{ section.id }} .product-grid--price-right-layout .product-grid--title { order: 1; flex: 0 1 auto; }

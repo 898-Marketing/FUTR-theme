@@ -468,22 +468,47 @@
         "heading_UiRkcP": {
           "type": "heading",
           "settings": {
-            "title": "Cans delivered straight to your door",
+            "title": "THE FUTR SYSTEM",
             "font_size_desktop": 28,
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
           }
+        },
+        "text_VetieR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every FUTR formula was built to work together as part of a system to fuel, hydrate, recharge and support the development of athletes.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_fGGFC6": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "",
+            "first_button_label": "SHOP THE SYSTEM",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "buttons_background": "#3188D2",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
         }
       },
       "block_order": [
-        "heading_UiRkcP"
+        "heading_UiRkcP",
+        "text_VetieR",
+        "button_fGGFC6"
       ],
       "settings": {
         "height_desktop": "550px",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
-        "caption_width_desktop": 35,
-        "height_mobile": "400px",
+        "caption_width_desktop": 64,
+        "height_mobile": "300px",
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",
         "section_link": "",
@@ -497,47 +522,66 @@
         "image_overlay_opacity": 30
       }
     },
-    "blog_posts_qiEbXw": {
-      "type": "blog-posts",
+    "template_product_info_columns_YPyY6m": {
+      "type": "template--product--info-columns",
       "blocks": {
-        "blog_ePEF7g": {
-          "type": "blog",
+        "image_and_text_KeyhpA": {
+          "type": "image_and_text",
           "settings": {
-            "blog": ""
+            "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.00.48_PM.png",
+            "grid_image_size": "natural",
+            "heading": "EXPERT-LED Formulas",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": "MEET OUR TEAM->"
+          }
+        },
+        "image_and_text_Y93dfi": {
+          "type": "image_and_text",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.01.11_PM.png",
+            "grid_image_size": "natural",
+            "heading": "BUILT FOR YOUTH",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "image_and_text_VjVbP8": {
+          "type": "image_and_text",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.01.59_PM.png",
+            "grid_image_size": "natural",
+            "heading": "TESTED AT EVERY LEVEL",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
           }
         }
       },
       "block_order": [
-        "blog_ePEF7g"
+        "image_and_text_KeyhpA",
+        "image_and_text_Y93dfi",
+        "image_and_text_VjVbP8"
       ],
+      "name": "t:sections.template--product--info-columns.presets.name",
       "settings": {
-        "title": "From the blog",
+        "title": "THE FUTR STANDARD",
         "description": "",
         "section_header_alignment": "center",
-        "show_image": true,
-        "image_shape": "natural",
-        "post_limit": 3,
-        "show_tags": false,
-        "blog_show_date": true,
-        "show_author": false,
-        "show_reading_time": true,
-        "show_comment_count": false,
-        "show_excerpt": true,
-        "show_read_more": true,
-        "heading_font": "heading",
-        "heading_font_size": 28,
-        "alignment": "left",
+        "maximum_width": 500,
+        "override_border_radius": false,
         "buttons_style": "underlined",
         "override_button_colors": false,
-        "button_background_color": "#1f88d2",
+        "button_background_color": "#E68819",
         "button_text_color": "#ffffff",
-        "layout_style_desktop": "slider",
         "hover_navigation_desktop": "left-and-right",
-        "peek_desktop": true,
-        "images_per_row_desktop": 3,
-        "layout_style_mobile": "slider",
-        "navigation_mobile": "dots",
-        "section_width": "content",
+        "columns_per_row": 3,
+        "vertical_alignment": "top",
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "slider_height_mobile": "adaptive",
+        "section_width": "full",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
         "colors": "white"
@@ -867,7 +911,7 @@
     "rich_text_Fzgr6p",
     "template_product_info_columns_DeaBpp",
     "image_with_text_overlay_qmXaFa",
-    "blog_posts_qiEbXw",
+    "template_product_info_columns_YPyY6m",
     "image_with_text_overlay_3tx9wj",
     "featured_product_rhTQfC",
     "image_with_text_overlay_LN7YT6",

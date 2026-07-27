@@ -558,7 +558,7 @@
         "text_alignment": "left",
         "text_alignment_mobile": "center",
         "slider_height_mobile": "adaptive",
-        "section_width": "full",
+        "section_width": "content",
         "section_padding_top": 50,
         "section_padding_bottom": 60,
         "colors": "white",
@@ -610,7 +610,7 @@
         "images_per_row_desktop": 5,
         "layout_style_mobile": "slider",
         "navigation_mobile": "dots",
-        "section_width": "full",
+        "section_width": "content",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
         "colors": "dark"

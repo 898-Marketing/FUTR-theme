@@ -160,7 +160,7 @@
         "section_description": "",
         "section_header_alignment": "center",
         "faq_icon": "plus_minus",
-        "image_max_width": 350,
+        "image_max_width": 600,
         "title": "",
         "text": "",
         "link": "",
@@ -220,34 +220,6 @@
         "section_padding_bottom": 60,
         "colors": "white",
         "enable_readmore": false
-      }
-    },
-    "product-recommendations": {
-      "type": "template--product--recommendations",
-      "settings": {
-        "title": "You may also like",
-        "description": "",
-        "section_header_alignment": "center",
-        "layout_style": "slider",
-        "products_to_show": 8,
-        "grid-desktop": 4,
-        "grid-mobile": "2",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "show_highlight": false,
-        "highlight_position": "below_price",
-        "highlight_heading": "Why we love it",
-        "highlight_reference": "",
-        "highlight_text_color": "rgba(0,0,0,0)",
-        "highlight_background_color": "rgba(0,0,0,0)",
-        "highlight_alignment": "left",
-        "highlight_font_size": "medium",
-        "highlight_collapsible_tab": true,
-        "highlight_button_borders": false,
-        "colors": "light",
-        "override_button_colors": false,
-        "button_background_color": "#e68819",
-        "button_text_color": "#ffffff"
       }
     },
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5": {
@@ -619,7 +591,6 @@
     "image_with_text_overlay_Q7ExmH",
     "accordion_with_image_cx6zdK",
     "product-description",
-    "product-recommendations",
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
     "ingredients_grid_yzP3LB",
     "dosage_table_VQ8Jg8",

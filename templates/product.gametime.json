@@ -529,7 +529,7 @@
             "link_1_text": "Pregame",
             "link_1_url": "shopify://products/pregame",
             "link_2_text": "",
-            "link_2_url": ""
+            "link_2_url": "shopify://products/pregame"
           }
         },
         "phase_xaQbPE": {
@@ -542,7 +542,7 @@
             "link_1_text": "Gametime",
             "link_1_url": "shopify://products/gametime",
             "link_2_text": "",
-            "link_2_url": ""
+            "link_2_url": "shopify://products/gametime"
           }
         },
         "phase_UqJLNq": {
@@ -553,9 +553,9 @@
             "badge_icon": "shopify://shop_images/FUTR-Icons-DAILY.png",
             "text": "<p>Rebuild, recharge, and build a strong foundation with everyday essentials that support recovery, wellness, and development.</p>",
             "link_1_text": "Recover+",
-            "link_1_url": "",
+            "link_1_url": "shopify://products/recover",
             "link_2_text": "Creatine Gummies",
-            "link_2_url": ""
+            "link_2_url": "shopify://products/creatine"
           }
         }
       },

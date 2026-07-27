@@ -492,7 +492,7 @@
             "second_button_label": "",
             "buttons_style": "filled",
             "override_button_colors": true,
-            "buttons_background": "#3188D2",
+            "buttons_background": "#3188d2",
             "buttons_text": "#ffffff",
             "buttons_bottom_spacing": 20
           }
@@ -528,7 +528,7 @@
         "image_and_text_KeyhpA": {
           "type": "image_and_text",
           "settings": {
-            "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.00.48_PM.png",
+            "image": "shopify://shop_images/Screenshot_2026-07-27_at_3.04.13_PM.png",
             "grid_image_size": "natural",
             "heading": "EXPERT-LED Formulas",
             "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
@@ -573,7 +573,7 @@
         "override_border_radius": false,
         "buttons_style": "underlined",
         "override_button_colors": false,
-        "button_background_color": "#E68819",
+        "button_background_color": "#e68819",
         "button_text_color": "#ffffff",
         "hover_navigation_desktop": "left-and-right",
         "columns_per_row": 3,

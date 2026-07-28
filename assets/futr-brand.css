@@ -172,3 +172,9 @@
     animation: none !important;
   }
 }
+
+/* Top-level main nav links (PRODUCTS, THE SYSTEM, etc.) — bump weight slightly
+   for better legibility against the header's transparent/photo background. */
+.site-nav > li > a.site-nav__link {
+  font-weight: 500;
+}

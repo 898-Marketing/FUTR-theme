@@ -11,6 +11,18 @@
     }
   }
 
+  /* The section title/description fade in via a scroll-triggered animation
+     (opacity starts at ~0 until a JS IntersectionObserver adds a "shown" class
+     to an ancestor). That reveal can lose the race against this section's own
+     async carousel script on a slow/cold load, leaving the text stuck at
+     opacity 0 until the page is refreshed. Skip the animation for the header
+     text specifically so it's always visible immediately — bypassing the
+     flaky timing rather than trying to win the race. */
+  .section-{{ section.id }} .section-title--wrapper [data-animate] {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
   /* Opt-in "boxed dark card" style — only applied when card_style_boxed is
      turned on for this specific section instance, so other pages using
      this same section type are unaffected. */

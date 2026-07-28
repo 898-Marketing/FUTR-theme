@@ -84,39 +84,42 @@
       }
     },
     "image_with_text_Fnph7t": {
-      "type": "image-with-text",
+      "type": "text-with-image-stack",
       "blocks": {
-        "heading_eh97gK": {
-          "type": "heading",
+        "image_1": {
+          "type": "image",
           "settings": {
-            "title": "SUZANNE GATT",
-            "heading_bottom_spacing": 15
+            "image": "",
+            "placeholder_color": "#8a3d1f",
+            "overlay_heading": "MORE THAN A",
+            "overlay_heading_accent": "GAME",
+            "overlay_heading_accent_color": "#4aa3e0"
           }
         },
-        "text_XLwjg3": {
-          "type": "text",
+        "image_2": {
+          "type": "image",
           "settings": {
-            "text": "<p><strong>Founder, FUTR</strong></p><p>I didn't set out to build a nutrition company. I set out to solve a problem I kept running into as an athlete, a coach, and a mom.</p><p>For 13 years, I've built and launched products for some of the biggest names in adult sports nutrition. And for most of that time, parents would find me and ask the same question: which of these products can I give my kid? I always hesitated. In over a decade in this industry, I never came across a single formula I felt was truly made for a young athlete. I wanted to help those parents, but I just couldn't point them to something I believed in. So, I decided to change that.</p><p>The adult sports nutrition space is crowded — but the youth category is still wide open, and not in a good way. Generic products, ingredient levels not designed for developing bodies, adult formulas repackaged in smaller sizes. Young athletes deserved better. That's the gap FUTR was built to fill. </p><p>My time in sports nutrition was more than just building brands and innovating products, it gave me access to the industry leaders, formulators, flavor scientists, testing labs, and manufacturing partners trusted by the most respected brands in the industry.  </p><p>The small and dedicated team behind FUTR isn’t just made up of industry experts, we’re parents and coaches as well. And we built FUTR without shortcuts. Our science advisory board includes registered dietitians, pediatric physicians, and sports research clinicians with deep expertise in youth health, performance, and development. Our manufacturing, testing, flavor, and formulation partners are held to the same standards trusted by the best in the business.</p><p>FUTR is bold, motivational, and built to speak directly to young athletes. But behind every product is the science, the quality, and the trust that parents deserve.<br/><br/></p><p>This isn't just a business to me. It's personal. I'm here to raise the bar for this generation — and every FUTR generation.</p>",
-            "text_bottom_spacing": 20
+            "image": "",
+            "placeholder_color": "#2c5f7c",
+            "overlay_heading": "PHOTOS OF OUR TEAM AND KIDS",
+            "overlay_heading_accent": "",
+            "overlay_heading_accent_color": "#4aa3e0"
           }
         }
       },
       "block_order": [
-        "heading_eh97gK",
-        "text_XLwjg3"
-      ],
-      "custom_css": [
-        "h2{font-size: 34px;}"
+        "image_1",
+        "image_2"
       ],
       "settings": {
-        "layout": "left",
-        "text_alignment": "left",
-        "text_alignment_mobile": "center",
-        "text_overlapping_image": false,
-        "section-width": "full",
+        "name": "SUZANNE GATT",
+        "title": "Founder, FUTR",
+        "text": "<p>I didn't set out to build a nutrition company. I set out to solve a problem I kept running into as an athlete, a coach, and a mom.</p><p>For 13 years, I've built and launched products for some of the biggest names in adult sports nutrition. And for most of that time, parents would find me and ask the same question: which of these products can I give my kid? I always hesitated. In over a decade in this industry, I never came across a single formula I felt was truly made for a young athlete. I wanted to help those parents, but I just couldn't point them to something I believed in. So, I decided to change that.</p><p>The adult sports nutrition space is crowded — but the youth category is still wide open, and not in a good way. Generic products, ingredient levels not designed for developing bodies, adult formulas repackaged in smaller sizes. Young athletes deserved better. That's the gap FUTR was built to fill. </p><p>My time in sports nutrition was more than just building brands and innovating products, it gave me access to the industry leaders, formulators, flavor scientists, testing labs, and manufacturing partners trusted by the most respected brands in the industry.  </p><p>The small and dedicated team behind FUTR isn’t just made up of industry experts, we’re parents and coaches as well. And we built FUTR without shortcuts. Our science advisory board includes registered dietitians, pediatric physicians, and sports research clinicians with deep expertise in youth health, performance, and development. Our manufacturing, testing, flavor, and formulation partners are held to the same standards trusted by the best in the business.</p><p>FUTR is bold, motivational, and built to speak directly to young athletes. But behind every product is the science, the quality, and the trust that parents deserve.<br/><br/></p><p>This isn't just a business to me. It's personal. I'm here to raise the bar for this generation — and every FUTR generation.</p>",
+        "images_position": "right",
+        "image_gap": 24,
+        "colors": "light",
         "section_padding_top": 0,
-        "section_padding_bottom": 0,
-        "colors": "light"
+        "section_padding_bottom": 0
       }
     },
     "template_product_info_columns_NzhHxq": {

@@ -1,0 +1,267 @@
+{% style %}
+  .section-{{ section.id }} .tws-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: {{ section.settings.section_padding_top }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }} .tws-wrapper {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 60px;
+    }
+    .section-{{ section.id }} .tws-wrapper.tws-images-left {
+      direction: rtl;
+    }
+    .section-{{ section.id }} .tws-wrapper.tws-images-left > * {
+      direction: ltr;
+    }
+  }
+
+  .section-{{ section.id }} .tws-name {
+    margin: 0;
+  }
+
+  .section-{{ section.id }} .tws-title {
+    margin: 4px 0 20px;
+    font-weight: 400;
+  }
+
+  .section-{{ section.id }} .tws-text > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-{{ section.id }} .tws-images {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.image_gap }}px;
+  }
+
+  .section-{{ section.id }} .tws-image-block {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .section-{{ section.id }} .tws-image-block img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section-{{ section.id }} .tws-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 260px;
+    padding: 30px;
+  }
+
+  .section-{{ section.id }} .tws-placeholder-text {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .section-{{ section.id }} .tws-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .65), rgba(0, 0, 0, 0));
+  }
+
+  .section-{{ section.id }} .tws-overlay-heading {
+    margin: 0;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.15;
+    color: #ffffff;
+  }
+
+  .section-{{ section.id }} .tws-overlay-heading .tws-overlay-accent {
+    display: block;
+  }
+{% endstyle %}
+
+<div class="color-scheme--{{ section.settings.colors }} wrapper-spacing--h">
+  <div class="section-{{ section.id }} tws-section">
+    <div class="tws-wrapper{% if section.settings.images_position == 'left' %} tws-images-left{% endif %}">
+
+      <div class="tws-text-column">
+        {% if section.settings.name != blank %}
+          <h2 class="tws-name">{{ section.settings.name }}</h2>
+        {% endif %}
+        {% if section.settings.title != blank %}
+          <p class="tws-title">{{ section.settings.title }}</p>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <div class="tws-text">{{ section.settings.text }}</div>
+        {% endif %}
+      </div>
+
+      <div class="tws-images">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'image' %}
+              <div class="tws-image-block" {{ block.shopify_attributes }}>
+                {% if block.settings.image != blank %}
+                  {% render 'responsive-image', image: block.settings.image, allow_stretch: true %}
+                  {% if block.settings.overlay_heading != blank or block.settings.overlay_heading_accent != blank %}
+                    <div class="tws-overlay">
+                      <p class="tws-overlay-heading">
+                        {% if block.settings.overlay_heading != blank %}{{ block.settings.overlay_heading }}{% endif %}
+                        {% if block.settings.overlay_heading_accent != blank %}
+                          <span class="tws-overlay-accent" style="color: {{ block.settings.overlay_heading_accent_color }};">{{ block.settings.overlay_heading_accent }}</span>
+                        {% endif %}
+                      </p>
+                    </div>
+                  {% endif %}
+                {% else %}
+                  <div class="tws-placeholder" style="background-color: {{ block.settings.placeholder_color }};">
+                    {% if block.settings.overlay_heading != blank %}
+                      <p class="tws-placeholder-text">{{ block.settings.overlay_heading }}</p>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text with image stack",
+  "settings": [
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name / heading",
+      "default": "Suzanne Gatt"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title / subheading",
+      "default": "Founder, FUTR"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Add your story here.</p>"
+    },
+    {
+      "type": "select",
+      "id": "images_position",
+      "label": "Images position",
+      "default": "right",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "image_gap",
+      "label": "Gap between images",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "colors",
+      "label": "t:all.Color_scheme",
+      "default": "white",
+      "options": [
+        { "value": "white", "label": "t:all.Default" },
+        { "value": "light", "label": "t:all.First" },
+        { "value": "accent", "label": "t:all.Second" },
+        { "value": "dark", "label": "t:all.Third" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "t:all.Spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "t:all.Spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Leave blank to show a solid-color placeholder block instead (useful before real photos are ready)."
+        },
+        {
+          "type": "color",
+          "id": "placeholder_color",
+          "label": "Placeholder background color",
+          "default": "#2c5f7c",
+          "info": "Only shown when no image is selected above."
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading",
+          "label": "Overlay text (first line)",
+          "info": "Shown over the image, or as the placeholder's centered text when no image is set."
+        },
+        {
+          "type": "text",
+          "id": "overlay_heading_accent",
+          "label": "Overlay text (second line, accent color)",
+          "info": "Only shown on top of a real image."
+        },
+        {
+          "type": "color",
+          "id": "overlay_heading_accent_color",
+          "label": "Accent line color",
+          "default": "#4aa3e0"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with image stack",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -101,7 +101,7 @@
         "show_country_flag": true,
         "show_locale_selector": false,
         "show_locale_selector_desktop": false,
-        "show_icons": false,
+        "show_icons": true,
         "enable_search": true,
         "customer_account_menu": "",
         "cart-style": "shopping-bag",

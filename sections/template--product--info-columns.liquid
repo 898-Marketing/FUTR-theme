@@ -11,18 +11,17 @@
     }
   }
 
-  /* The section title/description AND each card (every block wrapper also
-     carries data-animate) fade in via a scroll-triggered animation — opacity
-     starts at ~0 until a JS IntersectionObserver adds a "shown" class to an
-     ancestor. That reveal can lose the race against this section's own async
-     carousel script on a slow/cold load, leaving text/cards stuck invisible
-     until the page is refreshed. Skip the animation for every data-animate
-     element in this section so everything is always visible immediately —
-     bypassing the flaky timing rather than trying to win the race. */
+  /* Opt-in fix for the scroll-triggered fade-in animation occasionally losing
+     its race against this section's async carousel script on a slow/cold
+     load (title/description/card text can get stuck invisible until the
+     page is refreshed). Only applied when disable_scroll_animation is turned
+     on for this specific section instance. */
+  {% if section.settings.disable_scroll_animation %}
   .section-{{ section.id }} [data-animate] {
     opacity: 1 !important;
     animation: none !important;
   }
+  {% endif %}
 
   /* Opt-in "boxed dark card" style — only applied when card_style_boxed is
      turned on for this specific section instance, so other pages using
@@ -711,6 +710,13 @@
       "id": "force_static_grid",
       "label": "Static grid (no slider)",
       "info": "Shows all columns at once in a wrapping grid instead of a swipeable carousel. Only affects this section instance.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_scroll_animation",
+      "label": "Always show content immediately (skip scroll-in animation)",
+      "info": "Fixes an issue where the title, description, or card text can randomly fail to appear until the page is refreshed. Only affects this section instance.",
       "default": false
     }
   ],

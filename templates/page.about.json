@@ -15,8 +15,8 @@
         "text_static_4tXtft": {
           "type": "text_static",
           "settings": {
-            "text_static": "<p>We're all about</p>",
-            "max_width_desktop": 100,
+            "text_static": "<p>lorem ipsum</p>",
+            "max_width_desktop": 94,
             "max_width_mobile": 100,
             "text_color": "#ffffff"
           }
@@ -24,10 +24,10 @@
         "text_dynamic_jaaUgT": {
           "type": "text_dynamic",
           "settings": {
-            "text_dynamic": "the good times!, quality!, the bubbles!, fun!, flavour!, friends!",
+            "text_dynamic": "lorem ipsum, lorem ipsum, lorem ipsum",
             "animation_timing": 1600,
             "rotation_interval": 3700,
-            "text_color": "rgba(0,0,0,0)"
+            "text_color": "#3188D2"
           }
         }
       },
@@ -36,9 +36,11 @@
         "text_dynamic_jaaUgT"
       ],
       "settings": {
+        "image_desktop": "shopify://shop_images/empty-net-on-a-green-sports-field-in-the-city.jpg",
         "height_desktop": "s",
         "text_position_desktop": "left",
         "text_size_desktop": 60,
+        "image_mobile": "shopify://shop_images/empty-net-on-a-green-sports-field-in-the-city.jpg",
         "height_mobile": "s",
         "text_position_mobile": "left",
         "text_size_mobile": 22,
@@ -54,15 +56,15 @@
         "heading_8QVLE7": {
           "type": "heading",
           "settings": {
-            "heading": "Our story",
-            "heading--text-size": 30,
+            "heading": "We're not just fueling the next generation. We're redefining what youth performance looks like.",
+            "heading--text-size": 36,
             "heading_bottom_spacing": 20
           }
         },
         "richtext_4YaFct": {
           "type": "richtext",
           "settings": {
-            "text": "<p>Born in NZ but made in the UK, we’re the purveyor of good times with good people. Our seltzers were created to bring mates together. Get the fun going. At Gerry’s, we’re all about making life feel that little bit… lighter.</p>",
+            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them.<br/>Not borrowed from adult formulas. Not watered down. Every product is engineered around the way young athletes actually train, compete, recover, and grow — safe, purposeful, and science-backed.<br/>This is nutrition built for the stage of the game they're in right now.<br/></p>",
             "text_size": 14,
             "text_bottom_spacing": 20
           }
@@ -87,14 +89,14 @@
         "heading_eh97gK": {
           "type": "heading",
           "settings": {
-            "title": "Good Times Guaranteed",
+            "title": "SUZANNE GATT",
             "heading_bottom_spacing": 15
           }
         },
         "text_XLwjg3": {
           "type": "text",
           "settings": {
-            "text": "<p>Life’s too short to turn down good times with friends. Maybe that’s why we all need a Gerry’s. You might have heard that us Kiwis are quite good at going with the flow. So we’ve made a low calorie hard seltzer to make kicking back with a cold one the easiest decision of your day. No arm twisting. No drama. Just crack open a can, grab some company and get the convo going. Because when we drink, we drink social.</p>",
+            "text": "<p><strong>Founder, FUTR</strong></p><p>I didn't set out to build a nutrition company. I set out to solve a problem I kept running into as an athlete, a coach, and a mom.</p><p>For 13 years, I've built and launched products for some of the biggest names in adult sports nutrition. And for most of that time, parents would find me and ask the same question: which of these products can I give my kid? I always hesitated. In over a decade in this industry, I never came across a single formula I felt was truly made for a young athlete. I wanted to help those parents, but I just couldn't point them to something I believed in. So, I decided to change that.</p><p>The adult sports nutrition space is crowded — but the youth category is still wide open, and not in a good way. Generic products, ingredient levels not designed for developing bodies, adult formulas repackaged in smaller sizes. Young athletes deserved better. That's the gap FUTR was built to fill. </p><p>My time in sports nutrition was more than just building brands and innovating products, it gave me access to the industry leaders, formulators, flavor scientists, testing labs, and manufacturing partners trusted by the most respected brands in the industry.  </p><p>The small and dedicated team behind FUTR isn’t just made up of industry experts, we’re parents and coaches as well. And we built FUTR without shortcuts. Our science advisory board includes registered dietitians, pediatric physicians, and sports research clinicians with deep expertise in youth health, performance, and development. Our manufacturing, testing, flavor, and formulation partners are held to the same standards trusted by the best in the business.</p><p>FUTR is bold, motivational, and built to speak directly to young athletes. But behind every product is the science, the quality, and the trust that parents deserve.<br/><br/></p><p>This isn't just a business to me. It's personal. I'm here to raise the bar for this generation — and every FUTR generation.</p>",
             "text_bottom_spacing": 20
           }
         }
@@ -102,6 +104,9 @@
       "block_order": [
         "heading_eh97gK",
         "text_XLwjg3"
+      ],
+      "custom_css": [
+        "h2{font-size: 34px;}"
       ],
       "settings": {
         "layout": "left",
@@ -114,86 +119,82 @@
         "colors": "light"
       }
     },
-    "featured_collection_3xWQpK": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Our drinks",
-        "description": "<p>From that pastel can to the irresistible flavours, our premium hard seltzers sparkle on every level. Low cal, gluten free and vegan, they’re the healthier option for those who love life as much as partying. And did we mention, they taste great too?</p><p><br/>100% made in the UK, Gerry’s simply blends real fruit flavours, sparkling spring water and premium quality spirits – just all natural ingredients, and no funny fizzness.</p>",
-        "section_header_alignment": "center",
-        "show_highlight": false,
-        "highlight_position": "below_price",
-        "highlight_heading": "Why we love it",
-        "highlight_reference": "",
-        "highlight_text_color": "rgba(0,0,0,0)",
-        "highlight_background_color": "rgba(0,0,0,0)",
-        "highlight_alignment": "left",
-        "highlight_font_size": "medium",
-        "highlight_collapsible_tab": true,
-        "highlight_button_borders": false,
-        "override_button_colors": false,
-        "button_background_color": "#e68819",
-        "button_text_color": "#ffffff",
-        "show_view_all": false,
-        "button_position": "below_products",
-        "button_alignment": "center",
-        "buttons_style": "filled",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "layout_style": "slider",
-        "products_to_show": 8,
-        "grid-desktop": 3,
-        "grid-mobile": "1",
-        "colors": "white"
-      }
-    },
-    "newsletter_Tn4KYP": {
-      "type": "newsletter",
-      "settings": {
-        "newsletter_heading": "Keep in touch",
-        "newsletter_description": "",
-        "textAlignment": "left",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "colors": "white"
-      }
-    },
-    "text_adverts_cyBtVM": {
-      "type": "text-adverts",
+    "template_product_info_columns_NzhHxq": {
+      "type": "template--product--info-columns",
       "blocks": {
-        "text_CM79gV": {
-          "type": "text",
+        "image_and_text_d7H3Dm": {
+          "type": "image_and_text",
           "settings": {
-            "heading": "Bursting with goodness",
-            "subheading": "100% vegan and delicious",
-            "link": ""
+            "grid_image_size": "square",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
           }
         },
-        "text_6rNba9": {
-          "type": "text",
+        "image_and_text_x8Mccy": {
+          "type": "image_and_text",
           "settings": {
-            "heading": "Eco friendly packaging",
-            "subheading": "Help us save the environment, one cookie at a time!",
-            "link": ""
+            "grid_image_size": "square",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
           }
         },
-        "text_aaWpDJ": {
-          "type": "text",
+        "image_and_text_PgNKzt": {
+          "type": "image_and_text",
           "settings": {
-            "heading": "Sustainably sourced ingredients",
-            "subheading": "We're Fair Trade certified",
-            "link": ""
+            "grid_image_size": "square",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "image_and_text_Pzqi6N": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "square",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
           }
         }
       },
       "block_order": [
-        "text_CM79gV",
-        "text_6rNba9",
-        "text_aaWpDJ"
+        "image_and_text_d7H3Dm",
+        "image_and_text_x8Mccy",
+        "image_and_text_PgNKzt",
+        "image_and_text_Pzqi6N"
       ],
+      "name": "Our Team",
       "settings": {
-        "section_padding_top": 50,
-        "section_padding_bottom": 50,
-        "colors": "light"
+        "title": "Our Team",
+        "description": "<p>Emphasise your messaging</p>",
+        "section_header_alignment": "center",
+        "maximum_width": 500,
+        "override_border_radius": false,
+        "buttons_style": "underlined",
+        "override_button_colors": false,
+        "button_background_color": "#E68819",
+        "button_text_color": "#ffffff",
+        "hover_navigation_desktop": "left-and-right",
+        "columns_per_row": 3,
+        "vertical_alignment": "top",
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "slider_height_mobile": "adaptive",
+        "section_width": "full",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white",
+        "card_style_boxed": false,
+        "card_bg_color": "#0E1116",
+        "card_glow_color": "#1f88d2",
+        "card_glow_size": 40,
+        "card_gap": 0
       }
     }
   },
@@ -201,8 +202,6 @@
     "animated_text_Vqazxt",
     "rich_text_Hjpa6d",
     "image_with_text_Fnph7t",
-    "featured_collection_3xWQpK",
-    "newsletter_Tn4KYP",
-    "text_adverts_cyBtVM"
+    "template_product_info_columns_NzhHxq"
   ]
 }

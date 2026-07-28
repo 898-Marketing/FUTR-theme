@@ -373,6 +373,38 @@ Testing Cypress integration
       padding: 15px;
     }
   {% endif %}
+
+  {% comment %}
+    Desktop icon row in text-label mode (show_icons off): match the nav's bold
+    uppercase treatment, and turn the cart link into a solid button (like the
+    partner reference) instead of plain text. Scoped to :not(.header-icons-enabled)
+    so this only applies when show_icons is off — if icons are ever re-enabled,
+    this leaves that mode's styling untouched.
+  {% endcomment %}
+  .top-links--icon-links .header--supporting-text {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+  }
+  .top-links--icon-links .site-header__cart-toggle:not(.header-icons-enabled) {
+    background: var(--primary-btn-bg-color);
+    color: var(--primary-btn-text-color);
+    border-radius: var(--alt-btn-border-radius);
+    padding: 8px 18px !important;
+  }
+  .top-links--icon-links .site-header__cart-toggle:not(.header-icons-enabled) .header--supporting-text {
+    color: var(--primary-btn-text-color);
+    padding-left: 0;
+  }
+  .top-links--icon-links .site-header__cart-toggle:not(.header-icons-enabled):hover {
+    color: var(--primary-btn-text-color);
+  }
+  .cart-item-count-header--has-label::before {
+    content: " (";
+  }
+  .cart-item-count-header--has-label::after {
+    content: ")";
+  }
 {% endstyle %}
 
 <div

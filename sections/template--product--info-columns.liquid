@@ -11,14 +11,15 @@
     }
   }
 
-  /* The section title/description fade in via a scroll-triggered animation
-     (opacity starts at ~0 until a JS IntersectionObserver adds a "shown" class
-     to an ancestor). That reveal can lose the race against this section's own
-     async carousel script on a slow/cold load, leaving the text stuck at
-     opacity 0 until the page is refreshed. Skip the animation for the header
-     text specifically so it's always visible immediately — bypassing the
-     flaky timing rather than trying to win the race. */
-  .section-{{ section.id }} .section-title--wrapper [data-animate] {
+  /* The section title/description AND each card (every block wrapper also
+     carries data-animate) fade in via a scroll-triggered animation — opacity
+     starts at ~0 until a JS IntersectionObserver adds a "shown" class to an
+     ancestor. That reveal can lose the race against this section's own async
+     carousel script on a slow/cold load, leaving text/cards stuck invisible
+     until the page is refreshed. Skip the animation for every data-animate
+     element in this section so everything is always visible immediately —
+     bypassing the flaky timing rather than trying to win the race. */
+  .section-{{ section.id }} [data-animate] {
     opacity: 1 !important;
     animation: none !important;
   }

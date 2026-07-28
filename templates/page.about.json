@@ -27,7 +27,7 @@
             "text_dynamic": "lorem ipsum, lorem ipsum, lorem ipsum",
             "animation_timing": 1600,
             "rotation_interval": 3700,
-            "text_color": "#3188D2"
+            "text_color": "#3188d2"
           }
         }
       },
@@ -89,7 +89,6 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "",
             "placeholder_color": "#8a3d1f",
             "overlay_heading": "MORE THAN A",
             "overlay_heading_accent": "GAME",
@@ -99,9 +98,26 @@
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "",
             "placeholder_color": "#2c5f7c",
             "overlay_heading": "PHOTOS OF OUR TEAM AND KIDS",
+            "overlay_heading_accent": "",
+            "overlay_heading_accent_color": "#4aa3e0"
+          }
+        },
+        "image_gJqchD": {
+          "type": "image",
+          "settings": {
+            "placeholder_color": "#2c5f7c",
+            "overlay_heading": "PHOTOS OF OUR TEAM AND KIDS",
+            "overlay_heading_accent": "",
+            "overlay_heading_accent_color": "#4aa3e0"
+          }
+        },
+        "image_7Q6g7e": {
+          "type": "image",
+          "settings": {
+            "placeholder_color": "#2c5f7c",
+            "overlay_heading": "",
             "overlay_heading_accent": "",
             "overlay_heading_accent_color": "#4aa3e0"
           }
@@ -109,7 +125,9 @@
       },
       "block_order": [
         "image_1",
-        "image_2"
+        "image_2",
+        "image_gJqchD",
+        "image_7Q6g7e"
       ],
       "settings": {
         "name": "SUZANNE GATT",
@@ -126,6 +144,26 @@
       "type": "template--product--info-columns",
       "blocks": {
         "image_and_text_d7H3Dm": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "square",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "image_and_text_CjEQAK": {
+          "type": "image_and_text",
+          "settings": {
+            "grid_image_size": "square",
+            "heading": "Heading",
+            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
+        "image_and_text_yikiJB": {
           "type": "image_and_text",
           "settings": {
             "grid_image_size": "square",
@@ -168,6 +206,8 @@
       },
       "block_order": [
         "image_and_text_d7H3Dm",
+        "image_and_text_CjEQAK",
+        "image_and_text_yikiJB",
         "image_and_text_x8Mccy",
         "image_and_text_PgNKzt",
         "image_and_text_Pzqi6N"
@@ -181,11 +221,11 @@
         "override_border_radius": false,
         "buttons_style": "underlined",
         "override_button_colors": false,
-        "button_background_color": "#E68819",
+        "button_background_color": "#e68819",
         "button_text_color": "#ffffff",
-        "hover_navigation_desktop": "left-and-right",
+        "hover_navigation_desktop": "above",
         "columns_per_row": 3,
-        "vertical_alignment": "top",
+        "vertical_alignment": "center",
         "text_alignment": "center",
         "text_alignment_mobile": "center",
         "slider_height_mobile": "adaptive",
@@ -194,7 +234,7 @@
         "section_padding_bottom": 60,
         "colors": "white",
         "card_style_boxed": false,
-        "card_bg_color": "#0E1116",
+        "card_bg_color": "#0e1116",
         "card_glow_color": "#1f88d2",
         "card_glow_size": 40,
         "card_gap": 0

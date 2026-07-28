@@ -68,6 +68,25 @@
     overflow-y: visible;
   }
   {% endif %}
+
+  {% comment %}
+    Opt-in "static grid" layout — only applied when force_static_grid is turned
+    on for this specific section instance. Renders every block in a wrapping
+    CSS grid instead of a swiper carousel, so other pages using this same
+    section type keep the slider behavior unaffected.
+  {% endcomment %}
+  {% if section.settings.force_static_grid %}
+    .section-{{ section.id }} .info-cols--static-grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: {% if section.settings.card_gap > 0 %}{{ section.settings.card_gap }}{% else %}{{ settings.grid_spacing }}{% endif %}px;
+    }
+    @media screen and (min-width: 768px) {
+      .section-{{ section.id }} .info-cols--static-grid-wrapper {
+        grid-template-columns: repeat({{ section.settings.columns_per_row }}, 1fr);
+      }
+    }
+  {% endif %}
 {% endstyle %}
 
 {% assign grid_item_id = 'grid-item--' | append: section.id %}
@@ -94,11 +113,18 @@
   <script src="{{ 'deferred-media-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="deferred-media"></script>
 </safe-load-scripts>
 
-<safe-load-scripts class="hidden">
-  <script src="{{ 'info-columns-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="info-columns"></script>
-</safe-load-scripts>
+{% unless section.settings.force_static_grid %}
+  <safe-load-scripts class="hidden">
+    <script src="{{ 'info-columns-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="info-columns"></script>
+  </safe-load-scripts>
+{% endunless %}
 
-<info-columns
+{% comment %}
+  force_static_grid renders a plain <div> instead of the <info-columns> custom
+  element, so the swiper JS (which auto-runs on any <info-columns> tag) never
+  touches this instance — avoiding fighting the carousel's positioning math.
+{% endcomment %}
+<{% if section.settings.force_static_grid %}div{% else %}info-columns{% endif %}
 	class="wrapper-spacing--v wrapper-spacing--h content-align--{{ section.settings.section_header_alignment }} color-scheme--{{ section.settings.colors }} info-cols section-{{ section.id }}{% if request.visual_preview_mode %} section-preview{% else %} show-on-scroll{% endif %}{% if section.settings.slider_height_mobile == 'consistent' %} slider-height--consistent{% endif %}"
   data-wetheme-section-type="template--product--info-columns"
 	data-wetheme-section-id="{{ section.id }}"
@@ -113,7 +139,7 @@
 
 	<div class="info-cols__slider-wrapper{% if section.settings.section_width == 'content' %} width--content{% endif %}" data-grid-slider-wrapper>
 
-    {% if section.blocks.size > section.settings.columns_per_row %}
+    {% if section.blocks.size > section.settings.columns_per_row and section.settings.force_static_grid == false %}
 			<!-- navigation -->
       {% assign navigation_id = 'navigation--' | append: section.id %}
       {% if section.settings.override_button_colors %}
@@ -124,7 +150,7 @@
           background_color: section.settings.button_background_color
         %}
       {% endif %}
-      
+
       <div class="swiper-btn--wrapper small-hide swiper-btn-layout__{{ section.settings.hover_navigation_desktop }}">
         <div class="swiper-button--prev btn dynamic-section-button--{{ navigation_id }}">
           {% render 'theme-icon', icon: 'arrow-left', iconSize: 16 %}
@@ -135,8 +161,8 @@
       </div>
 		{% endif %}
 
-		<div class="swiper info-cols--slider" data-number-of-slides="{{ section.blocks.size }}" data-animate-overflow-container>
-			<div class="swiper-wrapper vertical-align--{{ section.settings.vertical_alignment }}">
+		<div class="{% if section.settings.force_static_grid %}info-cols--static-grid{% else %}swiper{% endif %} info-cols--slider" data-number-of-slides="{{ section.blocks.size }}" data-animate-overflow-container>
+			<div class="{% if section.settings.force_static_grid %}info-cols--static-grid-wrapper{% else %}swiper-wrapper{% endif %} vertical-align--{{ section.settings.vertical_alignment }}">
 				{% for block in section.blocks %}
 
 					<div
@@ -320,7 +346,7 @@
 				{% endfor %}
 			</div>
 
-			{% if section.blocks.size > 1 %}
+			{% if section.blocks.size > 1 and section.settings.force_static_grid == false %}
 				<div class="swiper-pagination"></div>
 			{% endif %}
 
@@ -332,7 +358,7 @@
 
 		</div>
 	</div>
-</info-columns>
+</{% if section.settings.force_static_grid %}div{% else %}info-columns{% endif %}>
 
 {% schema %}
 {
@@ -662,6 +688,17 @@
       "unit": "px",
       "default": 0,
       "visible_if": "{{ section.settings.card_style_boxed }}"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "force_static_grid",
+      "label": "Static grid (no slider)",
+      "info": "Shows all columns at once in a wrapping grid instead of a swipeable carousel. Only affects this section instance.",
+      "default": false
     }
   ],
   "blocks": [

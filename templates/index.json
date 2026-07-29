@@ -567,7 +567,8 @@
         "card_bg_color": "#0e1116",
         "card_glow_color": "#1f88d2",
         "card_glow_size": 18,
-        "card_gap": 32
+        "card_gap": 32,
+        "disable_scroll_animation": true
       }
     },
     "accordion_with_image_MYP6GK": {

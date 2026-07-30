@@ -1,5 +1,26 @@
 {{ 'animated-counter-section.min.css' | asset_url | stylesheet_tag }}
 
+{% style %}
+  .section-{{ section.id }}.animated-counter {
+    position: relative;
+    {%- if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | image_url: width: 2000 }});
+      background-size: cover;
+      background-position: center;
+    {%- endif %}
+  }
+  .section-{{ section.id }} .animated-counter__overlay {
+    position: absolute;
+    inset: 0;
+    background: {{ section.settings.background_overlay_color }};
+    opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};
+    pointer-events: none;
+  }
+  .section-{{ section.id }} .width--content {
+    position: relative;
+  }
+{% endstyle %}
+
 {% unless section.settings.animation_style == 'none' %}
   <safe-load-scripts class="hidden">
     <script src="{{ 'animated-counter-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="animated-counter"></script>
@@ -9,11 +30,14 @@
 {% assign sequence_delay = 1000 %}
 
 <div
-	class="animated-counter wrapper-spacing--v wrapper-spacing--h color-scheme--{{ section.settings.colors }}{% if request.visual_preview_mode %} section-preview shown-on-scroll{% else %} show-on-scroll{% endif %}"
+	class="animated-counter section-{{ section.id }} wrapper-spacing--v wrapper-spacing--h color-scheme--{{ section.settings.colors }}{% if request.visual_preview_mode %} section-preview shown-on-scroll{% else %} show-on-scroll{% endif %}"
   data-wetheme-section-type="animated-counter"
 	data-wetheme-section-id="{{ section.id }}"
   style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px; --number-size-mobile: {{ section.settings.number_size_mobile }}px; --number-size-desktop: {{ section.settings.number_size_desktop }}px;"
 >
+  {% if section.settings.background_image != blank %}
+    <div class="animated-counter__overlay"></div>
+  {% endif %}
   <div class="width--content">
     {% render 'dynamic-section-header', section_title: section.settings.title, section_description: section.settings.description, alignment: section.settings.section_header_alignment %}
     
@@ -211,6 +235,33 @@
             "label": "t:all.Third"
          }
       ]
+   },
+   {
+      "type": "header",
+      "content": "Background image"
+   },
+   {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image",
+      "info": "Leave blank to use the color scheme background above instead."
+   },
+   {
+      "type": "color",
+      "id": "background_overlay_color",
+      "label": "Overlay color",
+      "default": "#000000",
+      "info": "Wash over the background image, for text legibility."
+   },
+   {
+      "type": "range",
+      "id": "background_overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 50
    }
    ],
    "blocks": [

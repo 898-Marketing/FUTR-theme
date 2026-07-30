@@ -112,22 +112,12 @@
             "overlay_heading_accent": "",
             "overlay_heading_accent_color": "#4aa3e0"
           }
-        },
-        "image_7Q6g7e": {
-          "type": "image",
-          "settings": {
-            "placeholder_color": "#2c5f7c",
-            "overlay_heading": "",
-            "overlay_heading_accent": "",
-            "overlay_heading_accent_color": "#4aa3e0"
-          }
         }
       },
       "block_order": [
         "image_1",
         "image_2",
-        "image_gJqchD",
-        "image_7Q6g7e"
+        "image_gJqchD"
       ],
       "settings": {
         "name": "SUZANNE GATT",
@@ -137,7 +127,7 @@
         "image_gap": 24,
         "colors": "light",
         "section_padding_top": 0,
-        "section_padding_bottom": 0
+        "section_padding_bottom": 40
       }
     },
     "template_product_info_columns_NzhHxq": {
@@ -236,7 +226,6 @@
         "card_style_boxed": false,
         "card_bg_color": "#0e1116",
         "card_glow_color": "#1f88d2",
-        "card_glow_size": 40,
         "card_gap": 0,
         "force_static_grid": true
       }

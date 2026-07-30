@@ -262,6 +262,7 @@
                 highlight_collapsible_tab: section.settings.highlight_collapsible_tab,
                 highlight_button_borders: section.settings.highlight_button_borders,
                 force_show_rating: section.settings.show_star_ratings,
+                force_hover_image: section.settings.show_hover_image,
                 show_blurb: section.settings.show_blurb,
                 blurb_word_limit: section.settings.blurb_word_limit,
                 price_layout: section.settings.price_on_right
@@ -381,6 +382,13 @@
       "id": "show_star_ratings",
       "label": "Show star ratings",
       "info": "Shows on every card in this section regardless of the global rating setting.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hover_image",
+      "label": "Swap to second image on hover",
+      "info": "Shows on every card in this section regardless of the global hover-effect setting. Only works for products with 2+ images.",
       "default": false
     },
     {

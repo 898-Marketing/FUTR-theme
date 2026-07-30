@@ -190,7 +190,7 @@
               {% render 'responsive-image', image: image, alt: '', wrapper_class: "product-card__image product-card__image--swatch", allow_stretch: true, blur: false, props: swatch_image_attributes, class: 'block-radius' %}
             {% endif %}
 
-            {% if settings.hover-effect and product.media.size > 1 %}
+            {% if (settings.hover-effect or force_hover_image) and product.media.size > 1 %}
               {% assign image = product.media[1] %}
               {% assign img_alt = image.alt %}
               {% if img_alt == product.title %}

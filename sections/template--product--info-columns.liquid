@@ -49,6 +49,20 @@
     max-width: 100% !important;
     overflow: hidden;
     border-radius: 12px 12px 0 0;
+    flex-shrink: 0;
+  }
+  {% comment %}
+    Some images render with object-fit:cover (a stock behavior for this image
+    field), which crops to fill whatever height the box ends up being. In the
+    flex-column card layout that height can grow beyond the image's natural
+    ratio, cropping it into a tall sliver and squeezing the heading/text/link
+    below down to nothing (they're still in the DOM, just squashed out of
+    view). Force the image back to its natural aspect ratio so it can never
+    grow past its own intrinsic height and take space from the text below.
+  {% endcomment %}
+  .section-{{ section.id }} .info-cols--card-boxed .info-cols--image img {
+    object-fit: contain !important;
+    height: auto !important;
   }
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--title,
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--text,
@@ -56,6 +70,7 @@
     padding-left: 24px;
     padding-right: 24px;
     color: #ffffff;
+    flex-shrink: 0;
   }
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--title {
     padding-top: 20px;

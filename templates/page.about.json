@@ -126,7 +126,7 @@
         "images_position": "right",
         "image_gap": 24,
         "colors": "light",
-        "section_padding_top": 0,
+        "section_padding_top": 40,
         "section_padding_bottom": 40
       }
     },

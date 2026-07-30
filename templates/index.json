@@ -562,7 +562,13 @@
         "section_width": "content",
         "section_padding_top": 50,
         "section_padding_bottom": 60,
-        "colors": "white"
+        "colors": "white",
+        "card_style_boxed": true,
+        "card_bg_color": "#0e1116",
+        "card_glow_color": "#1f88d2",
+        "card_glow_size": 18,
+        "card_gap": 30,
+        "disable_scroll_animation": true
       }
     },
     "accordion_with_image_MYP6GK": {

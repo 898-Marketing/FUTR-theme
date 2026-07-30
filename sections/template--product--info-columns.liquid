@@ -34,13 +34,21 @@
     border-radius: 12px;
     border: 1px solid {{ glow_border_color }};
     box-sizing: border-box;
-    overflow: hidden;
     box-shadow: 0 0 6px {{ glow_tight_color }}, 0 0 {{ section.settings.card_glow_size }}px {{ glow_soft_color }};
     padding-bottom: 24px;
   }
+  {% comment %}
+    overflow:hidden lives on the image wrapper only (not the card itself) so
+    the rounded top corners still clip the photo, but a wrong/late height
+    measurement from the carousel's autoHeight calc on first paint can never
+    clip the heading/text/link below it — that was causing the description
+    text to be invisible on load until something forced a recalculation.
+  {% endcomment %}
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--image,
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--image > div {
     max-width: 100% !important;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
   }
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--title,
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--text,

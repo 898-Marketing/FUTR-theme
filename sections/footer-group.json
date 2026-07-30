@@ -50,6 +50,9 @@
         "text_JetjzD",
         "menu_6tNnxh"
       ],
+      "custom_css": [
+        ".content-footer .richtext-block {font-size: 28px; line-height: 30px;}"
+      ],
       "settings": {
         "alignment": "left",
         "alignment_mobile": "center",

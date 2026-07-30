@@ -56,7 +56,7 @@
       "settings": {
         "alignment": "left",
         "alignment_mobile": "center",
-        "heading_font_size": 16,
+        "heading_font_size": 21,
         "color_scheme": "accent",
         "show_newsletter": false,
         "newsletter_title": "Newsletter",

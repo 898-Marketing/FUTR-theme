@@ -1,5 +1,32 @@
 {{ 'rich-text-section.min.css' | asset_url | stylesheet_tag }}
 
+{% comment %}
+  Opt-in background image + overlay opacity — only applied when
+  background_image is set for this specific section instance, so other pages
+  using this same section type are unaffected.
+{% endcomment %}
+{% if section.settings.background_image != blank %}
+  {% style %}
+    .section-{{ section.id }} {
+      position: relative;
+      background-image: url({{ section.settings.background_image | image_url: width: 2000 }});
+      background-size: cover;
+      background-position: center;
+    }
+    .section-{{ section.id }} .rich-text__overlay {
+      position: absolute;
+      inset: 0;
+      background: {{ section.settings.background_overlay_color }};
+      opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};
+      pointer-events: none;
+    }
+    .section-{{ section.id }} > .show-on-scroll,
+    .section-{{ section.id }} > .section-preview {
+      position: relative;
+    }
+  {% endstyle %}
+{% endif %}
+
 {% case section.settings.section_width %}
     {% when 'full-width' %}
       {%- assign section_width = 'large--one whole' -%}
@@ -10,11 +37,15 @@
 {% endcase %}
 
 <div
-  class="wrapper-spacing--v wrapper-spacing--h color-scheme--{{ section.settings.colors }}"
-  data-wetheme-section-type="text--rich-text" 
+  class="section-{{ section.id }} wrapper-spacing--v wrapper-spacing--h color-scheme--{{ section.settings.colors }}"
+  data-wetheme-section-type="text--rich-text"
   data-wetheme-section-id="{{ section.id }}"
   style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px;"
 >
+
+{% if section.settings.background_image != blank %}
+  <div class="rich-text__overlay"></div>
+{% endif %}
 
 <div class="{% if request.visual_preview_mode %}section-preview{% else %}show-on-scroll{% endif %}">
 
@@ -221,6 +252,35 @@
           "label": "t:all.Third"
         }
       ]
+    },
+    {
+      "type": "header",
+      "content": "Background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image",
+      "info": "Leave blank to use the color scheme background above instead. Only affects this section instance."
+    },
+    {
+      "type": "color",
+      "id": "background_overlay_color",
+      "label": "Overlay color",
+      "default": "#000000",
+      "info": "Wash over the background image, for text legibility.",
+      "visible_if": "{{ section.settings.background_image != blank }}"
+    },
+    {
+      "type": "range",
+      "id": "background_overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 50,
+      "visible_if": "{{ section.settings.background_image != blank }}"
     }
   ],
   "blocks": [

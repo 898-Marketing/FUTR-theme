@@ -153,7 +153,6 @@
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/FUTR-FlavorSplash-01.png",
         "layout": "left",
         "text_alignment": "left",
         "text_alignment_mobile": "center",

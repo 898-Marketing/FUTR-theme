@@ -254,7 +254,7 @@
         "layout_style": "slider",
         "products_to_show": 30,
         "grid-desktop": 3,
-        "grid-mobile": "2",
+        "grid-mobile": "1",
         "colors": "dark"
       }
     },

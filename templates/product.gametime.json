@@ -462,6 +462,7 @@
         "feature_KpTGK8": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Icons-29.png",
             "label": "Hydration",
             "description": "Electrolytes to replenish"
           }
@@ -469,6 +470,7 @@
         "feature_jbF6TK": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Icons-27.png",
             "label": "Fuel",
             "description": "Carbs to support energy & endurance"
           }
@@ -476,6 +478,7 @@
         "feature_dLFHKw": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Icons-25.png",
             "label": "Performance",
             "description": "Built to help kids perform their best"
           }
@@ -502,14 +505,19 @@
         "color_tier1": "#8fbf2e",
         "color_tier2": "#1f88d2",
         "color_tier3": "#f0642a",
-        "header_icon_size": 20,
-        "row_icon_size": 24,
+        "header_icon_size": 46,
+        "row_icon_size": 36,
         "footer_icon_size": 24,
-        "feature_icon_size": 22,
+        "feature_icon_size": 32,
         "age_column_label": "Age / Weight",
         "tier1_label": "30-60 Min",
+        "tier2_header_icon": "shopify://shop_images/Icons-24.png",
         "tier2_label": "60-90 Min",
+        "tier3_header_icon": "shopify://shop_images/Icons-24.png",
         "tier3_label": "90+ Min or All Day Tournaments",
+        "tier1_row_icon": "shopify://shop_images/Icons-24.png",
+        "tier2_row_icon": "shopify://shop_images/Icons-24.png",
+        "tier3_row_icon": "shopify://shop_images/Icons-24.png",
         "footer_text_white": "Every athlete",
         "footer_text_accent": "is different",
         "footer_subtext": "Adjust serving size based on your athlete's age, body size, sweat rate, intensity, climate and individual needs."

@@ -68,12 +68,13 @@
             "font_size_mobile": 28
           }
         },
-        "icon_YwyNKw": {
-          "type": "icon",
+        "image_hpKY6R": {
+          "type": "image",
           "settings": {
-            "icon": "star",
-            "icon_height_desktop": 30,
-            "icon_height_mobile": 30
+            "image": "shopify://shop_images/FUTR_logo-White-03.png",
+            "height_desktop": 60,
+            "height_mobile": 60,
+            "link": ""
           }
         },
         "text_yyLA7h": {
@@ -86,12 +87,13 @@
             "font_size_mobile": 28
           }
         },
-        "icon_D4BzrL": {
-          "type": "icon",
+        "image_d8ypDw": {
+          "type": "image",
           "settings": {
-            "icon": "star",
-            "icon_height_desktop": 30,
-            "icon_height_mobile": 30
+            "image": "shopify://shop_images/FUTR_logo-White-03.png",
+            "height_desktop": 60,
+            "height_mobile": 60,
+            "link": ""
           }
         },
         "text_GXy3aN": {
@@ -104,12 +106,13 @@
             "font_size_mobile": 28
           }
         },
-        "icon_gADayU": {
-          "type": "icon",
+        "image_a3MwdT": {
+          "type": "image",
           "settings": {
-            "icon": "star",
-            "icon_height_desktop": 30,
-            "icon_height_mobile": 30
+            "image": "shopify://shop_images/FUTR_logo-White-03.png",
+            "height_desktop": 60,
+            "height_mobile": 60,
+            "link": ""
           }
         },
         "text_KNxVV7": {
@@ -121,16 +124,26 @@
             "font_size_desktop": 48,
             "font_size_mobile": 28
           }
+        },
+        "image_TNWDjA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FUTR_logo-White-03.png",
+            "height_desktop": 60,
+            "height_mobile": 60,
+            "link": ""
+          }
         }
       },
       "block_order": [
         "text_fPmTpb",
-        "icon_YwyNKw",
+        "image_hpKY6R",
         "text_yyLA7h",
-        "icon_D4BzrL",
+        "image_d8ypDw",
         "text_GXy3aN",
-        "icon_gADayU",
-        "text_KNxVV7"
+        "image_a3MwdT",
+        "text_KNxVV7",
+        "image_TNWDjA"
       ],
       "custom_css": [
         "[data-wetheme-section-type=\"scrolling-banner\"] {--color-scheme-background-color: #4086c4; background-color: var(--color-scheme-background-color) !important;}"
@@ -181,7 +194,7 @@
         "section_width": "narrow",
         "text_alignment_desktop": "center",
         "text_alignment_mobile": "center",
-        "section_padding_top": 70,
+        "section_padding_top": 80,
         "section_padding_bottom": 80,
         "colors": "light",
         "background_image": "shopify://shop_images/flag.png",

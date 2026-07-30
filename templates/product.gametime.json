@@ -510,6 +510,7 @@
         "footer_icon_size": 24,
         "feature_icon_size": 48,
         "age_column_label": "Age / Weight",
+        "tier1_header_icon": "shopify://shop_images/Icons-24.png",
         "tier1_label": "30-60 Min",
         "tier2_header_icon": "shopify://shop_images/Icons-24.png",
         "tier2_label": "60-90 Min",

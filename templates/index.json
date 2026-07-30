@@ -432,7 +432,8 @@
         "card_style_boxed": false,
         "card_bg_color": "#0e1116",
         "card_glow_color": "#1f88d2",
-        "card_gap": 0
+        "card_gap": 0,
+        "force_static_grid": false
       }
     },
     "image_with_text_overlay_qmXaFa": {
@@ -442,7 +443,7 @@
           "type": "heading",
           "settings": {
             "title": "THE FUTR SYSTEM",
-            "font_size_desktop": 28,
+            "font_size_desktop": 46,
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
           }
@@ -565,7 +566,8 @@
         "card_style_boxed": true,
         "card_bg_color": "#0e1116",
         "card_glow_color": "#1f88d2",
-        "card_gap": 30
+        "card_gap": 30,
+        "force_static_grid": false
       }
     },
     "accordion_with_image_MYP6GK": {
@@ -644,8 +646,8 @@
         "image--background-color": "rgba(0,0,0,0)",
         "image--text-color": "#333333",
         "button_background_color": "#242424",
-        "button_text_color": "#FFFFFF",
-        "colors": "light"
+        "button_text_color": "#ffffff",
+        "colors": "accent"
       }
     },
     "blog_posts_wefQCf": {

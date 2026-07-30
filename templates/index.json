@@ -180,7 +180,10 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "colors": "white"
+        "colors": "light",
+        "background_image": "shopify://shop_images/flag.png",
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 55
       }
     },
     "animated_counter_BtXJA6": {
@@ -197,7 +200,9 @@
         "text_alignment": "center",
         "section_padding_top": 60,
         "section_padding_bottom": 5,
-        "colors": "accent"
+        "colors": "accent",
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50
       }
     },
     "collection_list_GTB4rd": {
@@ -405,7 +410,9 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 60,
         "section_padding_bottom": 30,
-        "colors": "white"
+        "colors": "white",
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 50
       }
     },
     "template_product_info_columns_DeaBpp": {

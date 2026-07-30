@@ -153,6 +153,7 @@
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Icons-19.png",
         "layout": "left",
         "text_alignment": "left",
         "text_alignment_mobile": "center",

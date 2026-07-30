@@ -432,7 +432,6 @@
         "card_style_boxed": false,
         "card_bg_color": "#0e1116",
         "card_glow_color": "#1f88d2",
-        "card_glow_size": 40,
         "card_gap": 0
       }
     },
@@ -566,9 +565,7 @@
         "card_style_boxed": true,
         "card_bg_color": "#0e1116",
         "card_glow_color": "#1f88d2",
-        "card_glow_size": 18,
-        "card_gap": 30,
-        "disable_scroll_animation": true
+        "card_gap": 30
       }
     },
     "accordion_with_image_MYP6GK": {

@@ -11,58 +11,21 @@
     }
   }
 
-  /* Opt-in fix for the scroll-triggered fade-in animation occasionally losing
-     its race against this section's async carousel script on a slow/cold
-     load (title/description/card text can get stuck invisible until the
-     page is refreshed). Only applied when disable_scroll_animation is turned
-     on for this specific section instance. */
-  {% if section.settings.disable_scroll_animation %}
-  .section-{{ section.id }} [data-animate] {
-    opacity: 1 !important;
-    animation: none !important;
-  }
-  {% endif %}
-
-  /* Opt-in "boxed dark card" style — only applied when card_style_boxed is
-     turned on for this specific section instance, so other pages using
-     this same section type are unaffected. */
-  {% assign glow_border_color = section.settings.card_glow_color | color_modify: 'alpha', 0.7 %}
-  {% assign glow_tight_color = section.settings.card_glow_color | color_modify: 'alpha', 0.95 %}
-  {% assign glow_soft_color = section.settings.card_glow_color | color_modify: 'alpha', 0.45 %}
+  /* Opt-in "boxed card" style — only applied when card_style_boxed is turned
+     on for this specific section instance, so other pages using this same
+     section type are unaffected. Plain dark background + outline border,
+     nothing else. */
   .section-{{ section.id }} .info-cols--card-boxed {
     background: {{ section.settings.card_bg_color }};
     border-radius: 12px;
-    border: 1px solid {{ glow_border_color }};
+    border: 1px solid {{ section.settings.card_glow_color }};
     box-sizing: border-box;
-    box-shadow: 0 0 6px {{ glow_tight_color }}, 0 0 {{ section.settings.card_glow_size }}px {{ glow_soft_color }};
+    overflow: hidden;
     padding-bottom: 24px;
   }
-  {% comment %}
-    overflow:hidden lives on the image wrapper only (not the card itself) so
-    the rounded top corners still clip the photo, but a wrong/late height
-    measurement from the carousel's autoHeight calc on first paint can never
-    clip the heading/text/link below it — that was causing the description
-    text to be invisible on load until something forced a recalculation.
-  {% endcomment %}
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--image,
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--image > div {
     max-width: 100% !important;
-    overflow: hidden;
-    border-radius: 12px 12px 0 0;
-    flex-shrink: 0;
-  }
-  {% comment %}
-    Some images render with object-fit:cover (a stock behavior for this image
-    field), which crops to fill whatever height the box ends up being. In the
-    flex-column card layout that height can grow beyond the image's natural
-    ratio, cropping it into a tall sliver and squeezing the heading/text/link
-    below down to nothing (they're still in the DOM, just squashed out of
-    view). Force the image back to its natural aspect ratio so it can never
-    grow past its own intrinsic height and take space from the text below.
-  {% endcomment %}
-  .section-{{ section.id }} .info-cols--card-boxed .info-cols--image img {
-    object-fit: contain !important;
-    height: auto !important;
   }
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--title,
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--text,
@@ -70,7 +33,6 @@
     padding-left: 24px;
     padding-right: 24px;
     color: #ffffff;
-    flex-shrink: 0;
   }
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--title {
     padding-top: 20px;
@@ -78,31 +40,6 @@
   .section-{{ section.id }} .info-cols--card-boxed .info-cols--text {
     color: rgba(255, 255, 255, .7);
   }
-
-  /* Equal-height cards: stretch slides to match the tallest, then pin the
-     "Meet our team" link to the bottom of each card regardless of copy length. */
-  .section-{{ section.id }} .info-cols--slider .swiper-wrapper {
-    align-items: stretch;
-  }
-  .section-{{ section.id }} .swiper-slide.info-cols--card-boxed {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .section-{{ section.id }} .info-cols--card-boxed .info-cols--link--wrapper {
-    margin-top: auto;
-  }
-
-  /* The swiper carousel container clips overflow on all sides by default
-     (needed so off-screen slides stay hidden horizontally while sliding).
-     That was also cutting off the glow's top/bottom on this boxed style, so
-     keep horizontal clipping only and give the glow room to breathe. */
-  {% if section.settings.card_style_boxed %}
-  .section-{{ section.id }} .info-cols--slider {
-    overflow-x: hidden;
-    overflow-y: visible;
-  }
-  {% endif %}
 
   {% comment %}
     Opt-in "static grid" layout — only applied when force_static_grid is turned
@@ -683,8 +620,8 @@
     {
       "type": "checkbox",
       "id": "card_style_boxed",
-      "label": "Boxed dark cards (inverted style)",
-      "info": "Wraps each column in a dark, rounded card with an outer glow instead of a drop shadow. Only affects this section instance.",
+      "label": "Boxed cards",
+      "info": "Wraps each column in a rounded card with a background and outline border. Only affects this section instance.",
       "default": false
     },
     {
@@ -697,19 +634,8 @@
     {
       "type": "color",
       "id": "card_glow_color",
-      "label": "Glow color",
+      "label": "Card outline color",
       "default": "#1f88d2",
-      "visible_if": "{{ section.settings.card_style_boxed }}"
-    },
-    {
-      "type": "range",
-      "id": "card_glow_size",
-      "label": "Glow size",
-      "min": 10,
-      "max": 80,
-      "step": 2,
-      "unit": "px",
-      "default": 40,
       "visible_if": "{{ section.settings.card_style_boxed }}"
     },
     {
@@ -733,13 +659,6 @@
       "id": "force_static_grid",
       "label": "Static grid (no slider)",
       "info": "Shows all columns at once in a wrapping grid instead of a swipeable carousel. Only affects this section instance.",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "disable_scroll_animation",
-      "label": "Always show content immediately (skip scroll-in animation)",
-      "info": "Fixes an issue where the title, description, or card text can randomly fail to appear until the page is refreshed. Only affects this section instance.",
       "default": false
     }
   ],

@@ -1,3 +1,31 @@
+{% style %}
+  /* Shrink the generous default footer padding. */
+  .footer-main .footer-main--inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  /* Top-align every footer column (logo, social, text, menu) with each other
+     instead of stretching/centering. */
+  .footer-main .footer-main--blocks {
+    align-items: flex-start;
+  }
+
+  /* The logo image sits inside a wrapper that's position:absolute with
+     height:100% (a stock pattern for this "image" block type), but its link
+     wrapper never gets position:relative or an explicit height. Without that,
+     the 100% resolves against whatever positioned ancestor is further up the
+     page instead of this block, making the logo render far larger/lower than
+     intended. Give it a small, sized, positioned box so the image resolves
+     against that instead. */
+  .footer-main .image-footer .footer-image-link,
+  .footer-main .image-footer .image-bar__item {
+    position: relative;
+    height: 70px;
+    display: block;
+  }
+{% endstyle %}
+
 <footer
   class="footer-main {{ section.settings.color_scheme }} flex-full color-scheme--{{ section.settings.color_scheme }} site-footer{% if template contains 'product' %}{% if settings.related_products_enable %}{% else %} product-sticker-stop{% endif %}{% endif %} footer-alignment--{{ section.settings.alignment }} footer-alignment-mobile--{{ section.settings.alignment_mobile }}"
   data-wetheme-section-type="footer-main" data-wetheme-section-id="{{ section.id }}"

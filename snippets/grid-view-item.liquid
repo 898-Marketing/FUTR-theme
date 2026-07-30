@@ -190,13 +190,15 @@
               {% render 'responsive-image', image: image, alt: '', wrapper_class: "product-card__image product-card__image--swatch", allow_stretch: true, blur: false, props: swatch_image_attributes, class: 'block-radius' %}
             {% endif %}
 
-            {% if (settings.hover-effect or force_hover_image) and product.media.size > 1 %}
-              {% assign image = product.media[1] %}
-              {% assign img_alt = image.alt %}
-              {% if img_alt == product.title %}
-                {% assign img_alt = '' %}
+            {% if settings.hover-effect or force_hover_image %}
+              {% if product.media.size > 1 %}
+                {% assign image = product.media[1] %}
+                {% assign img_alt = image.alt %}
+                {% if img_alt == product.title %}
+                  {% assign img_alt = '' %}
+                {% endif %}
+                {% render 'responsive-image', image: image, alt: img_alt, wrapper_class: "product-card__image product-card__image--secondary", allow_stretch: true, blur: false, class: 'block-radius' %}
               {% endif %}
-              {% render 'responsive-image', image: image, alt: img_alt, wrapper_class: "product-card__image product-card__image--secondary", allow_stretch: true, blur: false, class: 'block-radius' %}
             {% endif %}
           {% else %}
             {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}

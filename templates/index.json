@@ -68,13 +68,12 @@
             "font_size_mobile": 28
           }
         },
-        "image_hpKY6R": {
-          "type": "image",
+        "icon_LYewbk": {
+          "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/FUTR_logo-White-03.png",
-            "height_desktop": 60,
-            "height_mobile": 60,
-            "link": ""
+            "icon": "star",
+            "icon_height_desktop": 30,
+            "icon_height_mobile": 30
           }
         },
         "text_yyLA7h": {
@@ -87,13 +86,12 @@
             "font_size_mobile": 28
           }
         },
-        "image_d8ypDw": {
-          "type": "image",
+        "icon_LTitbx": {
+          "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/FUTR_logo-White-03.png",
-            "height_desktop": 60,
-            "height_mobile": 60,
-            "link": ""
+            "icon": "star",
+            "icon_height_desktop": 30,
+            "icon_height_mobile": 30
           }
         },
         "text_GXy3aN": {
@@ -137,9 +135,9 @@
       },
       "block_order": [
         "text_fPmTpb",
-        "image_hpKY6R",
+        "icon_LYewbk",
         "text_yyLA7h",
-        "image_d8ypDw",
+        "icon_LTitbx",
         "text_GXy3aN",
         "image_a3MwdT",
         "text_KNxVV7",

@@ -429,7 +429,9 @@
         ".dt-col-head {font-size: 18px;}",
         ".dt-col-head__sub {font-size: 14px;}",
         ".dt-feature__label {font-size: 16px;}",
-        ".dt-feature__desc {font-size: 13px;}"
+        ".dt-feature__desc {font-size: 13px;}",
+        ".ing-is{font-size: 16px;}",
+        ".ing-why{font-size:16px;}"
       ],
       "name": "Dosage Table",
       "settings": {

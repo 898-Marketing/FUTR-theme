@@ -427,7 +427,8 @@
       ],
       "custom_css": [
         ".dt-col-head {font-size: 18px;}",
-        ".dt-col-head__sub{font-size:14px;}"
+        ".dt-col-head__sub {font-size: 14px;}",
+        ".dt-feature__label{font-size: 18px;}"
       ],
       "name": "Dosage Table",
       "settings": {

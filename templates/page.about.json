@@ -80,7 +80,10 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 80,
         "section_padding_bottom": 80,
-        "colors": "white"
+        "colors": "light",
+        "background_image": "shopify://shop_images/flag.png",
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 60
       }
     },
     "image_with_text_Fnph7t": {

@@ -15,8 +15,8 @@
       "disabled": true,
       "settings": {
         "show_breadcrumbs": false,
-        "show_title": true,
-        "show_description": true,
+        "show_title": false,
+        "show_description": false,
         "show_image_desktop": false,
         "min_height_desktop": "original",
         "content_position": "left",
@@ -30,7 +30,43 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "colors": "white",
-        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "caption_bg_color": "#0000008c",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
+      }
+    },
+    "image_with_text_overlay_EC4zqE": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_cqmqJ4": {
+          "type": "heading",
+          "settings": {
+            "title": "THE SYSTEM",
+            "font_size_desktop": 70,
+            "font_size_mobile": 44,
+            "heading_bottom_spacing": 25
+          }
+        }
+      },
+      "block_order": [
+        "heading_cqmqJ4"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/Screenshot_2026-07-27_at_3.01.59_PM.png",
+        "height_desktop": "450px",
+        "text_position_desktop": "bottom_left",
+        "text_alignment_desktop": "left",
+        "caption_width_desktop": 66,
+        "height_mobile": "250px",
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "#00000000",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }
@@ -39,15 +75,25 @@
       "type": "template--collection",
       "settings": {
         "products-per-page": 6,
-        "desktop-products-per-row": 3,
+        "desktop-products-per-row": 2,
         "mobile-products-per-row": "2",
         "pagination_options": "pagination_load_more",
         "desktop_position": "sidebar",
-        "enable_sorting": true,
-        "enable_filtering": true,
-        "enable_collection_title": true,
-        "enable_collection_description": true,
-        "show_swatch_filter_labels": true
+        "enable_sorting": false,
+        "enable_filtering": false,
+        "enable_collection_title": false,
+        "enable_collection_description": false,
+        "show_swatch_filter_labels": true,
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false
       }
     },
     "image_with_text_overlay_hJLNM8": {
@@ -62,10 +108,11 @@
         "text_alignment_mobile": "center",
         "section_link": "",
         "animation_style": "parallax",
+        "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0.55)",
+        "caption_bg_color": "#0000008c",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }
@@ -108,33 +155,13 @@
         "section_padding_bottom": 30,
         "colors": "light"
       }
-    },
-    "image_with_text_overlay_EC4zqE": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "height_desktop": "450px",
-        "text_position_desktop": "center",
-        "text_alignment_desktop": "center",
-        "caption_width_desktop": 50,
-        "height_mobile": "250px",
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
-        "section_link": "",
-        "animation_style": "parallax",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0.55)",
-        "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
-      }
     }
   },
   "order": [
     "collection-header-spotlight",
+    "image_with_text_overlay_EC4zqE",
     "product-grid",
     "image_with_text_overlay_hJLNM8",
-    "text_adverts_ER8Rr8",
-    "image_with_text_overlay_EC4zqE"
+    "text_adverts_ER8Rr8"
   ]
 }

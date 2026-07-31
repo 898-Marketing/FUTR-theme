@@ -425,6 +425,10 @@
         "feature_YQcHz9",
         "feature_H6Dr9f"
       ],
+      "custom_css": [
+        ".dt-col-head {font-size: 18px;}",
+        ".dt-col-head__sub{font-size:14px;}"
+      ],
       "name": "Dosage Table",
       "settings": {
         "background_image": "shopify://shop_images/recover-collection.jpg",

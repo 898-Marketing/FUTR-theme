@@ -341,6 +341,10 @@
         "ingredient_iCKEC4",
         "ingredient_8H4jkY"
       ],
+      "custom_css": [
+        ".ing-is {font-size: 16px;}",
+        ".ing-why{font-size: 16px;}"
+      ],
       "name": "Ingredients Grid",
       "settings": {
         "kicker": "What's inside",
@@ -430,8 +434,8 @@
         ".dt-col-head__sub {font-size: 14px;}",
         ".dt-feature__label {font-size: 16px;}",
         ".dt-feature__desc {font-size: 13px;}",
-        ".ing-is{font-size: 16px;}",
-        ".ing-why{font-size:16px;}"
+        ".ing-is {font-size: 16px;}",
+        ".ing-why {font-size: 16px;}"
       ],
       "name": "Dosage Table",
       "settings": {

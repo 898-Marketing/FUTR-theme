@@ -368,6 +368,10 @@
         "ingredient_iCKEC4",
         "ingredient_8H4jkY"
       ],
+      "custom_css": [
+        ".ing-is{font-size: 16px;}",
+        ".ing-why{font-size: 16px;}"
+      ],
       "name": "Ingredients Grid",
       "settings": {
         "kicker": "What's inside",

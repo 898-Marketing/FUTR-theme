@@ -66,7 +66,7 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "#00000000",
+        "caption_bg_color": "rgba(0,0,0,0)",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }

@@ -76,6 +76,7 @@
     "show_rating_as": "average_rating",
     "star_size": 13,
     "show_product_rating_if_no_reviews": true,
+    "no_reviews_label": "5 Stars",
     "show_card_color_swatches": true,
     "show_card_color_swatch_label": true,
     "hover_navigation_desktop": "above",

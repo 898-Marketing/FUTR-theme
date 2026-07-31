@@ -369,13 +369,13 @@
         "ingredient_8H4jkY"
       ],
       "custom_css": [
-        ".ing-is{font-size: 16px;}",
-        ".ing-why{font-size: 16px;}"
+        ".ing-is {font-size: 16px;}",
+        ".ing-why {font-size: 16px;}"
       ],
       "name": "Ingredients Grid",
       "settings": {
-        "kicker": "What's inside",
-        "heading": "Built for body & mind",
+        "kicker": "What's inside built for",
+        "heading": "eundurance & hydration",
         "color_ink": "#0e1116",
         "color_paper": "#f5f4ee",
         "color_muted": "#5a5f66",

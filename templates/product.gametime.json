@@ -496,7 +496,7 @@
         ".dt4-col-head {font-size: 18px;}",
         ".dt4-col-head__sub {font-size: 14px;}",
         ".dt4-feature__label {font-size: 18px;}",
-        ".dt4-feature__desc {font-size: 14px;}"
+        ".dt4-feature__desc {font-size: 13px;}"
       ],
       "name": "Dosage Table 4 Columns",
       "settings": {

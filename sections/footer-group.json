@@ -51,7 +51,8 @@
         "menu_6tNnxh"
       ],
       "custom_css": [
-        ".content-footer .richtext-block {font-size: 28px; line-height: 30px;}"
+        ".content-footer .richtext-block {font-size: 28px; line-height: 30px;}",
+        "@media (min-width: 600px) {.content-footer .richtext-block {font-size: 19px; line-height: 21px; }}"
       ],
       "settings": {
         "alignment": "left",

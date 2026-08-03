@@ -93,7 +93,7 @@
         "overlay_header_contact": true,
         "logo": "shopify://shop_images/FUTR_logo-03.png",
         "logo-placement": "left",
-        "logo_max_width": 125,
+        "logo_max_width": 50,
         "logo_max_width_mobile": 75,
         "logo_padding": 0,
         "main_linklist": "main-menu",

@@ -159,3 +159,16 @@
 .site-nav > li > a.site-nav__link {
   font-weight: 500;
 }
+
+/* Swiper carousels (product gallery, info-columns, etc.) render slides with
+   inline visibility:hidden until a custom JS reveal step runs. A reset/reinit
+   race in that JS (unrelated to any of the above) can leave the active slide
+   stuck hidden while an adjacent peek slide stays visible, producing an
+   overlapping/broken-looking gallery. Swiper's own active/prev/next classes
+   are set reliably by its core positioning logic, so force visibility from
+   those instead of trusting the custom inline-style toggle. */
+.swiper-slide-active,
+.swiper-slide-prev,
+.swiper-slide-next {
+  visibility: visible !important;
+}

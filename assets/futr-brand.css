@@ -173,3 +173,20 @@
   visibility: visible !important;
 }
 
+/* Product gallery, "paginated"/"slider" media type with a fixed image shape
+   (square/tall/wide, not "adapt to first image"): the theme's own CSS gives
+   [data-slider-main] height:100%, but its parent <product-media> element has
+   no height of its own to resolve that against — same circular height
+   dependency as the adapt-to-first-image case, just one level up the chain.
+   autoHeight is also off here (JS only enables it for uncropped images), so
+   nothing else establishes real height. Let the whole chain size to its
+   content (the actual image, which has a real aspect-ratio) instead. */
+product-media.media-type-paginated [data-slider-main],
+product-media.media-type-slider [data-slider-main],
+product-media.media-type-paginated [data-slider-main] .swiper-wrapper,
+product-media.media-type-slider [data-slider-main] .swiper-wrapper,
+product-media.media-type-paginated [data-slider-main] .swiper-slide,
+product-media.media-type-slider [data-slider-main] .swiper-slide {
+  height: auto !important;
+}
+

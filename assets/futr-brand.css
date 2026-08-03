@@ -96,25 +96,6 @@
   background: linear-gradient(90deg, var(--futr-blue) 0%, var(--futr-blue-light) 50%, var(--futr-blue) 100%);
 }
 
-/* Header/footer boundary seam applied directly via pseudo-element */
-.site-header,
-.overlay-header {
-  position: relative;
-}
-
-.site-header::after,
-.overlay-header::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  height: 5px;
-  background: linear-gradient(90deg, var(--futr-blue) 0%, var(--futr-blue-light) 50%, var(--futr-blue) 100%);
-  pointer-events: none;
-  z-index: 2;
-}
-
 .footer-main {
   border-top: 5px solid transparent;
   border-image: linear-gradient(90deg, var(--futr-blue) 0%, var(--futr-blue-light) 50%, var(--futr-blue) 100%) 1;

@@ -18714,7 +18714,7 @@ if (!customElements.get('product-media')) {
       this.setStickyOffset();
       // Initialize the slider
       if (this.mediaCount <= 1) return;
-      if (window.Shopify.designMode) {
+      if (window.Shopify.designMode || document.readyState === 'complete') {
         this.load();
       } else {
         window.addEventListener('load', () => this.load());

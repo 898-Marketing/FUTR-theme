@@ -90,7 +90,7 @@
         "logo": "shopify://shop_images/FUTR_logo-03.png",
         "logo-placement": "left",
         "logo_max_width": 125,
-        "logo_max_width_mobile": 100,
+        "logo_max_width_mobile": 75,
         "logo_padding": 0,
         "main_linklist": "main-menu",
         "dropdown_alignment": "center",

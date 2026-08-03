@@ -172,3 +172,16 @@
 .swiper-slide-next {
   visibility: visible !important;
 }
+
+/* Product gallery, "Adapt to first image" mode: the image is position:absolute
+   with its real height coming from a padding-bottom trick on a deeply nested
+   <a> tag (JS autoHeight is deliberately off for this mode). That height never
+   propagates up to the swiper-slide/swiper-wrapper ancestors, which are stuck
+   at height:100% of an ancestor that has no real height of its own — so the
+   whole gallery collapses to zero height in the page's actual layout and the
+   title/price below render on top of the (still visually rendered) images.
+   Let these specific containers size to their content instead. */
+.swiper.custom-aspect-ratio .swiper-wrapper,
+.swiper.custom-aspect-ratio .swiper-slide {
+  height: auto;
+}

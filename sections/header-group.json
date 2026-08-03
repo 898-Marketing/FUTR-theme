@@ -77,7 +77,11 @@
       "block_order": [
         "content"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "/* Enlarge header logo */:root {--logo-max-width: 180px !important;}",
+        ".site-header__logo,.site-header__logo-overlay-image,.site-header__logo .responsive-image-wrapper,.site-header__logo-overlay-image .responsive-image-wrapper {width: 180px !important; max-width: 180px !important;}",
+        ".site-header__logo .logo_image,.site-header__logo .logo_overlay {width: 180px !important;}"
+      ],
       "settings": {
         "sticky_header": true,
         "reveal_on_scroll": true,

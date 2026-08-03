@@ -35,7 +35,7 @@
     "color_primary_navigation": "#ffffff",
     "color_primary_navigation_hover": "#1f88d2",
     "header-bg-color": "#000000",
-    "header-border-color": "#1f88d2",
+    "header-border-color": "#00000000",
     "header-transparent-text": "#ffffff",
     "header-transparent-background": "#000000",
     "mobile-menu-text": "#ffffff",

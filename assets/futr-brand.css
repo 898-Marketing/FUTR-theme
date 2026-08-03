@@ -190,3 +190,18 @@ product-media.media-type-slider [data-slider-main] .swiper-slide {
   height: auto !important;
 }
 
+/* Belt-and-suspenders: rather than trust that the height:auto chain above
+   resolves correctly through every nested div, give the top-level gallery
+   element a real aspect-ratio directly, matching whichever fixed image shape
+   is actually in use (read off the image's own ratio class). This can't
+   collapse to zero regardless of what's happening underneath it. */
+product-media:has(.media-ratio--square) {
+  aspect-ratio: 1 / 1 !important;
+}
+product-media:has(.media-ratio--tall) {
+  aspect-ratio: 2 / 3 !important;
+}
+product-media:has(.media-ratio--wide) {
+  aspect-ratio: 4 / 3 !important;
+}
+

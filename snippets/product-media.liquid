@@ -204,7 +204,15 @@
 >
   {% if product.media.size > 0 %}
     {% comment %} ==== MAIN SLIDER ==== {% endcomment %}
-    <div data-media-main data-slider-main class="{% if type == 'thumbnails' %}thumbnail-media--main-media{% else %}product-media-slider-main{% endif %} swiper{% if custom_aspect_ratio %} custom-aspect-ratio{% endif %}{% if final_media_count == 1 %} media--single{% endif %}{% unless enable_peep %} block-radius-clip{% endunless %}">
+    {% comment %}
+      In "adapt to first image" mode the slide images are position:absolute
+      (so they never contribute height to their ancestors) and the padding-
+      bottom aspect-ratio trick that's meant to compensate is applied way down
+      on a per-slide <a> tag, which can't push height back up to this actual
+      swiper container. Apply it here too, on the real container, so the
+      gallery has real height in the page's layout instead of collapsing to 0.
+    {% endcomment %}
+    <div data-media-main data-slider-main class="{% if type == 'thumbnails' %}thumbnail-media--main-media{% else %}product-media-slider-main{% endif %} swiper{% if custom_aspect_ratio %} custom-aspect-ratio{% endif %}{% if final_media_count == 1 %} media--single{% endif %}{% unless enable_peep %} block-radius-clip{% endunless %}"{% if adapt_ratio %} style="padding-bottom: {{ adapt_ratio }}%;"{% endif %}>
       {% comment %} ==== BADGES ==== {% endcomment %}
       <div data-product-badge{% if settings.border_radius == 'round' %} class="product-media-badge--extra-spacing"{% endif %}>
         {{ product_badge }}

@@ -71,6 +71,13 @@
     .dosage-table__subheading { font-size: 15px; margin-bottom: 20px; }
   }
 
+  /* Below 700px the table keeps its full desktop layout and scrolls
+     sideways instead of reflowing into a stacked/single-column layout. */
+  .dosage-table__scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .dosage-table__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1.3fr;
@@ -79,7 +86,7 @@
     overflow: hidden;
   }
   @media (max-width: 700px) {
-    .dosage-table__grid { grid-template-columns: 1fr; }
+    .dosage-table__grid { min-width: 640px; }
   }
 
   .dt-col-head {
@@ -107,11 +114,6 @@
   .dt-col-head--serving { background: var(--dt-accent); }
   .dt-col-head--water { background: var(--dt-water); }
 
-  @media (max-width: 700px) {
-    .dt-col-head { flex-wrap: wrap; }
-    .dt-col-head__sub { flex-basis: 100%; }
-  }
-
   .dt-row {
     min-width: 0;
     grid-column: 1 / -1;
@@ -121,13 +123,6 @@
     background: #fff;
   }
   .dt-row:first-of-type { border-top: none; }
-  @media (max-width: 700px) {
-    .dt-row {
-      grid-template-columns: 1fr;
-      padding: 18px 20px;
-      row-gap: 10px;
-    }
-  }
 
   .dt-cell {
     min-width: 0;
@@ -136,7 +131,6 @@
     flex-direction: column;
     justify-content: center;
   }
-  @media (max-width: 700px) { .dt-cell { padding: 0; } }
 
   .dt-cell--age .dt-age-range { font-size: 26px; font-weight: 900; letter-spacing: -.01em; text-transform: uppercase; }
   .dt-cell--age .dt-age-weight { font-size: 13px; font-weight: 600; color: var(--dt-muted); text-transform: uppercase; }
@@ -203,6 +197,7 @@
     <p class="dosage-table__subheading">{{ section.settings.heading_subtitle }}</p>
   {%- endif -%}
 
+  <div class="dosage-table__scroll">
   <div class="dosage-table__grid">
     <div class="dt-col-head dt-col-head--age">{{ section.settings.age_column_label }}</div>
     <div class="dt-col-head dt-col-head--serving">
@@ -254,6 +249,7 @@
         </div>
       {%- endif -%}
     {%- endfor -%}
+  </div>
   </div>
 
   <div class="dosage-table__footer">

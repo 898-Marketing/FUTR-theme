@@ -69,6 +69,13 @@
     .dosage-table-4c__subheading { font-size: 15px; margin-bottom: 20px; }
   }
 
+  /* Below 800px the table keeps its full desktop layout and scrolls
+     sideways instead of reflowing into a stacked/single-column layout. */
+  .dosage-table-4c__scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .dt4-grid {
     display: grid;
     grid-template-columns: .9fr 1.1fr 1.1fr 1.2fr;
@@ -77,7 +84,7 @@
     overflow: hidden;
   }
   @media (max-width: 800px) {
-    .dt4-grid { grid-template-columns: 1fr; }
+    .dt4-grid { min-width: 700px; }
   }
 
   .dt4-col-head {
@@ -98,7 +105,6 @@
   .dt4-col-head--tier1 { background: var(--dt4-tier1); }
   .dt4-col-head--tier2 { background: var(--dt4-tier2); }
   .dt4-col-head--tier3 { background: var(--dt4-tier3); }
-  @media (max-width: 800px) { .dt4-col-head { flex-wrap: wrap; } }
 
   .dt4-row {
     min-width: 0;
@@ -109,9 +115,6 @@
     background: #fff;
   }
   .dt4-row:first-of-type { border-top: none; }
-  @media (max-width: 800px) {
-    .dt4-row { grid-template-columns: 1fr; padding: 16px; row-gap: 12px; }
-  }
 
   .dt4-cell {
     min-width: 0;
@@ -121,7 +124,6 @@
     justify-content: center;
     gap: 10px;
   }
-  @media (max-width: 800px) { .dt4-cell { padding: 0; } }
 
   .dt4-age-range { font-size: 24px; font-weight: 900; letter-spacing: -.01em; text-transform: uppercase; }
   .dt4-age-weight { font-size: 12px; font-weight: 600; color: var(--dt4-muted); text-transform: uppercase; }
@@ -187,6 +189,7 @@
       <p class="dosage-table-4c__subheading">{{ section.settings.heading_subtitle }}</p>
     {%- endif -%}
 
+    <div class="dosage-table-4c__scroll">
     <div class="dt4-grid">
       <div class="dt4-col-head dt4-col-head--age">{{ section.settings.age_column_label }}</div>
       <div class="dt4-col-head dt4-col-head--tier1">
@@ -304,6 +307,7 @@
           </div>
         {%- endif -%}
       {%- endfor -%}
+    </div>
     </div>
 
     <div class="dosage-table-4c__footer">

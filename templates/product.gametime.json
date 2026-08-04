@@ -71,6 +71,9 @@
         "buy_buttons",
         "product_description_e48Ujx"
       ],
+      "custom_css": [
+        "/* Fix: neutralize the leftover sticky \"top\" offsets that the theme's JS writes as inline styles, which push the image down over the product info on mobile. */@media screen and (max-width: 767px) {.product-single .product-sticky {position: static !important; /* not sticky on mobile anyway */ top: 0 !important; /* cancels inline top:135px / top:97px */ }}"
+      ],
       "settings": {
         "enable_sticky": true,
         "enable_sticky_add_to_cart": false,

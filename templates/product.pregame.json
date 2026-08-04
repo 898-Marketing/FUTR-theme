@@ -80,7 +80,7 @@
         "media_position": "left",
         "image_size": "medium",
         "image_shape": "square",
-        "show_only_variant_media": false,
+        "show_only_variant_media": true,
         "image-display": "thumbnails",
         "thumbnail_position": "below",
         "image_display_mobile": "paginated",

@@ -129,9 +129,8 @@
   .dt4-age-weight { font-size: 12px; font-weight: 600; color: var(--dt4-muted); text-transform: uppercase; }
 
   .dt4-option { display: flex; align-items: flex-start; gap: 10px; }
-  .dt4-option__icons { display: flex; flex: none; gap: 2px; padding-top: 2px; }
+  .dt4-option__icons { display: flex; flex: none; padding-top: 2px; }
   .dt4-option__icons img { width: var(--dt4-row-icon-size); height: var(--dt4-row-icon-size); object-fit: contain; }
-  .dt4-option__icons img.is-outline { opacity: .35; }
   .dt4-option__text { min-width: 0; }
   .dt4-serving { font-size: 15px; font-weight: 800; text-transform: uppercase; }
   .dt4-instruction { font-size: 11px; font-weight: 600; color: var(--dt4-muted); text-transform: uppercase; margin-top: 2px; }
@@ -224,16 +223,9 @@
             <div class="dt4-cell">
               <div class="dt4-option">
                 <div class="dt4-option__icons">
-                  {%- for i in (1..block.settings.tier1_filled) -%}
-                    {%- if section.settings.tier1_row_icon != blank -%}
-                      <img src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
-                    {%- endif -%}
-                  {%- endfor -%}
-                  {%- for i in (1..block.settings.tier1_outline) -%}
-                    {%- if section.settings.tier1_row_icon != blank -%}
-                      <img class="is-outline" src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
-                    {%- endif -%}
-                  {%- endfor -%}
+                  {%- if section.settings.tier1_row_icon != blank -%}
+                    <img src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                  {%- endif -%}
                 </div>
                 <div class="dt4-option__text">
                   {%- if block.settings.tier1_serving != blank -%}<div class="dt4-serving">{{ block.settings.tier1_serving }}</div>{%- endif -%}
@@ -243,16 +235,9 @@
               {%- if block.settings.tier1b_serving != blank -%}
                 <div class="dt4-option">
                   <div class="dt4-option__icons">
-                    {%- for i in (1..block.settings.tier1b_filled) -%}
-                      {%- if section.settings.tier1_row_icon != blank -%}
-                        <img src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
-                      {%- endif -%}
-                    {%- endfor -%}
-                    {%- for i in (1..block.settings.tier1b_outline) -%}
-                      {%- if section.settings.tier1_row_icon != blank -%}
-                        <img class="is-outline" src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
-                      {%- endif -%}
-                    {%- endfor -%}
+                    {%- if section.settings.tier1_row_icon != blank -%}
+                      <img src="{{ section.settings.tier1_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                    {%- endif -%}
                   </div>
                   <div class="dt4-option__text">
                     <div class="dt4-serving">{{ block.settings.tier1b_serving }}</div>
@@ -266,16 +251,9 @@
             <div class="dt4-cell">
               <div class="dt4-option">
                 <div class="dt4-option__icons">
-                  {%- for i in (1..block.settings.tier2_filled) -%}
-                    {%- if section.settings.tier2_row_icon != blank -%}
-                      <img src="{{ section.settings.tier2_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
-                    {%- endif -%}
-                  {%- endfor -%}
-                  {%- for i in (1..block.settings.tier2_outline) -%}
-                    {%- if section.settings.tier2_row_icon != blank -%}
-                      <img class="is-outline" src="{{ section.settings.tier2_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
-                    {%- endif -%}
-                  {%- endfor -%}
+                  {%- if section.settings.tier2_row_icon != blank -%}
+                    <img src="{{ section.settings.tier2_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                  {%- endif -%}
                 </div>
                 <div class="dt4-option__text">
                   {%- if block.settings.tier2_serving != blank -%}<div class="dt4-serving">{{ block.settings.tier2_serving }}</div>{%- endif -%}
@@ -287,16 +265,9 @@
             <div class="dt4-cell">
               <div class="dt4-option">
                 <div class="dt4-option__icons">
-                  {%- for i in (1..block.settings.tier3_filled) -%}
-                    {%- if section.settings.tier3_row_icon != blank -%}
-                      <img src="{{ section.settings.tier3_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
-                    {%- endif -%}
-                  {%- endfor -%}
-                  {%- for i in (1..block.settings.tier3_outline) -%}
-                    {%- if section.settings.tier3_row_icon != blank -%}
-                      <img class="is-outline" src="{{ section.settings.tier3_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
-                    {%- endif -%}
-                  {%- endfor -%}
+                  {%- if section.settings.tier3_row_icon != blank -%}
+                    <img src="{{ section.settings.tier3_row_icon | image_url: width: 100 }}" alt="" loading="lazy">
+                  {%- endif -%}
                 </div>
                 <div class="dt4-option__text">
                   {%- if block.settings.tier3_serving != blank -%}<div class="dt4-serving">{{ block.settings.tier3_serving }}</div>{%- endif -%}
@@ -388,7 +359,7 @@
     { "type": "text", "id": "tier3_label", "label": "Tier 3 label", "default": "90+ Min or All Day Tournaments" },
 
     { "type": "header", "content": "Row serving icons" },
-    { "type": "image_picker", "id": "tier1_row_icon", "label": "Tier 1 serving icon", "info": "Shown once per serving in each row. A second, dimmed copy represents a partial/optional serving." },
+    { "type": "image_picker", "id": "tier1_row_icon", "label": "Tier 1 serving icon", "info": "Shown once per row in this column." },
     { "type": "image_picker", "id": "tier2_row_icon", "label": "Tier 2 serving icon" },
     { "type": "image_picker", "id": "tier3_row_icon", "label": "Tier 3 serving icon" },
 
@@ -407,27 +378,19 @@
         { "type": "text", "id": "weight_lb", "label": "Weight (lb)", "default": "50-100 LB" },
 
         { "type": "header", "content": "Tier 1" },
-        { "type": "range", "id": "tier1_filled", "label": "Filled icons", "min": 0, "max": 4, "default": 1 },
-        { "type": "range", "id": "tier1_outline", "label": "Dimmed (partial) icons", "min": 0, "max": 4, "default": 0 },
         { "type": "text", "id": "tier1_serving", "label": "Serving amount", "default": "1 Serving" },
         { "type": "text", "id": "tier1_instruction", "label": "Instruction", "default": "In at least 20 oz water" },
 
         { "type": "header", "content": "Tier 1 — second option (optional)", "info": "Use this for a row that needs a stacked alternative, e.g. a higher-intensity variant." },
-        { "type": "range", "id": "tier1b_filled", "label": "Filled icons", "min": 0, "max": 4, "default": 0 },
-        { "type": "range", "id": "tier1b_outline", "label": "Dimmed (partial) icons", "min": 0, "max": 4, "default": 0 },
         { "type": "text", "id": "tier1b_serving", "label": "Serving amount" },
         { "type": "text", "id": "tier1b_instruction", "label": "Instruction" },
         { "type": "text", "id": "tier1b_note", "label": "Note", "info": "e.g. \"(Higher intensity or higher heat)\"" },
 
         { "type": "header", "content": "Tier 2" },
-        { "type": "range", "id": "tier2_filled", "label": "Filled icons", "min": 0, "max": 4, "default": 1 },
-        { "type": "range", "id": "tier2_outline", "label": "Dimmed (partial) icons", "min": 0, "max": 4, "default": 0 },
         { "type": "text", "id": "tier2_serving", "label": "Serving amount", "default": "1 Serving" },
         { "type": "text", "id": "tier2_instruction", "label": "Instruction", "default": "In at least 20-30 oz water" },
 
         { "type": "header", "content": "Tier 3" },
-        { "type": "range", "id": "tier3_filled", "label": "Filled icons", "min": 0, "max": 4, "default": 1 },
-        { "type": "range", "id": "tier3_outline", "label": "Dimmed (partial) icons", "min": 0, "max": 4, "default": 0 },
         { "type": "text", "id": "tier3_serving", "label": "Serving amount", "default": "1 Serving" },
         { "type": "text", "id": "tier3_instruction", "label": "Instruction", "default": "Throughout the day" }
       ]
@@ -446,9 +409,9 @@
     {
       "name": "Dosage Table 4 Columns",
       "blocks": [
-        { "type": "dosage_row", "settings": { "age_range": "8-11 YRS", "weight_lb": "50-100 LB", "tier1_filled": 1, "tier1_serving": "1 Serving", "tier1_instruction": "In at least 20 oz water", "tier2_filled": 1, "tier2_outline": 1, "tier2_serving": "1-1.5 Servings", "tier2_instruction": "In at least 20-30 oz water", "tier3_filled": 1, "tier3_outline": 1, "tier3_serving": "1-2 Servings", "tier3_instruction": "Throughout the day" } },
-        { "type": "dosage_row", "settings": { "age_range": "12-14 YRS", "weight_lb": "100-140 LB", "tier1_filled": 1, "tier1_serving": "1 Serving", "tier1_instruction": "In at least 20 oz water", "tier1b_filled": 2, "tier1b_serving": "2 Servings", "tier1b_instruction": "In at least 36 oz water", "tier1b_note": "(Higher intensity or higher heat)", "tier2_filled": 2, "tier2_serving": "2 Servings", "tier2_instruction": "In at least 36 oz water", "tier3_filled": 2, "tier3_outline": 1, "tier3_serving": "2-3 Servings", "tier3_instruction": "Throughout the day" } },
-        { "type": "dosage_row", "settings": { "age_range": "15-17 YRS", "weight_lb": "125-200 LB", "tier1_filled": 2, "tier1_serving": "2 Servings", "tier1_instruction": "In at least 36 oz water", "tier2_filled": 2, "tier2_serving": "2 Servings", "tier2_instruction": "In at least 36 oz water", "tier3_filled": 4, "tier3_serving": "Up to 4 Servings", "tier3_instruction": "Throughout the day" } },
+        { "type": "dosage_row", "settings": { "age_range": "8-11 YRS", "weight_lb": "50-100 LB", "tier1_serving": "1 Serving", "tier1_instruction": "In at least 20 oz water", "tier2_serving": "1-1.5 Servings", "tier2_instruction": "In at least 20-30 oz water", "tier3_serving": "1-2 Servings", "tier3_instruction": "Throughout the day" } },
+        { "type": "dosage_row", "settings": { "age_range": "12-14 YRS", "weight_lb": "100-140 LB", "tier1_serving": "1 Serving", "tier1_instruction": "In at least 20 oz water", "tier1b_serving": "2 Servings", "tier1b_instruction": "In at least 36 oz water", "tier1b_note": "(Higher intensity or higher heat)", "tier2_serving": "2 Servings", "tier2_instruction": "In at least 36 oz water", "tier3_serving": "2-3 Servings", "tier3_instruction": "Throughout the day" } },
+        { "type": "dosage_row", "settings": { "age_range": "15-17 YRS", "weight_lb": "125-200 LB", "tier1_serving": "2 Servings", "tier1_instruction": "In at least 36 oz water", "tier2_serving": "2 Servings", "tier2_instruction": "In at least 36 oz water", "tier3_serving": "Up to 4 Servings", "tier3_instruction": "Throughout the day" } },
         { "type": "feature", "settings": { "label": "Hydration", "description": "Electrolytes to replenish" } },
         { "type": "feature", "settings": { "label": "Fuel", "description": "Carbs to support energy & endurance" } },
         { "type": "feature", "settings": { "label": "Performance", "description": "Built to help kids perform their best" } }

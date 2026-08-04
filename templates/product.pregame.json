@@ -71,17 +71,20 @@
         "buy_buttons",
         "product_description_e48Ujx"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.product-single .product-sticky {position: static !important; top: 0 !important; }}"
+      ],
       "settings": {
         "enable_sticky": true,
         "enable_sticky_add_to_cart": false,
         "media_position": "left",
         "image_size": "medium",
-        "image_shape": "adapt_to_first_image",
+        "image_shape": "square",
         "show_only_variant_media": false,
         "image-display": "thumbnails",
         "thumbnail_position": "below",
-        "image_display_mobile": "slider",
-        "enable_video_loop": true,
+        "image_display_mobile": "paginated",
+        "enable_video_loop": false,
         "enable_autoplay": false,
         "show_video_controls": false,
         "override_form_labels_size": false,
@@ -343,7 +346,7 @@
       ],
       "custom_css": [
         ".ing-is {font-size: 16px;}",
-        ".ing-why{font-size: 16px;}"
+        ".ing-why {font-size: 16px;}"
       ],
       "name": "Ingredients Grid",
       "settings": {

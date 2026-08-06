@@ -177,7 +177,7 @@
         "richtext_QbKBUC": {
           "type": "richtext",
           "settings": {
-            "text": "<p>Our philosophy is simple: make youth sports nutrition products, and make them exceptionally well. FUTR is the first complete system built for every phase of play — every formula intentionally designed for youth athletes, with the right ingredients in the right amounts.</p><p><em>Because the future isn't waiting. It's being built every time they show up.</em></p>",
+            "text": "<p>Our philosophy is simple: make youth sports nutrition products, and make them exceptionally well. FUTR is the first complete system built for every phase of play — every formula intentionally designed for youth athletes, with the right ingredients in the right amounts.</p><p>&lt;/br&gt;</p><p><em>Because the future isn't waiting. It's being built every time they show up.</em></p>",
             "text_size": 18,
             "text_bottom_spacing": 20
           }

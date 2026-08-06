@@ -544,6 +544,7 @@
         "text_gfUnTV",
         "text_j4X9zq"
       ],
+      "disabled": true,
       "name": "t:sections.text--testimonials.presets.name",
       "settings": {
         "title": "Testimonials",
@@ -567,6 +568,20 @@
             "text_bottom_spacing": 10
           }
         },
+        "button_YWFe6j": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "",
+            "first_button_label": "Shop now",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "buttons_background": "#e68819",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
+        },
         "button_mMfyM3": {
           "type": "button",
           "settings": {
@@ -584,6 +599,7 @@
       },
       "block_order": [
         "text_cTzGij",
+        "button_YWFe6j",
         "button_mMfyM3"
       ],
       "settings": {
@@ -595,7 +611,7 @@
         "height_mobile": "original",
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",
-        "section_link": "",
+        "section_link": "shopify://collections/all",
         "animation_style": "none",
         "section_width": "full",
         "section_margin_top": 0,

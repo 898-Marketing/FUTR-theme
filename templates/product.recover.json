@@ -373,9 +373,9 @@
             "age_range": "8-11 YRS",
             "weight_lb": "50-100 LB",
             "weight_kg": "22-45 KG",
-            "serving_amount": "1/2 Serving",
-            "water_amount": "4-6 oz Water",
-            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
+            "serving_amount": "1 Scoop in 10+ oz Water",
+            "water_amount": "Once Daily",
+            "water_instruction": "",
             "water_instruction_accent": ""
           }
         },
@@ -385,10 +385,10 @@
             "age_range": "12+ YRS",
             "weight_lb": "100 LB+",
             "weight_kg": "45 KG+",
-            "serving_amount": "1 Serving",
-            "water_amount": "6-8 oz Water",
-            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
-            "water_instruction_accent": "Can take a second serving later in the day."
+            "serving_amount": "1 Scoop in 10+ oz Water",
+            "water_amount": "1-2 times Daily",
+            "water_instruction": "",
+            "water_instruction_accent": ""
           }
         },
         "feature_CANHtt": {
@@ -461,7 +461,7 @@
         "serving_column_label": "{{ product.title }}",
         "serving_column_sublabel": "1 scoop / stick = 1 serving",
         "water_icon": "shopify://shop_images/Icons-29.png",
-        "water_column_label": "Water",
+        "water_column_label": "DAILY USE",
         "footer_text_white": "",
         "footer_text_accent": ""
       }

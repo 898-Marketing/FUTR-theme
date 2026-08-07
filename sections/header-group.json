@@ -80,8 +80,7 @@
       "custom_css": [
         "@media (min-width: 768px) {:root {--logo-max-width: 180px !important; } .site-header__logo, .site-header__logo-overlay-image {width: 180px !important; } .site-header__logo *, .site-header__logo-overlay-image * {max-width: 180px !important; }}",
         "header.site-header {border-bottom: none !important; box-shadow: none;}",
-        ".site-header__wrapper {padding-bottom: 8px;}",
-        "@media (max-width: 767px) {.mobile-nav-bar-wrapper .standalone-icon--wrapper:not(.icon-no-padding) {min-height: 38px !important; min-width: 38px !important; padding: 8px !important; }}"
+        ".site-header__wrapper {padding-bottom: 8px;}"
       ],
       "settings": {
         "sticky_header": true,

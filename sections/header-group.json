@@ -78,9 +78,10 @@
         "content"
       ],
       "custom_css": [
-        "@media (min-width: 768px) {:root {--logo-max-width: 180px !important; } .site-header__logo, .site-header__logo-overlay-image, .site-header__logo .responsive-image-wrapper, .site-header__logo-overlay-image .responsive-image-wrapper {width: 180px !important; max-width: 180px !important; } .site-header__logo .logo_image, .site-header__logo .logo_overlay {width: 180px !important; }}",
-        "header.site-header {border-bottom: none !important; box-shadow: none;}",
-        ".site-header__wrapper {padding-bottom: 8px;}"
+        "@media (min-width:768px){:root{--logo-max-width:180px!important}.site-header__logo,.site-header__logo-overlay-image{width:180px!important}.site-header__logo *,.site-header__logo-overlay-image *{max-width:180px!important}}",
+        "header.site-header{border-bottom:none!important;box-shadow:none}",
+        ".site-header__wrapper{padding-bottom:8px}",
+        "@media (max-width:767px){.mobile-nav-bar-wrapper .standalone-icon--wrapper:not(.icon-no-padding){min-height:38px!important;min-width:38px!important;padding:8px!important}}"
       ],
       "settings": {
         "sticky_header": true,
@@ -94,7 +95,7 @@
         "logo": "shopify://shop_images/FUTR_logo-03.png",
         "logo-placement": "left",
         "logo_max_width": 220,
-        "logo_max_width_mobile": 75,
+        "logo_max_width_mobile": 100,
         "logo_padding": 0,
         "main_linklist": "main-menu",
         "dropdown_alignment": "center",

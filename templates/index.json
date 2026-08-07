@@ -244,7 +244,9 @@
         "products_to_show": 30,
         "grid-desktop": 3,
         "grid-mobile": "1",
-        "colors": "dark"
+        "colors": "dark",
+        "view_all_text": "SHOP NOW",
+        "view_all_link": "/collections/all"
       }
     },
     "image_with_text_overlay_qmXaFa": {

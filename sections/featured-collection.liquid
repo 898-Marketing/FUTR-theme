@@ -77,7 +77,14 @@
 {% if section.settings.show_view_all %}
   {% capture view_all_button %}
     {%- liquid
-      assign view_all_label = 'collections.general.view_all' | t
+      assign view_all_label = section.settings.view_all_text
+      if view_all_label == blank
+        assign view_all_label = 'collections.general.view_all' | t
+      endif
+      assign view_all_url = featured_collection.url
+      if section.settings.view_all_link != blank
+        assign view_all_url = section.settings.view_all_link
+      endif
       assign view_all_aria_label = 'collections.general.view_all_label' | t: collection_name: featured_collection.title
       assign view_all_id = 'view-all--' | append: section.id
       assign view_all_classes = 'text-' | append: section.settings.button_alignment | append: ' show-view-all--button'
@@ -109,7 +116,7 @@
     
     {% render 'dynamic-section-button',
       id: view_all_id,
-      link: featured_collection.url,
+      link: view_all_url,
       label: view_all_label,
       aria_label: view_all_aria_label,
       style: section.settings.buttons_style,
@@ -557,6 +564,20 @@
       "id": "show_view_all",
       "label": "t:sections.collection--featured-collection.settings.show_view_all.label",
       "default": false
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "Button text",
+      "info": "Leave blank to use the default \"View all\" text.",
+      "visible_if": "{{ section.settings.show_view_all == true }}"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "Button link",
+      "info": "Leave blank to link to this collection's own page.",
+      "visible_if": "{{ section.settings.show_view_all == true }}"
     },
     {
       "type": "select",

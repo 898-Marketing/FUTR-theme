@@ -235,6 +235,8 @@
         "button_background_color": "#1f88d2",
         "button_text_color": "#ffffff",
         "show_view_all": true,
+        "view_all_text": "SHOP NOW",
+        "view_all_link": "shopify://collections/all",
         "button_position": "below_products",
         "button_alignment": "center",
         "buttons_style": "filled",
@@ -244,9 +246,7 @@
         "products_to_show": 30,
         "grid-desktop": 3,
         "grid-mobile": "1",
-        "colors": "dark",
-        "view_all_text": "SHOP NOW",
-        "view_all_link": "/collections/all"
+        "colors": "dark"
       }
     },
     "image_with_text_overlay_qmXaFa": {

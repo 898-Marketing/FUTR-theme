@@ -304,8 +304,8 @@
             "category_label": "Body",
             "name": "Taurine",
             "sub": "",
-            "dose": "1000",
-            "unit": "mg",
+            "dose": "",
+            "unit": "",
             "description": "<p>An amino acid produced by the body and found in foods like fish, meat, and even breast milk.</p>",
             "why_it_helps": "<p>Supports hydration, electrolyte balance, and normal muscle function during activity.</p>"
           }
@@ -317,8 +317,8 @@
             "category_label": "Mind",
             "name": "Citicoline",
             "sub": "Cognizin®",
-            "dose": "250",
-            "unit": "mg",
+            "dose": "",
+            "unit": "",
             "description": "<p>A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.</p>",
             "why_it_helps": "<p>Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field.</p>"
           }
@@ -330,8 +330,8 @@
             "category_label": "Mind",
             "name": "L-Tyrosine",
             "sub": "",
-            "dose": "250",
-            "unit": "mg",
+            "dose": "",
+            "unit": "",
             "description": "<p>An amino acid the body uses to help support focus and concentration.</p>",
             "why_it_helps": "<p>Supports concentration, reaction time, and composure under stress, keeping youth athletes mentally sharp.</p>"
           }
@@ -343,8 +343,8 @@
             "category_label": "Energy",
             "name": "Vitamin B6",
             "sub": "as Pyridoxine HCl",
-            "dose": "1",
-            "unit": "mg",
+            "dose": "",
+            "unit": "",
             "description": "<p>A water-soluble B vitamin that helps convert food into energy and supports normal nervous system function.</p>",
             "why_it_helps": "<p>Helps support energy metabolism, focus, and normal muscle function.</p>"
           }
@@ -356,8 +356,8 @@
             "category_label": "Energy",
             "name": "Vitamin B12",
             "sub": "as Methylcobalamin",
-            "dose": "2",
-            "unit": "mcg",
+            "dose": "",
+            "unit": "",
             "description": "<p>An essential B-vitamin needed for red blood cell formation and nervous system health.</p>",
             "why_it_helps": "<p>Supports oxygen transport in the blood and energy metabolism.</p>"
           }
@@ -399,21 +399,13 @@
           "settings": {
             "age_range": "8-11 YRS",
             "weight_lb": "50-100 LB",
-            "tier1_filled": 1,
-            "tier1_outline": 0,
             "tier1_serving": "1 Serving",
             "tier1_instruction": "In at least 20 oz water",
-            "tier1b_filled": 0,
-            "tier1b_outline": 0,
             "tier1b_serving": "",
             "tier1b_instruction": "",
             "tier1b_note": "",
-            "tier2_filled": 1,
-            "tier2_outline": 1,
             "tier2_serving": "1-1.5 Servings",
             "tier2_instruction": "In at least 20-30 oz water",
-            "tier3_filled": 1,
-            "tier3_outline": 1,
             "tier3_serving": "1-2 Servings",
             "tier3_instruction": "Throughout the day"
           }
@@ -423,21 +415,13 @@
           "settings": {
             "age_range": "12-14 YRS",
             "weight_lb": "100-140 LB",
-            "tier1_filled": 1,
-            "tier1_outline": 0,
             "tier1_serving": "1 Serving",
             "tier1_instruction": "In at least 20 oz water",
-            "tier1b_filled": 2,
-            "tier1b_outline": 0,
             "tier1b_serving": "2 Servings",
             "tier1b_instruction": "In at least 36 oz water",
             "tier1b_note": "(Higher intensity or higher heat)",
-            "tier2_filled": 2,
-            "tier2_outline": 0,
             "tier2_serving": "2 Servings",
             "tier2_instruction": "In at least 36 oz water",
-            "tier3_filled": 2,
-            "tier3_outline": 1,
             "tier3_serving": "2-3 Servings",
             "tier3_instruction": "Throughout the day"
           }
@@ -447,21 +431,13 @@
           "settings": {
             "age_range": "15-17 YRS",
             "weight_lb": "125-200 LB",
-            "tier1_filled": 2,
-            "tier1_outline": 0,
             "tier1_serving": "2 Servings",
             "tier1_instruction": "In at least 36 oz water",
-            "tier1b_filled": 0,
-            "tier1b_outline": 0,
             "tier1b_serving": "",
             "tier1b_instruction": "",
             "tier1b_note": "",
-            "tier2_filled": 2,
-            "tier2_outline": 0,
             "tier2_serving": "2 Servings",
             "tier2_instruction": "In at least 36 oz water",
-            "tier3_filled": 4,
-            "tier3_outline": 0,
             "tier3_serving": "Up to 4 Servings",
             "tier3_instruction": "Throughout the day"
           }

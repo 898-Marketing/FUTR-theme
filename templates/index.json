@@ -291,13 +291,13 @@
         "button_fGGFC6"
       ],
       "settings": {
-        "image_desktop": "shopify://shop_images/soccer.jpg",
+        "image_desktop": "shopify://shop_images/system-banner3c.jpg",
         "height_desktop": "550px",
-        "text_position_desktop": "center",
+        "text_position_desktop": "right",
         "text_alignment_desktop": "center",
-        "caption_width_desktop": 64,
-        "height_mobile": "300px",
-        "text_position_mobile": "center",
+        "caption_width_desktop": 37,
+        "height_mobile": "400px",
+        "text_position_mobile": "bottom_center",
         "text_alignment_mobile": "center",
         "section_link": "",
         "animation_style": "none",

@@ -296,6 +296,7 @@
         "text_position_desktop": "right",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 37,
+        "image_mobile": "shopify://shop_images/Screenshot_2026-08-12_at_1.51.11_PM.png",
         "height_mobile": "400px",
         "text_position_mobile": "bottom_center",
         "text_alignment_mobile": "center",

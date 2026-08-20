@@ -100,32 +100,24 @@
         "heading_Jerb6R": {
           "type": "heading",
           "settings": {
-            "title": "lorem",
-            "font_size_desktop": 28,
+            "title": "From game day to everyday.",
+            "font_size_desktop": 58,
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
-          }
-        },
-        "text_cRPmfU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 20
           }
         }
       },
       "block_order": [
-        "heading_Jerb6R",
-        "text_cRPmfU"
+        "heading_Jerb6R"
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
+        "image_desktop": "shopify://shop_images/desktop-banner.jpg",
         "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
-        "caption_width_desktop": 50,
+        "caption_width_desktop": 100,
+        "image_mobile": "shopify://shop_images/mobile-recover.jpg",
         "height_mobile": "original",
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",

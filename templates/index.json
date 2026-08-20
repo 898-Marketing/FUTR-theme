@@ -292,7 +292,7 @@
       ],
       "settings": {
         "image_desktop": "shopify://shop_images/system-banner3c_cb31c968-4d09-40ff-a30b-09e220b8097a.jpg",
-        "height_desktop": "550px",
+        "height_desktop": "original",
         "text_position_desktop": "right",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 37,
@@ -607,7 +607,7 @@
       ],
       "settings": {
         "image_desktop": "shopify://shop_images/pregame-collection.jpg",
-        "height_desktop": "450px",
+        "height_desktop": "original",
         "text_position_desktop": "right",
         "text_alignment_desktop": "right",
         "caption_width_desktop": 57,

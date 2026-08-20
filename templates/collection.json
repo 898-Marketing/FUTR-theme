@@ -53,7 +53,7 @@
       ],
       "settings": {
         "image_desktop": "shopify://shop_images/Screenshot_2026-07-27_at_3.01.59_PM.png",
-        "height_desktop": "450px",
+        "height_desktop": "original",
         "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "left",
         "caption_width_desktop": 66,
@@ -99,7 +99,7 @@
     "image_with_text_overlay_hJLNM8": {
       "type": "image-with-text-overlay",
       "settings": {
-        "height_desktop": "450px",
+        "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 50,

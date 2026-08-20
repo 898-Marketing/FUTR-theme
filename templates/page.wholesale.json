@@ -36,7 +36,7 @@
         "text_fpFB7M"
       ],
       "settings": {
-        "height_desktop": "450px",
+        "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 50,
@@ -435,7 +435,7 @@
         "button_96EwNC"
       ],
       "settings": {
-        "height_desktop": "450px",
+        "height_desktop": "original",
         "text_position_desktop": "left",
         "text_alignment_desktop": "left",
         "caption_width_desktop": 75,

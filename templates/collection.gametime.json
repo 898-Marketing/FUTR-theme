@@ -53,7 +53,7 @@
     "image_with_text_overlay_hJLNM8": {
       "type": "image-with-text-overlay",
       "settings": {
-        "height_desktop": "450px",
+        "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 50,
@@ -112,7 +112,7 @@
     "image_with_text_overlay_EC4zqE": {
       "type": "image-with-text-overlay",
       "settings": {
-        "height_desktop": "450px",
+        "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 50,

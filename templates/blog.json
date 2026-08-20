@@ -38,7 +38,7 @@
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
         "image_desktop": "shopify://shop_images/soccer.jpg",
-        "height_desktop": "550px",
+        "height_desktop": "original",
         "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "left",
         "caption_width_desktop": 50,
@@ -146,7 +146,7 @@
         "button_nnP6yp"
       ],
       "settings": {
-        "height_desktop": "550px",
+        "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 50,

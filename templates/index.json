@@ -384,84 +384,39 @@
         "force_static_grid": false
       }
     },
-    "accordion_with_image_MYP6GK": {
-      "type": "accordion-with-image",
+    "image_with_text_mYYWiV": {
+      "type": "image-with-text",
       "blocks": {
-        "accordion_tENY66": {
-          "type": "accordion",
+        "heading_Vi8cmx": {
+          "type": "heading",
           "settings": {
-            "accordion_header": "Growth without burnout.",
-            "open_by_default": false,
-            "text": "<p>Place some content here to describe this topic.</p>",
-            "page": ""
+            "title": "BEYOND THE GAME.",
+            "heading_bottom_spacing": 15
           }
         },
-        "accordion_ThdBpU": {
-          "type": "accordion",
+        "text_wFj9td": {
+          "type": "text",
           "settings": {
-            "accordion_header": "Confidence without comparison",
-            "open_by_default": false,
-            "text": "<p>Place some content here to describe this topic.</p>",
-            "page": ""
-          }
-        },
-        "accordion_f6Ai4j": {
-          "type": "accordion",
-          "settings": {
-            "accordion_header": "Love for the game before the score",
-            "open_by_default": false,
-            "text": "<p>Place some content here to describe this topic.</p>",
-            "page": ""
-          }
-        },
-        "accordion_x9HDwU": {
-          "type": "accordion",
-          "settings": {
-            "accordion_header": "Disipline before recognition",
-            "open_by_default": false,
-            "text": "<p>Place some content here to describe this topic.</p>",
-            "page": ""
-          }
-        },
-        "accordion_6DaAQg": {
-          "type": "accordion",
-          "settings": {
-            "accordion_header": "Progress before praise",
-            "open_by_default": false,
-            "text": "<p>Place some content here to describe this topic.</p>",
-            "page": ""
+            "text": "<p>We're not only here to fuel athletes.</p><p>We're here to build the standard they carry into every practice, every competition, and every next level, whatever the future holds.</p>",
+            "text_bottom_spacing": 20
           }
         }
       },
       "block_order": [
-        "accordion_tENY66",
-        "accordion_ThdBpU",
-        "accordion_f6Ai4j",
-        "accordion_x9HDwU",
-        "accordion_6DaAQg"
+        "heading_Vi8cmx",
+        "text_wFj9td"
       ],
-      "name": "t:sections.product--accordion-with-image.presets.name",
+      "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
-        "section_title": "<strong>THE FUTR ATHLETE SYSTEM. BUILT FOR EVERY PHASE OF PLAY. </strong>",
-        "section_description": "<p><strong>BEYOND THE GAME.</strong><br/>We're not only here to fuel the athletes we're here to build the  standard they carry into every practice, every competition, and every next level.</p>",
-        "section_header_alignment": "left",
-        "faq_icon": "plus_minus",
-        "accordion_image": "shopify://shop_images/Futr_gym.png",
-        "image_max_width": 600,
-        "title": "",
-        "text": "",
-        "link": "",
-        "button_text": "",
-        "image_position_desktop": "right",
-        "image_position_mobile": "top",
-        "section_width": "content",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "image--background-color": "rgba(0,0,0,0)",
-        "image--text-color": "#333333",
-        "button_background_color": "#242424",
-        "button_text_color": "#ffffff",
-        "colors": "accent"
+        "image": "shopify://shop_images/banner-half-image.jpg",
+        "layout": "right",
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "colors": "light"
       }
     },
     "blog_posts_wefQCf": {
@@ -644,7 +599,7 @@
     "featured_collection_RbHECB",
     "image_with_text_overlay_qmXaFa",
     "template_product_info_columns_YPyY6m",
-    "accordion_with_image_MYP6GK",
+    "image_with_text_mYYWiV",
     "blog_posts_wefQCf",
     "testimonials_h6YnF3",
     "image_with_text_overlay_3tx9wj",

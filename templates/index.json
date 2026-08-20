@@ -400,11 +400,53 @@
             "text": "<p>We're not only here to fuel athletes.</p><p>We're here to build the standard they carry into every practice, every competition, and every next level, whatever the future holds.</p>",
             "text_bottom_spacing": 20
           }
+        },
+        "list_heading_believe": {
+          "type": "list_heading",
+          "settings": {
+            "heading": "We believe in"
+          }
+        },
+        "list_item_believe_1": {
+          "type": "list_item",
+          "settings": {
+            "text": "Showing up, even when it's hard."
+          }
+        },
+        "list_item_believe_2": {
+          "type": "list_item",
+          "settings": {
+            "text": "Putting in the work no one sees."
+          }
+        },
+        "list_item_believe_3": {
+          "type": "list_item",
+          "settings": {
+            "text": "Being a great teammate, on and off the field."
+          }
+        },
+        "list_item_believe_4": {
+          "type": "list_item",
+          "settings": {
+            "text": "Chasing progress, not perfection."
+          }
+        },
+        "list_item_believe_5": {
+          "type": "list_item",
+          "settings": {
+            "text": "Having fun and enjoying every moment."
+          }
         }
       },
       "block_order": [
         "heading_Vi8cmx",
-        "text_wFj9td"
+        "text_wFj9td",
+        "list_heading_believe",
+        "list_item_believe_1",
+        "list_item_believe_2",
+        "list_item_believe_3",
+        "list_item_believe_4",
+        "list_item_believe_5"
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {

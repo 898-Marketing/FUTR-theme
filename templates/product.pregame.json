@@ -249,6 +249,19 @@
     "ingredients_grid_yzP3LB": {
       "type": "ingredients-grid",
       "blocks": {
+        "ingredient_nh3i4w": {
+          "type": "ingredient",
+          "settings": {
+            "category": "mind",
+            "category_label": "Mind",
+            "name": "Cognizin®",
+            "sub": "Citicoline",
+            "dose": "",
+            "unit": "",
+            "description": "<p>A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.</p>",
+            "why_it_helps": "<p>Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field.</p>"
+          }
+        },
         "ingredient_FDDxKh": {
           "type": "ingredient",
           "settings": {
@@ -273,19 +286,6 @@
             "unit": "",
             "description": "<p>An amino acid produced by the body and found in foods like fish, meat, and even breast milk.</p>",
             "why_it_helps": "<p>Supports hydration, electrolyte balance, and normal muscle function during activity.</p>"
-          }
-        },
-        "ingredient_nh3i4w": {
-          "type": "ingredient",
-          "settings": {
-            "category": "mind",
-            "category_label": "Mind",
-            "name": "Cognizin®",
-            "sub": "Citicoline",
-            "dose": "",
-            "unit": "",
-            "description": "<p>A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.</p>",
-            "why_it_helps": "<p>Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field.</p>"
           }
         },
         "ingredient_AhixFb": {
@@ -329,9 +329,9 @@
         }
       },
       "block_order": [
+        "ingredient_nh3i4w",
         "ingredient_FDDxKh",
         "ingredient_gNG3ga",
-        "ingredient_nh3i4w",
         "ingredient_AhixFb",
         "ingredient_iCKEC4",
         "ingredient_8H4jkY"

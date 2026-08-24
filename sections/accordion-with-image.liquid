@@ -13,6 +13,23 @@
   {% endstyle %}
 {% endif %}
 
+{% comment %}
+  Opt-in vertical centering — only applied when center_align_content is turned
+  on for this specific section instance. The stock layout stretches the image
+  and accordion content to equal heights; this keeps them centered relative to
+  each other instead, so it stays correct no matter how many accordion items
+  are added or removed. Desktop-only, matching the row layout's own breakpoint.
+{% endcomment %}
+{% if section.settings.center_align_content %}
+  {% style %}
+    @media screen and (min-width: 768px) {
+      .accordion-with-image--{{ section.id }} .main-content-wrapper {
+        align-items: center;
+      }
+    }
+  {% endstyle %}
+{% endif %}
+
 {% liquid
   assign width_class = ''
   unless section.settings.section_width == 'full-width'
@@ -202,6 +219,13 @@
       "id": "square_image",
       "label": "Display image as a 1:1 square",
       "info": "Overrides the default wide crop so the image isn't cropped/cut off. Only affects this section instance.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "center_align_content",
+      "label": "Vertically center image and accordion content",
+      "info": "Keeps them centered relative to each other on desktop no matter how many accordion items are added, instead of stretching to match heights. Only affects this section instance.",
       "default": false
     },
     {

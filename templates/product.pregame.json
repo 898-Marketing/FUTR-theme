@@ -342,7 +342,7 @@
       ],
       "name": "Ingredients Grid",
       "settings": {
-        "kicker": "lorem ipsum",
+        "kicker": "",
         "heading": "BUILT WITH PURPOSEFUL INGREDIENTS",
         "color_ink": "#0e1116",
         "color_paper": "#f5f4ee",
@@ -436,7 +436,7 @@
       "settings": {
         "background_image": "shopify://shop_images/recover-collection.jpg",
         "background_overlay_color": "#000000",
-        "background_overlay_opacity": 55,
+        "background_overlay_opacity": 70,
         "heading_prefix": "How much",
         "heading_highlight": "{{ product.title }}",
         "heading_subtitle": "should my athlete take?",
@@ -509,9 +509,9 @@
       "name": "Phase System Columns",
       "settings": {
         "section_bg_color": "#ffffff",
-        "heading_prefix": "The FUTR Athlete System.",
+        "heading_prefix": "THE FUTR SYSTEM: BUILT FOR EVERY PHASE OF PLAY",
         "heading_color": "#0e1116",
-        "heading_accent": "Built for every phase of play.",
+        "heading_accent": "SHOP EVERY PHASE",
         "heading_accent_color": "#8fbf2e",
         "heading_size": 36,
         "badge_icon_size": 160

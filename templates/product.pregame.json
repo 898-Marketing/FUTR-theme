@@ -326,6 +326,19 @@
             "description": "<p>An essential B-vitamin needed for red blood cell formation and nervous system health.</p>",
             "why_it_helps": "<p>Supports oxygen transport in the blood and energy metabolism.</p>"
           }
+        },
+        "ingredient_XBtib3": {
+          "type": "ingredient",
+          "settings": {
+            "category": "body",
+            "category_label": "Body",
+            "name": "Ingredient name",
+            "sub": "",
+            "dose": "0",
+            "unit": "mg",
+            "description": "",
+            "why_it_helps": ""
+          }
         }
       },
       "block_order": [
@@ -334,7 +347,8 @@
         "ingredient_gNG3ga",
         "ingredient_AhixFb",
         "ingredient_iCKEC4",
-        "ingredient_8H4jkY"
+        "ingredient_8H4jkY",
+        "ingredient_XBtib3"
       ],
       "custom_css": [
         ".ing-is {font-size: 16px;}",

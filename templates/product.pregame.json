@@ -171,7 +171,8 @@
         "button_background_color": "#242424",
         "button_text_color": "#ffffff",
         "colors": "light",
-        "square_image": true
+        "square_image": true,
+        "center_align_content": true
       }
     },
     "product-description": {

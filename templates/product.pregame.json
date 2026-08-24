@@ -262,19 +262,6 @@
             "why_it_helps": "<p>Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field.</p>"
           }
         },
-        "ingredient_FDDxKh": {
-          "type": "ingredient",
-          "settings": {
-            "category": "body",
-            "category_label": "",
-            "name": "",
-            "sub": "",
-            "dose": "",
-            "unit": "",
-            "description": "",
-            "why_it_helps": ""
-          }
-        },
         "ingredient_gNG3ga": {
           "type": "ingredient",
           "settings": {
@@ -343,7 +330,6 @@
       },
       "block_order": [
         "ingredient_nh3i4w",
-        "ingredient_FDDxKh",
         "ingredient_gNG3ga",
         "ingredient_AhixFb",
         "ingredient_iCKEC4",

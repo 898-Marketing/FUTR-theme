@@ -170,7 +170,8 @@
         "image--text-color": "#333333",
         "button_background_color": "#242424",
         "button_text_color": "#ffffff",
-        "colors": "light"
+        "colors": "light",
+        "square_image": true
       }
     },
     "product-description": {

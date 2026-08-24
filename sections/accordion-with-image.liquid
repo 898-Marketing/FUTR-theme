@@ -1,6 +1,19 @@
 {{ 'accordion-with-image-section.min.css' | asset_url | stylesheet_tag }}
 
-{% liquid 
+{% comment %}
+  Opt-in 1:1 square image — only applied when square_image is turned on for
+  this specific section instance, so other pages using this same section type
+  are unaffected. Overrides the stock 7:4 crop that cuts off square images.
+{% endcomment %}
+{% if section.settings.square_image %}
+  {% style %}
+    .accordion-with-image--{{ section.id }} .image-wrapper img {
+      aspect-ratio: 1 / 1 !important;
+    }
+  {% endstyle %}
+{% endif %}
+
+{% liquid
   assign width_class = ''
   unless section.settings.section_width == 'full-width'
     assign width_class = 'width--' | append: section.settings.section_width
@@ -183,6 +196,13 @@
       "step": 10,
       "unit": "t:all.px",
       "default": 350
+    },
+    {
+      "type": "checkbox",
+      "id": "square_image",
+      "label": "Display image as a 1:1 square",
+      "info": "Overrides the default wide crop so the image isn't cropped/cut off. Only affects this section instance.",
+      "default": false
     },
     {
       "type": "text",

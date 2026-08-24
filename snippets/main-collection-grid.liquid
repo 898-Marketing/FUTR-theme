@@ -70,6 +70,7 @@
           id="template--collection"
         >
           {% for product in collection.products %}
+            {% unless product.tags contains 'hide-from-shop' %}
             <div class="grid__item {{ grid_item_width }} show-on-scroll">
               {%- liquid
                 assign loading = 'lazy'
@@ -120,6 +121,7 @@
                 highlight_collapsible_tab: highlight_collapsible_tab,
                 highlight_button_borders: highlight_button_borders %}
             </div>
+            {% endunless %}
           {% else %}
             {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
               {% for i in (1..display-total-collection-products-total) %}

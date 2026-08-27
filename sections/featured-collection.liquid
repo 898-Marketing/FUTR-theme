@@ -31,6 +31,11 @@
     font-size: calc(var(--base-font-size) + 4px);
   }
 
+  #shopify-section-{{ section.id }} .product-grid--price {
+    font-size: calc(var(--base-font-size) + 3px);
+    margin-top: -0.9em;
+  }
+
   {% if section.settings.custom_grid_spacing %}
     /* Opt-in product card spacing — only applies within this section instance. */
     #shopify-section-{{ section.id }} {

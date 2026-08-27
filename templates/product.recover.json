@@ -566,6 +566,7 @@
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 50,
+        "image_mobile": "shopify://shop_images/mobile-recover.jpg",
         "height_mobile": "original",
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",

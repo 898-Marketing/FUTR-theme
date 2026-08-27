@@ -124,12 +124,14 @@
       {%- endif -%}
       <h2 class="zing-title" id="zing-title-{{ section.id }}">{{ section.settings.heading }}</h2>
     </div>
-    <div class="zing-tabs" role="tablist" aria-label="Filter ingredients by benefit">
-      <button class="zing-tab" role="tab" aria-selected="true"  data-filter="all">All</button>
-      <button class="zing-tab" role="tab" aria-selected="false" data-filter="body">Body</button>
-      <button class="zing-tab" role="tab" aria-selected="false" data-filter="mind">Mind</button>
-      <button class="zing-tab" role="tab" aria-selected="false" data-filter="energy">Energy</button>
-    </div>
+    {%- if section.settings.show_filter_tabs -%}
+      <div class="zing-tabs" role="tablist" aria-label="Filter ingredients by benefit">
+        <button class="zing-tab" role="tab" aria-selected="true"  data-filter="all">All</button>
+        <button class="zing-tab" role="tab" aria-selected="false" data-filter="body">Body</button>
+        <button class="zing-tab" role="tab" aria-selected="false" data-filter="mind">Mind</button>
+        <button class="zing-tab" role="tab" aria-selected="false" data-filter="energy">Energy</button>
+      </div>
+    {%- endif -%}
   </header>
 
   <div class="zing-grid">
@@ -237,6 +239,13 @@
       "id": "heading",
       "label": "Heading",
       "default": "Built for body & mind"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filter_tabs",
+      "label": "Show filter tabs (Body/Mind/Energy)",
+      "info": "Turn off to hide the filter tabs and show all ingredients at once. The filtering feature stays available to turn back on later.",
+      "default": true
     },
     { "type": "header", "content": "Colors" },
     { "type": "color", "id": "color_ink", "label": "Ink (text)", "default": "#0E1116" },

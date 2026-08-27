@@ -1,5 +1,19 @@
 {{ 'focused-product-gallery-section.min.css' | asset_url | stylesheet_tag }}
 
+{% style %}
+  #shopify-section-{{ section.id }} .focused-product-gallery__heading {
+    font-size: calc(var(--h4-size) - 5px);
+  }
+  #shopify-section-{{ section.id }} .focused-product-gallery__price .money {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 767px) {
+    #shopify-section-{{ section.id }} .focused-product-gallery__heading {
+      font-size: calc(var(--h4-size-mobile) - 5px);
+    }
+  }
+{% endstyle %}
+
 <safe-load-scripts class="hidden">
   <script src="{{ 'focused-product-gallery-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="focused-product-gallery"></script>
 </safe-load-scripts>

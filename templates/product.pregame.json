@@ -166,6 +166,8 @@
         "section_header_alignment": "center",
         "faq_icon": "plus_minus",
         "accordion_image": "shopify://shop_images/PDP_WEB_BANNER_VERTICAL-pregame.jpg",
+        "custom_split": false,
+        "image_split_percent": 50,
         "image_max_width": 600,
         "square_image": true,
         "center_align_content": true,
@@ -357,18 +359,18 @@
       "settings": {
         "kicker": "",
         "heading": "BUILT WITH PURPOSEFUL INGREDIENTS",
+        "show_filter_tabs": false,
+        "show_category_pill": false,
         "color_ink": "#0e1116",
         "color_paper": "#f5f4ee",
         "color_muted": "#5a5f66",
         "color_faint": "#8a9099",
-        "color_body": "#8fbf2e",
-        "color_body_pill": "#dcf29a",
+        "color_body": "#064982",
+        "color_body_pill": "#5E85A7",
         "color_mind": "#3e82e6",
         "color_mind_pill": "#bad4ff",
-        "color_energy": "#f0642a",
-        "color_energy_pill": "#ffcda9",
-        "show_filter_tabs": false,
-        "show_category_pill": false
+        "color_energy": "#312AF0",
+        "color_energy_pill": "#6561E1"
       }
     },
     "dosage_table_VQ8Jg8": {

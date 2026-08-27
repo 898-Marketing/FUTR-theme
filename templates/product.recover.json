@@ -407,14 +407,6 @@
             "description": "Supports fluid balance and performance"
           }
         },
-        "feature_G7ia9V": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Icons-26.png",
-            "label": "Focus",
-            "description": "Supports mental clarity & reaction time"
-          }
-        },
         "feature_YQcHz9": {
           "type": "feature",
           "settings": {
@@ -436,7 +428,6 @@
         "dosage_row_33K9K3",
         "dosage_row_bqDUiB",
         "feature_CANHtt",
-        "feature_G7ia9V",
         "feature_YQcHz9",
         "feature_H6Dr9f"
       ],
@@ -465,7 +456,7 @@
         "footer_icon_size": 40,
         "feature_icon_size": 54,
         "age_column_label": "Age / Weight",
-        "serving_icon": "shopify://shop_images/Icons-24.png",
+        "serving_icon": "shopify://shop_images/SCOOP0.png",
         "serving_column_label": "{{ product.title }}",
         "serving_column_sublabel": "1 scoop / stick = 1 serving",
         "water_icon": "shopify://shop_images/Icons-29.png",
@@ -553,11 +544,13 @@
       "settings": {
         "image_desktop": "shopify://shop_images/desktop-banner.jpg",
         "height_desktop": "original",
+        "height_desktop_custom": 450,
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 97,
         "image_mobile": "shopify://shop_images/mobile-recover.jpg",
         "height_mobile": "original",
+        "height_mobile_custom": 400,
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",
         "section_link": "",

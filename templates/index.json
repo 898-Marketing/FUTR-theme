@@ -424,7 +424,7 @@
       ],
       "name": "t:sections.focused-product-gallery.name",
       "settings": {
-        "title": "Focused product gallery",
+        "title": "",
         "description": "",
         "section_header_alignment": "center",
         "image_shape": "natural",

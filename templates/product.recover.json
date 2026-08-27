@@ -539,25 +539,15 @@
         "heading_dyAWir": {
           "type": "heading",
           "settings": {
-            "title": "lorem",
-            "font_size_desktop": 28,
+            "title": "BUY ANY 3 ITEMS GET A FREE T-SHIRT!",
+            "font_size_desktop": 55,
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
-          }
-        },
-        "text_PXf4Nj": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 20
           }
         }
       },
       "block_order": [
-        "heading_dyAWir",
-        "text_PXf4Nj"
+        "heading_dyAWir"
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
@@ -565,7 +555,7 @@
         "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
-        "caption_width_desktop": 50,
+        "caption_width_desktop": 97,
         "image_mobile": "shopify://shop_images/mobile-recover.jpg",
         "height_mobile": "original",
         "text_position_mobile": "center",

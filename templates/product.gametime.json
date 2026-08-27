@@ -505,7 +505,7 @@
         "feature_dLFHKw"
       ],
       "custom_css": [
-        ".dt4-col-head {font-size: 18px;}",
+        ".dt4-col-head {font-size: 15px;}",
         ".dt4-col-head__sub {font-size: 14px;}",
         ".dt4-feature__label {font-size: 18px;}",
         ".dt4-feature__desc {font-size: 13px;}"
@@ -522,7 +522,7 @@
         "color_navy": "#0e1116",
         "color_tier1": "#8fbf2e",
         "color_tier2": "#1f88d2",
-        "color_tier3": "#f0642a",
+        "color_tier3": "#50B1F6",
         "header_icon_size": 46,
         "row_icon_size": 36,
         "footer_icon_size": 24,
@@ -537,9 +537,9 @@
         "tier1_row_icon": "shopify://shop_images/Icons-24.png",
         "tier2_row_icon": "shopify://shop_images/Icons-24.png",
         "tier3_row_icon": "shopify://shop_images/Icons-24.png",
-        "footer_text_white": "Every athlete",
-        "footer_text_accent": "is different",
-        "footer_subtext": "Adjust serving size based on your athlete's age, body size, sweat rate, intensity, climate and individual needs."
+        "footer_text_white": "",
+        "footer_text_accent": "",
+        "footer_subtext": ""
       }
     },
     "phase_columns_rLYjCq": {
@@ -629,6 +629,7 @@
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
+        "image_desktop": "shopify://shop_images/gametime-desktop.jpg",
         "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",

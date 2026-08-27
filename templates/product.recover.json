@@ -353,7 +353,9 @@
         "color_mind": "#3e82e6",
         "color_mind_pill": "#bad4ff",
         "color_energy": "#f0642a",
-        "color_energy_pill": "#ffcda9"
+        "color_energy_pill": "#ffcda9",
+        "show_filter_tabs": false,
+        "show_category_pill": false
       }
     },
     "dosage_table_VQ8Jg8": {

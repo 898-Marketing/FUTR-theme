@@ -69,10 +69,16 @@
             if section.settings.animation_style == 'parallax' and section.settings[height_setting] != 'original'
               assign parallax = true
             endif
+
+            assign height_value = section.settings[height_setting]
+            if height_value == 'custom'
+              assign custom_height_setting = height_setting | append: '_custom'
+              assign height_value = section.settings[custom_height_setting] | append: 'px'
+            endif
           -%}
           <style>
             .{{ section.id }} {
-              --height-{{ device }}: {{ section.settings[height_setting] }};
+              --height-{{ device }}: {{ height_value }};
             }
 
             {% capture selector %}.{{ section.id }} .{{ cropped_image_class }} .image-with-text-overlay__cropped-image .parallax-child{% endcapture %}
@@ -298,8 +304,23 @@
         {
           "value": "100vh",
           "label": "t:all.Fullscreen"
+        },
+        {
+          "value": "custom",
+          "label": "Custom (slider)"
         }
       ]
+    },
+    {
+      "type": "range",
+      "id": "height_desktop_custom",
+      "label": "Custom height",
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "default": 450,
+      "visible_if": "{{ section.settings.height_desktop == 'custom' }}"
     },
     {
       "type": "select",
@@ -399,8 +420,23 @@
         {
           "value": "100vh",
           "label": "t:all.Fullscreen"
+        },
+        {
+          "value": "custom",
+          "label": "Custom (slider)"
         }
       ]
+    },
+    {
+      "type": "range",
+      "id": "height_mobile_custom",
+      "label": "Custom height",
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "default": 400,
+      "visible_if": "{{ section.settings.height_mobile == 'custom' }}"
     },
     {
       "type": "select",

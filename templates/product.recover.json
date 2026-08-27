@@ -169,7 +169,11 @@
         "image--text-color": "#333333",
         "button_background_color": "#242424",
         "button_text_color": "#ffffff",
-        "colors": "light"
+        "colors": "light",
+        "custom_split": true,
+        "image_split_percent": 45,
+        "square_image": true,
+        "center_align_content": true
       }
     },
     "product-description": {

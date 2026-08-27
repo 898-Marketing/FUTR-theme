@@ -246,6 +246,8 @@
         "products_to_show": 30,
         "grid-desktop": 3,
         "grid-mobile": "1",
+        "custom_grid_spacing": true,
+        "grid_spacing_desktop": 50,
         "colors": "dark"
       }
     },
@@ -384,6 +386,63 @@
         "force_static_grid": false
       }
     },
+    "focused_product_gallery_qB8cNM": {
+      "type": "focused-product-gallery",
+      "blocks": {
+        "product_MdWBqQ": {
+          "type": "product",
+          "settings": {
+            "product": "pregame",
+            "focus_image": "shopify://shop_images/pregame.jpg",
+            "description": "",
+            "button_label": "Shop PRE"
+          }
+        },
+        "product_JPbXe6": {
+          "type": "product",
+          "settings": {
+            "product": "gametime",
+            "focus_image": "shopify://shop_images/gametime-_1.jpg",
+            "description": "",
+            "button_label": "Shop INTRA"
+          }
+        },
+        "product_BKtwRE": {
+          "type": "product",
+          "settings": {
+            "product": "recover",
+            "focus_image": "shopify://shop_images/recover-1.jpg",
+            "description": "",
+            "button_label": "Shop RECOVER"
+          }
+        }
+      },
+      "block_order": [
+        "product_MdWBqQ",
+        "product_JPbXe6",
+        "product_BKtwRE"
+      ],
+      "name": "t:sections.focused-product-gallery.name",
+      "settings": {
+        "title": "Focused product gallery",
+        "description": "",
+        "section_header_alignment": "center",
+        "image_shape": "natural",
+        "show_vendor": false,
+        "show_price": true,
+        "show_description": false,
+        "hover_navigation_desktop": "left-and-right",
+        "button_style": "filled",
+        "override_button_colors": false,
+        "button_background_color": "#e68819",
+        "button_color": "#ffffff",
+        "products_per_row_desktop": "5",
+        "section_width": "full",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
+      }
+    },
     "image_with_text_mYYWiV": {
       "type": "image-with-text",
       "blocks": {
@@ -459,63 +518,6 @@
         "section_padding_top": 0,
         "section_padding_bottom": 0,
         "colors": "light"
-      }
-    },
-    "focused_product_gallery_qB8cNM": {
-      "type": "focused-product-gallery",
-      "blocks": {
-        "product_MdWBqQ": {
-          "type": "product",
-          "settings": {
-            "product": "pregame",
-            "focus_image": "shopify://shop_images/pregame.jpg",
-            "description": "",
-            "button_label": "Shop now"
-          }
-        },
-        "product_JPbXe6": {
-          "type": "product",
-          "settings": {
-            "product": "gametime",
-            "focus_image": "shopify://shop_images/gametime-_1.jpg",
-            "description": "",
-            "button_label": "Shop now"
-          }
-        },
-        "product_BKtwRE": {
-          "type": "product",
-          "settings": {
-            "product": "recover",
-            "focus_image": "shopify://shop_images/recover-1.jpg",
-            "description": "",
-            "button_label": "Shop now"
-          }
-        }
-      },
-      "block_order": [
-        "product_MdWBqQ",
-        "product_JPbXe6",
-        "product_BKtwRE"
-      ],
-      "name": "t:sections.focused-product-gallery.name",
-      "settings": {
-        "title": "Focused product gallery",
-        "description": "",
-        "section_header_alignment": "center",
-        "image_shape": "natural",
-        "show_vendor": false,
-        "show_price": true,
-        "show_description": false,
-        "hover_navigation_desktop": "left-and-right",
-        "button_style": "filled",
-        "override_button_colors": false,
-        "button_background_color": "#E68819",
-        "button_color": "#FFFFFF",
-        "products_per_row_desktop": "5",
-        "section_width": "full",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "colors": "dark"
       }
     },
     "blog_posts_wefQCf": {

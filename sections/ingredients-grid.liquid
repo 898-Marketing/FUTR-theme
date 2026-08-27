@@ -142,7 +142,9 @@
         <button class="ing-card" data-cat="{{ ing_category }}" aria-expanded="false">
           <div class="ing-top">
             <div>
-              <span class="ing-pill">{{ ing_category | capitalize }}</span>
+              {%- if section.settings.show_category_pill -%}
+                <span class="ing-pill">{{ ing_category | capitalize }}</span>
+              {%- endif -%}
               <h3 class="ing-name">{{ ingredient.name.value }}</h3>
               {%- if ingredient.subtitle.value != blank -%}
                 <div class="ing-sub">{{ ingredient.subtitle.value }}</div>
@@ -166,7 +168,9 @@
           <button class="ing-card" data-cat="{{ block.settings.category }}" aria-expanded="false" {{ block.shopify_attributes }}>
             <div class="ing-top">
               <div>
-                <span class="ing-pill">{{ block.settings.category_label }}</span>
+                {%- if section.settings.show_category_pill -%}
+                  <span class="ing-pill">{{ block.settings.category_label }}</span>
+                {%- endif -%}
                 <h3 class="ing-name">{{ block.settings.name }}</h3>
                 {%- if block.settings.sub != blank -%}
                   <div class="ing-sub">{{ block.settings.sub }}</div>
@@ -245,6 +249,13 @@
       "id": "show_filter_tabs",
       "label": "Show filter tabs (Body/Mind/Energy)",
       "info": "Turn off to hide the filter tabs and show all ingredients at once. The filtering feature stays available to turn back on later.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_category_pill",
+      "label": "Show category pill on cards",
+      "info": "Turn off to hide the Body/Mind/Energy pill shown on each ingredient card. Stays available to turn back on later.",
       "default": true
     },
     { "type": "header", "content": "Colors" },

@@ -94,42 +94,52 @@
         "product_form_bg": "#e4ebf1"
       }
     },
-    "image_with_text_overlay_Q7ExmH": {
-      "type": "image-with-text-overlay",
+    "scrolling_banner_HP8idB": {
+      "type": "scrolling-banner",
       "blocks": {
-        "heading_Jerb6R": {
-          "type": "heading",
+        "text_taPPbD": {
+          "type": "text",
           "settings": {
-            "title": "From game day to everyday.",
-            "font_size_desktop": 58,
-            "font_size_mobile": 28,
-            "heading_bottom_spacing": 25
+            "text": "FROM GAME DAY TO EVERYDAY.",
+            "font": "heading",
+            "style": "fill",
+            "font_size_desktop": 48,
+            "font_size_mobile": 28
+          }
+        },
+        "image_qHtBHN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FUTR_logo-White-03.png",
+            "height_desktop": 60,
+            "height_mobile": 60,
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_Jerb6R"
+        "text_taPPbD",
+        "image_qHtBHN"
       ],
-      "name": "t:sections.image--image-with-text-overlay.presets.name",
+      "custom_css": [
+        "[data-wetheme-section-type=\"scrolling-banner\"] {--color-scheme-background-color: #4086c4; background-color: var(--color-scheme-background-color) !important;}"
+      ],
+      "name": "t:sections.scrolling-banner.name",
       "settings": {
-        "image_desktop": "shopify://shop_images/desktop-banner.jpg",
-        "height_desktop": "original",
-        "text_position_desktop": "center",
-        "text_alignment_desktop": "center",
-        "caption_width_desktop": 100,
-        "image_mobile": "shopify://shop_images/mobile-recover.jpg",
-        "height_mobile": "original",
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
-        "section_link": "",
-        "animation_style": "none",
-        "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0)",
-        "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "title": "",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_fade": false,
+        "borders": false,
+        "animation_direction": "normal",
+        "animation_speed": 60,
+        "section_padding_top": 5,
+        "section_padding_bottom": 5,
+        "space_between_blocks_desktop": 25,
+        "space_between_blocks_mobile": 20,
+        "rotate": "0",
+        "override_border_radius": false,
+        "color_scheme": "white"
       }
     },
     "accordion_with_image_cx6zdK": {
@@ -155,7 +165,11 @@
         "section_description": "",
         "section_header_alignment": "center",
         "faq_icon": "plus_minus",
+        "custom_split": true,
+        "image_split_percent": 45,
         "image_max_width": 600,
+        "square_image": true,
+        "center_align_content": true,
         "title": "",
         "text": "",
         "link": "",
@@ -169,11 +183,7 @@
         "image--text-color": "#333333",
         "button_background_color": "#242424",
         "button_text_color": "#ffffff",
-        "colors": "light",
-        "custom_split": true,
-        "image_split_percent": 45,
-        "square_image": true,
-        "center_align_content": true
+        "colors": "light"
       }
     },
     "product-description": {
@@ -348,18 +358,18 @@
       "settings": {
         "kicker": "What's inside",
         "heading": "Built for body & mind",
+        "show_filter_tabs": false,
+        "show_category_pill": false,
         "color_ink": "#0e1116",
         "color_paper": "#f5f4ee",
         "color_muted": "#5a5f66",
         "color_faint": "#8a9099",
         "color_body": "#064982",
-        "color_body_pill": "#5E85A7",
+        "color_body_pill": "#5e85a7",
         "color_mind": "#3e82e6",
         "color_mind_pill": "#bad4ff",
-        "color_energy": "#312AF0",
-        "color_energy_pill": "#6561E1",
-        "show_filter_tabs": false,
-        "show_category_pill": false
+        "color_energy": "#312af0",
+        "color_energy_pill": "#6561e1"
       }
     },
     "dosage_table_VQ8Jg8": {
@@ -551,6 +561,7 @@
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
+        "image_desktop": "shopify://shop_images/desktop-banner.jpg",
         "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
@@ -601,7 +612,7 @@
   },
   "order": [
     "product-form",
-    "image_with_text_overlay_Q7ExmH",
+    "scrolling_banner_HP8idB",
     "accordion_with_image_cx6zdK",
     "product-description",
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",

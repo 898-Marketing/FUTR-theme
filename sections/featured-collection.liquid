@@ -36,6 +36,11 @@
     margin-top: -0.9em;
   }
 
+  /* Hide the quick-view "eye" icon on product cards — only within this section. */
+  #shopify-section-{{ section.id }} [data-modal-button] {
+    display: none;
+  }
+
   {% if section.settings.custom_grid_spacing %}
     /* Opt-in product card spacing — only applies within this section instance. */
     #shopify-section-{{ section.id }} {

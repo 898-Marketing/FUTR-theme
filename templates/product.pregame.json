@@ -121,6 +121,9 @@
         "text_KkT3AC",
         "image_MNLXzG"
       ],
+      "custom_css": [
+        "[data-wetheme-section-type=\"scrolling-banner\"] {--color-scheme-background-color: #4086c4; background-color: var(--color-scheme-background-color) !important;}"
+      ],
       "name": "t:sections.scrolling-banner.name",
       "settings": {
         "title": "",
@@ -130,8 +133,8 @@
         "borders": false,
         "animation_direction": "normal",
         "animation_speed": 60,
-        "section_padding_top": 25,
-        "section_padding_bottom": 25,
+        "section_padding_top": 5,
+        "section_padding_bottom": 5,
         "space_between_blocks_desktop": 44,
         "space_between_blocks_mobile": 20,
         "rotate": "0",

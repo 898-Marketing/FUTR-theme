@@ -562,6 +562,7 @@
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
+        "image_desktop": "shopify://shop_images/pregame-desktop-banner.jpg",
         "height_desktop": "original",
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",

@@ -100,12 +100,28 @@
     },
     "image_with_text_overlay_hJLNM8": {
       "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_abDF7B": {
+          "type": "heading",
+          "settings": {
+            "title": "BUY ANY 3 ITEMS GET A FREE T-SHIRT!",
+            "font_size_desktop": 45,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        }
+      },
+      "block_order": [
+        "heading_abDF7B"
+      ],
       "settings": {
-        "height_desktop": "original",
+        "image_desktop": "shopify://shop_images/gametime-desktop.jpg",
+        "height_desktop": "450px",
         "height_desktop_custom": 450,
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
-        "caption_width_desktop": 50,
+        "caption_width_desktop": 98,
+        "image_mobile": "shopify://shop_images/gametime-mobile-banner.jpg",
         "height_mobile": "250px",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",
@@ -116,7 +132,7 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "#0000008c",
+        "caption_bg_color": "#00000000",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }

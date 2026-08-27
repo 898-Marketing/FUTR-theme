@@ -408,14 +408,6 @@
             "description": "Supports fluid balance and performance"
           }
         },
-        "feature_G7ia9V": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Icons-26.png",
-            "label": "Focus",
-            "description": "Supports mental clarity & reaction time"
-          }
-        },
         "feature_YQcHz9": {
           "type": "feature",
           "settings": {
@@ -437,7 +429,6 @@
         "dosage_row_33K9K3",
         "dosage_row_bqDUiB",
         "feature_CANHtt",
-        "feature_G7ia9V",
         "feature_YQcHz9",
         "feature_H6Dr9f"
       ],

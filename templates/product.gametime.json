@@ -375,12 +375,12 @@
         "color_paper": "#f5f4ee",
         "color_muted": "#5a5f66",
         "color_faint": "#8a9099",
-        "color_body": "#8fbf2e",
-        "color_body_pill": "#dcf29a",
+        "color_body": "#064982",
+        "color_body_pill": "#5E85A7",
         "color_mind": "#3e82e6",
         "color_mind_pill": "#bad4ff",
-        "color_energy": "#f0642a",
-        "color_energy_pill": "#ffcda9",
+        "color_energy": "#312AF0",
+        "color_energy_pill": "#6561E1",
         "show_filter_tabs": false,
         "show_category_pill": false
       }

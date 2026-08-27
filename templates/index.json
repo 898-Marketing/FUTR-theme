@@ -556,70 +556,61 @@
         "colors": "white"
       }
     },
-    "image_with_text_overlay_3tx9wj": {
-      "type": "image-with-text-overlay",
+    "focused_product_gallery_qB8cNM": {
+      "type": "focused-product-gallery",
       "blocks": {
-        "text_cTzGij": {
-          "type": "text",
+        "product_MdWBqQ": {
+          "type": "product",
           "settings": {
-            "text": "<h4>best fuel to keep you in the game</h4>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 10
+            "product": "pregame",
+            "focus_image": "shopify://shop_images/pregame.jpg",
+            "description": "",
+            "button_label": "Shop now"
           }
         },
-        "button_YWFe6j": {
-          "type": "button",
+        "product_JPbXe6": {
+          "type": "product",
           "settings": {
-            "first_button_link": "",
-            "first_button_label": "Shop now",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "filled",
-            "override_button_colors": false,
-            "buttons_background": "#e68819",
-            "buttons_text": "#ffffff",
-            "buttons_bottom_spacing": 20
+            "product": "gametime",
+            "focus_image": "shopify://shop_images/gametime-_1.jpg",
+            "description": "",
+            "button_label": "Shop now"
           }
         },
-        "button_mMfyM3": {
-          "type": "button",
+        "product_BKtwRE": {
+          "type": "product",
           "settings": {
-            "first_button_link": "",
-            "first_button_label": "",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "underlined",
-            "override_button_colors": true,
-            "buttons_background": "#ffffff",
-            "buttons_text": "#ffffff",
-            "buttons_bottom_spacing": 20
+            "product": "recover",
+            "focus_image": "shopify://shop_images/recover-1.jpg",
+            "description": "",
+            "button_label": "Shop now"
           }
         }
       },
       "block_order": [
-        "text_cTzGij",
-        "button_YWFe6j",
-        "button_mMfyM3"
+        "product_MdWBqQ",
+        "product_JPbXe6",
+        "product_BKtwRE"
       ],
+      "name": "t:sections.focused-product-gallery.name",
       "settings": {
-        "image_desktop": "shopify://shop_images/gametime-desktop.jpg",
-        "height_desktop": "original",
-        "text_position_desktop": "right",
-        "text_alignment_desktop": "right",
-        "caption_width_desktop": 57,
-        "height_mobile": "original",
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
-        "section_link": "shopify://collections/all",
-        "animation_style": "none",
+        "title": "Focused product gallery",
+        "description": "",
+        "section_header_alignment": "center",
+        "image_shape": "natural",
+        "show_vendor": false,
+        "show_price": true,
+        "show_description": false,
+        "hover_navigation_desktop": "left-and-right",
+        "button_style": "filled",
+        "override_button_colors": false,
+        "button_background_color": "#E68819",
+        "button_color": "#FFFFFF",
+        "products_per_row_desktop": "5",
         "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "text_color": "#ffffff",
-        "caption_bg_color": "#0000008c",
-        "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "white"
       }
     },
     "newsletter_cQa4NW": {
@@ -644,7 +635,7 @@
     "image_with_text_mYYWiV",
     "blog_posts_wefQCf",
     "testimonials_h6YnF3",
-    "image_with_text_overlay_3tx9wj",
+    "focused_product_gallery_qB8cNM",
     "newsletter_cQa4NW"
   ]
 }

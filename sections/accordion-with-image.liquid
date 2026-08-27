@@ -30,6 +30,31 @@
   {% endstyle %}
 {% endif %}
 
+{% comment %}
+  Opt-in custom split ratio — only applied when custom_split is turned on for
+  this specific section instance. The stock layout gives the image a fixed
+  px max-width (image_max_width) and lets the text column flex-grow to fill
+  the rest; this instead lets both columns take an exact percentage of the
+  row on desktop, e.g. 50/50, so other pages using this section type keep
+  the stock behavior.
+{% endcomment %}
+{% if section.settings.custom_split %}
+  {% assign image_pct = section.settings.image_split_percent %}
+  {% assign content_pct = 100 | minus: image_pct %}
+  {% style %}
+    @media screen and (min-width: 768px) {
+      .accordion-with-image--{{ section.id }} .image-wrapper {
+        max-width: none !important;
+        flex: 0 0 calc({{ image_pct }}% - 10px);
+      }
+      .accordion-with-image--{{ section.id }} .accordion-wrapper {
+        flex-grow: 0;
+        flex: 0 0 calc({{ content_pct }}% - 10px);
+      }
+    }
+  {% endstyle %}
+{% endif %}
+
 {% liquid
   assign width_class = ''
   unless section.settings.section_width == 'full-width'
@@ -205,6 +230,24 @@
       "info": "t:all.1400_x_1400px_recommended"
     },
     {
+      "type": "checkbox",
+      "id": "custom_split",
+      "label": "Use a custom width split",
+      "info": "Sizes the image and text columns as a percentage of the row (e.g. 50/50) on desktop, instead of a fixed image width. Only affects this section instance.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "image_split_percent",
+      "label": "Image width",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 50,
+      "visible_if": "{{ section.settings.custom_split == true }}"
+    },
+    {
       "type": "range",
       "id": "image_max_width",
       "label": "t:all.Maximum_width",
@@ -212,7 +255,8 @@
       "max": 600,
       "step": 10,
       "unit": "t:all.px",
-      "default": 350
+      "default": 350,
+      "visible_if": "{{ section.settings.custom_split == false }}"
     },
     {
       "type": "checkbox",

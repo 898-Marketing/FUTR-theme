@@ -30,6 +30,13 @@
   #shopify-section-{{ section.id }} .product-grid--title {
     font-size: calc(var(--base-font-size) + 4px);
   }
+
+  {% if section.settings.custom_grid_spacing %}
+    /* Opt-in product card spacing — only applies within this section instance. */
+    #shopify-section-{{ section.id }} {
+      --grid-spacing: {{ section.settings.grid_spacing_desktop }}px;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 {% liquid
@@ -211,8 +218,13 @@
             data-slides-per-view-desktop="{{ section.settings.grid-desktop }}"
             data-slides-per-view-mobile="{{ section.settings.grid-mobile }}"
             data-product-limit="{{ product_limit }}"
-            data-grid-spacing-desktop="{{ settings.grid_spacing }}"
-            data-grid-spacing-mobile="{{ settings.grid_spacing | times: 0.75 }}"
+            {% if section.settings.custom_grid_spacing %}
+              data-grid-spacing-desktop="{{ section.settings.grid_spacing_desktop }}"
+              data-grid-spacing-mobile="{{ section.settings.grid_spacing_desktop | times: 0.75 }}"
+            {% else %}
+              data-grid-spacing-desktop="{{ settings.grid_spacing }}"
+              data-grid-spacing-mobile="{{ settings.grid_spacing | times: 0.75 }}"
+            {% endif %}
             data-animate-overflow-container
           >
             <div class="swiper-wrapper">
@@ -697,6 +709,24 @@
         }
       ],
       "default": "2"
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_grid_spacing",
+      "label": "Use a custom spacing between product cards",
+      "info": "Overrides the theme's default product grid spacing for this section only.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "grid_spacing_desktop",
+      "label": "Spacing between product cards",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 30,
+      "visible_if": "{{ section.settings.custom_grid_spacing == true }}"
     },
     {
       "type": "header",

@@ -186,78 +186,65 @@
         "colors": "light"
       }
     },
-    "product-description": {
-      "type": "template--product--description",
+    "product_hero_highlights_hfrr9g": {
+      "type": "product-hero-highlights",
       "blocks": {
-        "product-description": {
-          "type": "product_description",
+        "highlight_ATMPtJ": {
+          "type": "highlight",
           "settings": {
-            "collapsible_tab": true,
-            "title": "Description",
-            "open_by_default": false
+            "heading": "RECOVER FROM THE WORK",
+            "text": "<p>A full 3g BCAA blend supports muscle recovery after practices, games and training.*</p>"
           }
         },
-        "collapsible-tab-1": {
-          "type": "collapsible_tab",
+        "highlight_NVN7Qb": {
+          "type": "highlight",
           "settings": {
-            "title": "Product details",
-            "open_by_default": false,
-            "text": "<p>Share some information about your product</p>",
-            "page": ""
+            "heading": "HELP YOUR BODY RESET",
+            "text": "<p>Tart cherries provides targeted post-exercise and antioxidant support.</p>"
           }
         },
-        "collapsible-tab-2": {
-          "type": "collapsible_tab",
+        "highlight_fdCCcV": {
+          "type": "highlight",
           "settings": {
-            "title": "Product details",
-            "open_by_default": false,
-            "text": "<p>Share some information about your product</p>",
-            "page": ""
+            "heading": "HYDRATE EVERYDAY.",
+            "text": "<p>Electrolytes and magnesium help support hydration, and normal muscle function, anytime, anywhere.</p>"
           }
         }
       },
       "block_order": [
-        "product-description",
-        "collapsible-tab-1",
-        "collapsible-tab-2"
+        "highlight_ATMPtJ",
+        "highlight_NVN7Qb",
+        "highlight_fdCCcV"
       ],
-      "disabled": true,
+      "name": "Product Hero Highlights",
       "settings": {
-        "open_close_icon": "plus_minus",
-        "section_width": "content",
+        "image_desktop": "shopify://shop_images/field.jpg",
+        "image_mobile": "shopify://shop_images/field.jpg",
+        "overlay_color": "#0a1420",
+        "overlay_opacity": 70,
+        "heading": "RESET. REHYDRATE. GO AGAIN.",
+        "heading_color": "#ffffff",
+        "heading_font_size_desktop": 46,
+        "heading_font_size_mobile": 28,
+        "badge_image": "shopify://shop_images/FUTR_logo-White-03.png",
+        "badge_alt": "",
+        "badge_position": "top_right",
+        "badge_size": 140,
+        "badge_size_mobile": 90,
+        "content_max_width": 1200,
+        "content_padding_horizontal": 40,
+        "content_padding_horizontal_mobile": 20,
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "colors": "white",
-        "enable_readmore": false
-      }
-    },
-    "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5": {
-      "type": "template--product--recently-viewed",
-      "disabled": true,
-      "settings": {
-        "title": "Recently viewed products",
-        "description": "",
-        "section_header_alignment": "center",
-        "layout_style": "slider",
-        "products_to_show": 8,
-        "grid-desktop": 4,
-        "grid-mobile": "2",
-        "section_padding_top": 0,
-        "section_padding_bottom": 60,
-        "show_highlight": false,
-        "highlight_position": "below_price",
-        "highlight_heading": "Why we love it",
-        "highlight_reference": "",
-        "highlight_text_color": "rgba(0,0,0,0)",
-        "highlight_background_color": "rgba(0,0,0,0)",
-        "highlight_alignment": "left",
-        "highlight_font_size": "medium",
-        "highlight_collapsible_tab": true,
-        "highlight_button_borders": false,
-        "colors": "light",
-        "override_button_colors": false,
-        "button_background_color": "#e68819",
-        "button_text_color": "#ffffff"
+        "section_padding_top_mobile": 40,
+        "section_padding_bottom_mobile": 40,
+        "heading_bottom_spacing": 40,
+        "card_gap": 24,
+        "card_padding": 24,
+        "card_bg_color": "#16305c",
+        "card_border_color": "#4a90d9",
+        "card_heading_color": "#ffffff",
+        "card_text_color": "#dbe6f2"
       }
     },
     "ingredients_grid_yzP3LB": {
@@ -529,67 +516,6 @@
         "colors": "dark"
       }
     },
-    "product_hero_highlights_hfrr9g": {
-      "type": "product-hero-highlights",
-      "blocks": {
-        "highlight_ATMPtJ": {
-          "type": "highlight",
-          "settings": {
-            "heading": "RECOVER FROM THE WORK",
-            "text": "<p>A full 3g BCAA blend supports muscle recovery after practices, games and training.*</p>"
-          }
-        },
-        "highlight_NVN7Qb": {
-          "type": "highlight",
-          "settings": {
-            "heading": "HELP YOUR BODY RESET",
-            "text": "<p>Tart cherries provides targeted post-exercise and antioxidant support.</p>"
-          }
-        },
-        "highlight_fdCCcV": {
-          "type": "highlight",
-          "settings": {
-            "heading": "HYDRATE EVERYDAY.",
-            "text": "<p>Electrolytes and magnesium help support hydration, and normal muscle function, anytime, anywhere.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "highlight_ATMPtJ",
-        "highlight_NVN7Qb",
-        "highlight_fdCCcV"
-      ],
-      "name": "Product Hero Highlights",
-      "settings": {
-        "image_desktop": "shopify://shop_images/field.jpg",
-        "image_mobile": "shopify://shop_images/field.jpg",
-        "overlay_color": "#0a1420",
-        "overlay_opacity": 70,
-        "heading": "RESET. REHYDRATE. GO AGAIN.",
-        "heading_color": "#ffffff",
-        "heading_font_size_desktop": 46,
-        "heading_font_size_mobile": 28,
-        "badge_image": "shopify://shop_images/FUTR_logo-White-03.png",
-        "badge_alt": "",
-        "badge_position": "top_right",
-        "badge_size": 140,
-        "badge_size_mobile": 90,
-        "content_max_width": 1200,
-        "content_padding_horizontal": 40,
-        "content_padding_horizontal_mobile": 20,
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "section_padding_top_mobile": 40,
-        "section_padding_bottom_mobile": 40,
-        "heading_bottom_spacing": 40,
-        "card_gap": 24,
-        "card_padding": 24,
-        "card_bg_color": "#16305c",
-        "card_border_color": "#4a90d9",
-        "card_heading_color": "#ffffff",
-        "card_text_color": "#dbe6f2"
-      }
-    },
     "image_with_text_overlay_dc7Fbw": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -689,12 +615,10 @@
     "product-form",
     "scrolling_banner_HP8idB",
     "accordion_with_image_cx6zdK",
-    "product-description",
-    "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
+    "product_hero_highlights_hfrr9g",
     "ingredients_grid_yzP3LB",
     "dosage_table_VQ8Jg8",
     "product_slideshow_mTHF6U",
-    "product_hero_highlights_hfrr9g",
     "image_with_text_overlay_dc7Fbw",
     "accordion_fYz9RV"
   ]

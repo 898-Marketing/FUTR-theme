@@ -578,7 +578,7 @@
         "background_text_font_size_mobile": 36,
         "heading_font_size_mobile": 22,
         "text_font_size_mobile": 15,
-        "hover_navigation_desktop": "left-and-right",
+        "hover_navigation_desktop": "right",
         "enable_autoplay": true,
         "autoplay_speed": 3,
         "button_style": "filled",

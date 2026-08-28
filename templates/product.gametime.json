@@ -682,11 +682,26 @@
             "font_size_mobile": 16,
             "text_bottom_spacing": 20
           }
+        },
+        "button_BqpUKG": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "shopify://products/t-shirt",
+            "first_button_label": "Add to Cart Now!",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "buttons_background": "#e68819",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
         }
       },
       "block_order": [
         "heading_dyAWir",
-        "text_KaNxxA"
+        "text_KaNxxA",
+        "button_BqpUKG"
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {

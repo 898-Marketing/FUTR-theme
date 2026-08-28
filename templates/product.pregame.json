@@ -529,14 +529,6 @@
     "product_slideshow_fzVPYr": {
       "type": "product-slideshow",
       "blocks": {
-        "product_Jdq6jY": {
-          "type": "product",
-          "settings": {
-            "product": "pregame",
-            "description": "",
-            "button_label": "Shop PRE"
-          }
-        },
         "product_DxELga": {
           "type": "product",
           "settings": {
@@ -552,12 +544,20 @@
             "description": "",
             "button_label": "Shop RECOVER"
           }
+        },
+        "product_Jdq6jY": {
+          "type": "product",
+          "settings": {
+            "product": "pregame",
+            "description": "",
+            "button_label": "Shop PRE"
+          }
         }
       },
       "block_order": [
-        "product_Jdq6jY",
         "product_DxELga",
-        "product_DL7kCk"
+        "product_DL7kCk",
+        "product_Jdq6jY"
       ],
       "name": "t:sections.product-slideshow.name",
       "settings": {

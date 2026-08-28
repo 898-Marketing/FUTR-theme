@@ -579,15 +579,15 @@
         "heading_font_size_mobile": 22,
         "text_font_size_mobile": 15,
         "hover_navigation_desktop": "left-and-right",
+        "enable_autoplay": true,
+        "autoplay_speed": 3,
         "button_style": "filled",
         "override_button_colors": false,
-        "navigation_button_background_color": "#E68819",
-        "navigation_button_color": "#FFFFFF",
+        "navigation_button_background_color": "#e68819",
+        "navigation_button_color": "#ffffff",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "colors": "dark",
-        "enable_autoplay": true,
-        "autoplay_speed": 5
+        "colors": "dark"
       }
     },
     "product_hero_highlights_vSD6gQ": {

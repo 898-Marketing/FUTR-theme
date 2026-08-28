@@ -8162,7 +8162,7 @@ function Autoplay(_ref) {
   };
   const onVisibilityChange = () => {
     if (swiper.destroyed || !swiper.autoplay.running) return;
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
     if (document.visibilityState === 'hidden') {
       pausedByInteraction = true;
       pause(true);
@@ -8198,11 +8198,11 @@ function Autoplay(_ref) {
     }
   };
   const attachDocumentEvents = () => {
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
     document.addEventListener('visibilitychange', onVisibilityChange);
   };
   const detachDocumentEvents = () => {
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
     document.removeEventListener('visibilitychange', onVisibilityChange);
   };
   on('init', () => {

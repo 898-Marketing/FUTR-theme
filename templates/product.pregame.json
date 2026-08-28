@@ -514,15 +514,78 @@
         "phase_n8JH3T",
         "phase_9UM7Eg"
       ],
+      "disabled": true,
       "name": "Phase System Columns",
       "settings": {
         "section_bg_color": "#ffffff",
-        "heading_prefix": "THE FUTR SYSTEM: BUILT FOR EVERY PHASE OF PLAY",
+        "heading_prefix": "THE FUTR SYSTEM: BUILT FOR EVERY PHASE OF PLAY SHOP EVERY PHASE",
         "heading_color": "#0e1116",
         "heading_accent": "SHOP EVERY PHASE",
         "heading_accent_color": "#8fbf2e",
         "heading_size": 36,
         "badge_icon_size": 160
+      }
+    },
+    "product_slideshow_fzVPYr": {
+      "type": "product-slideshow",
+      "blocks": {
+        "product_Jdq6jY": {
+          "type": "product",
+          "settings": {
+            "product": "pregame",
+            "description": "",
+            "button_label": "Shop PRE"
+          }
+        },
+        "product_DxELga": {
+          "type": "product",
+          "settings": {
+            "product": "gametime",
+            "description": "",
+            "button_label": "Shop INTRA"
+          }
+        },
+        "product_DL7kCk": {
+          "type": "product",
+          "settings": {
+            "product": "recover",
+            "description": "",
+            "button_label": "Shop RECOVER"
+          }
+        }
+      },
+      "block_order": [
+        "product_Jdq6jY",
+        "product_DxELga",
+        "product_DL7kCk"
+      ],
+      "name": "t:sections.product-slideshow.name",
+      "settings": {
+        "title": "THE FUTR SYSTEM: PLAY, FULLY COVERED",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_vendor": false,
+        "show_price": true,
+        "show_description": false,
+        "background_text": "SHOP EVERY PHASE",
+        "background_text_styling": "hard_shadow",
+        "background_text_opacity": 20,
+        "image_max_width": 65,
+        "background_text_font_size_desktop": 48,
+        "heading_font_size_desktop": 22,
+        "text_font_size_desktop": 16,
+        "image_max_width_mobile": 80,
+        "background_text_font_size_mobile": 36,
+        "heading_font_size_mobile": 22,
+        "text_font_size_mobile": 15,
+        "hover_navigation_desktop": "left-and-right",
+        "button_style": "filled",
+        "override_button_colors": false,
+        "navigation_button_background_color": "#E68819",
+        "navigation_button_color": "#FFFFFF",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
       }
     },
     "product_hero_highlights_vSD6gQ": {
@@ -689,6 +752,7 @@
     "ingredients_grid_yzP3LB",
     "dosage_table_VQ8Jg8",
     "phase_columns_FWLXfK",
+    "product_slideshow_fzVPYr",
     "product_hero_highlights_vSD6gQ",
     "image_with_text_overlay_dc7Fbw",
     "accordion_fYz9RV"

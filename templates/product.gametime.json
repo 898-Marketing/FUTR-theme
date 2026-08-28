@@ -669,6 +669,67 @@
         "section_padding_bottom": 60,
         "colors": "white"
       }
+    },
+    "product_hero_highlights_TX4Hgn": {
+      "type": "product-hero-highlights",
+      "blocks": {
+        "highlight_Ne9KVV": {
+          "type": "highlight",
+          "settings": {
+            "heading": "FUEL EVERY PLAY",
+            "text": "<p>Four carbohydrate sources deliver a mix of fast + sustained fuel to support energy throughout practices, games and competition.</p>"
+          }
+        },
+        "highlight_mHVikC": {
+          "type": "highlight",
+          "settings": {
+            "heading": "REPLACE WHAT YOU LOSE",
+            "text": "<p>Sodium, potassium and chloride help replace key electrolytes lost through sweat and support hydration. </p>"
+          }
+        },
+        "highlight_nML7ac": {
+          "type": "highlight",
+          "settings": {
+            "heading": "FINISH STRONG",
+            "text": "<p>Carbohydrates, electrolytes and betaine work together to support endurance and muscle function as the game goes on.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_Ne9KVV",
+        "highlight_mHVikC",
+        "highlight_nML7ac"
+      ],
+      "name": "Product Hero Highlights",
+      "settings": {
+        "image_desktop": "shopify://shop_images/field.jpg",
+        "image_mobile": "shopify://shop_images/field.jpg",
+        "overlay_color": "#0a1420",
+        "overlay_opacity": 45,
+        "heading": "Hydrate. Fuel. Keep going.",
+        "heading_color": "#ffffff",
+        "heading_font_size_desktop": 46,
+        "heading_font_size_mobile": 28,
+        "badge_image": "shopify://shop_images/FUTR_logo-White-03.png",
+        "badge_alt": "",
+        "badge_position": "top_right",
+        "badge_size": 140,
+        "badge_size_mobile": 90,
+        "content_max_width": 1200,
+        "content_padding_horizontal": 40,
+        "content_padding_horizontal_mobile": 20,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_padding_top_mobile": 40,
+        "section_padding_bottom_mobile": 40,
+        "heading_bottom_spacing": 40,
+        "card_gap": 24,
+        "card_padding": 24,
+        "card_bg_color": "#16305c",
+        "card_border_color": "#4a90d9",
+        "card_heading_color": "#ffffff",
+        "card_text_color": "#dbe6f2"
+      }
     }
   },
   "order": [
@@ -682,6 +743,7 @@
     "dosage_table_4_columns_Pn3UBt",
     "phase_columns_rLYjCq",
     "image_with_text_overlay_dc7Fbw",
-    "accordion_fYz9RV"
+    "accordion_fYz9RV",
+    "product_hero_highlights_TX4Hgn"
   ]
 }

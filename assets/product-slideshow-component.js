@@ -9621,6 +9621,7 @@ class ProductSlideshow extends HTMLElement {
       speed: this.speed,
       lazyPreloadPrevNext: 1,
       autoplay: this.autoplaySpeed ? {
+        enabled: true,
         delay: this.autoplaySpeed,
         disableOnInteraction: false,
       } : false,

@@ -109,10 +109,35 @@
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
           }
+        },
+        "text_MbtRxb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't forget to add a T-shirt to your cart during checkout!</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_qW77gt": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "shopify://products/t-shirt",
+            "first_button_label": "Add to Cart Now!",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "buttons_background": "#e68819",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
         }
       },
       "block_order": [
-        "heading_abDF7B"
+        "heading_abDF7B",
+        "text_MbtRxb",
+        "button_qW77gt"
       ],
       "settings": {
         "image_desktop": "shopify://shop_images/gametime-desktop.jpg",
@@ -132,7 +157,7 @@
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
-        "caption_bg_color": "#00000000",
+        "caption_bg_color": "rgba(0,0,0,0)",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 30
       }

@@ -457,7 +457,7 @@
         "footer_icon_size": 40,
         "feature_icon_size": 54,
         "age_column_label": "Age / Weight",
-        "serving_icon": "shopify://shop_images/HALF_SCOOP0.png",
+        "serving_icon": "shopify://shop_images/Icons-24.png",
         "serving_column_label": "{{ product.title }}",
         "serving_column_sublabel": "1 scoop / stick = 1 serving",
         "water_icon": "shopify://shop_images/Icons-29.png",
@@ -545,13 +545,11 @@
       "settings": {
         "image_desktop": "shopify://shop_images/pregame-desktop-banner.jpg",
         "height_desktop": "original",
-        "height_desktop_custom": 450,
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 96,
         "image_mobile": "shopify://shop_images/mobile-pregame-banner.jpg",
         "height_mobile": "original",
-        "height_mobile_custom": 400,
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",
         "section_link": "",
@@ -593,10 +591,68 @@
         "section_padding_bottom": 60,
         "colors": "white"
       }
+    },
+    "product_hero_highlights_vSD6gQ": {
+      "type": "product-hero-highlights",
+      "blocks": {
+        "highlight_a1b2c3": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Feel physically ready",
+            "text": "<p>Taurine and Citrulline support exercise performance, healthy blood flow and a feeling of readiness before activity.</p>"
+          }
+        },
+        "highlight_d4e5f6": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Lock in focus",
+            "text": "<p>Formulated with Cognizin® Citicoline, clinically studied in youth for attention, plus L-Tyrosine to support focus and mental clarity.</p>"
+          }
+        },
+        "highlight_g7h8i9": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Support muscle function",
+            "text": "<p>Taurine helps support muscle function and hydration, helping to reduce feelings of fatigue.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_a1b2c3",
+        "highlight_d4e5f6",
+        "highlight_g7h8i9"
+      ],
+      "settings": {
+        "overlay_color": "#0a1420",
+        "overlay_opacity": 45,
+        "heading": "The first true pregame for youth sports.",
+        "heading_color": "#ffffff",
+        "heading_font_size_desktop": 46,
+        "heading_font_size_mobile": 28,
+        "badge_alt": "Specifically made for youth sports",
+        "badge_position": "top_right",
+        "badge_size": 140,
+        "badge_size_mobile": 90,
+        "content_max_width": 1200,
+        "content_padding_horizontal": 40,
+        "content_padding_horizontal_mobile": 20,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_padding_top_mobile": 40,
+        "section_padding_bottom_mobile": 40,
+        "heading_bottom_spacing": 40,
+        "card_gap": 24,
+        "card_padding": 24,
+        "card_bg_color": "#16305c",
+        "card_border_color": "#4a90d9",
+        "card_heading_color": "#ffffff",
+        "card_text_color": "#dbe6f2"
+      }
     }
   },
   "order": [
     "product-form",
+    "product_hero_highlights_vSD6gQ",
     "scrolling_banner_mFTKkU",
     "accordion_with_image_cx6zdK",
     "product-description",

@@ -9568,6 +9568,7 @@ class ProductSlideshow extends HTMLElement {
     this.slideContentElement = this.querySelector('[data-slide-content]');
     this.slideTextElements = this.querySelectorAll('[data-slide-index]');
     this.hasSingleBlock = this.getAttribute('data-has-single-block') === 'true';
+    this.autoplaySpeed = parseInt(this.getAttribute('data-autoplay-speed'), 10) || 0;
     this.speed = 600;
     this.init = this.init.bind(this);
     this.initSwiper = this.initSwiper.bind(this);
@@ -9612,13 +9613,17 @@ class ProductSlideshow extends HTMLElement {
     const prevElMobile = this.querySelector('.product-slideshow__arrow-prev');
 
     this.swiper = new Swiper(this.querySelector('.swiper'), {
-      modules: [A11y, Keyboard, Navigation],
+      modules: [A11y, Keyboard, Navigation, Autoplay],
       slidesPerView: 2,
       spaceBetween: 0,
       centeredSlides: true,
       loop: true,
       speed: this.speed,
       lazyPreloadPrevNext: 1,
+      autoplay: this.autoplaySpeed ? {
+        delay: this.autoplaySpeed,
+        disableOnInteraction: false,
+      } : false,
       navigation: {
         nextEl: nextElMobile,
         prevEl: prevElMobile,

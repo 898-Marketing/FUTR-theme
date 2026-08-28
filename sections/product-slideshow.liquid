@@ -64,6 +64,7 @@
     data-section-id="{{ section.id }}"
     data-grid-slider-wrapper
     data-has-single-block="{% if block_count == 1 %}true{% else %}false{% endif %}"
+    {% if section.settings.enable_autoplay %}data-autoplay-speed="{{ section.settings.autoplay_speed | times: 1000 }}"{% endif %}
     style="--slide-content-height:0px;"
     {% if section.settings.hover_navigation_desktop == 'above' %}
       class="product-slideshow--hover-navigation-above"
@@ -460,6 +461,23 @@
         }
       ],
       "default": "left-and-right"
+   },
+   {
+      "type": "checkbox",
+      "id": "enable_autoplay",
+      "label": "Automatically rotate products",
+      "default": false
+   },
+   {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Change slides every",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "default": 5,
+      "visible_if": "{{ section.settings.enable_autoplay == true }}"
    },
    {
       "type": "header",

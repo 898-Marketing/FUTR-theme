@@ -9645,6 +9645,9 @@ class ProductSlideshow extends HTMLElement {
         init: () => {
           this.classList.add('swiper-initialized');
         },
+        slideChange: () => {
+          this.handleSlideChange(this.speed);
+        },
         navigationNext: () => {
           this.handleSlideChange(this.speed);
         },

@@ -514,7 +514,7 @@
       "settings": {
         "background_image": "shopify://shop_images/recover-collection.jpg",
         "background_overlay_color": "#000000",
-        "background_overlay_opacity": 70,
+        "background_overlay_opacity": 75,
         "heading_prefix": "How much",
         "heading_highlight": "Gametime",
         "heading_subtitle": "should my athlete take?",
@@ -705,7 +705,7 @@
         "image_desktop": "shopify://shop_images/field.jpg",
         "image_mobile": "shopify://shop_images/field.jpg",
         "overlay_color": "#0a1420",
-        "overlay_opacity": 45,
+        "overlay_opacity": 70,
         "heading": "Hydrate. Fuel. Keep going.",
         "heading_color": "#ffffff",
         "heading_font_size_desktop": 46,
@@ -742,8 +742,8 @@
     "ingredients_grid_yzP3LB",
     "dosage_table_4_columns_Pn3UBt",
     "phase_columns_rLYjCq",
+    "product_hero_highlights_TX4Hgn",
     "image_with_text_overlay_dc7Fbw",
-    "accordion_fYz9RV",
-    "product_hero_highlights_TX4Hgn"
+    "accordion_fYz9RV"
   ]
 }

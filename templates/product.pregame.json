@@ -187,80 +187,6 @@
         "colors": "light"
       }
     },
-    "product-description": {
-      "type": "template--product--description",
-      "blocks": {
-        "product-description": {
-          "type": "product_description",
-          "settings": {
-            "collapsible_tab": true,
-            "title": "Description",
-            "open_by_default": false
-          }
-        },
-        "collapsible-tab-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "title": "Product details",
-            "open_by_default": false,
-            "text": "<p>Share some information about your product</p>",
-            "page": ""
-          }
-        },
-        "collapsible-tab-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "title": "Product details",
-            "open_by_default": false,
-            "text": "<p>Share some information about your product</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "product-description",
-        "collapsible-tab-1",
-        "collapsible-tab-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "open_close_icon": "plus_minus",
-        "section_width": "content",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "colors": "white",
-        "enable_readmore": false
-      }
-    },
-    "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5": {
-      "type": "template--product--recently-viewed",
-      "disabled": true,
-      "settings": {
-        "title": "Recently viewed products",
-        "description": "",
-        "section_header_alignment": "center",
-        "layout_style": "slider",
-        "products_to_show": 8,
-        "grid-desktop": 4,
-        "grid-mobile": "2",
-        "section_padding_top": 0,
-        "section_padding_bottom": 60,
-        "show_highlight": false,
-        "highlight_position": "below_price",
-        "highlight_heading": "Why we love it",
-        "highlight_reference": "",
-        "highlight_text_color": "rgba(0,0,0,0)",
-        "highlight_background_color": "rgba(0,0,0,0)",
-        "highlight_alignment": "left",
-        "highlight_font_size": "medium",
-        "highlight_collapsible_tab": true,
-        "highlight_button_borders": false,
-        "colors": "light",
-        "override_button_colors": false,
-        "button_background_color": "#e68819",
-        "button_text_color": "#ffffff"
-      }
-    },
     "ingredients_grid_yzP3LB": {
       "type": "ingredients-grid",
       "blocks": {
@@ -749,13 +675,11 @@
     "product-form",
     "scrolling_banner_mFTKkU",
     "accordion_with_image_cx6zdK",
-    "product-description",
-    "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
+    "product_hero_highlights_vSD6gQ",
     "ingredients_grid_yzP3LB",
     "dosage_table_VQ8Jg8",
     "phase_columns_FWLXfK",
     "product_slideshow_fzVPYr",
-    "product_hero_highlights_vSD6gQ",
     "image_with_text_overlay_dc7Fbw",
     "accordion_fYz9RV"
   ]

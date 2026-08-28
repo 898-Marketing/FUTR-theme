@@ -596,10 +596,20 @@
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
           }
+        },
+        "text_bKQnHT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't forget to add a T-shirt to your cart during checkout!</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
         }
       },
       "block_order": [
-        "heading_dyAWir"
+        "heading_dyAWir",
+        "text_bKQnHT"
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {

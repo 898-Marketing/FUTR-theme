@@ -465,63 +465,68 @@
         "footer_text_accent": ""
       }
     },
-    "phase_columns_FWLXfK": {
-      "type": "phase-columns",
+    "product_slideshow_mTHF6U": {
+      "type": "product-slideshow",
       "blocks": {
-        "phase_erXK9c": {
-          "type": "phase",
+        "product_xwLNW6": {
+          "type": "product",
           "settings": {
-            "bar_color": "#8fbf2e",
-            "bar_text": "PRE",
-            "badge_icon": "shopify://shop_images/FUTR-Icons-PRE.png",
-            "text": "<p>Prime the body with clean energy, sharper focus, and endurance so athletes start strong and stay confident.</p>",
-            "link_1_text": "Pregame",
-            "link_1_url": "shopify://products/pregame",
-            "link_2_text": "",
-            "link_2_url": ""
+            "product": "gametime",
+            "description": "",
+            "button_label": "Shop INTRA"
           }
         },
-        "phase_n8JH3T": {
-          "type": "phase",
+        "product_7NL8AJ": {
+          "type": "product",
           "settings": {
-            "bar_color": "#4b2e83",
-            "bar_text": "INTRA",
-            "badge_icon": "shopify://shop_images/FUTR-Icons-INTRA.png",
-            "text": "<p>Replenish electrolytes, fuel working muscles, and keep athletes going strong through every quarter, inning, or event.</p>",
-            "link_1_text": "Gametime",
-            "link_1_url": "shopify://products/gametime",
-            "link_2_text": "",
-            "link_2_url": ""
+            "product": "pregame",
+            "description": "",
+            "button_label": "Shop PRE"
           }
         },
-        "phase_9UM7Eg": {
-          "type": "phase",
+        "product_N4PgQ9": {
+          "type": "product",
           "settings": {
-            "bar_color": "#f0642a",
-            "bar_text": "DAILY",
-            "badge_icon": "shopify://shop_images/FUTR-Icons-DAILY.png",
-            "text": "<p>Rebuild, recharge, and build a strong foundation with everyday essentials that support recovery, wellness, and development.</p>",
-            "link_1_text": "Recover+",
-            "link_1_url": "shopify://products/recover",
-            "link_2_text": "Creatine Gummies",
-            "link_2_url": "shopify://products/creatine"
+            "product": "recover",
+            "description": "",
+            "button_label": "Shop RECOVER"
           }
         }
       },
       "block_order": [
-        "phase_erXK9c",
-        "phase_n8JH3T",
-        "phase_9UM7Eg"
+        "product_xwLNW6",
+        "product_7NL8AJ",
+        "product_N4PgQ9"
       ],
-      "name": "Phase System Columns",
+      "name": "t:sections.product-slideshow.name",
       "settings": {
-        "section_bg_color": "#ffffff",
-        "heading_prefix": "The FUTR Athlete System.",
-        "heading_color": "#0e1116",
-        "heading_accent": "Built for every phase of play.",
-        "heading_accent_color": "#8fbf2e",
-        "heading_size": 36,
-        "badge_icon_size": 160
+        "title": "THE FUTR SYSTEM: PLAY, FULLY COVERED",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_vendor": false,
+        "show_price": true,
+        "show_description": false,
+        "background_text": "SHOP EVERY PHASE",
+        "background_text_styling": "hard_shadow",
+        "background_text_opacity": 20,
+        "image_max_width": 65,
+        "background_text_font_size_desktop": 48,
+        "heading_font_size_desktop": 22,
+        "text_font_size_desktop": 16,
+        "image_max_width_mobile": 80,
+        "background_text_font_size_mobile": 36,
+        "heading_font_size_mobile": 22,
+        "text_font_size_mobile": 15,
+        "hover_navigation_desktop": "right",
+        "enable_autoplay": true,
+        "autoplay_speed": 3,
+        "button_style": "filled",
+        "override_button_colors": false,
+        "navigation_button_background_color": "#e68819",
+        "navigation_button_color": "#ffffff",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
       }
     },
     "product_hero_highlights_hfrr9g": {
@@ -688,7 +693,7 @@
     "41a9b7a6-bd65-4dd4-8672-1ee861ddb5a5",
     "ingredients_grid_yzP3LB",
     "dosage_table_VQ8Jg8",
-    "phase_columns_FWLXfK",
+    "product_slideshow_mTHF6U",
     "product_hero_highlights_hfrr9g",
     "image_with_text_overlay_dc7Fbw",
     "accordion_fYz9RV"

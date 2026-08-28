@@ -585,7 +585,9 @@
         "navigation_button_color": "#FFFFFF",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "colors": "dark"
+        "colors": "dark",
+        "enable_autoplay": true,
+        "autoplay_speed": 5
       }
     },
     "product_hero_highlights_vSD6gQ": {

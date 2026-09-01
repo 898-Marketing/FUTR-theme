@@ -59,6 +59,87 @@
       }
     }
   {% endif %}
+
+  {% comment %}
+    Opt-in bio pop-up — only applied when enable_bio_popup is turned on for
+    this specific section instance, so other pages using this same section
+    type are unaffected.
+  {% endcomment %}
+  {% if section.settings.enable_bio_popup %}
+    .section-{{ section.id }} .info-cols--bio-trigger {
+      cursor: pointer;
+    }
+    .section-{{ section.id }} h3 .info-cols--bio-trigger {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      color: inherit;
+      text-align: inherit;
+      display: inline;
+    }
+    .section-{{ section.id }} .info-cols--bio-trigger:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
+    .section-{{ section.id }} .info-cols--bio-dialog {
+      border: none;
+      border-radius: 12px;
+      padding: 0;
+      width: min(1100px, calc(100vw - 40px));
+      max-height: calc(100vh - 40px);
+      background: #ffffff;
+      color: #0e1116;
+      overflow: auto;
+    }
+    .section-{{ section.id }} .info-cols--bio-dialog::backdrop {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .section-{{ section.id }} .info-cols--bio-dialog__close {
+      position: sticky;
+      top: 16px;
+      float: right;
+      margin: 16px 16px 0 0;
+      background: none;
+      border: none;
+      padding: 4px;
+      cursor: pointer;
+      color: inherit;
+      z-index: 2;
+    }
+    .section-{{ section.id }} .info-cols--bio-dialog__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 40px;
+      clear: both;
+    }
+    @media screen and (min-width: 768px) {
+      .section-{{ section.id }} .info-cols--bio-dialog__grid {
+        grid-template-columns: minmax(220px, 340px) 1fr;
+      }
+    }
+    .section-{{ section.id }} .info-cols--bio-dialog__media img,
+    .section-{{ section.id }} .info-cols--bio-dialog__media svg {
+      width: 100%;
+      border-radius: 12px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+    .section-{{ section.id }} .info-cols--bio-dialog__name {
+      margin: 16px 0 4px;
+    }
+    .section-{{ section.id }} .info-cols--bio-dialog__position {
+      opacity: 0.7;
+      font-size: 14px;
+    }
+    .section-{{ section.id }} .info-cols--bio-dialog__bio {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  {% endif %}
 {% endstyle %}
 
 {% assign grid_item_id = 'grid-item--' | append: section.id %}
@@ -152,20 +233,33 @@
 						{% case block.type %}
 							{% when 'image_and_text' %}
 
-                {% liquid 
+                {% liquid
                   assign has_content = true
                   if block.settings.heading == blank and block.settings.text == blank and block.settings.button_text == blank
                     assign has_content = false
                   endif
+
+                  assign show_bio_trigger = false
+                  if section.settings.enable_bio_popup and block.settings.bio_text != blank
+                    assign show_bio_trigger = true
+                  endif
                 %}
 							
-								{% if block.settings.button_link != blank %}
+								{% if block.settings.button_link != blank and show_bio_trigger == false %}
 									<a aria-label="{{ block.settings.heading }}" href="{{ block.settings.button_link }}" class="info-cols--image-is-link"><span class="sr-only">{{ block.settings.heading }}</span>
 								{% endif %}
 
-								<div 
-                  class="info-cols--image info-cols--media info-cols--media__desktop-alignment--{{ section.settings.text_alignment }} info-cols--media__mobile-alignment--{{ section.settings.text_alignment_mobile }}{% if block.settings.grid_image_size != 'natural' %} info-cols--media__aspect-ratio--{{ block.settings.grid_image_size }}{% endif %}{% unless has_content %} info-cols--image__no-content{% endunless %}" 
-                  aria-hidden="true"
+								<div
+                  class="info-cols--image info-cols--media info-cols--media__desktop-alignment--{{ section.settings.text_alignment }} info-cols--media__mobile-alignment--{{ section.settings.text_alignment_mobile }}{% if block.settings.grid_image_size != 'natural' %} info-cols--media__aspect-ratio--{{ block.settings.grid_image_size }}{% endif %}{% unless has_content %} info-cols--image__no-content{% endunless %}{% if show_bio_trigger %} info-cols--bio-trigger{% endif %}"
+                  {% if show_bio_trigger %}
+                    data-bio-open="{{ block.id }}"
+                    role="button"
+                    tabindex="0"
+                    aria-haspopup="dialog"
+                    aria-label="View bio for {{ block.settings.heading }}"
+                  {% else %}
+                    aria-hidden="true"
+                  {% endif %}
                 >
 									{% if block.settings.image == blank %}
 										<div style="max-width: {{ section.settings.maximum_width }}px;width:100%;"{% unless block.settings.grid_image_size == 'circle' %} class="{{ radius_type }}-radius-clip"{% endunless %}{% if block.settings.button_link != blank %} data-animate-hover-zoom{% endif %}>
@@ -178,12 +272,12 @@
 									{% endif %}
 								</div>
 
-								{% if block.settings.button_link != blank %}
+								{% if block.settings.button_link != blank and show_bio_trigger == false %}
 									</a>
 								{% endif %}
 
 								{% if block.settings.heading != '' %}
-									<h3 class="info-cols--title">{{ block.settings.heading }}</h3>
+									<h3 class="info-cols--title">{% if show_bio_trigger %}<button type="button" class="info-cols--bio-trigger" data-bio-open="{{ block.id }}" aria-haspopup="dialog">{{ block.settings.heading }}</button>{% else %}{{ block.settings.heading }}{% endif %}</h3>
 								{% endif %}
 
 								{% if block.settings.text != '' %}
@@ -198,6 +292,28 @@
                     style: section.settings.buttons_style,
                     div_classes: 'info-cols--link--wrapper'
                   %}
+								{% endif %}
+
+								{% if show_bio_trigger %}
+                  <dialog class="info-cols--bio-dialog" id="bio-modal-{{ block.id }}">
+                    <button type="button" class="info-cols--bio-dialog__close" data-bio-close aria-label="{{ 'general.accessibility.dismiss.close' | t }}">
+                      {% render 'theme-icon', icon: 'close', iconSize: 20 %}
+                    </button>
+                    <div class="info-cols--bio-dialog__grid">
+                      <div class="info-cols--bio-dialog__media">
+                        {% if block.settings.image != blank %}
+                          {% render 'responsive-image', image: block.settings.image, allow_stretch: true %}
+                        {% endif %}
+                        <h3 class="info-cols--bio-dialog__name">{{ block.settings.heading }}</h3>
+                        {% if block.settings.text != blank %}
+                          <div class="info-cols--bio-dialog__position">{{ block.settings.text }}</div>
+                        {% endif %}
+                      </div>
+                      <div class="info-cols--bio-dialog__bio text-link-animated">
+                        {{ block.settings.bio_text }}
+                      </div>
+                    </div>
+                  </dialog>
 								{% endif %}
 
 							{% when 'video_and_text' %}
@@ -331,6 +447,47 @@
 		</div>
 	</div>
 </{% if section.settings.force_static_grid %}div{% else %}info-columns{% endif %}>
+
+{% if section.settings.enable_bio_popup %}
+  <script>
+    (function () {
+      var root = document.querySelector('#shopify-section-{{ section.id }}');
+      if (!root) return;
+
+      function openDialog(id) {
+        var dialog = root.querySelector('#bio-modal-' + id);
+        if (dialog && typeof dialog.showModal === 'function') {
+          dialog.showModal();
+        }
+      }
+
+      root.querySelectorAll('[data-bio-open]').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          openDialog(trigger.getAttribute('data-bio-open'));
+        });
+        trigger.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openDialog(trigger.getAttribute('data-bio-open'));
+          }
+        });
+      });
+
+      root.querySelectorAll('.info-cols--bio-dialog').forEach(function (dialog) {
+        dialog.querySelectorAll('[data-bio-close]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            dialog.close();
+          });
+        });
+        dialog.addEventListener('click', function (e) {
+          if (e.target === dialog) {
+            dialog.close();
+          }
+        });
+      });
+    })();
+  </script>
+{% endif %}
 
 {% schema %}
 {
@@ -660,6 +817,17 @@
       "label": "Static grid (no slider)",
       "info": "Shows all columns at once in a wrapping grid instead of a swipeable carousel. Only affects this section instance.",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Bio pop-up"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_bio_popup",
+      "label": "Enable bio pop-up",
+      "info": "Clicking a column's image or name opens a full-width pop-up with the photo, name, position, and bio. Add bio text on a column below to turn it on for that person. Only affects this section instance.",
+      "default": false
     }
   ],
   "blocks": [
@@ -720,6 +888,12 @@
           "id": "text",
           "label": "t:all.Text",
           "default": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "bio_text",
+          "label": "Bio (shown in pop-up)",
+          "info": "Only used when \"Enable bio pop-up\" is turned on for this section. Leave blank to keep this column as a plain (non-clickable) card."
         },
         {
           "type": "header",

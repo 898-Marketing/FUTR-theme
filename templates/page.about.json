@@ -196,6 +196,9 @@
         "highlight_AJXBfR",
         "highlight_GmyxDW"
       ],
+      "custom_css": [
+        "p{font-size: 20px; text-align: center;}"
+      ],
       "name": "Product Hero Highlights",
       "settings": {
         "overlay_color": "#FFFFFF",

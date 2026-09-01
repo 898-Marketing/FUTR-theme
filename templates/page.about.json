@@ -53,6 +53,9 @@
         "text_LLUame",
         "image_MwdRGK"
       ],
+      "custom_css": [
+        "[data-wetheme-section-type=\"scrolling-banner\"] {--color-scheme-background-color: #4086c4; background-color: var(--color-scheme-background-color) !important;}"
+      ],
       "name": "t:sections.scrolling-banner.name",
       "settings": {
         "title": "",
@@ -107,6 +110,168 @@
         "background_overlay_opacity": 60
       }
     },
+    "image_with_text_7VaACR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jWK9EV": {
+          "type": "heading",
+          "settings": {
+            "title": "OUR STANDARD",
+            "heading_bottom_spacing": 15
+          }
+        },
+        "text_teNrEH": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>If We’re Going To Build This Category, <br/>We’re Going To Build It Right.</strong></p><p>At FUTR, we're not only nutrition industry veterans, but we’re also <strong>parents and coaches.</strong> We’ve stood on the sidelines, packed the bags, read the labels, and asked the same question every parent asks: <em>is this actually made for my kid?</em></p><p>That question became the reason we built FUTR, and the reason we believe this new category of youth sports nutrition has to be built differently from the start.</p><p><strong>Trust isn’t something we expect. <br/>It’s something we have to earn.</strong> </p>",
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_nqhfzb": {
+          "type": "button",
+          "settings": {
+            "button_link": "",
+            "button_label": "Shop now",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "button_background_color": "#E68819",
+            "button_text_color": "#ffffff",
+            "button_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_jWK9EV",
+        "text_teNrEH",
+        "button_nqhfzb"
+      ],
+      "name": "t:sections.image--image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/futr-product-image.jpg",
+        "layout": "left",
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "colors": "dark"
+      }
+    },
+    "product_hero_highlights_VbEPEr": {
+      "type": "product-hero-highlights",
+      "blocks": {
+        "highlight_fiLwg6": {
+          "type": "highlight",
+          "settings": {
+            "heading": "",
+            "text": "<p><em>Every ingredient should have a reason to be there. Every amount should be intentional. </em></p>"
+          }
+        },
+        "highlight_zpggnn": {
+          "type": "highlight",
+          "settings": {
+            "heading": "",
+            "text": "<p><em>Science should come before trends, and transparency should come before hype.</em></p>"
+          }
+        },
+        "highlight_AJXBfR": {
+          "type": "highlight",
+          "settings": {
+            "heading": "",
+            "text": "<p><em>Every product is formulated with and reviewed by a panel of doctors and registered dieticians. </em></p>"
+          }
+        },
+        "highlight_GmyxDW": {
+          "type": "highlight",
+          "settings": {
+            "heading": "",
+            "text": "<p><em>Every product is manufactured in an FDA registered facility, 3rd party tested, and supported by Nutravigilance®.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_fiLwg6",
+        "highlight_zpggnn",
+        "highlight_AJXBfR",
+        "highlight_GmyxDW"
+      ],
+      "name": "Product Hero Highlights",
+      "settings": {
+        "overlay_color": "#FFFFFF",
+        "overlay_opacity": 90,
+        "heading": "",
+        "heading_color": "#ffffff",
+        "heading_font_size_desktop": 46,
+        "heading_font_size_mobile": 28,
+        "badge_alt": "",
+        "badge_position": "top_right",
+        "badge_size": 140,
+        "badge_size_mobile": 90,
+        "content_max_width": 1200,
+        "content_padding_horizontal": 40,
+        "content_padding_horizontal_mobile": 20,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_padding_top_mobile": 40,
+        "section_padding_bottom_mobile": 40,
+        "heading_bottom_spacing": 40,
+        "card_gap": 24,
+        "card_padding": 24,
+        "card_bg_color": "#16305c",
+        "card_border_color": "#4a90d9",
+        "card_heading_color": "#ffffff",
+        "card_text_color": "#dbe6f2"
+      }
+    },
+    "image_with_text_hgiX3N": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_mU4Wdc": {
+          "type": "heading",
+          "settings": {
+            "title": "WHY THE NAME FUTR?",
+            "heading_bottom_spacing": 15
+          }
+        },
+        "text_BATBdq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Because what we're fueling is bigger than the next game.</p><p>A kid's future isn't ours to define. It isn't decided by a scoreboard, a ranking, a roster spot, or what anyone else thinks they should become.</p><p><strong>It's theirs.</strong></p><p>Sports may be part of the journey, but the lessons go far beyond it — showing up, putting in the work, being a teammate, handling setbacks, and continuing to believe in what's possible.</p><p>Their goals.<br/>Their dreams.<br/>Their FUTR.</p><p><strong>We're here to help fuel it.</strong></p>",
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_A9WVKW": {
+          "type": "button",
+          "settings": {
+            "button_link": "",
+            "button_label": "Shop now",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "button_background_color": "#E68819",
+            "button_text_color": "#ffffff",
+            "button_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_mU4Wdc",
+        "text_BATBdq",
+        "button_A9WVKW"
+      ],
+      "name": "t:sections.image--image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/about-section.jpg",
+        "layout": "right",
+        "text_alignment": "left",
+        "text_alignment_mobile": "center",
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "colors": "dark"
+      }
+    },
     "template_product_info_columns_NzhHxq": {
       "type": "template--product--info-columns",
       "blocks": {
@@ -114,8 +279,8 @@
           "type": "image_and_text",
           "settings": {
             "grid_image_size": "square",
-            "heading": "Heading",
-            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "heading": "SUZANNE GATT",
+            "text": "<p>Founder, CEO</p>",
             "button_link": "",
             "button_text": ""
           }
@@ -124,8 +289,8 @@
           "type": "image_and_text",
           "settings": {
             "grid_image_size": "square",
-            "heading": "Heading",
-            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "heading": "RAUL PUJOL",
+            "text": "<p>Chief Business Development <br/>& Partnerships Officer  </p>",
             "button_link": "",
             "button_text": ""
           }
@@ -134,8 +299,8 @@
           "type": "image_and_text",
           "settings": {
             "grid_image_size": "square",
-            "heading": "Heading",
-            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "heading": "ANGIE PUJOL",
+            "text": "<p>Director Finance Operations </p>",
             "button_link": "",
             "button_text": ""
           }
@@ -144,8 +309,8 @@
           "type": "image_and_text",
           "settings": {
             "grid_image_size": "square",
-            "heading": "Heading",
-            "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "heading": "TIM ZIEGENFUSS",
+            "text": "<p>PH.D., FISSN, CSCS<br/>Chief Science Officer </p>",
             "button_link": "",
             "button_text": ""
           }
@@ -212,6 +377,9 @@
     "animated_text_Vqazxt",
     "scrolling_banner_E6AA9R",
     "rich_text_Hjpa6d",
+    "image_with_text_7VaACR",
+    "product_hero_highlights_VbEPEr",
+    "image_with_text_hgiX3N",
     "template_product_info_columns_NzhHxq"
   ]
 }

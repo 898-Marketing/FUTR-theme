@@ -15,8 +15,8 @@
         "heading_djmqf9": {
           "type": "heading",
           "settings": {
-            "title": "Have a question?",
-            "font_size_desktop": 28,
+            "title": "CONTACT US",
+            "font_size_desktop": 56,
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
           }
@@ -27,9 +27,9 @@
       ],
       "settings": {
         "image_desktop": "shopify://shop_images/field.jpg",
-        "height_desktop": "original",
+        "height_desktop": "450px",
         "height_desktop_custom": 450,
-        "text_position_desktop": "center",
+        "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 100,
         "height_mobile": "custom",
@@ -41,10 +41,10 @@
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
-        "text_color": "#292929",
-        "caption_bg_color": "#00000000",
+        "text_color": "#FFFFFF",
+        "caption_bg_color": "rgba(0,0,0,0)",
         "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "image_overlay_opacity": 28
       }
     },
     "057a50d5-3fee-4ea2-a832-2d38f47b959a": {
@@ -95,8 +95,8 @@
         "template--14753984643142__057a50d5-3fee-4ea2-a832-2d38f47b959a-16788945317184afd8-3"
       ],
       "settings": {
-        "title": "Contact us",
-        "description": "<p>Have a question, or want a product recommendation? Get in touch.</p>",
+        "title": "GET IN TOUCH",
+        "description": "<p>Have a question, or want a product recommendation? </p>",
         "section_header_alignment": "center",
         "form_width": "narrow",
         "section_padding_top": 60,
@@ -109,6 +109,7 @@
     },
     "map_mWwEmV": {
       "type": "map",
+      "disabled": true,
       "settings": {
         "map_address": "80 Spadina Ave, Toronto",
         "api_key": "",

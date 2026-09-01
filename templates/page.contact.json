@@ -20,50 +20,29 @@
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
           }
-        },
-        "text_EcbGWz": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Before you reach out check out our FAQs page to see if we've already got you covered.</p>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 20
-          }
-        },
-        "button_VBhfQk": {
-          "type": "button",
-          "settings": {
-            "first_button_link": "/",
-            "first_button_label": "FAQs",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "filled",
-            "override_button_colors": false,
-            "buttons_background": "#E68819",
-            "buttons_text": "#FFFFFF",
-            "buttons_bottom_spacing": 0
-          }
         }
       },
       "block_order": [
-        "heading_djmqf9",
-        "text_EcbGWz",
-        "button_VBhfQk"
+        "heading_djmqf9"
       ],
       "settings": {
+        "image_desktop": "shopify://shop_images/field.jpg",
         "height_desktop": "original",
+        "height_desktop_custom": 450,
         "text_position_desktop": "center",
         "text_alignment_desktop": "center",
-        "caption_width_desktop": 80,
-        "height_mobile": "original",
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
+        "caption_width_desktop": 100,
+        "height_mobile": "custom",
+        "height_mobile_custom": 210,
+        "text_position_mobile": "bottom_left",
+        "text_alignment_mobile": "left",
         "section_link": "",
         "animation_style": "none",
+        "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#292929",
-        "caption_bg_color": "#ffffff",
+        "caption_bg_color": "#00000000",
         "image_overlay_color": "#242424",
         "image_overlay_opacity": 0
       }
@@ -118,6 +97,7 @@
       "settings": {
         "title": "Contact us",
         "description": "<p>Have a question, or want a product recommendation? Get in touch.</p>",
+        "section_header_alignment": "center",
         "form_width": "narrow",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
@@ -131,6 +111,7 @@
       "type": "map",
       "settings": {
         "map_address": "80 Spadina Ave, Toronto",
+        "api_key": "",
         "layout": "left",
         "text_alignment": "left",
         "heading": "Hit us up!",
@@ -138,8 +119,9 @@
         "button_text": "Get directions",
         "buttons_style": "filled",
         "override_button_colors": false,
-        "button_background_color": "#E68819",
+        "button_background_color": "#e68819",
         "button_text_color": "#ffffff",
+        "section_width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
         "colors": "light"

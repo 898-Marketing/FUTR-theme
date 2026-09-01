@@ -29,8 +29,17 @@
      mark sitting off-center in a lot of transparent padding. object-fit:cover
      (the stock behavior here) zooms into the center of that square to fill
      the box, landing on empty transparent space instead of the logo itself.
-     contain shows the whole image, scaled to fit, instead of cropping it. */
+     contain shows the whole image, scaled to fit, instead of cropping it.
+     object-fit alone does nothing here though — the image snippet sets inline
+     max-width/max-height to the image's own natural pixel size (a no-op cap),
+     so without an explicit width/height tying it to the 70px box, it renders
+     at full native size and gets clipped by the column's rounded-corner
+     clip-path. Force it to actually fill (then fit within) that box. */
   .footer-main .image-footer img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
     object-fit: contain !important;
   }
 {% endstyle %}

@@ -88,7 +88,7 @@
         "richtext_4YaFct": {
           "type": "richtext",
           "settings": {
-            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them.<br/>Not borrowed from adult formulas. Not watered down. Every product is engineered around the way young athletes actually train, compete, recover, and grow — safe, purposeful, and science-backed.<br/>This is nutrition built for the stage of the game they're in right now.<br/></p>",
+            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them. Not borrowed from adult formulas. Not watered down. Every product is developed around the way young<br/>athletes actually train, compete, recover, and grow —purposeful, and science-backed.</p>",
             "text_size": 18,
             "text_bottom_spacing": 20
           }
@@ -165,28 +165,28 @@
           "type": "highlight",
           "settings": {
             "heading": "",
-            "text": "<p><em>Every ingredient should have a reason to be there. Every amount should be intentional. </em></p>"
+            "text": "<p>Every ingredient should have a reason to be there. Every amount should be intentional. </p>"
           }
         },
         "highlight_zpggnn": {
           "type": "highlight",
           "settings": {
             "heading": "",
-            "text": "<p><em>Science should come before trends, and transparency should come before hype.</em></p>"
+            "text": "<p>Science should come before trends, and transparency should come before hype.</p>"
           }
         },
         "highlight_AJXBfR": {
           "type": "highlight",
           "settings": {
             "heading": "",
-            "text": "<p><em>Every product is formulated with and reviewed by a panel of doctors and registered dieticians. </em></p>"
+            "text": "<p>Every product is formulated with and reviewed by a panel of doctors and registered dietitians.</p>"
           }
         },
         "highlight_GmyxDW": {
           "type": "highlight",
           "settings": {
             "heading": "",
-            "text": "<p><em>Every product is manufactured in an FDA registered facility, 3rd party tested, and supported by Nutravigilance®.</em></p>"
+            "text": "<p>Every product is manufactured in an FDA registered facility, third-party tested, and supported by Nutravigilance®.</p>"
           }
         }
       },

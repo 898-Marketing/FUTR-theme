@@ -161,7 +161,7 @@
       ],
       "name": "t:sections.product--accordion-with-image.presets.name",
       "settings": {
-        "section_title": "",
+        "section_title": "THE 'W'",
         "section_description": "",
         "section_header_alignment": "center",
         "faq_icon": "plus_minus",
@@ -185,6 +185,66 @@
         "button_background_color": "#242424",
         "button_text_color": "#ffffff",
         "colors": "light"
+      }
+    },
+    "product_hero_highlights_vSD6gQ": {
+      "type": "product-hero-highlights",
+      "blocks": {
+        "highlight_a1b2c3": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Feel physically ready",
+            "text": "<p>Taurine and Citrulline support exercise performance, healthy blood flow and a feeling of readiness before activity.</p>"
+          }
+        },
+        "highlight_d4e5f6": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Lock in focus",
+            "text": "<p>Formulated with Cognizin® Citicoline, clinically studied in youth for attention, plus L-Tyrosine to support focus and mental clarity.</p>"
+          }
+        },
+        "highlight_g7h8i9": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Support muscle function",
+            "text": "<p>Taurine helps support muscle function and hydration, helping to reduce feelings of fatigue.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_a1b2c3",
+        "highlight_d4e5f6",
+        "highlight_g7h8i9"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/field.jpg",
+        "image_mobile": "shopify://shop_images/field.jpg",
+        "overlay_color": "#0a1420",
+        "overlay_opacity": 70,
+        "heading": "The first true pregame for youth sports.",
+        "heading_color": "#ffffff",
+        "heading_font_size_desktop": 46,
+        "heading_font_size_mobile": 28,
+        "badge_image": "shopify://shop_images/FUTR_logo-White-03.png",
+        "badge_alt": "Specifically made for youth sports",
+        "badge_position": "top_right",
+        "badge_size": 140,
+        "badge_size_mobile": 90,
+        "content_max_width": 1200,
+        "content_padding_horizontal": 75,
+        "content_padding_horizontal_mobile": 20,
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_mobile": 40,
+        "section_padding_bottom_mobile": 40,
+        "heading_bottom_spacing": 40,
+        "card_gap": 24,
+        "card_padding": 24,
+        "card_bg_color": "#16305c",
+        "card_border_color": "#4a90d9",
+        "card_heading_color": "#ffffff",
+        "card_text_color": "#dbe6f2"
       }
     },
     "ingredients_grid_yzP3LB": {
@@ -514,66 +574,6 @@
         "section_padding_top": 60,
         "section_padding_bottom": 60,
         "colors": "dark"
-      }
-    },
-    "product_hero_highlights_vSD6gQ": {
-      "type": "product-hero-highlights",
-      "blocks": {
-        "highlight_a1b2c3": {
-          "type": "highlight",
-          "settings": {
-            "heading": "Feel physically ready",
-            "text": "<p>Taurine and Citrulline support exercise performance, healthy blood flow and a feeling of readiness before activity.</p>"
-          }
-        },
-        "highlight_d4e5f6": {
-          "type": "highlight",
-          "settings": {
-            "heading": "Lock in focus",
-            "text": "<p>Formulated with Cognizin® Citicoline, clinically studied in youth for attention, plus L-Tyrosine to support focus and mental clarity.</p>"
-          }
-        },
-        "highlight_g7h8i9": {
-          "type": "highlight",
-          "settings": {
-            "heading": "Support muscle function",
-            "text": "<p>Taurine helps support muscle function and hydration, helping to reduce feelings of fatigue.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "highlight_a1b2c3",
-        "highlight_d4e5f6",
-        "highlight_g7h8i9"
-      ],
-      "settings": {
-        "image_desktop": "shopify://shop_images/field.jpg",
-        "image_mobile": "shopify://shop_images/field.jpg",
-        "overlay_color": "#0a1420",
-        "overlay_opacity": 70,
-        "heading": "The first true pregame for youth sports.",
-        "heading_color": "#ffffff",
-        "heading_font_size_desktop": 46,
-        "heading_font_size_mobile": 28,
-        "badge_image": "shopify://shop_images/FUTR_logo-White-03.png",
-        "badge_alt": "Specifically made for youth sports",
-        "badge_position": "top_right",
-        "badge_size": 140,
-        "badge_size_mobile": 90,
-        "content_max_width": 1200,
-        "content_padding_horizontal": 75,
-        "content_padding_horizontal_mobile": 20,
-        "section_padding_top": 100,
-        "section_padding_bottom": 100,
-        "section_padding_top_mobile": 40,
-        "section_padding_bottom_mobile": 40,
-        "heading_bottom_spacing": 40,
-        "card_gap": 24,
-        "card_padding": 24,
-        "card_bg_color": "#16305c",
-        "card_border_color": "#4a90d9",
-        "card_heading_color": "#ffffff",
-        "card_text_color": "#dbe6f2"
       }
     },
     "image_with_text_overlay_dc7Fbw": {

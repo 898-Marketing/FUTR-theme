@@ -15,7 +15,7 @@
         "text_static_4tXtft": {
           "type": "text_static",
           "settings": {
-            "text_static": "<p>lorem ipsum</p>",
+            "text_static": "<p>THE</p>",
             "max_width_desktop": 94,
             "max_width_mobile": 100,
             "text_color": "#ffffff"
@@ -24,7 +24,7 @@
         "text_dynamic_jaaUgT": {
           "type": "text_dynamic",
           "settings": {
-            "text_dynamic": "lorem ipsum, lorem ipsum, lorem ipsum",
+            "text_dynamic": "FUTR IS NOW, FUTR IS NOW, FUTR IS NOW",
             "animation_timing": 1600,
             "rotation_interval": 3700,
             "text_color": "#3188d2"
@@ -36,13 +36,13 @@
         "text_dynamic_jaaUgT"
       ],
       "settings": {
-        "image_desktop": "shopify://shop_images/empty-net-on-a-green-sports-field-in-the-city.jpg",
+        "image_desktop": "shopify://shop_images/about-hero.jpg",
         "height_desktop": "s",
         "text_position_desktop": "left",
         "text_size_desktop": 60,
-        "image_mobile": "shopify://shop_images/empty-net-on-a-green-sports-field-in-the-city.jpg",
+        "image_mobile": "shopify://shop_images/about-hero.jpg",
         "height_mobile": "s",
-        "text_position_mobile": "left",
+        "text_position_mobile": "right",
         "text_size_mobile": 22,
         "section_width": "full",
         "section_margin_top": 0,

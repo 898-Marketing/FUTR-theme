@@ -39,6 +39,18 @@
 
 {% assign focal_point = image.presentation.focal_point %}
 
+{% comment %}
+  Opt-in escape hatch — only used by callers that explicitly pass
+  disable_focal_point: true. Without it, every other caller of this snippet
+  keeps its existing behavior. Needed because a focal point set on the image
+  (in Shopify Admin) otherwise forces an inline object-fit:cover !important,
+  which no external stylesheet rule can override (inline !important always
+  wins over stylesheet !important, regardless of selector specificity).
+{% endcomment %}
+{% if disable_focal_point %}
+  {% assign focal_point = blank %}
+{% endif %}
+
 {% if allow_stretch %}
   {% unless focal_point %}
     {% assign focal_point = '50% 50%' %}

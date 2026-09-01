@@ -156,7 +156,7 @@
                   {% assign image_class = 'block-radius' %}
                 {% endunless %}
 
-                {% render 'responsive-image', image: block.settings.image, class: image_class %}
+                {% render 'responsive-image', image: block.settings.image, class: image_class, disable_focal_point: true %}
               {% endif %}
             </div>
 

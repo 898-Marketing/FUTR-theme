@@ -69,11 +69,17 @@
     data-wetheme-section-id="{{ section.id }}"
     style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px; --image-max-width: {{ section.settings.image_max_width }}px;"
   >
-    {% comment %} Section title and description {% endcomment %}
-    {% render 'dynamic-section-header', section_title: section.settings.section_title, section_description: section.settings.section_description, alignment: section.settings.section_header_alignment, wrapper_classes: width_class %}
+    {% unless section.settings.heading_above_accordion %}
+      {% comment %} Section title and description {% endcomment %}
+      {% render 'dynamic-section-header', section_title: section.settings.section_title, section_description: section.settings.section_description, alignment: section.settings.section_header_alignment, wrapper_classes: width_class %}
+    {% endunless %}
 
     <div class="{{ width_class }} main-content-wrapper{% if section.settings.image_position_desktop == 'left' %} main-content-wrapper--image-left{% endif %}{% if section.settings.image_position_mobile == 'top' %} main-content-wrapper--image-top{% endif %}">
       <div class="accordion-wrapper">
+        {% if section.settings.heading_above_accordion %}
+          {% comment %} Section title and description — positioned above the accordion column only {% endcomment %}
+          {% render 'dynamic-section-header', section_title: section.settings.section_title, section_description: section.settings.section_description, alignment: section.settings.section_header_alignment %}
+        {% endif %}
         {% for block in section.blocks %}
           {% assign content = block.settings.text %}
           {% if block.settings.page.content %}
@@ -270,6 +276,13 @@
       "id": "center_align_content",
       "label": "Vertically center image and accordion content",
       "info": "Keeps them centered relative to each other on desktop no matter how many accordion items are added, instead of stretching to match heights. Only affects this section instance.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_above_accordion",
+      "label": "Place heading directly above the accordions",
+      "info": "Moves the section heading/description to sit right above the accordion column instead of spanning the full row above both columns. Only affects this section instance.",
       "default": false
     },
     {

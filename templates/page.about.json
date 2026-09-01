@@ -134,7 +134,7 @@
             "button_label": "Shop now",
             "buttons_style": "filled",
             "override_button_colors": false,
-            "button_background_color": "#E68819",
+            "button_background_color": "#e68819",
             "button_text_color": "#ffffff",
             "button_bottom_spacing": 0
           }
@@ -197,11 +197,11 @@
         "highlight_GmyxDW"
       ],
       "custom_css": [
-        "p{font-size: 20px; text-align: center;}"
+        "p {font-size: 20px; text-align: center;}"
       ],
       "name": "Product Hero Highlights",
       "settings": {
-        "overlay_color": "#FFFFFF",
+        "overlay_color": "#ffffff",
         "overlay_opacity": 90,
         "heading": "",
         "heading_color": "#ffffff",
@@ -251,7 +251,7 @@
             "button_label": "Shop now",
             "buttons_style": "filled",
             "override_button_colors": false,
-            "button_background_color": "#E68819",
+            "button_background_color": "#e68819",
             "button_text_color": "#ffffff",
             "button_bottom_spacing": 0
           }
@@ -284,6 +284,7 @@
             "grid_image_size": "square",
             "heading": "SUZANNE GATT",
             "text": "<p>Founder, CEO</p>",
+            "bio_text": "<p>I’m a mom, coach, and 13+ year sports nutrition industry veteran with a career spent building brands, developing products, and bringing sports nutrition to athletes at the highest level.</p><p><strong>But FUTR started with something much more personal.</strong></p><p>For years, parents would ask me the same question: “What can I give my kid?” And despite spending my career inside the sports nutrition industry, I never had an answer I felt great about.</p><p>There were plenty of products for adults. But when it came to young athletes, I kept seeing the same thing: products that weren’t really designed for them, adult formulas repackaged for a younger audience, or options that simply didn’t reflect how kids actually train, play, recover, and grow.</p><p><strong>I knew we could do better. So I decided to build it.</strong></p><p>Over the course of my career, I’ve had the opportunity to work alongside some of the best people in sports nutrition — formulators, researchers, flavor scientists, manufacturers, testing labs, retailers, and industry employees. I’ve seen firsthand what it takes to create great products, but I’ve also learned where shortcuts can happen and which details matter most.</p><p><strong>That means asking harder questions. </strong>Being able to explain why an ingredient is there and why we use the amount we do. Surrounding myself with experts who know more than I do in their respective fields. Choosing partners I trust. And never making a decision simply because it is easier, faster, or looks better on a label.</p><p>I’m still a parent reading the back of the package. I’m still a coach standing on the sideline. And I’m also someone who has spent most of my career building products in this industry.</p><p>FUTR is where all three of those parts of my life came together.</p><p><strong>This one is personal.</strong></p>",
             "button_link": "",
             "button_text": ""
           }
@@ -294,6 +295,7 @@
             "grid_image_size": "square",
             "heading": "RAUL PUJOL",
             "text": "<p>Chief Business Development <br/>& Partnerships Officer  </p>",
+            "bio_text": "",
             "button_link": "",
             "button_text": ""
           }
@@ -304,6 +306,7 @@
             "grid_image_size": "square",
             "heading": "ANGIE PUJOL",
             "text": "<p>Director Finance Operations </p>",
+            "bio_text": "",
             "button_link": "",
             "button_text": ""
           }
@@ -314,6 +317,7 @@
             "grid_image_size": "square",
             "heading": "TIM ZIEGENFUSS",
             "text": "<p>PH.D., FISSN, CSCS<br/>Chief Science Officer </p>",
+            "bio_text": "<p>Dr. Tim Ziegenfuss leads the science and product formulation behind FUTR. He holds a Ph.D. in Exercise Physiology, with advanced academic training in nutrition and statistics, and has spent decades studying how nutrition, physical activity, and dietary ingredients affect human health and performance.</p><p>An internationally recognized researcher, author, and sports nutrition expert, Dr. Ziegenfuss has published more than 80 scientific papers, contributed to eight book chapters, and helped develop nutrition products used by athletes around the world. He is a former university professor, a past President and Fellow of the International Society of Sports Nutrition, and a Certified Strength and Conditioning Specialist.</p><p>At FUTR, Dr. Ziegenfuss oversees ingredient selection, formula development, and scientific review. His role is to ensure every formula has a clear purpose and is grounded in credible research, appropriate dosing, and the real nutritional needs of developing young athletes.</p>",
             "button_link": "",
             "button_text": ""
           }
@@ -324,6 +328,7 @@
             "grid_image_size": "square",
             "heading": "Heading",
             "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "bio_text": "",
             "button_link": "",
             "button_text": ""
           }
@@ -334,6 +339,7 @@
             "grid_image_size": "square",
             "heading": "Heading",
             "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
+            "bio_text": "",
             "button_link": "",
             "button_text": ""
           }

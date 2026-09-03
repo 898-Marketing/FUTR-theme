@@ -150,7 +150,7 @@
         "section_padding_bottom": 80,
         "colors": "dark",
         "background_image": "shopify://shop_images/flag-_1.png",
-        "background_overlay_color": "#00000000",
+        "background_overlay_color": "#FFFFFF",
         "background_overlay_opacity": 0
       }
     },

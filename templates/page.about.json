@@ -75,38 +75,6 @@
         "image_overlay_opacity": 63
       }
     },
-    "animated_text_Vqazxt": {
-      "type": "animated-text",
-      "blocks": {
-        "text_static_qPBVPy": {
-          "type": "text_static",
-          "settings": {
-            "text_static": "<p>We're not just fueling the next generation. We're redefining what youth performance looks like.</p>",
-            "max_width_desktop": 100,
-            "max_width_mobile": 100,
-            "text_color": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "text_static_qPBVPy"
-      ],
-      "disabled": true,
-      "settings": {
-        "image_desktop": "shopify://shop_images/about-hero.jpg",
-        "height_desktop": "s",
-        "text_position_desktop": "left",
-        "text_size_desktop": 60,
-        "image_mobile": "shopify://shop_images/about-hero.jpg",
-        "height_mobile": "s",
-        "text_position_mobile": "right",
-        "text_size_mobile": 22,
-        "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "colors": "dark"
-      }
-    },
     "scrolling_banner_E6AA9R": {
       "type": "scrolling-banner",
       "blocks": {
@@ -159,15 +127,6 @@
     "rich_text_Hjpa6d": {
       "type": "rich-text",
       "blocks": {
-        "heading_8QVLE7": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "We're not just fueling the next generation. We're redefining what youth performance looks like.",
-            "heading--text-size": 40,
-            "heading_bottom_spacing": 20
-          }
-        },
         "richtext_4YaFct": {
           "type": "richtext",
           "settings": {
@@ -178,7 +137,6 @@
         }
       },
       "block_order": [
-        "heading_8QVLE7",
         "richtext_4YaFct"
       ],
       "settings": {
@@ -187,9 +145,9 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 80,
         "section_padding_bottom": 80,
-        "colors": "light",
+        "colors": "white",
         "background_image": "shopify://shop_images/flag.png",
-        "background_overlay_color": "#000000",
+        "background_overlay_color": "#FFFFFF",
         "background_overlay_opacity": 60
       }
     },
@@ -468,7 +426,6 @@
   },
   "order": [
     "image_with_text_overlay_G3YCkK",
-    "animated_text_Vqazxt",
     "scrolling_banner_E6AA9R",
     "rich_text_Hjpa6d",
     "image_with_text_7VaACR",

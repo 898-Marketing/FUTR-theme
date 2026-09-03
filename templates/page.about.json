@@ -41,8 +41,8 @@
             "second_button_label": "",
             "buttons_style": "filled",
             "override_button_colors": false,
-            "buttons_background": "#E68819",
-            "buttons_text": "#FFFFFF",
+            "buttons_background": "#e68819",
+            "buttons_text": "#ffffff",
             "buttons_bottom_spacing": 0
           }
         }
@@ -69,7 +69,7 @@
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "caption_bg_color": "rgba(0,0,0,0)",
         "image_overlay_color": "#242424",
         "image_overlay_opacity": 63
@@ -139,15 +139,18 @@
       "block_order": [
         "richtext_4YaFct"
       ],
+      "custom_css": [
+        "p{color: #000; font-weight:700; }"
+      ],
       "settings": {
         "section_width": "narrow",
         "text_alignment_desktop": "center",
         "text_alignment_mobile": "center",
         "section_padding_top": 80,
         "section_padding_bottom": 80,
-        "colors": "white",
+        "colors": "light",
         "background_image": "shopify://shop_images/flag.png",
-        "background_overlay_color": "#FFFFFF",
+        "background_overlay_color": "#ffffff",
         "background_overlay_opacity": 60
       }
     },

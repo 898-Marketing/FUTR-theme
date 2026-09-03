@@ -148,10 +148,10 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 80,
         "section_padding_bottom": 80,
-        "colors": "dark",
+        "colors": "light",
         "background_image": "shopify://shop_images/flag-_1.png",
-        "background_overlay_color": "#FFFFFF",
-        "background_overlay_opacity": 0
+        "background_overlay_color": "#ffffff",
+        "background_overlay_opacity": 85
       }
     },
     "image_with_text_7VaACR": {

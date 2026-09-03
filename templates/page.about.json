@@ -9,8 +9,89 @@
  */
 {
   "sections": {
+    "image_with_text_overlay_G3YCkK": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_LYaxRQ": {
+          "type": "heading",
+          "settings": {
+            "title": "We're not just fueling the next generation. We're redefining what youth performance looks like.",
+            "font_size_desktop": 47,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_KFUWad": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_qgAdFe": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "first_button_link": "",
+            "first_button_label": "Shop now",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "buttons_background": "#E68819",
+            "buttons_text": "#FFFFFF",
+            "buttons_bottom_spacing": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_LYaxRQ",
+        "text_KFUWad",
+        "button_qgAdFe"
+      ],
+      "name": "t:sections.image--image-with-text-overlay.presets.name",
+      "settings": {
+        "image_desktop": "shopify://shop_images/about-hero.jpg",
+        "height_desktop": "450px",
+        "height_desktop_custom": 450,
+        "text_position_desktop": "bottom_left",
+        "text_alignment_desktop": "left",
+        "caption_width_desktop": 65,
+        "height_mobile": "original",
+        "height_mobile_custom": 400,
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#FFFFFF",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 63
+      }
+    },
     "animated_text_Vqazxt": {
       "type": "animated-text",
+      "blocks": {
+        "text_static_qPBVPy": {
+          "type": "text_static",
+          "settings": {
+            "text_static": "<p>We're not just fueling the next generation. We're redefining what youth performance looks like.</p>",
+            "max_width_desktop": 100,
+            "max_width_mobile": 100,
+            "text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "text_static_qPBVPy"
+      ],
+      "disabled": true,
       "settings": {
         "image_desktop": "shopify://shop_images/about-hero.jpg",
         "height_desktop": "s",
@@ -53,6 +134,7 @@
         "text_LLUame",
         "image_MwdRGK"
       ],
+      "disabled": true,
       "custom_css": [
         "[data-wetheme-section-type=\"scrolling-banner\"] {--color-scheme-background-color: #4086c4; background-color: var(--color-scheme-background-color) !important;}"
       ],
@@ -79,6 +161,7 @@
       "blocks": {
         "heading_8QVLE7": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "We're not just fueling the next generation. We're redefining what youth performance looks like.",
             "heading--text-size": 40,
@@ -88,8 +171,8 @@
         "richtext_4YaFct": {
           "type": "richtext",
           "settings": {
-            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them. Not borrowed from adult formulas. Not watered down. Every product is developed around the way young<br/>athletes actually train, compete, recover, and grow —purposeful, and science-backed.</p>",
-            "text_size": 18,
+            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them. Not borrowed from adult formulas. Not watered down. </p><p>Every product is developed around the way youngathletes actually train, compete, recover, and grow —purposeful, and science-backed.</p>",
+            "text_size": 24,
             "text_bottom_spacing": 20
           }
         }
@@ -384,6 +467,7 @@
     }
   },
   "order": [
+    "image_with_text_overlay_G3YCkK",
     "animated_text_Vqazxt",
     "scrolling_banner_E6AA9R",
     "rich_text_Hjpa6d",

@@ -140,7 +140,7 @@
         "richtext_4YaFct"
       ],
       "custom_css": [
-        "p{color: #000; font-weight:700; }"
+        "p {color: #000; font-weight: 700;}"
       ],
       "settings": {
         "section_width": "narrow",
@@ -148,10 +148,10 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 80,
         "section_padding_bottom": 80,
-        "colors": "light",
-        "background_image": "shopify://shop_images/flag.png",
-        "background_overlay_color": "#ffffff",
-        "background_overlay_opacity": 60
+        "colors": "dark",
+        "background_image": "shopify://shop_images/flag-_1.png",
+        "background_overlay_color": "#00000000",
+        "background_overlay_opacity": 0
       }
     },
     "image_with_text_7VaACR": {

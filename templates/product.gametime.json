@@ -211,13 +211,14 @@
       "settings": {
         "section_title": "THE 'W'",
         "section_description": "",
-        "section_header_alignment": "center",
+        "section_header_alignment": "left",
         "faq_icon": "plus_minus",
         "custom_split": true,
         "image_split_percent": 45,
         "image_max_width": 600,
         "square_image": true,
         "center_align_content": true,
+        "heading_above_accordion": true,
         "title": "",
         "text": "",
         "link": "",
@@ -231,8 +232,7 @@
         "image--text-color": "#333333",
         "button_background_color": "#242424",
         "button_text_color": "#ffffff",
-        "colors": "light",
-        "heading_above_accordion": true
+        "colors": "light"
       }
     },
     "product_hero_highlights_TX4Hgn": {

@@ -127,36 +127,7 @@
   if product.has_only_default_variant or variant_images.size == 0
     assign show_only_variant_media = false
   endif
-
-  comment
-    Opt-in alternative to the position-based grouping below — only used when
-    variant_media_match_by_option is turned on for this section instance, so
-    other products/pages using this same section type are unaffected. Instead
-    of relying on image upload order, it shows an image whenever its alt text
-    contains the selected value of the named option (e.g. "Flavor"), so every
-    size/format variant that shares a flavor shows that flavor's images
-    without each exact variant combination needing its own media assignment
-    in Shopify Admin. Images whose alt text doesn't mention any of that
-    option's values are treated as generic and always shown.
-  endcomment
-  assign match_by_option = section.settings.variant_media_match_by_option
-  assign match_option_name = section.settings.variant_media_option_name
-  assign match_option = blank
-
-  if show_only_variant_media and match_by_option and match_option_name != blank
-    for opt in product.options_with_values
-      if opt.name == match_option_name
-        assign match_option = opt
-      endif
-    endfor
-  endif
-
-  if match_option != blank
-    assign match_option_key = 'option' | append: match_option.position
-    assign selected_match_value = product.selected_or_first_available_variant[match_option_key] | downcase
-    assign all_match_values = match_option.values | map: 'value'
-  endif
-
+  
   assign variant_image_positions = variant_images | map: 'position'
 
   # puts the first-image positions in ascending order
@@ -275,27 +246,10 @@
             endif
 
             if show_only_variant_media
-              if match_option != blank
+              assign hideMedia = true
+              unless media.position < start_index or media.position > end_index
                 assign hideMedia = false
-                assign media_alt_downcase = media.alt | downcase
-                assign media_mentions_a_match_value = false
-                for match_value in all_match_values
-                  assign match_value_downcase = match_value | downcase
-                  if media_alt_downcase contains match_value_downcase
-                    assign media_mentions_a_match_value = true
-                  endif
-                endfor
-                if media_mentions_a_match_value
-                  unless media_alt_downcase contains selected_match_value
-                    assign hideMedia = true
-                  endunless
-                endif
-              else
-                assign hideMedia = true
-                unless media.position < start_index or media.position > end_index
-                  assign hideMedia = false
-                endunless
-              endif
+              endunless
             endif
           %}
 
@@ -447,27 +401,10 @@
               endif
 
               if show_only_variant_media
-                if match_option != blank
+                assign hideMedia = true
+                unless media.position < start_index or media.position > end_index
                   assign hideMedia = false
-                  assign media_alt_downcase = media.alt | downcase
-                  assign media_mentions_a_match_value = false
-                  for match_value in all_match_values
-                    assign match_value_downcase = match_value | downcase
-                    if media_alt_downcase contains match_value_downcase
-                      assign media_mentions_a_match_value = true
-                    endif
-                  endfor
-                  if media_mentions_a_match_value
-                    unless media_alt_downcase contains selected_match_value
-                      assign hideMedia = true
-                    endunless
-                  endif
-                else
-                  assign hideMedia = true
-                  unless media.position < start_index or media.position > end_index
-                    assign hideMedia = false
-                  endunless
-                endif
+                endunless
               endif
             %}
 

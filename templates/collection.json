@@ -76,8 +76,8 @@
     "product-grid": {
       "type": "template--collection",
       "settings": {
-        "products-per-page": 6,
-        "desktop-products-per-row": 3,
+        "products-per-page": 8,
+        "desktop-products-per-row": 4,
         "mobile-products-per-row": "2",
         "pagination_options": "pagination_load_more",
         "desktop_position": "sidebar",

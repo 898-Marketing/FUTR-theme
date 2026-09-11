@@ -153,7 +153,7 @@
         "show_fade": true,
         "borders": false,
         "animation_direction": "normal",
-        "animation_speed": 60,
+        "animation_speed": 80,
         "section_padding_top": 5,
         "section_padding_bottom": 5,
         "space_between_blocks_desktop": 25,
@@ -178,7 +178,7 @@
           "type": "richtext",
           "settings": {
             "text": "<p>Our philosophy is simple: make youth sports nutrition products, and make them exceptionally well. FUTR is the first complete system built for every phase of play — every formula intentionally designed for youth athletes, with the right ingredients in the right amounts.</p>",
-            "text_size": 18,
+            "text_size": 20,
             "text_bottom_spacing": 20
           }
         },
@@ -186,7 +186,7 @@
           "type": "richtext",
           "settings": {
             "text": "<p><em>Because the future isn't waiting. It's being built every time they show up.</em></p><p></p>",
-            "text_size": 18,
+            "text_size": 20,
             "text_bottom_spacing": 20
           }
         }
@@ -206,7 +206,7 @@
         "colors": "light",
         "background_image": "shopify://shop_images/flag.png",
         "background_overlay_color": "#000000",
-        "background_overlay_opacity": 55
+        "background_overlay_opacity": 70
       }
     },
     "featured_collection_RbHECB": {
@@ -295,11 +295,13 @@
       "settings": {
         "image_desktop": "shopify://shop_images/system-banner3c_cb31c968-4d09-40ff-a30b-09e220b8097a.jpg",
         "height_desktop": "custom",
+        "height_desktop_custom": 450,
         "text_position_desktop": "right",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 37,
         "image_mobile": "shopify://shop_images/system-mobile.jpg",
         "height_mobile": "400px",
+        "height_mobile_custom": 400,
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",
         "section_link": "",
@@ -310,8 +312,7 @@
         "text_color": "#ffffff",
         "caption_bg_color": "#0000008c",
         "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30,
-        "height_desktop_custom": 450
+        "image_overlay_opacity": 30
       }
     },
     "template_product_info_columns_YPyY6m": {
@@ -324,6 +325,7 @@
             "grid_image_size": "natural",
             "heading": "EXPERT-LED Formulas",
             "text": "<p>Built by leaders in sports medicine, pediatrics, and nutrition — experts who understand what athletes need at every stage. They don't just know the research. They've helped shape it.</p>",
+            "bio_text": "",
             "button_link": "",
             "button_text": ""
           }
@@ -335,6 +337,7 @@
             "grid_image_size": "natural",
             "heading": "BUILT FOR YOUTH",
             "text": "<p>These aren't watered-down adult formulas. Every product is built around what a developing athlete's body needs — the right nutrients, the right amounts, for the right stage of their game.</p>",
+            "bio_text": "",
             "button_link": "",
             "button_text": ""
           }
@@ -346,6 +349,7 @@
             "grid_image_size": "natural",
             "heading": "TESTED AT EVERY LEVEL",
             "text": "<p>Individual ingredients are verified, finished formulas are third-party tested, and labels are checked for accuracy. Parents can trust what's on the label — and athletes can just play.</p>",
+            "bio_text": "",
             "button_link": "",
             "button_text": ""
           }
@@ -361,7 +365,7 @@
       ],
       "name": "t:sections.template--product--info-columns.presets.name",
       "settings": {
-        "title": "THE FUTR STANDARD",
+        "title": "OUR STANDARDS",
         "description": "",
         "section_header_alignment": "center",
         "maximum_width": 500,
@@ -384,7 +388,8 @@
         "card_bg_color": "#0e1116",
         "card_glow_color": "#1f88d2",
         "card_gap": 30,
-        "force_static_grid": false
+        "force_static_grid": false,
+        "enable_bio_popup": false
       }
     },
     "focused_product_gallery_qB8cNM": {
@@ -537,7 +542,7 @@
       "name": "t:sections.blog-posts.name",
       "settings": {
         "title": "From the Sideline",
-        "description": "",
+        "description": "<p>Real talk for the next generation. And whoever drove them.</p>",
         "section_header_alignment": "center",
         "show_image": true,
         "image_shape": "square",
@@ -549,8 +554,8 @@
         "show_comment_count": false,
         "show_excerpt": false,
         "show_read_more": true,
-        "heading_font": "heading",
-        "heading_font_size": 15,
+        "heading_font": "body",
+        "heading_font_size": 16,
         "alignment": "left",
         "buttons_style": "underlined",
         "override_button_colors": false,

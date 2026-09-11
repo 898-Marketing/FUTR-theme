@@ -173,6 +173,7 @@
         },
         "button_nqhfzb": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_link": "",
             "button_label": "Shop now",
@@ -290,6 +291,7 @@
         },
         "button_A9WVKW": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_link": "",
             "button_label": "Shop now",
@@ -396,6 +398,9 @@
         "image_and_text_x8Mccy",
         "image_and_text_PgNKzt",
         "image_and_text_Pzqi6N"
+      ],
+      "custom_css": [
+        "h3{font-size: 25px;}"
       ],
       "name": "Our Team",
       "settings": {

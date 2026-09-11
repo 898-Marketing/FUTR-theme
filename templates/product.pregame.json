@@ -91,7 +91,9 @@
         "labels_font_size": 20,
         "app_margin_bottom": 20,
         "product_form_bg_override": false,
-        "product_form_bg": "#e4ebf1"
+        "product_form_bg": "#e4ebf1",
+        "variant_media_match_by_option": true,
+        "variant_media_option_name": "Flavor"
       }
     },
     "scrolling_banner_mFTKkU": {

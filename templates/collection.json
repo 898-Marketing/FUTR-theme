@@ -41,8 +41,8 @@
         "heading_cqmqJ4": {
           "type": "heading",
           "settings": {
-            "title": "THE SYSTEM",
-            "font_size_desktop": 70,
+            "title": "FUEL EVERY PHASE OF PLAY™",
+            "font_size_desktop": 60,
             "font_size_mobile": 44,
             "heading_bottom_spacing": 25
           }
@@ -57,7 +57,7 @@
         "height_desktop_custom": 570,
         "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "left",
-        "caption_width_desktop": 66,
+        "caption_width_desktop": 79,
         "height_mobile": "250px",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",

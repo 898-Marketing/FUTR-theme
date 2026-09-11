@@ -280,7 +280,8 @@
                 assign media_alt_downcase = media.alt | downcase
                 assign media_mentions_a_match_value = false
                 for match_value in all_match_values
-                  if media_alt_downcase contains match_value | downcase
+                  assign match_value_downcase = match_value | downcase
+                  if media_alt_downcase contains match_value_downcase
                     assign media_mentions_a_match_value = true
                   endif
                 endfor
@@ -451,7 +452,8 @@
                   assign media_alt_downcase = media.alt | downcase
                   assign media_mentions_a_match_value = false
                   for match_value in all_match_values
-                    if media_alt_downcase contains match_value | downcase
+                    assign match_value_downcase = match_value | downcase
+                    if media_alt_downcase contains match_value_downcase
                       assign media_mentions_a_match_value = true
                     endif
                   endfor

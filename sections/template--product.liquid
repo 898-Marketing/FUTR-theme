@@ -130,7 +130,44 @@
           endif
         endfor
 
-        if show_only_variant_media and variant_images.size > 0
+        comment
+          Mirrors the alt-text matching in snippets/product-media.liquid — this
+          string is only used by JS to decide whether the gallery actually
+          needs to be redrawn after a variant change, so it has to reflect the
+          same filtering logic or that check could wrongly skip an update.
+        endcomment
+        assign match_by_option = section.settings.variant_media_match_by_option
+        assign match_option_name = section.settings.variant_media_option_name
+        assign match_option = blank
+
+        if show_only_variant_media and match_by_option and match_option_name != blank
+          for opt in product.options_with_values
+            if opt.name == match_option_name
+              assign match_option = opt
+            endif
+          endfor
+        endif
+
+        if match_option != blank
+          assign match_option_key = 'option' | append: match_option.position
+          assign selected_match_value = product.selected_or_first_available_variant[match_option_key] | downcase
+          assign all_match_values = match_option.values | map: 'value'
+
+          assign media_sources = ''
+          for media in product.media
+            assign media_alt_downcase = media.alt | downcase
+            assign media_mentions_a_match_value = false
+            for match_value in all_match_values
+              assign match_value_downcase = match_value | downcase
+              if media_alt_downcase contains match_value_downcase
+                assign media_mentions_a_match_value = true
+              endif
+            endfor
+            if media_mentions_a_match_value == false or media_alt_downcase contains selected_match_value
+              assign media_sources = media_sources | append: media.src
+            endif
+          endfor
+        elsif show_only_variant_media and variant_images.size > 0
           assign media_sources = ''
           for media in product.media
             unless media.position < start_index or media.position > end_index
@@ -1905,6 +1942,22 @@
       "label": "t:sections.template--product.settings.show_only_variant_media.label",
       "info": "t:sections.template--product.settings.show_only_variant_media.info",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "variant_media_match_by_option",
+      "label": "Match variant images by an option's value",
+      "info": "Instead of grouping images by their upload order/position, shows an image whenever its alt text contains the selected value of the option named below (e.g. \"Flavor\"). Images whose alt text doesn't mention any of that option's values are treated as generic and always shown. Requires \"Only show media for the selected variant\" above.",
+      "default": false,
+      "visible_if": "{{ section.settings.show_only_variant_media == true }}"
+    },
+    {
+      "type": "text",
+      "id": "variant_media_option_name",
+      "label": "Option name to match",
+      "info": "Must exactly match one of this product's option names, e.g. \"Flavor\".",
+      "default": "Flavor",
+      "visible_if": "{{ section.settings.show_only_variant_media == true and section.settings.variant_media_match_by_option == true }}"
     },
     {
       "type": "header",

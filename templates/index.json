@@ -236,7 +236,7 @@
         "button_text_color": "#ffffff",
         "show_view_all": true,
         "view_all_text": "SHOP NOW",
-        "view_all_link": "shopify://collections/all",
+        "view_all_link": "shopify://collections/products",
         "button_position": "below_products",
         "button_alignment": "center",
         "buttons_style": "filled",

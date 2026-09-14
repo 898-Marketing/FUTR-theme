@@ -275,7 +275,7 @@
         "heading_color": "#ffffff",
         "heading_font_size_desktop": 46,
         "heading_font_size_mobile": 28,
-        "badge_image": "shopify://shop_images/FUTR_logo-White-03.png",
+        "badge_image": "shopify://shop_images/YOUTH_SPORTS_logo_white.png",
         "badge_alt": "",
         "badge_position": "top_right",
         "badge_size": 140,
@@ -404,7 +404,7 @@
         "color_body_pill": "#5e85a7",
         "color_mind": "#3e82e6",
         "color_mind_pill": "#bad4ff",
-        "color_energy": "#312af0",
+        "color_energy": "#064982",
         "color_energy_pill": "#6561e1"
       }
     },
@@ -502,7 +502,7 @@
       "settings": {
         "background_image": "shopify://shop_images/recover-collection.jpg",
         "background_overlay_color": "#000000",
-        "background_overlay_opacity": 75,
+        "background_overlay_opacity": 85,
         "heading_prefix": "How much",
         "heading_highlight": "Gametime",
         "heading_subtitle": "should my athlete take?",

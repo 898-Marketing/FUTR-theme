@@ -41,7 +41,7 @@
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "caption_bg_color": "rgba(0,0,0,0)",
         "image_overlay_color": "#242424",
         "image_overlay_opacity": 28
@@ -96,7 +96,7 @@
       ],
       "settings": {
         "title": "GET IN TOUCH",
-        "description": "<p>Have a question, or want a product recommendation? </p>",
+        "description": "<p>Questions, ideas, partnerships — we’re here for all of it.</p>",
         "section_header_alignment": "center",
         "form_width": "narrow",
         "section_padding_top": 60,

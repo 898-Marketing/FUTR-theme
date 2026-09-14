@@ -92,8 +92,8 @@
   <script src="{{ 'sticky-add-to-cart-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="sticky-add-to-cart"></script>
 </safe-load-scripts>
 
-<div 
-  class="wrapper-spacing--h wrapper-spacing--v--template product-section{% if request.visual_preview_mode %} animated fadeIn{% else %} show-on-scroll{% endif %}"
+<div
+  class="wrapper-spacing--h wrapper-spacing--v--template product-section color-scheme--{{ section.settings.colors }}{% if request.visual_preview_mode %} animated fadeIn{% else %} show-on-scroll{% endif %}"
   data-wetheme-section-type="template--product"
   data-wetheme-section-id="{{ section.id }}"
 >
@@ -2037,6 +2037,30 @@
     {
       "type": "header",
       "content": "t:all.Color"
+    },
+    {
+      "type": "select",
+      "id": "colors",
+      "label": "t:all.Color_scheme",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "t:all.Default"
+        },
+        {
+          "value": "light",
+          "label": "t:all.First"
+        },
+        {
+          "value": "accent",
+          "label": "t:all.Second"
+        },
+        {
+          "value": "dark",
+          "label": "t:all.Third"
+        }
+      ]
     },
     {
       "type": "checkbox",

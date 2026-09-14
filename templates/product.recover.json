@@ -165,6 +165,7 @@
         "section_description": "",
         "section_header_alignment": "left",
         "faq_icon": "plus_minus",
+        "accordion_image": "shopify://shop_images/STATS-PDP_WEB_RECOVER-BANNER_VERTICAL.jpg",
         "custom_split": true,
         "image_split_percent": 45,
         "image_max_width": 600,

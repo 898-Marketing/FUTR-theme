@@ -90,6 +90,7 @@
         "override_form_labels_size": false,
         "labels_font_size": 20,
         "app_margin_bottom": 20,
+        "colors": "dark",
         "product_form_bg_override": false,
         "product_form_bg": "#e4ebf1"
       }

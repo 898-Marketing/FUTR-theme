@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "template--page",
+      "disabled": true,
+      "settings": {
+        "page_title_enabled": true,
+        "page_width": "full-width"
+      }
+    },
+    "image_with_text_overlay_6W84Ht": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_ffJinL": {
+          "type": "heading",
+          "settings": {
+            "title": "<strong>THE FUTR STANDARD</strong>",
+            "font_size_desktop": 60,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_EJQHE8": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>YOUTH ATHLETES DESERVE THEIR OWN STANDARD.</strong></p>",
+            "font_size_desktop": 20,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_ffJinL",
+        "text_EJQHE8"
+      ],
+      "name": "t:sections.image--image-with-text-overlay.presets.name",
+      "settings": {
+        "image_desktop": "shopify://shop_images/field.jpg",
+        "height_desktop": "550px",
+        "height_desktop_custom": 450,
+        "text_position_desktop": "bottom_left",
+        "text_alignment_desktop": "left",
+        "caption_width_desktop": 50,
+        "height_mobile": "original",
+        "height_mobile_custom": 400,
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#FFFFFF",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 50
+      }
+    },
+    "image_with_text_gWGJaP": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_GDCCcY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Young athletes are training harder and more often than ever. Year-round seasons. Long tournament weekends. Early mornings. Late practices. <br/></p><p>Their routines are becoming more demanding, and they’re paying attention to the routines of their parents and coaches around them, too. They see the hydration packet, the protein shake, the products used before and after a workout — and they want habits of their own.</p><p>That’s a good thing. It means the example is landing. But wanting in shouldn’t mean reaching for something built for someone twice their age.</p><p>FUTR isn’t here to compete with the products already out there. FUTR is here because young athletes deserve an option designed around them from the start.</p>",
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "text_GDCCcY"
+      ],
+      "name": "t:sections.image--image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2026-09-14_at_10.51.54_AM.png",
+        "layout": "left",
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "colors": "dark"
+      }
+    },
+    "accordion_QrGGjQ": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_iEpnMz": {
+          "type": "tab_content",
+          "settings": {
+            "question": "EXPERT-LED FORMULATION + REVIEW",
+            "open_by_default": false,
+            "text": "<p>FUTR’s formulas are led by Tim Ziegenfuss, PhD, FISSN, CSCS, an experienced sports nutrition researcher and former President of the International Society of Sports Nutrition. But formulation does not stop with a single expert.</p><p><br/></p><p>Each FUTR formula is also reviewed by a multidisciplinary team that includes pediatric registered dietitians, pediatricians, sports medicine physicians, and sports nutrition professionals, who provide feedback on ingredient selection, serving amounts, intended use, and overall formula design.</p><p><br/></p><p>This collaborative process helps us evaluate each product and keep the needs of healthy, developing athletes at the center of every decision.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_PfynXt": {
+          "type": "tab_content",
+          "settings": {
+            "question": "RIGOROUS QUALITY STANDARDS",
+            "open_by_default": false,
+            "text": "<p>FUTR products are manufactured in FDA-registered, GMP-certified facilities that follow strict quality and manufacturing controls throughout the production process.</p><p>From ingredient sourcing and raw material verification to formulation, flavor development, manufacturing, and finished-product testing, every partner involved in bringing a FUTR product to market is held to rigorous standards for quality, consistency, and accountability.</p>",
+            "page": ""
+          }
+        },
+        "tab_content_y9MaHW": {
+          "type": "tab_content",
+          "settings": {
+            "question": "PURPOSE-BUILT FOR YOUTH ATHLETES",
+            "open_by_default": false,
+            "text": "<p>We did not begin by asking which ingredients are popular in adult sports nutrition and whether they could be adapted for youth. We started with what youth athletes need across every phase of sport and development, then built the formulas around those needs.</p><p>Every ingredient is intentionally selected based on its specific role within the formula, the amount used, the intended use of the product, and its appropriateness for healthy, developing athletes.</p><p>Our formulas are also designed to work both independently and as part of the complete FUTR system. Ingredient overlap is considered across products so that when they are used together as directed, combined intake remains within appropriate daily levels.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_iEpnMz",
+        "tab_content_PfynXt",
+        "tab_content_y9MaHW"
+      ],
+      "name": "t:sections.accordion.presets.name",
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_header_alignment": "center",
+        "faq_icon": "plus_minus",
+        "section_width": "narrow",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_6W84Ht",
+    "image_with_text_gWGJaP",
+    "accordion_QrGGjQ"
+  ]
+}

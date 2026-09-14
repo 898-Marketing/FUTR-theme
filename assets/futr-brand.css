@@ -205,3 +205,17 @@ product-media:has(.media-ratio--wide) {
   aspect-ratio: 4 / 3 !important;
 }
 
+/* Selected variant "pill" (text swatch, e.g. Size/Flavor) currently flips to
+   a plain --text-color background when chosen. Match it to the same blue
+   used by the Add to Cart / primary buttons instead, using the same
+   variable those buttons use so both stay in sync with the brand color.
+   Scoped to exclude .color swatches (actual color/image pickers), which use
+   their own inline swatch color and shouldn't be recolored blue. */
+.swatch-element:not(.color) input:checked + label {
+  background: var(--primary-btn-bg-color) !important;
+  color: var(--primary-btn-text-color) !important;
+}
+.swatch-element:not(.color) input:checked + label:after {
+  background: var(--primary-btn-text-color) !important;
+}
+

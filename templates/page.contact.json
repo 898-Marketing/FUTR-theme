@@ -95,8 +95,8 @@
         "template--14753984643142__057a50d5-3fee-4ea2-a832-2d38f47b959a-16788945317184afd8-3"
       ],
       "settings": {
-        "title": "GET IN TOUCH",
-        "description": "<p>Questions, ideas, partnerships — we’re here for all of it.</p>",
+        "title": "Questions, ideas, partnerships — we’re here for all of it.",
+        "description": "",
         "section_header_alignment": "center",
         "form_width": "narrow",
         "section_padding_top": 60,
@@ -127,11 +127,50 @@
         "section_padding_bottom": 0,
         "colors": "light"
       }
+    },
+    "accordion_yJgrfP": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_WC4tyq": {
+          "type": "tab_content",
+          "settings": {
+            "question": "CUSTOMER SERVICE + PRODUCT QUESTIONS",
+            "open_by_default": false,
+            "text": "<p>Have a question about an order, a FUTR product, or how something works? Our team is here to help.</p><p><a href=\"mailto:info@futrperformance.com\">info@futrperformance.com</a></p>",
+            "page": ""
+          }
+        },
+        "tab_content_DfjwCg": {
+          "type": "tab_content",
+          "settings": {
+            "question": "PARTNERSHIPS, EVENTS + SPONSORSHIPS",
+            "open_by_default": false,
+            "text": "<p>FUTR is always looking for the right partners to help us support the next generation of athletes.</p><p>We’re committed to working with youth sports organizations, teams, events, coaches, and like-minded brands that share our belief in helping young athletes perform, develop, and build better habits around sport.</p><p>For partnership, event, or sponsorship inquiries, contact:</p><p><a href=\"mailto:Raul@futrperformance.com\">Raul@futrperformance.com</a></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_WC4tyq",
+        "tab_content_DfjwCg"
+      ],
+      "name": "t:sections.accordion.presets.name",
+      "settings": {
+        "title": "Frequently asked questions",
+        "description": "",
+        "section_header_alignment": "center",
+        "faq_icon": "plus_minus",
+        "section_width": "narrow",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
+      }
     }
   },
   "order": [
     "image_with_text_overlay_mQa7Q6",
     "057a50d5-3fee-4ea2-a832-2d38f47b959a",
-    "map_mWwEmV"
+    "map_mWwEmV",
+    "accordion_yJgrfP"
   ]
 }

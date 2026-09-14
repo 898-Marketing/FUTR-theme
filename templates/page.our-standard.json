@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "template--page",
+      "disabled": true,
       "settings": {
         "page_title_enabled": true,
         "page_width": "full-width"
@@ -44,7 +45,8 @@
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
-        "height_desktop": "original",
+        "image_desktop": "shopify://shop_images/field.jpg",
+        "height_desktop": "550px",
         "height_desktop_custom": 450,
         "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "left",
@@ -61,7 +63,7 @@
         "text_color": "#FFFFFF",
         "caption_bg_color": "rgba(0,0,0,0)",
         "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "image_overlay_opacity": 50
       }
     },
     "image_with_text_gWGJaP": {

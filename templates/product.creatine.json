@@ -90,6 +90,7 @@
         "override_form_labels_size": false,
         "labels_font_size": 20,
         "app_margin_bottom": 20,
+        "colors": "white",
         "product_form_bg_override": false,
         "product_form_bg": "#e4ebf1"
       }
@@ -100,7 +101,7 @@
         "text_KkT3AC": {
           "type": "text",
           "settings": {
-            "text": "READY BEFORE THE GAME STARTS",
+            "text": "SUPPORT THE WORK THEY PUT IN.",
             "font": "heading",
             "style": "fill",
             "font_size_desktop": 48,
@@ -165,7 +166,6 @@
         "section_description": "",
         "section_header_alignment": "left",
         "faq_icon": "plus_minus",
-        "accordion_image": "shopify://shop_images/PDP_WEB_BANNER_VERTICAL-pregame.jpg",
         "custom_split": true,
         "image_split_percent": 45,
         "image_max_width": 600,
@@ -194,22 +194,22 @@
         "highlight_a1b2c3": {
           "type": "highlight",
           "settings": {
-            "heading": "Feel physically ready",
-            "text": "<p>Taurine and Citrulline support exercise performance, healthy blood flow and a feeling of readiness before activity.</p>"
+            "heading": "MUSCLE ENERGY",
+            "text": "<p>Creatine helps supply energy to muscles during short, high-intensity efforts—the repeated work that happens throughout practices, workouts, and competition.</p>"
           }
         },
         "highlight_d4e5f6": {
           "type": "highlight",
           "settings": {
-            "heading": "Lock in focus",
-            "text": "<p>Formulated with Cognizin® Citicoline, clinically studied in youth for attention, plus L-Tyrosine to support focus and mental clarity.</p>"
+            "heading": "STRENGTH + RECOVERY",
+            "text": "<p>With consistent daily use, creatine helps support strength and power during training while also supporting muscle recovery after activity.</p>"
           }
         },
         "highlight_g7h8i9": {
           "type": "highlight",
           "settings": {
-            "heading": "Support muscle function",
-            "text": "<p>Taurine helps support muscle function and hydration, helping to reduce feelings of fatigue.</p>"
+            "heading": "EASY DAILY ROUTINE",
+            "text": "<p>Two watermelon gummies a day. No scooping. No mixing. Just an easy way to make creatine part of the daily routine.</p>"
           }
         }
       },
@@ -223,7 +223,7 @@
         "image_mobile": "shopify://shop_images/field.jpg",
         "overlay_color": "#0a1420",
         "overlay_opacity": 70,
-        "heading": "The first true pregame for youth sports.",
+        "heading": "BUILT FOR THE WORK. MADE FOR THE ROUTINE.",
         "heading_color": "#ffffff",
         "heading_font_size_desktop": 46,
         "heading_font_size_mobile": 28,
@@ -338,6 +338,7 @@
         "ingredient_8H4jkY",
         "ingredient_XBtib3"
       ],
+      "disabled": true,
       "custom_css": [
         ".ing-is {font-size: 16px;}",
         ".ing-why {font-size: 16px;}"
@@ -356,7 +357,7 @@
         "color_body_pill": "#5e85a7",
         "color_mind": "#3e82e6",
         "color_mind_pill": "#bad4ff",
-        "color_energy": "#3E82E6",
+        "color_energy": "#3e82e6",
         "color_energy_pill": "#6561e1"
       }
     },
@@ -419,6 +420,7 @@
         "feature_YQcHz9",
         "feature_H6Dr9f"
       ],
+      "disabled": true,
       "custom_css": [
         ".dt-col-head {font-size: 18px;}",
         ".dt-col-head__sub {font-size: 14px;}",
@@ -511,6 +513,40 @@
         "heading_accent_color": "#8fbf2e",
         "heading_size": 36,
         "badge_icon_size": 160
+      }
+    },
+    "image_with_text_yxtrfW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BRCEyA": {
+          "type": "heading",
+          "settings": {
+            "title": "CREATINE, EXPLAINED.",
+            "heading_bottom_spacing": 15
+          }
+        },
+        "text_cdxe49": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Creatine is a naturally occurring compound the body makes and also gets from foods like meat and fish. Most creatine is stored in muscle, where it helps support the energy muscles use during activity. Creatine monohydrate is one of the most studied ingredients in sports nutrition, with decades of research examining its role in exercise, muscle function, strength, and cognition. </p><p>Creatine supplementation works best with consistent daily use and is designed to support the work athletes are already putting in—helping support muscle energy, muscle recovery, and strength and power in athletes who exercise regularly.</p>",
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_BRCEyA",
+        "text_cdxe49"
+      ],
+      "name": "t:sections.image--image-with-text.presets.name",
+      "settings": {
+        "layout": "left",
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "colors": "accent"
       }
     },
     "product_slideshow_fzVPYr": {
@@ -680,6 +716,7 @@
     "ingredients_grid_yzP3LB",
     "dosage_table_VQ8Jg8",
     "phase_columns_FWLXfK",
+    "image_with_text_yxtrfW",
     "product_slideshow_fzVPYr",
     "image_with_text_overlay_dc7Fbw",
     "accordion_fYz9RV"

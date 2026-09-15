@@ -466,6 +466,14 @@
             "button_label": "Shop INTRA"
           }
         },
+        "product_KWVL6d": {
+          "type": "product",
+          "settings": {
+            "product": "creatine",
+            "description": "",
+            "button_label": "Shop Creatine"
+          }
+        },
         "product_7NL8AJ": {
           "type": "product",
           "settings": {
@@ -485,6 +493,7 @@
       },
       "block_order": [
         "product_xwLNW6",
+        "product_KWVL6d",
         "product_7NL8AJ",
         "product_N4PgQ9"
       ],

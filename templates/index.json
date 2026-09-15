@@ -395,6 +395,14 @@
     "focused_product_gallery_qB8cNM": {
       "type": "focused-product-gallery",
       "blocks": {
+        "product_Ni7QXL": {
+          "type": "product",
+          "settings": {
+            "product": "creatine",
+            "description": "",
+            "button_label": "Shop now"
+          }
+        },
         "product_MdWBqQ": {
           "type": "product",
           "settings": {
@@ -424,6 +432,7 @@
         }
       },
       "block_order": [
+        "product_Ni7QXL",
         "product_MdWBqQ",
         "product_JPbXe6",
         "product_BKtwRE"

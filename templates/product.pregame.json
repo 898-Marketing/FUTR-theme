@@ -90,6 +90,7 @@
         "override_form_labels_size": false,
         "labels_font_size": 20,
         "app_margin_bottom": 20,
+        "colors": "white",
         "product_form_bg_override": false,
         "product_form_bg": "#e4ebf1"
       }
@@ -356,7 +357,7 @@
         "color_body_pill": "#5e85a7",
         "color_mind": "#3e82e6",
         "color_mind_pill": "#bad4ff",
-        "color_energy": "#3E82E6",
+        "color_energy": "#3e82e6",
         "color_energy_pill": "#6561e1"
       }
     },
@@ -539,12 +540,21 @@
             "description": "",
             "button_label": "Shop PRE"
           }
+        },
+        "product_rF47rW": {
+          "type": "product",
+          "settings": {
+            "product": "creatine",
+            "description": "",
+            "button_label": "Shop Creatine"
+          }
         }
       },
       "block_order": [
         "product_DxELga",
         "product_DL7kCk",
-        "product_Jdq6jY"
+        "product_Jdq6jY",
+        "product_rF47rW"
       ],
       "name": "t:sections.product-slideshow.name",
       "settings": {

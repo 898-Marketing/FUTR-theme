@@ -552,7 +552,7 @@
     "product_slideshow_fzVPYr": {
       "type": "product-slideshow",
       "blocks": {
-        "product_DxELga": {
+        "product_ka7d3z": {
           "type": "product",
           "settings": {
             "product": "gametime",
@@ -578,7 +578,7 @@
         }
       },
       "block_order": [
-        "product_DxELga",
+        "product_ka7d3z",
         "product_DL7kCk",
         "product_Jdq6jY"
       ],

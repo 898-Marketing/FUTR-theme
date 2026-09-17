@@ -300,7 +300,7 @@
         "text_alignment_desktop": "center",
         "caption_width_desktop": 37,
         "image_mobile": "shopify://shop_images/system-mobile.jpg",
-        "height_mobile": "original",
+        "height_mobile": "400px",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",

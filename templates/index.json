@@ -293,14 +293,14 @@
         "button_fGGFC6"
       ],
       "settings": {
-        "image_desktop": "shopify://shop_images/system-banner3c_cb31c968-4d09-40ff-a30b-09e220b8097a.jpg",
-        "height_desktop": "custom",
-        "height_desktop_custom": 450,
+        "image_desktop": "shopify://shop_images/system-banner3c.jpg",
+        "height_desktop": "original",
+        "height_desktop_custom": 100,
         "text_position_desktop": "right",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 37,
         "image_mobile": "shopify://shop_images/system-mobile.jpg",
-        "height_mobile": "400px",
+        "height_mobile": "original",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",

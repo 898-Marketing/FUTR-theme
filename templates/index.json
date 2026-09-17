@@ -439,8 +439,8 @@
       ],
       "name": "t:sections.focused-product-gallery.name",
       "settings": {
-        "title": "",
-        "description": "",
+        "title": "Fuel Every Phrase of Play",
+        "description": "<p>Every FUTR Product was designed to work together as part of a system.</p>",
         "section_header_alignment": "center",
         "image_shape": "natural",
         "show_vendor": false,

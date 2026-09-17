@@ -522,6 +522,9 @@
         "list_item_believe_4",
         "list_item_believe_5"
       ],
+      "custom_css": [
+        "h2{padding-top: 20px;}"
+      ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/banner-half-image.jpg",

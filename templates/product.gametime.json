@@ -22,7 +22,7 @@
         "text_aCXWAc": {
           "type": "text",
           "settings": {
-            "title": "<p>{{ product.metafields.custom.blurb.value }}</p>",
+            "title": "<p>Fuel and Hydration Formula For Lasting Endurance</p>",
             "margin_bottom": 30,
             "text_color": "#242424"
           }

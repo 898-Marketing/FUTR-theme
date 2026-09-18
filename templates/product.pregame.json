@@ -22,7 +22,7 @@
         "text_cnBFMb": {
           "type": "text",
           "settings": {
-            "title": "<p>{{ product.metafields.custom.blurb.value }}</p>",
+            "title": "<p>Stimulant-Free Energy & Focus Formula</p>",
             "margin_bottom": 30,
             "text_color": "#242424"
           }

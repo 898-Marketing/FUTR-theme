@@ -19,6 +19,14 @@
             "margin_bottom": 0
           }
         },
+        "text_grHmmX": {
+          "type": "text",
+          "settings": {
+            "title": "<p>Recovery & Hydration Formula</p>",
+            "margin_bottom": 30,
+            "text_color": "#242424"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -66,6 +74,7 @@
       },
       "block_order": [
         "title",
+        "text_grHmmX",
         "price",
         "options",
         "buy_buttons",

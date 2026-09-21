@@ -646,7 +646,7 @@
         "button_krwAQz": {
           "type": "button",
           "settings": {
-            "first_button_link": "shopify://products/t-shirt",
+            "first_button_link": "shopify://collections/futr-merch",
             "first_button_label": "Add to Cart Now!",
             "second_button_link": "",
             "second_button_label": "",

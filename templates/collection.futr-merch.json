@@ -122,7 +122,7 @@
         "button_qW77gt": {
           "type": "button",
           "settings": {
-            "first_button_link": "shopify://products/t-shirt",
+            "first_button_link": "shopify://collections/products",
             "first_button_label": "Add to Cart Now!",
             "second_button_link": "",
             "second_button_label": "",

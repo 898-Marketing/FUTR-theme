@@ -1,0 +1,213 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.collection-wrapper.wrapper",
+  "sections": {
+    "collection-header-spotlight": {
+      "type": "collection-header",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumbs": false,
+        "show_title": false,
+        "show_description": false,
+        "show_image_desktop": false,
+        "min_height_desktop": "original",
+        "content_position": "left",
+        "caption_width_desktop": 50,
+        "show_image_mobile": false,
+        "min_height_mobile": "original",
+        "content_position_mobile": "center",
+        "enable_parallax": false,
+        "enable_fade": false,
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "colors": "white",
+        "caption_bg_color": "#0000008c",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
+      }
+    },
+    "image_with_text_overlay_EC4zqE": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_cqmqJ4": {
+          "type": "heading",
+          "settings": {
+            "title": "BUILT FOR EVERYDAY",
+            "font_size_desktop": 60,
+            "font_size_mobile": 44,
+            "heading_bottom_spacing": 25
+          }
+        }
+      },
+      "block_order": [
+        "heading_cqmqJ4"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/FUTR-hero-lifestyle-goldenhour.png",
+        "height_desktop": "custom",
+        "height_desktop_custom": 570,
+        "text_position_desktop": "bottom_left",
+        "text_alignment_desktop": "left",
+        "caption_width_desktop": 79,
+        "height_mobile": "250px",
+        "height_mobile_custom": 400,
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
+      }
+    },
+    "product-grid": {
+      "type": "template--collection",
+      "settings": {
+        "products-per-page": 8,
+        "desktop-products-per-row": 4,
+        "mobile-products-per-row": "2",
+        "pagination_options": "pagination_load_more",
+        "desktop_position": "sidebar",
+        "enable_sorting": false,
+        "enable_filtering": false,
+        "enable_collection_title": false,
+        "enable_collection_description": false,
+        "show_swatch_filter_labels": true,
+        "show_highlight": false,
+        "highlight_position": "below_price",
+        "highlight_heading": "Why we love it",
+        "highlight_reference": "",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "highlight_background_color": "rgba(0,0,0,0)",
+        "highlight_alignment": "left",
+        "highlight_font_size": "medium",
+        "highlight_collapsible_tab": true,
+        "highlight_button_borders": false
+      }
+    },
+    "image_with_text_overlay_hJLNM8": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_abDF7B": {
+          "type": "heading",
+          "settings": {
+            "title": "BUY ANY 3 ITEMS GET A FREE T-SHIRT!",
+            "font_size_desktop": 45,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_MbtRxb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't forget to add a T-shirt to your cart during checkout!</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_qW77gt": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "shopify://products/t-shirt",
+            "first_button_label": "Add to Cart Now!",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "buttons_background": "#e68819",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_abDF7B",
+        "text_MbtRxb",
+        "button_qW77gt"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/gametime-desktop.jpg",
+        "height_desktop": "450px",
+        "height_desktop_custom": 450,
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 98,
+        "image_mobile": "shopify://shop_images/gametime-mobile-banner.jpg",
+        "height_mobile": "250px",
+        "height_mobile_custom": 400,
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "parallax",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
+      }
+    },
+    "text_adverts_ER8Rr8": {
+      "type": "text-adverts",
+      "blocks": {
+        "text_YYXCVm": {
+          "type": "text",
+          "settings": {
+            "heading": "Free shipping",
+            "subheading": "Shout about your unique selling points",
+            "link": ""
+          }
+        },
+        "text_ipg9Ve": {
+          "type": "text",
+          "settings": {
+            "heading": "Hassle free returns",
+            "subheading": "Shout about your unique selling points",
+            "link": ""
+          }
+        },
+        "text_UBRHKL": {
+          "type": "text",
+          "settings": {
+            "heading": "eco friendly packaging",
+            "subheading": "Shout about your unique selling points",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_YYXCVm",
+        "text_ipg9Ve",
+        "text_UBRHKL"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "colors": "light"
+      }
+    }
+  },
+  "order": [
+    "collection-header-spotlight",
+    "image_with_text_overlay_EC4zqE",
+    "product-grid",
+    "image_with_text_overlay_hJLNM8",
+    "text_adverts_ER8Rr8"
+  ]
+}

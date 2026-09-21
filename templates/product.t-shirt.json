@@ -1,0 +1,706 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-form": {
+      "type": "template--product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_font": "h2",
+            "margin_bottom": 0
+          }
+        },
+        "text_cnBFMb": {
+          "type": "text",
+          "settings": {
+            "title": "<p>Stimulant-Free Energy & Focus Formula</p>",
+            "margin_bottom": 30,
+            "text_color": "#242424"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_font": "h3",
+            "shipping_policy": false,
+            "tax_included": false,
+            "margin_bottom": 20
+          }
+        },
+        "options": {
+          "type": "options",
+          "settings": {
+            "variant_style": "swatches",
+            "hide_out_of_stock_variants": false,
+            "thumbnail_changes_variant": false,
+            "size_guide_label": "Size guide",
+            "size_guide_page": "",
+            "size_option_name": "Size",
+            "size_guide_override_heading_font_size": false,
+            "size_guide_heading_font_size": 24,
+            "margin_bottom": 23
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_smart_checkout": true,
+            "enable_gift_card_recipient_form": true,
+            "margin_bottom": 30,
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "product_description_e48Ujx": {
+          "type": "product-description",
+          "settings": {
+            "collapsible_tab": false,
+            "heading": "Description",
+            "open_by_default": false,
+            "margin_bottom": 30
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "text_cnBFMb",
+        "price",
+        "options",
+        "buy_buttons",
+        "product_description_e48Ujx"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.product-single .product-sticky {position: static !important; top: 0 !important; }}"
+      ],
+      "settings": {
+        "enable_sticky": true,
+        "enable_sticky_add_to_cart": false,
+        "media_position": "left",
+        "image_size": "medium",
+        "image_shape": "square",
+        "show_only_variant_media": false,
+        "image-display": "thumbnails",
+        "thumbnail_position": "below",
+        "image_display_mobile": "paginated",
+        "enable_video_loop": false,
+        "enable_autoplay": false,
+        "show_video_controls": false,
+        "override_form_labels_size": false,
+        "labels_font_size": 20,
+        "app_margin_bottom": 20,
+        "colors": "dark",
+        "product_form_bg_override": false,
+        "product_form_bg": "#e4ebf1"
+      }
+    },
+    "scrolling_banner_mFTKkU": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "text_KkT3AC": {
+          "type": "text",
+          "settings": {
+            "text": "READY BEFORE THE GAME STARTS",
+            "font": "heading",
+            "style": "fill",
+            "font_size_desktop": 48,
+            "font_size_mobile": 28
+          }
+        },
+        "image_MNLXzG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FUTR_logo-White-03.png",
+            "height_desktop": 60,
+            "height_mobile": 60,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_KkT3AC",
+        "image_MNLXzG"
+      ],
+      "custom_css": [
+        "[data-wetheme-section-type=\"scrolling-banner\"] {--color-scheme-background-color: #4086c4; background-color: var(--color-scheme-background-color) !important;}"
+      ],
+      "name": "t:sections.scrolling-banner.name",
+      "settings": {
+        "title": "",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_fade": false,
+        "borders": false,
+        "animation_direction": "normal",
+        "animation_speed": 80,
+        "section_padding_top": 5,
+        "section_padding_bottom": 5,
+        "space_between_blocks_desktop": 44,
+        "space_between_blocks_mobile": 20,
+        "rotate": "0",
+        "override_border_radius": false,
+        "color_scheme": "white"
+      }
+    },
+    "accordion_with_image_cx6zdK": {
+      "type": "accordion-with-image",
+      "blocks": {
+        "accordion_mkNgHY": {
+          "type": "accordion",
+          "repeater": "{{ product.metafields.custom.the_why.value }}",
+          "settings": {
+            "accordion_header": "{{ block.repeater.question.value }}",
+            "open_by_default": false,
+            "text": "{{ block.repeater.answer | metafield_tag }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_mkNgHY"
+      ],
+      "name": "t:sections.product--accordion-with-image.presets.name",
+      "settings": {
+        "section_title": "THE 'W'",
+        "section_description": "",
+        "section_header_alignment": "left",
+        "faq_icon": "plus_minus",
+        "accordion_image": "shopify://shop_images/PDP_WEB_BANNER_VERTICAL-pregame.jpg",
+        "custom_split": true,
+        "image_split_percent": 45,
+        "image_max_width": 600,
+        "square_image": true,
+        "center_align_content": true,
+        "heading_above_accordion": true,
+        "title": "",
+        "text": "",
+        "link": "",
+        "button_text": "",
+        "image_position_desktop": "right",
+        "image_position_mobile": "top",
+        "section_width": "content",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "image--background-color": "rgba(0,0,0,0)",
+        "image--text-color": "#333333",
+        "button_background_color": "#242424",
+        "button_text_color": "#ffffff",
+        "colors": "light"
+      }
+    },
+    "product_hero_highlights_vSD6gQ": {
+      "type": "product-hero-highlights",
+      "blocks": {
+        "highlight_a1b2c3": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Feel physically ready",
+            "text": "<p>Taurine and Citrulline support exercise performance, healthy blood flow and a feeling of readiness before activity.</p>"
+          }
+        },
+        "highlight_d4e5f6": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Lock in focus",
+            "text": "<p>Formulated with Cognizin® Citicoline, clinically studied in youth for attention, plus L-Tyrosine to support focus and mental clarity.</p>"
+          }
+        },
+        "highlight_g7h8i9": {
+          "type": "highlight",
+          "settings": {
+            "heading": "Support muscle function",
+            "text": "<p>Taurine helps support muscle function and hydration, helping to reduce feelings of fatigue.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_a1b2c3",
+        "highlight_d4e5f6",
+        "highlight_g7h8i9"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/field.jpg",
+        "image_mobile": "shopify://shop_images/field.jpg",
+        "overlay_color": "#0a1420",
+        "overlay_opacity": 70,
+        "heading": "The first true pregame for youth sports.",
+        "heading_color": "#ffffff",
+        "heading_font_size_desktop": 46,
+        "heading_font_size_mobile": 28,
+        "badge_image": "shopify://shop_images/YOUTH_SPORTS_logo_white.png",
+        "badge_alt": "Specifically made for youth sports",
+        "badge_position": "top_right",
+        "badge_size": 140,
+        "badge_size_mobile": 90,
+        "content_max_width": 1200,
+        "content_padding_horizontal": 75,
+        "content_padding_horizontal_mobile": 20,
+        "section_padding_top": 100,
+        "section_padding_bottom": 100,
+        "section_padding_top_mobile": 40,
+        "section_padding_bottom_mobile": 40,
+        "heading_bottom_spacing": 40,
+        "card_gap": 24,
+        "card_padding": 24,
+        "card_bg_color": "#16305c",
+        "card_border_color": "#4a90d9",
+        "card_heading_color": "#ffffff",
+        "card_text_color": "#dbe6f2"
+      }
+    },
+    "ingredients_grid_yzP3LB": {
+      "type": "ingredients-grid",
+      "blocks": {
+        "ingredient_nh3i4w": {
+          "type": "ingredient",
+          "settings": {
+            "category": "mind",
+            "category_label": "Mind",
+            "name": "Cognizin®",
+            "sub": "Citicoline",
+            "dose": "",
+            "unit": "",
+            "description": "<p>A clinically studied form of citicoline, a nutrient the body uses to build healthy brain cell membranes.</p>",
+            "why_it_helps": "<p>Enhances focus, mental clarity, and reaction time — helping athletes stay sharp on and off the field.</p>"
+          }
+        },
+        "ingredient_gNG3ga": {
+          "type": "ingredient",
+          "settings": {
+            "category": "body",
+            "category_label": "Body",
+            "name": "Taurine",
+            "sub": "",
+            "dose": "",
+            "unit": "",
+            "description": "<p>An amino acid produced by the body and found in foods like fish, meat, and even breast milk.</p>",
+            "why_it_helps": "<p>Supports hydration, electrolyte balance, and normal muscle function during activity.</p>"
+          }
+        },
+        "ingredient_AhixFb": {
+          "type": "ingredient",
+          "settings": {
+            "category": "mind",
+            "category_label": "Mind",
+            "name": "L-Tyrosine",
+            "sub": "",
+            "dose": "",
+            "unit": "",
+            "description": "<p>An amino acid the body uses to help support focus and concentration.</p>",
+            "why_it_helps": "<p>Supports concentration, reaction time, and composure under stress, keeping youth athletes mentally sharp.</p>"
+          }
+        },
+        "ingredient_iCKEC4": {
+          "type": "ingredient",
+          "settings": {
+            "category": "energy",
+            "category_label": "Energy",
+            "name": "Vitamin B6",
+            "sub": "as Pyridoxine HCl",
+            "dose": "",
+            "unit": "",
+            "description": "<p>A water-soluble B vitamin that helps convert food into energy and supports normal nervous system function.</p>",
+            "why_it_helps": "<p>Helps support energy metabolism, focus, and normal muscle function.</p>"
+          }
+        },
+        "ingredient_8H4jkY": {
+          "type": "ingredient",
+          "settings": {
+            "category": "energy",
+            "category_label": "Energy",
+            "name": "Vitamin B12",
+            "sub": "as Methylcobalamin",
+            "dose": "",
+            "unit": "",
+            "description": "<p>An essential B-vitamin needed for red blood cell formation and nervous system health.</p>",
+            "why_it_helps": "<p>Supports oxygen transport in the blood and energy metabolism.</p>"
+          }
+        },
+        "ingredient_XBtib3": {
+          "type": "ingredient",
+          "settings": {
+            "category": "body",
+            "category_label": "Body",
+            "name": "Ingredient name",
+            "sub": "",
+            "dose": "0",
+            "unit": "mg",
+            "description": "",
+            "why_it_helps": ""
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_nh3i4w",
+        "ingredient_gNG3ga",
+        "ingredient_AhixFb",
+        "ingredient_iCKEC4",
+        "ingredient_8H4jkY",
+        "ingredient_XBtib3"
+      ],
+      "custom_css": [
+        ".ing-is {font-size: 16px;}",
+        ".ing-why {font-size: 16px;}"
+      ],
+      "name": "Ingredients Grid",
+      "settings": {
+        "kicker": "",
+        "heading": "BUILT WITH PURPOSEFUL INGREDIENTS",
+        "show_filter_tabs": false,
+        "show_category_pill": false,
+        "color_ink": "#0e1116",
+        "color_paper": "#f5f4ee",
+        "color_muted": "#5a5f66",
+        "color_faint": "#8a9099",
+        "color_body": "#064982",
+        "color_body_pill": "#5e85a7",
+        "color_mind": "#3e82e6",
+        "color_mind_pill": "#bad4ff",
+        "color_energy": "#3e82e6",
+        "color_energy_pill": "#6561e1"
+      }
+    },
+    "dosage_table_VQ8Jg8": {
+      "type": "dosage-table",
+      "blocks": {
+        "dosage_row_33K9K3": {
+          "type": "dosage_row",
+          "settings": {
+            "age_range": "8-11 YRS",
+            "weight_lb": "50-100 LB",
+            "weight_kg": "22-45 KG",
+            "serving_amount": "1/2 Serving",
+            "water_amount": "4-6 oz Water",
+            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
+            "water_instruction_accent": ""
+          }
+        },
+        "dosage_row_bqDUiB": {
+          "type": "dosage_row",
+          "settings": {
+            "age_range": "12+ YRS",
+            "weight_lb": "100 LB+",
+            "weight_kg": "45 KG+",
+            "serving_amount": "1 Serving",
+            "water_amount": "6-8 oz Water",
+            "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
+            "water_instruction_accent": "Can take a second serving later in the day."
+          }
+        },
+        "feature_CANHtt": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-30.png",
+            "label": "Hydration",
+            "description": "Supports fluid balance and performance"
+          }
+        },
+        "feature_YQcHz9": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-28.png",
+            "label": "Energy",
+            "description": "Helps fuel performance without stimulants"
+          }
+        },
+        "feature_H6Dr9f": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Icons-25.png",
+            "label": "Performance",
+            "description": "Supports blood flow & endurance"
+          }
+        }
+      },
+      "block_order": [
+        "dosage_row_33K9K3",
+        "dosage_row_bqDUiB",
+        "feature_CANHtt",
+        "feature_YQcHz9",
+        "feature_H6Dr9f"
+      ],
+      "custom_css": [
+        ".dt-col-head {font-size: 18px;}",
+        ".dt-col-head__sub {font-size: 14px;}",
+        ".dt-feature__label {font-size: 16px;}",
+        ".dt-feature__desc {font-size: 13px;}",
+        ".ing-is {font-size: 16px;}",
+        ".ing-why {font-size: 16px;}"
+      ],
+      "name": "Dosage Table",
+      "settings": {
+        "background_image": "shopify://shop_images/recover-collection.jpg",
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 85,
+        "heading_prefix": "How much",
+        "heading_highlight": "{{ product.title }}",
+        "heading_subtitle": "should my athlete take?",
+        "color_heading": "#ffffff",
+        "color_navy": "#000000",
+        "color_accent": "#8fbf30",
+        "color_water": "#1f88d2",
+        "header_icon_size": 54,
+        "row_icon_size": 54,
+        "footer_icon_size": 40,
+        "feature_icon_size": 54,
+        "age_column_label": "Age / Weight",
+        "serving_icon": "shopify://shop_images/SCOOP0.png",
+        "serving_column_label": "{{ product.title }}",
+        "serving_column_sublabel": "1 scoop / stick = 1 serving",
+        "water_icon": "shopify://shop_images/Icons-29.png",
+        "water_column_label": "Water",
+        "footer_text_white": "",
+        "footer_text_accent": ""
+      }
+    },
+    "phase_columns_FWLXfK": {
+      "type": "phase-columns",
+      "blocks": {
+        "phase_erXK9c": {
+          "type": "phase",
+          "settings": {
+            "bar_color": "#8fbf2e",
+            "bar_text": "PRE",
+            "badge_icon": "shopify://shop_images/FUTR-Icons-PRE.png",
+            "text": "<p>Prime the body with clean energy, sharper focus, and endurance so athletes start strong and stay confident.</p>",
+            "link_1_text": "Pregame",
+            "link_1_url": "shopify://products/pregame",
+            "link_2_text": "",
+            "link_2_url": ""
+          }
+        },
+        "phase_n8JH3T": {
+          "type": "phase",
+          "settings": {
+            "bar_color": "#4b2e83",
+            "bar_text": "INTRA",
+            "badge_icon": "shopify://shop_images/FUTR-Icons-INTRA.png",
+            "text": "<p>Replenish electrolytes, fuel working muscles, and keep athletes going strong through every quarter, inning, or event.</p>",
+            "link_1_text": "Gametime",
+            "link_1_url": "shopify://products/gametime",
+            "link_2_text": "",
+            "link_2_url": ""
+          }
+        },
+        "phase_9UM7Eg": {
+          "type": "phase",
+          "settings": {
+            "bar_color": "#f0642a",
+            "bar_text": "DAILY",
+            "badge_icon": "shopify://shop_images/FUTR-Icons-DAILY.png",
+            "text": "<p>Rebuild, recharge, and build a strong foundation with everyday essentials that support recovery, wellness, and development.</p>",
+            "link_1_text": "Recover+",
+            "link_1_url": "shopify://products/recover",
+            "link_2_text": "Creatine Gummies",
+            "link_2_url": "shopify://products/creatine"
+          }
+        }
+      },
+      "block_order": [
+        "phase_erXK9c",
+        "phase_n8JH3T",
+        "phase_9UM7Eg"
+      ],
+      "disabled": true,
+      "name": "Phase System Columns",
+      "settings": {
+        "section_bg_color": "#ffffff",
+        "heading_prefix": "THE FUTR SYSTEM: BUILT FOR EVERY PHASE OF PLAY SHOP EVERY PHASE",
+        "heading_color": "#0e1116",
+        "heading_accent": "SHOP EVERY PHASE",
+        "heading_accent_color": "#8fbf2e",
+        "heading_size": 36,
+        "badge_icon_size": 160
+      }
+    },
+    "product_slideshow_fzVPYr": {
+      "type": "product-slideshow",
+      "blocks": {
+        "product_DxELga": {
+          "type": "product",
+          "settings": {
+            "product": "gametime",
+            "description": "",
+            "button_label": "Shop INTRA"
+          }
+        },
+        "product_DL7kCk": {
+          "type": "product",
+          "settings": {
+            "product": "recover",
+            "description": "",
+            "button_label": "Shop RECOVER"
+          }
+        },
+        "product_Jdq6jY": {
+          "type": "product",
+          "settings": {
+            "product": "pregame",
+            "description": "",
+            "button_label": "Shop PRE"
+          }
+        },
+        "product_rF47rW": {
+          "type": "product",
+          "settings": {
+            "product": "creatine",
+            "description": "",
+            "button_label": "Shop Creatine"
+          }
+        }
+      },
+      "block_order": [
+        "product_DxELga",
+        "product_DL7kCk",
+        "product_Jdq6jY",
+        "product_rF47rW"
+      ],
+      "name": "t:sections.product-slideshow.name",
+      "settings": {
+        "title": "THE FUTR SYSTEM: PLAY, FULLY COVERED",
+        "description": "",
+        "section_header_alignment": "center",
+        "show_vendor": false,
+        "show_price": true,
+        "show_description": false,
+        "background_text": "SHOP EVERY PHASE",
+        "background_text_styling": "hard_shadow",
+        "background_text_opacity": 20,
+        "image_max_width": 65,
+        "background_text_font_size_desktop": 48,
+        "heading_font_size_desktop": 22,
+        "text_font_size_desktop": 16,
+        "image_max_width_mobile": 80,
+        "background_text_font_size_mobile": 36,
+        "heading_font_size_mobile": 22,
+        "text_font_size_mobile": 15,
+        "hover_navigation_desktop": "right",
+        "enable_autoplay": true,
+        "autoplay_speed": 3,
+        "button_style": "filled",
+        "override_button_colors": false,
+        "navigation_button_background_color": "#e68819",
+        "navigation_button_color": "#ffffff",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
+      }
+    },
+    "image_with_text_overlay_dc7Fbw": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_dyAWir": {
+          "type": "heading",
+          "settings": {
+            "title": "BUY ANY 3 ITEMS GET A FREE T-SHIRT!",
+            "font_size_desktop": 55,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_bKQnHT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't forget to add a T-shirt to your cart during checkout!</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_krwAQz": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "shopify://products/t-shirt",
+            "first_button_label": "Add to Cart Now!",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "buttons_background": "#e68819",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_dyAWir",
+        "text_bKQnHT",
+        "button_krwAQz"
+      ],
+      "name": "t:sections.image--image-with-text-overlay.presets.name",
+      "settings": {
+        "image_desktop": "shopify://shop_images/pregame-desktop-banner.jpg",
+        "height_desktop": "original",
+        "height_desktop_custom": 450,
+        "text_position_desktop": "center",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 96,
+        "image_mobile": "shopify://shop_images/mobile-pregame-banner.jpg",
+        "height_mobile": "original",
+        "height_mobile_custom": 400,
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "rgba(0,0,0,0)",
+        "image_overlay_color": "#242424",
+        "image_overlay_opacity": 0
+      }
+    },
+    "accordion_fYz9RV": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_bdLkjk": {
+          "type": "tab_content",
+          "repeater": "{{ product.metafields.custom.faqs.value }}",
+          "settings": {
+            "question": "{{ block.repeater.question.value }}",
+            "open_by_default": false,
+            "text": "{{ block.repeater.answer | metafield_tag }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_bdLkjk"
+      ],
+      "name": "t:sections.accordion.presets.name",
+      "settings": {
+        "title": "Pregame QA",
+        "description": "",
+        "section_header_alignment": "center",
+        "faq_icon": "plus_minus",
+        "section_width": "narrow",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "scrolling_banner_mFTKkU",
+    "accordion_with_image_cx6zdK",
+    "product_hero_highlights_vSD6gQ",
+    "ingredients_grid_yzP3LB",
+    "dosage_table_VQ8Jg8",
+    "phase_columns_FWLXfK",
+    "product_slideshow_fzVPYr",
+    "image_with_text_overlay_dc7Fbw",
+    "accordion_fYz9RV"
+  ]
+}

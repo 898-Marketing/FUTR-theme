@@ -52,10 +52,10 @@
         "heading_cqmqJ4"
       ],
       "settings": {
-        "image_desktop": "shopify://shop_images/Screenshot_2026-07-27_at_3.01.59_PM.png",
+        "image_desktop": "shopify://shop_images/hero-image.jpg",
         "height_desktop": "custom",
         "height_desktop_custom": 570,
-        "text_position_desktop": "bottom_left",
+        "text_position_desktop": "bottom_center",
         "text_alignment_desktop": "left",
         "caption_width_desktop": 79,
         "height_mobile": "250px",

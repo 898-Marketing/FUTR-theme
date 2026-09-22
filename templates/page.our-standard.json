@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
-        "image_desktop": "shopify://shop_images/field.jpg",
+        "image_desktop": "shopify://shop_images/our-standards.jpg",
         "height_desktop": "550px",
         "height_desktop_custom": 450,
         "text_position_desktop": "bottom_left",

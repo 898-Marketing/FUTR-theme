@@ -54,7 +54,7 @@
       "settings": {
         "image_desktop": "shopify://shop_images/hero-image.jpg",
         "height_desktop": "custom",
-        "height_desktop_custom": 570,
+        "height_desktop_custom": 630,
         "text_position_desktop": "bottom_center",
         "text_alignment_desktop": "left",
         "caption_width_desktop": 79,

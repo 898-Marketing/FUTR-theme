@@ -94,6 +94,18 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
+  {% comment %}
+    Opt-in animated-counter style — only applied when card_heading_animated_counter
+    is turned on for this section instance, so other pages using this same
+    section type (e.g. the product pages' benefit cards) are unaffected.
+  {% endcomment %}
+  {% if section.settings.card_heading_animated_counter %}
+    #shopify-section-{{ section.id }} .phh__card-heading--counter {
+      font-size: {{ section.settings.card_heading_font_size_desktop }}px;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+  {% endif %}
   #shopify-section-{{ section.id }} .phh__card-text {
     margin: 0;
     color: {{ section.settings.card_text_color }};
@@ -126,6 +138,11 @@
     #shopify-section-{{ section.id }} .phh__grid {
       grid-template-columns: 1fr;
     }
+    {% if section.settings.card_heading_animated_counter %}
+      #shopify-section-{{ section.id }} .phh__card-heading--counter {
+        font-size: {{ section.settings.card_heading_font_size_mobile }}px;
+      }
+    {% endif %}
   }
 {% endstyle %}
 
@@ -160,7 +177,10 @@
         {% for block in section.blocks %}
           <div class="phh__card" {{ block.shopify_attributes }}>
             {% if block.settings.heading != blank %}
-              <h3 class="phh__card-heading">{{ block.settings.heading }}</h3>
+              <h3
+                class="phh__card-heading{% if section.settings.card_heading_animated_counter %} phh__card-heading--counter{% endif %}"
+                {% if section.settings.card_heading_animated_counter %}data-animate-counter{% endif %}
+              >{{ block.settings.heading }}</h3>
             {% endif %}
             {% if block.settings.text != blank %}
               <div class="phh__card-text">{{ block.settings.text }}</div>
@@ -171,6 +191,63 @@
     {% endif %}
   </div>
 </div>
+
+{% if section.settings.card_heading_animated_counter %}
+  <script>
+    (function () {
+      var root = document.querySelector('#shopify-section-{{ section.id }}');
+      if (!root) return;
+
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function animateCounter(el) {
+        var finalText = el.textContent.trim();
+        var match = finalText.match(/-?\d+(\.\d+)?/);
+        if (!match || prefersReducedMotion) return;
+
+        var target = parseFloat(match[0]);
+        var decimals = (match[0].split('.')[1] || '').length;
+        var prefix = finalText.slice(0, match.index);
+        var suffix = finalText.slice(match.index + match[0].length);
+        var duration = 1400;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (startTime === null) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = (target * eased).toFixed(decimals);
+          el.textContent = prefix + current + suffix;
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            el.textContent = finalText;
+          }
+        }
+        window.requestAnimationFrame(step);
+      }
+
+      var counters = root.querySelectorAll('[data-animate-counter]');
+      if (!counters.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        counters.forEach(function (el) { animateCounter(el); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+
+      counters.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+{% endif %}
 
 {% schema %}
 {
@@ -392,6 +469,39 @@
       "step": 2,
       "unit": "px",
       "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Card heading style"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_heading_animated_counter",
+      "label": "Animate card headings as counters",
+      "info": "Counts up from 0 to the number in each card's heading when it scrolls into view (e.g. \"92%\"). Only affects this section instance.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "card_heading_font_size_desktop",
+      "label": "Counter size (desktop)",
+      "min": 24,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "default": 80,
+      "visible_if": "{{ section.settings.card_heading_animated_counter == true }}"
+    },
+    {
+      "type": "range",
+      "id": "card_heading_font_size_mobile",
+      "label": "Counter size (mobile)",
+      "min": 20,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 44,
+      "visible_if": "{{ section.settings.card_heading_animated_counter == true }}"
     },
     {
       "type": "header",

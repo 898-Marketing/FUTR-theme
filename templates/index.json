@@ -163,68 +163,6 @@
         "color_scheme": "light"
       }
     },
-    "product_hero_highlights_GgeymY": {
-      "type": "product-hero-highlights",
-      "blocks": {
-        "highlight_U4ELA9": {
-          "type": "highlight",
-          "settings": {
-            "heading": "92%",
-            "text": "<p>of parents say <strong>recovery or muscle support</strong> is among the most important benefits they want in a youth sports nutrition product.</p>"
-          }
-        },
-        "highlight_bE9fgW": {
-          "type": "highlight",
-          "settings": {
-            "heading": "86%",
-            "text": "<p>of parents rank <strong>hydration + endurance</strong> among the products they’d be most likely to purchase for their kids.</p>"
-          }
-        },
-        "highlight_VHJaLy": {
-          "type": "highlight",
-          "settings": {
-            "heading": "84%",
-            "text": "<p>of youth athletes want support for <strong>energy, focus or endurance</strong>.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "highlight_U4ELA9",
-        "highlight_bE9fgW",
-        "highlight_VHJaLy"
-      ],
-      "name": "Product Hero Highlights",
-      "settings": {
-        "image_desktop": "shopify://shop_images/image-_2.jpg",
-        "image_mobile": "shopify://shop_images/image-_2.jpg",
-        "overlay_color": "#0a1420",
-        "overlay_opacity": 55,
-        "heading": "Athletes and Parents told us what they want. We Built It.",
-        "heading_color": "#ffffff",
-        "heading_font_size_desktop": 46,
-        "heading_font_size_mobile": 28,
-        "badge_alt": "",
-        "badge_position": "top_right",
-        "badge_size": 140,
-        "badge_size_mobile": 90,
-        "content_max_width": 1200,
-        "content_padding_horizontal": 40,
-        "content_padding_horizontal_mobile": 20,
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "section_padding_top_mobile": 40,
-        "section_padding_bottom_mobile": 40,
-        "heading_bottom_spacing": 40,
-        "card_gap": 24,
-        "card_padding": 24,
-        "card_bg_color": "#16305c",
-        "card_border_color": "#4a90d9",
-        "card_heading_color": "#ffffff",
-        "card_text_color": "#dbe6f2",
-        "card_heading_animated_counter": true,
-        "card_heading_font_size_desktop": 80
-      }
-    },
     "rich_text_pW8NTx": {
       "type": "rich-text",
       "blocks": {
@@ -313,68 +251,67 @@
         "colors": "dark"
       }
     },
-    "image_with_text_overlay_qmXaFa": {
-      "type": "image-with-text-overlay",
+    "product_hero_highlights_GgeymY": {
+      "type": "product-hero-highlights",
       "blocks": {
-        "heading_UiRkcP": {
-          "type": "heading",
+        "highlight_U4ELA9": {
+          "type": "highlight",
           "settings": {
-            "title": "THE FUTR SYSTEM",
-            "font_size_desktop": 46,
-            "font_size_mobile": 28,
-            "heading_bottom_spacing": 25
+            "heading": "92%",
+            "text": "<p>of parents say <strong>recovery or muscle support</strong> is among the most important benefits they want in a youth sports nutrition product.</p>"
           }
         },
-        "text_VetieR": {
-          "type": "text",
+        "highlight_bE9fgW": {
+          "type": "highlight",
           "settings": {
-            "text": "<p>Every FUTR formula was built to work together as part of a system to fuel, hydrate, recharge and support the development of athletes.</p>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 20
+            "heading": "86%",
+            "text": "<p>of parents rank <strong>hydration + endurance</strong> among the products they’d be most likely to purchase for their kids.</p>"
           }
         },
-        "button_fGGFC6": {
-          "type": "button",
+        "highlight_VHJaLy": {
+          "type": "highlight",
           "settings": {
-            "first_button_link": "",
-            "first_button_label": "SHOP THE SYSTEM",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "filled",
-            "override_button_colors": true,
-            "buttons_background": "#3188d2",
-            "buttons_text": "#ffffff",
-            "buttons_bottom_spacing": 20
+            "heading": "84%",
+            "text": "<p>of youth athletes want support for <strong>energy, focus or endurance</strong>.</p>"
           }
         }
       },
       "block_order": [
-        "heading_UiRkcP",
-        "text_VetieR",
-        "button_fGGFC6"
+        "highlight_U4ELA9",
+        "highlight_bE9fgW",
+        "highlight_VHJaLy"
       ],
+      "name": "Product Hero Highlights",
       "settings": {
-        "image_desktop": "shopify://shop_images/system-banner3c.jpg",
-        "height_desktop": "original",
-        "height_desktop_custom": 100,
-        "text_position_desktop": "right",
-        "text_alignment_desktop": "center",
-        "caption_width_desktop": 37,
-        "image_mobile": "shopify://shop_images/system-mobile.jpg",
-        "height_mobile": "400px",
-        "height_mobile_custom": 400,
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
-        "section_link": "",
-        "animation_style": "none",
-        "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "text_color": "#ffffff",
-        "caption_bg_color": "#0000008c",
-        "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
+        "image_desktop": "shopify://shop_images/image-_2.jpg",
+        "image_mobile": "shopify://shop_images/image-_2.jpg",
+        "overlay_color": "#0a1420",
+        "overlay_opacity": 55,
+        "heading": "Athletes and Parents told us what they want. We Built It.",
+        "heading_color": "#ffffff",
+        "heading_font_size_desktop": 46,
+        "heading_font_size_mobile": 28,
+        "badge_alt": "",
+        "badge_position": "top_right",
+        "badge_size": 140,
+        "badge_size_mobile": 90,
+        "content_max_width": 1200,
+        "content_padding_horizontal": 40,
+        "content_padding_horizontal_mobile": 20,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "section_padding_top_mobile": 40,
+        "section_padding_bottom_mobile": 40,
+        "heading_bottom_spacing": 40,
+        "card_gap": 24,
+        "card_padding": 24,
+        "card_heading_animated_counter": true,
+        "card_heading_font_size_desktop": 80,
+        "card_heading_font_size_mobile": 44,
+        "card_bg_color": "#FFFFFF",
+        "card_border_color": "#4a90d9",
+        "card_heading_color": "#3E82E6",
+        "card_text_color": "#064982"
       }
     },
     "template_product_info_columns_YPyY6m": {
@@ -600,6 +537,70 @@
         "colors": "light"
       }
     },
+    "image_with_text_overlay_qmXaFa": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_UiRkcP": {
+          "type": "heading",
+          "settings": {
+            "title": "THE FUTR SYSTEM",
+            "font_size_desktop": 46,
+            "font_size_mobile": 28,
+            "heading_bottom_spacing": 25
+          }
+        },
+        "text_VetieR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every FUTR formula was built to work together as part of a system to fuel, hydrate, recharge and support the development of athletes.</p>",
+            "font_size_desktop": 16,
+            "font_size_mobile": 16,
+            "text_bottom_spacing": 20
+          }
+        },
+        "button_fGGFC6": {
+          "type": "button",
+          "settings": {
+            "first_button_link": "",
+            "first_button_label": "SHOP THE SYSTEM",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "buttons_background": "#3188d2",
+            "buttons_text": "#ffffff",
+            "buttons_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_UiRkcP",
+        "text_VetieR",
+        "button_fGGFC6"
+      ],
+      "settings": {
+        "image_desktop": "shopify://shop_images/system-banner3c.jpg",
+        "height_desktop": "original",
+        "height_desktop_custom": 100,
+        "text_position_desktop": "right",
+        "text_alignment_desktop": "center",
+        "caption_width_desktop": 37,
+        "image_mobile": "shopify://shop_images/system-mobile.jpg",
+        "height_mobile": "400px",
+        "height_mobile_custom": 400,
+        "text_position_mobile": "center",
+        "text_alignment_mobile": "center",
+        "section_link": "",
+        "animation_style": "none",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#ffffff",
+        "caption_bg_color": "#0000008c",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
+      }
+    },
     "blog_posts_wefQCf": {
       "type": "blog-posts",
       "blocks": {
@@ -710,13 +711,13 @@
   "order": [
     "slideshow_hqJamF",
     "scrolling_banner_rthg3B",
-    "product_hero_highlights_GgeymY",
     "rich_text_pW8NTx",
     "featured_collection_RbHECB",
-    "image_with_text_overlay_qmXaFa",
+    "product_hero_highlights_GgeymY",
     "template_product_info_columns_YPyY6m",
     "focused_product_gallery_qB8cNM",
     "image_with_text_mYYWiV",
+    "image_with_text_overlay_qmXaFa",
     "blog_posts_wefQCf",
     "testimonials_h6YnF3",
     "newsletter_cQa4NW"

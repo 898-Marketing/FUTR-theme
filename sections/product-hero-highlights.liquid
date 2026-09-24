@@ -90,18 +90,19 @@
     color: {{ section.settings.card_heading_color }};
     font-family: var(--header-font-stack);
     font-weight: var(--header-font-weight);
-    font-size: 18px;
+    font-size: {{ section.settings.card_heading_font_size_desktop }}px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
   }
   {% comment %}
-    Opt-in animated-counter style — only applied when card_heading_animated_counter
+    Opt-in animated-counter look — only applied when card_heading_animated_counter
     is turned on for this section instance, so other pages using this same
-    section type (e.g. the product pages' benefit cards) are unaffected.
+    section type (e.g. the product pages' benefit cards) are unaffected. Size
+    itself is controlled by card_heading_font_size_desktop/mobile above,
+    independent of whether the counter animation is on.
   {% endcomment %}
   {% if section.settings.card_heading_animated_counter %}
     #shopify-section-{{ section.id }} .phh__card-heading--counter {
-      font-size: {{ section.settings.card_heading_font_size_desktop }}px;
       line-height: 1;
       letter-spacing: -0.01em;
     }
@@ -138,11 +139,9 @@
     #shopify-section-{{ section.id }} .phh__grid {
       grid-template-columns: 1fr;
     }
-    {% if section.settings.card_heading_animated_counter %}
-      #shopify-section-{{ section.id }} .phh__card-heading--counter {
-        font-size: {{ section.settings.card_heading_font_size_mobile }}px;
-      }
-    {% endif %}
+    #shopify-section-{{ section.id }} .phh__card-heading {
+      font-size: {{ section.settings.card_heading_font_size_mobile }}px;
+    }
   }
 {% endstyle %}
 
@@ -484,24 +483,22 @@
     {
       "type": "range",
       "id": "card_heading_font_size_desktop",
-      "label": "Counter size (desktop)",
-      "min": 24,
+      "label": "Card heading size (desktop)",
+      "min": 12,
       "max": 140,
       "step": 2,
       "unit": "px",
-      "default": 80,
-      "visible_if": "{{ section.settings.card_heading_animated_counter == true }}"
+      "default": 18
     },
     {
       "type": "range",
       "id": "card_heading_font_size_mobile",
-      "label": "Counter size (mobile)",
-      "min": 20,
+      "label": "Card heading size (mobile)",
+      "min": 12,
       "max": 100,
       "step": 2,
       "unit": "px",
-      "default": 44,
-      "visible_if": "{{ section.settings.card_heading_animated_counter == true }}"
+      "default": 18
     },
     {
       "type": "header",

@@ -164,14 +164,24 @@
             "text": "{{ block.repeater.answer | metafield_tag }}",
             "page": ""
           }
+        },
+        "accordion_VaqeWy": {
+          "type": "accordion",
+          "settings": {
+            "accordion_header": "About us",
+            "open_by_default": false,
+            "text": "<p>Place some content here to describe this topic.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
-        "accordion_mkNgHY"
+        "accordion_mkNgHY",
+        "accordion_VaqeWy"
       ],
       "name": "t:sections.product--accordion-with-image.presets.name",
       "settings": {
-        "section_title": "THE 'W'",
+        "section_title": "&nbsp;DAILY SUPPORT&nbsp;",
         "section_description": "",
         "section_header_alignment": "left",
         "faq_icon": "plus_minus",
@@ -251,6 +261,9 @@
         "heading_bottom_spacing": 40,
         "card_gap": 24,
         "card_padding": 24,
+        "card_heading_animated_counter": false,
+        "card_heading_font_size_desktop": 30,
+        "card_heading_font_size_mobile": 18,
         "card_bg_color": "#16305c",
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",
@@ -600,8 +613,8 @@
         "show_price": true,
         "show_description": false,
         "background_text": "SHOP EVERY PHASE",
-        "background_text_styling": "hard_shadow",
-        "background_text_opacity": 20,
+        "background_text_styling": "soft_shadow",
+        "background_text_opacity": 10,
         "image_max_width": 65,
         "background_text_font_size_desktop": 48,
         "heading_font_size_desktop": 22,

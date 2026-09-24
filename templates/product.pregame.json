@@ -416,9 +416,9 @@
       ],
       "name": "Dosage Table",
       "settings": {
-        "background_image": "shopify://shop_images/recover-collection.jpg",
+        "background_image": "shopify://shop_images/field.jpg",
         "background_overlay_color": "#000000",
-        "background_overlay_opacity": 85,
+        "background_overlay_opacity": 75,
         "heading_prefix": "How much",
         "heading_highlight": "{{ product.title }}",
         "heading_subtitle": "should my athlete take?",

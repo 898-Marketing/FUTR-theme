@@ -52,9 +52,9 @@
         "heading_cqmqJ4"
       ],
       "settings": {
-        "image_desktop": "shopify://shop_images/FUTR-hero-lifestyle-goldenhour.png",
+        "image_desktop": "shopify://shop_images/merch-image1.jpg",
         "height_desktop": "custom",
-        "height_desktop_custom": 570,
+        "height_desktop_custom": 550,
         "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "left",
         "caption_width_desktop": 79,

@@ -171,7 +171,7 @@
       ],
       "name": "t:sections.product--accordion-with-image.presets.name",
       "settings": {
-        "section_title": "THE 'W'",
+        "section_title": "FOCUS + PERFORMANCE SUPPORT",
         "section_description": "",
         "section_header_alignment": "left",
         "faq_icon": "plus_minus",
@@ -252,6 +252,9 @@
         "heading_bottom_spacing": 40,
         "card_gap": 24,
         "card_padding": 24,
+        "card_heading_animated_counter": false,
+        "card_heading_font_size_desktop": 80,
+        "card_heading_font_size_mobile": 44,
         "card_bg_color": "#16305c",
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",

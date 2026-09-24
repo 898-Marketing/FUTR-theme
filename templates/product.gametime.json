@@ -473,6 +473,7 @@
         },
         "feature_KpTGK8": {
           "type": "feature",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/Icons-29.png",
             "label": "Hydration",
@@ -481,6 +482,7 @@
         },
         "feature_jbF6TK": {
           "type": "feature",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/Icons-27.png",
             "label": "Fuel",
@@ -489,6 +491,7 @@
         },
         "feature_dLFHKw": {
           "type": "feature",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/Icons-25.png",
             "label": "Performance",

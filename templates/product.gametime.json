@@ -187,6 +187,7 @@
       "block_order": [
         "text_TTLwfX"
       ],
+      "disabled": true,
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Icons-19.png",

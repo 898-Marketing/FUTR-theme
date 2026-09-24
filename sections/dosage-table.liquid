@@ -227,8 +227,14 @@
             {%- if block.settings.weight_kg != blank -%}<div class="dt-age-weight">{{ block.settings.weight_kg }}</div>{%- endif -%}
           </div>
           <div class="dt-cell dt-cell--inline">
-            {%- if section.settings.serving_icon != blank -%}
-              <img src="{{ section.settings.serving_icon | image_url: width: 160 }}" alt="" loading="lazy">
+            {%- liquid
+              assign row_serving_icon = section.settings.serving_icon
+              if block.settings.serving_icon != blank
+                assign row_serving_icon = block.settings.serving_icon
+              endif
+            -%}
+            {%- if row_serving_icon != blank -%}
+              <img src="{{ row_serving_icon | image_url: width: 160 }}" alt="" loading="lazy">
             {%- endif -%}
             <span class="dt-serving-amount">{{ block.settings.serving_amount }}</span>
           </div>
@@ -309,7 +315,7 @@
 
     { "type": "header", "content": "Column headers" },
     { "type": "text", "id": "age_column_label", "label": "Age/weight column label", "default": "Age / Weight" },
-    { "type": "image_picker", "id": "serving_icon", "label": "Serving icon", "info": "Used in the column header and in every row." },
+    { "type": "image_picker", "id": "serving_icon", "label": "Serving icon", "info": "Default icon for the column header and any row that doesn't have its own icon set below." },
     { "type": "text", "id": "serving_column_label", "label": "Serving column label", "default": "Pregame" },
     { "type": "text", "id": "serving_column_sublabel", "label": "Serving column sublabel", "default": "1 scoop / stick = 1 serving" },
     { "type": "image_picker", "id": "water_icon", "label": "Water icon", "info": "Used in the column header and in every row." },
@@ -328,6 +334,7 @@
         { "type": "text", "id": "age_range", "label": "Age range", "default": "8-11 YRS" },
         { "type": "text", "id": "weight_lb", "label": "Weight (lb)", "default": "50-100 LB" },
         { "type": "text", "id": "weight_kg", "label": "Weight (kg)", "default": "22-45 KG" },
+        { "type": "image_picker", "id": "serving_icon", "label": "Serving icon (optional)", "info": "Overrides the section's default serving icon for just this row." },
         { "type": "text", "id": "serving_amount", "label": "Serving amount", "default": "1/2 Serving" },
         { "type": "text", "id": "water_amount", "label": "Water amount", "default": "4-6 oz Water" },
         { "type": "text", "id": "water_instruction", "label": "Water instruction", "default": "Drink entire contents 15-30 mins prior to activity." },

@@ -281,28 +281,29 @@
     </div>
     </div>
 
-    <div class="dosage-table-4c__footer">
-      {%- if section.settings.footer_text_white != blank -%}
-        <div class="dt4-footer-lead">
-          {%- if section.settings.footer_icon != blank -%}
-            <div class="dt4-footer-lead__icon-wrap">
-              <img src="{{ section.settings.footer_icon | image_url: width: 120 }}" alt="" loading="lazy">
-            </div>
-          {%- endif -%}
-          <div class="dt4-footer-lead__text">
-            <div class="dt4-footer-lead__heading">
-              {{ section.settings.footer_text_white }}
-              {%- if section.settings.footer_text_accent != blank %} <span class="is-accent">{{ section.settings.footer_text_accent }}</span>{% endif %}
-            </div>
-            {%- if section.settings.footer_subtext != blank -%}
-              <div class="dt4-footer-lead__sub">{{ section.settings.footer_subtext }}</div>
+    {%- assign feature_blocks = section.blocks | where: 'type', 'feature' -%}
+    {%- if section.settings.footer_text_white != blank or feature_blocks.size > 0 -%}
+      <div class="dosage-table-4c__footer">
+        {%- if section.settings.footer_text_white != blank -%}
+          <div class="dt4-footer-lead">
+            {%- if section.settings.footer_icon != blank -%}
+              <div class="dt4-footer-lead__icon-wrap">
+                <img src="{{ section.settings.footer_icon | image_url: width: 120 }}" alt="" loading="lazy">
+              </div>
             {%- endif -%}
+            <div class="dt4-footer-lead__text">
+              <div class="dt4-footer-lead__heading">
+                {{ section.settings.footer_text_white }}
+                {%- if section.settings.footer_text_accent != blank %} <span class="is-accent">{{ section.settings.footer_text_accent }}</span>{% endif %}
+              </div>
+              {%- if section.settings.footer_subtext != blank -%}
+                <div class="dt4-footer-lead__sub">{{ section.settings.footer_subtext }}</div>
+              {%- endif -%}
+            </div>
           </div>
-        </div>
-      {%- endif -%}
+        {%- endif -%}
 
-      {%- for block in section.blocks -%}
-        {%- if block.type == 'feature' -%}
+        {%- for block in feature_blocks -%}
           <div class="dt4-feature" {{ block.shopify_attributes }}>
             {%- if block.settings.icon != blank -%}
               <div class="dt4-feature__icon-wrap">
@@ -316,9 +317,9 @@
               {%- endif -%}
             </div>
           </div>
-        {%- endif -%}
-      {%- endfor -%}
-    </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
   </div>
 </div>
 

@@ -59,7 +59,7 @@
         "height_desktop_custom": 450,
         "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "left",
-        "caption_width_desktop": 65,
+        "caption_width_desktop": 77,
         "height_mobile": "original",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",
@@ -130,7 +130,7 @@
         "richtext_4YaFct": {
           "type": "richtext",
           "settings": {
-            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them. Not borrowed from adult formulas. Not watered down. </p><p>Every product is developed around the way youngathletes actually train, compete, recover, and grow —purposeful, and science-backed.</p>",
+            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them. Not borrowed from adult formulas. Not watered down.&nbsp;</p><p>Every product is developed around the way youngathletes actually train, compete, recover, and grow —purposeful, and science-backed.</p>",
             "text_size": 24,
             "text_bottom_spacing": 20
           }
@@ -140,7 +140,7 @@
         "richtext_4YaFct"
       ],
       "custom_css": [
-        "p {color: #000; font-weight: 700;}"
+        "p {color: #fff; font-weight: 700;}"
       ],
       "settings": {
         "section_width": "narrow",
@@ -149,9 +149,9 @@
         "section_padding_top": 80,
         "section_padding_bottom": 80,
         "colors": "light",
-        "background_image": "shopify://shop_images/flag-_1.png",
-        "background_overlay_color": "#ffffff",
-        "background_overlay_opacity": 85
+        "background_image": "shopify://shop_images/flag.png",
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 55
       }
     },
     "image_with_text_7VaACR": {
@@ -210,14 +210,14 @@
           "type": "highlight",
           "settings": {
             "heading": "",
-            "text": "<p>Every ingredient should have a reason to be there. Every amount should be intentional. </p>"
+            "text": "<p>Every ingredient has a reason to be there. Every ingredient amount is intentional.</p>"
           }
         },
         "highlight_zpggnn": {
           "type": "highlight",
           "settings": {
             "heading": "",
-            "text": "<p>Science should come before trends, and transparency should come before hype.</p>"
+            "text": "<p>We follow the science, not the latest nutrition trend, and we’re transparent about every choice we make.</p>"
           }
         },
         "highlight_AJXBfR": {
@@ -266,6 +266,9 @@
         "heading_bottom_spacing": 40,
         "card_gap": 24,
         "card_padding": 24,
+        "card_heading_animated_counter": false,
+        "card_heading_font_size_desktop": 80,
+        "card_heading_font_size_mobile": 44,
         "card_bg_color": "#16305c",
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",
@@ -400,12 +403,12 @@
         "image_and_text_Pzqi6N"
       ],
       "custom_css": [
-        "h3{font-size: 25px;}"
+        "h3 {font-size: 25px;}"
       ],
       "name": "Our Team",
       "settings": {
         "title": "Our Team",
-        "description": "<p>Emphasise your messaging</p>",
+        "description": "",
         "section_header_alignment": "center",
         "maximum_width": 500,
         "override_border_radius": false,

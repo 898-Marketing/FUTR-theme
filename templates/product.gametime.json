@@ -219,7 +219,7 @@
       ],
       "name": "t:sections.product--accordion-with-image.presets.name",
       "settings": {
-        "section_title": "THE 'W'",
+        "section_title": "BUILT TO KEEP UP WITH THE GAME.&nbsp;",
         "section_description": "",
         "section_header_alignment": "left",
         "faq_icon": "plus_minus",
@@ -278,8 +278,6 @@
       ],
       "name": "Product Hero Highlights",
       "settings": {
-        "image_desktop": "shopify://shop_images/in-the-game.jpg",
-        "image_mobile": "shopify://shop_images/in-the-game.jpg",
         "overlay_color": "#0a1420",
         "overlay_opacity": 70,
         "heading": "Hydrate. Fuel. Keep going.",
@@ -301,6 +299,9 @@
         "heading_bottom_spacing": 40,
         "card_gap": 24,
         "card_padding": 24,
+        "card_heading_animated_counter": false,
+        "card_heading_font_size_desktop": 30,
+        "card_heading_font_size_mobile": 18,
         "card_bg_color": "#16305c",
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",

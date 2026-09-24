@@ -258,18 +258,19 @@
   </div>
   </div>
 
-  <div class="dosage-table__footer">
-    {%- if section.settings.footer_text_white != blank or section.settings.footer_text_accent != blank -%}
-      <div class="dt-footer-lead">
-        {%- if section.settings.footer_icon != blank -%}
-          <img src="{{ section.settings.footer_icon | image_url: width: 160 }}" alt="" loading="lazy">
-        {%- endif -%}
-        <span>{{ section.settings.footer_text_white }} <span class="is-accent">{{ section.settings.footer_text_accent }}</span></span>
-      </div>
-    {%- endif -%}
+  {%- assign feature_blocks = section.blocks | where: 'type', 'feature' -%}
+  {%- if section.settings.footer_text_white != blank or section.settings.footer_text_accent != blank or feature_blocks.size > 0 -%}
+    <div class="dosage-table__footer">
+      {%- if section.settings.footer_text_white != blank or section.settings.footer_text_accent != blank -%}
+        <div class="dt-footer-lead">
+          {%- if section.settings.footer_icon != blank -%}
+            <img src="{{ section.settings.footer_icon | image_url: width: 160 }}" alt="" loading="lazy">
+          {%- endif -%}
+          <span>{{ section.settings.footer_text_white }} <span class="is-accent">{{ section.settings.footer_text_accent }}</span></span>
+        </div>
+      {%- endif -%}
 
-    {%- for block in section.blocks -%}
-      {%- if block.type == 'feature' -%}
+      {%- for block in feature_blocks -%}
         <div class="dt-feature" {{ block.shopify_attributes }}>
           {%- if block.settings.icon != blank -%}
             <img src="{{ block.settings.icon | image_url: width: 160 }}" alt="" loading="lazy">
@@ -281,9 +282,9 @@
             {%- endif -%}
           </div>
         </div>
-      {%- endif -%}
-    {%- endfor -%}
-  </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
   </div>
 </div>
 

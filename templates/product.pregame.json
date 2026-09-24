@@ -382,6 +382,7 @@
             "age_range": "8-11 YRS",
             "weight_lb": "50-100 LB",
             "weight_kg": "22-45 KG",
+            "serving_icon": "shopify://shop_images/HALF_SCOOP0.png",
             "serving_amount": "1/2 Serving",
             "water_amount": "4-6 oz Water",
             "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
@@ -399,38 +400,11 @@
             "water_instruction": "Drink entire contents 15-30 mins prior to activity.",
             "water_instruction_accent": "Can take a second serving later in the day."
           }
-        },
-        "feature_CANHtt": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Icons-30.png",
-            "label": "Hydration",
-            "description": "Supports fluid balance and performance"
-          }
-        },
-        "feature_YQcHz9": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Icons-28.png",
-            "label": "Energy",
-            "description": "Helps fuel performance without stimulants"
-          }
-        },
-        "feature_H6Dr9f": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Icons-25.png",
-            "label": "Performance",
-            "description": "Supports blood flow & endurance"
-          }
         }
       },
       "block_order": [
         "dosage_row_33K9K3",
-        "dosage_row_bqDUiB",
-        "feature_CANHtt",
-        "feature_YQcHz9",
-        "feature_H6Dr9f"
+        "dosage_row_bqDUiB"
       ],
       "custom_css": [
         ".dt-col-head {font-size: 18px;}",

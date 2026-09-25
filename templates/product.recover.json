@@ -516,12 +516,12 @@
     "image_with_text_overlay_gNtPrQ": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "text_Qd9kAA": {
+        "text_JzYCCU": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Don't forget to add a T-shirt to your cart during checkout!</strong></p>",
-            "font_size_desktop": 17,
-            "font_size_mobile": 17,
+            "text": "<p><strong>Don't Forget to Add Your Shirt to Cart!</strong></p>",
+            "font_size_desktop": 18,
+            "font_size_mobile": 16,
             "text_bottom_spacing": 20
           }
         },
@@ -541,15 +541,15 @@
         }
       },
       "block_order": [
-        "text_Qd9kAA",
+        "text_JzYCCU",
         "button_HjRRAq"
       ],
       "settings": {
         "image_desktop": "shopify://shop_images/1920x1080.jpg",
         "height_desktop": "original",
         "height_desktop_custom": 560,
-        "text_position_desktop": "top_right",
-        "text_alignment_desktop": "right",
+        "text_position_desktop": "top_center",
+        "text_alignment_desktop": "center",
         "caption_width_desktop": 98,
         "image_mobile": "shopify://shop_images/1080x1080-_1.jpg",
         "height_mobile": "250px",

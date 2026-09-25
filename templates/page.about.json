@@ -330,7 +330,8 @@
         "image_and_text_d7H3Dm": {
           "type": "image_and_text",
           "settings": {
-            "grid_image_size": "square",
+            "image": "shopify://shop_images/suz-headshot.jpg",
+            "grid_image_size": "natural",
             "heading": "SUZANNE GATT",
             "text": "<p>Founder, CEO</p>",
             "bio_text": "<p>I’m a mom, coach, and 13+ year sports nutrition industry veteran with a career spent building brands, developing products, and bringing sports nutrition to athletes at the highest level.</p><p><strong>But FUTR started with something much more personal.</strong></p><p>For years, parents would ask me the same question: “What can I give my kid?” And despite spending my career inside the sports nutrition industry, I never had an answer I felt great about.</p><p>There were plenty of products for adults. But when it came to young athletes, I kept seeing the same thing: products that weren’t really designed for them, adult formulas repackaged for a younger audience, or options that simply didn’t reflect how kids actually train, play, recover, and grow.</p><p><strong>I knew we could do better. So I decided to build it.</strong></p><p>Over the course of my career, I’ve had the opportunity to work alongside some of the best people in sports nutrition — formulators, researchers, flavor scientists, manufacturers, testing labs, retailers, and industry employees. I’ve seen firsthand what it takes to create great products, but I’ve also learned where shortcuts can happen and which details matter most.</p><p><strong>That means asking harder questions. </strong>Being able to explain why an ingredient is there and why we use the amount we do. Surrounding myself with experts who know more than I do in their respective fields. Choosing partners I trust. And never making a decision simply because it is easier, faster, or looks better on a label.</p><p>I’m still a parent reading the back of the package. I’m still a coach standing on the sideline. And I’m also someone who has spent most of my career building products in this industry.</p><p>FUTR is where all three of those parts of my life came together.</p><p><strong>This one is personal.</strong></p>",
@@ -341,9 +342,9 @@
         "image_and_text_CjEQAK": {
           "type": "image_and_text",
           "settings": {
-            "grid_image_size": "square",
+            "grid_image_size": "natural",
             "heading": "RAUL PUJOL",
-            "text": "<p>Chief Business Development <br/>& Partnerships Officer  </p>",
+            "text": "<p>Chief Business Development&nbsp;<br/>& Partnerships Officer&nbsp;&nbsp;</p>",
             "bio_text": "",
             "button_link": "",
             "button_text": ""
@@ -352,9 +353,9 @@
         "image_and_text_x8Mccy": {
           "type": "image_and_text",
           "settings": {
-            "grid_image_size": "square",
+            "grid_image_size": "natural",
             "heading": "TIM ZIEGENFUSS",
-            "text": "<p>PH.D., FISSN, CSCS<br/>Chief Science Officer </p>",
+            "text": "<p>PH.D., FISSN, CSCS<br/>Chief Science Officer&nbsp;</p>",
             "bio_text": "<p>Dr. Tim Ziegenfuss leads the science and product formulation behind FUTR. He holds a Ph.D. in Exercise Physiology, with advanced academic training in nutrition and statistics, and has spent decades studying how nutrition, physical activity, and dietary ingredients affect human health and performance.</p><p>An internationally recognized researcher, author, and sports nutrition expert, Dr. Ziegenfuss has published more than 80 scientific papers, contributed to eight book chapters, and helped develop nutrition products used by athletes around the world. He is a former university professor, a past President and Fellow of the International Society of Sports Nutrition, and a Certified Strength and Conditioning Specialist.</p><p>At FUTR, Dr. Ziegenfuss oversees ingredient selection, formula development, and scientific review. His role is to ensure every formula has a clear purpose and is grounded in credible research, appropriate dosing, and the real nutritional needs of developing young athletes.</p>",
             "button_link": "",
             "button_text": ""
@@ -363,7 +364,8 @@
         "image_and_text_PgNKzt": {
           "type": "image_and_text",
           "settings": {
-            "grid_image_size": "square",
+            "image": "shopify://shop_images/jenna.jpg",
+            "grid_image_size": "natural",
             "heading": "Jenna Stangland",
             "text": "<p>MS, RDN, CSSD, LDN, CLT<br/>Director of Athlete Nutrition</p>",
             "bio_text": "<p>Jenna Stangland is a Board Certified Specialist in Sports Dietetics with extensive experience helping athletes use nutrition to support performance, recovery, and long-term development.</p><p>Jenna earned her bachelor’s degree in Genetics and Cell Biology from the University of Minnesota and her master’s degree in Clinical Nutrition, with an emphasis in sports nutrition, from The Ohio State University. Her graduate work included research and athlete education focused on iron absorption, bone health, muscle breakdown and repair, and the role nutrition plays in athletic performance.</p><p><br/></p><p>Throughout her career, Jenna has worked with athletes across youth, collegiate, and professional sports. Her experience includes developing the first nutrition program for one of the nation’s largest physician-owned orthopedic organizations, working with elite and youth athletes through CCM hockey camps, supporting collegiate athletic programs, and consulting with sports medicine organizations. She currently serves as Team Dietitian for the Minnesota Timberwolves and Director of Nutrition for the Minnesota Wild organization.</p><p>Jenna also speaks nationally to athletes, parents, coaches, sports dietitians, athletic trainers, and sports medicine professionals on practical, evidence-based approaches to performance nutrition.</p><p><br/></p><p>Jenna’s Role at FUTR</p><p>As FUTR’s Director of Athlete Nutrition, Jenna helps shape the nutrition philosophy behind the brand, helping athletes and families better understand not justwhatto fuel with, butwhen, why, and how.</p><p><br/></p><p>Jenna understand the real-world nutrition challenges young athletes face—from early practices and long tournament days to hydration, fueling, recovery, and demanding school schedules. These insights help shape FUTR’s athlete education, nutrition resources, product guidance, and future innovation.</p><p><br/></p><p>She also serves as a trusted nutrition voice for the FUTR community, answering the questions athletes and parents have and turning complex sports nutrition science into clear, actionable guidance they can use every day.</p>",
@@ -374,7 +376,7 @@
         "image_and_text_yikiJB": {
           "type": "image_and_text",
           "settings": {
-            "grid_image_size": "square",
+            "grid_image_size": "natural",
             "heading": "Heading",
             "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
             "bio_text": "",
@@ -385,7 +387,7 @@
         "image_and_text_Pzqi6N": {
           "type": "image_and_text",
           "settings": {
-            "grid_image_size": "square",
+            "grid_image_size": "natural",
             "heading": "Heading",
             "text": "<p>Use text paired with images to create a captivating brand story, explain details of your products, or highlight store promotions.</p>",
             "bio_text": "",

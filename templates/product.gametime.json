@@ -619,28 +619,19 @@
         "colors": "dark"
       }
     },
-    "image_with_text_overlay_dc7Fbw": {
+    "image_with_text_overlay_HLJyyH": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "heading_dyAWir": {
-          "type": "heading",
-          "settings": {
-            "title": "BUY ANY 3 ITEMS GET A FREE T-SHIRT!",
-            "font_size_desktop": 55,
-            "font_size_mobile": 28,
-            "heading_bottom_spacing": 25
-          }
-        },
-        "text_KaNxxA": {
+        "text_qGWUGY": {
           "type": "text",
           "settings": {
-            "text": "<p>Don't forget to add a T-shirt to your cart during checkout!</p>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
+            "text": "<p><strong>Don't forget to add a T-shirt to your cart during checkout!</strong></p>",
+            "font_size_desktop": 17,
+            "font_size_mobile": 17,
             "text_bottom_spacing": 20
           }
         },
-        "button_BqpUKG": {
+        "button_W3rgh3": {
           "type": "button",
           "settings": {
             "first_button_link": "shopify://collections/futr-merch",
@@ -648,40 +639,38 @@
             "second_button_link": "",
             "second_button_label": "",
             "buttons_style": "filled",
-            "override_button_colors": true,
-            "buttons_background": "#064982",
+            "override_button_colors": false,
+            "buttons_background": "#e68819",
             "buttons_text": "#ffffff",
             "buttons_bottom_spacing": 20
           }
         }
       },
       "block_order": [
-        "heading_dyAWir",
-        "text_KaNxxA",
-        "button_BqpUKG"
+        "text_qGWUGY",
+        "button_W3rgh3"
       ],
-      "name": "t:sections.image--image-with-text-overlay.presets.name",
       "settings": {
-        "image_desktop": "shopify://shop_images/gametime-desktop.jpg",
-        "height_desktop": "original",
-        "height_desktop_custom": 450,
-        "text_position_desktop": "center",
-        "text_alignment_desktop": "center",
-        "caption_width_desktop": 97,
-        "image_mobile": "shopify://shop_images/gametime-mobile-banner.jpg",
-        "height_mobile": "original",
+        "image_desktop": "shopify://shop_images/1920x1080.jpg",
+        "height_desktop": "custom",
+        "height_desktop_custom": 560,
+        "text_position_desktop": "top_right",
+        "text_alignment_desktop": "right",
+        "caption_width_desktop": 98,
+        "image_mobile": "shopify://shop_images/1080x1080-_1.jpg",
+        "height_mobile": "250px",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",
         "section_link": "",
-        "animation_style": "none",
+        "animation_style": "parallax",
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
         "text_color": "#ffffff",
         "caption_bg_color": "rgba(0,0,0,0)",
-        "image_overlay_color": "#242424",
-        "image_overlay_opacity": 0
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 30
       }
     },
     "accordion_fYz9RV": {
@@ -723,7 +712,7 @@
     "ingredients_grid_yzP3LB",
     "dosage_table_4_columns_Pn3UBt",
     "product_slideshow_6iLqXF",
-    "image_with_text_overlay_dc7Fbw",
+    "image_with_text_overlay_HLJyyH",
     "accordion_fYz9RV"
   ]
 }

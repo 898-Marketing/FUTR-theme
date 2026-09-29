@@ -519,7 +519,7 @@
       ],
       "name": "Dosage Table 4 Columns",
       "settings": {
-        "background_image": "shopify://shop_images/recover-collection.jpg",
+        "background_image": "shopify://shop_images/cooler-2.jpg",
         "background_overlay_color": "#000000",
         "background_overlay_opacity": 85,
         "heading_prefix": "How much",
@@ -562,6 +562,7 @@
         },
         "product_i9Fpj8": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "creatine",
             "description": "",

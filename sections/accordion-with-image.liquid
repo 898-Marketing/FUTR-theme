@@ -1,6 +1,17 @@
 {{ 'accordion-with-image-section.min.css' | asset_url | stylesheet_tag }}
 
 {% comment %}
+  Match trademark/registered superscripts (e.g. "CherryPURE®") in the
+  accordion answer text to the same size used in the ingredients grid,
+  instead of the browser/theme default relative size.
+{% endcomment %}
+{% style %}
+  .accordion-with-image--{{ section.id }} .content.rte sup {
+    font-size: 12px;
+  }
+{% endstyle %}
+
+{% comment %}
   Opt-in 1:1 square image — only applied when square_image is turned on for
   this specific section instance, so other pages using this same section type
   are unaffected. Overrides the stock 7:4 crop that cuts off square images.

@@ -219,3 +219,14 @@ product-media:has(.media-ratio--wide) {
   background: var(--primary-btn-text-color) !important;
 }
 
+/* Give manual line breaks (shift+enter in rich text, or newline_to_br output)
+   extra room so they read as a clear break instead of just a tight new line.
+   Applied globally across body copy / rich text content sitewide. */
+.rte br,
+.richtext-block br,
+.ing-is br {
+  content: "";
+  display: block;
+  margin-top: 8px;
+}
+

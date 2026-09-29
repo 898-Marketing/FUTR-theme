@@ -226,6 +226,6 @@ product-media:has(.media-ratio--wide) {
 .richtext-block br,
 .ing-is br {
   display: block;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 

@@ -119,6 +119,7 @@
         },
         "image_FQw78w": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/FUTR_logo-White-03.png",
             "height_desktop": 60,
@@ -163,7 +164,7 @@
         "show_fade": false,
         "borders": false,
         "animation_direction": "normal",
-        "animation_speed": 60,
+        "animation_speed": 80,
         "section_padding_top": 5,
         "section_padding_bottom": 5,
         "space_between_blocks_desktop": 25,

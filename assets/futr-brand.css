@@ -229,3 +229,14 @@ product-media:has(.media-ratio--wide) {
   margin-top: 20px;
 }
 
+/* Content typed as separate paragraphs (pressing Enter in the rich text
+   editor) has zero gap between them by default (.richtext-block p has
+   margin-bottom:0 sitewide) — the br rule above only covers soft line
+   breaks (shift+enter), not this. Give consecutive paragraphs the same
+   20px gap so either way of entering multi-line text gets visible spacing. */
+.rte p:not(:last-child),
+.richtext-block p:not(:last-child),
+.ing-is p:not(:last-child) {
+  margin-bottom: 20px;
+}
+

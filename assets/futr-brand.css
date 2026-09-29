@@ -226,7 +226,7 @@ product-media:has(.media-ratio--wide) {
 .richtext-block br,
 .ing-is br {
   display: block;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 /* Content typed as separate paragraphs (pressing Enter in the rich text
@@ -237,6 +237,6 @@ product-media:has(.media-ratio--wide) {
 .rte p:not(:last-child),
 .richtext-block p:not(:last-child),
 .ing-is p:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 

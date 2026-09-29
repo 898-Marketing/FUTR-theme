@@ -24,7 +24,7 @@
         "text_yhdcwf": {
           "type": "text",
           "settings": {
-            "text": "<p>Real talk for the next generation. And Whoever drove them.</p>",
+            "text": "<p>Real talk for the next generation. And whoever drove them.</p>",
             "font_size_desktop": 16,
             "font_size_mobile": 16,
             "text_bottom_spacing": 20

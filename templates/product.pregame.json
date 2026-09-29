@@ -22,7 +22,7 @@
         "text_cnBFMb": {
           "type": "text",
           "settings": {
-            "title": "<p>Stimulant-Free Energy & Focus Formula</p>",
+            "title": "<p>Stimulant-Free Energy and Focus Formula</p>",
             "margin_bottom": 30,
             "text_color": "#242424"
           }
@@ -358,7 +358,7 @@
       "name": "Ingredients Grid",
       "settings": {
         "kicker": "",
-        "heading": "BUILT WITH PURPOSEFUL INGREDIENTS",
+        "heading": "EVERY INGREDIENT HAS A JOB",
         "show_filter_tabs": false,
         "show_category_pill": false,
         "color_ink": "#0e1116",
@@ -573,19 +573,19 @@
         "colors": "dark"
       }
     },
-    "image_with_text_overlay_w8WwkJ": {
+    "image_with_text_overlay_bcnngV": {
       "type": "image-with-text-overlay",
       "blocks": {
-        "text_RPYRAE": {
+        "text_N47Qwx": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Don't forget to add a T-shirt to your cart during checkout!</strong></p>",
-            "font_size_desktop": 17,
-            "font_size_mobile": 17,
+            "text": "<p><strong>Don't Forget to Add Your Shirt to Cart!</strong></p>",
+            "font_size_desktop": 18,
+            "font_size_mobile": 16,
             "text_bottom_spacing": 20
           }
         },
-        "button_AH8BwL": {
+        "button_zLDfxG": {
           "type": "button",
           "settings": {
             "first_button_link": "shopify://collections/futr-merch",
@@ -601,15 +601,15 @@
         }
       },
       "block_order": [
-        "text_RPYRAE",
-        "button_AH8BwL"
+        "text_N47Qwx",
+        "button_zLDfxG"
       ],
       "settings": {
         "image_desktop": "shopify://shop_images/1920x1080.jpg",
-        "height_desktop": "custom",
+        "height_desktop": "original",
         "height_desktop_custom": 560,
-        "text_position_desktop": "top_right",
-        "text_alignment_desktop": "right",
+        "text_position_desktop": "top_center",
+        "text_alignment_desktop": "center",
         "caption_width_desktop": 98,
         "image_mobile": "shopify://shop_images/1080x1080-_1.jpg",
         "height_mobile": "250px",
@@ -617,7 +617,7 @@
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",
         "section_link": "",
-        "animation_style": "parallax",
+        "animation_style": "none",
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
@@ -666,7 +666,7 @@
     "dosage_table_VQ8Jg8",
     "phase_columns_FWLXfK",
     "product_slideshow_fzVPYr",
-    "image_with_text_overlay_w8WwkJ",
+    "image_with_text_overlay_bcnngV",
     "accordion_fYz9RV"
   ]
 }

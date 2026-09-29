@@ -91,6 +91,7 @@
   .ing-dose span { font-size: 13px; font-weight: 800; color: var(--zing-faint); }
 
   .ing-is { font-size: 13.5px; line-height: 1.5; color: #3A3F46; margin: 14px 0 0; }
+  .ing-is sup { font-size: 9px; font-weight: 600; }
   .ing-is p { margin: 0; }
 
   .ing-why {
@@ -154,11 +155,11 @@
             <div class="ing-dose"><b>{{ ingredient.dose.value }}</b><span>{{ ingredient.unit.value }}</span></div>
           </div>
           {%- if ingredient.what_it_is.value != blank -%}
-            <div class="ing-is">{{ ingredient.what_it_is.value | newline_to_br }}</div>
+            <div class="ing-is">{{ ingredient.what_it_is.value | newline_to_br | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}</div>
           {%- endif -%}
           <div class="ing-why"><div class="ing-why-inner">
             <div class="ing-why-label">Why it helps</div>
-            <div class="ing-is">{{ ingredient.why_it_help.value | newline_to_br }}</div>
+            <div class="ing-is">{{ ingredient.why_it_help.value | newline_to_br | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}</div>
           </div></div>
           <div class="ing-toggle">Why it helps +</div>
         </button>
@@ -180,11 +181,11 @@
               <div class="ing-dose"><b>{{ block.settings.dose }}</b><span>{{ block.settings.unit }}</span></div>
             </div>
             {%- if block.settings.description != blank -%}
-              <div class="ing-is">{{ block.settings.description }}</div>
+              <div class="ing-is">{{ block.settings.description | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}</div>
             {%- endif -%}
             <div class="ing-why"><div class="ing-why-inner">
               <div class="ing-why-label">Why it helps</div>
-              <div class="ing-is">{{ block.settings.why_it_helps }}</div>
+              <div class="ing-is">{{ block.settings.why_it_helps | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}</div>
             </div></div>
             <div class="ing-toggle">Why it helps +</div>
           </button>

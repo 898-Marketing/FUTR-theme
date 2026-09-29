@@ -229,8 +229,8 @@
         "highlight_g7h8i9"
       ],
       "settings": {
-        "image_desktop": "shopify://shop_images/pregame_59877721-e6a9-4bb1-80a7-227d329fe593.jpg",
-        "image_mobile": "shopify://shop_images/pregame_59877721-e6a9-4bb1-80a7-227d329fe593.jpg",
+        "image_desktop": "shopify://shop_images/soccer-1.jpg",
+        "image_mobile": "shopify://shop_images/soccer-1.jpg",
         "overlay_color": "#0a1420",
         "overlay_opacity": 70,
         "heading": "The first true pregame for youth sports.",
@@ -416,7 +416,7 @@
       ],
       "name": "Dosage Table",
       "settings": {
-        "background_image": "shopify://shop_images/field.jpg",
+        "background_image": "shopify://shop_images/cooler-2.jpg",
         "background_overlay_color": "#000000",
         "background_overlay_opacity": 75,
         "heading_prefix": "WHEN AND HOW TO TAKE",
@@ -529,6 +529,7 @@
         },
         "product_rF47rW": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "creatine",
             "description": "",

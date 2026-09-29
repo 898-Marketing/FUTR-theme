@@ -308,9 +308,9 @@
         "card_heading_animated_counter": true,
         "card_heading_font_size_desktop": 80,
         "card_heading_font_size_mobile": 44,
-        "card_bg_color": "#FFFFFF",
+        "card_bg_color": "#ffffff",
         "card_border_color": "#4a90d9",
-        "card_heading_color": "#3E82E6",
+        "card_heading_color": "#3e82e6",
         "card_text_color": "#064982"
       }
     },
@@ -396,6 +396,7 @@
       "blocks": {
         "product_Ni7QXL": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "creatine",
             "description": "",

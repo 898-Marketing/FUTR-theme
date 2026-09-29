@@ -84,6 +84,7 @@
     background: var(--cat-pill); color: var(--zing-ink);
   }
   .ing-name { font-size: 20px; font-weight: 900; letter-spacing: -.01em; margin: 12px 0 0; color: #000; }
+  .ing-name sup { font-size: .5em; font-weight: 700; }
   .ing-sub { font-size: 12px; font-weight: 700; color: var(--zing-faint); margin-top: 2px; }
   .ing-dose { text-align: right; line-height: 1; }
   .ing-dose b { font-size: 32px; font-weight: 900; letter-spacing: -.03em; color: #000; }
@@ -145,7 +146,7 @@
               {%- if section.settings.show_category_pill -%}
                 <span class="ing-pill">{{ ing_category | capitalize }}</span>
               {%- endif -%}
-              <h3 class="ing-name">{{ ingredient.name.value }}</h3>
+              <h3 class="ing-name">{{ ingredient.name.value | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}</h3>
               {%- if ingredient.subtitle.value != blank -%}
                 <div class="ing-sub">{{ ingredient.subtitle.value }}</div>
               {%- endif -%}
@@ -171,7 +172,7 @@
                 {%- if section.settings.show_category_pill -%}
                   <span class="ing-pill">{{ block.settings.category_label }}</span>
                 {%- endif -%}
-                <h3 class="ing-name">{{ block.settings.name }}</h3>
+                <h3 class="ing-name">{{ block.settings.name | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}</h3>
                 {%- if block.settings.sub != blank -%}
                   <div class="ing-sub">{{ block.settings.sub }}</div>
                 {%- endif -%}

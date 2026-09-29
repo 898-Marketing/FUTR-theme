@@ -225,8 +225,7 @@ product-media:has(.media-ratio--wide) {
 .rte br,
 .richtext-block br,
 .ing-is br {
-  content: "";
   display: block;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 

@@ -280,8 +280,8 @@
       ],
       "name": "Product Hero Highlights",
       "settings": {
-        "image_desktop": "shopify://shop_images/image-_2.jpg",
-        "image_mobile": "shopify://shop_images/image-_2.jpg",
+        "image_desktop": "shopify://shop_images/basketball-1.jpg",
+        "image_mobile": "shopify://shop_images/basketball-1.jpg",
         "overlay_color": "#0a1420",
         "overlay_opacity": 70,
         "heading": "Hydrate. Fuel. Keep going.",

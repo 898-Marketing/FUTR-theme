@@ -211,7 +211,7 @@
           "settings": {
             "accordion_header": "{{ block.repeater.question.value }}",
             "open_by_default": false,
-            "text": "{{ block.repeater.answer | metafield_tag }}",
+            "text": "<p>{{ block.repeater.answer | metafield_tag }}</p>",
             "page": ""
           }
         }
@@ -280,6 +280,8 @@
       ],
       "name": "Product Hero Highlights",
       "settings": {
+        "image_desktop": "shopify://shop_images/image-_2.jpg",
+        "image_mobile": "shopify://shop_images/image-_2.jpg",
         "overlay_color": "#0a1420",
         "overlay_opacity": 70,
         "heading": "Hydrate. Fuel. Keep going.",

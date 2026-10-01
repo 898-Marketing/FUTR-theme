@@ -408,8 +408,8 @@
       ],
       "name": "Ingredients Grid",
       "settings": {
-        "kicker": "lorem ipsum",
-        "heading": "eundurance & hydration",
+        "kicker": "WHAT's INSIDE",
+        "heading": "Endurance & hydration",
         "show_filter_tabs": false,
         "show_category_pill": false,
         "color_ink": "#0e1116",

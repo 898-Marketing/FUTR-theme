@@ -521,7 +521,7 @@
       "settings": {
         "background_image": "shopify://shop_images/cooler-2.jpg",
         "background_overlay_color": "#000000",
-        "background_overlay_opacity": 85,
+        "background_overlay_opacity": 50,
         "heading_prefix": "How much",
         "heading_highlight": "Gametime",
         "heading_subtitle": "should my athlete take?",

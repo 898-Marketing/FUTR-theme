@@ -32,7 +32,7 @@
         "text_EJQHE8": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>YOUTH ATHLETES DESERVE THEIR OWN STANDARD.</strong></p>",
+            "text": "<p><strong>SCIENCE-LED.</strong> <strong>DEVELOPED FOR YOUTH ATHLETES. BUILT WITH PURPOSE. &nbsp;</strong></p>",
             "font_size_desktop": 20,
             "font_size_mobile": 16,
             "text_bottom_spacing": 20
@@ -50,7 +50,7 @@
         "height_desktop_custom": 450,
         "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "left",
-        "caption_width_desktop": 50,
+        "caption_width_desktop": 71,
         "height_mobile": "original",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",
@@ -72,7 +72,7 @@
         "text_GDCCcY": {
           "type": "text",
           "settings": {
-            "text": "<p>Young athletes are training harder and more often than ever. Year-round seasons. Long tournament weekends. Early mornings. Late practices. <br/></p><p>Their routines are becoming more demanding, and they’re paying attention to the routines of their parents and coaches around them, too. They see the hydration packet, the protein shake, the products used before and after a workout — and they want habits of their own.</p><p>That’s a good thing. It means the example is landing. But wanting in shouldn’t mean reaching for something built for someone twice their age.</p><p>FUTR isn’t here to compete with the products already out there. FUTR is here because young athletes deserve an option designed around them from the start.</p>",
+            "text": "<p>Youth athletes deserve more than adult sports nutrition scaled down into a smaller serving.</p><p>Age, stage of development, training demands, intended use, and total daily intake all matter when developing nutrition for young athletes. That’s why FUTR starts with the youth athlete — not an existing adult formula.</p><p>Every product is built around a defined purpose: what it is designed to support, when it is intended to be used, which ingredients belong, and the intended serving amount.</p><p><strong>The result is a sports nutrition system developed specifically with the routines and nutritional considerations of healthy, active youth in mind.</strong></p>",
             "text_bottom_spacing": 20
           }
         }
@@ -93,51 +93,102 @@
         "colors": "dark"
       }
     },
-    "accordion_QrGGjQ": {
-      "type": "accordion",
+    "accordion_with_image_rRbVnk": {
+      "type": "accordion-with-image",
       "blocks": {
-        "tab_content_iEpnMz": {
-          "type": "tab_content",
+        "accordion_9dPrYW": {
+          "type": "accordion",
           "settings": {
-            "question": "EXPERT-LED FORMULATION + REVIEW",
+            "accordion_header": "EXPERT-LED FORMULATION + MULTIDISCIPLINARY REVIEW",
             "open_by_default": false,
-            "text": "<p>FUTR’s formulas are led by Tim Ziegenfuss, PhD, FISSN, CSCS, an experienced sports nutrition researcher and former President of the International Society of Sports Nutrition. But formulation does not stop with a single expert.</p><p><br/></p><p>Each FUTR formula is also reviewed by a multidisciplinary team that includes pediatric registered dietitians, pediatricians, sports medicine physicians, and sports nutrition professionals, who provide feedback on ingredient selection, serving amounts, intended use, and overall formula design.</p><p><br/></p><p>This collaborative process helps us evaluate each product and keep the needs of healthy, developing athletes at the center of every decision.</p>",
+            "text": "<p>FUTR formulas are developed through a multidisciplinary process informed by sports nutrition, pediatric nutrition, medicine, and performance.</p><p>Each formula is reviewed across key formulation considerations, including:</p><p>Ingredient rationale. Serving amount. Intended use. Age considerations. Potential ingredient interactions. Total daily intake.</p><p>Every ingredient has a defined purpose, and every formula is considered as a whole — not simply as a list of individual ingredients.</p>",
             "page": ""
           }
         },
-        "tab_content_PfynXt": {
-          "type": "tab_content",
+        "accordion_De8PBk": {
+          "type": "accordion",
           "settings": {
-            "question": "RIGOROUS QUALITY STANDARDS",
+            "accordion_header": "EVIDENCE-INFORMED INGREDIENT SELECTION",
             "open_by_default": false,
-            "text": "<p>FUTR products are manufactured in FDA-registered, GMP-certified facilities that follow strict quality and manufacturing controls throughout the production process.</p><p>From ingredient sourcing and raw material verification to formulation, flavor development, manufacturing, and finished-product testing, every partner involved in bringing a FUTR product to market is held to rigorous standards for quality, consistency, and accountability.</p>",
+            "text": "<p>We don’t formulate around trends, hype, or the longest ingredient list.</p><p>Ingredients are selected based on their intended role, available scientific evidence, serving amount, and fit within the complete formula.</p><p>Because an ingredient that makes sense on its own still needs to make sense within the formula, at its intended serving amount, and for its intended use.</p><p>The goal isn’t more ingredients. It’s purposeful ingredients, intentional amounts, and a clear reason for each one.</p>",
             "page": ""
           }
         },
-        "tab_content_y9MaHW": {
-          "type": "tab_content",
+        "accordion_DmUCgY": {
+          "type": "accordion",
           "settings": {
-            "question": "PURPOSE-BUILT FOR YOUTH ATHLETES",
+            "accordion_header": "DESIGNED AS A SYSTEM",
             "open_by_default": false,
-            "text": "<p>We did not begin by asking which ingredients are popular in adult sports nutrition and whether they could be adapted for youth. We started with what youth athletes need across every phase of sport and development, then built the formulas around those needs.</p><p>Every ingredient is intentionally selected based on its specific role within the formula, the amount used, the intended use of the product, and its appropriateness for healthy, developing athletes.</p><p>Our formulas are also designed to work both independently and as part of the complete FUTR system. Ingredient overlap is considered across products so that when they are used together as directed, combined intake remains within appropriate daily levels.</p>",
+            "text": "<p>Each FUTR formula is designed to work independently, but we also consider how the products fit together.</p><p>Shared nutrients and total intake are considered across the system when products are used as directed.</p><p>We’re not simply developing individual products. We’re building a connected nutrition system around the full cycle of youth sport.</p>",
             "page": ""
           }
         }
       },
       "block_order": [
-        "tab_content_iEpnMz",
-        "tab_content_PfynXt",
-        "tab_content_y9MaHW"
+        "accordion_9dPrYW",
+        "accordion_De8PBk",
+        "accordion_DmUCgY"
       ],
-      "name": "t:sections.accordion.presets.name",
+      "name": "t:sections.product--accordion-with-image.presets.name",
       "settings": {
-        "title": "",
-        "description": "",
+        "section_title": "",
+        "section_description": "",
         "section_header_alignment": "center",
         "faq_icon": "plus_minus",
-        "section_width": "narrow",
+        "accordion_image": "shopify://shop_images/image-2.jpg",
+        "custom_split": false,
+        "image_split_percent": 50,
+        "image_max_width": 350,
+        "square_image": false,
+        "center_align_content": false,
+        "heading_above_accordion": false,
+        "title": "",
+        "text": "",
+        "link": "",
+        "button_text": "",
+        "image_position_desktop": "right",
+        "image_position_mobile": "top",
+        "section_width": "content",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
+        "image--background-color": "rgba(0,0,0,0)",
+        "image--text-color": "#333333",
+        "button_background_color": "#242424",
+        "button_text_color": "#FFFFFF",
+        "colors": "light"
+      }
+    },
+    "image_with_text_iXYTPH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_CzNjMg": {
+          "type": "heading",
+          "settings": {
+            "title": "QUALITY BUILT INTO THE PROCESS",
+            "heading_bottom_spacing": 15
+          }
+        },
+        "text_NW4YUG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Science doesn’t stop when the formula is finished.</p><p>FUTR products are manufactured in facilities registered with FDA and operating under current Good Manufacturing Practice (cGMP) requirements applicable to dietary supplements.</p><p>Quality controls include ingredient sourcing and raw-material verification, manufacturing controls, finished-product specifications, and testing.</p><p>Because what’s on the label should match what’s in the product.</p>",
+            "text_bottom_spacing": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_CzNjMg",
+        "text_NW4YUG"
+      ],
+      "name": "t:sections.image--image-with-text.presets.name",
+      "settings": {
+        "layout": "left",
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
         "colors": "dark"
       }
     }
@@ -146,6 +197,7 @@
     "main",
     "image_with_text_overlay_6W84Ht",
     "image_with_text_gWGJaP",
-    "accordion_QrGGjQ"
+    "accordion_with_image_rRbVnk",
+    "image_with_text_iXYTPH"
   ]
 }

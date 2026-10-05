@@ -1,6 +1,23 @@
 {{ 'product-template.min.css' | asset_url | stylesheet_tag: preload: true }}
 
-{% liquid 
+{% comment %}
+  Opt-in fix for "Square" image shape — only applied when that shape is
+  selected for this section instance, so other products/pages using a
+  different shape (or other sections like featured-product/quick-view that
+  share the same .media-ratio--square class) are unaffected. The stock
+  behavior crops (object-fit:cover) non-square photos to fill the square box,
+  cutting off parts of the image; contain shows the whole photo instead,
+  letterboxed if needed.
+{% endcomment %}
+{% if section.settings.image_shape == 'square' %}
+  {% style %}
+    #shopify-section-{{ section.id }} .media-ratio--square {
+      object-fit: contain !important;
+    }
+  {% endstyle %}
+{% endif %}
+
+{% liquid
   assign current_variant = product.selected_or_first_available_variant
 
   assign on_sale = false

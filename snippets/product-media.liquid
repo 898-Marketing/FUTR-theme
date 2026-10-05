@@ -448,7 +448,13 @@
                   {% endcapture %}
 
                   {% assign alt = thumbalt | escape %}
-                  {% render 'responsive-image', image: media.preview_image, wrapper_class: 'thumbnail-radius', class: class, alt: alt, default_size: '300x', props: props, blur: false, styles: styles, adaptive_ratio: adapt_ratio %}
+                  {%- liquid
+                    assign disable_focal_point_for_thumb = false
+                    if image_crop == 'square'
+                      assign disable_focal_point_for_thumb = true
+                    endif
+                  -%}
+                  {% render 'responsive-image', image: media.preview_image, wrapper_class: 'thumbnail-radius', class: class, alt: alt, default_size: '300x', props: props, blur: false, styles: styles, adaptive_ratio: adapt_ratio, disable_focal_point: disable_focal_point_for_thumb %}
                 </div>
               {% endunless %}
             {% endunless %}

@@ -194,14 +194,22 @@ product-media.media-type-slider [data-slider-main] .swiper-slide {
    resolves correctly through every nested div, give the top-level gallery
    element a real aspect-ratio directly, matching whichever fixed image shape
    is actually in use (read off the image's own ratio class). This can't
-   collapse to zero regardless of what's happening underneath it. */
-product-media:has(.media-ratio--square) {
+   collapse to zero regardless of what's happening underneath it.
+   Scoped to paginated/slider only, matching the height:auto fix above —
+   "thumbnails" mode uses a two-row grid (main image + thumbnail strip below
+   it), and forcing the WHOLE grid (both rows combined) into a 1:1 box here
+   squeezed the thumbnail strip's height out of the main image's row,
+   leaving it shorter than a true square with empty space underneath. */
+product-media.media-type-paginated:has(.media-ratio--square),
+product-media.media-type-slider:has(.media-ratio--square) {
   aspect-ratio: 1 / 1 !important;
 }
-product-media:has(.media-ratio--tall) {
+product-media.media-type-paginated:has(.media-ratio--tall),
+product-media.media-type-slider:has(.media-ratio--tall) {
   aspect-ratio: 2 / 3 !important;
 }
-product-media:has(.media-ratio--wide) {
+product-media.media-type-paginated:has(.media-ratio--wide),
+product-media.media-type-slider:has(.media-ratio--wide) {
   aspect-ratio: 4 / 3 !important;
 }
 

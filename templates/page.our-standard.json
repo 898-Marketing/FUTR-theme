@@ -66,31 +66,32 @@
         "image_overlay_opacity": 50
       }
     },
-    "image_with_text_gWGJaP": {
-      "type": "image-with-text",
+    "rich_text_jFd4Le": {
+      "type": "rich-text",
       "blocks": {
-        "text_GDCCcY": {
-          "type": "text",
+        "richtext_QtWdGm": {
+          "type": "richtext",
           "settings": {
             "text": "<p>Youth athletes deserve more than adult sports nutrition scaled down into a smaller serving.</p><p>Age, stage of development, training demands, intended use, and total daily intake all matter when developing nutrition for young athletes. That’s why FUTR starts with the youth athlete — not an existing adult formula.</p><p>Every product is built around a defined purpose: what it is designed to support, when it is intended to be used, which ingredients belong, and the intended serving amount.</p><p><strong>The result is a sports nutrition system developed specifically with the routines and nutritional considerations of healthy, active youth in mind.</strong></p>",
+            "text_size": 20,
             "text_bottom_spacing": 20
           }
         }
       },
       "block_order": [
-        "text_GDCCcY"
+        "richtext_QtWdGm"
       ],
-      "name": "t:sections.image--image-with-text.presets.name",
+      "name": "t:sections.text--rich-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/image_3.jpg",
-        "layout": "left",
-        "text_alignment": "center",
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
         "text_alignment_mobile": "center",
-        "text_overlapping_image": false,
-        "section-width": "full",
-        "section_padding_top": 0,
-        "section_padding_bottom": 0,
-        "colors": "dark"
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "light",
+        "background_image": "shopify://shop_images/flag-_1.png",
+        "background_overlay_color": "#000000",
+        "background_overlay_opacity": 55
       }
     },
     "accordion_with_image_rRbVnk": {
@@ -152,10 +153,10 @@
         "section_padding_top": 60,
         "section_padding_bottom": 60,
         "image--background-color": "rgba(0,0,0,0)",
-        "image--text-color": "#333333",
-        "button_background_color": "#242424",
+        "image--text-color": "#FFFFFF",
+        "button_background_color": "#FFFFFF",
         "button_text_color": "#ffffff",
-        "colors": "light"
+        "colors": "dark"
       }
     },
     "image_with_text_iXYTPH": {
@@ -182,6 +183,7 @@
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/image_3.jpg",
         "layout": "left",
         "text_alignment": "left",
         "text_alignment_mobile": "left",
@@ -189,14 +191,14 @@
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "dark"
+        "colors": "light"
       }
     }
   },
   "order": [
     "main",
     "image_with_text_overlay_6W84Ht",
-    "image_with_text_gWGJaP",
+    "rich_text_jFd4Le",
     "accordion_with_image_rRbVnk",
     "image_with_text_iXYTPH"
   ]

@@ -82,7 +82,7 @@
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/GAME-TROP-90.jpg",
+        "image": "shopify://shop_images/image_3.jpg",
         "layout": "left",
         "text_alignment": "center",
         "text_alignment_mobile": "center",
@@ -154,7 +154,7 @@
         "image--background-color": "rgba(0,0,0,0)",
         "image--text-color": "#333333",
         "button_background_color": "#242424",
-        "button_text_color": "#FFFFFF",
+        "button_text_color": "#ffffff",
         "colors": "light"
       }
     },

@@ -320,7 +320,7 @@
           "type": "image_and_text",
           "settings": {
             "image": "shopify://shop_images/Img_of_ingredients.png",
-            "grid_image_size": "wide",
+            "grid_image_size": "natural",
             "heading": "EXPERT-LED Formulas",
             "text": "<p>Built by leaders in sports medicine, pediatrics, and nutrition — experts who understand what athletes need at every stage. They don't just know the research. They've helped shape it.</p>",
             "bio_text": "",
@@ -332,7 +332,7 @@
           "type": "image_and_text",
           "settings": {
             "image": "shopify://shop_images/built-for-youth..jpg",
-            "grid_image_size": "wide",
+            "grid_image_size": "natural",
             "heading": "BUILT FOR YOUTH",
             "text": "<p>These aren't watered-down adult formulas. Every product is built around what a developing athlete's body needs — the right nutrients, the right amounts, for the right stage of their game.</p>",
             "bio_text": "",
@@ -343,8 +343,8 @@
         "image_and_text_VjVbP8": {
           "type": "image_and_text",
           "settings": {
-            "image": "shopify://shop_images/tested-every-stage.jpg",
-            "grid_image_size": "wide",
+            "image": "shopify://shop_images/tested-every-stage-1.jpg",
+            "grid_image_size": "natural",
             "heading": "TESTED AT EVERY LEVEL",
             "text": "<p>Individual ingredients are verified, finished formulas are third-party tested, and labels are checked for accuracy. Parents can trust what's on the label — and athletes can just play.</p>",
             "bio_text": "",

@@ -70,9 +70,12 @@
     },
     "footer-bottom": {
       "type": "footer-bottom",
+      "custom_css": [
+        ".animated-link--item {display: none;}"
+      ],
       "settings": {
         "show_methods_of_payment": true,
-        "footer_text": "",
+        "footer_text": "<p>Privacy Policy | Terms of Service</p>",
         "show_currency_selector": true,
         "show_country_name": false,
         "show_country_flag": true,

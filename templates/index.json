@@ -530,7 +530,7 @@
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/banner-half-image.jpg",
+        "image": "shopify://shop_images/beyond-the-game.jpg",
         "layout": "right",
         "text_alignment": "left",
         "text_alignment_mobile": "center",
@@ -602,7 +602,7 @@
         "text_color": "#ffffff",
         "caption_bg_color": "#0000008c",
         "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
+        "image_overlay_opacity": 12
       }
     },
     "blog_posts_wefQCf": {

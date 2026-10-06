@@ -203,7 +203,7 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 80,
         "section_padding_bottom": 80,
-        "colors": "light",
+        "colors": "dark",
         "background_overlay_color": "#000000",
         "background_overlay_opacity": 70
       }
@@ -602,7 +602,7 @@
         "text_color": "#ffffff",
         "caption_bg_color": "#0000008c",
         "image_overlay_color": "#000000",
-        "image_overlay_opacity": 4
+        "image_overlay_opacity": 5
       }
     },
     "blog_posts_wefQCf": {

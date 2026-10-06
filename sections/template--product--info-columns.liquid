@@ -1,6 +1,10 @@
 {{ 'product-info-columns-section.min.css' | asset_url | stylesheet_tag }}
 
 {% style %}
+  .section-{{ section.id }} .info-cols--section-button--wrapper {
+    margin-bottom: 30px;
+  }
+
   .section-{{ section.id }} .info-cols--slider {
     text-align: {{ section.settings.text_alignment_mobile }};
   }
@@ -189,6 +193,24 @@
 
   {% comment %} Section title and description {% endcomment %}
   {% render 'dynamic-section-header', section_title: section.settings.title, section_description: section.settings.description, alignment: section.settings.section_header_alignment %}
+
+  {% if section.settings.section_button_text != blank %}
+    {% if section.settings.override_button_colors %}
+      {% render 'button-color-overrides',
+        id: section.id,
+        style: section.settings.buttons_style,
+        text_color: section.settings.button_text_color,
+        background_color: section.settings.button_background_color
+      %}
+    {% endif %}
+    {% render 'dynamic-section-button',
+      id: section.id,
+      link: section.settings.section_button_link,
+      label: section.settings.section_button_text,
+      style: section.settings.buttons_style,
+      div_classes: 'info-cols--section-button--wrapper content-align--' | append: section.settings.section_header_alignment
+    %}
+  {% endif %}
 
 	<div class="info-cols__slider-wrapper{% if section.settings.section_width == 'content' %} width--content{% endif %}" data-grid-slider-wrapper>
 
@@ -516,6 +538,17 @@
       "id": "section_header_alignment",
       "label": "t:all.Alignment",
       "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "section_button_text",
+      "label": "Section button label",
+      "info": "A single button for the whole section, shown below the heading — separate from each column's own optional button. Leave blank to hide it."
+    },
+    {
+      "type": "url",
+      "id": "section_button_link",
+      "label": "Section button link"
     },
     {
       "type": "header",

@@ -390,7 +390,8 @@
         "card_glow_color": "#1f88d2",
         "card_gap": 30,
         "force_static_grid": false,
-        "enable_bio_popup": false
+        "enable_bio_popup": false,
+        "match_image_height_to_first": true
       }
     },
     "focused_product_gallery_qB8cNM": {

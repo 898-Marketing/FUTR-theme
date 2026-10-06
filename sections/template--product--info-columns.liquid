@@ -1,6 +1,34 @@
 {{ 'product-info-columns-section.min.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign first_image_ratio = blank
+  if section.settings.match_image_height_to_first
+    assign first_image_block = section.blocks | where: 'type', 'image_and_text' | first
+    if first_image_block.settings.image != blank
+      assign first_image_ratio = first_image_block.settings.image.aspect_ratio
+    endif
+  endif
+-%}
+
 {% style %}
+  {% comment %}
+    Opt-in "match height to first column" — only applied when turned on for
+    this section instance, so other pages using this same section type are
+    unaffected. Crops every image_and_text block's image to the first
+    block's own aspect ratio. Each image's object-position already follows
+    its native Shopify focal point (the image render already passes
+    allow_stretch: true), so adjusting the focal point in Admin controls
+    which part of a cropped image stays visible.
+  {% endcomment %}
+  {% if first_image_ratio %}
+    .section-{{ section.id }} .info-cols--image > div {
+      position: relative;
+      aspect-ratio: {{ first_image_ratio }};
+      height: auto;
+      overflow: hidden;
+    }
+  {% endif %}
+
   .section-{{ section.id }} .info-cols--slider {
     text-align: {{ section.settings.text_alignment_mobile }};
   }
@@ -582,6 +610,13 @@
       "id": "override_border_radius",
       "label": "t:all.override_border_radius",
       "info": "t:all.override_border_radius_info",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "match_image_height_to_first",
+      "label": "Match every image's height to the first column",
+      "info": "Crops every column's image (Image & text blocks) to the same height as the first one. To choose which part of a cropped image stays visible, edit that image in Shopify Admin and drag its focal point. Only affects this section instance.",
       "default": false
     },
     {

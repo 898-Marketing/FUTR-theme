@@ -208,7 +208,7 @@
       link: section.settings.section_button_link,
       label: section.settings.section_button_text,
       style: section.settings.buttons_style,
-      div_classes: 'info-cols--section-button--wrapper content-align--' | append: section.settings.section_header_alignment
+      div_classes: 'info-cols--section-button--wrapper content-align--' | append: section.settings.section_button_alignment
     %}
   {% endif %}
 
@@ -549,6 +549,13 @@
       "type": "url",
       "id": "section_button_link",
       "label": "Section button link"
+    },
+    {
+      "type": "text_alignment",
+      "id": "section_button_alignment",
+      "label": "Section button alignment",
+      "default": "center",
+      "visible_if": "{{ section.settings.section_button_text != blank }}"
     },
     {
       "type": "header",

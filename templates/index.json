@@ -320,7 +320,7 @@
           "type": "image_and_text",
           "settings": {
             "image": "shopify://shop_images/Img_of_ingredients.png",
-            "grid_image_size": "natural",
+            "grid_image_size": "wide",
             "heading": "EXPERT-LED Formulas",
             "text": "<p>Built by leaders in sports medicine, pediatrics, and nutrition — experts who understand what athletes need at every stage. They don't just know the research. They've helped shape it.</p>",
             "bio_text": "",
@@ -332,7 +332,7 @@
           "type": "image_and_text",
           "settings": {
             "image": "shopify://shop_images/built-for-youth..jpg",
-            "grid_image_size": "natural",
+            "grid_image_size": "wide",
             "heading": "BUILT FOR YOUTH",
             "text": "<p>These aren't watered-down adult formulas. Every product is built around what a developing athlete's body needs — the right nutrients, the right amounts, for the right stage of their game.</p>",
             "bio_text": "",
@@ -344,7 +344,7 @@
           "type": "image_and_text",
           "settings": {
             "image": "shopify://shop_images/tested-every-stage.jpg",
-            "grid_image_size": "natural",
+            "grid_image_size": "wide",
             "heading": "TESTED AT EVERY LEVEL",
             "text": "<p>Individual ingredients are verified, finished formulas are third-party tested, and labels are checked for accuracy. Parents can trust what's on the label — and athletes can just play.</p>",
             "bio_text": "",
@@ -371,6 +371,7 @@
         "section_button_alignment": "center",
         "maximum_width": 500,
         "override_border_radius": false,
+        "match_image_height_to_first": true,
         "buttons_style": "filled",
         "override_button_colors": false,
         "button_background_color": "#e68819",
@@ -390,8 +391,7 @@
         "card_glow_color": "#1f88d2",
         "card_gap": 30,
         "force_static_grid": false,
-        "enable_bio_popup": false,
-        "match_image_height_to_first": true
+        "enable_bio_popup": false
       }
     },
     "focused_product_gallery_qB8cNM": {

@@ -368,7 +368,7 @@
         "section_header_alignment": "center",
         "section_button_text": "LEARN MORE",
         "section_button_link": "shopify://pages/our-standard",
-        "section_button_alignment": "left",
+        "section_button_alignment": "center",
         "maximum_width": 500,
         "override_border_radius": false,
         "buttons_style": "filled",

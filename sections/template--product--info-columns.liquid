@@ -2,16 +2,17 @@
 
 {% style %}
   .section-{{ section.id }} .info-cols--section-button--wrapper {
+    display: flex !important;
     margin-bottom: 30px;
   }
   .section-{{ section.id }} .info-cols--section-button--align-left {
-    text-align: left;
+    justify-content: flex-start;
   }
   .section-{{ section.id }} .info-cols--section-button--align-center {
-    text-align: center;
+    justify-content: center;
   }
   .section-{{ section.id }} .info-cols--section-button--align-right {
-    text-align: right;
+    justify-content: flex-end;
   }
 
   .section-{{ section.id }} .info-cols--slider {

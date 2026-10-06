@@ -1,20 +1,6 @@
 {{ 'product-info-columns-section.min.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  .section-{{ section.id }} .info-cols--section-button--wrapper {
-    display: flex !important;
-    margin-bottom: 30px;
-  }
-  .section-{{ section.id }} .info-cols--section-button--align-left {
-    justify-content: flex-start;
-  }
-  .section-{{ section.id }} .info-cols--section-button--align-center {
-    justify-content: center;
-  }
-  .section-{{ section.id }} .info-cols--section-button--align-right {
-    justify-content: flex-end;
-  }
-
   .section-{{ section.id }} .info-cols--slider {
     text-align: {{ section.settings.text_alignment_mobile }};
   }
@@ -213,13 +199,23 @@
         background_color: section.settings.button_background_color
       %}
     {% endif %}
-    {% render 'dynamic-section-button',
-      id: section.id,
-      link: section.settings.section_button_link,
-      label: section.settings.section_button_text,
-      style: section.settings.buttons_style,
-      div_classes: 'info-cols--section-button--wrapper info-cols--section-button--align-' | append: section.settings.section_button_alignment
-    %}
+    {%- liquid
+      assign section_button_justify = 'center'
+      if section.settings.section_button_alignment == 'left'
+        assign section_button_justify = 'flex-start'
+      elsif section.settings.section_button_alignment == 'right'
+        assign section_button_justify = 'flex-end'
+      endif
+    -%}
+    <div style="display: flex; justify-content: {{ section_button_justify }}; width: 100%; margin-bottom: 30px;">
+      {% render 'dynamic-section-button',
+        id: section.id,
+        link: section.settings.section_button_link,
+        label: section.settings.section_button_text,
+        style: section.settings.buttons_style,
+        wrapper: false
+      %}
+    </div>
   {% endif %}
 
 	<div class="info-cols__slider-wrapper{% if section.settings.section_width == 'content' %} width--content{% endif %}" data-grid-slider-wrapper>

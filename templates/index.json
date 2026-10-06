@@ -169,7 +169,7 @@
         "heading_RVrmk6": {
           "type": "heading",
           "settings": {
-            "heading": "Made for Youth. Made to Work.",
+            "heading": "BUILDING THE FUTR OF SPORTS NUTRITION.",
             "heading--text-size": 46,
             "heading_bottom_spacing": 20
           }
@@ -177,7 +177,7 @@
         "richtext_QbKBUC": {
           "type": "richtext",
           "settings": {
-            "text": "<p>Our philosophy is simple: make youth sports nutrition products, and make them exceptionally well. FUTR is the first complete system built for every phase of play — every formula intentionally designed for youth athletes, with the right ingredients in the right amounts.</p>",
+            "text": "<p>FUTR is a complete system built for every phase of play — with every formula purpose-built for youth from the start. Science-led ingredients. Intentional amounts. A safety-first standard without compromise.</p>",
             "text_size": 20,
             "text_bottom_spacing": 20
           }
@@ -185,7 +185,7 @@
         "richtext_xYYefw": {
           "type": "richtext",
           "settings": {
-            "text": "<p><em>Because the future isn't waiting. It's being built every time they show up.</em></p><p></p>",
+            "text": "<p><em>Because the future isn’t waiting. It’s being built every time they show up.</em></p><p></p>",
             "text_size": 20,
             "text_bottom_spacing": 20
           }
@@ -204,7 +204,6 @@
         "section_padding_top": 80,
         "section_padding_bottom": 80,
         "colors": "light",
-        "background_image": "shopify://shop_images/flag.png",
         "background_overlay_color": "#000000",
         "background_overlay_opacity": 70
       }
@@ -364,7 +363,7 @@
       ],
       "name": "t:sections.template--product--info-columns.presets.name",
       "settings": {
-        "title": "OUR STANDARDS",
+        "title": "OUR STANDARD",
         "description": "",
         "section_header_alignment": "center",
         "maximum_width": 500,

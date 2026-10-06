@@ -4,6 +4,15 @@
   .section-{{ section.id }} .info-cols--section-button--wrapper {
     margin-bottom: 30px;
   }
+  .section-{{ section.id }} .info-cols--section-button--align-left {
+    text-align: left;
+  }
+  .section-{{ section.id }} .info-cols--section-button--align-center {
+    text-align: center;
+  }
+  .section-{{ section.id }} .info-cols--section-button--align-right {
+    text-align: right;
+  }
 
   .section-{{ section.id }} .info-cols--slider {
     text-align: {{ section.settings.text_alignment_mobile }};
@@ -208,7 +217,7 @@
       link: section.settings.section_button_link,
       label: section.settings.section_button_text,
       style: section.settings.buttons_style,
-      div_classes: 'info-cols--section-button--wrapper content-align--' | append: section.settings.section_button_alignment
+      div_classes: 'info-cols--section-button--wrapper info-cols--section-button--align-' | append: section.settings.section_button_alignment
     %}
   {% endif %}
 

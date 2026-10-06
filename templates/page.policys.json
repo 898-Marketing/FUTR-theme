@@ -15,37 +15,9 @@
         "page_title_enabled": true,
         "page_width": "full-width"
       }
-    },
-    "rich_text_CirWta": {
-      "type": "rich-text",
-      "blocks": {
-        "richtext_ndPEgW": {
-          "type": "richtext",
-          "settings": {
-            "text": "{{ page.content }}",
-            "text_size": 14,
-            "text_bottom_spacing": 20
-          }
-        }
-      },
-      "block_order": [
-        "richtext_ndPEgW"
-      ],
-      "name": "t:sections.text--rich-text.presets.name",
-      "settings": {
-        "section_width": "narrow",
-        "text_alignment_desktop": "center",
-        "text_alignment_mobile": "center",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "colors": "white",
-        "background_overlay_color": "#000000",
-        "background_overlay_opacity": 50
-      }
     }
   },
   "order": [
-    "main",
-    "rich_text_CirWta"
+    "main"
   ]
 }

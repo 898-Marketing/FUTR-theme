@@ -1,5 +1,30 @@
 {{ 'page-template.min.css' | asset_url | stylesheet_tag: preload: true }}
 
+{% if template.suffix == 'policys' %}
+  {% comment %}
+    Scoped to the policy pages template only (not sitewide) — the sitewide
+    list-style-position:inside rule makes a bullet and its text stack on
+    separate lines whenever the list item's text is wrapped in a block-level
+    tag (e.g. a <p>, common when content is pasted from Word/Docs). Switching
+    to "outside" positions the bullet relative to the whole list item instead
+    of the inline text flow, so it sits correctly beside the first line
+    regardless of what's nested inside. Padding-left (instead of margin-left)
+    gives the outside-positioned bullet room to render without changing
+    where the list's left edge lines up with the rest of the page text.
+  {% endcomment %}
+  {% style %}
+    .policy-page-content ul,
+    .policy-page-content ol {
+      margin-left: 0;
+      padding-left: 20px;
+    }
+    .policy-page-content ul li,
+    .policy-page-content ol li {
+      list-style-position: outside;
+    }
+  {% endstyle %}
+{% endif %}
+
 {%- liquid
   assign has_sidebar = false
   if section.blocks.size > 0
@@ -29,7 +54,7 @@
     {% endif %}
 
     <div class="grid">
-      <div class="rte text-link-animated grid__item grid__item--page{% if has_sidebar %} large--two-thirds{% endif %}">
+      <div class="rte text-link-animated grid__item grid__item--page{% if has_sidebar %} large--two-thirds{% endif %}{% if template.suffix == 'policys' %} policy-page-content{% endif %}">
         {{ page.content }}
       </div>
 

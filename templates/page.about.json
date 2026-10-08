@@ -375,6 +375,7 @@
         },
         "image_and_text_yikiJB": {
           "type": "image_and_text",
+          "disabled": true,
           "settings": {
             "grid_image_size": "natural",
             "heading": "Heading",
@@ -386,6 +387,7 @@
         },
         "image_and_text_Pzqi6N": {
           "type": "image_and_text",
+          "disabled": true,
           "settings": {
             "grid_image_size": "natural",
             "heading": "Heading",
@@ -412,8 +414,12 @@
         "title": "Our Team",
         "description": "",
         "section_header_alignment": "center",
+        "section_button_text": "",
+        "section_button_link": "",
+        "section_button_alignment": "center",
         "maximum_width": 500,
         "override_border_radius": false,
+        "match_image_height_to_first": false,
         "buttons_style": "underlined",
         "override_button_colors": false,
         "button_background_color": "#e68819",

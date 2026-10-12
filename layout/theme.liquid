@@ -235,12 +235,40 @@
       {% endunless %}
     {% endif %}
 
+    {%- comment -%}
+      Opt-in white background / black text for the native Privacy Policy and
+      Terms of Service pages only — these have no theme template to scope
+      styling through, so they're matched by their fixed Shopify URL path.
+      No other page matches these paths, so nothing else is affected.
+    {%- endcomment -%}
+    {%- assign is_legal_policy_page = false -%}
+    {%- if request.path contains '/policies/privacy-policy' or request.path contains '/policies/terms-of-service' -%}
+      {%- assign is_legal_policy_page = true -%}
+    {%- endif -%}
+    {% if is_legal_policy_page %}
+      <style>
+        .legal-policy-page--light {
+          background-color: #ffffff;
+          color: #000000;
+        }
+        .legal-policy-page--light h1,
+        .legal-policy-page--light h2,
+        .legal-policy-page--light h3,
+        .legal-policy-page--light h4,
+        .legal-policy-page--light h5,
+        .legal-policy-page--light h6,
+        .legal-policy-page--light a {
+          color: #000000;
+        }
+      </style>
+    {% endif %}
+
     {% if template == 'index' %}
       <div id="MainContent" class="homepage-wrapper">
     {% elsif template == 'cart' or template contains 'customers/' %}
       <div id="MainContent" class="main-content page-main--wrapper">
     {% else %}
-      <div id="MainContent" class="wrapper main-content page-main--wrapper">
+      <div id="MainContent" class="wrapper main-content page-main--wrapper{% if is_legal_policy_page %} legal-policy-page--light{% endif %}">
     {% endif %}
 
         {{ content_for_layout }}

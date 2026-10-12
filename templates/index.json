@@ -311,7 +311,7 @@
         "card_border_color": "#4a90d9",
         "card_heading_color": "#3e82e6",
         "card_text_color": "#064982",
-        "bottom_text": "",
+        "bottom_text": "<p>Two nationwide surveys conducted by FUTR in 2025: parent survey (n=96) and youth athlete survey (n=133). Percentages reflect self-reported responses from survey participants.</p>",
         "bottom_text_alignment": "center",
         "bottom_text_color": "#ffffff",
         "bottom_text_font_size": 16,
@@ -449,7 +449,7 @@
       ],
       "name": "t:sections.focused-product-gallery.name",
       "settings": {
-        "title": "Fuel Every Phrase of Play",
+        "title": "FUEL EVERY PHASE OF PLAY",
         "description": "<p>Every FUTR Product was designed to work together as part of a system.</p>",
         "section_header_alignment": "center",
         "image_shape": "natural",
@@ -563,7 +563,7 @@
         "text_VetieR": {
           "type": "text",
           "settings": {
-            "text": "<p>Every FUTR formula was built to work together as part of a system to fuel, hydrate, recharge and support the development of athletes.</p>",
+            "text": "<p>FUTR formulas are built for different phases of play, with products for fuel, hydration and recovery.</p>",
             "font_size_desktop": 16,
             "font_size_mobile": 16,
             "text_bottom_spacing": 20

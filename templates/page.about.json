@@ -15,7 +15,7 @@
         "heading_LYaxRQ": {
           "type": "heading",
           "settings": {
-            "title": "We're not just fueling the next generation. We're redefining what youth performance looks like.",
+            "title": "ABOUT FUTR",
             "font_size_desktop": 47,
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
@@ -23,10 +23,9 @@
         },
         "text_KFUWad": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p>Add an image paired with text to give focus to your chosen product, collection, or blog post.</p>",
-            "font_size_desktop": 16,
+            "text": "<p>We're not just fueling the next generation. We're redefining what youth performance looks like.</p>",
+            "font_size_desktop": 18,
             "font_size_mobile": 16,
             "text_bottom_spacing": 20
           }
@@ -130,7 +129,7 @@
         "richtext_4YaFct": {
           "type": "richtext",
           "settings": {
-            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them. Not borrowed from adult formulas. Not watered down.&nbsp;</p><p>Every product is developed around the way youngathletes actually train, compete, recover, and grow —purposeful, and science-backed.</p>",
+            "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them. Not borrowed from adult formulas. Not watered down.&nbsp;</p><p>Every product is developed around the way young athletes actually train, compete, recover, and grow — purposeful and science-backed.</p>",
             "text_size": 24,
             "text_bottom_spacing": 20
           }
@@ -140,7 +139,7 @@
         "richtext_4YaFct"
       ],
       "custom_css": [
-        "p {color: #fff; font-weight: 700;}"
+        "p {color: #000; font-weight: 700;}"
       ],
       "settings": {
         "section_width": "narrow",
@@ -148,10 +147,10 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 80,
         "section_padding_bottom": 80,
-        "colors": "light",
+        "colors": "dark",
         "background_image": "shopify://shop_images/flag.png",
         "background_overlay_color": "#000000",
-        "background_overlay_opacity": 55
+        "background_overlay_opacity": 0
       }
     },
     "image_with_text_7VaACR": {
@@ -272,7 +271,14 @@
         "card_bg_color": "#16305c",
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",
-        "card_text_color": "#dbe6f2"
+        "card_text_color": "#dbe6f2",
+        "bottom_text": "",
+        "bottom_text_alignment": "center",
+        "bottom_text_color": "#ffffff",
+        "bottom_text_font_size": 16,
+        "bottom_text_font_size_mobile": 14,
+        "bottom_text_top_spacing": 30,
+        "bottom_text_top_spacing_mobile": 25
       }
     },
     "image_with_text_hgiX3N": {

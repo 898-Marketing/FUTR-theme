@@ -88,8 +88,7 @@
         "text_alignment_mobile": "center",
         "section_padding_top": 60,
         "section_padding_bottom": 60,
-        "colors": "light",
-        "background_image": "shopify://shop_images/flag-_1.png",
+        "colors": "dark",
         "background_overlay_color": "#000000",
         "background_overlay_opacity": 55
       }
@@ -153,8 +152,8 @@
         "section_padding_top": 60,
         "section_padding_bottom": 60,
         "image--background-color": "rgba(0,0,0,0)",
-        "image--text-color": "#FFFFFF",
-        "button_background_color": "#FFFFFF",
+        "image--text-color": "#ffffff",
+        "button_background_color": "#ffffff",
         "button_text_color": "#ffffff",
         "colors": "dark"
       }

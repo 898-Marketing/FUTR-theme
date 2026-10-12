@@ -62,6 +62,9 @@
               .slider-section--{{ section.id }} .block-section--{{ block.id }} .featured-row__subtext {
                 font-size: {{ block.settings.desktop-caption-body-text-size }}px;
               }
+              .slider-section--{{ section.id }} .block-section--{{ block.id }} .homepage-featured-content-box {
+                max-width: {{ block.settings.content_max_width }}%;
+              }
             }
           </style>
         {% endfor %}
@@ -692,6 +695,17 @@
           "step": 1,
           "unit": "t:all.px",
           "default": 24
+        },
+        {
+          "type": "range",
+          "id": "content_max_width",
+          "label": "Content width (desktop)",
+          "info": "Limits how wide the heading/text/button block can stretch, so it doesn't span the full slide.",
+          "min": 30,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "default": 100
         },
         {
           "type": "header",

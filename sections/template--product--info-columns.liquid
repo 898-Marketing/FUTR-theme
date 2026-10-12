@@ -163,6 +163,9 @@
       opacity: 0.7;
       font-size: 14px;
     }
+    .section-{{ section.id }} .info-cols--bio-dialog__secondary-image {
+      margin-top: 16px;
+    }
     .section-{{ section.id }} .info-cols--bio-dialog__bio {
       font-size: 16px;
       line-height: 1.6;
@@ -364,6 +367,9 @@
                         <h3 class="info-cols--bio-dialog__name">{{ block.settings.heading }}</h3>
                         {% if block.settings.text != blank %}
                           <div class="info-cols--bio-dialog__position">{{ block.settings.text }}</div>
+                        {% endif %}
+                        {% if block.settings.bio_secondary_image != blank %}
+                          {% render 'responsive-image', image: block.settings.bio_secondary_image, wrapper_class: 'info-cols--bio-dialog__secondary-image', allow_stretch: true %}
                         {% endif %}
                       </div>
                       <div class="info-cols--bio-dialog__bio text-link-animated">
@@ -976,6 +982,12 @@
           "id": "bio_text",
           "label": "Bio (shown in pop-up)",
           "info": "Only used when \"Enable bio pop-up\" is turned on for this section. Leave blank to keep this column as a plain (non-clickable) card."
+        },
+        {
+          "type": "image_picker",
+          "id": "bio_secondary_image",
+          "label": "Second pop-up image (optional)",
+          "info": "Shown below the name/title in the pop-up, filling the space next to the bio text. Leave blank to omit it."
         },
         {
           "type": "header",

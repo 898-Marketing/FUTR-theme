@@ -25,17 +25,18 @@
             "override_button_colors": true,
             "button-background": "#1f88d2",
             "button-text": "#ffffff",
-            "image": "shopify://shop_images/gametime-collection.jpg",
+            "image": "shopify://shop_images/FUTR-3-1920x1080.jpg",
             "text_position": "center_left",
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 20,
             "content_max_width": 100,
+            "mobile_image": "shopify://shop_images/FUTR-3-1080x1080.jpg",
             "mobile_text_position": "bottom_left",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 15,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 61
+            "image_overlay_opacity": 30
           }
         }
       },

@@ -707,6 +707,75 @@
         "colors": "white"
       }
     },
+    "slideshow_TAqmKQ": {
+      "type": "slideshow",
+      "blocks": {
+        "image_tPpFhY": {
+          "type": "image",
+          "settings": {
+            "title": "Image slide",
+            "text": "Add images and text to give focus to your chosen product, collection, or blog post.",
+            "first_button_link": "",
+            "first_button_label": "Shop now",
+            "second_button_link": "",
+            "second_button_label": "Learn more",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "button-background": "#E68819",
+            "button-text": "#FFFFFF",
+            "text_position": "center_left",
+            "desktop-caption-heading-size": 60,
+            "desktop-caption-body-text-size": 24,
+            "mobile_text_position": "center_left",
+            "mobile-caption-heading-size": 36,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#000000",
+            "image_overlay_opacity": 20
+          }
+        },
+        "image_9YzyXD": {
+          "type": "image",
+          "settings": {
+            "title": "Focus In.<br>Game on.",
+            "text": "Introducing PREGAME. A caffeine-free formula made for youth athletes to support mental focus and physical readiness so they're prepared for every moment ahead.",
+            "first_button_link": "",
+            "first_button_label": "SHOP PREGAME >",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": false,
+            "button-background": "#E68819",
+            "button-text": "#FFFFFF",
+            "image": "shopify://shop_images/hf_20261011_035808_3204bec6-c47b-4b2e-860b-3feb389a090a.jpg",
+            "text_position": "center_right",
+            "desktop-caption-heading-size": 60,
+            "desktop-caption-body-text-size": 24,
+            "mobile_text_position": "center",
+            "mobile-caption-heading-size": 36,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#000000",
+            "image_overlay_opacity": 20
+          }
+        }
+      },
+      "block_order": [
+        "image_tPpFhY",
+        "image_9YzyXD"
+      ],
+      "name": "t:sections.image--slideshow.presets.name",
+      "settings": {
+        "desktop_height": "original",
+        "mobile_height": "extra_large",
+        "slide_navigation_style": "bars",
+        "slide_transition_delay": 5,
+        "section_width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "background_color": "#000000"
+      }
+    },
     "newsletter_cQa4NW": {
       "type": "newsletter",
       "settings": {
@@ -731,6 +800,7 @@
     "image_with_text_overlay_qmXaFa",
     "blog_posts_wefQCf",
     "testimonials_h6YnF3",
+    "slideshow_TAqmKQ",
     "newsletter_cQa4NW"
   ]
 }

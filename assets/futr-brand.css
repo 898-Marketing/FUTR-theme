@@ -248,3 +248,11 @@ product-media.media-type-slider:has(.media-ratio--wide) {
   margin-bottom: 15px;
 }
 
+/* Small print below the cart drawer's free shipping progress bar. */
+.cart-drawer__free-shipping-disclaimer {
+  font-size: 11px;
+  line-height: 1.4;
+  color: rgba(var(--color-foreground), 0.6);
+  margin: 6px 0 0;
+}
+

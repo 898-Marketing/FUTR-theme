@@ -215,7 +215,7 @@
           <div class="dt4-row" {{ block.shopify_attributes }}>
             <div class="dt4-cell">
               <div class="dt4-age-range">{{ block.settings.age_range }}</div>
-              {%- if block.settings.weight_lb != blank -%}
+              {%- if section.settings.show_weight and block.settings.weight_lb != blank -%}
                 <div class="dt4-age-weight">{{ block.settings.weight_lb }}</div>
               {%- endif -%}
             </div>
@@ -352,6 +352,7 @@
 
     { "type": "header", "content": "Column headers" },
     { "type": "text", "id": "age_column_label", "label": "Age/weight column label", "default": "Age / Weight" },
+    { "type": "checkbox", "id": "show_weight", "label": "Show weight under age range", "default": true, "info": "Turn off to show only the age range for each row, hiding the lb weight range." },
     { "type": "image_picker", "id": "tier1_header_icon", "label": "Tier 1 header icon" },
     { "type": "text", "id": "tier1_label", "label": "Tier 1 label", "default": "30-60 Min" },
     { "type": "image_picker", "id": "tier2_header_icon", "label": "Tier 2 header icon" },

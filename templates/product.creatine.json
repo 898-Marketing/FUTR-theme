@@ -474,14 +474,15 @@
         "row_icon_size": 54,
         "footer_icon_size": 40,
         "feature_icon_size": 54,
-        "age_column_label": "Age / Weight",
+        "age_column_label": "Age",
         "serving_icon": "shopify://shop_images/SCOOP0.png",
         "serving_column_label": "{{ product.title }}",
         "serving_column_sublabel": "1 scoop / stick = 1 serving",
         "water_icon": "shopify://shop_images/Icons-29.png",
         "water_column_label": "Water",
         "footer_text_white": "",
-        "footer_text_accent": ""
+        "footer_text_accent": "",
+        "show_weight": false
       }
     },
     "phase_columns_FWLXfK": {

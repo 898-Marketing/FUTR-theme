@@ -223,8 +223,10 @@
         <div class="dt-row" {{ block.shopify_attributes }}>
           <div class="dt-cell dt-cell--age">
             <div class="dt-age-range">{{ block.settings.age_range }}</div>
-            {%- if block.settings.weight_lb != blank -%}<div class="dt-age-weight">{{ block.settings.weight_lb }}</div>{%- endif -%}
-            {%- if block.settings.weight_kg != blank -%}<div class="dt-age-weight">{{ block.settings.weight_kg }}</div>{%- endif -%}
+            {%- if section.settings.show_weight -%}
+              {%- if block.settings.weight_lb != blank -%}<div class="dt-age-weight">{{ block.settings.weight_lb }}</div>{%- endif -%}
+              {%- if block.settings.weight_kg != blank -%}<div class="dt-age-weight">{{ block.settings.weight_kg }}</div>{%- endif -%}
+            {%- endif -%}
           </div>
           <div class="dt-cell dt-cell--inline">
             {%- liquid
@@ -316,6 +318,7 @@
 
     { "type": "header", "content": "Column headers" },
     { "type": "text", "id": "age_column_label", "label": "Age/weight column label", "default": "Age / Weight" },
+    { "type": "checkbox", "id": "show_weight", "label": "Show weight under age range", "default": true, "info": "Turn off to show only the age range for each row, hiding the lb/kg weight range." },
     { "type": "image_picker", "id": "serving_icon", "label": "Serving icon", "info": "Default icon for the column header and any row that doesn't have its own icon set below." },
     { "type": "text", "id": "serving_column_label", "label": "Serving column label", "default": "Pregame" },
     { "type": "text", "id": "serving_column_sublabel", "label": "Serving column sublabel", "default": "1 scoop / stick = 1 serving" },

@@ -541,7 +541,7 @@
         "row_icon_size": 36,
         "footer_icon_size": 24,
         "feature_icon_size": 48,
-        "age_column_label": "Age / Weight",
+        "age_column_label": "Age",
         "tier1_header_icon": "shopify://shop_images/TIME0.png",
         "tier1_label": "30-60 Min",
         "tier2_header_icon": "shopify://shop_images/TIME0.png",
@@ -553,7 +553,8 @@
         "tier3_row_icon": "shopify://shop_images/SCOOP0.png",
         "footer_text_white": "",
         "footer_text_accent": "",
-        "footer_subtext": ""
+        "footer_subtext": "",
+        "show_weight": false
       }
     },
     "product_slideshow_6iLqXF": {

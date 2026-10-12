@@ -310,7 +310,14 @@
         "card_bg_color": "#ffffff",
         "card_border_color": "#4a90d9",
         "card_heading_color": "#3e82e6",
-        "card_text_color": "#064982"
+        "card_text_color": "#064982",
+        "bottom_text": "",
+        "bottom_text_alignment": "center",
+        "bottom_text_color": "#ffffff",
+        "bottom_text_font_size": 16,
+        "bottom_text_font_size_mobile": 14,
+        "bottom_text_top_spacing": 30,
+        "bottom_text_top_spacing_mobile": 25
       }
     },
     "template_product_info_columns_YPyY6m": {

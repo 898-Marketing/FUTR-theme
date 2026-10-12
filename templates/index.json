@@ -177,7 +177,7 @@
         "richtext_QbKBUC": {
           "type": "richtext",
           "settings": {
-            "text": "<p>FUTR is a complete system built for every phase of play — with every formula purpose-built for youth from the start. Science-led ingredients. Intentional amounts. A safety-first standard without compromise.</p>",
+            "text": "<p>FUTR is a complete system built for every phase of play — with every formula purpose-built for youth from the start. Science-led ingredients. Intentional amounts. A safety-first approach to formulation.</p>",
             "text_size": 20,
             "text_bottom_spacing": 20
           }
@@ -257,21 +257,21 @@
           "type": "highlight",
           "settings": {
             "heading": "92%",
-            "text": "<p>of parents say <strong>recovery or muscle support</strong> is among the most important benefits they want in a youth sports nutrition product.</p>"
+            "text": "<p>of parents surveyed say recovery or muscle support is among the most important benefits they want in a youth sports nutrition product.</p>"
           }
         },
         "highlight_bE9fgW": {
           "type": "highlight",
           "settings": {
             "heading": "86%",
-            "text": "<p>of parents rank <strong>hydration + endurance</strong> among the products they’d be most likely to purchase for their kids.</p>"
+            "text": "<p>of parents surveyed rank hydration and endurance among the products they’d be most likely to purchase for their kids.</p>"
           }
         },
         "highlight_VHJaLy": {
           "type": "highlight",
           "settings": {
             "heading": "84%",
-            "text": "<p>of youth athletes want support for <strong>energy, focus or endurance</strong>.</p>"
+            "text": "<p>of youth athletes surveyed want support for energy, focus or endurance.</p>"
           }
         }
       },
@@ -319,7 +319,7 @@
         "image_and_text_Y93dfi": {
           "type": "image_and_text",
           "settings": {
-            "image": "shopify://shop_images/Img_of_ingredients.png",
+            "image": "shopify://shop_images/gametijme-column.jpg",
             "grid_image_size": "natural",
             "heading": "EXPERT-LED Formulas",
             "text": "<p>Built by leaders in sports medicine, pediatrics, and nutrition — experts who understand what athletes need at every stage. They don't just know the research. They've helped shape it.</p>",
@@ -334,7 +334,7 @@
             "image": "shopify://shop_images/built-for-youth..jpg",
             "grid_image_size": "natural",
             "heading": "BUILT FOR YOUTH",
-            "text": "<p>These aren't watered-down adult formulas. Every product is built around what a developing athlete's body needs — the right nutrients, the right amounts, for the right stage of their game.</p>",
+            "text": "<p>These aren't watered-down adult formulas. Every product is formulated with youth athletes in mind – the right nutrients, the right amounts, for the right stage of their game.</p>",
             "bio_text": "",
             "button_link": "",
             "button_text": ""

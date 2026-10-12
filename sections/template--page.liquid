@@ -1,28 +1,5 @@
 {{ 'page-template.min.css' | asset_url | stylesheet_tag: preload: true }}
 
-{% comment %}
-  Opt-in white background / black text for Policy pages only — scoped to
-  the "policys" page template suffix, so no other page using this shared
-  section is affected.
-{% endcomment %}
-{% if template.suffix == 'policys' %}
-  {% style %}
-    #shopify-section-{{ section.id }} {
-      background-color: #ffffff;
-      color: #000000;
-    }
-    #shopify-section-{{ section.id }} h1,
-    #shopify-section-{{ section.id }} h2,
-    #shopify-section-{{ section.id }} h3,
-    #shopify-section-{{ section.id }} h4,
-    #shopify-section-{{ section.id }} h5,
-    #shopify-section-{{ section.id }} h6,
-    #shopify-section-{{ section.id }} a {
-      color: #000000;
-    }
-  {% endstyle %}
-{% endif %}
-
 {%- liquid
   assign has_sidebar = false
   if section.blocks.size > 0

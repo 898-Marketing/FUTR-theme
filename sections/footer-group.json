@@ -42,10 +42,18 @@
             "menu_title": "Quick links",
             "footer_linklist": "footer"
           }
+        },
+        "text_Fw6N5QR5": {
+          "type": "text",
+          "settings": {
+            "title": "Text details",
+            "richtext": "<p>Create a captivating brand story, explain details of your products or highlight store promotions</p>"
+          }
         }
       },
       "block_order": [
         "image_ME7VQR",
+        "text_Fw6N5QR5",
         "social",
         "text_JetjzD",
         "menu_6tNnxh"

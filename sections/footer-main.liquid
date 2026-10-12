@@ -185,6 +185,10 @@
             {% else %}
               </div>
             {% endif %}
+
+            {% unless block.settings.disclaimer_text == blank %}
+              <p class="footer-logo-disclaimer">{{ block.settings.disclaimer_text }}</p>
+            {% endunless %}
           </div>
 
       {% endcase %}
@@ -470,6 +474,12 @@
           "label": "t:all.override_border_radius",
           "info": "t:all.override_border_radius_info",
           "default": false
+        },
+        {
+          "type": "text",
+          "id": "disclaimer_text",
+          "label": "Disclaimer text",
+          "info": "Optional small print shown directly below the logo/image in this column. Leave blank to hide it."
         }
       ]
     },

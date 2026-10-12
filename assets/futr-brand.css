@@ -256,3 +256,11 @@ product-media.media-type-slider:has(.media-ratio--wide) {
   margin: 6px 0 0;
 }
 
+/* Small print directly below the logo/image in the footer's image block. */
+.footer-logo-disclaimer {
+  font-size: 11px;
+  line-height: 1.4;
+  color: rgba(var(--color-foreground), 0.6);
+  margin: 8px 0 0;
+}
+

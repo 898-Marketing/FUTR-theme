@@ -85,7 +85,7 @@
     "giftwrap_gift_note": false,
     "enable-additional-checkout-buttons": true,
     "cart_vendor_enable": false,
-    "free_shipping_threshold": "50",
+    "free_shipping_threshold": "75",
     "empty_cart_message": "Nothing here! Go fill it up!",
     "search_input_label": "Discover your next favorite...",
     "predictive_search_enabled": true,

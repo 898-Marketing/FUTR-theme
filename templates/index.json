@@ -29,6 +29,7 @@
             "text_position": "center_left",
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 20,
+            "content_max_width": 100,
             "mobile_text_position": "bottom_left",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 15,
@@ -710,30 +711,6 @@
     "slideshow_TAqmKQ": {
       "type": "slideshow",
       "blocks": {
-        "image_tPpFhY": {
-          "type": "image",
-          "settings": {
-            "title": "Image slide",
-            "text": "Add images and text to give focus to your chosen product, collection, or blog post.",
-            "first_button_link": "",
-            "first_button_label": "Shop now",
-            "second_button_link": "",
-            "second_button_label": "Learn more",
-            "buttons_style": "filled",
-            "override_button_colors": false,
-            "button-background": "#E68819",
-            "button-text": "#FFFFFF",
-            "text_position": "center_left",
-            "desktop-caption-heading-size": 60,
-            "desktop-caption-body-text-size": 24,
-            "mobile_text_position": "center_left",
-            "mobile-caption-heading-size": 36,
-            "mobile-caption-body-text-size": 16,
-            "caption-text": "#ffffff",
-            "image_overlay": "#000000",
-            "image_overlay_opacity": 20
-          }
-        },
         "image_9YzyXD": {
           "type": "image",
           "settings": {
@@ -751,19 +728,74 @@
             "text_position": "center_right",
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
+            "content_max_width": 50,
             "mobile_text_position": "center",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 20,
-            "content_max_width": 50
+            "image_overlay_opacity": 20
+          }
+        },
+        "image_f6TGfh": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "text": "",
+            "first_button_link": "shopify://collections/futr-merch",
+            "first_button_label": "Add To Cart",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "button-background": "#ffffff",
+            "button-text": "#000000",
+            "image": "shopify://shop_images/1920x1080.jpg",
+            "text_position": "bottom",
+            "desktop-caption-heading-size": 112,
+            "desktop-caption-body-text-size": 24,
+            "content_max_width": 50,
+            "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
+            "mobile_text_position": "center",
+            "mobile-caption-heading-size": 40,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#000000",
+            "image_overlay_opacity": 7
+          }
+        },
+        "image_3jCVRD": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "text": "<b>Offer valid with the purchase of any two full-size FUTR supplement products. Free FUTR tee must be added to cart.</b>",
+            "first_button_link": "shopify://collections/futr-merch",
+            "first_button_label": "Add To Cart",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "button-background": "#ffffff",
+            "button-text": "#000000",
+            "image": "shopify://shop_images/1920x1080.jpg",
+            "text_position": "bottom_right",
+            "desktop-caption-heading-size": 112,
+            "desktop-caption-body-text-size": 24,
+            "content_max_width": 50,
+            "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
+            "mobile_text_position": "center",
+            "mobile-caption-heading-size": 40,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#000000",
+            "image_overlay_opacity": 28
           }
         }
       },
       "block_order": [
-        "image_tPpFhY",
-        "image_9YzyXD"
+        "image_9YzyXD",
+        "image_f6TGfh",
+        "image_3jCVRD"
       ],
       "name": "t:sections.image--slideshow.presets.name",
       "settings": {

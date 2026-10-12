@@ -17,12 +17,22 @@
      the 100% resolves against whatever positioned ancestor is further up the
      page instead of this block, making the logo render far larger/lower than
      intended. Give it a small, sized, positioned box so the image resolves
-     against that instead. */
+     against that instead. overflow:hidden is a backstop so nothing (e.g. the
+     image below) can ever visually spill past this fixed-height box. */
   .footer-main .image-footer .footer-image-link,
   .footer-main .image-footer .image-bar__item {
     position: relative;
     height: 70px;
     display: block;
+    overflow: hidden;
+  }
+
+  /* img's height:100% below resolves against ITS direct parent
+     (.image-bar__content), not the 70px link/item box two levels up. Without
+     an explicit height here, that 100% is invalid against an auto-height
+     parent and gets ignored, so the img falls back to its natural size. */
+  .footer-main .image-footer .image-bar__content {
+    height: 100%;
   }
 
   /* The uploaded logo file is a 3000x3000 square canvas with the actual logo

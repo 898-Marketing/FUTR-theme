@@ -18,7 +18,7 @@
           "type": "image",
           "settings": {
             "title": "",
-            "image": "shopify://shop_images/FUTR-LOGO1-BLACK-BKG.png",
+            "image": "shopify://shop_images/larger.png",
             "link": "/",
             "override_border_radius": false,
             "disclaimer_text": "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease."

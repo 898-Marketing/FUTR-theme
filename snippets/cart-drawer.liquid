@@ -67,6 +67,9 @@
               {% endif %}
             </div>
           </div>
+          {% unless settings.free_shipping_disclaimer == blank %}
+            <p class="cart-drawer__free-shipping-disclaimer">{{ settings.free_shipping_disclaimer }}</p>
+          {% endunless %}
         {% endif %}
       </div>
     </header>

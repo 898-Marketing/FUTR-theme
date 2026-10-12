@@ -86,6 +86,7 @@
     "enable-additional-checkout-buttons": true,
     "cart_vendor_enable": false,
     "free_shipping_threshold": "75",
+    "free_shipping_message": "Spend <price> more to get free shipping Minimum purchase amount is calculated after discounts and free items, but before applicable taxes and shipping.</price>",
     "empty_cart_message": "Nothing here! Go fill it up!",
     "search_input_label": "Discover your next favorite...",
     "predictive_search_enabled": true,

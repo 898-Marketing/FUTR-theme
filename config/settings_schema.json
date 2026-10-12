@@ -1099,6 +1099,14 @@
         "visible_if": "{{ settings.show_free_shipping_message }}"
       },
       {
+        "type": "text",
+        "id": "free_shipping_disclaimer",
+        "label": "Free shipping disclaimer",
+        "info": "Small print shown below the free shipping message. Leave blank to hide it.",
+        "default": "Minimum purchase amount is calculated after discounts and free items, but before applicable taxes and shipping.",
+        "visible_if": "{{ settings.show_free_shipping_message }}"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.Cart.settings.product_recommendations.header"
       },

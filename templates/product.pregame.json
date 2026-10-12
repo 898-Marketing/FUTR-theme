@@ -212,7 +212,7 @@
           "type": "highlight",
           "settings": {
             "heading": "Lock in focus",
-            "text": "<p>Formulated with Cognizin® Citicoline, clinically studied in youth for attention, plus L-Tyrosine to support focus and mental clarity.</p>"
+            "text": "<p>Formulated with Cognizin® Citicoline, researched to support attention, plus L-Tyrosine to support focus, reaction time, and mental clarity.</p>"
           }
         },
         "highlight_g7h8i9": {
@@ -233,7 +233,7 @@
         "image_mobile": "shopify://shop_images/soccer-1.jpg",
         "overlay_color": "#0a1420",
         "overlay_opacity": 70,
-        "heading": "The first true pregame for youth sports.",
+        "heading": "A TRUE PREGAME FORMULA FOR YOUTH SPORTS",
         "heading_color": "#ffffff",
         "heading_font_size_desktop": 46,
         "heading_font_size_mobile": 28,
@@ -581,35 +581,6 @@
         "colors": "dark"
       }
     },
-    "accordion_fYz9RV": {
-      "type": "accordion",
-      "blocks": {
-        "tab_content_bdLkjk": {
-          "type": "tab_content",
-          "repeater": "{{ product.metafields.custom.faqs.value }}",
-          "settings": {
-            "question": "{{ block.repeater.question.value }}",
-            "open_by_default": false,
-            "text": "{{ block.repeater.answer | metafield_tag }}",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_content_bdLkjk"
-      ],
-      "name": "t:sections.accordion.presets.name",
-      "settings": {
-        "title": "Pregame FAQs",
-        "description": "",
-        "section_header_alignment": "center",
-        "faq_icon": "plus_minus",
-        "section_width": "narrow",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "colors": "dark"
-      }
-    },
     "slideshow_PKUEVj": {
       "type": "slideshow",
       "blocks": {
@@ -654,6 +625,35 @@
         "section_padding_top": 0,
         "section_padding_bottom": 0,
         "background_color": "#000000"
+      }
+    },
+    "accordion_fYz9RV": {
+      "type": "accordion",
+      "blocks": {
+        "tab_content_bdLkjk": {
+          "type": "tab_content",
+          "repeater": "{{ product.metafields.custom.faqs.value }}",
+          "settings": {
+            "question": "{{ block.repeater.question.value }}",
+            "open_by_default": false,
+            "text": "{{ block.repeater.answer | metafield_tag }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_content_bdLkjk"
+      ],
+      "name": "t:sections.accordion.presets.name",
+      "settings": {
+        "title": "Pregame FAQs",
+        "description": "",
+        "section_header_alignment": "center",
+        "faq_icon": "plus_minus",
+        "section_width": "narrow",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "colors": "dark"
       }
     }
   },

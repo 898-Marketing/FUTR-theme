@@ -10,6 +10,9 @@
     #shopify-section-{{ section.id }} {
       background-color: #ffffff;
       color: #000000;
+      /* Prevents a child element's top margin from collapsing through this
+         wrapper and exposing the body's black background above it. */
+      display: flow-root;
     }
     #shopify-section-{{ section.id }} h1,
     #shopify-section-{{ section.id }} h2,

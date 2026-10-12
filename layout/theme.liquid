@@ -250,6 +250,9 @@
         .legal-policy-page--light {
           background-color: #ffffff;
           color: #000000;
+          /* Prevents the page title's top margin from collapsing through this
+             wrapper and exposing the body's black background above it. */
+          display: flow-root;
         }
         .legal-policy-page--light h1,
         .legal-policy-page--light h2,

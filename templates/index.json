@@ -507,7 +507,7 @@
       "name": "t:sections.focused-product-gallery.name",
       "settings": {
         "title": "FUEL EVERY PHASE OF PLAY",
-        "description": "<p>Every FUTR Product was designed to work together as part of a system.</p>",
+        "description": "<p>Every FUTR product was designed to serve a specific purpose within a system</p>",
         "section_header_alignment": "center",
         "image_shape": "natural",
         "show_vendor": false,

@@ -309,7 +309,14 @@
         "card_bg_color": "#16305c",
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",
-        "card_text_color": "#dbe6f2"
+        "card_text_color": "#dbe6f2",
+        "bottom_text": "",
+        "bottom_text_alignment": "center",
+        "bottom_text_color": "#ffffff",
+        "bottom_text_font_size": 16,
+        "bottom_text_font_size_mobile": 14,
+        "bottom_text_top_spacing": 30,
+        "bottom_text_top_spacing_mobile": 25
       }
     },
     "ingredients_grid_yzP3LB": {
@@ -623,60 +630,6 @@
         "colors": "dark"
       }
     },
-    "image_with_text_overlay_rXRh7C": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "text_bMYnj7": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Don't Forget to Add Your Shirt to Cart!</strong></p>",
-            "font_size_desktop": 18,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 20
-          }
-        },
-        "button_TKWQKq": {
-          "type": "button",
-          "settings": {
-            "first_button_link": "shopify://collections/futr-merch",
-            "first_button_label": "Add to Cart Now!",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "filled",
-            "override_button_colors": false,
-            "buttons_background": "#e68819",
-            "buttons_text": "#ffffff",
-            "buttons_bottom_spacing": 20
-          }
-        }
-      },
-      "block_order": [
-        "text_bMYnj7",
-        "button_TKWQKq"
-      ],
-      "settings": {
-        "image_desktop": "shopify://shop_images/1920x1080.jpg",
-        "height_desktop": "original",
-        "height_desktop_custom": 560,
-        "text_position_desktop": "top_center",
-        "text_alignment_desktop": "center",
-        "caption_width_desktop": 98,
-        "image_mobile": "shopify://shop_images/1080x1080-_1.jpg",
-        "height_mobile": "250px",
-        "height_mobile_custom": 400,
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
-        "section_link": "",
-        "animation_style": "none",
-        "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0)",
-        "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
-      }
-    },
     "accordion_fYz9RV": {
       "type": "accordion",
       "blocks": {
@@ -705,6 +658,52 @@
         "section_padding_bottom": 60,
         "colors": "dark"
       }
+    },
+    "slideshow_9fhget": {
+      "type": "slideshow",
+      "blocks": {
+        "image_pYtNK8": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "text": "Offer valid with the purchase of any two full-size FUTR supplement products. Free FUTR tee must be added to cart.",
+            "first_button_link": "shopify://collections/futr-merch",
+            "first_button_label": "Add To Cart",
+            "second_button_link": "",
+            "second_button_label": "",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "button-background": "#ffffff",
+            "button-text": "#000000",
+            "image": "shopify://shop_images/1920x1080.jpg",
+            "text_position": "bottom_right",
+            "desktop-caption-heading-size": 112,
+            "desktop-caption-body-text-size": 24,
+            "content_max_width": 50,
+            "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
+            "mobile_text_position": "center",
+            "mobile-caption-heading-size": 40,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#000000",
+            "image_overlay_opacity": 28
+          }
+        }
+      },
+      "block_order": [
+        "image_pYtNK8"
+      ],
+      "name": "t:sections.image--slideshow.presets.name",
+      "settings": {
+        "desktop_height": "original",
+        "mobile_height": "extra_large",
+        "slide_navigation_style": "bars",
+        "slide_transition_delay": 5,
+        "section_width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "background_color": "#000000"
+      }
     }
   },
   "order": [
@@ -716,7 +715,7 @@
     "ingredients_grid_yzP3LB",
     "dosage_table_4_columns_Pn3UBt",
     "product_slideshow_6iLqXF",
-    "image_with_text_overlay_rXRh7C",
+    "slideshow_9fhget",
     "accordion_fYz9RV"
   ]
 }

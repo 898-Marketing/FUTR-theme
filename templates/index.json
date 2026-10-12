@@ -712,6 +712,7 @@
       "blocks": {
         "image_tPpFhY": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "title": "Image slide",
             "text": "Add images and text to give focus to your chosen product, collection, or blog post.",
@@ -721,8 +722,8 @@
             "second_button_label": "Learn more",
             "buttons_style": "filled",
             "override_button_colors": false,
-            "button-background": "#E68819",
-            "button-text": "#FFFFFF",
+            "button-background": "#e68819",
+            "button-text": "#ffffff",
             "text_position": "center_left",
             "desktop-caption-heading-size": 60,
             "desktop-caption-body-text-size": 24,

@@ -371,7 +371,7 @@
         "card_gap": 24,
         "card_padding": 24,
         "card_heading_animated_counter": true,
-        "card_heading_font_size_desktop": 80,
+        "card_heading_font_size_desktop": 54,
         "card_heading_font_size_mobile": 44,
         "card_bg_color": "#ffffff",
         "card_border_color": "#4a90d9",

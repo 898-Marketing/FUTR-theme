@@ -113,7 +113,7 @@
       "settings": {
         "desktop_height": "extra_large",
         "mobile_height": "large",
-        "slide_navigation_style": "none",
+        "slide_navigation_style": "dots",
         "slide_transition_delay": 5,
         "section_width": "full",
         "section_padding_top": 0,
@@ -243,7 +243,7 @@
         "richtext_QbKBUC": {
           "type": "richtext",
           "settings": {
-            "text": "<p>FUTR is a complete system built for every phase of play — with every formula purpose-built for youth from the start. Science-led ingredients. Intentional amounts. A safety-first approach to formulation.</p>",
+            "text": "<p>FUTR is a complete system built for every phase of play — with every formula purpose-built for youth from the start. Science-backed ingredients. Intentional amounts. A safety-first approach to formulation.</p>",
             "text_size": 20,
             "text_bottom_spacing": 20
           }

@@ -638,7 +638,7 @@
         "button_fGGFC6": {
           "type": "button",
           "settings": {
-            "first_button_link": "shopify://collections/all",
+            "first_button_link": "shopify://collections/products",
             "first_button_label": "EXPLORE THE PRODUCTS",
             "second_button_link": "",
             "second_button_label": "",

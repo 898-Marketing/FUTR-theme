@@ -378,10 +378,10 @@
         "card_heading_color": "#3e82e6",
         "card_text_color": "#064982",
         "bottom_text": "<p>Two nationwide surveys conducted by FUTR in 2025: parent survey (n=96) and youth athlete survey (n=133). Percentages reflect self-reported responses from survey participants.</p>",
-        "bottom_text_alignment": "center",
+        "bottom_text_alignment": "left",
         "bottom_text_color": "#ffffff",
-        "bottom_text_font_size": 16,
-        "bottom_text_font_size_mobile": 14,
+        "bottom_text_font_size": 12,
+        "bottom_text_font_size_mobile": 12,
         "bottom_text_top_spacing": 30,
         "bottom_text_top_spacing_mobile": 25
       }

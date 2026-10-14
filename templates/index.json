@@ -30,15 +30,16 @@
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 20,
             "content_max_width": 100,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 18,
             "mobile_image": "shopify://shop_images/FUTR-3-1080x1080.jpg",
             "mobile_text_position": "bottom_left",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 15,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 30
+            "image_overlay_opacity": 30,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 18,
+            "content_max_width_tablet": 100
           }
         },
         "image_VhRRLD": {
@@ -59,14 +60,15 @@
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
             "content_max_width": 50,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 20,
             "mobile_text_position": "center",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 20
+            "image_overlay_opacity": 20,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
+            "content_max_width_tablet": 65
           }
         },
         "image_yXiKVD": {
@@ -87,15 +89,16 @@
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
             "content_max_width": 60,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 20,
             "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
             "mobile_text_position": "center",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28
+            "image_overlay_opacity": 28,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
+            "content_max_width_tablet": 60
           }
         }
       },

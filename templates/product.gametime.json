@@ -542,7 +542,6 @@
         "footer_icon_size": 24,
         "feature_icon_size": 48,
         "age_column_label": "Age",
-        "show_weight": false,
         "tier1_header_icon": "shopify://shop_images/TIME0.png",
         "tier1_label": "30-60 Min",
         "tier2_header_icon": "shopify://shop_images/TIME0.png",
@@ -554,7 +553,8 @@
         "tier3_row_icon": "shopify://shop_images/SCOOP0.png",
         "footer_text_white": "",
         "footer_text_accent": "",
-        "footer_subtext": ""
+        "footer_subtext": "",
+        "show_weight": false
       }
     },
     "product_slideshow_6iLqXF": {
@@ -681,15 +681,16 @@
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
             "content_max_width": 60,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 20,
             "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
             "mobile_text_position": "center",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28
+            "image_overlay_opacity": 28,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
+            "content_max_width_tablet": 60
           }
         }
       },

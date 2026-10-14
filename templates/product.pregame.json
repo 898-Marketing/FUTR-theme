@@ -438,14 +438,14 @@
         "footer_icon_size": 40,
         "feature_icon_size": 54,
         "age_column_label": "Age",
-        "show_weight": false,
         "serving_icon": "shopify://shop_images/SCOOP0.png",
         "serving_column_label": "{{ product.title }}",
         "serving_column_sublabel": "1 scoop / stick = 1 serving",
         "water_icon": "shopify://shop_images/Icons-29.png",
         "water_column_label": "Water",
         "footer_text_white": "",
-        "footer_text_accent": ""
+        "footer_text_accent": "",
+        "show_weight": false
       }
     },
     "phase_columns_FWLXfK": {
@@ -603,15 +603,16 @@
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
             "content_max_width": 60,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 20,
             "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
             "mobile_text_position": "center",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28
+            "image_overlay_opacity": 28,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
+            "content_max_width_tablet": 60
           }
         }
       },

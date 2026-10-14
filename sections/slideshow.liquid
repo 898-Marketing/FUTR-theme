@@ -66,6 +66,20 @@
                 max-width: {{ block.settings.content_max_width }}%;
               }
             }
+
+            {% comment %}
+              Tablet-width override (768px-1024px). Comes after the desktop
+              rule above so it wins within this narrower range via normal
+              cascade order; outside it, the desktop rule applies as before.
+            {% endcomment %}
+            @media screen and (min-width: 768px) and (max-width: 1024px) {
+              .slider-section--{{ section.id }} .block-section--{{ block.id }} h2.homepage-sections--title {
+                font-size: {{ block.settings.tablet-caption-heading-size }}px;
+              }
+              .slider-section--{{ section.id }} .block-section--{{ block.id }} .featured-row__subtext {
+                font-size: {{ block.settings.tablet-caption-body-text-size }}px;
+              }
+            }
           </style>
         {% endfor %}
 
@@ -706,6 +720,31 @@
           "step": 5,
           "unit": "%",
           "default": 100
+        },
+        {
+          "type": "header",
+          "content": "Tablet"
+        },
+        {
+          "type": "range",
+          "id": "tablet-caption-heading-size",
+          "label": "t:all.Heading_size",
+          "info": "Used for tablet-width screens (768px–1024px), between the desktop and mobile sizes.",
+          "min": 12,
+          "max": 112,
+          "step": 1,
+          "unit": "t:all.px",
+          "default": 48
+        },
+        {
+          "type": "range",
+          "id": "tablet-caption-body-text-size",
+          "label": "t:all.Body_text_size",
+          "min": 12,
+          "max": 30,
+          "step": 1,
+          "unit": "t:all.px",
+          "default": 20
         },
         {
           "type": "header",

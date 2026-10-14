@@ -36,7 +36,9 @@
             "mobile-caption-body-text-size": 15,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 30
+            "image_overlay_opacity": 30,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 18
           }
         },
         "image_VhRRLD": {
@@ -62,7 +64,9 @@
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 20
+            "image_overlay_opacity": 20,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20
           }
         },
         "image_yXiKVD": {
@@ -89,7 +93,9 @@
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28
+            "image_overlay_opacity": 28,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20
           }
         }
       },

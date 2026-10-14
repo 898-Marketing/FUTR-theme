@@ -111,7 +111,7 @@
         "h2 {font-style: italic !important; line-height: 1em;}"
       ],
       "settings": {
-        "desktop_height": "large",
+        "desktop_height": "extra_large",
         "mobile_height": "large",
         "slide_navigation_style": "none",
         "slide_transition_delay": 5,

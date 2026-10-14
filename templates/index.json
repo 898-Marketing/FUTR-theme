@@ -25,7 +25,7 @@
             "override_button_colors": true,
             "button-background": "#1f88d2",
             "button-text": "#ffffff",
-            "image": "shopify://shop_images/FUTR-3-1920x1080.jpg",
+            "image": "shopify://shop_images/FUTR-3-1920x1080_a925d15d-176e-4432-972a-126e7ca3432b.jpg",
             "text_position": "center_left",
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 20,
@@ -39,7 +39,7 @@
             "mobile-caption-body-text-size": 15,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 30
+            "image_overlay_opacity": 21
           }
         },
         "image_VhRRLD": {

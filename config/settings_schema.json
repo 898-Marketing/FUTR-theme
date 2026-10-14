@@ -305,6 +305,17 @@
         "default": 30
       },
       {
+        "type": "range",
+        "id": "heading_text_size_tablet",
+        "min": 24,
+        "max": 120,
+        "step": 1,
+        "unit": "t:all.px",
+        "label": "Base size (tablet)",
+        "info": "Used for tablet-width screens (768px–1024px), between the desktop and mobile sizes above.",
+        "default": 30
+      },
+      {
         "type": "checkbox",
         "id": "heading_font_uppercase",
         "label": "t:all.Uppercase",

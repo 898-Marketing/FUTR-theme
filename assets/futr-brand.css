@@ -15,6 +15,20 @@
   --navigation-font-stack: 'Saira', sans-serif;
 }
 
+/* Generic h1-h6 sizing only has a Desktop value (>=768px) and a Mobile value
+   (<=767px) — a tablet (768px-1024px) gets the full desktop size, which reads
+   too large on that width. Give tablet widths their own in-between size,
+   using the new "Base size (tablet)" theme setting. Loads after theme.min.css,
+   so this naturally wins within this range without needing !important. */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .h1, h1 { font-size: var(--h1-size-tablet); }
+  .h2, h2 { font-size: var(--h2-size-tablet); }
+  .h3, h3 { font-size: var(--h3-size-tablet); }
+  .h4, h4 { font-size: var(--h4-size-tablet); }
+  .h5, h5 { font-size: var(--h5-size-tablet); }
+  .h6, h6 { font-size: var(--h6-size-tablet); }
+}
+
 /* ---- Motif 1: skewed CTA button (Add to Cart, checkout, quick-add, forms) ---- */
 .futr-cta {
   transform: skewX(-10deg);

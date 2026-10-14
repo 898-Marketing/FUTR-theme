@@ -136,6 +136,13 @@
   --h5-size-mobile: {{ settings.heading_text_size_mobile | times: 0.625 | round | at_least: min_heading_size }}px;
   --h6-size-mobile: {{ settings.heading_text_size_mobile | times: 0.5 | round | at_least: min_heading_size }}px;
 
+  --h1-size-tablet: {{ settings.heading_text_size_tablet | times: 1.25 | round | at_least: min_heading_size }}px;
+  --h2-size-tablet: {{ settings.heading_text_size_tablet | at_least: min_heading_size }}px;
+  --h3-size-tablet: {{ settings.heading_text_size_tablet | times: 0.875 | round | at_least: min_heading_size }}px;
+  --h4-size-tablet: {{ settings.heading_text_size_tablet | times: 0.75 | round | at_least: min_heading_size }}px;
+  --h5-size-tablet: {{ settings.heading_text_size_tablet | times: 0.625 | round | at_least: min_heading_size }}px;
+  --h6-size-tablet: {{ settings.heading_text_size_tablet | times: 0.5 | round | at_least: min_heading_size }}px;
+
   --sale-badge-color: rgba({{ settings.sale_badge_color.rgba }});
   --sold-out-badge-color: rgba({{ settings.sold_out_badge_color.rgba }});
   --custom-badge-color: rgba({{ settings.custom_badge_color.rgba }});

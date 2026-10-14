@@ -79,6 +79,9 @@
               .slider-section--{{ section.id }} .block-section--{{ block.id }} .featured-row__subtext {
                 font-size: {{ block.settings.tablet-caption-body-text-size }}px;
               }
+              .slider-section--{{ section.id }} .block-section--{{ block.id }} .homepage-featured-content-box {
+                max-width: {{ block.settings.content_max_width_tablet }}%;
+              }
             }
           </style>
         {% endfor %}
@@ -745,6 +748,17 @@
           "step": 1,
           "unit": "t:all.px",
           "default": 20
+        },
+        {
+          "type": "range",
+          "id": "content_max_width_tablet",
+          "label": "Content width (tablet)",
+          "info": "Limits how wide the heading/text/button block can stretch on tablet-width screens (768px–1024px). Defaults to matching the desktop width above.",
+          "min": 30,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "default": 100
         },
         {
           "type": "header",

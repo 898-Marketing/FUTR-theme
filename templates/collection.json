@@ -159,15 +159,15 @@
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
             "content_max_width": 60,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
             "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
             "mobile_text_position": "center",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 20
+            "image_overlay_opacity": 28
           }
         }
       },

@@ -629,7 +629,7 @@
         "text_VetieR": {
           "type": "text",
           "settings": {
-            "text": "<p>FUTR formulas are built for different phases of play, with products for fuel, hydration and recovery.</p>",
+            "text": "<p>Discover the ingredients, benefits, and science behind each formula</p>",
             "font_size_desktop": 16,
             "font_size_mobile": 16,
             "text_bottom_spacing": 20
@@ -638,8 +638,8 @@
         "button_fGGFC6": {
           "type": "button",
           "settings": {
-            "first_button_link": "",
-            "first_button_label": "SHOP THE SYSTEM",
+            "first_button_link": "shopify://collections/all",
+            "first_button_label": "EXPLORE THE PRODUCTS",
             "second_button_link": "",
             "second_button_label": "",
             "buttons_style": "filled",

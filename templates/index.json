@@ -503,7 +503,7 @@
             "product": "recover",
             "focus_image": "shopify://shop_images/recover-1.jpg",
             "description": "",
-            "button_label": "Shop RECOVER"
+            "button_label": "Shop RECOVER+"
           }
         }
       },
@@ -516,7 +516,7 @@
       "name": "t:sections.focused-product-gallery.name",
       "settings": {
         "title": "FUEL EVERY PHASE OF PLAY",
-        "description": "<p>Every FUTR product was designed to serve a specific purpose within a system</p>",
+        "description": "",
         "section_header_alignment": "center",
         "image_shape": "natural",
         "show_vendor": false,

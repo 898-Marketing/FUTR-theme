@@ -64,7 +64,10 @@
         "blog-sidebar-link": "",
         "article-sidebar-description": "",
         "show_blog_tags": false,
-        "show_social_icons": true
+        "show_social_icons": true,
+        "show_related_posts_sidebar": true,
+        "related_posts_sidebar_heading": "Related posts",
+        "related_posts_sidebar_limit": 3
       }
     },
     "image_with_text_overlay_j7UnFK": {

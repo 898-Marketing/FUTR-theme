@@ -129,6 +129,10 @@
   #shopify-section-{{ section.id }} .phh__card-text p {
     margin: 0;
   }
+  #shopify-section-{{ section.id }} .phh__card-text sup {
+    font-size: 9px;
+    font-weight: 600;
+  }
 
   @media screen and (max-width: 767px) {
     #shopify-section-{{ section.id }} .phh__bg-desktop {
@@ -198,7 +202,7 @@
               >{{ block.settings.heading }}</h3>
             {% endif %}
             {% if block.settings.text != blank %}
-              <div class="phh__card-text">{{ block.settings.text }}</div>
+              <div class="phh__card-text">{{ block.settings.text | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}</div>
             {% endif %}
           </div>
         {% endfor %}

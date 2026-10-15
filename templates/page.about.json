@@ -251,6 +251,7 @@
         "heading_color": "#000000",
         "heading_font_size_desktop": 46,
         "heading_font_size_mobile": 28,
+        "heading_max_width": 1200,
         "badge_alt": "",
         "badge_position": "top_right",
         "badge_size": 140,
@@ -278,8 +279,7 @@
         "bottom_text_font_size": 16,
         "bottom_text_font_size_mobile": 14,
         "bottom_text_top_spacing": 30,
-        "bottom_text_top_spacing_mobile": 25,
-        "heading_max_width": 1100
+        "bottom_text_top_spacing_mobile": 25
       }
     },
     "image_with_text_hgiX3N": {

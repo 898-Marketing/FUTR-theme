@@ -57,7 +57,7 @@
     font-size: {{ section.settings.heading_font_size_desktop }}px;
     line-height: 1.1;
     letter-spacing: -0.01em;
-    max-width: 720px;
+    max-width: {{ section.settings.heading_max_width }}px;
   }
   #shopify-section-{{ section.id }} .phh__badge {
     flex: 0 0 auto;
@@ -338,6 +338,17 @@
       "step": 2,
       "unit": "px",
       "default": 28
+    },
+    {
+      "type": "range",
+      "id": "heading_max_width",
+      "label": "Heading width (desktop)",
+      "info": "Widen to fit a long heading on one line. Mobile always uses full width.",
+      "min": 300,
+      "max": 1200,
+      "step": 10,
+      "unit": "px",
+      "default": 720
     },
     {
       "type": "header",

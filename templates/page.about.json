@@ -278,7 +278,8 @@
         "bottom_text_font_size": 16,
         "bottom_text_font_size_mobile": 14,
         "bottom_text_top_spacing": 30,
-        "bottom_text_top_spacing_mobile": 25
+        "bottom_text_top_spacing_mobile": 25,
+        "heading_max_width": 1100
       }
     },
     "image_with_text_hgiX3N": {

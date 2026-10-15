@@ -38,6 +38,13 @@
   #shopify-section-{{ section.id }} .template-article__header-text a {
     color: inherit;
   }
+
+  /* Filter/tag pills (.custom-badge, e.g. the sidebar's tag list) have a
+     dark background of their own but no text color of their own — keep
+     these white regardless, since black text is nearly invisible on them. */
+  #shopify-section-{{ section.id }} .custom-badge {
+    color: #ffffff;
+  }
 {% endstyle %}
 
 <safe-load-scripts class="hidden">

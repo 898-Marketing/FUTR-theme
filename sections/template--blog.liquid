@@ -22,6 +22,14 @@
   #shopify-section-{{ section.id }} .blog-post-card__title a {
     color: #000000 !important;
   }
+
+  /* Filter/tag pills (.custom-badge) have a dark background of their own,
+     set independently of the page text color, but no text color of their
+     own — so they were inheriting this section's new black text, nearly
+     invisible against the dark pill. Keep these white regardless. */
+  #shopify-section-{{ section.id }} .custom-badge {
+    color: #ffffff;
+  }
 {% endstyle %}
 
 {% if section.settings.show_sidebar %}

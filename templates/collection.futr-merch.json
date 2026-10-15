@@ -141,7 +141,7 @@
     "slideshow_qQt6DN": {
       "type": "slideshow",
       "blocks": {
-        "image_DwDKcw": {
+        "image_TUTqYR": {
           "type": "image",
           "settings": {
             "title": "",
@@ -154,26 +154,26 @@
             "override_button_colors": true,
             "button-background": "#ffffff",
             "button-text": "#000000",
-            "image": "shopify://shop_images/1920x1080.jpg",
-            "text_position": "bottom_right",
+            "image": "shopify://shop_images/1920x1080_26a62ee8-61c5-465b-aa06-1a5cc4f13189.jpg",
+            "text_position": "bottom_left",
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
             "content_max_width": 60,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
+            "content_max_width_tablet": 60,
             "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
             "mobile_text_position": "center",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 20,
-            "content_max_width_tablet": 60
+            "image_overlay_opacity": 28
           }
         }
       },
       "block_order": [
-        "image_DwDKcw"
+        "image_TUTqYR"
       ],
       "name": "t:sections.image--slideshow.presets.name",
       "settings": {

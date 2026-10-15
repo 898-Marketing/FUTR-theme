@@ -20,6 +20,12 @@
             "announcement_text": "FREE SHIPPING ON ORDERS $75+"
           }
         },
+        "announcement_LJqdqc": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "Announce something here"
+          }
+        },
         "announcement": {
           "type": "announcement",
           "settings": {
@@ -35,6 +41,7 @@
       },
       "block_order": [
         "announcement_atDn6X",
+        "announcement_LJqdqc",
         "announcement",
         "announcement_hFAMWh"
       ],

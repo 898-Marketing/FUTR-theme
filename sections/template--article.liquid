@@ -28,6 +28,16 @@
   #shopify-section-{{ section.id }} a {
     color: #000000;
   }
+
+  /* Exception: the title/tags/meta overlaid on the featured image use the
+     section's own "Text color" setting (white by default) for readability
+     against the photo — don't force those to black like the rest of the
+     page's text. */
+  #shopify-section-{{ section.id }} .template-article__header-text,
+  #shopify-section-{{ section.id }} .template-article__header-text h1,
+  #shopify-section-{{ section.id }} .template-article__header-text a {
+    color: inherit;
+  }
 {% endstyle %}
 
 <safe-load-scripts class="hidden">

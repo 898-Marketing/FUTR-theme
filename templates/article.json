@@ -18,36 +18,6 @@
             "alignment": "left"
           }
         },
-        "related_posts_Afq8Yq": {
-          "type": "related_posts",
-          "settings": {
-            "title": "Related posts",
-            "description": "",
-            "header_alignment": "left",
-            "show_image": true,
-            "image_shape": "natural",
-            "show_tags": false,
-            "show_date": true,
-            "show_author": false,
-            "show_reading_time": true,
-            "show_comment_count": false,
-            "show_excerpt": true,
-            "show_read_more": true,
-            "heading_font": "heading",
-            "heading_font_size": 28,
-            "alignment": "left",
-            "buttons_style": "underlined",
-            "override_button_colors": false,
-            "button_background_color": "#e68819",
-            "button_text_color": "#ffffff",
-            "layout_style_desktop": "slider",
-            "hover_navigation_desktop": "left-and-right",
-            "peek_desktop": true,
-            "images_per_row_desktop": 3,
-            "layout_style_mobile": "slider",
-            "navigation_mobile": "dots"
-          }
-        },
         "next_previous_yw4xnb": {
           "type": "next_previous",
           "settings": {
@@ -60,7 +30,6 @@
       },
       "block_order": [
         "comments_hBkKVw",
-        "related_posts_Afq8Yq",
         "next_previous_yw4xnb"
       ],
       "settings": {

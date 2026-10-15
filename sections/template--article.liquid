@@ -158,6 +158,54 @@
         </div>
       {% endif %}
 
+      {% if section.settings.show_related_posts_sidebar %}
+        {%- liquid
+          assign sidebar_related_list = ''
+          assign sidebar_article_tags = article.tags
+          for blog_article in blog.articles
+            if blog_article.id != article.id
+              assign sidebar_is_related = false
+              for tag in blog_article.tags
+                if sidebar_article_tags contains tag
+                  assign sidebar_is_related = true
+                  break
+                endif
+              endfor
+              if sidebar_is_related
+                assign sidebar_related_list = sidebar_related_list | append: blog_article.handle | append: ','
+              endif
+            endif
+          endfor
+          assign sidebar_related_articles = sidebar_related_list | split: ','
+        -%}
+        {% if sidebar_related_articles.size > 0 %}
+          {% assign has_sidebar_content = true %}
+          <div class="template-article__popular-articles">
+            <h4 class="template-article__popular-articles-heading">{{ section.settings.related_posts_sidebar_heading }}</h4>
+
+            <div class="template-article__popular-articles-list nav-link-animated--custom">
+              {% for sidebar_related_handle in sidebar_related_articles limit: section.settings.related_posts_sidebar_limit %}
+                {% assign sidebar_related_post = articles[sidebar_related_handle] %}
+                <div class="template-article__popular-article">
+                  {% if sidebar_related_post.image %}
+                    <div class="template-article__popular-article-image template-article__popular-article-image--aspect-ratio--{{ section.settings.popular_articles_image_aspect_ratio }} thumbnail-radius-clip" data-animate-hover-zoom>
+                      <a href="{{ sidebar_related_post.url }}">
+                        {% render 'responsive-image', image: sidebar_related_post.image, class: 'thumbnail-radius', allow_stretch: true %}
+                      </a>
+                    </div>
+                  {% endif %}
+                  <div>
+                    <a href="{{ sidebar_related_post.url }}" class="animated-link--item">
+                      {{ sidebar_related_post.title }}
+                    </a>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+
       {% if section.settings.blog-sidebar-image != blank %}
         {% assign has_sidebar_content = true %}
         <div class="{% unless section.settings.sidebar_image_shape == 'circle' %}block-radius-clip{% endunless %}{% unless section.settings.sidebar_image_shape == 'original' %} template-article__sidebar-image--aspect-ratio--{{ section.settings.sidebar_image_shape }}{% endunless %}">
@@ -1108,6 +1156,32 @@
       "type": "article",
       "id": "popular_article_2",
       "label": "t:sections.template--blog.settings.popular_article_2.label"
+    },
+    {
+      "type": "header",
+      "content": "Related posts (sidebar)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_related_posts_sidebar",
+      "label": "Show related posts in sidebar",
+      "info": "Shows other posts from this blog that share a tag with the current post, as a compact image + title list (no excerpt). Hidden automatically if none share a tag.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "related_posts_sidebar_heading",
+      "label": "Heading",
+      "default": "Related posts"
+    },
+    {
+      "type": "range",
+      "id": "related_posts_sidebar_limit",
+      "label": "Number to show",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
     },
     {
       "type": "header",

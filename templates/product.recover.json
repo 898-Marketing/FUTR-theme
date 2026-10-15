@@ -238,6 +238,7 @@
         "heading_color": "#ffffff",
         "heading_font_size_desktop": 46,
         "heading_font_size_mobile": 28,
+        "heading_max_width": 720,
         "badge_image": "shopify://shop_images/YOUTH_SPORTS_logo_white.png",
         "badge_alt": "",
         "badge_position": "top_right",
@@ -438,14 +439,14 @@
         "footer_icon_size": 40,
         "feature_icon_size": 54,
         "age_column_label": "Age",
+        "show_weight": false,
         "serving_icon": "shopify://shop_images/SCOOP0.png",
         "serving_column_label": "{{ product.title }}",
         "serving_column_sublabel": "1 scoop / stick = 1 serving",
         "water_icon": "shopify://shop_images/Icons-29.png",
         "water_column_label": "DAILY USE",
         "footer_text_white": "",
-        "footer_text_accent": "",
-        "show_weight": false
+        "footer_text_accent": ""
       }
     },
     "product_slideshow_mTHF6U": {
@@ -525,7 +526,7 @@
     "slideshow_gcwmhd": {
       "type": "slideshow",
       "blocks": {
-        "image_LNeD66": {
+        "image_JUwQM9": {
           "type": "image",
           "settings": {
             "title": "",
@@ -538,26 +539,26 @@
             "override_button_colors": true,
             "button-background": "#ffffff",
             "button-text": "#000000",
-            "image": "shopify://shop_images/1920x1080.jpg",
-            "text_position": "bottom_right",
+            "image": "shopify://shop_images/1920x1080_26a62ee8-61c5-465b-aa06-1a5cc4f13189.jpg",
+            "text_position": "bottom_left",
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 24,
             "content_max_width": 60,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
+            "content_max_width_tablet": 60,
             "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
             "mobile_text_position": "center",
             "mobile-caption-heading-size": 40,
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 20,
-            "content_max_width_tablet": 60
+            "image_overlay_opacity": 28
           }
         }
       },
       "block_order": [
-        "image_LNeD66"
+        "image_JUwQM9"
       ],
       "name": "t:sections.image--slideshow.presets.name",
       "settings": {

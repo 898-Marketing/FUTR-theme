@@ -15,6 +15,13 @@
   #shopify-section-{{ section.id }} a {
     color: #000000;
   }
+
+  /* Blog post card titles use color:var(--text-color) !important (the
+     sitewide dark-theme white text color), invisible on this section's new
+     white background. Override with higher specificity + !important. */
+  #shopify-section-{{ section.id }} .blog-post-card__title a {
+    color: #000000 !important;
+  }
 {% endstyle %}
 
 {% if section.settings.show_sidebar %}

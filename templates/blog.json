@@ -77,7 +77,7 @@
         "show_sidebar_newsletter": true,
         "newsletter_heading": "<h5>Join the Roster</h5>",
         "newsletter_description": "<p>Get all the latest news and deals from our newsletter</p>",
-        "newsletter_color_scheme": "light",
+        "newsletter_color_scheme": "dark",
         "override_button_colors": false,
         "button_background_color": "#e68819",
         "button_text_color": "#ffffff",

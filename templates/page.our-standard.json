@@ -66,31 +66,30 @@
         "image_overlay_opacity": 50
       }
     },
-    "rich_text_jFd4Le": {
-      "type": "rich-text",
+    "image_with_text_348hXm": {
+      "type": "image-with-text",
       "blocks": {
-        "richtext_QtWdGm": {
-          "type": "richtext",
+        "text_cARz6B": {
+          "type": "text",
           "settings": {
             "text": "<p>Youth athletes deserve more than adult sports nutrition scaled down into a smaller serving.</p><p>Age, stage of development, training demands, intended use, and total daily intake all matter when developing nutrition for young athletes. That’s why FUTR starts with the youth athlete — not an existing adult formula.</p><p>Every product is built around a defined purpose: what it is designed to support, when it is intended to be used, which ingredients belong, and the intended serving amount.</p><p><strong>The result is a sports nutrition system developed specifically with the routines and nutritional considerations of healthy, active youth in mind.</strong></p>",
-            "text_size": 20,
             "text_bottom_spacing": 20
           }
         }
       },
       "block_order": [
-        "richtext_QtWdGm"
+        "text_cARz6B"
       ],
-      "name": "t:sections.text--rich-text.presets.name",
+      "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
-        "section_width": "narrow",
-        "text_alignment_desktop": "center",
+        "layout": "left",
+        "text_alignment": "left",
         "text_alignment_mobile": "center",
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "colors": "dark",
-        "background_overlay_color": "#000000",
-        "background_overlay_opacity": 55
+        "text_overlapping_image": false,
+        "section-width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "colors": "light"
       }
     },
     "accordion_with_image_rRbVnk": {
@@ -197,7 +196,7 @@
   "order": [
     "main",
     "image_with_text_overlay_6W84Ht",
-    "rich_text_jFd4Le",
+    "image_with_text_348hXm",
     "accordion_with_image_rRbVnk",
     "image_with_text_iXYTPH"
   ]

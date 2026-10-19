@@ -130,7 +130,7 @@
           "type": "richtext",
           "settings": {
             "text": "<p>FUTR was built on a simple belief: every growing athlete deserves nutrition made specifically for them. Not borrowed from adult formulas. Not watered down.&nbsp;</p><p>Every product is developed around the way young athletes actually train, compete, recover, and grow — purposeful and science-backed.</p>",
-            "text_size": 24,
+            "text_size": 22,
             "text_bottom_spacing": 20
           }
         }
@@ -139,7 +139,7 @@
         "richtext_4YaFct"
       ],
       "custom_css": [
-        "p {color: #000; font-weight: 700;}"
+        "p {color: #000; font-weight: 500;}"
       ],
       "settings": {
         "section_width": "narrow",
@@ -198,6 +198,9 @@
         "text_overlapping_image": false,
         "image_height_percent": 100,
         "image_square": false,
+        "icon_grid_size_desktop": 64,
+        "icon_grid_size_mobile": 48,
+        "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
@@ -329,6 +332,9 @@
         "text_overlapping_image": false,
         "image_height_percent": 100,
         "image_square": false,
+        "icon_grid_size_desktop": 64,
+        "icon_grid_size_mobile": 48,
+        "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,

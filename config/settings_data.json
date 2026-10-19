@@ -68,7 +68,7 @@
     "swatch_style": "square",
     "product_card_text_alignment": "left",
     "product-grid": "square",
-    "hover-effect": false,
+    "hover-effect": true,
     "discount_badge_type": "hide",
     "show_product_card_vendor": false,
     "type_card_title_font": "heading",

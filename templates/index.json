@@ -247,7 +247,15 @@
         "richtext_QbKBUC": {
           "type": "richtext",
           "settings": {
-            "text": "<p>FUTR is a complete system built for every phase of play — with every formula purpose-built for youth from the start. Science-backed ingredients. Intentional amounts. A safety-first approach to formulation.</p>",
+            "text": "<p>FUTR is a complete system built for every phase of play — with every formula purpose-built for youth from the start.&nbsp;</p>",
+            "text_size": 20,
+            "text_bottom_spacing": 20
+          }
+        },
+        "richtext_wa4n3E": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Science-backed ingredients. Intentional amounts. A safety-first approach to formulation.</p>",
             "text_size": 20,
             "text_bottom_spacing": 20
           }
@@ -264,6 +272,7 @@
       "block_order": [
         "heading_RVrmk6",
         "richtext_QbKBUC",
+        "richtext_wa4n3E",
         "richtext_xYYefw"
       ],
       "name": "t:sections.text--rich-text.presets.name",

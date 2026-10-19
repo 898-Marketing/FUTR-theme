@@ -620,8 +620,7 @@
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "light",
-        "list_number_font_size": 17
+        "colors": "light"
       }
     },
     "image_with_text_overlay_qmXaFa": {
@@ -630,7 +629,7 @@
         "heading_UiRkcP": {
           "type": "heading",
           "settings": {
-            "title": "THE FUTR SYSTEM",
+            "title": "THE FUTR SYSTEM.",
             "font_size_desktop": 46,
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
@@ -672,8 +671,8 @@
         "text_position_desktop": "right",
         "text_alignment_desktop": "center",
         "caption_width_desktop": 37,
-        "image_mobile": "shopify://shop_images/system-mobile.jpg",
-        "height_mobile": "400px",
+        "image_mobile": "shopify://shop_images/system-banner1b_NEWmobile-Oct-9.jpg",
+        "height_mobile": "original",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",

@@ -319,3 +319,12 @@ product-media.media-type-slider:has(.media-ratio--wide) {
   margin: 0;
 }
 
+/* Shop Pay installments messaging ("Pay over time for orders over $X with
+   shop") auto-sizes itself to match its surrounding text's computed
+   font-size. Pin that explicitly to 14px site-wide on every product page,
+   rather than leaving it to inherit whatever size happens to be ambient. */
+.shopify-payment-terms__container,
+.shopify-payment-terms__container shopify-payment-terms {
+  font-size: 14px;
+}
+

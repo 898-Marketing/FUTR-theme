@@ -101,18 +101,18 @@
         "accordion_9dPrYW": {
           "type": "accordion",
           "settings": {
-            "accordion_header": "EXPERT-LED FORMULATION + MULTIDISCIPLINARY REVIEW",
+            "accordion_header": "EXPERT-LED FORMULATION",
             "open_by_default": false,
-            "text": "<p>FUTR formulas are developed through a multidisciplinary process informed by sports nutrition, pediatric nutrition, medicine, and performance.</p><p>Each formula is reviewed across key formulation considerations, including:</p><p>Ingredient rationale. Serving amount. Intended use. Age considerations. Potential ingredient interactions. Total daily intake.</p><p>Every ingredient has a defined purpose, and every formula is considered as a whole — not simply as a list of individual ingredients.</p>",
+            "text": "<p>Every FUTR formula is developed in collaboration with experts in sports nutrition, pediatric nutrition, medicine, and athletic performance.</p><p>Each formula is reviewed across key considerations, including serving amounts, intended use, age-specific needs, and total daily intake.</p>",
             "page": ""
           }
         },
         "accordion_De8PBk": {
           "type": "accordion",
           "settings": {
-            "accordion_header": "EVIDENCE-INFORMED INGREDIENT SELECTION",
+            "accordion_header": "INGREDIENT SELECTION",
             "open_by_default": false,
-            "text": "<p>We don’t formulate around trends, hype, or the longest ingredient list.</p><p>Ingredients are selected based on their intended role, available scientific evidence, serving amount, and fit within the complete formula.</p><p>Because an ingredient that makes sense on its own still needs to make sense within the formula, at its intended serving amount, and for its intended use.</p><p>The goal isn’t more ingredients. It’s purposeful ingredients, intentional amounts, and a clear reason for each one.</p>",
+            "text": "<p>We don't formulate around trends, hype, or lengthy ingredient lists.</p><p>Every ingredient is selected based on its intended function, scientific research, and role within the complete formula.</p>",
             "page": ""
           }
         },
@@ -121,7 +121,7 @@
           "settings": {
             "accordion_header": "DESIGNED AS A SYSTEM",
             "open_by_default": false,
-            "text": "<p>Each FUTR formula is designed to work independently, but we also consider how the products fit together.</p><p>Shared nutrients and total intake are considered across the system when products are used as directed.</p><p>We’re not simply developing individual products. We’re building a connected nutrition system around the full cycle of youth sport.</p>",
+            "text": "<p>Each FUTR product supports a distinct phase of play, from preparation and performance to recovery.</p><p>Formulas are designed to work independently or together, with shared nutrients and total daily intake considered across the lineup.</p>",
             "page": ""
           }
         }
@@ -173,7 +173,7 @@
         "text_NW4YUG": {
           "type": "text",
           "settings": {
-            "text": "<p>Science doesn’t stop when the formula is finished.</p><p>FUTR products are manufactured in facilities registered with FDA and operating under current Good Manufacturing Practice (cGMP) requirements applicable to dietary supplements.</p><p>Quality controls include ingredient sourcing and raw-material verification, manufacturing controls, finished-product specifications, and testing.</p><p>Because what’s on the label should match what’s in the product.</p>",
+            "text": "<p>Quality doesn't stop at formulation.</p><p>FUTR products are manufactured in FDA-registered facilities that operate under current Good Manufacturing Practice (cGMP) requirements for dietary supplements.</p><p>Quality controls address raw-material verification, manufacturing processes, finished-product specifications, and testing.</p><p>Because what's on the label should reflect what's in the product.</p>",
             "text_bottom_spacing": 20
           }
         }

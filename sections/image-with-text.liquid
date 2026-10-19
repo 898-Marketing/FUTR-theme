@@ -36,6 +36,15 @@
   .section-{{ section.id }} .image-with-text__image-inner {
     position: relative;
     height: {{ section.settings.image_height_percent }}%;
+    {% if section.settings.image_square %}
+      aspect-ratio: 1 / 1;
+      width: auto;
+      {% if section.settings.layout == 'right' %}
+        align-self: flex-start;
+      {% else %}
+        align-self: flex-end;
+      {% endif %}
+    {% endif %}
   }
   .section-{{ section.id }} .image-with-text__image-inner .img {
     position: relative;
@@ -303,6 +312,13 @@
       "step": 5,
       "unit": "%",
       "default": 100
+    },
+    {
+      "type": "checkbox",
+      "id": "image_square",
+      "label": "Make image a 1:1 square",
+      "info": "Crops the image to a perfect square sized by \"Image height\" above, inset in from the left (or right, if layout is set to right) instead of spanning the full column width.",
+      "default": false
     },
     {
       "type": "header",

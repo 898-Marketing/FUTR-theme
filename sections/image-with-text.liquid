@@ -26,6 +26,21 @@
   .section-{{ section.id }} .image-with-text__list-text {
     min-width: 0;
   }
+
+  /* The image normally stretches to the full height of the row (matching
+     the text column) via its own absolutely-positioned inner wrapper. Give
+     this div an explicit height/position so that wrapper resolves against
+     a shorter box instead, centered within the row by the parent's
+     justify-content:center. 100% (default) reproduces the original
+     full-height look exactly. */
+  .section-{{ section.id }} .image-with-text__image-inner {
+    position: relative;
+    height: {{ section.settings.image_height_percent }}%;
+  }
+  .section-{{ section.id }} .image-with-text__image-inner .img {
+    position: relative;
+    height: 100%;
+  }
 {% endstyle %}
 
 {% case section.settings.colors %}
@@ -51,7 +66,7 @@
 
   {% capture image_layout %}
     <div class="grid__item homepage-content--image homepage-content--{{ section.id }}{% if section.settings.text_overlapping_image %} overlapping-text{% else %} large--one-half{% endif %}{% if settings.animations_enabled %} kb-enabled{% endif %}{% if section.settings.section-width == 'content' %} block-radius{% endif %}">
-      <div>
+      <div class="image-with-text__image-inner">
         {% if section.settings.image != blank %}
           <div id="image-with-text--{{ section.id }}" class="img">
             {% render 'responsive-image', image: section.settings.image, sizes: '100vw', allow_stretch: true %}
@@ -277,6 +292,17 @@
       "id": "text_overlapping_image",
       "label": "t:sections.image--image-with-text.settings.text_overlapping_image.label",
       "default": false
+    },
+    {
+      "type": "range",
+      "id": "image_height_percent",
+      "label": "Image height",
+      "info": "Shrink the image below the full height of the section (it stays centered). 100% matches the current/default look.",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
     },
     {
       "type": "header",

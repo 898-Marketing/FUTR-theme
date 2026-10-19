@@ -190,13 +190,40 @@
             "text": "<p>FUTR partners with Supplement Safety Solutions, a physician-led organization specializing in dietary supplement safety, oversight, and risk management.<br/></p><p>Through its Nutravigilance® program, FUTR supports ongoing product safety monitoring, medical evaluation of reported adverse events, and proactive identification of potential safety concerns.</p>",
             "text_bottom_spacing": 20
           }
+        },
+        "icon_item_3MYB9c": {
+          "type": "icon_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_300x_a107b546-c1db-464d-9bff-7de1f1f669ab.png",
+            "label": "",
+            "link": ""
+          }
+        },
+        "icon_item_DpWfGd": {
+          "type": "icon_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_3_300x_9b3a5446-d4e9-43e3-94ab-6c4bdc70fe65.png",
+            "label": "",
+            "link": ""
+          }
+        },
+        "icon_item_Wq3XeG": {
+          "type": "icon_item",
+          "settings": {
+            "image": "shopify://shop_images/YOUTH_SPORTS_logo_white_1.png",
+            "label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "heading_CzNjMg",
         "text_NW4YUG",
         "heading_WRfjMd",
-        "text_yiBRgF"
+        "text_yiBRgF",
+        "icon_item_3MYB9c",
+        "icon_item_DpWfGd",
+        "icon_item_Wq3XeG"
       ],
       "custom_css": [
         "h2 {font-size: 38px;}"

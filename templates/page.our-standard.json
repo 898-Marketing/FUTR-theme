@@ -82,16 +82,17 @@
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/FUTR-Line-Up-Hero---Kitchen-Setting.jpg",
         "layout": "left",
         "text_alignment": "left",
         "text_alignment_mobile": "center",
         "text_overlapping_image": false,
+        "image_height_percent": 70,
+        "image_square": true,
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "light",
-        "image_height_percent": 70,
-        "image_square": true
+        "colors": "light"
       }
     },
     "accordion_with_image_rRbVnk": {
@@ -188,6 +189,8 @@
         "text_alignment": "left",
         "text_alignment_mobile": "left",
         "text_overlapping_image": false,
+        "image_height_percent": 100,
+        "image_square": false,
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,

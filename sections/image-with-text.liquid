@@ -39,11 +39,7 @@
     {% if section.settings.image_square %}
       aspect-ratio: 1 / 1;
       width: auto;
-      {% if section.settings.layout == 'right' %}
-        align-self: flex-start;
-      {% else %}
-        align-self: flex-end;
-      {% endif %}
+      align-self: center;
     {% endif %}
   }
   .section-{{ section.id }} .image-with-text__image-inner .img {
@@ -317,7 +313,7 @@
       "type": "checkbox",
       "id": "image_square",
       "label": "Make image a 1:1 square",
-      "info": "Crops the image to a perfect square sized by \"Image height\" above, inset in from the left (or right, if layout is set to right) instead of spanning the full column width.",
+      "info": "Crops the image to a perfect square sized by \"Image height\" above, centered in its half of the section instead of spanning the full column width.",
       "default": false
     },
     {

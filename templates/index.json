@@ -76,7 +76,7 @@
           "type": "image",
           "settings": {
             "title": "",
-            "text": "Offer valid with the purchase of any two full-size FUTR supplement products. Free FUTR tee must be added to cart.",
+            "text": "",
             "first_button_link": "shopify://collections/futr-merch",
             "first_button_label": "Add To Cart",
             "second_button_link": "",

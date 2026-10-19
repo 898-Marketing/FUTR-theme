@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "title": "THE <span style=\"color: #1F88D2;\">FUTR</span>\nIS NOW.",
-            "text": "Setting the standard in youth sports nutrition — built for how young athletes practice, compete, and recover.",
+            "text": "Setting the standard in youth sports nutrition — built for howyoung athletes practice, compete, and recover.",
             "first_button_link": "/",
             "first_button_label": "Shop the system",
             "second_button_link": "",
@@ -29,7 +29,7 @@
             "text_position": "center_left",
             "desktop-caption-heading-size": 112,
             "desktop-caption-body-text-size": 20,
-            "content_max_width": 60,
+            "content_max_width": 100,
             "tablet-caption-heading-size": 76,
             "tablet-caption-body-text-size": 18,
             "content_max_width_tablet": 100,

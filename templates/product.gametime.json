@@ -196,6 +196,10 @@
         "text_alignment": "left",
         "text_alignment_mobile": "center",
         "text_overlapping_image": false,
+        "image_height_percent": 100,
+        "image_square": false,
+        "icon_grid_size_desktop": 64,
+        "icon_grid_size_mobile": 48,
         "section-width": "content",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
@@ -635,15 +639,16 @@
     "slideshow_9fhget": {
       "type": "slideshow",
       "blocks": {
-        "image_6pynCH": {
+        "image_BzHgXT": {
           "type": "image",
           "settings": {
             "title": "",
-            "text": "Offer valid with the purchase of any two full-size FUTR supplement products. Free FUTR tee must be added to cart.",
+            "text": "",
             "first_button_link": "shopify://collections/futr-merch",
             "first_button_label": "Add To Cart",
             "second_button_link": "",
             "second_button_label": "",
+            "button_disclaimer": "Offer valid with the purchase of any two full-size FUTR supplement products. Free FUTR tee must be added to cart.",
             "buttons_style": "filled",
             "override_button_colors": true,
             "button-background": "#ffffff",
@@ -667,7 +672,7 @@
         }
       },
       "block_order": [
-        "image_6pynCH"
+        "image_BzHgXT"
       ],
       "name": "t:sections.image--slideshow.presets.name",
       "settings": {

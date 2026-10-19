@@ -45,7 +45,7 @@
     text-decoration: none;
   }
   .section-{{ section.id }} .image-with-text__icon-item-image {
-    width: 64px;
+    width: {{ section.settings.icon_grid_size_desktop }}px;
   }
   .section-{{ section.id }} .image-with-text__icon-item-image .responsive-image-wrapper {
     position: static !important;
@@ -64,6 +64,9 @@
     .section-{{ section.id }} .image-with-text__icon-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
+    }
+    .section-{{ section.id }} .image-with-text__icon-item-image {
+      width: {{ section.settings.icon_grid_size_mobile }}px;
     }
   }
 
@@ -384,6 +387,30 @@
       "label": "Make image a 1:1 square",
       "info": "Crops the image to a perfect square sized by \"Image height\" above, centered in its half of the section instead of spanning the full column width.",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Icon grid"
+    },
+    {
+      "type": "range",
+      "id": "icon_grid_size_desktop",
+      "label": "Icon size (desktop)",
+      "min": 24,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "icon_grid_size_mobile",
+      "label": "Icon size (mobile)",
+      "min": 24,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 48
     },
     {
       "type": "header",

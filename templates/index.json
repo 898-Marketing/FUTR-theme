@@ -294,7 +294,7 @@
         "description": "",
         "section_header_alignment": "center",
         "collection": "all-products-homepage",
-        "show_star_ratings": true,
+        "show_star_ratings": false,
         "show_hover_image": true,
         "show_blurb": true,
         "blurb_word_limit": 20,

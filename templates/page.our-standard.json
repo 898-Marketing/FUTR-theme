@@ -92,7 +92,7 @@
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "light"
+        "colors": "dark"
       }
     },
     "accordion_with_image_rRbVnk": {
@@ -176,14 +176,30 @@
             "text": "<p>Quality doesn't stop at formulation.</p><p>FUTR products are manufactured in FDA-registered facilities that operate under current Good Manufacturing Practice (cGMP) requirements for dietary supplements.</p><p>Quality controls address raw-material verification, manufacturing processes, finished-product specifications, and testing.</p><p>Because what's on the label should reflect what's in the product.</p>",
             "text_bottom_spacing": 20
           }
+        },
+        "heading_WRfjMd": {
+          "type": "heading",
+          "settings": {
+            "title": "ONGOING SAFETY MONITORING",
+            "heading_bottom_spacing": 15
+          }
+        },
+        "text_yiBRgF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FUTR partners with Supplement Safety Solutions, a physician-led organization specializing in dietary supplement safety, oversight, and risk management.<br/></p><p>Through its Nutravigilance® program, FUTR supports ongoing product safety monitoring, medical evaluation of reported adverse events, and proactive identification of potential safety concerns.</p>",
+            "text_bottom_spacing": 20
+          }
         }
       },
       "block_order": [
         "heading_CzNjMg",
-        "text_NW4YUG"
+        "text_NW4YUG",
+        "heading_WRfjMd",
+        "text_yiBRgF"
       ],
       "custom_css": [
-        "h2{font-size: 38px;}"
+        "h2 {font-size: 38px;}"
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
@@ -195,7 +211,7 @@
         "image_height_percent": 100,
         "image_square": false,
         "section-width": "full",
-        "section_padding_top": 0,
+        "section_padding_top": 55,
         "section_padding_bottom": 0,
         "colors": "light"
       }

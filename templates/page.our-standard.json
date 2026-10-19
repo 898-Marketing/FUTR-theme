@@ -86,11 +86,12 @@
         "text_alignment": "left",
         "text_alignment_mobile": "center",
         "text_overlapping_image": false,
-        "image_height_percent": 70,
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "light"
+        "colors": "light",
+        "image_height_percent": 70,
+        "image_square": true
       }
     },
     "accordion_with_image_rRbVnk": {

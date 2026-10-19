@@ -246,6 +246,7 @@
         "heading_color": "#ffffff",
         "heading_font_size_desktop": 46,
         "heading_font_size_mobile": 28,
+        "heading_max_width": 720,
         "badge_image": "shopify://shop_images/YOUTH_SPORTS_logo_white.png",
         "badge_alt": "Specifically made for youth sports",
         "badge_position": "top_right",
@@ -475,14 +476,14 @@
         "footer_icon_size": 40,
         "feature_icon_size": 54,
         "age_column_label": "Age",
+        "show_weight": false,
         "serving_icon": "shopify://shop_images/SCOOP0.png",
         "serving_column_label": "{{ product.title }}",
         "serving_column_sublabel": "1 scoop / stick = 1 serving",
         "water_icon": "shopify://shop_images/Icons-29.png",
         "water_column_label": "Water",
         "footer_text_white": "",
-        "footer_text_accent": "",
-        "show_weight": false
+        "footer_text_accent": ""
       }
     },
     "phase_columns_FWLXfK": {
@@ -573,6 +574,10 @@
         "text_alignment": "center",
         "text_alignment_mobile": "center",
         "text_overlapping_image": false,
+        "image_height_percent": 100,
+        "image_square": false,
+        "icon_grid_size_desktop": 64,
+        "icon_grid_size_mobile": 48,
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
@@ -643,6 +648,56 @@
         "colors": "dark"
       }
     },
+    "slideshow_VtkieL": {
+      "type": "slideshow",
+      "blocks": {
+        "image_GjeXB7": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "text": "",
+            "first_button_link": "shopify://collections/futr-merch",
+            "first_button_label": "Add To Cart",
+            "second_button_link": "",
+            "second_button_label": "",
+            "button_disclaimer": "Offer valid with the purchase of any two full-size FUTR supplement products. Free FUTR tee must be added to cart.",
+            "buttons_style": "filled",
+            "override_button_colors": true,
+            "button-background": "#ffffff",
+            "button-text": "#000000",
+            "image": "shopify://shop_images/1920x1080_26a62ee8-61c5-465b-aa06-1a5cc4f13189.jpg",
+            "text_position": "bottom_left",
+            "desktop-caption-heading-size": 112,
+            "desktop-caption-body-text-size": 24,
+            "content_max_width": 60,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
+            "content_max_width_tablet": 60,
+            "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
+            "mobile_text_position": "center",
+            "mobile-caption-heading-size": 40,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#000000",
+            "image_overlay_opacity": 28
+          }
+        }
+      },
+      "block_order": [
+        "image_GjeXB7"
+      ],
+      "name": "t:sections.image--slideshow.presets.name",
+      "settings": {
+        "desktop_height": "original",
+        "mobile_height": "extra_large",
+        "slide_navigation_style": "bars",
+        "slide_transition_delay": 5,
+        "section_width": "full",
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "background_color": "#000000"
+      }
+    },
     "accordion_fYz9RV": {
       "type": "accordion",
       "blocks": {
@@ -670,55 +725,6 @@
         "section_padding_top": 60,
         "section_padding_bottom": 60,
         "colors": "dark"
-      }
-    },
-    "slideshow_VtkieL": {
-      "type": "slideshow",
-      "blocks": {
-        "image_yqr7fc": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "text": "Offer valid with the purchase of any two full-size FUTR supplement products. Free FUTR tee must be added to cart.",
-            "first_button_link": "shopify://collections/futr-merch",
-            "first_button_label": "Add To Cart",
-            "second_button_link": "",
-            "second_button_label": "",
-            "buttons_style": "filled",
-            "override_button_colors": true,
-            "button-background": "#ffffff",
-            "button-text": "#000000",
-            "image": "shopify://shop_images/1920x1080.jpg",
-            "text_position": "bottom_right",
-            "desktop-caption-heading-size": 112,
-            "desktop-caption-body-text-size": 24,
-            "content_max_width": 60,
-            "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
-            "mobile_text_position": "center",
-            "mobile-caption-heading-size": 40,
-            "mobile-caption-body-text-size": 16,
-            "caption-text": "#ffffff",
-            "image_overlay": "#000000",
-            "image_overlay_opacity": 28,
-            "tablet-caption-heading-size": 76,
-            "tablet-caption-body-text-size": 20,
-            "content_max_width_tablet": 60
-          }
-        }
-      },
-      "block_order": [
-        "image_yqr7fc"
-      ],
-      "name": "t:sections.image--slideshow.presets.name",
-      "settings": {
-        "desktop_height": "original",
-        "mobile_height": "extra_large",
-        "slide_navigation_style": "bars",
-        "slide_transition_delay": 5,
-        "section_width": "full",
-        "section_padding_top": 0,
-        "section_padding_bottom": 0,
-        "background_color": "#000000"
       }
     }
   },

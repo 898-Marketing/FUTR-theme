@@ -620,7 +620,8 @@
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "light"
+        "colors": "light",
+        "list_number_font_size": 17
       }
     },
     "image_with_text_overlay_qmXaFa": {

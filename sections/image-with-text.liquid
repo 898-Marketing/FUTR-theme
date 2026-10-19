@@ -21,7 +21,7 @@
     flex: none;
     color: var(--futr-blue, #1f88d2);
     font-weight: 800;
-    font-size: 15px;
+    font-size: {{ section.settings.list_number_font_size }}px;
   }
   .section-{{ section.id }} .image-with-text__list-text {
     min-width: 0;
@@ -411,6 +411,20 @@
       "step": 2,
       "unit": "px",
       "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Numbered list"
+    },
+    {
+      "type": "range",
+      "id": "list_number_font_size",
+      "label": "Number size",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 15
     },
     {
       "type": "header",

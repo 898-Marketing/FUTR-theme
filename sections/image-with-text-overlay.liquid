@@ -131,13 +131,21 @@
                   <style>
                     .{{ block.id }} {
                       font-size: {{ block.settings.font_size_mobile }}px;
+                    }
+                    .{{ block.id }} sup {
+                      font-size: {{ block.settings.font_size_mobile | minus: 10 }}px;
+                    }
 
-                      @media screen and (min-width: 768px) {
+                    @media screen and (min-width: 768px) {
+                      .{{ block.id }} {
                         font-size: {{ block.settings.font_size_desktop }}px;
+                      }
+                      .{{ block.id }} sup {
+                        font-size: {{ block.settings.font_size_desktop | minus: 10 }}px;
                       }
                     }
                   </style>
-                  <h2 class="{{ block.id }} image-with-text-overlay__heading text-link-animated" style="padding-bottom: {{ block.settings.heading_bottom_spacing }}px;" data-animate data-animate-order="{{ forloop.index | plus: animation_offset }}" {{ block.shopify_attributes }}>{{ block.settings.title }}</h2>
+                  <h2 class="{{ block.id }} image-with-text-overlay__heading text-link-animated" style="padding-bottom: {{ block.settings.heading_bottom_spacing }}px;" data-animate data-animate-order="{{ forloop.index | plus: animation_offset }}" {{ block.shopify_attributes }}>{{ block.settings.title | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}</h2>
                 {% endif %}
 
               {% when 'text' %}

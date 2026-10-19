@@ -54,6 +54,12 @@
             .slider-section--{{ section.id }} .block-section--{{ block.id }} .featured-row__subtext {
               font-size: {{ block.settings.mobile-caption-body-text-size }}px;
             }
+            .slider-section--{{ section.id }} .block-section--{{ block.id }} .slide-buttons__disclaimer {
+              margin: 10px 0 0;
+              font-size: 11px;
+              line-height: 1.4;
+              color: {{ block.settings.caption-text | color_modify: 'alpha', 0.7 }};
+            }
 
             @media screen and (min-width: 768px) {
               .slider-section--{{ section.id }} .block-section--{{ block.id }} h2.homepage-sections--title {
@@ -232,6 +238,9 @@
                               %}
                             {% endif %}
 													</div>
+                          {% unless block.settings.button_disclaimer == blank %}
+                            <p class="slide-buttons__disclaimer">{{ block.settings.button_disclaimer }}</p>
+                          {% endunless %}
                           {% if block.settings.override_button_colors %}
                             {% render 'button-color-overrides',
                               id: block.id,
@@ -609,6 +618,12 @@
           "id": "second_button_label",
           "label": "t:sections.image--slideshow.blocks.image.settings.second_button_label.label",
           "default": "Learn more"
+        },
+        {
+          "type": "text",
+          "id": "button_disclaimer",
+          "label": "Disclaimer text (below buttons)",
+          "info": "Optional small print shown under the buttons. Leave blank to hide it."
         },
         {
           "type": "select",

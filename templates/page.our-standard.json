@@ -242,7 +242,7 @@
         "icon_grid_size_desktop": 100,
         "icon_grid_size_mobile": 60,
         "section-width": "full",
-        "section_padding_top": 55,
+        "section_padding_top": 0,
         "section_padding_bottom": 0,
         "colors": "light"
       }

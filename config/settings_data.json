@@ -134,7 +134,8 @@
         "disabled": false,
         "settings": {}
       }
-    }
+    },
+    "show_product_rating": false
   },
   "presets": {
     "Capital": {

@@ -182,6 +182,9 @@
         "heading_CzNjMg",
         "text_NW4YUG"
       ],
+      "custom_css": [
+        "h2{font-size: 38px;}"
+      ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/image_3.jpg",

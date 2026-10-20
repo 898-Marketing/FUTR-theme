@@ -245,7 +245,8 @@
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "light"
+        "colors": "light",
+        "round_image_corners": true
       }
     }
   },

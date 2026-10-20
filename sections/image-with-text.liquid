@@ -28,6 +28,10 @@
   .section-{{ section.id }} .image-with-text__list-text {
     min-width: 0;
   }
+  .section-{{ section.id }} .featured-row__subtext sup {
+    font-size: 9px;
+    font-weight: 600;
+  }
 
   /* Icon grid — consecutive "Icon (grid)" blocks are grouped into one of
      these wrappers automatically, 3 per row by default, wrapping to extra
@@ -195,7 +199,7 @@
                   {% when 'text' %}
                     {% if block.settings.text != blank %}
                       <div class="rte featured-row__subtext textarea text-link-animated richtext-block" style="margin-bottom: {{ block.settings.text_bottom_spacing }}px;" data-animate data-animate-order="{{ animation_order | plus: animation_offset }}" {{ block.shopify_attributes }}>
-                        {{ block.settings.text }}
+                        {{ block.settings.text | replace: '®', '<sup>®</sup>' | replace: '™', '<sup>™</sup>' }}
                       </div>
                       {% assign animation_order = animation_order | plus: 1 %}
                     {% endif %}

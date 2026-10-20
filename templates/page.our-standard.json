@@ -242,7 +242,7 @@
         "image_height_percent": 100,
         "image_square": false,
         "round_image_corners": true,
-        "icon_grid_size_desktop": 100,
+        "icon_grid_size_desktop": 136,
         "icon_grid_size_mobile": 60,
         "list_number_font_size": 15,
         "section-width": "full",

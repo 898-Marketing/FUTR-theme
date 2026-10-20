@@ -89,13 +89,14 @@
         "text_overlapping_image": false,
         "image_height_percent": 70,
         "image_square": true,
+        "round_image_corners": true,
         "icon_grid_size_desktop": 64,
         "icon_grid_size_mobile": 48,
+        "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "dark",
-        "round_image_corners": true
+        "colors": "dark"
       }
     },
     "accordion_with_image_rRbVnk": {
@@ -240,13 +241,14 @@
         "text_overlapping_image": false,
         "image_height_percent": 100,
         "image_square": false,
+        "round_image_corners": true,
         "icon_grid_size_desktop": 100,
         "icon_grid_size_mobile": 60,
+        "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "light",
-        "round_image_corners": true
+        "colors": "light"
       }
     }
   },

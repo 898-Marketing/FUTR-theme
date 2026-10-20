@@ -94,7 +94,8 @@
         "section-width": "full",
         "section_padding_top": 0,
         "section_padding_bottom": 0,
-        "colors": "dark"
+        "colors": "dark",
+        "round_image_corners": true
       }
     },
     "accordion_with_image_rRbVnk": {

@@ -133,7 +133,8 @@
                       font-size: {{ block.settings.font_size_mobile }}px;
                     }
                     .{{ block.id }} sup {
-                      font-size: {{ block.settings.font_size_mobile | minus: 10 }}px;
+                      font-size: {{ block.settings.font_size_mobile | times: 0.4 | round }}px;
+                      margin-left: -3px;
                     }
 
                     @media screen and (min-width: 768px) {
@@ -141,7 +142,8 @@
                         font-size: {{ block.settings.font_size_desktop }}px;
                       }
                       .{{ block.id }} sup {
-                        font-size: {{ block.settings.font_size_desktop | minus: 10 }}px;
+                        font-size: {{ block.settings.font_size_desktop | times: 0.4 | round }}px;
+                        margin-left: -5px;
                       }
                     }
                   </style>

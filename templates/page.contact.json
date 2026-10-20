@@ -94,6 +94,9 @@
         "f03adfd7-1474-4f7a-a28a-c0c1430bd42d",
         "template--14753984643142__057a50d5-3fee-4ea2-a832-2d38f47b959a-16788945317184afd8-3"
       ],
+      "custom_css": [
+        "h2 {font-size: 35px; }"
+      ],
       "settings": {
         "title": "Questions, ideas, partnerships — we’re here for all of it.",
         "description": "",

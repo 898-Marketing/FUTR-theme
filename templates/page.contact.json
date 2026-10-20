@@ -95,10 +95,10 @@
         "template--14753984643142__057a50d5-3fee-4ea2-a832-2d38f47b959a-16788945317184afd8-3"
       ],
       "custom_css": [
-        "h2 {font-size: 35px; }"
+        "h2 {font-size: 35px; text-transform: none;}"
       ],
       "settings": {
-        "title": "Questions, ideas, partnerships — we’re here for all of it.",
+        "title": "Questions, Ideas, Partnerships — We’re here for all of it.",
         "description": "",
         "section_header_alignment": "center",
         "form_width": "narrow",

@@ -639,7 +639,7 @@
         "heading_UiRkcP": {
           "type": "heading",
           "settings": {
-            "title": "THE FUTR SYSTEM.",
+            "title": "THE FUTR SYSTEM",
             "font_size_desktop": 46,
             "font_size_mobile": 28,
             "heading_bottom_spacing": 25
@@ -648,7 +648,7 @@
         "text_VetieR": {
           "type": "text",
           "settings": {
-            "text": "<p>Discover the ingredients, benefits, and science behind each formula</p>",
+            "text": "<p>Discover the ingredients, benefits, and science behind each formula.</p>",
             "font_size_desktop": 16,
             "font_size_mobile": 16,
             "text_bottom_spacing": 20

@@ -771,7 +771,7 @@
         "instafeed_app_block_raUrJk"
       ],
       "settings": {
-        "section_padding_top": 0,
+        "section_padding_top": 20,
         "section_padding_bottom": 0,
         "include_margins": true
       }

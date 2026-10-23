@@ -624,6 +624,7 @@
         "text_overlapping_image": false,
         "image_height_percent": 100,
         "image_square": false,
+        "round_image_corners": false,
         "icon_grid_size_desktop": 64,
         "icon_grid_size_mobile": 48,
         "list_number_font_size": 15,
@@ -792,6 +793,37 @@
         "colors": "white"
       }
     },
+    "1792764815a74c2219": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_raUrJk": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "Follow Us on Instagram",
+            "title_color": "",
+            "title_size_v2": 35,
+            "alignment": "center",
+            "instafeed_margin_top": 20,
+            "instafeed_margin_bottom": 20,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": true,
+            "link_alignment": "center",
+            "link_color": "#0870CC",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_raUrJk"
+      ],
+      "settings": {
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "include_margins": true
+      }
+    },
     "newsletter_cQa4NW": {
       "type": "newsletter",
       "settings": {
@@ -816,6 +848,7 @@
     "image_with_text_overlay_qmXaFa",
     "blog_posts_wefQCf",
     "testimonials_h6YnF3",
+    "1792764815a74c2219",
     "newsletter_cQa4NW"
   ]
 }

@@ -763,7 +763,7 @@
             "link_color": "#0870cc",
             "background_color": "",
             "feed_id": "",
-            "html_area": "<div style=\"text-align:center;margin:16px 0 8px;\"><a href=\"https://www.instagram.com/futrperformance/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn futr-cta\" style=\"display:inline-block;text-decoration:none;\"><span>FOLLOW US ON INSTAGRAM</span></a></div>"
+            "html_area": "<div style=\"text-align:center;margin:16px 0 8px;\"><a href=\"https://www.instagram.com/futrperformance/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn\" style=\"display:inline-block;text-decoration:none;\">FOLLOW US ON INSTAGRAM</a></div>"
           }
         }
       },

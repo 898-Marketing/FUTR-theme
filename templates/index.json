@@ -806,12 +806,12 @@
             "instafeed_margin_top": 20,
             "instafeed_margin_bottom": 20,
             "instafeed_margin_sides": 0,
-            "show_instagram_link": true,
+            "show_instagram_link": false,
             "link_alignment": "center",
             "link_color": "#0870CC",
             "background_color": "",
             "feed_id": "",
-            "html_area": ""
+            "html_area": "<div style=\"text-align:center;margin:16px 0 8px;\"><a href=\"https://www.instagram.com/futrperformance/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn futr-cta\" style=\"display:inline-block;text-decoration:none;\"><span>FOLLOW US ON INSTAGRAM</span></a></div>"
           }
         }
       },

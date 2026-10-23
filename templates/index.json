@@ -745,6 +745,37 @@
         "colors": "dark"
       }
     },
+    "1792764815a74c2219": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_raUrJk": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 35,
+            "alignment": "center",
+            "instafeed_margin_top": 30,
+            "instafeed_margin_bottom": 40,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "center",
+            "link_color": "#0870cc",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": "<div style=\"text-align:center;margin:16px 0 8px;\"><a href=\"https://www.instagram.com/futrperformance/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn futr-cta\" style=\"display:inline-block;text-decoration:none;\"><span>FOLLOW US ON INSTAGRAM</span></a></div>"
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_raUrJk"
+      ],
+      "settings": {
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "include_margins": true
+      }
+    },
     "testimonials_h6YnF3": {
       "type": "testimonials",
       "blocks": {
@@ -793,37 +824,6 @@
         "colors": "white"
       }
     },
-    "1792764815a74c2219": {
-      "type": "apps",
-      "blocks": {
-        "instafeed_app_block_raUrJk": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "Follow Us on Instagram",
-            "title_color": "",
-            "title_size_v2": 35,
-            "alignment": "center",
-            "instafeed_margin_top": 20,
-            "instafeed_margin_bottom": 20,
-            "instafeed_margin_sides": 0,
-            "show_instagram_link": false,
-            "link_alignment": "center",
-            "link_color": "#0870CC",
-            "background_color": "",
-            "feed_id": "",
-            "html_area": "<div style=\"text-align:center;margin:16px 0 8px;\"><a href=\"https://www.instagram.com/futrperformance/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn futr-cta\" style=\"display:inline-block;text-decoration:none;\"><span>FOLLOW US ON INSTAGRAM</span></a></div>"
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_raUrJk"
-      ],
-      "settings": {
-        "section_padding_top": 0,
-        "section_padding_bottom": 0,
-        "include_margins": true
-      }
-    },
     "newsletter_cQa4NW": {
       "type": "newsletter",
       "settings": {
@@ -847,8 +847,8 @@
     "image_with_text_mYYWiV",
     "image_with_text_overlay_qmXaFa",
     "blog_posts_wefQCf",
-    "testimonials_h6YnF3",
     "1792764815a74c2219",
+    "testimonials_h6YnF3",
     "newsletter_cQa4NW"
   ]
 }

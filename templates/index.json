@@ -275,6 +275,9 @@
         "richtext_wa4n3E",
         "richtext_xYYefw"
       ],
+      "custom_css": [
+        "p{color: #000;}"
+      ],
       "name": "t:sections.text--rich-text.presets.name",
       "settings": {
         "section_width": "content",

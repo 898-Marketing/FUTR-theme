@@ -23,6 +23,12 @@
     #shopify-section-{{ section.id }} a {
       color: #000000;
     }
+    /* The title's inline style sets text-align from the sitewide
+       template_heading_alignment setting (center by default) — override
+       with !important so this template matches the other legal pages. */
+    #shopify-section-{{ section.id }} .page--title {
+      text-align: left !important;
+    }
   {% endstyle %}
 {% endif %}
 

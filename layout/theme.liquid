@@ -236,13 +236,14 @@
     {% endif %}
 
     {%- comment -%}
-      Opt-in white background / black text for the native Privacy Policy and
-      Terms of Service pages only — these have no theme template to scope
-      styling through, so they're matched by their fixed Shopify URL path.
-      No other page matches these paths, so nothing else is affected.
+      Opt-in white background / black text for the native Privacy Policy,
+      Terms of Service, Refund Policy, and Shipping Policy pages only —
+      these have no theme template to scope styling through, so they're
+      matched by their fixed Shopify URL path. No other page matches these
+      paths, so nothing else is affected.
     {%- endcomment -%}
     {%- assign is_legal_policy_page = false -%}
-    {%- if request.path contains '/policies/privacy-policy' or request.path contains '/policies/terms-of-service' -%}
+    {%- if request.path contains '/policies/privacy-policy' or request.path contains '/policies/terms-of-service' or request.path contains '/policies/refund-policy' or request.path contains '/policies/shipping-policy' -%}
       {%- assign is_legal_policy_page = true -%}
     {%- endif -%}
     {% if is_legal_policy_page %}

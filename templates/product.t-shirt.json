@@ -278,6 +278,7 @@
         },
         "product_rF47rW": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "creatine",
             "description": "",

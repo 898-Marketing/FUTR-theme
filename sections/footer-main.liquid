@@ -38,12 +38,24 @@
   /* The social icon row and the quick-links list are both display:flex
      containers, which text-align:center has no effect on (it only centers
      inline content) — the container itself just sits flush-left in its
-     column regardless. Center the containers themselves as blocks. */
-  .footer-main.footer-alignment--center .social-media-footer ul,
-  .footer-main.footer-alignment--center .links-footer ul {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+     column regardless. Centering the container directly (via margin:auto)
+     depends on it first shrinking to fit its own content, which stock
+     rules can interfere with — centering the PARENT as a flex column
+     instead is more robust, since it centers the child regardless of how
+     the child's own width is computed. */
+  .footer-main.footer-alignment--center .social-media-footer,
+  .footer-main.footer-alignment--center .links-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (max-width: 767px) {
+    .footer-main.footer-alignment-mobile--center .social-media-footer,
+    .footer-main.footer-alignment-mobile--center .links-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   /* img's height:100% below resolves against ITS direct parent

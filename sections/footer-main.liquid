@@ -35,6 +35,17 @@
     align-items: center;
   }
 
+  /* The social icon row and the quick-links list are both display:flex
+     containers, which text-align:center has no effect on (it only centers
+     inline content) — the container itself just sits flush-left in its
+     column regardless. Center the containers themselves as blocks. */
+  .footer-main.footer-alignment--center .social-media-footer ul,
+  .footer-main.footer-alignment--center .links-footer ul {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* img's height:100% below resolves against ITS direct parent
      (.image-bar__content), not the 70px link/item box two levels up. Without
      an explicit height here, that 100% is invalid against an auto-height

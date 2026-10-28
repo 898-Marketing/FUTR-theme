@@ -56,7 +56,7 @@
         "@media (min-width: 600px) {.content-footer .richtext-block {font-size: 19px; line-height: 21px; }}"
       ],
       "settings": {
-        "alignment": "left",
+        "alignment": "center",
         "alignment_mobile": "center",
         "heading_font_size": 21,
         "color_scheme": "accent",

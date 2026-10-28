@@ -23,8 +23,16 @@
   .footer-main .image-footer .image-bar__item {
     position: relative;
     height: 70px;
+    width: fit-content;
     display: block;
     overflow: hidden;
+  }
+
+  /* With the link/item above sized to fit its content instead of
+     stretching full-width, center alignment can actually shift the logo
+     (not just surrounding text) to the middle of the column. */
+  .footer-main.footer-alignment--center .image-footer {
+    align-items: center;
   }
 
   /* img's height:100% below resolves against ITS direct parent
@@ -51,7 +59,7 @@
     max-width: 100% !important;
     max-height: 100% !important;
     object-fit: contain !important;
-    object-position: left center !important;
+    object-position: {% if section.settings.alignment == 'center' %}center{% else %}left{% endif %} center !important;
   }
 {% endstyle %}
 

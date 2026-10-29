@@ -255,7 +255,7 @@
         "card_padding": 24,
         "card_heading_animated_counter": true,
         "card_heading_font_size_desktop": 30,
-        "card_heading_font_size_mobile": 44,
+        "card_heading_font_size_mobile": 24,
         "card_bg_color": "#16305c",
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",

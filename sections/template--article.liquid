@@ -46,7 +46,17 @@
     color: #ffffff;
   }
 
+  /* The header is transparent/floating over this hero image, so with the
+     tags/category sitting near the top of the centered content, it can end
+     up crowded under the logo. Push it down with a bit of breathing room. */
+  #shopify-section-{{ section.id }} .template-article__header-text--container {
+    padding-top: 40px;
+  }
+
   @media screen and (max-width: 767px) {
+    #shopify-section-{{ section.id }} .template-article__header-text--container {
+      padding-top: 24px;
+    }
     #shopify-section-{{ section.id }} .template-article__header-text--title {
       font-size: 34px;
     }

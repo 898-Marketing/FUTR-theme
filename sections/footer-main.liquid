@@ -58,6 +58,15 @@
     text-align: center !important;
   }
   @media screen and (max-width: 767px) {
+    /* .footer-main--blocks>* caps every column at max-width:25% with no
+       media query gating it to desktop — on mobile, where columns stack
+       into a single list instead of sitting side-by-side, that leaves each
+       one a narrow box pinned to the left, so centering content inside it
+       only ever centers within that narrow box, not across the page. */
+    .footer-main.footer-alignment-mobile--center .footer-main--blocks > * {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
     .footer-main.footer-alignment-mobile--center .social-media-footer,
     .footer-main.footer-alignment-mobile--center .links-footer {
       display: flex !important;

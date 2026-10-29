@@ -45,6 +45,12 @@
   #shopify-section-{{ section.id }} .custom-badge {
     color: #ffffff;
   }
+
+  @media screen and (max-width: 767px) {
+    #shopify-section-{{ section.id }} .template-article__header-text--title {
+      font-size: 34px;
+    }
+  }
 {% endstyle %}
 
 <safe-load-scripts class="hidden">

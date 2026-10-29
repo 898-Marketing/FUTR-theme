@@ -45,24 +45,32 @@
      the child's own width is computed. */
   .footer-main.footer-alignment--center .social-media-footer,
   .footer-main.footer-alignment--center .links-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
   }
-  .footer-main.footer-alignment--center .links-footer ul li {
-    text-align: center;
+  .footer-main.footer-alignment--center .social-media-footer .footer-header,
+  .footer-main.footer-alignment--center .links-footer .footer-header,
+  .footer-main.footer-alignment--center .links-footer ul,
+  .footer-main.footer-alignment--center .links-footer ul li,
+  .footer-main.footer-alignment--center .links-footer ul li a {
+    text-align: center !important;
   }
   @media screen and (max-width: 767px) {
     .footer-main.footer-alignment-mobile--center .social-media-footer,
     .footer-main.footer-alignment-mobile--center .links-footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
     }
-    .footer-main.footer-alignment-mobile--center .links-footer ul li {
-      text-align: center;
+    .footer-main.footer-alignment-mobile--center .social-media-footer .footer-header,
+    .footer-main.footer-alignment-mobile--center .links-footer .footer-header,
+    .footer-main.footer-alignment-mobile--center .links-footer ul,
+    .footer-main.footer-alignment-mobile--center .links-footer ul li,
+    .footer-main.footer-alignment-mobile--center .links-footer ul li a {
+      text-align: center !important;
     }
   }
 

@@ -116,7 +116,7 @@
       ],
       "settings": {
         "desktop_height": "extra_large",
-        "mobile_height": "large",
+        "mobile_height": "extra_large",
         "slide_navigation_style": "dots",
         "slide_transition_delay": 5,
         "section_width": "full",

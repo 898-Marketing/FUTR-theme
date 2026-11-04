@@ -74,6 +74,7 @@
     "type_card_title_font": "heading",
     "type_card_price_font": "body",
     "when_card_price_varies": "show_max_price",
+    "show_product_rating": false,
     "show_rating_as": "average_rating",
     "star_size": 13,
     "show_product_rating_if_no_reviews": true,
@@ -108,14 +109,14 @@
     "share_pinterest": true,
     "popup--enable": true,
     "popup--test-mode": false,
-    "pop-up-text-header-text": "Sign up today!",
-    "pop-up-text-description-text": "<p>Give your customers a reason to sign up to your newsletter</p>",
+    "pop-up-text-header-text": "Join the Roster",
+    "pop-up-text-description-text": "<p>Get all the latest news and deals from our newsletter</p>",
     "popup--show-newsletter": true,
     "popup--show-social-icons": true,
     "pop-up-delay": 12,
     "pop-up-time": "7",
     "desktop-popup-style": "slide-up",
-    "newsletter_popup_color_scheme": "white",
+    "newsletter_popup_color_scheme": "dark",
     "enable_verification_popup": false,
     "verification-pop-up__test-mode": false,
     "verification-pop-up__header": "How old are you?",
@@ -134,8 +135,7 @@
         "disabled": false,
         "settings": {}
       }
-    },
-    "show_product_rating": false
+    }
   },
   "presets": {
     "Capital": {

@@ -688,7 +688,7 @@
         "image_mobile": "shopify://shop_images/system-banner1b_NEWmobile-Oct-9.jpg",
         "height_mobile": "original",
         "height_mobile_custom": 400,
-        "text_position_mobile": "center",
+        "text_position_mobile": "bottom_center",
         "text_alignment_mobile": "center",
         "section_link": "",
         "animation_style": "none",

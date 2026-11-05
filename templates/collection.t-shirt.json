@@ -98,68 +98,54 @@
         "highlight_button_borders": false
       }
     },
-    "image_with_text_overlay_hJLNM8": {
-      "type": "image-with-text-overlay",
+    "slideshow_R3tmdK": {
+      "type": "slideshow",
       "blocks": {
-        "heading_abDF7B": {
-          "type": "heading",
+        "image_MmDKww": {
+          "type": "image",
           "settings": {
-            "title": "BUY ANY 3 ITEMS GET A FREE T-SHIRT!",
-            "font_size_desktop": 45,
-            "font_size_mobile": 28,
-            "heading_bottom_spacing": 25
-          }
-        },
-        "text_MbtRxb": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Don't forget to add a T-shirt to your cart during checkout!</p>",
-            "font_size_desktop": 16,
-            "font_size_mobile": 16,
-            "text_bottom_spacing": 20
-          }
-        },
-        "button_qW77gt": {
-          "type": "button",
-          "settings": {
-            "first_button_link": "shopify://products/t-shirt",
-            "first_button_label": "Add to Cart Now!",
+            "title": "",
+            "text": "",
+            "first_button_link": "shopify://collections/futr-merch",
+            "first_button_label": "Add To Cart",
             "second_button_link": "",
             "second_button_label": "",
+            "button_disclaimer": "Offer valid with the purchase of any two full-size FUTR supplement products. Free FUTR tee must be added to cart.",
             "buttons_style": "filled",
-            "override_button_colors": false,
-            "buttons_background": "#e68819",
-            "buttons_text": "#ffffff",
-            "buttons_bottom_spacing": 20
+            "override_button_colors": true,
+            "button-background": "#ffffff",
+            "button-text": "#000000",
+            "image": "shopify://shop_images/1920x1080_26a62ee8-61c5-465b-aa06-1a5cc4f13189.jpg",
+            "text_position": "bottom_left",
+            "desktop-caption-heading-size": 112,
+            "desktop-caption-body-text-size": 24,
+            "content_max_width": 60,
+            "tablet-caption-heading-size": 76,
+            "tablet-caption-body-text-size": 20,
+            "content_max_width_tablet": 60,
+            "mobile_image": "shopify://shop_images/1080x1080-_1.jpg",
+            "mobile_text_position": "center",
+            "mobile-caption-heading-size": 40,
+            "mobile-caption-body-text-size": 16,
+            "caption-text": "#ffffff",
+            "image_overlay": "#000000",
+            "image_overlay_opacity": 28
           }
         }
       },
       "block_order": [
-        "heading_abDF7B",
-        "text_MbtRxb",
-        "button_qW77gt"
+        "image_MmDKww"
       ],
+      "name": "t:sections.image--slideshow.presets.name",
       "settings": {
-        "image_desktop": "shopify://shop_images/gametime-desktop.jpg",
-        "height_desktop": "450px",
-        "height_desktop_custom": 450,
-        "text_position_desktop": "center",
-        "text_alignment_desktop": "center",
-        "caption_width_desktop": 98,
-        "image_mobile": "shopify://shop_images/gametime-mobile-banner.jpg",
-        "height_mobile": "250px",
-        "height_mobile_custom": 400,
-        "text_position_mobile": "center",
-        "text_alignment_mobile": "center",
-        "section_link": "",
-        "animation_style": "parallax",
+        "desktop_height": "original",
+        "mobile_height": "extra_large",
+        "slide_navigation_style": "bars",
+        "slide_transition_delay": 5,
         "section_width": "full",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "text_color": "#ffffff",
-        "caption_bg_color": "rgba(0,0,0,0)",
-        "image_overlay_color": "#000000",
-        "image_overlay_opacity": 30
+        "section_padding_top": 0,
+        "section_padding_bottom": 0,
+        "background_color": "#000000"
       }
     },
     "text_adverts_ER8Rr8": {
@@ -207,7 +193,7 @@
     "collection-header-spotlight",
     "image_with_text_overlay_EC4zqE",
     "product-grid",
-    "image_with_text_overlay_hJLNM8",
+    "slideshow_R3tmdK",
     "text_adverts_ER8Rr8"
   ]
 }

@@ -36,7 +36,7 @@
         "show_image": true,
         "height_desktop": "650px",
         "text_position_desktop": "center",
-        "height_mobile": "original",
+        "height_mobile": "400px",
         "text_position_mobile": "center",
         "text_color": "#ffffff",
         "image_overlay_color": "#242424",

@@ -312,6 +312,22 @@
 
 </div>
 
+{% if section.settings.section_padding_top_tablet > 0 %}
+  <script>
+    (function () {
+      var el = document.querySelector('.section-{{ section.id }} .homepage-indiv-section-wrapper');
+      if (!el) return;
+      var mq = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
+      function applyTabletPadding() {
+        el.style.marginTop = mq.matches ? '{{ section.settings.section_padding_top_tablet }}px' : '';
+      }
+      applyTabletPadding();
+      mq.addEventListener('change', applyTabletPadding);
+      window.addEventListener('resize', applyTabletPadding);
+    })();
+  </script>
+{% endif %}
+
 {% schema %}
 {
   "name": "t:sections.image--image-with-text.name",

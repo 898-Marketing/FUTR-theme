@@ -81,6 +81,12 @@
       .section-{{ section.id }} {
         padding-top: calc(var(--padding-section-top) + {{ section.settings.section_padding_top_tablet }}px) !important;
       }
+      /* Belt-and-suspenders: push the actual image/text row down directly
+         too, in case something in the stock markup prevents the outer
+         wrapper's own padding from visually taking effect. */
+      .section-{{ section.id }} .homepage-indiv-section-wrapper {
+        margin-top: {{ section.settings.section_padding_top_tablet }}px !important;
+      }
     }
   {% endif %}
 

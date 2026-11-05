@@ -13,12 +13,16 @@
 
   /* The stock row layout (4 columns side by side) kicks in at min-width:768px
      with no upper bound, so tablet-width screens get the same cramped row as
-     desktop. Keep tablet stacked like mobile, only switching to the row
-     layout at a wider (true desktop) breakpoint. */
+     desktop. Lay the 4 columns out as a 2x2 grid instead, only switching to
+     the full single row at a wider (true desktop) breakpoint. */
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .footer-main .footer-main--blocks {
-      flex-direction: column !important;
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
       gap: 30px !important;
+    }
+    .footer-main .footer-main--blocks > * {
+      max-width: 100% !important;
     }
   }
 

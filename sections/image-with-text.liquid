@@ -76,6 +76,14 @@
     }
   }
 
+  {% if section.settings.section_padding_top_tablet > 0 %}
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      .section-{{ section.id }} {
+        padding-top: calc(var(--padding-section-top) + {{ section.settings.section_padding_top_tablet }}px) !important;
+      }
+    }
+  {% endif %}
+
   /* The image normally stretches to the full height of the row (matching
      the text column) via its own absolutely-positioned inner wrapper. Give
      this div an explicit height/position so that wrapper resolves against
@@ -470,6 +478,17 @@
       "max": 150,
       "step": 5,
       "unit": "t:all.px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_tablet",
+      "label": "Spacing top (tablet)",
+      "info": "Extra top spacing for tablet-width screens (768px–1024px), on top of \"Spacing top\" above. 0 means tablet matches desktop/mobile.",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
       "default": 0
     },
     {

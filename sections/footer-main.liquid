@@ -11,6 +11,17 @@
     align-items: flex-start;
   }
 
+  /* The stock row layout (4 columns side by side) kicks in at min-width:768px
+     with no upper bound, so tablet-width screens get the same cramped row as
+     desktop. Keep tablet stacked like mobile, only switching to the row
+     layout at a wider (true desktop) breakpoint. */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer-main .footer-main--blocks {
+      flex-direction: column !important;
+      gap: 30px !important;
+    }
+  }
+
   /* The logo image sits inside a wrapper that's position:absolute with
      height:100% (a stock pattern for this "image" block type), but its link
      wrapper never gets position:relative or an explicit height. Without that,

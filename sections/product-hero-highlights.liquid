@@ -163,6 +163,14 @@
       margin-top: {{ section.settings.bottom_text_top_spacing_mobile }}px;
     }
   }
+
+  {% if section.settings.cards_two_per_row_tablet %}
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      #shopify-section-{{ section.id }} .phh__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  {% endif %}
 {% endstyle %}
 
 <div class="phh" data-wetheme-section-type="product-hero-highlights" data-wetheme-section-id="{{ section.id }}">
@@ -572,6 +580,13 @@
       "step": 1,
       "unit": "px",
       "default": 15
+    },
+    {
+      "type": "checkbox",
+      "id": "cards_two_per_row_tablet",
+      "label": "Stack cards 2-per-row on tablet",
+      "info": "On tablet-width screens (768px–1024px), cards otherwise stay in one row no matter how many there are (only mobile collapses to 1-per-row), which can look cramped with 4 cards. Off by default so pages with fewer cards are unaffected.",
+      "default": false
     },
     {
       "type": "header",

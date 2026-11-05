@@ -44,7 +44,7 @@
             "title": "FUEL EVERY PHASE OF PLAY™",
             "font_size_desktop": 60,
             "font_size_mobile": 44,
-            "heading_bottom_spacing": 25
+            "heading_bottom_spacing": 0
           }
         }
       },
@@ -58,7 +58,7 @@
         "text_position_desktop": "bottom_left",
         "text_alignment_desktop": "left",
         "caption_width_desktop": 79,
-        "height_mobile": "250px",
+        "height_mobile": "300px",
         "height_mobile_custom": 400,
         "text_position_mobile": "center",
         "text_alignment_mobile": "center",

@@ -140,7 +140,7 @@
         "space_between_blocks_mobile": 20,
         "rotate": "0",
         "override_border_radius": false,
-        "color_scheme": "white"
+        "color_scheme": "light"
       }
     },
     "accordion_with_image_cx6zdK": {
@@ -326,7 +326,7 @@
     "slideshow_4jqaYh": {
       "type": "slideshow",
       "blocks": {
-        "image_t4HGYy": {
+        "image_8eCnpp": {
           "type": "image",
           "settings": {
             "title": "",
@@ -354,12 +354,12 @@
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28
+            "image_overlay_opacity": 15
           }
         }
       },
       "block_order": [
-        "image_t4HGYy"
+        "image_8eCnpp"
       ],
       "name": "t:sections.image--slideshow.presets.name",
       "settings": {

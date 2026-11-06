@@ -231,8 +231,7 @@
         "icon_item_Wq3XeG"
       ],
       "custom_css": [
-        "h2 {font-size: 38px; padding-top: 40px;}",
-        ".theme-img{padding-top: 70px;}"
+        "h2 {font-size: 38px; padding-top: 40px;}"
       ],
       "name": "t:sections.image--image-with-text.presets.name",
       "settings": {

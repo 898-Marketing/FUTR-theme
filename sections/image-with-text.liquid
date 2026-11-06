@@ -117,12 +117,16 @@
 {% case section.settings.colors %}
   {% when 'white' %}
     {%- assign color_scheme = 'color-scheme--white' -%}
+    {%- assign section_bg_color = '#ffffff' -%}
   {% when 'light' %}
     {%- assign color_scheme = 'color-scheme--light' -%}
+    {%- assign section_bg_color = settings.colorSchemeLightBackground -%}
   {% when 'accent' %}
     {%- assign color_scheme = 'color-scheme--accent' -%}
+    {%- assign section_bg_color = settings['homepage-sections-accent-primary-color'] -%}
   {% when 'dark' %}
     {%- assign color_scheme = 'color-scheme--dark' -%}
+    {%- assign section_bg_color = settings.colorSchemeDarkBackground -%}
 {% endcase %}
 
 {% assign animation_offset = 2 %}
@@ -130,9 +134,9 @@
 
 <div
   class="section-{{ section.id }} wrapper-spacing--v{% if section.settings.section-width == 'content' %} wrapper-spacing--h{% endif %} {{ color_scheme }} image-with-text__container{% unless section.settings.text_overlapping_image %} feature-row--no-overlapping{% else %} feature-row--overlapping{% endunless %}"
-  data-wetheme-section-type="image--image-with-text" 
+  data-wetheme-section-type="image--image-with-text"
   data-wetheme-section-id="{{ section.id }}"
-  style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px;"
+  style="--padding-section-top: {{ section.settings.section_padding_top }}px; --padding-section-bottom: {{ section.settings.section_padding_bottom }}px;{% if section.settings.section_padding_top > 0 %} padding-top: {{ section.settings.section_padding_top }}px !important; background-color: {{ section_bg_color }} !important;{% endif %}"
 >
 
   {% capture image_layout %}
@@ -311,20 +315,6 @@
   {% endif %}
 
 </div>
-
-{% if section.settings.section_padding_top > 0 %}
-  <script>
-    (function () {
-      var el = document.querySelector('.section-{{ section.id }}');
-      if (!el) return;
-      el.style.paddingTop = '{{ section.settings.section_padding_top }}px';
-      var bg = getComputedStyle(el).getPropertyValue('--color-scheme-background-color').trim();
-      if (bg) {
-        el.style.backgroundColor = bg;
-      }
-    })();
-  </script>
-{% endif %}
 
 {% if section.settings.section_padding_top_tablet > 0 %}
   <script>

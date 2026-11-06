@@ -149,7 +149,7 @@
         "space_between_blocks_mobile": 20,
         "rotate": "0",
         "override_border_radius": false,
-        "color_scheme": "white"
+        "color_scheme": "light"
       }
     },
     "accordion_with_image_cx6zdK": {
@@ -269,6 +269,8 @@
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",
         "card_text_color": "#dbe6f2",
+        "card_text_font_size": 15,
+        "cards_two_per_row_tablet": false,
         "bottom_text": "",
         "bottom_text_alignment": "center",
         "bottom_text_color": "#ffffff",
@@ -576,10 +578,13 @@
         "text_overlapping_image": false,
         "image_height_percent": 100,
         "image_square": false,
+        "round_image_corners": false,
         "icon_grid_size_desktop": 64,
         "icon_grid_size_mobile": 48,
+        "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
+        "section_padding_top_tablet": 0,
         "section_padding_bottom": 0,
         "colors": "accent"
       }
@@ -651,7 +656,7 @@
     "slideshow_VtkieL": {
       "type": "slideshow",
       "blocks": {
-        "image_GjeXB7": {
+        "image_gU8jeP": {
           "type": "image",
           "settings": {
             "title": "",
@@ -679,12 +684,12 @@
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28
+            "image_overlay_opacity": 15
           }
         }
       },
       "block_order": [
-        "image_GjeXB7"
+        "image_gU8jeP"
       ],
       "name": "t:sections.image--slideshow.presets.name",
       "settings": {

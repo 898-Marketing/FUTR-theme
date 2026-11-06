@@ -95,9 +95,9 @@
         "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
+        "section_padding_top_tablet": 40,
         "section_padding_bottom": 0,
-        "colors": "dark",
-        "section_padding_top_tablet": 40
+        "colors": "dark"
       }
     },
     "accordion_with_image_rRbVnk": {
@@ -248,9 +248,9 @@
         "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
+        "section_padding_top_tablet": 40,
         "section_padding_bottom": 0,
-        "colors": "light",
-        "section_padding_top_tablet": 40
+        "colors": "light"
       }
     }
   },

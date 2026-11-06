@@ -312,6 +312,20 @@
 
 </div>
 
+{% if section.settings.section_padding_top > 0 %}
+  <script>
+    (function () {
+      var el = document.querySelector('.section-{{ section.id }}');
+      if (!el) return;
+      el.style.paddingTop = '{{ section.settings.section_padding_top }}px';
+      var bg = getComputedStyle(el).getPropertyValue('--color-scheme-background-color').trim();
+      if (bg) {
+        el.style.backgroundColor = bg;
+      }
+    })();
+  </script>
+{% endif %}
+
 {% if section.settings.section_padding_top_tablet > 0 %}
   <script>
     (function () {

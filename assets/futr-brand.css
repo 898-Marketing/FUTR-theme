@@ -89,23 +89,6 @@
   transform: skewX(10deg);
 }
 
-/* Product media gallery gets the dashed inset frame */
-[data-product-media-wrapper] {
-  position: relative;
-}
-
-[data-product-media-wrapper]::before {
-  content: '';
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  border: 1px dashed rgba(255, 255, 255, .18);
-  pointer-events: none;
-  z-index: 2;
-}
-
 /* ---- Motif 2: star + line divider (see snippets/futr-divider.liquid) ---- */
 .futr-divider {
   display: flex;

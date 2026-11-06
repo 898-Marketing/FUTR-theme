@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "color_body_text": "#ffffff",
-    "color_body_bg": "#000000",
+    "color_body_text": "#000000",
+    "color_body_bg": "#FFFFFF",
     "sale_price_color": "#1f88d2",
     "star_rating_color": "#ede234",
     "color_primary": "#1f88d2",

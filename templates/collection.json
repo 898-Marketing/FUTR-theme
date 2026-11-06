@@ -169,7 +169,7 @@
             "mobile-caption-body-text-size": 16,
             "caption-text": "#ffffff",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 28
+            "image_overlay_opacity": 15
           }
         }
       },

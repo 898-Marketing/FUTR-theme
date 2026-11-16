@@ -30,6 +30,7 @@
         },
         "options": {
           "type": "options",
+          "disabled": true,
           "settings": {
             "variant_style": "swatches",
             "hide_out_of_stock_variants": false,
@@ -44,6 +45,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_quantity_selector": true,
             "show_smart_checkout": true,

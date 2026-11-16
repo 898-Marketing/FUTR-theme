@@ -1895,7 +1895,7 @@
         "type": "text",
         "id": "coming_soon_tag",
         "label": "Product tag",
-        "info": "Add this tag to a product in Shopify Admin to make it Coming Soon. Remove the tag to launch just that product.",
+        "info": "Add this tag to a product in Shopify Admin to make it Coming Soon (capitals, spaces and hyphens don't matter: coming-soon and Coming Soon both work). Remove the tag to launch just that product.",
         "default": "coming-soon"
       },
       {

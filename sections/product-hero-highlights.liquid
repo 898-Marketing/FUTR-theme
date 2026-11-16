@@ -16,6 +16,11 @@
     inset: 0;
     z-index: 0;
   }
+  #shopify-section-{{ section.id }} :where(.phh__bg picture) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
   #shopify-section-{{ section.id }} .phh__bg img {
     width: 100%;
     height: 100%;
@@ -175,14 +180,38 @@
 
 <div class="phh" data-wetheme-section-type="product-hero-highlights" data-wetheme-section-id="{{ section.id }}">
   <div class="phh__bg">
-    {% if section.settings.image_desktop %}
-      <img class="phh__bg-desktop" src="{{ section.settings.image_desktop | image_url: width: 2000 }}" alt="" loading="eager">
-    {% endif %}
-    {% if section.settings.image_mobile %}
-      <img class="phh__bg-mobile" src="{{ section.settings.image_mobile | image_url: width: 1200 }}" alt="" loading="eager">
-    {% elsif section.settings.image_desktop %}
-      <img class="phh__bg-mobile" src="{{ section.settings.image_desktop | image_url: width: 1200 }}" alt="" loading="eager">
-    {% endif %}
+    {%- comment -%}
+      One <picture> so each device downloads only the image it shows
+      (phones get the mobile image, larger screens get the desktop image).
+    {%- endcomment -%}
+    {%- liquid
+      assign phh_desktop = section.settings.image_desktop
+      assign phh_mobile = section.settings.image_mobile
+    -%}
+    {%- if phh_desktop != blank or phh_mobile != blank -%}
+      <picture{% if phh_desktop == blank %} class="phh__bg-mobile"{% endif %}>
+        {%- if phh_desktop != blank and phh_mobile != blank -%}
+          <source
+            media="(max-width: 767px)"
+            srcset="{{ phh_mobile | image_url: width: 750 }} 750w, {{ phh_mobile | image_url: width: 1200 }} 1200w"
+            sizes="100vw"
+            width="{{ phh_mobile.width }}"
+            height="{{ phh_mobile.height }}"
+          >
+        {%- endif -%}
+        {%- assign phh_img = phh_desktop | default: phh_mobile -%}
+        <img
+          src="{{ phh_img | image_url: width: 2000 }}"
+          srcset="{{ phh_img | image_url: width: 750 }} 750w, {{ phh_img | image_url: width: 1200 }} 1200w, {{ phh_img | image_url: width: 2000 }} 2000w"
+          sizes="100vw"
+          width="{{ phh_img.width }}"
+          height="{{ phh_img.height }}"
+          alt=""
+          loading="eager"
+          fetchpriority="high"
+        >
+      </picture>
+    {%- endif -%}
   </div>
   <div class="phh__overlay"></div>
 

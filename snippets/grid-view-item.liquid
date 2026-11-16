@@ -61,6 +61,22 @@
     assign price_enabled = false
   endif
 
+  comment
+    Coming Soon mode (Theme settings > Coming Soon)
+  endcomment
+  capture is_coming_soon
+    render 'coming-soon-check', product: product
+  endcapture
+  assign coming_soon = false
+  if is_coming_soon == 'true'
+    assign coming_soon = true
+    assign quick_shop_desktop_enabled = false
+    assign quick_shop_mobile_enabled = false
+    if settings.coming_soon_hide_price
+      assign price_enabled = false
+    endif
+  endif
+
   if price_enabled
     assign price_font = 'product-grid--price-font-' | append: settings.type_card_price_font
   endif
@@ -151,7 +167,9 @@
         endif
 
         if enable_badges
-          if product.available
+          if coming_soon
+            render 'badge', badge: 'coming-soon', attributes: badge_attributes
+          elsif product.available
             if preorder_product
               render 'badge', badge: 'preorder', preorder_badge: preorder_string, attributes: badge_attributes
             elsif custom_badge

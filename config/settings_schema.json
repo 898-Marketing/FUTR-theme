@@ -1876,5 +1876,72 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "Coming Soon",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Shows products as Coming Soon: the Add to cart button becomes a disabled Coming Soon button, express checkout and quick add are hidden, and a Coming Soon badge is shown. Only products tagged with the tag below are affected. To launch, uncheck Enable Coming Soon mode and click Save."
+      },
+      {
+        "type": "checkbox",
+        "id": "coming_soon_enabled",
+        "label": "Enable Coming Soon mode",
+        "info": "Uncheck and Save to launch every tagged product at once.",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "coming_soon_tag",
+        "label": "Product tag",
+        "info": "Add this tag to a product in Shopify Admin to make it Coming Soon. Remove the tag to launch just that product.",
+        "default": "coming-soon"
+      },
+      {
+        "type": "text",
+        "id": "coming_soon_button_text",
+        "label": "Button text",
+        "default": "Coming Soon"
+      },
+      {
+        "type": "text",
+        "id": "coming_soon_badge_text",
+        "label": "Badge text",
+        "info": "Badges must also be turned on in Theme settings > Product cards.",
+        "default": "Coming Soon"
+      },
+      {
+        "type": "checkbox",
+        "id": "coming_soon_hide_price",
+        "label": "Hide price",
+        "default": false
+      },
+      {
+        "type": "richtext",
+        "id": "coming_soon_message",
+        "label": "Message under button",
+        "default": "<p>Launching soon. Sign up to be the first to know.</p>"
+      },
+      {
+        "type": "checkbox",
+        "id": "coming_soon_show_signup",
+        "label": "Show email signup",
+        "info": "Sign-ups appear under Customers in Shopify Admin, tagged coming-soon-notify.",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "coming_soon_signup_button",
+        "label": "Signup button text",
+        "default": "Notify me"
+      },
+      {
+        "type": "text",
+        "id": "coming_soon_signup_success",
+        "label": "Signup success message",
+        "default": "Thanks! We'll let you know when it launches."
+      }
+    ]
   }
 ]

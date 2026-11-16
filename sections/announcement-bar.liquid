@@ -47,7 +47,7 @@
     <announcement-bar-slider data-section-id="{{ section.id }}" data-autoplay-speed="{{ section.settings.autoplay_speed | times: 1000 }}">
       <div class="announcement-bar__content">
         {% if section.blocks.size > 1 %}
-          <button class="swiper-button--prev" aria-label="{{ 'sections.slideshow.previous_slide' | t }}">
+          <button class="swiper-button--prev" aria-label="Previous announcement">
             {% render 'theme-icon', icon: 'arrow-left', iconSize: 16 %}
           </button>
         {% endif %}
@@ -65,7 +65,7 @@
           </div>
         </div>
         {% if section.blocks.size > 1 %}
-          <button class="swiper-button--next" aria-label="{{ 'sections.slideshow.next_slide' | t }}">
+          <button class="swiper-button--next" aria-label="Next announcement">
             {% render 'theme-icon', icon: 'arrow-right', iconSize: 16 %}
           </button>
         {% endif %}

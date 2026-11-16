@@ -1,0 +1,28 @@
+{% comment %}
+  Coming Soon check.
+  Outputs the text "true" when Coming Soon mode is switched on in
+  Theme settings > Coming Soon AND the product has the Coming Soon tag.
+  Outputs nothing otherwise.
+
+  Accepts:
+  - product: {Object} product object (required)
+
+  Usage:
+    {%- capture is_coming_soon -%}{%- render 'coming-soon-check', product: product -%}{%- endcapture -%}
+    {%- if is_coming_soon == 'true' -%} ... {%- endif -%}
+
+  To launch: Online Store > Themes > Customize > Theme settings > Coming Soon >
+  uncheck "Enable Coming Soon mode" > Save.
+{% endcomment %}
+{%- liquid
+  if settings.coming_soon_enabled and product != blank
+    assign cs_tag = settings.coming_soon_tag | default: 'coming-soon' | strip | downcase
+    for tag in product.tags
+      assign cs_lower_tag = tag | strip | downcase
+      if cs_lower_tag == cs_tag
+        echo 'true'
+        break
+      endif
+    endfor
+  endif
+-%}

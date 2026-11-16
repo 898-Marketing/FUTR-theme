@@ -114,6 +114,8 @@
 	<div class="sold-out-badge badge" {{ attributes }}>{{ 'products.product.sold_out' | t }}</div>
 {%- elsif badge == 'preorder' -%}
   <div class="preorder-badge badge" {{ attributes }}>{{ preorder_badge }}</div>
+{%- elsif badge == 'coming-soon' -%}
+  <div class="custom-badge coming-soon-badge badge" {{ attributes }}>{{ settings.coming_soon_badge_text | default: 'Coming Soon' }}</div>
 {%- elsif badge == 'custom' -%}
   <div class="custom-badge badge" {{ attributes }}>{{ custom_badge }}</div>
 {%- endif -%}

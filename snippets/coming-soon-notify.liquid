@@ -1,0 +1,62 @@
+{% comment %}
+  Coming Soon message + "notify me" email signup, shown under the
+  Coming Soon button on product pages.
+
+  Sign-ups are saved as Shopify customers (Customers in Shopify Admin),
+  tagged "coming-soon-notify" and "notify-<product-handle>", and marked as
+  newsletter subscribers so you can email them at launch.
+
+  Accepts:
+  - product: {Object} product object (required)
+  - form_id_suffix: {String} unique suffix for the form id (required)
+{% endcomment %}
+{%- liquid
+  assign cs_form_id = 'ComingSoonNotify-' | append: form_id_suffix
+-%}
+
+<div class="coming-soon-notify">
+  {%- if settings.coming_soon_message != blank -%}
+    <div class="coming-soon-notify__message rte">{{ settings.coming_soon_message }}</div>
+  {%- endif -%}
+
+  {%- if settings.coming_soon_show_signup -%}
+    {%- form 'customer', id: cs_form_id, class: 'coming-soon-notify__form' -%}
+      {%- if form.posted_successfully? -%}
+        <p role="status" class="coming-soon-notify__success">{{ settings.coming_soon_signup_success }}</p>
+      {%- else -%}
+        <input type="hidden" name="contact[tags]" value="newsletter, coming-soon-notify, notify-{{ product.handle }}">
+        <label for="{{ cs_form_id }}-email" class="visually-hidden">{{ 'general.newsletter_form_section.newsletter_email' | t }}</label>
+        <div class="coming-soon-notify__row">
+          <input
+            id="{{ cs_form_id }}-email"
+            type="email"
+            name="contact[email]"
+            required
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            placeholder="{{ 'general.newsletter_form_section.newsletter_text' | t }}"
+            value="{% if customer %}{{ customer.email }}{% endif %}"
+            class="coming-soon-notify__input"
+            data-input-ignore
+          >
+          <button type="submit" class="btn coming-soon-notify__submit">{{ settings.coming_soon_signup_button }}</button>
+        </div>
+        {%- if form.errors -%}
+          <div class="errors" role="alert">{{ form.errors | default_errors }}</div>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endform -%}
+  {%- endif -%}
+</div>
+
+<style>
+  .coming-soon-notify { margin-top: 16px; }
+  .coming-soon-notify__message { margin-bottom: 12px; }
+  .coming-soon-notify__row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .coming-soon-notify__input { flex: 1 1 200px; min-width: 0; }
+  .coming-soon-notify__submit { flex: 0 0 auto; }
+  .coming-soon-notify__success { margin: 0; }
+  .product--add-to-cart-button.is-coming-soon,
+  .product--add-to-cart-button.is-coming-soon:hover { cursor: not-allowed; opacity: 1; }
+</style>

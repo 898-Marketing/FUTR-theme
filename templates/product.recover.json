@@ -12,6 +12,20 @@
     "product-form": {
       "type": "template--product",
       "blocks": {
+        "button_G7mhxg": {
+          "type": "button",
+          "settings": {
+            "button_link": "",
+            "button_label": "COMING SOON",
+            "is_full_width": false,
+            "open_in_new_tab": true,
+            "button_style": "filled",
+            "override_button_colors": false,
+            "button_background_color": "#e68819",
+            "button_text_color": "#ffffff",
+            "margin_bottom": 30
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -38,6 +52,7 @@
         },
         "options": {
           "type": "options",
+          "disabled": true,
           "settings": {
             "variant_style": "swatches",
             "hide_out_of_stock_variants": false,
@@ -52,6 +67,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_quantity_selector": true,
             "show_smart_checkout": true,
@@ -73,6 +89,7 @@
         }
       },
       "block_order": [
+        "button_G7mhxg",
         "title",
         "text_grHmmX",
         "price",

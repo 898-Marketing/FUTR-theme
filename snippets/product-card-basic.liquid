@@ -12,11 +12,6 @@
   endif
 
   assign form_id = 'ProductCardBasicAtcForm-' | append: card_product.id | append: '-' | append: section.id
-
-  # Coming Soon mode (Theme settings > Coming Soon)
-  capture is_coming_soon
-    render 'coming-soon-check', product: card_product
-  endcapture
 -%}
 
 <div class="product-card-basic">
@@ -48,7 +43,7 @@
       </div>
 
       {% # Price %}
-      {% unless login_to_order or is_coming_soon == 'true' and settings.coming_soon_hide_price %}
+      {% unless login_to_order %}
         <div class="product-card-basic__price">
           {% render 'product-grid-item-price', price_product: card_product %}
         </div>
@@ -56,9 +51,7 @@
     </div>
 
     <div class="product-card-basic--info--footer">
-      {% if is_coming_soon == 'true' %}
-        <div class="product-card-basic__coming-soon">{{ settings.coming_soon_button_text | default: 'Coming Soon' }}</div>
-      {% elsif login_to_order and card_product.variants.size <= 1 %}
+      {% if login_to_order and card_product.variants.size <= 1 %}
         <div class="text-link-animated">
           <a href="{{ routes.account_login_url }}?return_url={{ card_product.url }}" class="btn--underlined-with-icon">
             {% render 'theme-icon', icon: 'user', iconSize: 14 %}

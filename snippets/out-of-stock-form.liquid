@@ -1,6 +1,3 @@
-{%- comment -%} Hidden for Coming Soon products (Theme settings > Coming Soon) {%- endcomment -%}
-{%- capture is_coming_soon -%}{%- render 'coming-soon-check', product: product -%}{%- endcapture -%}
-{%- unless is_coming_soon == 'true' -%}
 <safe-load-scripts class="hidden">
   <script src="{{ 'out-of-stock-form-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="out-of-stock-form"></script>
 </safe-load-scripts>
@@ -58,4 +55,3 @@
     {% endform %}
   </out-of-stock-form>
 </transition>
-{%- endunless -%}

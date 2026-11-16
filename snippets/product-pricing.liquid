@@ -1,6 +1,3 @@
-{%- comment -%} Price can be hidden for Coming Soon products (Theme settings > Coming Soon > Hide price) {%- endcomment -%}
-{%- capture is_coming_soon -%}{%- render 'coming-soon-check', product: current_variant.product -%}{%- endcapture -%}
-{%- unless is_coming_soon == 'true' and settings.coming_soon_hide_price -%}
 {% liquid 
   if settings.show_currency_code
     assign current_variant_price = current_variant.price | money_with_currency
@@ -25,4 +22,3 @@
     </span>
   {% endunless %}
 </span>
-{%- endunless -%}

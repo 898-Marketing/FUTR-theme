@@ -82,16 +82,6 @@
       endif
     -%}
 
-    {%- comment -%} ===== Coming Soon mode (Theme settings > Coming Soon) ===== {%- endcomment -%}
-    {%- capture is_coming_soon -%}{%- render 'coming-soon-check', product: product -%}{%- endcapture -%}
-    {%- if is_coming_soon == 'true' -%}
-      {%- assign coming_soon = true -%}
-      {%- assign show_dynamic_checkout = false -%}
-      {%- assign show_quantity_selector = false -%}
-    {%- else -%}
-      {%- assign coming_soon = false -%}
-    {%- endif -%}
-
     <product-form
       class="product-form"
       data-hide-errors="{{ gift_card_recipient_feature_active }}"
@@ -114,9 +104,6 @@
           name="id"
           value="{{ product.selected_or_first_available_variant.id }}"
           {% if product.selected_or_first_available_variant.available == false %}
-            disabled
-          {% endif %}
-          {% if coming_soon %}
             disabled
           {% endif %}
           class="product-variant-id"
@@ -159,25 +146,6 @@
               </div>
             {% endif %}
 
-            {% if coming_soon %}
-            {% comment %}
-              ===== Coming Soon button =====
-              No name="add" and type="button" so the theme's JavaScript can never
-              re-enable it or submit it when a shopper switches variants.
-            {% endcomment %}
-            <button
-              data-replace-content
-              data-updates-on-change
-              data-update-id="submit-{% if block != blank %}{{ block.id }}{% else %}{{ element_id }}{% endif %}"
-              id="ProductSubmitButton-{{ section_id }}"
-              type="button"
-              class="btn product--add-to-cart-button is-coming-soon{% if btn_id %}{% unless disable_button_color_override %} dynamic-section-button--{{ btn_id }}{% endunless %}{% endif %}"
-              disabled
-              aria-disabled="true"
-            >
-              <span>{{ settings.coming_soon_button_text | default: 'Coming Soon' }}</span>
-            </button>
-            {% else %}
             {% comment %} ===== Add to cart button ===== {% endcomment %}
             <button
               data-replace-content
@@ -221,7 +189,6 @@
               %}
               {% render 'theme-icon', icon: 'circle-notch', iconClasses: 'spin js fa-2x hidden', iconAttributes: loading_icon_attributes, iconSize: '1.6em', icon_fill: icon_fill %}<span class="sr-only">{{ 'collections.paginate.loading' | t }}</span>
             </button>
-            {% endif %}
           </div>
 
           {% unless disable_dynamic_buttons %}
@@ -239,12 +206,6 @@
         </div>
       {%- endform -%}
     </product-form>
-
-    {%- comment -%} Coming Soon message + email signup (not in the sticky bar) {%- endcomment -%}
-    {%- if coming_soon and disable_dynamic_buttons != true -%}
-      {%- capture cs_suffix -%}{{ section_id }}-{{ product.id }}{% if is_quick_view %}-qv{% endif %}{%- endcapture -%}
-      {%- render 'coming-soon-notify', product: product, form_id_suffix: cs_suffix -%}
-    {%- endif -%}
 
     {% if is_quick_view %}
       {% comment %} View more button {% endcomment %}

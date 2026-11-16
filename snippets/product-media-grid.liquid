@@ -118,13 +118,10 @@
   <script src="{{ 'product-media-grid-component.js' | asset_url }}" defer="defer" type="module" data-flow-load-key="product-media"></script>
 </safe-load-scripts>
 
-{% capture is_coming_soon %}{% render 'coming-soon-check', product: product %}{% endcapture %}
 {% if settings.show_badges %}
   {% capture product_badge %}
     {% if product != blank %}
-      {% if is_coming_soon == 'true' %}
-        {% render 'badge', badge: 'coming-soon' %}
-      {% elsif product.available %}
+      {% if product.available %}
         {% if preorder_product %}
           {% render 'badge', badge: 'preorder', preorder_badge: preorder_string %}
         {% elsif custom_badge %}

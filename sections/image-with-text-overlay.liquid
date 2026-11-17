@@ -128,13 +128,25 @@
             {% case block.type %}
               {% when 'heading' %}
                 {% if block.settings.title != blank %}
+                  {%- liquid
+                    comment
+                      Align the top of ™ / ® with the top of the capital letters.
+                      In Saira, capitals and the ™ glyph both top out at 0.688em, so
+                      the symbol is raised by 0.688 × (heading size − symbol size).
+                    endcomment
+                    assign sup_size_mobile = block.settings.font_size_mobile | times: 0.4 | round
+                    assign sup_top_mobile = block.settings.font_size_mobile | minus: sup_size_mobile | times: 0.688
+                    assign sup_size_desktop = block.settings.font_size_desktop | times: 0.4 | round
+                    assign sup_top_desktop = block.settings.font_size_desktop | minus: sup_size_desktop | times: 0.688
+                  -%}
                   <style>
                     .{{ block.id }} {
                       font-size: {{ block.settings.font_size_mobile }}px;
                     }
                     .{{ block.id }} sup {
-                      font-size: {{ block.settings.font_size_mobile | times: 0.4 | round }}px;
+                      font-size: {{ sup_size_mobile }}px;
                       margin-left: -3px;
+                      top: -{{ sup_top_mobile }}px;
                     }
 
                     @media screen and (min-width: 768px) {
@@ -142,8 +154,9 @@
                         font-size: {{ block.settings.font_size_desktop }}px;
                       }
                       .{{ block.id }} sup {
-                        font-size: {{ block.settings.font_size_desktop | times: 0.4 | round }}px;
+                        font-size: {{ sup_size_desktop }}px;
                         margin-left: -5px;
+                        top: -{{ sup_top_desktop }}px;
                       }
                     }
                   </style>

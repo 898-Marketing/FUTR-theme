@@ -204,6 +204,7 @@
         "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
+        "section_padding_top_tablet": 0,
         "section_padding_bottom": 0,
         "colors": "dark"
       }
@@ -279,15 +280,15 @@
         "card_border_color": "#4a90d9",
         "card_heading_color": "#ffffff",
         "card_text_color": "#dbe6f2",
+        "card_text_font_size": 13,
+        "cards_two_per_row_tablet": true,
         "bottom_text": "",
         "bottom_text_alignment": "center",
         "bottom_text_color": "#ffffff",
         "bottom_text_font_size": 16,
         "bottom_text_font_size_mobile": 14,
         "bottom_text_top_spacing": 30,
-        "bottom_text_top_spacing_mobile": 25,
-        "card_text_font_size": 13,
-        "cards_two_per_row_tablet": true
+        "bottom_text_top_spacing_mobile": 25
       }
     },
     "image_with_text_hgiX3N": {
@@ -341,6 +342,7 @@
         "list_number_font_size": 15,
         "section-width": "full",
         "section_padding_top": 0,
+        "section_padding_top_tablet": 0,
         "section_padding_bottom": 0,
         "colors": "dark"
       }
@@ -366,7 +368,7 @@
           "settings": {
             "image": "shopify://shop_images/jenna.jpg",
             "grid_image_size": "natural",
-            "heading": "Jenna Stangland",
+            "heading": "JENNA STANGLAND",
             "text": "<p>MS, RDN, CSSD, LDN, CLT<br/>Director of Athlete Nutrition</p>",
             "bio_text": "<p>Jenna Stangland is a Board Certified Specialist in Sports Dietetics with extensive experience helping athletes use nutrition to support performance, recovery, and long-term development.</p><p>Jenna earned her bachelor’s degree in Genetics and Cell Biology from the University of Minnesota and her master’s degree in Clinical Nutrition, with an emphasis in sports nutrition, from The Ohio State University. Her graduate work included research and athlete education focused on iron absorption, bone health, muscle breakdown and repair, and the role nutrition plays in athletic performance.</p><p>Throughout her career, Jenna has worked with athletes across youth, collegiate, and professional sports. Her experience includes developing the first nutrition program for one of the nation’s largest physician-owned orthopedic organizations, working with elite and youth athletes through CCM hockey camps, supporting collegiate athletic programs, and consulting with sports medicine organizations. She currently serves as Team Dietitian for the Minnesota Timberwolves and Director of Nutrition for the Minnesota Wild organization.</p><p>Jenna also speaks nationally to athletes, parents, coaches, sports dietitians, athletic trainers, and sports medicine professionals on practical, evidence-based approaches to performance nutrition.</p><p><strong>Jenna’s Role at FUTR</strong></p><p>As FUTR’s Director of Athlete Nutrition, Jenna helps shape the nutrition philosophy behind the brand, helping athletes and families better understand not just what to fuel with, but when, why, and how.</p><p>Jenna understand the real-world nutrition challenges young athletes face—from early practices and long tournament days to hydration, fueling, recovery, and demanding school schedules. These insights help shape FUTR’s athlete education, nutrition resources, product guidance, and future innovation.</p><p>She also serves as a trusted nutrition voice for the FUTR community, answering the questions athletes and parents have and turning complex sports nutrition science into clear, actionable guidance they can use every day.</p>",
             "button_link": "",

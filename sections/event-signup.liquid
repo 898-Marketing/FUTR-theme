@@ -416,20 +416,27 @@
     // (A normal submit makes Shopify redirect to the previous URL, which can
     // drop ?view=event-signup and land on a different template.)
     if (form && window.fetch && window.FormData) {
-      form.addEventListener('submit', function (event) {
+      // Capture phase on window: runs before any other submit handler (for
+      // example Shopify's spam-protection script), and stops them so the form
+      // is not also submitted the normal way, which would redirect the page.
+      window.addEventListener('submit', function (event) {
+        if (event.target !== form) return;
         if (form.dataset.nativeSubmit === 'true') return;
         event.preventDefault();
+        event.stopImmediatePropagation();
 
         var submitButton = form.querySelector('[type="submit"]');
         if (submitButton) submitButton.disabled = true;
 
-        function nativeSubmit() {
+        function nativeSubmit(reason) {
           // Let Shopify handle errors, bot challenges, etc. the normal way.
+          console.info('[event-signup] falling back to normal submit:', reason);
           form.dataset.nativeSubmit = 'true';
           if (submitButton) submitButton.disabled = false;
           HTMLFormElement.prototype.submit.call(form);
         }
 
+        console.info('[event-signup] submitting in the background');
         fetch(form.action, {
           method: 'POST',
           body: new FormData(form),
@@ -437,14 +444,15 @@
           headers: { 'Accept': 'text/html' }
         })
           .then(function (response) {
+            console.info('[event-signup] response', response.status, response.url);
             if (response.ok && response.url.indexOf('customer_posted=true') !== -1) {
               showConfirmation();
             } else {
-              nativeSubmit();
+              nativeSubmit('status ' + response.status + ' ' + response.url);
             }
           })
-          .catch(nativeSubmit);
-      });
+          .catch(function (error) { nativeSubmit(error && error.message); });
+      }, true);
     }
 
     var button = root.querySelector('[data-event-copy]');

@@ -226,13 +226,22 @@
     opacity: 0.75;
   }
 
-  /* Confirmation panel shown after a successful signup */
-  .event-signup__inner:has(.event-signup__success) .event-signup__description,
-  .event-signup__inner:has(.event-signup__success) .event-signup__fine-print {
+  /* Confirmation panel: hidden until signup succeeds. "is-posted" is added by
+     the background (AJAX) submit; [data-event-posted] is output by Shopify
+     after a normal page-reload submit (fallback). */
+  .event-signup__success { display: none; }
+
+  .event-signup__inner.is-posted .event-signup__description,
+  .event-signup__inner.is-posted .event-signup__fine-print,
+  .event-signup__inner.is-posted .newsletter-wrapper--outer,
+  .event-signup__inner:has([data-event-posted]) .event-signup__description,
+  .event-signup__inner:has([data-event-posted]) .event-signup__fine-print,
+  .event-signup__inner:has([data-event-posted]) .newsletter-wrapper--outer {
     display: none;
   }
 
-  .event-signup__success {
+  .event-signup__inner.is-posted .event-signup__success,
+  .event-signup__inner:has([data-event-posted]) .event-signup__success {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -372,9 +381,11 @@
       form_id: event_form_id,
       tags: event_tags,
       success_message: section.settings.success_message,
-      success_content: event_success,
+      success_content: '<span data-event-posted hidden></span>',
       button_label: section.settings.button_label
     -%}
+
+    {{ event_success }}
 
     {%- if section.settings.fine_print != blank -%}
       <div class="event-signup__fine-print rte">{{ section.settings.fine_print }}</div>
@@ -390,9 +401,51 @@
   (function () {
     var root = document.getElementById('EventSignupSuccess-{{ section.id }}');
     if (!root) return;
+    var inner = root.closest('.event-signup__inner');
+    var form = document.getElementById('{{ event_form_id }}');
 
-    // Bring the confirmation into view after the page reloads from the form post.
-    try { root.scrollIntoView({ block: 'center' }); root.focus({ preventScroll: true }); } catch (e) {}
+    function showConfirmation() {
+      inner.classList.add('is-posted');
+      try { root.scrollIntoView({ block: 'center' }); root.focus({ preventScroll: true }); } catch (e) {}
+    }
+
+    // Fallback path: Shopify reloaded the page after a normal submit.
+    if (inner.querySelector('[data-event-posted]')) showConfirmation();
+
+    // Main path: submit in the background so the visitor stays on this page.
+    // (A normal submit makes Shopify redirect to the previous URL, which can
+    // drop ?view=event-signup and land on a different template.)
+    if (form && window.fetch && window.FormData) {
+      form.addEventListener('submit', function (event) {
+        if (form.dataset.nativeSubmit === 'true') return;
+        event.preventDefault();
+
+        var submitButton = form.querySelector('[type="submit"]');
+        if (submitButton) submitButton.disabled = true;
+
+        function nativeSubmit() {
+          // Let Shopify handle errors, bot challenges, etc. the normal way.
+          form.dataset.nativeSubmit = 'true';
+          if (submitButton) submitButton.disabled = false;
+          HTMLFormElement.prototype.submit.call(form);
+        }
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          credentials: 'same-origin',
+          headers: { 'Accept': 'text/html' }
+        })
+          .then(function (response) {
+            if (response.ok && response.url.indexOf('customer_posted=true') !== -1) {
+              showConfirmation();
+            } else {
+              nativeSubmit();
+            }
+          })
+          .catch(nativeSubmit);
+      });
+    }
 
     var button = root.querySelector('[data-event-copy]');
     var codeEl = root.querySelector('[data-event-code]');

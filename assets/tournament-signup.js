@@ -6,8 +6,8 @@
  *  - Parent/Guardian/Coach -> Klaviyo client SUBSCRIPTIONS endpoint, email
  *    marketing SUBSCRIBED, added to the configured list. Shows the promo code.
  *  - Athlete 13+ WITH email -> Klaviyo client PROFILES endpoint only (no list,
- *    no consent). Teen data uses teen_* property names so a teen entering a
- *    parent's email can't overwrite the parent's data.
+ *    no consent). Only teen_* properties are sent, so a teen entering a
+ *    parent's email changes nothing parent-facing.
  *  - Athlete 13+ WITHOUT email -> nothing is sent.
  *  - Athlete under 13 -> nothing is sent; the athlete path is locked on this
  *    device via localStorage. The parent path stays available.
@@ -75,10 +75,11 @@
         type: 'profile',
         attributes: {
           email: v.email,
+          // Only teen_* keys: if the email belongs to a parent, nothing
+          // parent-facing changes (no signup_role / signup_source / first_name).
           properties: {
             teen_profile: true,
-            signup_source: cfg.signupSource,
-            signup_role: 'athlete-teen',
+            teen_signup_role: 'athlete-teen',
             teen_first_name: v.firstName,
             teen_birth_month: v.birthMonth,
             teen_birth_year: v.birthYear,

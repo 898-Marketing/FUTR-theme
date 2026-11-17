@@ -33,7 +33,8 @@ Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start 
 ### Athlete 13+ who enters an email
 - `POST https://a.klaviyo.com/client/profiles/?company_id=RP33x9`: profile only. No list, no consent, never the subscriptions endpoint.
 - Profile: `email` only.
-- Properties: `teen_profile: true`, `signup_source`, `signup_role: "athlete-teen"`, `teen_first_name`, `teen_birth_month`, `teen_birth_year`, `teen_sports_played`.
+- Properties (all `teen_*`): `teen_profile: true`, `teen_signup_role: "athlete-teen"`, `teen_first_name`, `teen_birth_month`, `teen_birth_year`, `teen_sports_played`.
+- No `signup_source`, `signup_role` or `first_name`.
 - No promo code shown.
 
 ### Athlete 13+ with no email
@@ -50,17 +51,11 @@ Nothing is sent. Shows the social and website links.
 - Submit is disabled for 2 seconds after each form step appears.
 
 ## Edge case: teen enters a parent's email
-Klaviyo merges by email, so a teen's profile request would update the parent's existing profile. To protect the parent's data:
-- Teen data uses `teen_*` property names and never sends `athlete_birth_month` or `sports_played`.
-- The teen's first name goes in the `teen_first_name` property, not the standard `first_name`, so the parent's name isn't overwritten.
-  - This differs from the original spec; flagged to Michael.
+Klaviyo merges by email, so a teen's profile request updates the parent's existing profile. The teen request therefore sends **only `teen_*` properties**. The parent keeps their name, `signup_role`, `signup_source`, `athlete_birth_month`, `sports_played`, list membership and consent.
 
-Still overwritten in that case:
-- `signup_role` changes from "parent" to "athlete-teen".
-- `teen_profile: true` is added.
-
-List membership and consent are not affected, but any segment filtered on `signup_role = parent` would drop that parent.
-- **Open question:** should we skip the teen request when the email already belongs to a parent? (Not possible client-side without a lookup; it would need a different property approach.)
+The only change is that the `teen_*` fields (including `teen_profile: true`) are added.
+- Decided with Michael on 2026-11-17: `teen_first_name` instead of `first_name`, `teen_signup_role` instead of `signup_role`, and no `signup_source` for teens.
+- For segments: a parent profile can carry `teen_*` fields. Filter teens with `teen_profile = true`, and parents with `signup_role = parent`.
 
 ## Testing log
 - **Browser, Klaviyo requests intercepted:** all pass.
@@ -68,7 +63,7 @@ List membership and consent are not affected, but any segment filtered on `signu
   - Error + Retry: works, form values kept.
   - Honeypot: no request.
   - Early submit inside the 2s window: ignored. Submit with no sport selected: blocked.
-  - Teen with email: profiles endpoint and payload correct, no code shown. Teen without email: no request.
+  - Teen with email: profiles endpoint, only `teen_*` properties (re-checked after the teen_signup_role change), no code shown. Teen without email: no request.
   - Under 13, including the edge month: no request, flag set, lock survives a reload, parent still available.
   - Social links render (Facebook, Instagram); the website button goes to the homepage.
 - **Unit tests** for the age rule and payload shapes (8 age cases): pass.

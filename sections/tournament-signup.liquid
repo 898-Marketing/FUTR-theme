@@ -1,0 +1,487 @@
+{%- comment -%}
+  Tournament signup (QR landing page) - November 2026.
+
+  Sends data straight to Klaviyo through its client-side API (public key only).
+  It deliberately does NOT use {% form 'customer' %} or snippets/newsletter-form,
+  because those subscribe people through Shopify, which syncs them to a double
+  opt-in list we don't want here.
+
+  Steps (one visible at a time, driven by assets/tournament-signup.js):
+    role -> parent -> parent-success
+    role -> age -> teen -> links      (13 and older)
+    role -> age -> links              (under 13: nothing is sent, athlete path locked)
+
+  See HANDOFF.md at the repo root for the data contract and test cases.
+{%- endcomment -%}
+
+{%- liquid
+  assign sid = section.id
+  assign promo_code = section.settings.promo_code | strip
+  assign sports = 'SOCCER|TACKLE FOOTBALL|FLAG FOOTBALL|HOCKEY|BASKETBALL|BASEBALL|LACROSSE|VOLLEYBALL|SOFTBALL|TRACK & FIELD|SWIM|GYMNASTICS|DANCE|TENNIS|GOLF|CHEERLEADING|WRESTLING|OTHER' | split: '|'
+  assign months = 'January|February|March|April|May|June|July|August|September|October|November|December' | split: '|'
+  assign current_year = 'now' | date: '%Y' | plus: 0
+  assign oldest_year = current_year | minus: 80
+  assign website_url = section.settings.website_url | default: routes.root_url
+-%}
+
+{% style %}
+  #tsu-{{ sid }} {
+    --tsu-bg: {{ section.settings.background_color }};
+    --tsu-text: {{ section.settings.text_color }};
+    --tsu-accent: {{ section.settings.accent_color }};
+    --tsu-accent-text: {{ section.settings.accent_text_color }};
+    --tsu-overlay: {{ section.settings.overlay_color }};
+    --tsu-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    --tsu-logo-width: {{ section.settings.logo_width }}px;
+  }
+
+  {%- if section.settings.hide_site_chrome -%}
+    /* Focused landing page: hide the site header, announcement bar, footer,
+       breadcrumbs and the sitewide newsletter popup on this template only.
+       #popup/#slide-up is the theme's "Join the Roster" popup (snippets/popup.liquid),
+       which subscribes through Shopify, so it must not show on this page. */
+    .shopify-section-group-header-group,
+    .footer-wrapper,
+    #breadcrumbs,
+    .popup-skin,
+    #PopupOverlay,
+    #popup,
+    #slide-up {
+      display: none !important;
+    }
+  {%- endif -%}
+{% endstyle %}
+
+<style>
+  .tsu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 40px 16px 56px;
+    background-color: var(--tsu-bg);
+    color: var(--tsu-text);
+    isolation: isolate;
+    overflow: hidden;
+  }
+  .tsu__bg, .tsu__bg img, .tsu__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .tsu__bg { z-index: -2; }
+  .tsu__bg img { object-fit: cover; object-position: center; }
+  .tsu__overlay { z-index: -1; background: var(--tsu-overlay); opacity: var(--tsu-overlay-opacity); }
+
+  .tsu__inner {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+  .tsu__logo { display: flex; justify-content: center; }
+  .tsu__logo img { width: var(--tsu-logo-width); max-width: 70%; height: auto; }
+
+  .tsu [hidden] { display: none !important; }
+
+  .tsu__step { display: flex; flex-direction: column; gap: 20px; }
+  .tsu__heading {
+    margin: 0;
+    font-family: var(--header-font-stack, 'Saira'), sans-serif;
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tsu-text);
+    outline: none;
+  }
+  .tsu__text {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.45;
+    text-align: center;
+    color: var(--tsu-text);
+    opacity: 0.9;
+  }
+
+  .tsu__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 56px;
+    margin: 0;
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: var(--tsu-accent-text);
+    background: var(--tsu-accent);
+    border: 2px solid var(--tsu-accent);
+    border-radius: var(--button-border-radius, 0);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tsu__btn--outline { color: var(--tsu-text); background: transparent; border-color: var(--tsu-text); }
+  .tsu__btn:disabled { opacity: 0.45; cursor: not-allowed; }
+  .tsu__choices { display: flex; flex-direction: column; gap: 14px; }
+
+  .tsu__link-btn {
+    align-self: center;
+    min-height: 48px;
+    padding: 8px 16px;
+    font-size: 15px;
+    color: var(--tsu-text);
+    background: none;
+    border: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .tsu__fields { display: flex; flex-direction: column; gap: 16px; }
+  .tsu__row { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .tsu__field { display: flex; flex-direction: column; gap: 6px; }
+  .tsu__label, .tsu__legend {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--tsu-text);
+  }
+  .tsu__optional { font-weight: 400; text-transform: none; opacity: 0.75; }
+  .tsu__input {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 14px;
+    font-size: 16px; /* 16px stops iOS zooming into the field */
+    color: var(--tsu-text);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--tsu-text);
+    border-radius: var(--input-border-radius, 0);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  select.tsu__input {
+    padding-right: 40px;
+    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+  }
+  select.tsu__input option { color: #000; }
+  .tsu__input::placeholder { color: var(--tsu-text); opacity: 0.6; }
+  .tsu__input:focus-visible, .tsu__sport input:focus-visible + span {
+    outline: 2px solid var(--tsu-accent);
+    outline-offset: 2px;
+  }
+
+  .tsu__sports { margin: 0; padding: 0; border: 0; min-width: 0; }
+  .tsu__legend { padding: 0; margin-bottom: 10px; }
+  .tsu__sport-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tsu__sport { position: relative; display: block; cursor: pointer; }
+  .tsu__sport input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .tsu__sport span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 6px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--tsu-text);
+    border: 1px solid var(--tsu-text);
+    border-radius: var(--input-border-radius, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tsu__sport input:checked + span { color: var(--tsu-accent-text); background: var(--tsu-accent); border-color: var(--tsu-accent); }
+
+  /* Honeypot: off-screen for people, still present for bots. */
+  .tsu__hp { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
+
+  .tsu__error {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+    font-size: 15px;
+    line-height: 1.4;
+    border: 1px solid #ff6b6b;
+    color: var(--tsu-text);
+    background: rgba(255, 107, 107, 0.12);
+  }
+  .tsu__error p { margin: 0; }
+
+  .tsu__code-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 22px 12px;
+    border: 2px dashed var(--tsu-text);
+  }
+  .tsu__code-label { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; }
+  .tsu__code {
+    font-family: var(--header-font-stack, 'Saira'), sans-serif;
+    /* Sized so a 10-character code stays on one line on a ~360px phone. */
+    font-size: clamp(28px, 10.5vw, 64px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .tsu__social { display: flex; justify-content: center; }
+  .tsu__social #sm-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 0; padding: 0; list-style: none; }
+  .tsu__social #sm-icons a { display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; color: var(--tsu-text); }
+  .tsu__social #sm-icons svg { width: 28px; height: 28px; fill: currentColor; }
+
+  @media (min-width: 600px) {
+    .tsu { align-items: center; padding: 64px 24px; }
+    .tsu__heading { font-size: 40px; }
+    .tsu__row { grid-template-columns: 1fr 1fr; }
+    .tsu__sport-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+</style>
+
+<section id="tsu-{{ sid }}" class="tsu" data-tsu>
+  <script type="application/json" data-tsu-config>
+    {
+      "publicKey": {{ section.settings.klaviyo_public_key | strip | json }},
+      "listId": {{ section.settings.klaviyo_list_id | strip | json }},
+      "revision": "2026-10-15",
+      "signupSource": "november-2026-tournament",
+      "customSource": "November 2026 Tournament QR",
+      "sendingLabel": {{ section.settings.sending_label | json }}
+    }
+  </script>
+
+  {%- if section.settings.background_image != blank -%}
+    <div class="tsu__bg">
+      {{ section.settings.background_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '600, 900, 1200, 1600', alt: '' }}
+    </div>
+  {%- endif -%}
+  <div class="tsu__overlay"></div>
+
+  <div class="tsu__inner">
+    <div class="tsu__logo">
+      {%- if section.settings.logo != blank -%}
+        {{ section.settings.logo | image_url: width: 600 | image_tag: alt: shop.name, loading: 'eager', widths: '200, 300, 400, 600' }}
+      {%- else -%}
+        <span class="tsu__heading">{{ shop.name | escape }}</span>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Step 1: role {%- endcomment -%}
+    <div class="tsu__step" data-step="role">
+      <h1 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.role_heading | escape }}</h1>
+      {%- if section.settings.role_text != blank -%}
+        <p class="tsu__text">{{ section.settings.role_text | escape }}</p>
+      {%- endif -%}
+      <div class="tsu__choices">
+        <button type="button" class="tsu__btn" data-choose="parent">{{ section.settings.parent_choice_label | escape }}</button>
+        <button type="button" class="tsu__btn tsu__btn--outline" data-choose="athlete">{{ section.settings.athlete_choice_label | escape }}</button>
+      </div>
+    </div>
+
+    {%- comment -%} Step 2a: parent / guardian / coach {%- endcomment -%}
+    <form class="tsu__step" data-step="parent" data-kind="parent" hidden autocomplete="on">
+      <h2 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.parent_heading | escape }}</h2>
+      {%- if section.settings.parent_text != blank -%}
+        <p class="tsu__text">{{ section.settings.parent_text | escape }}</p>
+      {%- endif -%}
+      <div class="tsu__fields">
+        <div class="tsu__row">
+          <div class="tsu__field">
+            <label class="tsu__label" for="tsu-{{ sid }}-p-first">First name</label>
+            <input class="tsu__input" id="tsu-{{ sid }}-p-first" name="first_name" type="text" autocomplete="given-name" required maxlength="80">
+          </div>
+          <div class="tsu__field">
+            <label class="tsu__label" for="tsu-{{ sid }}-p-last">Last name</label>
+            <input class="tsu__input" id="tsu-{{ sid }}-p-last" name="last_name" type="text" autocomplete="family-name" required maxlength="80">
+          </div>
+        </div>
+        <div class="tsu__field">
+          <label class="tsu__label" for="tsu-{{ sid }}-p-email">Email</label>
+          <input class="tsu__input" id="tsu-{{ sid }}-p-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" required maxlength="254">
+        </div>
+        <div class="tsu__field">
+          <label class="tsu__label" for="tsu-{{ sid }}-p-month">Athlete's birth month</label>
+          <select class="tsu__input" id="tsu-{{ sid }}-p-month" name="birth_month" required>
+            <option value="" selected disabled>Select month</option>
+            {%- for m in months -%}
+              <option value="{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}">{{ m }}</option>
+            {%- endfor -%}
+          </select>
+        </div>
+        {% render 'tournament-signup-sports', sports: sports, sid: sid, prefix: 'p', legend: 'Sports played' %}
+        {% render 'tournament-signup-honeypot', sid: sid, prefix: 'p' %}
+      </div>
+      <div class="tsu__error" data-error role="alert" hidden>
+        <p>{{ section.settings.error_message | escape }}</p>
+        <button type="button" class="tsu__btn tsu__btn--outline" data-retry>Try again</button>
+      </div>
+      <button type="submit" class="tsu__btn" data-submit data-label="{{ section.settings.parent_button | escape }}">{{ section.settings.parent_button | escape }}</button>
+      <button type="button" class="tsu__link-btn" data-go="role">Back</button>
+    </form>
+
+    {%- comment -%} Step 3a: parent success {%- endcomment -%}
+    <div class="tsu__step" data-step="parent-success" hidden>
+      <h2 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.success_heading | escape }}</h2>
+      <p class="tsu__text">{{ section.settings.success_message | escape }}</p>
+      {%- if promo_code != blank -%}
+        <div class="tsu__code-box">
+          {%- if section.settings.code_label != blank -%}
+            <span class="tsu__code-label">{{ section.settings.code_label | escape }}</span>
+          {%- endif -%}
+          <span class="tsu__code">{{ promo_code | escape }}</span>
+        </div>
+      {%- endif -%}
+      <button type="button" class="tsu__link-btn" data-go="role">Start a new signup</button>
+    </div>
+
+    {%- comment -%} Step 2b: athlete birth month and year (the age cutoff is never shown) {%- endcomment -%}
+    <form class="tsu__step" data-step="age" data-kind="age" hidden>
+      <h2 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.age_heading | escape }}</h2>
+      {%- if section.settings.age_text != blank -%}
+        <p class="tsu__text">{{ section.settings.age_text | escape }}</p>
+      {%- endif -%}
+      <div class="tsu__row">
+        <div class="tsu__field">
+          <label class="tsu__label" for="tsu-{{ sid }}-a-month">Birth month</label>
+          <select class="tsu__input" id="tsu-{{ sid }}-a-month" name="birth_month" required>
+            <option value="" selected disabled>Month</option>
+            {%- for m in months -%}
+              <option value="{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}">{{ m }}</option>
+            {%- endfor -%}
+          </select>
+        </div>
+        <div class="tsu__field">
+          <label class="tsu__label" for="tsu-{{ sid }}-a-year">Birth year</label>
+          <select class="tsu__input" id="tsu-{{ sid }}-a-year" name="birth_year" required data-year-select data-oldest="{{ oldest_year }}">
+            <option value="" selected disabled>Year</option>
+            {%- for y in (oldest_year..current_year) reversed -%}
+              <option value="{{ y }}">{{ y }}</option>
+            {%- endfor -%}
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="tsu__btn">{{ section.settings.age_button | escape }}</button>
+      <button type="button" class="tsu__link-btn" data-go="role">Back</button>
+    </form>
+
+    {%- comment -%} Step 3b: athlete 13+ {%- endcomment -%}
+    <form class="tsu__step" data-step="teen" data-kind="teen" hidden autocomplete="on">
+      <h2 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.teen_heading | escape }}</h2>
+      {%- if section.settings.teen_text != blank -%}
+        <p class="tsu__text">{{ section.settings.teen_text | escape }}</p>
+      {%- endif -%}
+      <div class="tsu__fields">
+        <div class="tsu__field">
+          <label class="tsu__label" for="tsu-{{ sid }}-t-first">First name</label>
+          <input class="tsu__input" id="tsu-{{ sid }}-t-first" name="first_name" type="text" autocomplete="given-name" required maxlength="80">
+        </div>
+        <div class="tsu__field">
+          <label class="tsu__label" for="tsu-{{ sid }}-t-email">Email <span class="tsu__optional">(optional)</span></label>
+          <input class="tsu__input" id="tsu-{{ sid }}-t-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="254">
+        </div>
+        {% render 'tournament-signup-sports', sports: sports, sid: sid, prefix: 't', legend: 'Sports you play' %}
+        {% render 'tournament-signup-honeypot', sid: sid, prefix: 't' %}
+      </div>
+      <div class="tsu__error" data-error role="alert" hidden>
+        <p>{{ section.settings.error_message | escape }}</p>
+        <button type="button" class="tsu__btn tsu__btn--outline" data-retry>Try again</button>
+      </div>
+      <button type="submit" class="tsu__btn" data-submit data-label="{{ section.settings.teen_button | escape }}">{{ section.settings.teen_button | escape }}</button>
+      <button type="button" class="tsu__link-btn" data-go="role">Back</button>
+    </form>
+
+    {%- comment -%} Final athlete screen: social + website links (no promo code) {%- endcomment -%}
+    <div class="tsu__step" data-step="links" hidden>
+      <h2 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.links_heading | escape }}</h2>
+      {%- if section.settings.links_text != blank -%}
+        <p class="tsu__text">{{ section.settings.links_text | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.show_social -%}
+        <div class="tsu__social">{% render 'social-icons' %}</div>
+      {%- endif -%}
+      {%- if section.settings.website_label != blank -%}
+        <a class="tsu__btn" href="{{ website_url }}">{{ section.settings.website_label | escape }}</a>
+      {%- endif -%}
+      <button type="button" class="tsu__link-btn" data-go="role">Start over</button>
+    </div>
+  </div>
+</section>
+
+<script src="{{ 'tournament-signup.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Tournament signup",
+  "class": "section-tournament-signup",
+  "settings": [
+    { "type": "header", "content": "Klaviyo" },
+    { "type": "text", "id": "klaviyo_public_key", "label": "Klaviyo public key (company ID)", "default": "RP33x9", "info": "Public key only. Never put a private API key here." },
+    { "type": "text", "id": "klaviyo_list_id", "label": "Klaviyo list ID (parents)", "default": "X9rGAu", "info": "Parents/guardians/coaches are subscribed to this list. Athletes are never added to it." },
+
+    { "type": "header", "content": "Look" },
+    { "type": "image_picker", "id": "logo", "label": "Logo" },
+    { "type": "range", "id": "logo_width", "label": "Logo width", "min": 80, "max": 400, "step": 10, "unit": "px", "default": 180 },
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "color", "id": "background_color", "label": "Background color", "default": "#0d0d0d" },
+    { "type": "color", "id": "overlay_color", "label": "Image overlay color", "default": "#000000" },
+    { "type": "range", "id": "overlay_opacity", "label": "Image overlay opacity", "min": 0, "max": 90, "step": 5, "unit": "%", "default": 60 },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" },
+    { "type": "color", "id": "accent_color", "label": "Button color", "default": "#ffffff" },
+    { "type": "color", "id": "accent_text_color", "label": "Button text color", "default": "#0d0d0d" },
+    { "type": "checkbox", "id": "hide_site_chrome", "label": "Hide site header, footer and popup", "default": true },
+
+    { "type": "header", "content": "Step 1: who are you" },
+    { "type": "text", "id": "role_heading", "label": "Heading", "default": "Are you a Parent/Guardian/Coach or an Athlete?" },
+    { "type": "textarea", "id": "role_text", "label": "Text" },
+    { "type": "text", "id": "parent_choice_label", "label": "Parent button", "default": "Parent / Guardian / Coach" },
+    { "type": "text", "id": "athlete_choice_label", "label": "Athlete button", "default": "Athlete" },
+
+    { "type": "header", "content": "Parent / Guardian / Coach" },
+    { "type": "text", "id": "parent_heading", "label": "Heading", "default": "Unlock tournament pricing" },
+    { "type": "textarea", "id": "parent_text", "label": "Text", "default": "Sign up for FUTR emails and get special tournament pricing at our table." },
+    { "type": "text", "id": "parent_button", "label": "Submit button", "default": "Unlock my code" },
+    { "type": "text", "id": "success_heading", "label": "Confirmation heading", "default": "You're in!" },
+    { "type": "textarea", "id": "success_message", "label": "Confirmation message", "default": "Thank you for signing up! You have unlocked special tournament pricing, see our table to purchase!" },
+    { "type": "text", "id": "code_label", "label": "Code label", "default": "Show this code at the FUTR table" },
+    { "type": "text", "id": "promo_code", "label": "Promo code", "default": "NOVEVENT20", "info": "Only shown to parents/guardians/coaches after a successful signup." },
+
+    { "type": "header", "content": "Athlete" },
+    { "type": "text", "id": "age_heading", "label": "Birthday heading", "default": "When were you born?" },
+    { "type": "textarea", "id": "age_text", "label": "Birthday text" },
+    { "type": "text", "id": "age_button", "label": "Birthday button", "default": "Continue" },
+    { "type": "text", "id": "teen_heading", "label": "Athlete details heading", "default": "Tell us about you" },
+    { "type": "textarea", "id": "teen_text", "label": "Athlete details text" },
+    { "type": "text", "id": "teen_button", "label": "Athlete submit button", "default": "Continue" },
+
+    { "type": "header", "content": "Athlete final screen" },
+    { "type": "text", "id": "links_heading", "label": "Heading", "default": "Follow FUTR" },
+    { "type": "textarea", "id": "links_text", "label": "Text", "default": "Stay up to date with FUTR on social." },
+    { "type": "checkbox", "id": "show_social", "label": "Show social icons", "default": true, "info": "Uses the social links in Theme settings." },
+    { "type": "url", "id": "website_url", "label": "Website link", "info": "Defaults to the store homepage." },
+    { "type": "text", "id": "website_label", "label": "Website button", "default": "Visit FUTR" },
+
+    { "type": "header", "content": "Messages" },
+    { "type": "text", "id": "sending_label", "label": "Sending label", "default": "Sending..." },
+    { "type": "text", "id": "error_message", "label": "Error message", "default": "Something went wrong. Please check your connection and try again." }
+  ]
+}
+{% endschema %}

@@ -5,18 +5,29 @@
 		- section: The section object. Required.
 		- form_id: The form ID. Required.
 		- text_alignment: The text alignment. Optional.
+		- tags: Comma-separated customer tags to apply on signup. Optional, defaults to 'newsletter'.
+		- success_message: Message shown after a successful signup. Optional, defaults to the theme's thank-you text.
+		- button_label: Text for the submit button. Optional; when blank, the arrow icon button is used.
 
 	Usage:
 		{% render 'newsletter-form', section: section, form_id: 'newsletter_section_form', text_alignment: section.settings.textAlignment %}
+		{% render 'newsletter-form', section: section, form_id: 'event_signup_form', tags: 'newsletter,november-2026-event' %}
 {% endcomment %}
+
+{%- liquid
+	assign newsletter_tags = tags | default: 'newsletter' | strip
+	if newsletter_tags == blank
+		assign newsletter_tags = 'newsletter'
+	endif
+-%}
 
 <div class="newsletter-wrapper--outer{% if text_alignment %} newsletter-text--{{ text_alignment }}{% endif %}{% if request.visual_preview_mode %} section-preview{% else %} show-on-scroll{% endif %}">
 	<div class="newsletter-content--wrapper" data-animate data-animate-left-bold data-animate-order="1">
-		{% if section.settings.newsletter_heading != empty %}
+		{% if section.settings.newsletter_heading != blank %}
 			<h3 class="newsletter-section--title">{{ section.settings.newsletter_heading }}</h3>
 		{% endif %}
 
-		{% if section.settings.newsletter_description != empty %}
+		{% if section.settings.newsletter_description != blank %}
 			<div class="rte text-link-animated">{{ section.settings.newsletter_description }}</div>
 		{% endif %}
 	</div>
@@ -34,13 +45,17 @@
 			{% endunless %}
 
 			{% if form.posted_successfully? %}
-				<p role="alert" class="note form-success success_section">{{ 'general.newsletter_form_section.thanks' | t }}</p>
+				<p role="alert" class="note form-success success_section">{% if success_message != blank %}{{ success_message }}{% else %}{{ 'general.newsletter_form_section.thanks' | t }}{% endif %}</p>
 			{% else %}
-				<input type="hidden" name="contact[tags]" value="newsletter">
+				<input type="hidden" name="contact[tags]" value="{{ newsletter_tags | escape }}">
 
 				<div id="newsletter-wrapper">
 					<input id="newsletter_text" type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form_section.newsletter_text' | t }}" name="contact[email]" class="input-group-field email" aria-label="{{ 'general.newsletter_form_section.newsletter_email' | t }}" autocorrect="off" autocapitalize="off" pattern=".+@.+\..+" title="{{ 'general.forms.email_must_be_formatted_as_an_email' | t }}">
-					<button id="newsletter_submit" type="submit" aria-label="{{ 'general.accessibility.contact_form.submit' | t }}" class="standalone-icon--wrapper">{% render 'theme-icon', icon: 'arrow-right', iconSize: 16 %}</button>
+					{% if button_label != blank %}
+						<button id="newsletter_submit" type="submit" class="btn newsletter-form__button">{{ button_label | escape }}</button>
+					{% else %}
+						<button id="newsletter_submit" type="submit" aria-label="{{ 'general.accessibility.contact_form.submit' | t }}" class="standalone-icon--wrapper">{% render 'theme-icon', icon: 'arrow-right', iconSize: 16 %}</button>
+					{% endif %}
 				</div>
 			{% endif %}
 		{% endform %}

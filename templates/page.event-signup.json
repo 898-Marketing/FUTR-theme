@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "event_signup": {
+      "type": "event-signup",
+      "settings": {
+        "customer_tags": "newsletter,november-2026-event",
+        "button_label": "Get my code",
+        "success_message": "You're in! Check your email to confirm and get your code.",
+        "fine_print": "",
+        "logo_width": 200,
+        "logo_width_mobile": 140,
+        "heading": "Join us in November",
+        "heading_size": 64,
+        "heading_size_mobile": 40,
+        "description": "<p>Sign up with your email to get 20% off your first FUTR order.</p>",
+        "background_color": "#0d0d0d",
+        "overlay_color": "#000000",
+        "overlay_opacity": 50,
+        "text_color": "#ffffff",
+        "hide_site_chrome": true
+      }
+    },
+    "event_countdown": {
+      "type": "countdown",
+      "disabled": true,
+      "blocks": {
+        "heading_event": {
+          "type": "heading",
+          "settings": {
+            "heading": "The event starts in"
+          }
+        },
+        "countdown_timer_event": {
+          "type": "countdown_timer",
+          "settings": {
+            "hide_when_complete": true,
+            "end_date": "",
+            "end_time": "",
+            "time_labels": true
+          }
+        },
+        "timer_complete_message_event": {
+          "type": "timer_complete_message",
+          "settings": {
+            "text": "The event is live!"
+          }
+        }
+      },
+      "block_order": [
+        "heading_event",
+        "countdown_timer_event",
+        "timer_complete_message_event"
+      ],
+      "settings": {
+        "height_desktop": "original",
+        "text_alignment": "center",
+        "section_width": "full",
+        "section_margin_top": 0,
+        "section_margin_bottom": 0,
+        "text_color": "#FFFFFF",
+        "background_color": "#0d0d0d",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "event_signup",
+    "event_countdown"
+  ]
+}

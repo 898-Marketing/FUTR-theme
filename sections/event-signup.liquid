@@ -1,0 +1,410 @@
+{%- comment -%}
+  Event signup landing page section.
+
+  Visitors enter their email; the customer form creates a Shopify customer
+  with the tags in "Customer tags" (default: newsletter,november-2026-event).
+  Downstream automations (customer segment, discount, Klaviyo flow) depend on
+  the exact tag, so change it only when reusing this section for a new event.
+
+  Used by templates/page.event-signup.json.
+{%- endcomment -%}
+
+{%- liquid
+  assign event_tags = section.settings.customer_tags | strip
+  if event_tags == blank
+    assign event_tags = 'newsletter'
+  endif
+  assign event_form_id = 'event_signup_form_' | append: section.id
+  assign logo_alt = section.settings.logo.alt | default: shop.name
+  assign logo_sizes = '(min-width: 768px) ' | append: section.settings.logo_width | append: 'px, ' | append: section.settings.logo_width_mobile | append: 'px'
+-%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --event-text: {{ section.settings.text_color }};
+    --event-bg: {{ section.settings.background_color }};
+    --event-overlay: {{ section.settings.overlay_color }};
+    --event-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    --event-logo-width: {{ section.settings.logo_width_mobile }}px;
+    --event-heading-size: {{ section.settings.heading_size_mobile }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} {
+      --event-logo-width: {{ section.settings.logo_width }}px;
+      --event-heading-size: {{ section.settings.heading_size }}px;
+    }
+  }
+
+  {%- if section.settings.hide_site_chrome -%}
+    /* Focused landing page: hide the site header, announcement bar, footer,
+       breadcrumbs and the sitewide newsletter popup on this template only. */
+    .shopify-section-group-header-group,
+    .footer-wrapper,
+    #breadcrumbs,
+    .popup-skin,
+    #PopupOverlay {
+      display: none !important;
+    }
+  {%- endif -%}
+
+  .event-signup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 48px 16px;
+    background-color: var(--event-bg);
+    color: var(--event-text);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .event-signup__bg,
+  .event-signup__bg img,
+  .event-signup__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .event-signup__bg { z-index: -2; }
+  .event-signup__bg img { object-fit: cover; object-position: center; }
+  .event-signup__overlay {
+    z-index: -1;
+    background-color: var(--event-overlay);
+    opacity: var(--event-overlay-opacity);
+  }
+
+  .event-signup__inner {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .event-signup__logo img {
+    display: block;
+    width: var(--event-logo-width);
+    max-width: 100%;
+    height: auto;
+  }
+
+  .event-signup__heading {
+    margin: 0;
+    color: var(--event-text);
+    font-size: var(--event-heading-size);
+    line-height: 1.05;
+  }
+
+  .event-signup__description,
+  .event-signup__description p {
+    margin: 0;
+    color: var(--event-text);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .event-signup__description p + p { margin-top: 12px; }
+  .event-signup__description a { color: inherit; text-decoration: underline; }
+
+  /* Newsletter form, laid out for the landing page (mobile first). */
+  .event-signup .newsletter-wrapper--outer {
+    display: block;
+    width: 100%;
+  }
+
+  /* Heading and description are rendered by this section, not the snippet. */
+  .event-signup .newsletter-content--wrapper { display: none; }
+
+  .event-signup .newsletter-form--wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .event-signup .newsletter-form--wrapper form { width: 100%; }
+
+  .event-signup #newsletter-wrapper {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .event-signup #newsletter_text {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 16px;
+    font-size: 16px; /* 16px stops iOS zooming into the field */
+    color: var(--event-text);
+    background: transparent;
+    border: 1px solid var(--event-text);
+    border-radius: var(--input-border-radius, 0);
+  }
+
+  .event-signup #newsletter_text::placeholder {
+    color: var(--event-text);
+    opacity: 0.7;
+  }
+
+  .event-signup .newsletter-form__button {
+    width: 100%;
+    min-height: 52px;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .event-signup .form-success,
+  .event-signup .errors {
+    margin: 0;
+    color: var(--event-text);
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .event-signup .errors { font-size: 15px; margin-bottom: 12px; }
+
+  .event-signup__fine-print,
+  .event-signup__fine-print p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--event-text);
+    opacity: 0.75;
+  }
+
+  @media screen and (min-width: 600px) {
+    .event-signup #newsletter-wrapper { flex-direction: row; }
+    .event-signup #newsletter_text { flex: 1 1 auto; }
+    .event-signup .newsletter-form__button { width: auto; flex: 0 0 auto; padding: 0 28px; }
+  }
+
+  @media screen and (min-width: 768px) {
+    .event-signup { padding: 80px 40px; }
+    .event-signup__description,
+    .event-signup__description p { font-size: 18px; }
+  }
+{%- endstyle -%}
+
+<div
+  class="event-signup"
+  data-wetheme-section-type="event-signup"
+  data-wetheme-section-id="{{ section.id }}"
+>
+  {%- if section.settings.background_image != blank -%}
+    <div class="event-signup__bg">
+      {{
+        section.settings.background_image
+        | image_url: width: 2400
+        | image_tag:
+          widths: '750, 1100, 1500, 2000, 2400',
+          sizes: '100vw',
+          loading: 'eager',
+          fetchpriority: 'high',
+          alt: ''
+      }}
+    </div>
+    <div class="event-signup__overlay"></div>
+  {%- endif -%}
+
+  <div class="event-signup__inner">
+    {%- if section.settings.logo != blank -%}
+      <div class="event-signup__logo">
+        {{
+          section.settings.logo
+          | image_url: width: 800
+          | image_tag:
+            widths: '200, 400, 600, 800',
+            sizes: logo_sizes,
+            loading: 'eager',
+            alt: logo_alt
+        }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <h1 class="event-signup__heading">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <div class="event-signup__description rte">{{ section.settings.description }}</div>
+    {%- endif -%}
+
+    {%- render 'newsletter-form',
+      section: section,
+      form_id: event_form_id,
+      tags: event_tags,
+      success_message: section.settings.success_message,
+      button_label: section.settings.button_label
+    -%}
+
+    {%- if section.settings.fine_print != blank -%}
+      <div class="event-signup__fine-print rte">{{ section.settings.fine_print }}</div>
+    {%- endif -%}
+
+    {%- if request.design_mode -%}
+      <p class="event-signup__fine-print">Editor note: signups are tagged <strong>{{ event_tags }}</strong>.</p>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Event signup",
+  "tag": "section",
+  "class": "event-signup-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Signup"
+    },
+    {
+      "type": "text",
+      "id": "customer_tags",
+      "label": "Customer tags",
+      "default": "newsletter,november-2026-event",
+      "info": "Comma-separated tags added to each new signup. The customer segment, discount and Klaviyo flow depend on this exact tag, so only change it when reusing this page for a new event."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Get my code"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "You're in! Check your email to confirm and get your code."
+    },
+    {
+      "type": "richtext",
+      "id": "fine_print",
+      "label": "Fine print",
+      "info": "Optional small text under the form, for example offer terms."
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 60,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width (desktop)",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "min": 60,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width (mobile)",
+      "default": 140
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Join us in November"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 24,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size (desktop)",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 20,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size (mobile)",
+      "default": 40
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Sign up with your email to get 20% off your first FUTR order.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Background and colors"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image",
+      "info": "2400 x 1600px recommended. Leave empty to use the background color."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#0d0d0d"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Image overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "label": "Image overlay opacity",
+      "default": 50
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Page layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_site_chrome",
+      "label": "Hide site header, footer and popup",
+      "info": "Keeps the landing page focused on the signup form.",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Event signup"
+    }
+  ]
+}
+{% endschema %}

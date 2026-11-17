@@ -108,7 +108,7 @@
     "share_facebook": true,
     "share_pinterest": true,
     "popup--enable": true,
-    "popup--test-mode": true,
+    "popup--test-mode": false,
     "pop-up-text-header-text": "Join the Roster",
     "pop-up-text-description-text": "<p>Get all the latest news and deals from our newsletter</p>",
     "popup-newsletter-top": "shopify://shop_images/FUTR-LOGO1-WHITE-BKG-_2.png",

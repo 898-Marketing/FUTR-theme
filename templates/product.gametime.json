@@ -14,6 +14,7 @@
       "blocks": {
         "button_V4P4G7": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_link": "",
             "button_label": "COMING SOON",
@@ -52,7 +53,6 @@
         },
         "options": {
           "type": "options",
-          "disabled": true,
           "settings": {
             "variant_style": "swatches",
             "hide_out_of_stock_variants": false,
@@ -67,7 +67,6 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "show_quantity_selector": true,
             "show_smart_checkout": true,

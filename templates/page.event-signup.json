@@ -16,12 +16,14 @@
         "button_label": "Get my code",
         "success_message": "You're in! Check your email to confirm and get your code.",
         "fine_print": "",
+        "logo": "shopify://shop_images/FUTR-LOGO1-BLACK-BKG.png",
         "logo_width": 200,
         "logo_width_mobile": 140,
         "heading": "Join us in November",
         "heading_size": 64,
         "heading_size_mobile": 40,
         "description": "<p>Sign up with your email to get 20% off your first FUTR order.</p>",
+        "background_image": "shopify://shop_images/3.-Sore-or-Overtrained---Cover-Image.jpg",
         "background_color": "#0d0d0d",
         "overlay_color": "#000000",
         "overlay_opacity": 50,
@@ -31,7 +33,6 @@
     },
     "event_countdown": {
       "type": "countdown",
-      "disabled": true,
       "blocks": {
         "heading_event": {
           "type": "heading",
@@ -60,13 +61,14 @@
         "countdown_timer_event",
         "timer_complete_message_event"
       ],
+      "disabled": true,
       "settings": {
         "height_desktop": "original",
         "text_alignment": "center",
         "section_width": "full",
         "section_margin_top": 0,
         "section_margin_bottom": 0,
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "background_color": "#0d0d0d",
         "overlay_color": "#000000",
         "overlay_opacity": 0

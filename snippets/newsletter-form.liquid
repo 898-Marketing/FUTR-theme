@@ -8,6 +8,7 @@
 		- tags: Comma-separated customer tags to apply on signup. Optional, defaults to 'newsletter'.
 		- success_message: Message shown after a successful signup. Optional, defaults to the theme's thank-you text.
 		- button_label: Text for the submit button. Optional; when blank, the arrow icon button is used.
+		- success_content: HTML shown after a successful signup instead of the success message. Optional.
 
 	Usage:
 		{% render 'newsletter-form', section: section, form_id: 'newsletter_section_form', text_alignment: section.settings.textAlignment %}
@@ -45,7 +46,11 @@
 			{% endunless %}
 
 			{% if form.posted_successfully? %}
-				<p role="alert" class="note form-success success_section">{% if success_message != blank %}{{ success_message }}{% else %}{{ 'general.newsletter_form_section.thanks' | t }}{% endif %}</p>
+				{% if success_content != blank %}
+					{{ success_content }}
+				{% else %}
+					<p role="alert" class="note form-success success_section">{% if success_message != blank %}{{ success_message }}{% else %}{{ 'general.newsletter_form_section.thanks' | t }}{% endif %}</p>
+				{% endif %}
 			{% else %}
 				<input type="hidden" name="contact[tags]" value="{{ newsletter_tags | escape }}">
 

@@ -17,7 +17,53 @@
   assign event_form_id = 'event_signup_form_' | append: section.id
   assign logo_alt = section.settings.logo.alt | default: shop.name
   assign logo_sizes = '(min-width: 768px) ' | append: section.settings.logo_width | append: 'px, ' | append: section.settings.logo_width_mobile | append: 'px'
+
+  assign discount_code = section.settings.discount_code | strip
+  assign shop_redirect = section.settings.shop_link | default: routes.all_products_collection_url
+  assign shop_url = shop_redirect
+  if discount_code != blank
+    comment
+      /discount/CODE applies the code to the visitor's cart, then redirects.
+    endcomment
+    assign root_path = routes.root_url | append: '/' | replace: '//', '/'
+    assign encoded_code = discount_code | url_encode
+    assign shop_url = root_path | append: 'discount/' | append: encoded_code | append: '?redirect=' | append: shop_redirect
+  endif
 -%}
+
+{%- capture event_success -%}
+  <div class="event-signup__success" role="status" tabindex="-1" id="EventSignupSuccess-{{ section.id }}">
+    {%- if section.settings.success_heading != blank -%}
+      <h2 class="event-signup__success-heading">{{ section.settings.success_heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.success_message != blank -%}
+      <p class="event-signup__success-text">{{ section.settings.success_message }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.show_code and discount_code != blank -%}
+      <div class="event-signup__code-box">
+        {%- if section.settings.code_label != blank -%}
+          <span class="event-signup__code-label">{{ section.settings.code_label }}</span>
+        {%- endif -%}
+        <div class="event-signup__code-row">
+          <span class="event-signup__code" data-event-code>{{ discount_code | escape }}</span>
+          <button
+            type="button"
+            class="btn event-signup__copy"
+            data-event-copy
+            data-copied-text="{{ section.settings.copied_label | escape }}"
+          >{{ section.settings.copy_label | escape }}</button>
+        </div>
+        <span class="visually-hidden" aria-live="polite" data-event-copy-status></span>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.shop_label != blank -%}
+      <a class="btn event-signup__shop" href="{{ shop_url }}">{{ section.settings.shop_label | escape }}</a>
+    {%- endif -%}
+  </div>
+{%- endcapture -%}
 
 {%- style -%}
   #shopify-section-{{ section.id }} {
@@ -180,6 +226,90 @@
     opacity: 0.75;
   }
 
+  /* Confirmation panel shown after a successful signup */
+  .event-signup__inner:has(.event-signup__success) .event-signup__description,
+  .event-signup__inner:has(.event-signup__success) .event-signup__fine-print {
+    display: none;
+  }
+
+  .event-signup__success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    outline: none;
+  }
+
+  .event-signup__success-heading {
+    margin: 0;
+    color: var(--event-text);
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .event-signup__success-text {
+    margin: 0;
+    color: var(--event-text);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .event-signup__code-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px 16px;
+    border: 2px dashed var(--event-text);
+    border-radius: var(--block-border-radius, 0);
+  }
+
+  .event-signup__code-label {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .event-signup__code-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .event-signup__code {
+    font-family: var(--header-font-stack);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: var(--event-text);
+    user-select: all;
+    word-break: break-all;
+  }
+
+  .event-signup__copy,
+  .event-signup__shop {
+    width: 100%;
+    min-height: 52px;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 600px) {
+    .event-signup__code-row { flex-direction: row; justify-content: center; gap: 20px; }
+    .event-signup__copy { width: auto; padding: 0 24px; }
+    .event-signup__shop { width: auto; padding: 0 32px; }
+    .event-signup__success-heading { font-size: 36px; }
+    .event-signup__code { font-size: 44px; }
+  }
+
   @media screen and (min-width: 600px) {
     .event-signup #newsletter-wrapper { flex-direction: row; }
     .event-signup #newsletter_text { flex: 1 1 auto; }
@@ -242,6 +372,7 @@
       form_id: event_form_id,
       tags: event_tags,
       success_message: section.settings.success_message,
+      success_content: event_success,
       button_label: section.settings.button_label
     -%}
 
@@ -254,6 +385,47 @@
     {%- endif -%}
   </div>
 </div>
+
+<script>
+  (function () {
+    var root = document.getElementById('EventSignupSuccess-{{ section.id }}');
+    if (!root) return;
+
+    // Bring the confirmation into view after the page reloads from the form post.
+    try { root.scrollIntoView({ block: 'center' }); root.focus({ preventScroll: true }); } catch (e) {}
+
+    var button = root.querySelector('[data-event-copy]');
+    var codeEl = root.querySelector('[data-event-code]');
+    var status = root.querySelector('[data-event-copy-status]');
+    if (!button || !codeEl) return;
+
+    var label = button.textContent;
+
+    function copied() {
+      button.textContent = button.getAttribute('data-copied-text') || label;
+      if (status) status.textContent = button.textContent;
+      setTimeout(function () { button.textContent = label; }, 2000);
+    }
+
+    function fallback(text) {
+      var range = document.createRange();
+      range.selectNodeContents(codeEl);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      try { if (document.execCommand('copy')) copied(); } catch (e) {}
+    }
+
+    button.addEventListener('click', function () {
+      var text = codeEl.textContent.trim();
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(copied, function () { fallback(text); });
+      } else {
+        fallback(text);
+      }
+    });
+  })();
+</script>
 
 {% schema %}
 {
@@ -279,10 +451,64 @@
       "default": "Get my code"
     },
     {
+      "type": "header",
+      "content": "Confirmation (after signup)"
+    },
+    {
+      "type": "text",
+      "id": "success_heading",
+      "label": "Confirmation heading",
+      "default": "You're in!"
+    },
+    {
       "type": "text",
       "id": "success_message",
-      "label": "Success message",
-      "default": "You're in! Check your email to confirm and get your code."
+      "label": "Confirmation message",
+      "default": "Here's your code for 20% off. We'll also email it to you."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_code",
+      "label": "Show discount code",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "discount_code",
+      "label": "Discount code",
+      "default": "NOVEVENT20",
+      "info": "Must match the discount in Shopify admin exactly. Only customers in the event segment can use it."
+    },
+    {
+      "type": "text",
+      "id": "code_label",
+      "label": "Code label",
+      "default": "Your code"
+    },
+    {
+      "type": "text",
+      "id": "copy_label",
+      "label": "Copy button label",
+      "default": "Copy code"
+    },
+    {
+      "type": "text",
+      "id": "copied_label",
+      "label": "Copied confirmation",
+      "default": "Copied!"
+    },
+    {
+      "type": "text",
+      "id": "shop_label",
+      "label": "Shop button label",
+      "default": "Shop now",
+      "info": "Leave empty to hide. The code is applied automatically at checkout."
+    },
+    {
+      "type": "url",
+      "id": "shop_link",
+      "label": "Shop button link",
+      "info": "Defaults to all products."
     },
     {
       "type": "richtext",

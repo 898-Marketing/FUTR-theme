@@ -94,6 +94,13 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
 - [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`, `mmerdich+testparentlive@` — the welcome-email test) **and** the matching Shopify customers, after the follow-up check.
 - [x] PR into `main`: Sara OK'd it on 2026-11-18, and Michael merged it. `main` before the merge is tagged `pre-tournament-merge`.
 
+- [x] Old form cleanup (2026-11-18): Michael deleted the Shopify segment "November 2026 Event" (`customer_tags CONTAINS 'november-2026-event'`) and its 4 test customers (`mmerdich+1@`, `mmerdich+2@`, `srogers@`, `srogers+1@`). Verified through the Admin API.
+  - These may also exist in Klaviyo through the Shopify sync. Delete them there too if they show up.
+- [ ] NOVEVENT20 discount (Shopify):
+  - Turn on "Limit to one use per customer". It's currently off, but the welcome email says "One use per customer".
+  - Set an end date once FUTR confirms it. It's currently open-ended.
+  - The discount applies to all customers and isn't tied to a segment.
+
 ## Notes and known issues (not caused by this work)
 - `snippets/social-meta-tags.liquid` lines 8-9 output "Liquid error: invalid url input" inside meta tags when a page has no image. It's on every page, already existed, and isn't visible.
 - **Sara's `sections/event-signup.liquid`:** its hide-chrome CSS doesn't hide the theme's "Join the Roster" popup (`#popup` / `#slide-up`). The tournament section hides it.

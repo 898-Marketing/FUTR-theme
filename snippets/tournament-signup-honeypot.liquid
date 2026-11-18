@@ -1,0 +1,8 @@
+{%- comment -%}
+  Spam honeypot for sections/tournament-signup.liquid. People never see or
+  fill this; if it has a value on submit, the JS shows success and sends nothing.
+{%- endcomment -%}
+<div class="tsu__hp" aria-hidden="true">
+  <label for="tsu-{{ sid }}-{{ prefix }}-company">Company</label>
+  <input type="text" id="tsu-{{ sid }}-{{ prefix }}-company" name="company_website" tabindex="-1" autocomplete="off" data-honeypot>
+</div>

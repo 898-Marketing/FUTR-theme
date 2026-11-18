@@ -1,0 +1,18 @@
+{%- comment -%}
+  Sports checkbox grid for sections/tournament-signup.liquid.
+  - sports: array of sport labels (sent to Klaviyo as-is)
+  - sid / prefix: used to build unique ids
+  - legend: visible group label
+  "At least one" is enforced in assets/tournament-signup.js.
+{%- endcomment -%}
+<fieldset class="tsu__sports" data-sports>
+  <legend class="tsu__legend">{{ legend | escape }}</legend>
+  <div class="tsu__sport-grid">
+    {%- for sport in sports -%}
+      <label class="tsu__sport" for="tsu-{{ sid }}-{{ prefix }}-sport-{{ forloop.index }}">
+        <input type="checkbox" id="tsu-{{ sid }}-{{ prefix }}-sport-{{ forloop.index }}" name="sports" value="{{ sport | escape }}">
+        <span>{{ sport | escape }}</span>
+      </label>
+    {%- endfor -%}
+  </div>
+</fieldset>

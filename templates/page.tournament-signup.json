@@ -1,17 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "tournament-signup",
       "settings": {
+        "klaviyo_public_key": "RP33x9",
+        "klaviyo_list_id": "X9rGAu",
         "logo": "shopify://shop_images/FUTR-LOGO1-BLACK-BKG.png",
         "logo_width": 180,
+        "background_image": "shopify://shop_images/4.-Why-Is-My-Kid-Tired-Halfway-Through-Games_---Cover-Image.jpg",
         "background_color": "#0d0d0d",
+        "overlay_color": "#000000",
+        "overlay_opacity": 85,
         "text_color": "#ffffff",
         "accent_color": "#ffffff",
         "accent_text_color": "#0d0d0d",
-        "hide_site_chrome": true
+        "hide_site_chrome": true,
+        "role_heading": "Are you a Parent/Guardian/Coach or an Athlete?",
+        "role_text": "",
+        "parent_choice_label": "Parent / Guardian / Coach",
+        "athlete_choice_label": "Athlete",
+        "parent_heading": "Unlock tournament pricing",
+        "parent_text": "Sign up for FUTR emails and get special tournament pricing at our table.",
+        "parent_button": "Unlock my code",
+        "success_heading": "You're in!",
+        "success_message": "Thank you for signing up! You have unlocked special tournament pricing, see our table to purchase!",
+        "code_label": "Show this code at the FUTR table",
+        "promo_code": "NOVEVENT20",
+        "age_heading": "When were you born?",
+        "age_text": "",
+        "age_button": "Continue",
+        "teen_heading": "Tell us about you",
+        "teen_text": "",
+        "teen_button": "Continue",
+        "links_heading": "Follow FUTR",
+        "links_text": "Stay up to date with FUTR on social.",
+        "show_social": true,
+        "website_url": "",
+        "website_label": "Visit FUTR",
+        "sending_label": "Sending...",
+        "error_message": "Something went wrong. Please check your connection and try again."
       }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }

@@ -27,7 +27,7 @@ Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start 
 - `POST https://a.klaviyo.com/client/subscriptions/?company_id=RP33x9`
 - Email marketing SUBSCRIBED, list `X9rGAu` (single opt-in), `custom_source` "November 2026 Tournament QR".
 - Profile: `email`, `first_name`, `last_name`.
-- Properties: `signup_source: "november-2026-tournament"`, `signup_role: "parent"`, `athlete_birth_month: "MM"`, `sports_played: [..]`.
+- Properties: `signup_source: "november-2026-tournament"`, `signup_role: "parent"`, `athlete_birth_month: "MM"`, `athlete_birth_year: "YYYY"` (added 2026-11-18), `sports_played: [..]`.
 - On success, shows the promo code `NOVEVENT20` (a section setting).
 
 ### Athlete 13+ who enters an email
@@ -108,6 +108,15 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
   - Shopify page "November Event" (`/pages/november-event`) is published on the default page template.
     - Before deleting it, confirm the URL wasn't printed or shared (earlier QR code, flyer, email).
     - If it was, replace it with a URL redirect to `/pages/tournament` instead.
+
+## Form update (2026-11-18, branch `form-birth-year-copy`)
+Requested by FUTR through Carli:
+- Parent form: required **Athlete's birth year** dropdown next to the birth month. Sent as `athlete_birth_year`.
+- Copy: "tournament pricing" → "event pricing" everywhere. "At our table" removed from the parent form intro only; the confirmation page keeps "see our table to purchase!" and the code label "Show this code at the FUTR table".
+- **Parent phone number: not added.** Advised holding off: marketing texts need a separate SMS opt-in (TCPA), and SMS isn't set up in Klaviyo (no texting number as of 2026-11-18). If FUTR wants it later: optional field plus an unticked SMS consent checkbox with compliant disclosure, after SMS is set up, with the phone validated to E.164 so a bad number can't fail the email signup.
+- Tested (Klaviyo intercepted): payload includes `athlete_birth_year`, the form can't submit without it, new copy renders, unit tests pass, theme check clean.
+- Until this merges, nobody should edit the tournament page in the Customizer (the template file changed here too).
+- The welcome email in Klaviyo (flow `URegZD`) may still say "tournament"; check its copy.
 
 ## Notes and known issues (not caused by this work)
 - `snippets/social-meta-tags.liquid` lines 8-9 output "Liquid error: invalid url input" inside meta tags when a page has no image. It's on every page, already existed, and isn't visible.

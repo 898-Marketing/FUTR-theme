@@ -101,6 +101,14 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
   - Set an end date once FUTR confirms it. It's currently open-ended.
   - The discount applies to all customers and isn't tied to a segment.
 
+- [ ] **Retire Sara's old event landing page** (coordinate with Sara first; it's her work):
+  - Remove `sections/event-signup.liquid` and `templates/page.event-signup.json` through a PR.
+    - No page uses the template, and it subscribes through Shopify's customer form, the path this project replaced.
+    - Recoverable from Git history and the `pre-handoff-2026-11-17` tag.
+  - Shopify page "November Event" (`/pages/november-event`) is published on the default page template.
+    - Before deleting it, confirm the URL wasn't printed or shared (earlier QR code, flyer, email).
+    - If it was, replace it with a URL redirect to `/pages/tournament` instead.
+
 ## Notes and known issues (not caused by this work)
 - `snippets/social-meta-tags.liquid` lines 8-9 output "Liquid error: invalid url input" inside meta tags when a page has no image. It's on every page, already existed, and isn't visible.
 - **Sara's `sections/event-signup.liquid`:** its hide-chrome CSS doesn't hide the theme's "Join the Roster" popup (`#popup` / `#slide-up`). The tournament section hides it.

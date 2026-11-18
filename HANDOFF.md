@@ -4,7 +4,7 @@ Branch: `event-signup-page` (never commit to `main`; `main` is synced to the FUT
 Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start of every session.
 
 ## Status (2026-11-17)
-**Done:** page built, all paths tested in the browser with Klaviyo requests intercepted. Waiting on Michael's review (checkpoint 1) before the live Klaviyo test signups.
+**Done:** page built, reviewed by Michael, and live-tested (parent + teen) on 2026-11-18. **Next:** follow-up sync check, the teen-offer decision, then the PR to Sara.
 
 ## How to preview
 - `shopify theme dev` from the repo root (store is already the CLI default).
@@ -71,16 +71,26 @@ The only change is that the `teen_*` fields (including `teen_profile: true`) are
 - **Accidental live request (2026-11-17 22:07 UTC):** `x@example.com` ("Test Parent") was subscribed to `X9rGAu` because a page reload dropped the request interceptor.
   - It confirmed the parent path end to end: SUBSCRIBED, `double_optin: false`, properties correct.
   - Flow is a draft, so no email was sent. **Delete this test profile** along with the others.
+- **Live tests by Michael on his phone (2026-11-18), checked through the Klaviyo API:**
+  - **Parent `mmerdich+parent@898marketing.com`:**
+    - SUBSCRIBED via API, `double_optin: false`, on **only** list `X9rGAu`.
+    - Parent properties are correct, and no confirmation email arrived.
+    - No NOVEVENT20 email either: expected, because flow `URegZD` is still a **draft** (re-checked 2026-11-18).
+  - **Teen `mmerdich+teentest@898marketing.com`:** NEVER_SUBSCRIBED, on no lists, only `teen_*` properties, no `first_name`.
+- Fixed the Instagram icon rendering as a filled square (theme icons are stroke outlines).
+
+### Shopify customer sync (Klaviyo setting, not the page)
+Both live test emails showed up in **Shopify Customers**: the parent as Subscribed, the teen as Not subscribed. The page never calls Shopify. Klaviyo's Shopify integration copies profiles into Shopify; on the parent this shows up as `Accepts Marketing: true`, added about 30 seconds after signup.
+- **Michael's call:** this is OK. Parents subscribed in both systems is expected, and teens stay unsubscribed in both.
+- If FUTR ever doesn't want minors' emails in Shopify, change it in Klaviyo → Integrations → Shopify settings.
+- **Watch for a loop:** Shopify could send the now-subscribed parent back into Klaviyo's double opt-in newsletter list. See the follow-up check below.
 
 ## TODO
-- [ ] Michael: review the page (checkpoint 1).
-- [ ] Live Klaviyo tests with test emails:
-  - Parent: on `X9rGAu`, SUBSCRIBED, no confirmation email.
-  - Teen: has `teen_*` properties, not on the list, no consent.
-  - Under 13: sends nothing.
-- [ ] After the flow is turned on, test one more parent signup and confirm the NOVEVENT20 email arrives.
+- [ ] **Follow-up check (on or after 2026-11-19):** confirm `mmerdich+parent@898marketing.com` is still on **only** `X9rGAu` and never got a double opt-in confirmation email. If it was added to the newsletter list, fix the Shopify → Klaviyo sync before launch.
+- [ ] Decide whether teens 13+ get anything instead of the code. Suggested copy: "Have your parent or guardian scan to unlock tournament pricing." (Check with FUTR or Carli.)
+- [ ] After the flow is turned on, test one more parent signup **with a new email** and confirm the NOVEVENT20 email arrives. "Added to List" flows only trigger for people added after the flow goes live, so the existing test profiles won't get it.
 - [ ] After merge and FUTR-theme/main goes live, assign page.tournament-signup to /pages/tournament and set it to Visible.
-- [ ] Michael: delete test profiles in Klaviyo (including `x@example.com`).
+- [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`) **and** the matching Shopify customers, after the follow-up check.
 - [ ] Open a PR into `main` for Sara.
 
 ## Notes and known issues (not caused by this work)

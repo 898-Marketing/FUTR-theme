@@ -88,10 +88,11 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
 ## TODO
 - [ ] **Follow-up check (on or after 2026-11-19):** confirm `mmerdich+parent@898marketing.com` is still on **only** `X9rGAu` and never got a double opt-in confirmation email. If it was added to the newsletter list, fix the Shopify → Klaviyo sync before launch.
 - [ ] Decide whether teens 13+ get anything instead of the code. Suggested copy: "Have your parent or guardian scan to unlock tournament pricing." (Check with FUTR or Carli.)
-- [ ] After the flow is turned on, test one more parent signup **with a new email** and confirm the NOVEVENT20 email arrives. "Added to List" flows only trigger for people added after the flow goes live, so the existing test profiles won't get it.
+- [x] Welcome email test: Michael turned flow `URegZD` live on 2026-11-18. A new parent signup received "Your 20% off code is here" with NOVEVENT20 within a minute.
+  - "Added to List" flows only trigger for people added after the flow goes live, so the older test profiles won't get it.
 - [ ] After merge and FUTR-theme/main goes live, assign page.tournament-signup to /pages/tournament and set it to Visible.
-- [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`) **and** the matching Shopify customers, after the follow-up check.
-- [ ] Open a PR into `main` for Sara.
+- [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`, and the second parent test email used for the welcome-email test) **and** the matching Shopify customers, after the follow-up check.
+- [x] PR into `main`: Sara OK'd it on 2026-11-18, and Michael merged it. `main` before the merge is tagged `pre-tournament-merge`.
 
 ## Notes and known issues (not caused by this work)
 - `snippets/social-meta-tags.liquid` lines 8-9 output "Liquid error: invalid url input" inside meta tags when a page has no image. It's on every page, already existed, and isn't visible.

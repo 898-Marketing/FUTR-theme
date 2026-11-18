@@ -55,6 +55,7 @@
                   signup_source: cfg.signupSource,
                   signup_role: 'parent',
                   athlete_birth_month: v.birthMonth,
+                  athlete_birth_year: v.birthYear,
                   sports_played: v.sports
                 },
                 subscriptions: { email: { marketing: { consent: 'SUBSCRIBED' } } }
@@ -276,6 +277,7 @@
       if (kind === 'parent') {
         if (honeypotFilled(form)) { resetForm(form); return show('parent-success'); }
         values.birthMonth = String(data.get('birth_month') || '');
+        values.birthYear = String(data.get('birth_year') || '');
         return send(form, 'subscriptions', buildParentPayload(cfg, values), 'parent-success');
       }
 

@@ -27,7 +27,7 @@ Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start 
 - `POST https://a.klaviyo.com/client/subscriptions/?company_id=RP33x9`
 - Email marketing SUBSCRIBED, list `X9rGAu` (single opt-in), `custom_source` "November 2026 Tournament QR".
 - Profile: `email`, `first_name`, `last_name`.
-- Properties: `signup_source: "november-2026-tournament"`, `signup_role: "parent"`, `athlete_birth_month: "MM"`, `sports_played: [..]`.
+- Properties: `signup_source: "november-2026-tournament"`, `signup_role: "parent"`, `athlete_birth_month: "MM"`, `athlete_birth_year: "YYYY"` (added 2026-11-18), `sports_played: [..]`.
 - On success, shows the promo code `NOVEVENT20` (a section setting).
 
 ### Athlete 13+ who enters an email
@@ -91,8 +91,32 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
 - [x] Welcome email test: Michael turned flow `URegZD` live on 2026-11-18. A new parent signup received "Your 20% off code is here" with NOVEVENT20 within a minute.
   - "Added to List" flows only trigger for people added after the flow goes live, so the older test profiles won't get it.
 - [ ] After merge and FUTR-theme/main goes live, assign page.tournament-signup to /pages/tournament and set it to Visible.
-- [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`, and the second parent test email used for the welcome-email test) **and** the matching Shopify customers, after the follow-up check.
+- [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`, `mmerdich+testparentlive@` — the welcome-email test) **and** the matching Shopify customers, after the follow-up check.
 - [x] PR into `main`: Sara OK'd it on 2026-11-18, and Michael merged it. `main` before the merge is tagged `pre-tournament-merge`.
+
+- [x] Old form cleanup (2026-11-18): Michael deleted the Shopify segment "November 2026 Event" (`customer_tags CONTAINS 'november-2026-event'`) and its 4 test customers (`mmerdich+1@`, `mmerdich+2@`, `srogers@`, `srogers+1@`). Verified through the Admin API.
+  - These may also exist in Klaviyo through the Shopify sync. Delete them there too if they show up.
+- [ ] NOVEVENT20 discount (Shopify):
+  - Turn on "Limit to one use per customer". It's currently off, but the welcome email says "One use per customer".
+  - Set an end date once FUTR confirms it. It's currently open-ended.
+  - The discount applies to all customers and isn't tied to a segment.
+
+- [ ] **Retire Sara's old event landing page** (coordinate with Sara first; it's her work):
+  - Remove `sections/event-signup.liquid` and `templates/page.event-signup.json` through a PR.
+    - No page uses the template, and it subscribes through Shopify's customer form, the path this project replaced.
+    - Recoverable from Git history and the `pre-handoff-2026-11-17` tag.
+  - Shopify page "November Event" (`/pages/november-event`) is published on the default page template.
+    - Before deleting it, confirm the URL wasn't printed or shared (earlier QR code, flyer, email).
+    - If it was, replace it with a URL redirect to `/pages/tournament` instead.
+
+## Form update (2026-11-18, branch `form-birth-year-copy`)
+Requested by FUTR through Carli:
+- Parent form: required **Athlete's birth year** dropdown next to the birth month. Sent as `athlete_birth_year`.
+- Copy: "tournament pricing" → "event pricing" everywhere. "At our table" removed from the parent form intro only; the confirmation page keeps "see our table to purchase!" and the code label "Show this code at the FUTR table".
+- **Parent phone number: not added.** Advised holding off: marketing texts need a separate SMS opt-in (TCPA), and SMS isn't set up in Klaviyo (no texting number as of 2026-11-18). If FUTR wants it later: optional field plus an unticked SMS consent checkbox with compliant disclosure, after SMS is set up, with the phone validated to E.164 so a bad number can't fail the email signup.
+- Tested (Klaviyo intercepted): payload includes `athlete_birth_year`, the form can't submit without it, new copy renders, unit tests pass, theme check clean.
+- Until this merges, nobody should edit the tournament page in the Customizer (the template file changed here too).
+- The welcome email in Klaviyo (flow `URegZD`) may still say "tournament"; check its copy.
 
 ## Notes and known issues (not caused by this work)
 - `snippets/social-meta-tags.liquid` lines 8-9 output "Liquid error: invalid url input" inside meta tags when a page has no image. It's on every page, already existed, and isn't visible.

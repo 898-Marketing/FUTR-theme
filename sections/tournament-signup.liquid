@@ -319,14 +319,25 @@
           <label class="tsu__label" for="tsu-{{ sid }}-p-email">Email</label>
           <input class="tsu__input" id="tsu-{{ sid }}-p-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" required maxlength="254">
         </div>
-        <div class="tsu__field">
-          <label class="tsu__label" for="tsu-{{ sid }}-p-month">Athlete's birth month</label>
-          <select class="tsu__input" id="tsu-{{ sid }}-p-month" name="birth_month" required>
-            <option value="" selected disabled>Select month</option>
-            {%- for m in months -%}
-              <option value="{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}">{{ m }}</option>
-            {%- endfor -%}
-          </select>
+        <div class="tsu__row">
+          <div class="tsu__field">
+            <label class="tsu__label" for="tsu-{{ sid }}-p-month">Athlete's birth month</label>
+            <select class="tsu__input" id="tsu-{{ sid }}-p-month" name="birth_month" required>
+              <option value="" selected disabled>Month</option>
+              {%- for m in months -%}
+                <option value="{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}">{{ m }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
+          <div class="tsu__field">
+            <label class="tsu__label" for="tsu-{{ sid }}-p-year">Athlete's birth year</label>
+            <select class="tsu__input" id="tsu-{{ sid }}-p-year" name="birth_year" required>
+              <option value="" selected disabled>Year</option>
+              {%- for y in (oldest_year..current_year) reversed -%}
+                <option value="{{ y }}">{{ y }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
         </div>
         {% render 'tournament-signup-sports', sports: sports, sid: sid, prefix: 'p', legend: 'Sports played' %}
         {% render 'tournament-signup-honeypot', sid: sid, prefix: 'p' %}
@@ -457,11 +468,11 @@
     { "type": "text", "id": "athlete_choice_label", "label": "Athlete button", "default": "Athlete" },
 
     { "type": "header", "content": "Parent / Guardian / Coach" },
-    { "type": "text", "id": "parent_heading", "label": "Heading", "default": "Unlock tournament pricing" },
-    { "type": "textarea", "id": "parent_text", "label": "Text", "default": "Sign up for FUTR emails and get special tournament pricing at our table." },
+    { "type": "text", "id": "parent_heading", "label": "Heading", "default": "Unlock event pricing" },
+    { "type": "textarea", "id": "parent_text", "label": "Text", "default": "Sign up for FUTR emails and get special event pricing." },
     { "type": "text", "id": "parent_button", "label": "Submit button", "default": "Unlock my code" },
     { "type": "text", "id": "success_heading", "label": "Confirmation heading", "default": "You're in!" },
-    { "type": "textarea", "id": "success_message", "label": "Confirmation message", "default": "Thank you for signing up! You have unlocked special tournament pricing, see our table to purchase!" },
+    { "type": "textarea", "id": "success_message", "label": "Confirmation message", "default": "Thank you for signing up! You have unlocked special event pricing, see our table to purchase!" },
     { "type": "text", "id": "code_label", "label": "Code label", "default": "Show this code at the FUTR table" },
     { "type": "text", "id": "promo_code", "label": "Promo code", "default": "NOVEVENT20", "info": "Only shown to parents/guardians/coaches after a successful signup." },
 

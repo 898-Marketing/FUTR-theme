@@ -247,7 +247,8 @@
   .tsu__social { display: flex; justify-content: center; }
   .tsu__social #sm-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 0; padding: 0; list-style: none; }
   .tsu__social #sm-icons a { display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; color: var(--tsu-text); }
-  .tsu__social #sm-icons svg { width: 28px; height: 28px; fill: currentColor; }
+  /* Theme icons are stroke outlines (snippets/theme-icon.liquid); don't set fill. */
+  .tsu__social #sm-icons svg { width: 28px; height: 28px; }
 
   @media (min-width: 600px) {
     .tsu { align-items: center; padding: 64px 24px; }

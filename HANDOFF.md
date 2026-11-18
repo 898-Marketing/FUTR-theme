@@ -3,7 +3,7 @@
 Branch: `event-signup-page` (never commit to `main`; `main` is synced to the FUTR-theme/main store theme through Shopify's GitHub integration).
 Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start of every session.
 
-## Status (2026-11-17)
+## Status (2026-11-18)
 **Done:** page built, reviewed by Michael, and live-tested (parent + teen) on 2026-11-18. **Next:** follow-up sync check, the teen-offer decision, then the PR to Sara.
 
 ## How to preview

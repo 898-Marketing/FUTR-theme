@@ -91,7 +91,7 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
 - [x] Welcome email test: Michael turned flow `URegZD` live on 2026-11-18. A new parent signup received "Your 20% off code is here" with NOVEVENT20 within a minute.
   - "Added to List" flows only trigger for people added after the flow goes live, so the older test profiles won't get it.
 - [ ] After merge and FUTR-theme/main goes live, assign page.tournament-signup to /pages/tournament and set it to Visible.
-- [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`, and the second parent test email used for the welcome-email test) **and** the matching Shopify customers, after the follow-up check.
+- [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`, `mmerdich+testparentlive@` — the welcome-email test) **and** the matching Shopify customers, after the follow-up check.
 - [x] PR into `main`: Sara OK'd it on 2026-11-18, and Michael merged it. `main` before the merge is tagged `pre-tournament-merge`.
 
 ## Notes and known issues (not caused by this work)

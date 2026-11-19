@@ -4,7 +4,7 @@ Branch: `event-signup-page` (never commit to `main`; `main` is synced to the FUT
 Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start of every session.
 
 ## Status (2026-11-18)
-**Done:** page built, live-tested, merged to `main` (PR #1), then FUTR's edits merged (PR #2: athlete birth year, "event pricing" copy). Client preview: https://a36ab9-2.myshopify.com/pages/contact?preview_theme_id=183321919775&view=tournament-signup (store password needed).
+**Done:** page built, live-tested, merged to `main` (PR #1), then FUTR's edits merged (PR #2: athlete birth year, "event pricing" copy). 2026-11-19 (Carli): first headline smaller so "Parent/Guardian/Coach" stays on one line (`.tsu__heading--role`, `.tsu__nowrap` in the section; only matches that exact spelling in the heading setting). Client preview: https://a36ab9-2.myshopify.com/pages/contact?preview_theme_id=183321919775&view=tournament-signup (store password needed).
 
 **Waiting on FUTR (sent to Carli 2026-11-18, for Suzanne at FUTR).** Don't build any of these until FUTR answers:
 1. **Athlete path vs. privacy policy.** The policy's "Children" section says event info is collected "only from the parent, with the parent's signed consent", and that email and text sign-ups are 18+. The teen path currently collects a teen's own name, email, birth month and year, and sports. Recommended: Athlete button goes straight to the social links with "Have your parent or guardian scan to unlock event pricing"; collect nothing from athletes. This would remove the age step, the under-13 lock and the teen payload.

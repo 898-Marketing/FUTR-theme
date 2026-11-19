@@ -100,6 +100,9 @@
     color: var(--tsu-text);
     outline: none;
   }
+  /* Role question: smaller so "PARENT/GUARDIAN/COACH" fits one line on phones (down to 320px). */
+  .tsu__heading--role { font-size: clamp(18px, calc((100vw - 32px) / 15), 24px); }
+  .tsu__nowrap { white-space: nowrap; }
   .tsu__text {
     margin: 0;
     font-size: 17px;
@@ -253,6 +256,7 @@
   @media (min-width: 600px) {
     .tsu { align-items: center; padding: 64px 24px; }
     .tsu__heading { font-size: 40px; }
+    .tsu__heading--role { font-size: 28px; }
     .tsu__row { grid-template-columns: 1fr 1fr; }
     .tsu__sport-grid { grid-template-columns: 1fr 1fr 1fr; }
   }
@@ -288,7 +292,10 @@
 
     {%- comment -%} Step 1: role {%- endcomment -%}
     <div class="tsu__step" data-step="role">
-      <h1 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.role_heading | escape }}</h1>
+      {%- comment -%} Keep "Parent/Guardian/Coach" on one line (browsers break after "/"). {%- endcomment -%}
+      <h1 class="tsu__heading tsu__heading--role" tabindex="-1" data-step-heading>
+        {{- section.settings.role_heading | escape | replace: 'Parent/Guardian/Coach', '<span class="tsu__nowrap">Parent/Guardian/Coach</span>' -}}
+      </h1>
       {%- if section.settings.role_text != blank -%}
         <p class="tsu__text">{{ section.settings.role_text | escape }}</p>
       {%- endif -%}

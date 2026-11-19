@@ -16,7 +16,13 @@
 
   /* ---------- pure helpers (exported for tests) ---------- */
 
+  // Birth month/year are optional (coaches may not have one athlete). Blank
+  // values are left out so they never erase what Klaviyo already has.
   function buildParentPayload(cfg, v) {
+    var props = { signup_source: cfg.signupSource, signup_role: 'parent' };
+    if (v.birthMonth) props.athlete_birth_month = v.birthMonth;
+    if (v.birthYear) props.athlete_birth_year = v.birthYear;
+    props.sports_played = v.sports;
     return {
       data: {
         type: 'subscription',
@@ -29,13 +35,7 @@
                 email: v.email,
                 first_name: v.firstName,
                 last_name: v.lastName,
-                properties: {
-                  signup_source: cfg.signupSource,
-                  signup_role: 'parent',
-                  athlete_birth_month: v.birthMonth,
-                  athlete_birth_year: v.birthYear,
-                  sports_played: v.sports
-                },
+                properties: props,
                 subscriptions: { email: { marketing: { consent: 'SUBSCRIBED' } } }
               }
             }

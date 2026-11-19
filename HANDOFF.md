@@ -10,7 +10,7 @@ Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start 
 1. **Athlete button = links only, nothing collected.** Matches the privacy policy's "Children" section ("only from the parent"). Removed the age step, the teen form, the teen payload and the under-13 device lock. The links screen shows "Ask a parent or guardian to scan this code to unlock event pricing." (setting `athlete_note`).
 2. **Consent line** under the parent submit button (settings `consent_text`, `privacy_label`), linking `shop.privacy_policy.url` (`/policies/privacy-policy`).
 3. **No phone field for now.** Add it when FUTR launches texting, together with a separate unticked SMS consent checkbox and disclosure, E.164 validation, and a registered Klaviyo texting number (none set up yet; carrier registration can take weeks; plan has a $5/month SMS allowance; the privacy policy's "Text messages" section already covers SMS).
-- **"Coach" stays** on the parent button (Carli and Michael, 2026-11-19): coaches are worth marketing to. Coaches still have to fill in the athlete birth month/year fields.
+- **"Coach" stays** on the parent button (Carli and Michael, 2026-11-19): coaches are worth marketing to. Athlete birth month/year are now **optional** so coaches can skip them (Michael, 2026-11-19).
 
 **Also open:** follow-up sync check, test-profile cleanup, NOVEVENT20 settings, retiring Sara's old page (see TODO).
 
@@ -35,7 +35,7 @@ Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start 
 - `POST https://a.klaviyo.com/client/subscriptions/?company_id=RP33x9`
 - Email marketing SUBSCRIBED, list `X9rGAu` (single opt-in), `custom_source` "November 2026 Tournament QR".
 - Profile: `email`, `first_name`, `last_name`.
-- Properties: `signup_source: "november-2026-tournament"`, `signup_role: "parent"`, `athlete_birth_month: "MM"`, `athlete_birth_year: "YYYY"` (added 2026-11-18), `sports_played: [..]`.
+- Properties: `signup_source: "november-2026-tournament"`, `signup_role: "parent"`, `athlete_birth_month: "MM"`, `athlete_birth_year: "YYYY"` (added 2026-11-18; **optional** since 2026-11-19 and left out of the payload when blank, so a returning parent's saved values are never erased), `sports_played: [..]`.
 - On success, shows the promo code `NOVEVENT20` (a section setting).
 
 ### Athlete (any age), since 2026-11-19
@@ -123,3 +123,8 @@ Requested by FUTR through Carli:
 - JS: removed `isUnder13`, `buildTeenPayload`, localStorage helpers and the age/teen submit handling. Only `buildParentPayload` remains.
 - Tested in `shopify theme dev` at 390px with Klaviyo intercepted: Athlete → links with **0 requests**; parent signup → 1 request to `client/subscriptions`, same properties as before (incl. `athlete_birth_year`), list `X9rGAu`, code NOVEVENT20 shown; consent line and privacy link render. Unit test passes; theme check has no offenses in the signup files.
 - Main was checked first: Sara's 2026-11-19 commit ("Coming soon" instead of "Sold out") doesn't touch these files.
+
+## Optional athlete birth date (2026-11-19, branch `optional-birth-date`)
+- Parent form: birth month and year are no longer required; labels say "(optional)". Blank values are omitted from the Klaviyo payload (not sent as empty strings).
+- Section header comment updated to the current steps (it still described the removed age/teen steps).
+- Tested with Klaviyo intercepted: blank → form submits, properties are only `signup_source`, `signup_role`, `sports_played`; filled → both birth properties sent as before. Unit tests cover blank, month-only and filled.

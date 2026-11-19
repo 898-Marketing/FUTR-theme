@@ -93,8 +93,8 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
   - Set an end date once FUTR confirms it. It's currently open-ended.
   - The discount applies to all customers and isn't tied to a segment.
 
-- [x] **Retired Sara's old event landing page** (Michael, 2026-11-19): removed `sections/event-signup.liquid` and `templates/page.event-signup.json` (unused by any page; recoverable from Git history and the `pre-handoff-2026-11-17` tag). The Shopify page "November Event" (`/pages/november-event`) is empty, on the default page template, and in no menu.
-- [ ] Shopify page "November Event": proposed to delete it and add a URL redirect `/pages/november-event` → `/pages/tournament` (in case the old URL was shared). Waiting on Michael's OK.
+- [x] **Retired Sara's old event landing page** (Michael, 2026-11-19): removed `sections/event-signup.liquid` and `templates/page.event-signup.json` (unused by any page; recoverable from Git history and the `pre-handoff-2026-11-17` tag). The Shopify page "November Event" was empty, on the default page template, and in no menu.
+- [x] Shopify page "November Event" (`/pages/november-event`) deleted by Michael on 2026-11-19. No redirect (Michael's call); the old URL now 404s.
 
 ## Form update (2026-11-18, PR #2, merged)
 Requested by FUTR through Carli:

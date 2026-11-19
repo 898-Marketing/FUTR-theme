@@ -572,7 +572,7 @@
       "view_details": "View details"
     },
     "product": {
-      "sold_out": "Sold out",
+      "sold_out": "Coming soon",
       "preorder": "Preorder",
       "on_sale": "On sale",
       "on_sale_from_html": "On Sale from {{ price }}",

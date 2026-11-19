@@ -1834,7 +1834,7 @@ class ProductCrossSell extends lit_element_s {
                     `}
                   </a>
                 `
-                : x`<span>Sold out</span>`
+                : x`<span>Coming soon</span>`
               }
             </div>
           ` : ''}

@@ -3,6 +3,18 @@
 Work on a new branch per change and open a PR (never commit to `main`; `main` is synced to the FUTR-theme/main store theme (`#183321919775`) through Shopify's GitHub integration, and Theme Editor edits on that theme commit back to `main` as shopify[bot]). Always `git fetch` and check `main` for Sara's/Customizer edits before branching.
 Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start of every session.
 
+## Where we left off (end of day 2026-11-19)
+- **Waiting on FUTR's review** of the free tee offer and the HOOPS20 rename. Michael tested both on the live store (behind the password) and they look good. Carli has the test steps to send to FUTR.
+- Nothing is in progress and no open PRs (only this handoff update). Everything up to PR #12 is merged and live.
+- **Next session:** read FUTR's feedback, then work through the open items:
+  1. Turn the store password off before the event (Michael/FUTR decide when).
+  2. HOOPS20 end date (waiting on FUTR).
+  3. Test the free tee + HOOPS20 together in a real checkout (not tested yet).
+  4. Post-launch QA list below is **on hold** until Michael says go (FUTR sent their own findings first).
+  5. Clean product URLs: plan agreed, waiting on Michael's go.
+  6. Michael: delete the test profiles in Klaviyo and Shopify (see TODO).
+- Don't start the QA fixes or the URL change without Michael's go.
+
 ## Status (2026-11-19): published, password still on
 **Page is finished and approved.** All changes merged to `main` (PRs #1–#6) and synced to FUTR-theme/main. Michael is publishing FUTR-theme/main as the live theme on 2026-11-19 (replacing "Coming Soon Dark Revised" `#183332831519`, which stays as the rollback; don't delete it).
 
@@ -12,7 +24,7 @@ What the page does now:
 - No phone field.
 
 PR history:
-- #1 page build · #2 athlete birth year, "event pricing" copy (Carli) · #3 role headline smaller, "Parent/Guardian/Coach" on one line · #4 athlete links-only + consent line (FUTR approved) · #5 birth date optional (coaches) · #6 desktop: birth month/year boxes level when a label wraps (`align-items: end` on `.tsu__row`).
+- #1 page build · #2 athlete birth year, "event pricing" copy (Carli) · #3 role headline smaller, "Parent/Guardian/Coach" on one line · #4 athlete links-only + consent line (FUTR approved) · #5 birth date optional (coaches) · #6 desktop: birth month/year boxes level when a label wraps (`align-items: end` on `.tsu__row`). · #7 handoff + go-live checklist · #8 retired Sara's old event page (`event-signup`) · #9 launch state + post-launch plan · #10 social share tag fixes · #11 promo code NOVEVENT20 → HOOPS20 · #12 free FUTR tee cart prompt.
 
 FUTR decisions (Suzanne via Carli, 2026-11-19: "we align with your recommendations"):
 1. **Athlete button = links only.** Matches the privacy policy's "Children" section (event info "only from the parent").

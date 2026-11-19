@@ -4,7 +4,16 @@ Branch: `event-signup-page` (never commit to `main`; `main` is synced to the FUT
 Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start of every session.
 
 ## Status (2026-11-18)
-**Done:** page built, reviewed by Michael, and live-tested (parent + teen) on 2026-11-18. **Next:** follow-up sync check, the teen-offer decision, then the PR to Sara.
+**Done:** page built, live-tested, merged to `main` (PR #1), then FUTR's edits merged (PR #2: athlete birth year, "event pricing" copy). 2026-11-19 (Carli): first headline smaller so "Parent/Guardian/Coach" stays on one line (`.tsu__heading--role`, `.tsu__nowrap` in the section; only matches that exact spelling in the heading setting). Client preview: https://a36ab9-2.myshopify.com/pages/contact?preview_theme_id=183321919775&view=tournament-signup (store password needed).
+
+**Waiting on FUTR (sent to Carli 2026-11-18, for Suzanne at FUTR).** Don't build any of these until FUTR answers:
+1. **Athlete path vs. privacy policy.** The policy's "Children" section says event info is collected "only from the parent, with the parent's signed consent", and that email and text sign-ups are 18+. The teen path currently collects a teen's own name, email, birth month and year, and sports. Recommended: Athlete button goes straight to the social links with "Have your parent or guardian scan to unlock event pricing"; collect nothing from athletes. This would remove the age step, the under-13 lock and the teen payload.
+2. **Consent line** under the parent button (a section setting): "By signing up, you agree to receive marketing emails from FUTR. You can unsubscribe anytime." plus a link to the privacy policy (`/policies/privacy-policy`).
+3. **Parent phone number.** Recommended: wait until FUTR launches texting. If they want it now: optional field plus an unticked SMS consent checkbox with disclosure (linking Klaviyo-hosted mobile terms and the privacy policy), phone validated to E.164. Klaviyo facts as of 2026-11-18: plan includes a $5/month SMS allowance; **no texting number set up yet** (carrier registration can take weeks); the privacy policy already has a "Text messages" section that covers SMS.
+
+**When FUTR replies:** new branch from `main`, build, test in `shopify theme dev` with Klaviyo intercepted, update this file, PR for review.
+
+**Also open:** follow-up sync check, test-profile cleanup, NOVEVENT20 settings, retiring Sara's old page (see TODO).
 
 ## How to preview
 - `shopify theme dev` from the repo root (store is already the CLI default).
@@ -109,13 +118,14 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
     - Before deleting it, confirm the URL wasn't printed or shared (earlier QR code, flyer, email).
     - If it was, replace it with a URL redirect to `/pages/tournament` instead.
 
-## Form update (2026-11-18, branch `form-birth-year-copy`)
+## Form update (2026-11-18, PR #2, merged)
 Requested by FUTR through Carli:
 - Parent form: required **Athlete's birth year** dropdown next to the birth month. Sent as `athlete_birth_year`.
 - Copy: "tournament pricing" → "event pricing" everywhere. "At our table" removed from the parent form intro only; the confirmation page keeps "see our table to purchase!" and the code label "Show this code at the FUTR table".
 - **Parent phone number: not added.** Advised holding off: marketing texts need a separate SMS opt-in (TCPA), and SMS isn't set up in Klaviyo (no texting number as of 2026-11-18). If FUTR wants it later: optional field plus an unticked SMS consent checkbox with compliant disclosure, after SMS is set up, with the phone validated to E.164 so a bad number can't fail the email signup.
 - Tested (Klaviyo intercepted): payload includes `athlete_birth_year`, the form can't submit without it, new copy renders, unit tests pass, theme check clean.
-- Until this merges, nobody should edit the tournament page in the Customizer (the template file changed here too).
+- Asked Carli/Sara not to edit the tournament page in the Customizer while code changes are in progress, so edits don't collide with the template file.
+- If FUTR tests on the preview link, those are real Klaviyo signups (welcome email sends). Get the email and add it to the test-profile cleanup.
 - The welcome email in Klaviyo (flow `URegZD`) may still say "tournament"; check its copy.
 
 ## Notes and known issues (not caused by this work)

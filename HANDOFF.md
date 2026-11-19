@@ -55,6 +55,25 @@ QA was run on the local dev server (same code as the live theme). Checkout, paym
 **Before ads launch**
 11. Consent: Shopify's built-in cookie banner (Michael setting up 2026-11-19), GPC/state opt-outs; keep ad pixels off `/pages/tournament`; don't build ad audiences from athlete data (privacy policy promise); FUTR's lawyer to decide on Washington (My Health My Data). Osano not needed at FUTR's size.
 
+## Free FUTR tee offer (2026-11-19, branch `free-tee-cart-prompt`)
+FUTR's rule (Suzanne via Carli): buy any 2 full-size products, get 1 FUTR Logo Tee **or** Logo Crop free, one per order, no end date. A % code (HOOPS20, EMAIL20, SUZIE20) can be used on top, but % codes never stack with each other.
+
+**Shopify discounts (done via Admin API 2026-11-19)**
+- New automatic Buy X Get Y **"Free FUTR Tee (2+ full-size products)"** (`gid://shopify/DiscountAutomaticNode/2083923296543`): buy 2 of these 10 variants (any mix) → 1 of products `t-shirt` / `futr-logo-crop` at 100% off, `usesPerOrderLimit` 1, combines with **order** discounts only.
+  - Qualifying = Pregame and Gametime **Stick Pack Box** + **Tub** (all flavors) and Recover+ **Tub** (both flavors). The single **"Stick Pack"** variants ($0, not for sale) are excluded on purpose (FUTR: single sticks aren't full-size).
+  - **New flavors/sizes must be added to the discount by hand** (Discounts → the tee discount → "Customer buys"), and the snippet rule below must still match.
+- Deactivated (not deleted) the two old broken ones: "Free T-Shirt" (min qty 3 counted only tees) and "Free T-Shirt with Bundle" (bundles are Draft products).
+- HOOPS20, EMAIL20, SUZIE20 (all **order**-class 20% codes): `combinesWith` = product discounts only, so each stacks with the tee but not with each other.
+
+**Theme (cart drawer prompt)**
+- `snippets/cart-free-tee.liquid`, rendered in the cart drawer header (re-rendered on every cart change): 0–1 qualifying items → "Add N more Pregame, Gametime or Recover+ to get a free FUTR tee"; 2+ → "You've earned a free FUTR tee!" with a Logo Tee/Logo Crop size picker + "Add free tee"; tee in cart with the discount applied → "Your free FUTR tee is in your cart."
+  - Rule mirrors the discount: products `pregame`, `gametime`, `recover`, option1 not `Stick Pack`; tees `t-shirt`, `futr-logo-crop`; minimum 2. Change these together with the discount.
+- `assets/cart-free-tee.js`: delegated submit → `/cart/add.js` with `sections: cart-drawer`, then emits the theme's `update:cart:drawer` and updates the header count.
+- Theme setting **Theme settings → Cart → "Show free tee offer in cart drawer"** (`free_tee_enabled`, default on).
+- **To end the offer: deactivate the discount AND uncheck that setting** (two switches; Liquid can't see whether an automatic discount is active before the tee is added).
+- Also: cart drawer and cart page no longer show $0 discount badges (BXGY tags the qualifying items with a $0 allocation).
+- Tested on the dev server (mobile + desktop): 1 item → "Add 1 more"; 2 items (same or mixed products) → picker lists all in-stock tee/crop sizes; adding a Logo Crop → $0.00 with the discount, count updates; dropping back to 1 → tee returns to $12.99 and message says "to make your tee free". Checkout + HOOPS20 stacking not yet tested (needs a real checkout).
+
 ## Promo code renamed (2026-11-19)
 FUTR asked to rename the event code **NOVEVENT20 → HOOPS20** everywhere (same discount, same settings: 20% off all products, one use per customer, no combinations). Changed: the Shopify discount's code and title, the page's `promo_code` setting (template + schema default), and the Klaviyo welcome email (code box, plain text, preview text, message name). Older notes below that mention the code now read HOOPS20.
 

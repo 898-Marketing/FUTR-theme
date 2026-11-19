@@ -1,0 +1,76 @@
+{%- comment -%}
+  Free FUTR tee prompt for the cart drawer (rendered inside the re-rendered cart header).
+
+  Mirrors the Shopify automatic discount "Free FUTR Tee (2+ full-size products)":
+  buy 2+ full-size Pregame / Gametime / Recover+ (any option except a single
+  "Stick Pack"), get 1 FUTR Logo Tee or FUTR Logo Crop free, one per order.
+  The discount does the pricing; this only tells shoppers and lets them add a tee.
+
+  To end the offer: deactivate that discount AND uncheck
+  Theme settings > Cart > "Show free tee offer in cart drawer".
+  If products, handles or the minimum change, update the discount and this file together.
+{%- endcomment -%}
+{%- if settings.free_tee_enabled and cart.item_count > 0 -%}
+  {%- liquid
+    assign tee_min = 2
+    assign qualifying_handles = 'pregame,gametime,recover' | split: ','
+    assign tee_handles = 't-shirt,futr-logo-crop' | split: ','
+    assign excluded_option = 'Stick Pack'
+    assign discount_title = 'Free FUTR Tee'
+
+    assign qualifying = 0
+    assign tee_in_cart = false
+    assign tee_free = false
+    for item in cart.items
+      if qualifying_handles contains item.product.handle
+        if item.variant.option1 != excluded_option
+          assign qualifying = qualifying | plus: item.quantity
+        endif
+      elsif tee_handles contains item.product.handle
+        assign tee_in_cart = true
+        for allocation in item.line_level_discount_allocations
+          if allocation.discount_application.title contains discount_title
+            assign tee_free = true
+          endif
+        endfor
+      endif
+    endfor
+    assign remaining = tee_min | minus: qualifying
+  -%}
+
+  {%- if tee_free -%}
+    <div class="cart-free-tee cart-free-tee--done block-radius" role="status">
+      <p class="cart-free-tee__title">Your free FUTR tee is in your cart.</p>
+    </div>
+  {%- elsif qualifying >= tee_min and tee_in_cart == false -%}
+    <div class="cart-free-tee cart-free-tee--earned block-radius">
+      <p class="cart-free-tee__title">You've earned a free FUTR tee!</p>
+      <form class="cart-free-tee__form" data-free-tee-form>
+        <select class="cart-free-tee__select input-radius" name="id" aria-label="Choose your free tee" required>
+          <option value="" selected disabled>Choose style and size</option>
+          {%- for handle in tee_handles -%}
+            {%- assign tee = all_products[handle] -%}
+            {%- if tee != blank and tee.available -%}
+              <optgroup label="{{ tee.title | escape }}">
+                {%- for variant in tee.variants -%}
+                  {%- if variant.available -%}
+                    <option value="{{ variant.id }}">{{ tee.title | remove: 'FUTR ' | escape }} – {{ variant.title | escape }}</option>
+                  {%- endif -%}
+                {%- endfor -%}
+              </optgroup>
+            {%- endif -%}
+          {%- endfor -%}
+        </select>
+        <button type="submit" class="btn dynamic-section-button--drawer-filled cart-free-tee__button">Add free tee</button>
+      </form>
+      <p class="cart-free-tee__error" data-free-tee-error hidden>Couldn't add the tee. Please try again.</p>
+    </div>
+  {%- elsif qualifying < tee_min -%}
+    <div class="cart-free-tee block-radius">
+      <p class="cart-free-tee__title">
+        Add {{ remaining }} more Pregame, Gametime or Recover+
+        {% if tee_in_cart %}to make your tee free.{% else %}to get a free FUTR tee.{% endif %}
+      </p>
+    </div>
+  {%- endif -%}
+{%- endif -%}

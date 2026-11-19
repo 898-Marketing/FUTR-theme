@@ -225,6 +225,8 @@
                   {%- if item.line_level_discount_allocations != blank -%}
                     <ul class="order-discount--cart-list discount--sale-color" aria-label="{{ 'customer.order.discount' | t }}">
                       {%- for discount_allocation in item.line_level_discount_allocations -%}
+                        {%- comment -%} Skip $0 allocations, e.g. the qualifying items of a buy-X-get-Y discount {%- endcomment -%}
+                        {%- if discount_allocation.amount == 0 -%}{%- continue -%}{%- endif -%}
                         {% liquid
                           if settings.show_currency_code
                             assign discount_allocation_amount = discount_allocation.amount | money_with_currency

@@ -151,7 +151,8 @@
   }
 
   .tsu__fields { display: flex; flex-direction: column; gap: 16px; }
-  .tsu__row { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  /* align-items: end keeps side-by-side inputs level when one label wraps. */
+  .tsu__row { display: grid; grid-template-columns: 1fr; gap: 16px; align-items: end; }
   .tsu__field { display: flex; flex-direction: column; gap: 6px; }
   .tsu__label, .tsu__legend {
     font-size: 14px;

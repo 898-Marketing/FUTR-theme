@@ -26,6 +26,35 @@ FUTR decisions (Suzanne via Carli, 2026-11-19: "we align with your recommendatio
 - Done: page `/pages/tournament` on template `tournament-signup` and Visible; NOVEVENT20 one use per customer; QR code confirmed by Michael.
 - Still open: turn the password off before the event; NOVEVENT20 end date (waiting on FUTR); one real phone signup test, then delete that profile; consider a separate staging theme for future previews (18 of 20 theme slots used).
 
+## Post-launch plan (from QA on 2026-11-19; nothing here is built yet)
+QA was run on the local dev server (same code as the live theme). Checkout, payment and the cookie banner were not covered (live-store only; Michael tests those).
+
+**Fix soon (visible to shoppers)**
+1. **Placeholder content on the default product template** (`templates/product.json`), used by 7 products: Fuel the Game Performance Tee, Miami Tip Off Tee, FUTR Compression Tee, FUTR Logo Towel, Stainless Steel Shaker, FUTR Shipper Display, Test Product. Shows an empty grey `image_with_text_overlay_JH64Gc` (no image; also prints a Liquid error in its CSS) and `featured_collection_gi6QWq` "Mix and Match!" with no collection, so it renders fake "Product title $19.99" cards linking to `/admin/products`. Fix: pick a collection (or remove the section) and add an image (or remove the section), via Theme Editor or a PR.
+2. **"Join the Roster" popup opens over the cart drawer** on mobile (12s after load) and covers Checkout. Options: turn it off, lengthen the delay, or change code so it doesn't open while the cart drawer is open. Michael to pick.
+3. **Social share tags:** PR #10 fixes the Liquid error in `og:image` and the `x:` → `twitter:` tag names. Share image and homepage meta description are now set in Preferences (2026-11-19).
+
+**Product URLs (agreed approach, waiting on Michael's go)**
+4. Product links render as `/collections/products/products/gametime` because the main collection's handle is `products` and the theme uses `| within: collection`. Plan: drop `within:` in the 8 product-link spots (`sections/featured-product.liquid`, `sections/template--cart.liquid`, `snippets/grid-view-item.liquid` ×3, `snippets/product-grid-item-price.liquid`, `snippets/quick-view-modal.liquid` ×2) so every link is `/products/<handle>`.
+   - No broken links: Shopify still serves the old collection-style URLs, and canonical tags already point to `/products/<handle>`, so SEO is unaffected. Breadcrumbs (the only thing using collection context) are switched off.
+   - Test: crawl confirms clean 200 product links; quick view and add-to-cart from collections; cart image link. Revert = one PR.
+   - Skip renaming the `products` collection handle (needs menu updates + redirect, and still leaves a long URL).
+
+**Cleanup**
+5. Test Product: Draft/Archive after the test order (shows in All products and search; also listed on Facebook, TikTok and Google channels).
+6. Stainless Steel Shaker has no product images.
+7. Homepage title shows "FUTR | … – FUTR Performance" because the theme appends the shop name; shorten the Preferences title to "Youth Sports Nutrition for Young Athletes".
+
+**Questions for FUTR**
+8. FUTR Merch collection only has the Logo Tee and Logo Crop (not Miami Tip Off Tee, Fuel the Game Tee, Compression Tee, Towel, Shaker). Intentional?
+9. Cart drawer shows unit price per line (e.g. $34.99 at qty 2), not the line total; subtotal is correct. Theme design, FYI.
+
+**Minor SEO**
+10. No H1 on collection pages, About, Our Standard or Contact; the blog's H1 is the newsletter "Sign up here!".
+
+**Before ads launch**
+11. Consent: Shopify's built-in cookie banner (Michael setting up 2026-11-19), GPC/state opt-outs; keep ad pixels off `/pages/tournament`; don't build ad audiences from athlete data (privacy policy promise); FUTR's lawyer to decide on Washington (My Health My Data). Osano not needed at FUTR's size.
+
 ## Go-live checklist (2026-11-19)
 Checked through the APIs right before launch:
 - **Store password is ON** (`onlineStore.passwordProtection.enabled: true`). While it's on, QR visitors hit the password page and **can't reach `/pages/tournament`**. Publishing the theme does not turn it off. Turn it off (Online Store → Preferences) when FUTR is ready, or the QR code won't work. FUTR-theme/main's own password page is Sara's "Our Site is Coming Soon" version.

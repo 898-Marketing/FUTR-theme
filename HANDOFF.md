@@ -3,7 +3,7 @@
 Work on a new branch per change and open a PR (never commit to `main`; `main` is synced to the FUTR-theme/main store theme (`#183321919775`) through Shopify's GitHub integration, and Theme Editor edits on that theme commit back to `main` as shopify[bot]). Always `git fetch` and check `main` for Sara's/Customizer edits before branching.
 Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start of every session.
 
-## Status (2026-11-19): ready to go live
+## Status (2026-11-19): published, password still on
 **Page is finished and approved.** All changes merged to `main` (PRs #1–#6) and synced to FUTR-theme/main. Michael is publishing FUTR-theme/main as the live theme on 2026-11-19 (replacing "Coming Soon Dark Revised" `#183332831519`, which stays as the rollback; don't delete it).
 
 What the page does now:
@@ -19,6 +19,12 @@ FUTR decisions (Suzanne via Carli, 2026-11-19: "we align with your recommendatio
 2. **Consent line** under the parent button (settings `consent_text`, `privacy_label`), linking `shop.privacy_policy.url`.
 3. **No phone field for now.** When FUTR launches texting: optional phone field + separate unticked SMS consent checkbox and disclosure, E.164 validation, and a registered Klaviyo texting number (none set up as of 2026-11-19; carrier registration can take weeks; plan has a $5/month SMS allowance; the privacy policy's "Text messages" section already covers SMS).
 - **"Coach" stays** on the button (Carli + Michael): coaches are worth marketing to; that's why the birth date is optional.
+
+## Launch state (updated 2026-11-19, verified via API)
+- **FUTR-theme/main is the live (published) theme.** Every merge to `main` and every Theme Editor edit now changes the live site. Rollback: republish "Coming Soon Dark Revised" (`#183332831519`).
+- **Store password is ON on purpose:** FUTR and 898 are testing checkout first. Visitors see Sara's "Our Site is Coming Soon" password page. The QR page only works for visitors once the password is turned off; people with the password can use https://futrperformance.com/pages/tournament now.
+- Done: page `/pages/tournament` on template `tournament-signup` and Visible; NOVEVENT20 one use per customer; QR code confirmed by Michael.
+- Still open: turn the password off before the event; NOVEVENT20 end date (waiting on FUTR); one real phone signup test, then delete that profile; consider a separate staging theme for future previews (18 of 20 theme slots used).
 
 ## Go-live checklist (2026-11-19)
 Checked through the APIs right before launch:

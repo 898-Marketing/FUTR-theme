@@ -37,7 +37,7 @@ Checked through the APIs right before launch:
   - `?view=` swaps in the template for that one request; the data sent is identical.
 - **Warning:** submitting the parent form on the preview sends **real** data to Klaviyo.
 
-## Files touched (all new; Sara's event-signup files untouched)
+## Files touched (all new)
 - `sections/tournament-signup.liquid`: markup, CSS, Customizer settings, inline JSON config for the JS.
 - `snippets/tournament-signup-sports.liquid`: the 18-sport checkbox grid.
 - `snippets/tournament-signup-honeypot.liquid`: hidden spam field.
@@ -109,13 +109,8 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
   - Set an end date once FUTR confirms it. It's currently open-ended.
   - The discount applies to all customers and isn't tied to a segment.
 
-- [ ] **Retire Sara's old event landing page** (coordinate with Sara first; it's her work):
-  - Remove `sections/event-signup.liquid` and `templates/page.event-signup.json` through a PR.
-    - No page uses the template, and it subscribes through Shopify's customer form, the path this project replaced.
-    - Recoverable from Git history and the `pre-handoff-2026-11-17` tag.
-  - Shopify page "November Event" (`/pages/november-event`) is published on the default page template.
-    - Before deleting it, confirm the URL wasn't printed or shared (earlier QR code, flyer, email).
-    - If it was, replace it with a URL redirect to `/pages/tournament` instead.
+- [x] **Retired Sara's old event landing page** (Michael, 2026-11-19): removed `sections/event-signup.liquid` and `templates/page.event-signup.json` (unused by any page; recoverable from Git history and the `pre-handoff-2026-11-17` tag). The Shopify page "November Event" (`/pages/november-event`) is empty, on the default page template, and in no menu.
+- [ ] Shopify page "November Event": proposed to delete it and add a URL redirect `/pages/november-event` → `/pages/tournament` (in case the old URL was shared). Waiting on Michael's OK.
 
 ## Form update (2026-11-18, PR #2, merged)
 Requested by FUTR through Carli:
@@ -129,7 +124,6 @@ Requested by FUTR through Carli:
 
 ## Notes and known issues (not caused by this work)
 - `snippets/social-meta-tags.liquid` lines 8-9 output "Liquid error: invalid url input" inside meta tags when a page has no image. It's on every page, already existed, and isn't visible.
-- **Sara's `sections/event-signup.liquid`:** its hide-chrome CSS doesn't hide the theme's "Join the Roster" popup (`#popup` / `#slide-up`). The tournament section hides it.
 - Theme Check baseline before this work: 34 errors and 191 warnings (saved in `~/FUTR-theme-backups/2026-11-17/`).
 - The store has 18 themes (limit 20), including the dev theme `#186089242911` from `shopify theme dev`. Don't delete themes; Michael/Sara manage that.
 - Klaviyo's on-site embed is enabled sitewide. If any Klaviyo popup forms target all pages, exclude `/pages/tournament` in Klaviyo.

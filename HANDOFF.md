@@ -3,15 +3,14 @@
 Branch: `event-signup-page` (never commit to `main`; `main` is synced to the FUTR-theme/main store theme through Shopify's GitHub integration).
 Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start of every session.
 
-## Status (2026-11-18)
-**Done:** page built, live-tested, merged to `main` (PR #1), then FUTR's edits merged (PR #2: athlete birth year, "event pricing" copy). 2026-11-19 (Carli): first headline smaller so "Parent/Guardian/Coach" stays on one line (`.tsu__heading--role`, `.tsu__nowrap` in the section; only matches that exact spelling in the heading setting). Client preview: https://a36ab9-2.myshopify.com/pages/contact?preview_theme_id=183321919775&view=tournament-signup (store password needed).
+## Status (2026-11-19)
+**Done:** page built, live-tested, merged to `main` (PR #1), then FUTR's edits merged (PR #2: athlete birth year, "event pricing" copy). 2026-11-19 (Carli): first headline smaller so "Parent/Guardian/Coach" stays on one line (PR #3; `.tsu__heading--role`, `.tsu__nowrap` in the section; only matches that exact spelling in the heading setting). Client preview: https://a36ab9-2.myshopify.com/pages/contact?preview_theme_id=183321919775&view=tournament-signup (store password needed).
 
-**Waiting on FUTR (sent to Carli 2026-11-18, for Suzanne at FUTR).** Don't build any of these until FUTR answers:
-1. **Athlete path vs. privacy policy.** The policy's "Children" section says event info is collected "only from the parent, with the parent's signed consent", and that email and text sign-ups are 18+. The teen path currently collects a teen's own name, email, birth month and year, and sports. Recommended: Athlete button goes straight to the social links with "Have your parent or guardian scan to unlock event pricing"; collect nothing from athletes. This would remove the age step, the under-13 lock and the teen payload.
-2. **Consent line** under the parent button (a section setting): "By signing up, you agree to receive marketing emails from FUTR. You can unsubscribe anytime." plus a link to the privacy policy (`/policies/privacy-policy`).
-3. **Parent phone number.** Recommended: wait until FUTR launches texting. If they want it now: optional field plus an unticked SMS consent checkbox with disclosure (linking Klaviyo-hosted mobile terms and the privacy policy), phone validated to E.164. Klaviyo facts as of 2026-11-18: plan includes a $5/month SMS allowance; **no texting number set up yet** (carrier registration can take weeks); the privacy policy already has a "Text messages" section that covers SMS.
-
-**When FUTR replies:** new branch from `main`, build, test in `shopify theme dev` with Klaviyo intercepted, update this file, PR for review.
+**FUTR decisions (Suzanne via Carli, 2026-11-19: "we align with your recommendations"), built on branch `athlete-links-consent`:**
+1. **Athlete button = links only, nothing collected.** Matches the privacy policy's "Children" section ("only from the parent"). Removed the age step, the teen form, the teen payload and the under-13 device lock. The links screen shows "Ask a parent or guardian to scan this code to unlock event pricing." (setting `athlete_note`).
+2. **Consent line** under the parent submit button (settings `consent_text`, `privacy_label`), linking `shop.privacy_policy.url` (`/policies/privacy-policy`).
+3. **No phone field for now.** Add it when FUTR launches texting, together with a separate unticked SMS consent checkbox and disclosure, E.164 validation, and a registered Klaviyo texting number (none set up yet; carrier registration can take weeks; plan has a $5/month SMS allowance; the privacy policy's "Text messages" section already covers SMS).
+- **"Coach" stays** on the parent button (Carli and Michael, 2026-11-19): coaches are worth marketing to. Coaches still have to fill in the athlete birth month/year fields.
 
 **Also open:** follow-up sync check, test-profile cleanup, NOVEVENT20 settings, retiring Sara's old page (see TODO).
 
@@ -20,7 +19,7 @@ Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start 
 - The page `/pages/tournament` exists but is **Hidden**. Shopify returns 404 for hidden pages, even in a dev preview.
 - **Preview on any published page instead:** http://127.0.0.1:9292/pages/contact?view=tournament-signup
   - `?view=` swaps in the template for that one request; the data sent is identical.
-- **Warning:** submitting the parent form or the teen form (with email) on the preview sends **real** data to Klaviyo.
+- **Warning:** submitting the parent form on the preview sends **real** data to Klaviyo.
 
 ## Files touched (all new; Sara's event-signup files untouched)
 - `sections/tournament-signup.liquid`: markup, CSS, Customizer settings, inline JSON config for the JS.
@@ -39,32 +38,16 @@ Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start 
 - Properties: `signup_source: "november-2026-tournament"`, `signup_role: "parent"`, `athlete_birth_month: "MM"`, `athlete_birth_year: "YYYY"` (added 2026-11-18), `sports_played: [..]`.
 - On success, shows the promo code `NOVEVENT20` (a section setting).
 
-### Athlete 13+ who enters an email
-- `POST https://a.klaviyo.com/client/profiles/?company_id=RP33x9`: profile only. No list, no consent, never the subscriptions endpoint.
-- Profile: `email` only.
-- Properties (all `teen_*`): `teen_profile: true`, `teen_signup_role: "athlete-teen"`, `teen_first_name`, `teen_birth_month`, `teen_birth_year`, `teen_sports_played`.
-- No `signup_source`, `signup_role` or `first_name`.
-- No promo code shown.
-
-### Athlete 13+ with no email
-Nothing is sent. Shows the social and website links.
-
-### Athlete under 13
-- Nothing is sent. Sets `localStorage.futr_tourney_u13 = "1"`.
-- After that, choosing "Athlete" on this device goes straight to the links screen. The Parent path stays available, since FUTR may use a shared device at the table.
-- The cutoff is never shown on the page.
-- **Age rule:** under 13 by month. If the birth month is the current month and the year is exactly 13 years ago, it counts as under 13, because we can't confirm the day.
+### Athlete (any age), since 2026-11-19
+- Nothing is collected or sent. Choosing "Athlete" goes straight to the links screen (parent note, social icons, website button).
+- The old teen path (profiles endpoint, `teen_*` properties) and the under-13 lock (`localStorage.futr_tourney_u13`) were removed. Old test profiles may still carry `teen_*` properties; a leftover `futr_tourney_u13` key on a device is now ignored.
 
 ### Spam
-- Hidden honeypot field on both forms. If it's filled, the page shows the normal success screen and sends nothing.
+- Hidden honeypot field on the parent form. If it's filled, the page shows the normal success screen and sends nothing.
 - Submit is disabled for 2 seconds after each form step appears.
 
-## Edge case: teen enters a parent's email
-Klaviyo merges by email, so a teen's profile request updates the parent's existing profile. The teen request therefore sends **only `teen_*` properties**. The parent keeps their name, `signup_role`, `signup_source`, `athlete_birth_month`, `sports_played`, list membership and consent.
-
-The only change is that the `teen_*` fields (including `teen_profile: true`) are added.
-- Decided with Michael on 2026-11-17: `teen_first_name` instead of `first_name`, `teen_signup_role` instead of `signup_role`, and no `signup_source` for teens.
-- For segments: a parent profile can carry `teen_*` fields. Filter teens with `teen_profile = true`, and parents with `signup_role = parent`.
+## Edge case: teen enters a parent's email (historical)
+No longer possible: the teen path was removed on 2026-11-19. It only ever sent `teen_*` properties, so any parent profile touched during testing kept its parent data.
 
 ## Testing log
 - **Browser, Klaviyo requests intercepted:** all pass.
@@ -96,7 +79,7 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
 
 ## TODO
 - [ ] **Follow-up check (on or after 2026-11-19):** confirm `mmerdich+parent@898marketing.com` is still on **only** `X9rGAu` and never got a double opt-in confirmation email. If it was added to the newsletter list, fix the Shopify → Klaviyo sync before launch.
-- [ ] Decide whether teens 13+ get anything instead of the code. Suggested copy: "Have your parent or guardian scan to unlock tournament pricing." (Check with FUTR or Carli.)
+- [x] Athletes get a links-only screen with a parent note (FUTR agreed 2026-11-19).
 - [x] Welcome email test: Michael turned flow `URegZD` live on 2026-11-18. A new parent signup received "Your 20% off code is here" with NOVEVENT20 within a minute.
   - "Added to List" flows only trigger for people added after the flow goes live, so the older test profiles won't get it.
 - [ ] After merge and FUTR-theme/main goes live, assign page.tournament-signup to /pages/tournament and set it to Visible.
@@ -134,3 +117,9 @@ Requested by FUTR through Carli:
 - Theme Check baseline before this work: 34 errors and 191 warnings (saved in `~/FUTR-theme-backups/2026-11-17/`).
 - The store has about 18 of its 20 allowed themes. No preview theme is connected for this branch yet; Michael is arranging a slot with Sara.
 - Klaviyo's on-site embed is enabled sitewide. If any Klaviyo popup forms target all pages, exclude `/pages/tournament` in Klaviyo.
+
+## Athlete links-only + consent line (2026-11-19, branch `athlete-links-consent`)
+- Section: removed the `age` and `teen` steps and their settings (`age_*`, `teen_*`, also removed from the template JSON). Added `athlete_note`, `consent_text`, `privacy_label`.
+- JS: removed `isUnder13`, `buildTeenPayload`, localStorage helpers and the age/teen submit handling. Only `buildParentPayload` remains.
+- Tested in `shopify theme dev` at 390px with Klaviyo intercepted: Athlete → links with **0 requests**; parent signup → 1 request to `client/subscriptions`, same properties as before (incl. `athlete_birth_year`), list `X9rGAu`, code NOVEVENT20 shown; consent line and privacy link render. Unit test passes; theme check has no offenses in the signup files.
+- Main was checked first: Sara's 2026-11-19 commit ("Coming soon" instead of "Sold out") doesn't touch these files.

@@ -161,7 +161,9 @@
     text-transform: uppercase;
     color: var(--tsu-text);
   }
-  .tsu__optional { font-weight: 400; text-transform: none; opacity: 0.75; }
+  .tsu__text--strong { font-weight: 700; opacity: 1; }
+  .tsu__consent { margin: -6px 0 0; font-size: 13px; line-height: 1.45; text-align: center; color: var(--tsu-text); opacity: 0.8; }
+  .tsu__consent a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
   .tsu__input {
     width: 100%;
     min-height: 52px;
@@ -354,6 +356,14 @@
         <button type="button" class="tsu__btn tsu__btn--outline" data-retry>Try again</button>
       </div>
       <button type="submit" class="tsu__btn" data-submit data-label="{{ section.settings.parent_button | escape }}">{{ section.settings.parent_button | escape }}</button>
+      {%- if section.settings.consent_text != blank -%}
+        <p class="tsu__consent">
+          {{ section.settings.consent_text | escape }}
+          {%- if shop.privacy_policy and section.settings.privacy_label != blank %}
+            <a href="{{ shop.privacy_policy.url }}" target="_blank" rel="noopener">{{ section.settings.privacy_label | escape }}</a>
+          {%- endif -%}
+        </p>
+      {%- endif -%}
       <button type="button" class="tsu__link-btn" data-go="role">Back</button>
     </form>
 
@@ -372,65 +382,12 @@
       <button type="button" class="tsu__link-btn" data-go="role">Start a new signup</button>
     </div>
 
-    {%- comment -%} Step 2b: athlete birth month and year (the age cutoff is never shown) {%- endcomment -%}
-    <form class="tsu__step" data-step="age" data-kind="age" hidden>
-      <h2 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.age_heading | escape }}</h2>
-      {%- if section.settings.age_text != blank -%}
-        <p class="tsu__text">{{ section.settings.age_text | escape }}</p>
-      {%- endif -%}
-      <div class="tsu__row">
-        <div class="tsu__field">
-          <label class="tsu__label" for="tsu-{{ sid }}-a-month">Birth month</label>
-          <select class="tsu__input" id="tsu-{{ sid }}-a-month" name="birth_month" required>
-            <option value="" selected disabled>Month</option>
-            {%- for m in months -%}
-              <option value="{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}">{{ m }}</option>
-            {%- endfor -%}
-          </select>
-        </div>
-        <div class="tsu__field">
-          <label class="tsu__label" for="tsu-{{ sid }}-a-year">Birth year</label>
-          <select class="tsu__input" id="tsu-{{ sid }}-a-year" name="birth_year" required data-year-select data-oldest="{{ oldest_year }}">
-            <option value="" selected disabled>Year</option>
-            {%- for y in (oldest_year..current_year) reversed -%}
-              <option value="{{ y }}">{{ y }}</option>
-            {%- endfor -%}
-          </select>
-        </div>
-      </div>
-      <button type="submit" class="tsu__btn">{{ section.settings.age_button | escape }}</button>
-      <button type="button" class="tsu__link-btn" data-go="role">Back</button>
-    </form>
-
-    {%- comment -%} Step 3b: athlete 13+ {%- endcomment -%}
-    <form class="tsu__step" data-step="teen" data-kind="teen" hidden autocomplete="on">
-      <h2 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.teen_heading | escape }}</h2>
-      {%- if section.settings.teen_text != blank -%}
-        <p class="tsu__text">{{ section.settings.teen_text | escape }}</p>
-      {%- endif -%}
-      <div class="tsu__fields">
-        <div class="tsu__field">
-          <label class="tsu__label" for="tsu-{{ sid }}-t-first">First name</label>
-          <input class="tsu__input" id="tsu-{{ sid }}-t-first" name="first_name" type="text" autocomplete="given-name" required maxlength="80">
-        </div>
-        <div class="tsu__field">
-          <label class="tsu__label" for="tsu-{{ sid }}-t-email">Email <span class="tsu__optional">(optional)</span></label>
-          <input class="tsu__input" id="tsu-{{ sid }}-t-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="254">
-        </div>
-        {% render 'tournament-signup-sports', sports: sports, sid: sid, prefix: 't', legend: 'Sports you play' %}
-        {% render 'tournament-signup-honeypot', sid: sid, prefix: 't' %}
-      </div>
-      <div class="tsu__error" data-error role="alert" hidden>
-        <p>{{ section.settings.error_message | escape }}</p>
-        <button type="button" class="tsu__btn tsu__btn--outline" data-retry>Try again</button>
-      </div>
-      <button type="submit" class="tsu__btn" data-submit data-label="{{ section.settings.teen_button | escape }}">{{ section.settings.teen_button | escape }}</button>
-      <button type="button" class="tsu__link-btn" data-go="role">Back</button>
-    </form>
-
-    {%- comment -%} Final athlete screen: social + website links (no promo code) {%- endcomment -%}
+    {%- comment -%} Athlete screen: links only. Nothing is collected from athletes (FUTR privacy policy: event info comes only from the parent). {%- endcomment -%}
     <div class="tsu__step" data-step="links" hidden>
       <h2 class="tsu__heading" tabindex="-1" data-step-heading>{{ section.settings.links_heading | escape }}</h2>
+      {%- if section.settings.athlete_note != blank -%}
+        <p class="tsu__text tsu__text--strong">{{ section.settings.athlete_note | escape }}</p>
+      {%- endif -%}
       {%- if section.settings.links_text != blank -%}
         <p class="tsu__text">{{ section.settings.links_text | escape }}</p>
       {%- endif -%}
@@ -481,18 +438,13 @@
     { "type": "text", "id": "success_heading", "label": "Confirmation heading", "default": "You're in!" },
     { "type": "textarea", "id": "success_message", "label": "Confirmation message", "default": "Thank you for signing up! You have unlocked special event pricing, see our table to purchase!" },
     { "type": "text", "id": "code_label", "label": "Code label", "default": "Show this code at the FUTR table" },
+    { "type": "textarea", "id": "consent_text", "label": "Consent line (under the submit button)", "default": "By signing up, you agree to receive marketing emails from FUTR. You can unsubscribe anytime." },
+    { "type": "text", "id": "privacy_label", "label": "Privacy policy link text", "default": "Privacy Policy", "info": "Links to the store's privacy policy (Settings > Policies)." },
     { "type": "text", "id": "promo_code", "label": "Promo code", "default": "NOVEVENT20", "info": "Only shown to parents/guardians/coaches after a successful signup." },
 
-    { "type": "header", "content": "Athlete" },
-    { "type": "text", "id": "age_heading", "label": "Birthday heading", "default": "When were you born?" },
-    { "type": "textarea", "id": "age_text", "label": "Birthday text" },
-    { "type": "text", "id": "age_button", "label": "Birthday button", "default": "Continue" },
-    { "type": "text", "id": "teen_heading", "label": "Athlete details heading", "default": "Tell us about you" },
-    { "type": "textarea", "id": "teen_text", "label": "Athlete details text" },
-    { "type": "text", "id": "teen_button", "label": "Athlete submit button", "default": "Continue" },
-
-    { "type": "header", "content": "Athlete final screen" },
+    { "type": "header", "content": "Athlete screen (links only, nothing collected)" },
     { "type": "text", "id": "links_heading", "label": "Heading", "default": "Follow FUTR" },
+    { "type": "textarea", "id": "athlete_note", "label": "Parent note", "default": "Ask a parent or guardian to scan this code to unlock event pricing." },
     { "type": "textarea", "id": "links_text", "label": "Text", "default": "Stay up to date with FUTR on social." },
     { "type": "checkbox", "id": "show_social", "label": "Show social icons", "default": true, "info": "Uses the social links in Theme settings." },
     { "type": "url", "id": "website_url", "label": "Website link", "info": "Defaults to the store homepage." },

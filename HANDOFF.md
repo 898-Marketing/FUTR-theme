@@ -7,7 +7,7 @@ Store: `a36ab9-2.myshopify.com` (FUTR Performance). Read this file at the start 
 **Page is finished and approved.** All changes merged to `main` (PRs #1–#6) and synced to FUTR-theme/main. Michael is publishing FUTR-theme/main as the live theme on 2026-11-19 (replacing "Coming Soon Dark Revised" `#183332831519`, which stays as the rollback; don't delete it).
 
 What the page does now:
-- **Parent / Guardian / Coach:** first and last name, email, athlete birth month and year (**optional**, for coaches), sports. Subscribed to Klaviyo list `X9rGAu` (single opt-in), welcome flow `URegZD` (live) emails NOVEVENT20, and the page shows the code. Consent line + privacy policy link under the submit button.
+- **Parent / Guardian / Coach:** first and last name, email, athlete birth month and year (**optional**, for coaches), sports. Subscribed to Klaviyo list `X9rGAu` (single opt-in), welcome flow `URegZD` (live) emails HOOPS20, and the page shows the code. Consent line + privacy policy link under the submit button.
 - **Athlete:** links only (parent note, social icons, website button). **Nothing is collected.**
 - No phone field.
 
@@ -23,8 +23,8 @@ FUTR decisions (Suzanne via Carli, 2026-11-19: "we align with your recommendatio
 ## Launch state (updated 2026-11-19, verified via API)
 - **FUTR-theme/main is the live (published) theme.** Every merge to `main` and every Theme Editor edit now changes the live site. Rollback: republish "Coming Soon Dark Revised" (`#183332831519`).
 - **Store password is ON on purpose:** FUTR and 898 are testing checkout first. Visitors see Sara's "Our Site is Coming Soon" password page. The QR page only works for visitors once the password is turned off; people with the password can use https://futrperformance.com/pages/tournament now.
-- Done: page `/pages/tournament` on template `tournament-signup` and Visible; NOVEVENT20 one use per customer; QR code confirmed by Michael.
-- Still open: turn the password off before the event; NOVEVENT20 end date (waiting on FUTR); one real phone signup test, then delete that profile; consider a separate staging theme for future previews (18 of 20 theme slots used).
+- Done: page `/pages/tournament` on template `tournament-signup` and Visible; HOOPS20 one use per customer; QR code confirmed by Michael.
+- Still open: turn the password off before the event; HOOPS20 end date (waiting on FUTR); one real phone signup test, then delete that profile; consider a separate staging theme for future previews (18 of 20 theme slots used).
 
 ## Post-launch plan (from QA on 2026-11-19; nothing here is built yet)
 QA was run on the local dev server (same code as the live theme). Checkout, payment and the cookie banner were not covered (live-store only; Michael tests those).
@@ -55,12 +55,15 @@ QA was run on the local dev server (same code as the live theme). Checkout, paym
 **Before ads launch**
 11. Consent: Shopify's built-in cookie banner (Michael setting up 2026-11-19), GPC/state opt-outs; keep ad pixels off `/pages/tournament`; don't build ad audiences from athlete data (privacy policy promise); FUTR's lawyer to decide on Washington (My Health My Data). Osano not needed at FUTR's size.
 
+## Promo code renamed (2026-11-19)
+FUTR asked to rename the event code **NOVEVENT20 → HOOPS20** everywhere (same discount, same settings: 20% off all products, one use per customer, no combinations). Changed: the Shopify discount's code and title, the page's `promo_code` setting (template + schema default), and the Klaviyo welcome email (code box, plain text, preview text, message name). Older notes below that mention the code now read HOOPS20.
+
 ## Go-live checklist (2026-11-19)
 Checked through the APIs right before launch:
 - **Store password is ON** (`onlineStore.passwordProtection.enabled: true`). While it's on, QR visitors hit the password page and **can't reach `/pages/tournament`**. Publishing the theme does not turn it off. Turn it off (Online Store → Preferences) when FUTR is ready, or the QR code won't work. FUTR-theme/main's own password page is Sara's "Our Site is Coming Soon" version.
 - **Page `/pages/tournament`** ("November 2026 Tournament", `gid://shopify/Page/167214252319`): still **Hidden** with **no template**. After publishing: assign template `tournament-signup` and set it Visible. Then open https://futrperformance.com/pages/tournament on a phone.
 - **QR code** must point to https://futrperformance.com/pages/tournament (primary domain). Confirm with whoever made it.
-- **NOVEVENT20** ("November 2026 Event - 20% Off"): active, 0 uses, **"one use per customer" is still OFF** (the welcome email says one use per customer) and **no end date**. Fix both in Shopify Discounts.
+- **HOOPS20** ("November 2026 Event - 20% Off"): active, 0 uses, **"one use per customer" is still OFF** (the welcome email says one use per customer) and **no end date**. Fix both in Shopify Discounts.
 - **Klaviyo sync check (done 2026-11-19):** `mmerdich+parent@` is on **only** `X9rGAu`, consent `email`, not on the newsletter list. Passed.
 - **After launch, one real test:** sign up as a parent on a phone with a new `+` address; confirm the code shows, the profile is on `X9rGAu`, and the welcome email arrives. Tap Athlete and confirm it only shows links. Then delete that test profile.
 - Klaviyo on-site embed is sitewide: if any Klaviyo popup targets all pages, exclude `/pages/tournament`.
@@ -87,7 +90,7 @@ Checked through the APIs right before launch:
 - Email marketing SUBSCRIBED, list `X9rGAu` (single opt-in), `custom_source` "November 2026 Tournament QR".
 - Profile: `email`, `first_name`, `last_name`.
 - Properties: `signup_source: "november-2026-tournament"`, `signup_role: "parent"`, `athlete_birth_month: "MM"`, `athlete_birth_year: "YYYY"` (added 2026-11-18; **optional** since 2026-11-19 and left out of the payload when blank, so a returning parent's saved values are never erased), `sports_played: [..]`.
-- On success, shows the promo code `NOVEVENT20` (a section setting).
+- On success, shows the promo code `HOOPS20` (a section setting).
 
 ### Athlete (any age), since 2026-11-19
 - Nothing is collected or sent. Choosing "Athlete" goes straight to the links screen (parent note, social icons, website button).
@@ -118,7 +121,7 @@ No longer possible: the teen path was removed on 2026-11-19. It only ever sent `
   - **Parent `mmerdich+parent@898marketing.com`:**
     - SUBSCRIBED via API, `double_optin: false`, on **only** list `X9rGAu`.
     - Parent properties are correct, and no confirmation email arrived.
-    - No NOVEVENT20 email either: expected, because flow `URegZD` is still a **draft** (re-checked 2026-11-18).
+    - No HOOPS20 email either: expected, because flow `URegZD` is still a **draft** (re-checked 2026-11-18).
   - **Teen `mmerdich+teentest@898marketing.com`:** NEVER_SUBSCRIBED, on no lists, only `teen_*` properties, no `first_name`.
 - Fixed the Instagram icon rendering as a filled square (theme icons are stroke outlines).
 
@@ -131,7 +134,7 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
 ## TODO
 - [x] Follow-up sync check (2026-11-19): `mmerdich+parent@` is on only `X9rGAu`.
 - [x] Athletes get a links-only screen with a parent note (FUTR agreed 2026-11-19).
-- [x] Welcome email test: Michael turned flow `URegZD` live on 2026-11-18. A new parent signup received "Your 20% off code is here" with NOVEVENT20 within a minute.
+- [x] Welcome email test: Michael turned flow `URegZD` live on 2026-11-18. A new parent signup received "Your 20% off code is here" with HOOPS20 within a minute.
   - "Added to List" flows only trigger for people added after the flow goes live, so the older test profiles won't get it.
 - [ ] After FUTR-theme/main goes live: assign `tournament-signup` to /pages/tournament, set it Visible, and turn off the store password when FUTR is ready (see Go-live checklist).
 - [ ] Michael: delete test profiles in Klaviyo (`x@example.com`, `mmerdich+parent@`, `mmerdich+teentest@`, `mmerdich+testparentlive@` — the welcome-email test) **and** the matching Shopify customers, (the follow-up check is done, so this can happen now). `mmerdich+teentest@` and any old test profiles may still carry `teen_*` properties.
@@ -139,7 +142,7 @@ Both live test emails showed up in **Shopify Customers**: the parent as Subscrib
 
 - [x] Old form cleanup (2026-11-18): Michael deleted the Shopify segment "November 2026 Event" (`customer_tags CONTAINS 'november-2026-event'`) and its 4 test customers (`mmerdich+1@`, `mmerdich+2@`, `srogers@`, `srogers+1@`). Verified through the Admin API.
   - These may also exist in Klaviyo through the Shopify sync. Delete them there too if they show up.
-- [ ] NOVEVENT20 discount (Shopify):
+- [ ] HOOPS20 discount (Shopify):
   - Turn on "Limit to one use per customer". It's currently off, but the welcome email says "One use per customer".
   - Set an end date once FUTR confirms it. It's currently open-ended.
   - The discount applies to all customers and isn't tied to a segment.
@@ -166,7 +169,7 @@ Requested by FUTR through Carli:
 ## Athlete links-only + consent line (2026-11-19, branch `athlete-links-consent`)
 - Section: removed the `age` and `teen` steps and their settings (`age_*`, `teen_*`, also removed from the template JSON). Added `athlete_note`, `consent_text`, `privacy_label`.
 - JS: removed `isUnder13`, `buildTeenPayload`, localStorage helpers and the age/teen submit handling. Only `buildParentPayload` remains.
-- Tested in `shopify theme dev` at 390px with Klaviyo intercepted: Athlete → links with **0 requests**; parent signup → 1 request to `client/subscriptions`, same properties as before (incl. `athlete_birth_year`), list `X9rGAu`, code NOVEVENT20 shown; consent line and privacy link render. Unit test passes; theme check has no offenses in the signup files.
+- Tested in `shopify theme dev` at 390px with Klaviyo intercepted: Athlete → links with **0 requests**; parent signup → 1 request to `client/subscriptions`, same properties as before (incl. `athlete_birth_year`), list `X9rGAu`, code HOOPS20 shown; consent line and privacy link render. Unit test passes; theme check has no offenses in the signup files.
 - Main was checked first: Sara's 2026-11-19 commit ("Coming soon" instead of "Sold out") doesn't touch these files.
 
 ## Optional athlete birth date (2026-11-19, branch `optional-birth-date`)

@@ -71,6 +71,7 @@
             <p class="cart-drawer__free-shipping-disclaimer">{{ settings.free_shipping_disclaimer }}</p>
           {% endunless %}
         {% endif %}
+        {% render 'cart-free-tee' %}
       </div>
     </header>
 
@@ -176,9 +177,12 @@
                     {% # Automatic discounts %}
                     {% if item.line_level_discount_allocations %}
                       {% for discount in item.line_level_discount_allocations %}
+                        {% # Skip $0 allocations, e.g. the qualifying items of a buy-X-get-Y discount %}
+                        {% if discount.amount > 0 %}
                         <div class="cart-drawer__product_card--badge cart-drawer__product_card--badge--sale">
-                          <span>{{ discount.discount_application.title }}{% if discount.amount > 0 %} (-{{ discount.amount | money }}){% endif %}</span>
+                          <span>{{ discount.discount_application.title }} (-{{ discount.amount | money }})</span>
                         </div>
+                        {% endif %}
                       {% endfor %}
                     {% endif %}
 
@@ -547,3 +551,4 @@
     </div>
   </div>
 </cart-drawer>
+<script src="{{ 'cart-free-tee.js' | asset_url }}" defer></script>

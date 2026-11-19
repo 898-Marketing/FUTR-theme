@@ -1119,6 +1119,17 @@
       },
       {
         "type": "header",
+        "content": "Free FUTR tee offer"
+      },
+      {
+        "type": "checkbox",
+        "id": "free_tee_enabled",
+        "label": "Show free tee offer in cart drawer",
+        "info": "Matches the Shopify automatic discount \"Free FUTR Tee (2+ full-size products)\". To end the offer, deactivate that discount AND uncheck this.",
+        "default": true
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.Cart.settings.product_recommendations.header"
       },
       {

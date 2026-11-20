@@ -195,3 +195,9 @@ Requested by FUTR through Carli:
 - Parent form: birth month and year are no longer required; labels say "(optional)". Blank values are omitted from the Klaviyo payload (not sent as empty strings).
 - Section header comment updated to the current steps (it still described the removed age/teen steps).
 - Tested with Klaviyo intercepted: blank → form submits, properties are only `signup_source`, `signup_role`, `sports_played`; filled → both birth properties sent as before. Unit tests cover blank, month-only and filled.
+
+## Post-launch revisions (2026-11-20, branch `post-launch-revisions`)
+FUTR's requests via Carli:
+- **Homepage gap** under "Building the FUTR of Sports Nutrition": removed an empty paragraph, rich text bottom padding 80 → 30, featured collection top padding 60 → 0 (`templates/index.json`). Remaining space above the products is white space inside the product photos themselves.
+- **About → Our Team photos same size:** the 4 team blocks' Shape changed from Original to **Square** (`templates/page.about.json`; also editable per block in the Theme Editor). Crops use each image's **focal point** set in Shopify (Content → Files → image → focal point); `snippets/responsive-image.liquid` puts it inline with `!important`, so CSS can't override it. Raul's photo needs its focal point moved up so the top of his cap isn't cut off (Michael, in admin).
+- **Logo Tee "Charcoal Grey" swatch was white:** the theme turns the option name into a CSS color, and "charcoalgrey" isn't one. Mapped it to `#434343` (sampled from the product photo) in `snippets/swatch.liquid` and `snippets/card-color-swatch.liquid`. A swatch color set on the option value in Shopify still wins. "Blue" renders as pure CSS blue (#0000FF), brighter than the heather royal shirt.

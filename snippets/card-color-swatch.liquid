@@ -107,6 +107,14 @@
               if value contains '#'
                 assign bg_color = value | downcase
               endif
+              comment
+                FUTR: color names browsers don't know get a hex here
+                (a swatch color set in Shopify still wins, below)
+              endcomment
+              case bg_color
+                when 'charcoalgrey', 'charcoalgray'
+                  assign bg_color = '#434343'
+              endcase
 
               comment 
               Reassign the color value if the swatch has a category metafield color 

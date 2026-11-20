@@ -263,7 +263,7 @@
         "richtext_xYYefw": {
           "type": "richtext",
           "settings": {
-            "text": "<p><em>Because the future isn’t waiting. It’s being built every time they show up.</em></p><p></p>",
+            "text": "<p><em>Because the future isn’t waiting. It’s being built every time they show up.</em></p>",
             "text_size": 20,
             "text_bottom_spacing": 20
           }
@@ -284,7 +284,7 @@
         "text_alignment_desktop": "center",
         "text_alignment_mobile": "center",
         "section_padding_top": 80,
-        "section_padding_bottom": 80,
+        "section_padding_bottom": 30,
         "colors": "dark",
         "background_overlay_color": "#000000",
         "background_overlay_opacity": 70
@@ -321,7 +321,7 @@
         "button_position": "below_products",
         "button_alignment": "center",
         "buttons_style": "filled",
-        "section_padding_top": 60,
+        "section_padding_top": 0,
         "section_padding_bottom": 60,
         "layout_style": "slider",
         "products_to_show": 30,

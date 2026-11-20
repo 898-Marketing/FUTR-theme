@@ -149,6 +149,7 @@
     opacity: 0.8;
     cursor: pointer;
   }
+  a.tsu__link-btn { display: inline-flex; align-items: center; justify-content: center; text-align: center; }
 
   .tsu__fields { display: flex; flex-direction: column; gap: 16px; }
   /* align-items: end keeps side-by-side inputs level when one label wraps. */
@@ -380,7 +381,8 @@
           <span class="tsu__code">{{ promo_code | escape }}</span>
         </div>
       {%- endif -%}
-      <button type="button" class="tsu__link-btn" data-go="role">Start a new signup</button>
+      {%- comment -%} FUTR asked (2026-11-20): send parents to the homepage instead of restarting the form. {%- endcomment -%}
+      <a class="tsu__link-btn" href="{{ website_url }}">{{ section.settings.success_link_label | default: 'Visit the FUTR homepage' | escape }}</a>
     </div>
 
     {%- comment -%} Athlete screen: links only. Nothing is collected from athletes (FUTR privacy policy: event info comes only from the parent). {%- endcomment -%}
@@ -439,6 +441,7 @@
     { "type": "text", "id": "success_heading", "label": "Confirmation heading", "default": "You're in!" },
     { "type": "textarea", "id": "success_message", "label": "Confirmation message", "default": "Thank you for signing up! You have unlocked special event pricing, see our table to purchase!" },
     { "type": "text", "id": "code_label", "label": "Code label", "default": "Show this code at the FUTR table" },
+    { "type": "text", "id": "success_link_label", "label": "Confirmation homepage link", "default": "Visit the FUTR homepage", "info": "Goes to the Website link below (the store homepage by default)." },
     { "type": "textarea", "id": "consent_text", "label": "Consent line (under the submit button)", "default": "By signing up, you agree to receive marketing emails from FUTR. You can unsubscribe anytime." },
     { "type": "text", "id": "privacy_label", "label": "Privacy policy link text", "default": "Privacy Policy", "info": "Links to the store's privacy policy (Settings > Policies)." },
     { "type": "text", "id": "promo_code", "label": "Promo code", "default": "HOOPS20", "info": "Only shown to parents/guardians/coaches after a successful signup." },

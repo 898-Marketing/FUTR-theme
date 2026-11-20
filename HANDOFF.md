@@ -204,3 +204,6 @@ FUTR's requests via Carli:
 
 ## Popup hidden while the cart is open (2026-11-20, branch `popup-hide-with-cart`)
 The "Join the Roster" popup (12 s delay) used to open on top of the mobile cart drawer and cover Checkout. CSS in `assets/futr-brand.css` hides `#popup`, `#slide-up` and `#PopupOverlay` while `<body>` has `.js-drawer-open` (the theme adds it while any drawer is open). The theme's popup state is untouched, so the popup shows once the drawer closes. No changes to `theme.min.js`. Tested on mobile on the dev server: popup already showing → hidden when the cart opens, back when it closes; cart opened before the 12 s timer → popup fires but stays hidden.
+
+## QR page confirmation → homepage link (2026-11-20, branch `tournament-home-link`)
+FUTR asked that the parent confirmation screen send people to the homepage instead of "Start a new signup". `sections/tournament-signup.liquid`: that button is now a link to the section's Website link (blank = store homepage). Text is a new setting, **Confirmation homepage link** (default "Visit the FUTR homepage"), editable in the Theme Editor. The athlete screen's "Start over" is unchanged. Staff at the table who need a fresh form for the next parent can reload the page or rescan the QR code.

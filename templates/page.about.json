@@ -377,24 +377,24 @@
         },
         "image_and_text_CjEQAK": {
           "type": "image_and_text",
-          "disabled": true,
           "settings": {
+            "image": "shopify://shop_images/RAUL_pic.jpg",
             "grid_image_size": "natural",
             "heading": "RAUL PUJOL",
-            "text": "<p>Chief Business Development&nbsp;<br/>& Partnerships Officer&nbsp;&nbsp;</p>",
-            "bio_text": "",
+            "text": "<p>Partner, Chief Business Development Officer</p>",
+            "bio_text": "<p>Raul has played an instrumental role in establishing and developing FUTR from its inception, bringing more than 15 years of experience in the sports nutrition industry and a lifelong passion for athletics, family, and helping young athletes reach their full potential.</p><p>Born in Puerto Rico and raised in Miami, Raul developed his foundation in sports through baseball. He was part of a high school national championship team and later earned Freshman All-American honors while playing college baseball. He holds a Bachelor of Arts degree from Florida International University.</p><p>Throughout his career, Raul has built extensive relationships with athletes, coaches, teams, sports organizations, and leading sports nutrition brands. His experience has provided him with firsthand insight into the role that proper nutrition, quality products, education, and support play in an athlete's development and performance.</p><p>As a husband and father of two boys, Raul's passion for youth athletics extends beyond the game. Grounded in his faith in God, Raul believes in leading with integrity, purpose, and gratitude, values that guide both his family life and professional journey. He understands the dedication, commitment, and support required to help young athletes succeed, as well as the important role parents, coaches, and proper nutrition play throughout their journey.</p><p>At FUTR, Raul leads business development, strategic partnerships, and relationship growth with clubs, leagues, teams, events, and youth sports organizations. He is committed to expanding FUTR's presence in youth sports and making quality sports nutrition, education, and resources more accessible to athletes across every sport and level of competition.</p><p><strong>For partnership or sponsorship opportunities, contact Raul directly at:</strong></p><p>Raul@futrperformance.com</p>",
             "button_link": "",
             "button_text": ""
           }
         },
         "image_and_text_x8Mccy": {
           "type": "image_and_text",
-          "disabled": true,
           "settings": {
+            "image": "shopify://shop_images/Angie_-_pic.jpg",
             "grid_image_size": "natural",
-            "heading": "TIM ZIEGENFUSS",
-            "text": "<p>PH.D., FISSN, CSCS<br/>Chief Science Officer&nbsp;</p>",
-            "bio_text": "<p>Dr. Tim Ziegenfuss leads the science and product formulation behind FUTR. He holds a Ph.D. in Exercise Physiology, with advanced academic training in nutrition and statistics, and has spent decades studying how nutrition, physical activity, and dietary ingredients affect human health and performance.</p><p>An internationally recognized researcher, author, and sports nutrition expert, Dr. Ziegenfuss has published more than 80 scientific papers, contributed to eight book chapters, and helped develop nutrition products used by athletes around the world. He is a former university professor, a past President and Fellow of the International Society of Sports Nutrition, and a Certified Strength and Conditioning Specialist.</p><p>At FUTR, Dr. Ziegenfuss oversees ingredient selection, formula development, and scientific review. His role is to ensure every formula has a clear purpose and is grounded in credible research, appropriate dosing, and the real nutritional needs of developing young athletes.</p>",
+            "heading": "Angie Pujol ",
+            "text": "<p>Partner, Director of Finance Operations</p>",
+            "bio_text": "<p>Angie is a lifelong entrepreneur with experience in retail, wholesale, distribution, and the sports nutrition industry. She brings hands-on experience in business operations, sales, and financial management to her role within FUTR. &nbsp;The oldest of ten siblings, Angie grew up in a family of entrepreneurs who modeled hard work, perseverance, and leadership. Her work is grounded in integrity, determination, and a passion for building businesses with purpose.</p><p>As a wife and mother of two athletic boys, Angie understands the commitment behind youth sports and the importance of supporting young athletes through key stages of growth and development. Her family's involvement in athletics makes FUTR's mission deeply personal: expanding access to nutrition education, encouraging healthy eating and regular exercise, and supporting the growth and athletic development of this generation and those to come.</p><p>Beyond her professional work, Angie supports local nonprofits serving children, serves in her church's youth ministry, and is active in several school athletic booster clubs. She brings the same dedication to FUTR, helping young people build a strong foundation for a healthy, active future.</p>",
             "button_link": "",
             "button_text": ""
           }

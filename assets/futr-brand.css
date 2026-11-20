@@ -339,3 +339,14 @@ product-media.media-type-slider:has(.media-ratio--wide) {
   .cart-free-tee__select { flex: 1 1 auto; }
   .cart-free-tee__button { width: auto; flex: 0 0 auto; padding: 0 18px; }
 }
+
+/* "Join the Roster" popup (snippets/popup.liquid): keep it out of the way
+   while the cart (or any drawer) is open, so it never covers Checkout.
+   The theme adds .js-drawer-open to <body> while a drawer is open. The popup
+   keeps its own state, so it reappears when the drawer closes. */
+body.js-drawer-open #popup,
+body.js-drawer-open #slide-up,
+body.js-drawer-open #PopupOverlay {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

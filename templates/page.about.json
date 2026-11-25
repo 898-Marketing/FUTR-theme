@@ -399,6 +399,18 @@
             "button_text": ""
           }
         },
+        "image_and_text_GAa4ec": {
+          "type": "image_and_text",
+          "settings": {
+            "image": "shopify://shop_images/DrLaura_1.jpg",
+            "grid_image_size": "square",
+            "heading": "DR. LAURA SKRINER",
+            "text": "<p>Ph.D., Licensed Clinical Psychologist<br/>Director of Youth Psychology & Development</p>",
+            "bio_text": "<p>Dr. Laura Skriner is a licensed clinical psychologist specializing in cognitive-behavioral therapy (CBT), with extensive experience helping children and adolescents navigate stress, anxiety, mood challenges, and emotional well-being.</p><p>A former Division I collegiate athlete, Laura competed on Boston University's rowing team for four years. Her experience as a high-level athlete gives her a unique perspective on the mental and emotional demands of competitive sports, balancing academics and athletics, managing expectations, and developing resilience both in and out of competition.</p><p>Laura earned her Ph.D. in Clinical Psychology from Rutgers University, completed her predoctoral internship at Brown University, and has contributed to numerous research studies and peer-reviewed scientific publications focused on youth mental health.</p><p><strong>Laura’s Role at FUTR</strong></p><p>At FUTR, Laura brings together her clinical expertise and athletic experience to help shape our marketing, product education, and events, empowering kids not just to perform, but to thrive in all aspects of life. She also serves as an educational resource for parents and athletes, offering guidance on the mental and emotional aspects of sports and everyday life.</p>",
+            "button_link": "",
+            "button_text": ""
+          }
+        },
         "image_and_text_yikiJB": {
           "type": "image_and_text",
           "disabled": true,
@@ -429,6 +441,7 @@
         "image_and_text_CjEQAK",
         "image_and_text_x8Mccy",
         "image_and_text_PgNKzt",
+        "image_and_text_GAa4ec",
         "image_and_text_yikiJB",
         "image_and_text_Pzqi6N"
       ],
